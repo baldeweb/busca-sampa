@@ -5,6 +5,7 @@ import franceFlag from "@/assets/imgs/flags/img_flag_france.png";
 import chinaFlag from "@/assets/imgs/flags/img_flag_china.png";
 import russiaFlag from "@/assets/imgs/flags/img_flag_russia.png";
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 const LANGUAGES = [
     { code: "pt", name: "Português (BR)", flag: brazilFlag },

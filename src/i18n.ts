@@ -131,7 +131,7 @@ const resources = {
       },
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo\nmais perto de você :)',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
         article: {
           RESTAURANT: 'o',
           BAR: 'o',
@@ -254,7 +254,7 @@ const resources = {
       ,
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti\nmás cerca de ti :)',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti más cerca de ti :)',
         article: {
           RESTAURANT: 'el',
           BAR: 'el',
@@ -477,7 +477,7 @@ const resources = {
       },
       placeList: {
         environmentTitle: 'Environment type:',
-        subtitleTemplate: 'Discover {{article}} {{noun}} of your type\nclosest to you :)',
+        subtitleTemplate: 'Discover {{article}} {{noun}} of your type closest to you :)',
         article: {
           RESTAURANT: 'the',
           BAR: 'the',

@@ -142,7 +142,7 @@ export const PlaceListPage: React.FC = () => {
         console.log("mappedType:", mappedType);
         console.log("filteredByType length:", filteredByType.length);
     }, [routeType, mappedType, filteredByType]);
-    
+
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
@@ -156,22 +156,23 @@ export const PlaceListPage: React.FC = () => {
                     </button>
                 </div>
             </div>
-            {/* Título e descrição */}
-            <div className="px-4 py-6 bg-[#F5F5F5] text-black">
-                <div className="flex items-start gap-4">
-                    <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
-                    <div>
-                        <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
-                        <p className="mt-1 text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+            <div className="max-w-7xl px-16 py-12 bg-[#F5F5F5] text-black">
+                {/* Título e descrição */}
+                <div>
+                    <div className="flex items-start gap-4">
+                        <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
+                        <div>
+                            <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
+                            <p className="mt-1 text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {/* Chips de ambiente */}
-            {environments.length > 0 && (
-                <div className="px-4 bg-[#F5F5F5] text-black pb-4">
-                    <h3 className="font-bold text-lg mb-3">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                    <div className="relative">
-                        <div className="flex gap-2 overflow-x-auto py-3 px-2 snap-x snap-mandatory"> 
+                {/* Chips de ambiente */}
+                {environments.length > 0 && (
+                    <div className="bg-[#F5F5F5] text-black pb-4">
+                        <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
+                        <div className="relative">
+                            <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory">
                                 {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
                                 {environments.length > 1 && (
                                     <CategoryCard
@@ -193,91 +194,92 @@ export const PlaceListPage: React.FC = () => {
                                         index={environments.length > 1 ? idx + 1 : idx}
                                     />
                                 ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
-            {/* Filtro de ordenação */}
-            <div className="px-4 bg-[#F5F5F5] text-black pb-4">
-                <label className="font-bold mr-2">{t('common.filter')}</label>
-                <div className="relative inline-block">
-                    <button
-                        className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
-                        onClick={() => setShowOrderDropdown((v) => !v)}
-                    >
-                        {(() => {
-                            switch (order) {
-                                case 'name-asc': return t('list.orderNameAsc');
-                                case 'name-desc': return t('list.orderNameDesc');
-                                case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                default: return '';
-                            }
-                        })()}
-                    </button>
-                    {showOrderDropdown && (
-                        <div className="absolute left-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                            {ORDER_OPTIONS.map((opt) => (
-                                <button
-                                    key={opt.value}
-                                    className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                                    onClick={() => {
-                                        setOrder(opt.value);
-                                        setShowOrderDropdown(false);
-                                    }}
-                                >
-                                    {(() => {
-                                        switch (opt.value) {
-                                            case 'name-asc': return t('list.orderNameAsc');
-                                            case 'name-desc': return t('list.orderNameDesc');
-                                            case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                            case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                            default: return '';
-                                        }
-                                    })()}
-                                </button>
-                            ))}
-                        </div>
-                    )}
+                )}
+                {/* Filtro de ordenação */}
+                <div className="bg-[#F5F5F5] text-black pt-8">
+                    <label className="font-bold mr-2">{t('common.filter')}</label>
+                    <div className="relative inline-block">
+                        <button
+                            className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                            onClick={() => setShowOrderDropdown((v) => !v)}
+                        >
+                            {(() => {
+                                switch (order) {
+                                    case 'name-asc': return t('list.orderNameAsc');
+                                    case 'name-desc': return t('list.orderNameDesc');
+                                    case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
+                                    case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
+                                    default: return '';
+                                }
+                            })()}
+                        </button>
+                        {showOrderDropdown && (
+                            <div className="absolute left-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
+                                {ORDER_OPTIONS.map((opt) => (
+                                    <button
+                                        key={opt.value}
+                                        className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
+                                        onClick={() => {
+                                            setOrder(opt.value);
+                                            setShowOrderDropdown(false);
+                                        }}
+                                    >
+                                        {(() => {
+                                            switch (opt.value) {
+                                                case 'name-asc': return t('list.orderNameAsc');
+                                                case 'name-desc': return t('list.orderNameDesc');
+                                                case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
+                                                case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
+                                                default: return '';
+                                            }
+                                        })()}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
             {/* Lista de lugares */}
             <div className="px-0 flex-1 bg-[#48464C]">
                 <div className="rounded-t-lg overflow-hidden">
-                    <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[24px] leading-tight border-b-2 border-bs-red">
-                        <div className="w-1/3 px-4 py-3">{t('list.nameHeader')}</div>
-                        <div className="w-1/3 px-4 py-3">{t('list.neighborhoodHeader')}</div>
+                    <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
+                        <div className="w-1/3 px-16 py-3">{t('list.nameHeader')}</div>
+                        <div className="w-1/3 py-3 ps-8">{t('list.neighborhoodHeader')}</div>
                     </div>
                     {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
                     {sortedPlaces.map((place, idx) => {
                         const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
                         return (
-                        <div
-                            key={place.id}
-                            className={`flex items-center ${rowBg} border-b border-bs-bg text-base text-[#F5F5F5]`}
-                        >
-                            <div className="w-1/3 px-4 py-6">{place.name}</div>
-                            <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
-                            <div className="flex-1 flex justify-end pr-4">
-                                <ActionButton
-                                    onClick={() => {
-                                        const typeToSlug: Record<string, string> = {
-                                            RESTAURANT: "restaurants",
-                                            BAR: "bars",
-                                            COFFEE: "coffees",
-                                            NIGHTLIFE: "nightlife",
-                                            NATURE: "nature",
-                                            TOURIST_SPOT: "tourist-spot",
-                                        };
-                                        const slug = typeToSlug[mappedType] || routeTypeLower;
-                                        navigate(`/place/${slug}/${place.id}`);
-                                    }}
-                                    size="xs"
-                                >
-                                    {t('common.details')}
-                                </ActionButton>
+                            <div
+                                key={place.id}
+                                className={`flex items-center ${rowBg} px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
+                            >
+                                <div className="w-1/3 px-4 py-6">{place.name}</div>
+                                <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
+                                <div className="flex-1 flex justify-end pr-4">
+                                    <ActionButton
+                                        onClick={() => {
+                                            const typeToSlug: Record<string, string> = {
+                                                RESTAURANT: "restaurants",
+                                                BAR: "bars",
+                                                COFFEE: "coffees",
+                                                NIGHTLIFE: "nightlife",
+                                                NATURE: "nature",
+                                                TOURIST_SPOT: "tourist-spot",
+                                            };
+                                            const slug = typeToSlug[mappedType] || routeTypeLower;
+                                            navigate(`/place/${slug}/${place.id}`);
+                                        }}
+                                        size="xs"
+                                    >
+                                        {t('common.details')}
+                                    </ActionButton>
+                                </div>
                             </div>
-                        </div>
                         );
                     })}
                 </div>

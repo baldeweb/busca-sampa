@@ -6,6 +6,7 @@ import { slugify } from "@/core/services/Slugify";
 import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -94,7 +95,7 @@ export const NeighborhoodListPage: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="px-4 py-6 bg-[#F5F5F5] text-black">
+      <div className="max-w-7xl px-16 py-12 bg-[#F5F5F5] text-black">
         <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl text-black" />
         <p className="text-lg text-gray-700 leading-relaxed">
           {t('neighborhoodList.intro')}
@@ -103,7 +104,7 @@ export const NeighborhoodListPage: React.FC = () => {
 
       {/* Filtro por tipo */}
       {placeTypes.length > 0 && (
-        <div className="px-4 flex gap-2 flex-wrap bg-[#F5F5F5] text-black pb-4">
+        <div className="max-w-7xl px-16 pb-12 flex gap-2 flex-wrap bg-[#F5F5F5] text-black pb-4">
           {/* Chip reset */}
           <button
             className={`px-3 py-2 rounded border font-bold text-xs ${
@@ -138,9 +139,9 @@ export const NeighborhoodListPage: React.FC = () => {
       {/* Lista de lugares (estilo igual ao de categorias) */}
       <div className="px-0 flex-1 bg-[#48464C]">
         <div className="rounded-t-lg overflow-hidden">
-          <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[24px] leading-tight border-b-2 border-bs-red">
-            <div className="w-1/3 px-4 py-3">{t('list.nameHeader')}</div>
-            <div className="w-1/3 px-4 py-3">{t('list.typeHeader')}</div>
+          <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
+            <div className="w-1/3 px-16 py-3">{t('list.nameHeader')}</div>
+            <div className="w-1/3 py-3 ps-8">{t('list.typeHeader')}</div>
           </div>
           {filteredPlaces.length === 0 && (
             <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
@@ -150,7 +151,7 @@ export const NeighborhoodListPage: React.FC = () => {
             return (
               <div
                 key={place.id}
-                className={`flex items-center ${rowBg} border-b border-bs-bg text-base text-[#F5F5F5]`}
+                className={`flex items-center ${rowBg} px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
               >
                 <div className="w-1/3 px-4 py-6">{place.name}</div>
                 <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
