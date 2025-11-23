@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 interface Props {
     initialKm?: number;

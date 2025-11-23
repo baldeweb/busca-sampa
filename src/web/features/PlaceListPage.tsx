@@ -172,16 +172,27 @@ export const PlaceListPage: React.FC = () => {
                     <h3 className="font-bold text-lg mb-3">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
                     <div className="relative">
                         <div className="flex gap-2 overflow-x-auto py-3 px-2 snap-x snap-mandatory"> 
-                            {environments.map((env, idx) => (
-                                <CategoryCard
-                                    key={env.value}
-                                    label={env.label}
-                                    icon={<img src={flagSp} alt="cat" className="w-8 h-8" />}
-                                    selected={selectedEnv === env.value}
-                                    onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
-                                    index={idx}
-                                />
-                            ))}
+                                {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
+                                {environments.length > 1 && (
+                                    <CategoryCard
+                                        key="all-environments"
+                                        label={t('common.all')}
+                                        icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                                        selected={selectedEnv === null}
+                                        onClick={() => setSelectedEnv(null)}
+                                        index={0}
+                                    />
+                                )}
+                                {environments.map((env, idx) => (
+                                    <CategoryCard
+                                        key={env.value}
+                                        label={env.label}
+                                        icon={<img src={flagSp} alt="cat" className="w-8 h-8" />}
+                                        selected={selectedEnv === env.value}
+                                        onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                        index={environments.length > 1 ? idx + 1 : idx}
+                                    />
+                                ))}
                         </div>
                     </div>
                 </div>

@@ -244,8 +244,23 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
         <div className="mx-auto max-w-5xl px-4">
-          <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-2xl" className="mb-1" />
-          <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
+          <div className="flex items-start justify-between">
+            <div>
+              <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-2xl" className="mb-1" />
+              <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
+            </div>
+            {userLocation && (
+              <div className="ml-4">
+                <button
+                  type="button"
+                  onClick={() => setIsDistanceModalOpen(true)}
+                  className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-bs-red"
+                >
+                  {t('common.changeDistance')}
+                </button>
+              </div>
+            )}
+          </div>
           {/* Placeholder quando não há localização */}
           {!userLocation && (
             <div className="mt-6 flex flex-col items-center text-center text-xs">
@@ -268,17 +283,6 @@ export function HomePage() {
           {/* Controles e resultados quando há localização */}
           {userLocation && (
             <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
-              <div className="flex items-end justify-end text-lg">
-                <div className="flex">
-                  <button
-                    type="button"
-                    onClick={() => setIsDistanceModalOpen(true)}
-                    className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-bs-red"
-                  >
-                    {t('common.changeDistance')}
-                  </button>
-                </div>
-              </div>
               <div className="mt-3 space-y-2">
                 {loadingNearby && (
                   <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
