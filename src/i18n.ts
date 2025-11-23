@@ -9,12 +9,12 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Perto de mim',
+        nearMeSubtitle: '(com menos de {{km}}km de distância)',
         allowLocation: 'Permitir localização',
         loadingCategories: 'Carregando categorias...',
         increaseRadius: 'Aumentar raio',
         neighborhoodsTitle: 'Por bairro',
         neighborhoodsTagline: 'Tá em algum desses bairros? Tem coisa boa por perto!',
-        radius: 'Raio',
         viewMoreNeighborhoods: 'ver mais bairros ►',
         noNearbyResultsRadius: 'Não há nada dentro das proximidades no raio escolhido.'
       },
@@ -44,7 +44,7 @@ const resources = {
         orderNeighborhoodAsc: 'BAIRRO em ordem alfabética A-Z',
         orderNeighborhoodDesc: 'BAIRRO em ordem alfabética Z-A'
       },
-      whereIsToday: { title: 'E aí, onde é hoje?' },
+      whereIsToday: { title: 'E aí, onde é hoje?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeDetail: {
         loading: 'Carregando detalhes...',
         notFound: 'Local não encontrado.',
@@ -128,6 +128,28 @@ const resources = {
         NATURE: 'Natureza',
         TOURIST_SPOT: 'Pontos Turísticos',
         FREE: 'Gratuitos'
+      },
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo\nmais perto de você :)',
+        article: {
+          RESTAURANT: 'o',
+          BAR: 'o',
+          COFFEE: 'a',
+          NIGHTLIFE: 'a',
+          NATURE: 'a',
+          TOURIST_SPOT: 'o',
+          FREE: 'o'
+        },
+        noun: {
+          RESTAURANT: 'restaurante',
+          BAR: 'bar',
+          COFFEE: 'cafeteria',
+          NIGHTLIFE: 'vida noturna',
+          NATURE: 'natureza',
+          TOURIST_SPOT: 'ponto turístico',
+          FREE: 'evento gratuito'
+        }
       }
     }
   },
@@ -140,7 +162,6 @@ const resources = {
         increaseRadius: 'Aumentar radio',
         neighborhoodsTitle: 'Por barrio',
         neighborhoodsTagline: '¿Estás en uno de estos barrios? ¡Hay cosas buenas cerca!',
-        radius: 'Radio',
         viewMoreNeighborhoods: 'ver más barrios >',
         noNearbyResultsRadius: 'No hay lugares dentro del radio elegido.'
       },
@@ -230,6 +251,29 @@ const resources = {
       placeType: {
         RESTAURANT: 'Restaurantes', BAR: 'Bares', COFFEE: 'Cafeterías', NIGHTLIFE: 'Vida nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos turísticos', FREE: 'Gratuitos'
       }
+      ,
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti\nmás cerca de ti :)',
+        article: {
+          RESTAURANT: 'el',
+          BAR: 'el',
+          COFFEE: 'la',
+          NIGHTLIFE: 'la',
+          NATURE: 'la',
+          TOURIST_SPOT: 'el',
+          FREE: 'el'
+        },
+        noun: {
+          RESTAURANT: 'restaurante',
+          BAR: 'bar',
+          COFFEE: 'cafetería',
+          NIGHTLIFE: 'vida nocturna',
+          NATURE: 'naturaleza',
+          TOURIST_SPOT: 'lugar turístico',
+          FREE: 'evento gratuito'
+        }
+      }
     }
   },
   fr: {
@@ -241,7 +285,6 @@ const resources = {
         increaseRadius: 'Augmenter le rayon',
         neighborhoodsTitle: 'Par quartier',
         neighborhoodsTagline: 'Vous êtes dans un de ces quartiers ? Des bons endroits à proximité !',
-        radius: 'Rayon',
         viewMoreNeighborhoods: 'voir plus de quartiers >',
         noNearbyResultsRadius: 'Aucun endroit dans le rayon choisi.'
       },
@@ -270,7 +313,7 @@ const resources = {
   },
   ru: {
     translation: {
-      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По району', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', radius: 'Радиус', viewMoreNeighborhoods: 'ещё районы >', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
+      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По району', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
       header: { title: 'Busca Sampa', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?'},
@@ -290,7 +333,7 @@ const resources = {
   },
   zh: {
     translation: {
-      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', radius: '半径', viewMoreNeighborhoods: '更多街区 >', noNearbyResultsRadius: '所选半径内没有地点。' },
+      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', noNearbyResultsRadius: '所选半径内没有地点。' },
       header: { title: 'Busca Sampa', tagline: '我去过的最佳推荐，一触即达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?'},
@@ -312,12 +355,12 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Near Me',
+        nearMeSubtitle: '(com menos de {{km}}km de distância)',
         allowLocation: 'Allow Location',
         loadingCategories: 'Loading categories...',
         increaseRadius: 'Increase radius',
         neighborhoodsTitle: 'By Neighborhood',
         neighborhoodsTagline: 'Are you in one of these neighborhoods? Good stuff nearby!',
-        radius: 'Radius',
         viewMoreNeighborhoods: 'see more neighborhoods >',
         noNearbyResultsRadius: 'No places within the chosen radius.'
       },
@@ -431,6 +474,28 @@ const resources = {
         NATURE: 'Nature',
         TOURIST_SPOT: 'Tourist Spots',
         FREE: 'Free'
+      },
+      placeList: {
+        environmentTitle: 'Environment type:',
+        subtitleTemplate: 'Discover {{article}} {{noun}} of your type\nclosest to you :)',
+        article: {
+          RESTAURANT: 'the',
+          BAR: 'the',
+          COFFEE: 'the',
+          NIGHTLIFE: 'the',
+          NATURE: 'the',
+          TOURIST_SPOT: 'the',
+          FREE: 'the'
+        },
+        noun: {
+          RESTAURANT: 'restaurant',
+          BAR: 'bar',
+          COFFEE: 'coffee shop',
+          NIGHTLIFE: 'nightlife spot',
+          NATURE: 'nature spot',
+          TOURIST_SPOT: 'tourist spot',
+          FREE: 'free event'
+        }
       }
     }
   }

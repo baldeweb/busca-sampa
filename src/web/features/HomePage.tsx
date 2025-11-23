@@ -54,9 +54,8 @@ export function HomePage() {
       withinRadius: PlaceRecommendation[];
     }[]
   >([]);
-    const [mapCategory, setMapCategory] = useState<string | null>(null);
+  const [mapCategory, setMapCategory] = useState<string | null>(null);
   const CACHE_KEY = "bs_geolocation";
-  const [lastLocationTimestamp, setLastLocationTimestamp] = useState<number | null>(null);
 
   // Estado de opção 'onde é hoje?' não usado nesta versão
 
@@ -97,7 +96,7 @@ export function HomePage() {
             setLastLocationTimestamp(parsed.timestamp);
             return; // já restaurou do cache
           }
-        } catch (_) {}
+        } catch (_) { }
       }
     }
     setIsRequestingLocation(true);
@@ -244,97 +243,90 @@ export function HomePage() {
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
-            <div className="mx-auto max-w-5xl px-4">
-            <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-2xl" className="mb-6" />
-        {/* Placeholder quando não há localização */}
-        {!userLocation && (
-          <div className="mt-6 flex flex-col items-center text-center text-xs">
-            <p className="max-w-xs text-lg text-gray-300 leading-relaxed mb-4">
-              {t('home.allowLocation')}
-            </p>
-            <button
-              type="button"
-              onClick={() => requestUserLocation(true)}
-              disabled={isRequestingLocation}
-              className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50"
-            >
-              {isRequestingLocation ? "Localizando..." : "Permitir localização"}
-            </button>
-            {geoError && !geoError.includes("User denied Geolocation") && (
-              <p className="mt-3 text-[0.65rem] text-red-400">{geoError}</p>
-            )}
-          </div>
-        )}
-        {/* Controles e resultados quando há localização */}
-        {userLocation && (
-          <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
-            <div className="flex items-center justify-between text-lg">
-              <span>
-                {t('home.radius')}: <strong>{selectedDistance} km</strong>
-              </span>
-              <div className="flex">
-                <button
-                  type="button"
-                  onClick={() => setIsDistanceModalOpen(true)}
-                  className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-bs-red"
-                >
-                  {t('common.changeDistance')}
-                </button>
-              </div>
-            </div>
-            {lastLocationTimestamp && (
-              <span className="text-sm text-gray-400">
-                Localização capturada {timeAgo(lastLocationTimestamp)}
-              </span>
-            )}
-            <div className="mt-3 space-y-2">
-              {loadingNearby && (
-                <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
+        <div className="mx-auto max-w-5xl px-4">
+          <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-2xl" className="mb-1" />
+          <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
+          {/* Placeholder quando não há localização */}
+          {!userLocation && (
+            <div className="mt-6 flex flex-col items-center text-center text-xs">
+              <p className="max-w-xs text-lg text-gray-300 leading-relaxed mb-4">
+                {t('home.allowLocation')}
+              </p>
+              <button
+                type="button"
+                onClick={() => requestUserLocation(true)}
+                disabled={isRequestingLocation}
+                className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50"
+              >
+                {isRequestingLocation ? "Localizando..." : "Permitir localização"}
+              </button>
+              {geoError && !geoError.includes("User denied Geolocation") && (
+                <p className="mt-3 text-[0.65rem] text-red-400">{geoError}</p>
               )}
-              {!loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0 && (
-                <div className="text-center text-lg text-gray-300 flex flex-col items-center gap-5 py-6">
-                  <p>{t('home.noNearbyResultsRadius')}</p>
-                  <ActionButton
+            </div>
+          )}
+          {/* Controles e resultados quando há localização */}
+          {userLocation && (
+            <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
+              <div className="flex items-end justify-end text-lg">
+                <div className="flex">
+                  <button
                     type="button"
                     onClick={() => setIsDistanceModalOpen(true)}
-                    size="md"
-                    className="px-4"
+                    className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-bs-red"
                   >
-                    {t('home.increaseRadius')}
-                  </ActionButton>
+                    {t('common.changeDistance')}
+                  </button>
                 </div>
-              )}
-              {!loadingNearby &&
-                nearbyStats
-                  .filter((s) => s.count > 0)
-                  .map((s) => (
-                    <div
-                      key={s.category}
-                      className="border-b border-white/10 py-1 flex items-center justify-between gap-2 text-xs"
+              </div>
+              <div className="mt-3 space-y-2">
+                {loadingNearby && (
+                  <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
+                )}
+                {!loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0 && (
+                  <div className="text-center text-lg text-gray-300 flex flex-col items-center gap-5 py-6">
+                    <p>{t('home.noNearbyResultsRadius')}</p>
+                    <ActionButton
+                      type="button"
+                      onClick={() => setIsDistanceModalOpen(true)}
+                      size="md"
+                      className="px-4"
                     >
-                      <div className="flex flex-col">
-                        <span className="font-bold uppercase tracking-[0.10em] text-lg">
-                          {s.count} {s.label}
-                        </span>
-                        {s.nearestKm !== null && (
-                          <span className="text-sm text-gray-400">
-                            Mais próximo: {formatDistanceKm(s.nearestKm)}
-                            {s.nearestName ? ` - ${s.nearestName}` : ""}
-                          </span>
-                        )}
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => setMapCategory(s.category)}
-                        className="text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                      {t('home.increaseRadius')}
+                    </ActionButton>
+                  </div>
+                )}
+                {!loadingNearby &&
+                  nearbyStats
+                    .filter((s) => s.count > 0)
+                    .map((s) => (
+                      <div
+                        key={s.category}
+                        className="border-b border-white/10 py-1 flex items-center justify-between gap-2 text-xs"
                       >
-                        ver no mapa &gt;
-                      </button>
-                    </div>
-                  ))}
+                        <div className="flex flex-col">
+                          <span className="font-bold uppercase tracking-[0.10em] text-lg">
+                            {s.count} {s.label}
+                          </span>
+                          {s.nearestKm !== null && (
+                            <span className="text-sm text-gray-400">
+                              Mais próximo: {formatDistanceKm(s.nearestKm)}
+                              {s.nearestName ? ` - ${s.nearestName}` : ""}
+                            </span>
+                          )}
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => setMapCategory(s.category)}
+                          className="text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                        >
+                          ver no mapa &gt;
+                        </button>
+                      </div>
+                    ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
         </div>{/* /wrapper Perto de mim */}
       </section>
 
@@ -342,8 +334,8 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
         <div className="mx-auto max-w-5xl px-4">
-            <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-2xl" className="mb-6" />
-            <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
+          <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-2xl" className="mb-6" underline={false} />
+          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
             {neighborhoods.slice(0, 7).map((n) => (
               <button
                 key={n.id}

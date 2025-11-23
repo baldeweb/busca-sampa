@@ -85,7 +85,8 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
             <div className="mx-auto max-w-5xl px-4">
-                <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-2xl" className="mb-6" />
+                <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-2xl" className="mb-1" />
+                <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
             {error && (
                 <p className="text-base text-red-400">{t('common.loadError')}</p>
@@ -94,7 +95,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                 <div className="relative mt-4">
                     <div
                         ref={listRef}
-                        className="flex flex-nowrap gap-4 overflow-x-auto py-3 px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
+                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
                         role="listbox"
                         aria-label="Categorias"
                         tabIndex={0}
@@ -118,7 +119,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             type="button"
                             aria-label="Ver categorias anteriores"
                             onClick={() => scrollByAmount(-1)}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-bs-card/80 backdrop-blur px-2 py-2 rounded-full border border-white/20 hover:border-bs-red text-white text-sm shadow transition-colors"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-bs-card/80 backdrop-blur px-2 py-2 rounded-full border border-white/20 hover:border-bs-red text-white text-sm shadow transition-colors"
                         >
                             ◀
                         </button>
@@ -128,7 +129,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             type="button"
                             aria-label="Ver próximas categorias"
                             onClick={() => scrollByAmount(1)}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-bs-card/80 backdrop-blur px-2 py-2 rounded-full border border-white/20 hover:border-bs-red text-white text-sm shadow transition-colors"
+                            className="absolute right-0 top-1/2 -translate-y-1/2 bg-bs-card/80 backdrop-blur px-2 py-2 rounded-full border border-white/20 hover:border-bs-red text-white text-sm shadow transition-colors"
                         >
                             ▶
                         </button>

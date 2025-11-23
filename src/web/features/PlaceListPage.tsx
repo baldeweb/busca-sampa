@@ -9,6 +9,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { CategoryCard } from '@/web/components/ui/CategoryCard';
+import flagSp from '@/assets/imgs/flags/flag_sp.png';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -129,6 +131,11 @@ export const PlaceListPage: React.FC = () => {
     const title = t(`placeType.${placeTypeForTitle}`);
     useDocumentTitle(title);
 
+    // Subtítulo dinâmico usando chaves de tradução e textos por tipo
+    const article = t(`placeList.article.${placeTypeForTitle}`, { defaultValue: '' });
+    const nounTranslated = t(`placeList.noun.${placeTypeForTitle}`, { defaultValue: title.toLowerCase() });
+    const subtitle = t('placeList.subtitleTemplate', { article, noun: nounTranslated });
+
     // DEBUG LOGS (diagnóstico)
     React.useEffect(() => {
         console.log("routeType param:", routeType);
@@ -151,34 +158,32 @@ export const PlaceListPage: React.FC = () => {
             </div>
             {/* Título e descrição */}
             <div className="px-4 py-6 bg-[#F5F5F5] text-black">
-                <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
+                <div className="flex items-start gap-4">
+                    <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
+                    <div>
+                        <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
+                        <p className="mt-1 text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                    </div>
+                </div>
             </div>
             {/* Chips de ambiente */}
             {environments.length > 0 && (
-                <div className="px-4 flex gap-2 flex-wrap bg-[#F5F5F5] text-black pb-4">
-                    {/* Chip reset de ambiente */}
-                    <button
-                        className={`px-3 py-2 rounded border font-bold text-xs ${selectedEnv === null
-                            ? "bg-bs-red text-white border-bs-red"
-                            : "bg-bs-card text-white border-bs-red"
-                            }`}
-                        onClick={() => setSelectedEnv(null)}
-                    >
-                        {t('common.all')}
-                    </button>
-                    {environments.map((env) => (
-                        <button
-                            key={env.value}
-                            className={`px-3 py-2 rounded border font-bold text-xs ${selectedEnv === env.value
-                                    ? "bg-bs-red text-white border-bs-red"
-                                    : "bg-bs-card text-white border-bs-red"
-                                }`}
-                            onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
-                        >
-                            {env.label}
-                        </button>
-                    ))}
-                    {/* Botão 'Ver mais' removido; 'Tudo' já reseta filtro */}
+                <div className="px-4 bg-[#F5F5F5] text-black pb-4">
+                    <h3 className="font-bold text-lg mb-3">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
+                    <div className="relative">
+                        <div className="flex gap-2 overflow-x-auto py-3 px-2 snap-x snap-mandatory"> 
+                            {environments.map((env, idx) => (
+                                <CategoryCard
+                                    key={env.value}
+                                    label={env.label}
+                                    icon={<img src={flagSp} alt="cat" className="w-8 h-8" />}
+                                    selected={selectedEnv === env.value}
+                                    onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                    index={idx}
+                                />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             )}
             {/* Filtro de ordenação */}

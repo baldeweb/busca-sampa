@@ -19,7 +19,7 @@ export function AppButton({
   className = "",
   type = "button",
 }: AppButtonProps) {
-  const base = "inline-flex items-center justify-center rounded-sm font-semibold tracking-[0.12em] transition-colors disabled:opacity-50";
+  const base = "inline-flex items-center justify-center rounded-sm font-semibold tracking-[0.03em] transition-colors disabled:opacity-50";
   const sizeMap = {
     xs: "text-[0.6rem] px-2 py-1",
     sm: "text-[0.7rem] px-3 py-1",
