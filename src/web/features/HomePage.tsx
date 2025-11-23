@@ -17,7 +17,7 @@ import { NearbyMapModal } from "@/web/components/home/NearbyMapModal";
 
 export function HomePage() {
   // 🔹 Carrega todas as categorias
-
+  const DEFAULT_RADIUS_DISTANCE = 5
   const { data: neighborhoods } = useNeighborhoodList();
 
   // 🔹 Controles de UI
@@ -26,7 +26,7 @@ export function HomePage() {
 
   // Estado de bairro não é mais necessário: navegação direta
   // Distância (raio) selecionada em KM (parametrizável)
-  const [selectedDistance, setSelectedDistance] = useState(2);
+  const [selectedDistance, setSelectedDistance] = useState(DEFAULT_RADIUS_DISTANCE);
 
   // Localização do usuário
   const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number } | null>(null);
@@ -241,7 +241,7 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-2xl font-bold uppercase tracking-[0.06em] mb-6">{t('home.nearMeTitle')}</h2>
+          <h2 className="text-2xl font-bold uppercase mb-6">{t('home.nearMeTitle')}</h2>
         {/* Placeholder quando não há localização */}
         {!userLocation && (
           <div className="mt-6 flex flex-col items-center text-center text-xs">
@@ -289,7 +289,7 @@ export function HomePage() {
               )}
               {!loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0 && (
                 <div className="text-center text-lg text-gray-300 flex flex-col items-center gap-5 py-6">
-                  <p>Não há nada dentro das proximidades no raio escolhido.</p>
+                  <p>{t('home.noNearbyResultsRadius')}</p>
                   <button
                     type="button"
                     onClick={() => setIsDistanceModalOpen(true)}
@@ -337,7 +337,7 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-2xl font-bold uppercase tracking-[0.06em] mb-6">{t('home.neighborhoodsTitle')}</h2>
+          <h2 className="text-2xl font-bold uppercase mb-6">{t('home.neighborhoodsTitle')}</h2>
           <p className="mt-1 text-lg text-gray-300">{t('home.neighborhoodsTagline')}</p>
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
             {neighborhoods.slice(0, 7).map((n) => (
@@ -353,9 +353,9 @@ export function HomePage() {
             <button
               type="button"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              className="w-full bg-black text-white font-semibold uppercase tracking-[0.06em] rounded-[2px] px-4 py-4 leading-tight shadow-sm border border-white/20 hover:border-bs-red transition-colors text-base"
+              className="w-full bg-black text-white font-semibold uppercase tracking-[0.01em] rounded-[2px] px-4 py-4 leading-tight shadow-sm border border-white/20 hover:border-bs-red transition-colors text-base"
             >
-              ver mais bairros &gt;
+              {t('home.viewMoreNeighborhoods')}
             </button>
           </div>
         </div>{/* /wrapper Por bairro */}

@@ -6,13 +6,13 @@ export function Header() {
     const { t } = useTranslation();
     return (
         <header className="bg-bs-bg-header text-white border-b-4 border-bs-red">
-            <div className="mx-auto flex max-w-5xl items-center justify-between px-6 sm:px-10 lg:px-12 py-8">
+            <div className="mx-auto flex max-w-5xl items-center justify-between px-6 sm:px-10 lg:px-4 py-8">
                 {/* Logo + título */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                     <img
                         src={flagSp}
                         alt="Bandeira do estado de São Paulo"
-                        className="h-[52px] w-[52px] rounded-app"
+                        className="h-[64px] w-[64px] rounded-app"
                     />
 
                     <div className="leading-tight">

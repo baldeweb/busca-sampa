@@ -6,6 +6,7 @@ import { CategoryCard } from "@/web/components/ui/CategoryCard";
 import { FaHamburger, FaBeer, FaCoffee, FaTree } from "react-icons/fa";
 import { GiPartyPopper } from "react-icons/gi";
 import { FaLandmark } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     onOptionSelect?: (option: MenuWhereIsTodayOption) => void;
@@ -80,10 +81,11 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         listRef.current.scrollBy({ left: dir * scrollAmount, behavior: "smooth" });
     }
 
+    const { t } = useTranslation();
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
             <div className="mx-auto max-w-5xl px-4">
-                <SectionHeading title="E aí, onde é hoje?" underline={false} sizeClass="text-2xl" trackingClass="tracking-[0.06em]" className="mb-6" />
+                <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-2xl" trackingClass="tracking-[0.06em]" className="mb-6" />
             {loading && <p className="text-base text-gray-300">Carregando opções…</p>}
             {error && (
                 <p className="text-base text-red-400">Não foi possível carregar as opções.</p>
