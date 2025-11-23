@@ -1,4 +1,5 @@
 import React from "react";
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { FaArrowLeft, FaInstagram, FaMapMarkerAlt, FaExclamationTriangle } from "react-icons/fa";
@@ -84,7 +85,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
                     <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
                         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
-                            <h2 className="font-bold text-lg uppercase">{t('placeDetail.visitModalTitle')}</h2>
+                            <SectionHeading title={t('placeDetail.visitModalTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
                             <button onClick={() => setShowVisitModal(false)} className="text-white text-xl font-bold">×</button>
                         </div>
                         <div className="p-5 text-center">
@@ -102,7 +103,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 <div className="border-b-2 border-bs-red px-4 pt-4 pb-2 flex items-center">
                     {icon || <span className="text-5xl mr-4">☕</span>}
                     <div>
-                        <h1 className="text-2xl font-bold uppercase">{name}</h1>
+                        <SectionHeading title={name} underline={false} sizeClass="text-2xl text-black" />
                         <p className="text-sm text-gray-300">{description}</p>
                         {priceRange && (
                             <p className="text-xs mt-1 text-gray-300">
@@ -127,7 +128,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 {/* Horário de funcionamento */}
                 <div className="px-4 py-3">
                     <div className="flex items-center justify-between">
-                        <h2 className="font-bold text-lg uppercase">{t('placeDetail.hoursTitle')}</h2>
+                        <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
                         <span
                             className="text-xs text-gray-300 cursor-pointer"
                             onClick={onShowOpeningHours}
@@ -148,7 +149,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 {/* Localização */}
                 <div className="border-t-2 border-bs-red px-4 py-3">
                     <div className="flex items-center justify-between mb-2">
-                        <h2 className="font-bold text-lg uppercase">{t('placeDetail.locationTitle')}</h2>
+                        <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
                         {isOpenNow ? (
                             <span className="bg-green-600 text-xs px-2 py-1 rounded">{t('placeDetail.openNow')}</span>
                         ) : (

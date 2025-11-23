@@ -7,6 +7,8 @@ import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import { ActionButton } from '@/web/components/ui/ActionButton';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -149,7 +151,7 @@ export const PlaceListPage: React.FC = () => {
             </div>
             {/* Título e descrição */}
             <div className="px-4 py-6 bg-[#F5F5F5] text-black">
-                <h1 className="text-2xl font-bold mb-2">{title}</h1>
+                <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
             </div>
             {/* Chips de ambiente */}
             {environments.length > 0 && (
@@ -241,8 +243,7 @@ export const PlaceListPage: React.FC = () => {
                             <div className="w-1/3 px-4 py-6">{place.name}</div>
                             <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
                             <div className="flex-1 flex justify-end pr-4">
-                                <button
-                                    className="bg-bs-red text-white text-xs font-bold px-3 py-2 rounded"
+                                <ActionButton
                                     onClick={() => {
                                         const typeToSlug: Record<string, string> = {
                                             RESTAURANT: "restaurants",
@@ -255,9 +256,10 @@ export const PlaceListPage: React.FC = () => {
                                         const slug = typeToSlug[mappedType] || routeTypeLower;
                                         navigate(`/place/${slug}/${place.id}`);
                                     }}
+                                    size="xs"
                                 >
                                     {t('common.details')}
-                                </button>
+                                </ActionButton>
                             </div>
                         </div>
                         );

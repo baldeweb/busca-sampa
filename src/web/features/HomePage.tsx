@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { WhereIsTodayMenu } from "@/web/components/home/WhereIsTodayMenu";
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { ActionButton } from '@/web/components/ui/ActionButton';
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { NeighborhoodSelectModal } from "@/web/components/home/NeighborhoodSelectModal";
 import { DistanceSelectModal } from "@/web/components/home/DistanceSelectModal";
@@ -243,7 +245,7 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
             <div className="mx-auto max-w-5xl px-4">
-            <h2 className="text-2xl font-bold mb-6">{t('home.nearMeTitle')}</h2>
+            <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-2xl" className="mb-6" />
         {/* Placeholder quando não há localização */}
         {!userLocation && (
           <div className="mt-6 flex flex-col items-center text-center text-xs">
@@ -292,13 +294,14 @@ export function HomePage() {
               {!loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0 && (
                 <div className="text-center text-lg text-gray-300 flex flex-col items-center gap-5 py-6">
                   <p>{t('home.noNearbyResultsRadius')}</p>
-                  <button
+                  <ActionButton
                     type="button"
                     onClick={() => setIsDistanceModalOpen(true)}
-                    className="bg-bs-red text-white text-xs font-bold px-3 py-2 rounded"
+                    size="md"
+                    className="px-4"
                   >
                     {t('home.increaseRadius')}
-                  </button>
+                  </ActionButton>
                 </div>
               )}
               {!loadingNearby &&
@@ -339,9 +342,8 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
         <div className="mx-auto max-w-5xl px-4">
-            <h2 className="text-2xl font-bold mb-6">{t('home.neighborhoodsTitle')}</h2>
-          <p className="mt-1 text-lg text-gray-300">{t('home.neighborhoodsTagline')}</p>
-          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
+            <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-2xl" className="mb-6" />
+            <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
             {neighborhoods.slice(0, 7).map((n) => (
               <button
                 key={n.id}
@@ -352,13 +354,14 @@ export function HomePage() {
                 {n.neighborhoodName}
               </button>
             ))}
-            <button
+            <ActionButton
               type="button"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              className="w-full bg-bs-red text-white font-semibold tracking-[0.01em] rounded-[2px] px-4 py-4 leading-tight shadow-sm transition-colors text-base"
+              size="md"
+              className="w-full py-4 font-semibold text-base rounded-[2px]"
             >
               {t('home.viewMoreNeighborhoods')}
-            </button>
+            </ActionButton>
           </div>
         </div>{/* /wrapper Por bairro */}
       </section>

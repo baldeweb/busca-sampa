@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 export function HowToRecommendPage() {
     const { t } = useTranslation();
     return (
         <main>
-            <h1>{t('howToRecommend.title')}</h1>
+            <SectionHeading title={t('howToRecommend.title')} underline={false} sizeClass="text-2xl" />
         </main>
     );
 }

@@ -1,6 +1,7 @@
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { PlaceGrid } from "@/web/components/place/PlaceGrid";
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 export function RestaurantsPage() {
     const { t } = useTranslation();
@@ -8,10 +9,7 @@ export function RestaurantsPage() {
     return (
         <div className="space-y-5">
             <div>
-                <h1 className="text-xl font-bold uppercase tracking-[0.18em]">
-                    {t('placeType.RESTAURANT')}
-                </h1>
-                <div className="mt-1 h-[3px] w-24 bg-bs-red" />
+                <SectionHeading title={t('placeType.RESTAURANT')} sizeClass="text-xl text-black" trackingClass="tracking-[0.18em]" />
             </div>
             {loading && <p className="text-sm text-gray-300">{t('common.loading')}</p>}
             {error && (

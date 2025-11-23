@@ -5,22 +5,29 @@ interface SectionHeadingProps {
   underline?: boolean;
   sizeClass?: string;
   trackingClass?: string; // novo: controlar espaçamento entre letras
+  id?: string;
 }
 
-export function SectionHeading({ title, subtitle, className, underline = true, sizeClass, trackingClass }: SectionHeadingProps) {
-  function sentenceCase(s: string) {
-    if (!s) return s;
-    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
-  }
+import { Text } from './Text';
 
-  const headingClass = [sizeClass || "text-sm", "font-bold", trackingClass || "tracking-[0.12em]"]
-    .join(" ");
+export function SectionHeading({ title, subtitle, className, underline = true, sizeClass, trackingClass, id }: SectionHeadingProps) {
+  // Titles should be uppercase by design
+  const upper = title ? title.toUpperCase() : title;
+
+  const headingClassParts = [sizeClass || 'text-sm'];
+  if (trackingClass) headingClassParts.push(trackingClass);
+  const headingClass = headingClassParts.join(' ');
+
   return (
     <div className={className}>
-      <h2 className={headingClass}>{sentenceCase(title)}</h2>
+      <Text id={id} as="h2" variant="sectionTitle" size={(sizeClass && sizeClass.includes('2xl')) ? 'xl' : 'lg'} className={headingClass}>
+        {upper}
+      </Text>
       {underline && <div className="mt-1 h-[3px] w-24 bg-bs-red" />}
       {subtitle && (
-        <p className="mt-2 text-[0.7rem] text-gray-300 leading-relaxed max-w-md">{subtitle}</p>
+        <Text as="p" variant="body" size="sm" className="mt-2 max-w-md">
+          {subtitle}
+        </Text>
       )}
     </div>
   );

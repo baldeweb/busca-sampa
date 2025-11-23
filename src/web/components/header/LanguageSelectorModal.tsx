@@ -33,9 +33,7 @@ export function LanguageSelectorModal({ onClose }: Props) {
             <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl">
                 {/* Cabeçalho */}
                 <div className="flex items-center justify-between border-b border-bs-red px-4 py-3">
-                    <h2 className="text-sm font-bold uppercase tracking-[0.18em]">
-                        {t('common.selectLanguage')}
-                    </h2>
+                    <SectionHeading title={t('common.selectLanguage')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" />
                     <button
                         type="button"
                         onClick={onClose}

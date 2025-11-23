@@ -5,6 +5,7 @@ import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { slugify } from "@/core/services/Slugify";
 import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useTranslation } from 'react-i18next';
+import { ActionButton } from '@/web/components/ui/ActionButton';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -94,7 +95,7 @@ export const NeighborhoodListPage: React.FC = () => {
         </div>
       </div>
       <div className="px-4 py-6 bg-[#F5F5F5] text-black">
-        <h1 className="text-2xl font-bold mb-2 uppercase">{titleNeighborhood}</h1>
+        <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl text-black" />
         <p className="text-lg text-gray-700 leading-relaxed">
           {t('neighborhoodList.intro')}
         </p>
@@ -154,8 +155,7 @@ export const NeighborhoodListPage: React.FC = () => {
                 <div className="w-1/3 px-4 py-6">{place.name}</div>
                 <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
                 <div className="flex-1 flex justify-end pr-4">
-                  <button
-                    className="bg-bs-red text-white text-xs font-bold px-3 py-2 rounded"
+                  <ActionButton
                     onClick={() => {
                       const typeMap: Record<string,string> = {
                         RESTAURANT: "restaurants",
@@ -168,9 +168,10 @@ export const NeighborhoodListPage: React.FC = () => {
                       const cat = typeMap[place.type] || "restaurants";
                       navigate(`/place/${cat}/${place.id}`);
                     }}
+                    size="xs"
                   >
                     {t('common.details')}
-                  </button>
+                  </ActionButton>
                 </div>
               </div>
             );

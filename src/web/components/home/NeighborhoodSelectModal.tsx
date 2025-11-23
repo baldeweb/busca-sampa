@@ -22,18 +22,16 @@ export function NeighborhoodSelectModal({
                 {/* Cabeçalho */}
                 <div className="px-4 py-3">
                     <div className="mb-1 flex items-center justify-between">
-                        <h2 className="text-sm font-bold uppercase tracking-[0.18em]">
-                            Selecione um bairro
-                        </h2>
-                        <button
-                            type="button"
-                            onClick={onClose}
-                            className="text-lg font-bold leading-none hover:text-bs-red"
-                        >
-                            ×
-                        </button>
-                    </div>
-                    <div className="h-[3px] w-24 bg-bs-red" />
+                            <SectionHeading title={"Selecione um bairro"} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" />
+                            <button
+                                type="button"
+                                onClick={onClose}
+                                className="text-lg font-bold leading-none hover:text-bs-red"
+                            >
+                                ×
+                            </button>
+                        </div>
+                        <div className="h-[3px] w-24 bg-bs-red" />
                 </div>
 
                 {/* Lista de bairros */}

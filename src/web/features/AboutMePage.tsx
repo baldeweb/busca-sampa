@@ -1,6 +1,7 @@
 import flagSp from "@/assets/imgs/flags/flag_sp.png";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 export function AboutMePage() {
   const { t } = useTranslation();
@@ -15,9 +16,7 @@ export function AboutMePage() {
           className="h-32 w-32 rounded-full border-2 border-bs-red shadow-md object-cover"
         />
 
-        <h1 className="mt-4 text-xl font-bold uppercase tracking-[0.18em]">
-          Wallace Baldenebre
-        </h1>
+        <SectionHeading title={"Wallace Baldenebre"} underline={false} sizeClass="text-xl" trackingClass="tracking-[0.18em]" className="mt-4" />
 
         <p className="text-xs text-gray-300">
           {t('aboutMe.authorTag')}
@@ -29,9 +28,7 @@ export function AboutMePage() {
 
       {/* SOBRE */}
       <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.18em] mb-2">
-          {t('aboutMe.aboutHeading')}
-        </h2>
+        <SectionHeading title={t('aboutMe.aboutHeading')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="mb-2" />
 
         <p className="text-sm leading-relaxed text-gray-200">
           {t('aboutMe.bio')}
@@ -40,9 +37,7 @@ export function AboutMePage() {
 
       {/* REDES SOCIAIS */}
       <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.18em] mb-3">
-          {t('aboutMe.socialHeading')}
-        </h2>
+        <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="mb-3" />
 
         <ul className="space-y-2 text-sm">
           <li>

@@ -68,15 +68,16 @@ export function PlaceDetailPage() {
 
   const mostrandoLoading = categoryExplicita && !place && datasetsLoading;
 
+  // Define título da aba para o lugar atual (chamado incondicionalmente para evitar hooks condicionais)
+  const pageTitle = place ? `${place.name} - ${t('header.title')}` : t('header.title');
+  useDocumentTitle(pageTitle);
+
   if (mostrandoLoading) {
     return <div className="text-center py-10">{t('placeDetail.loading')}</div>;
   }
   if (!place) {
     return <div className="text-center py-10">{t('placeDetail.notFound')}</div>;
   }
-
-  // Define título da aba para o lugar atual
-  useDocumentTitle(`${place.name} - ${t('header.title')}`);
 
   // Monta os dados para PlaceDetail
   const mainAddress = place.addresses?.[0] || {};
