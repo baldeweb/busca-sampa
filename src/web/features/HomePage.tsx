@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { WhereIsTodayMenu } from "@/web/components/home/WhereIsTodayMenu";
 import { useTranslation } from 'react-i18next';
+import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { NeighborhoodSelectModal } from "@/web/components/home/NeighborhoodSelectModal";
 import { DistanceSelectModal } from "@/web/components/home/DistanceSelectModal";
 
@@ -232,6 +233,7 @@ export function HomePage() {
   }, []);
 
   const { t } = useTranslation();
+  useDocumentTitle(t('header.title'));
   return (
     <div>
       {/* Seção: E aí, onde é hoje? */}
@@ -240,8 +242,8 @@ export function HomePage() {
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-2xl font-bold uppercase mb-6">{t('home.nearMeTitle')}</h2>
+            <div className="mx-auto max-w-5xl px-4">
+            <h2 className="text-2xl font-bold mb-6">{t('home.nearMeTitle')}</h2>
         {/* Placeholder quando não há localização */}
         {!userLocation && (
           <div className="mt-6 flex flex-col items-center text-center text-xs">
@@ -293,7 +295,7 @@ export function HomePage() {
                   <button
                     type="button"
                     onClick={() => setIsDistanceModalOpen(true)}
-                    className="rounded-full border border-bs-red px-4 py-2 text-sm uppercase tracking-[0.14em]"
+                    className="rounded-full border border-bs-red px-4 py-2 text-sm"
                   >
                     {t('home.increaseRadius')}
                   </button>
@@ -337,7 +339,7 @@ export function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-2xl font-bold uppercase mb-6">{t('home.neighborhoodsTitle')}</h2>
+            <h2 className="text-2xl font-bold mb-6">{t('home.neighborhoodsTitle')}</h2>
           <p className="mt-1 text-lg text-gray-300">{t('home.neighborhoodsTagline')}</p>
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
             {neighborhoods.slice(0, 7).map((n) => (
@@ -353,7 +355,7 @@ export function HomePage() {
             <button
               type="button"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              className="w-full bg-black text-white font-semibold uppercase tracking-[0.01em] rounded-[2px] px-4 py-4 leading-tight shadow-sm border border-white/20 hover:border-bs-red transition-colors text-base"
+              className="w-full bg-black text-white font-semibold tracking-[0.01em] rounded-[2px] px-4 py-4 leading-tight shadow-sm border border-white/20 hover:border-bs-red transition-colors text-base"
             >
               {t('home.viewMoreNeighborhoods')}
             </button>

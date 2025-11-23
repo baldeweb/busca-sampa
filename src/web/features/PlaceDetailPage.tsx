@@ -7,6 +7,7 @@ import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { OpeningHoursModal } from "@/web/components/place/OpeningHoursModal";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useTranslation } from 'react-i18next';
+import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 
 export function PlaceDetailPage() {
       const { t } = useTranslation();
@@ -73,6 +74,9 @@ export function PlaceDetailPage() {
   if (!place) {
     return <div className="text-center py-10">{t('placeDetail.notFound')}</div>;
   }
+
+  // Define título da aba para o lugar atual
+  useDocumentTitle(`${place.name} - ${t('header.title')}`);
 
   // Monta os dados para PlaceDetail
   const mainAddress = place.addresses?.[0] || {};

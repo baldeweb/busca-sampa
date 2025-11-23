@@ -86,9 +86,9 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
             <div className="mx-auto max-w-5xl px-4">
                 <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-2xl" trackingClass="tracking-[0.06em]" className="mb-6" />
-            {loading && <p className="text-base text-gray-300">Carregando opções…</p>}
+            {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
             {error && (
-                <p className="text-base text-red-400">Não foi possível carregar as opções.</p>
+                <p className="text-base text-red-400">{t('common.loadError')}</p>
             )}
             {!loading && !error && (
                 <div className="relative mt-4">

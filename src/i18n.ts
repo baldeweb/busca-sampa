@@ -15,7 +15,7 @@ const resources = {
         neighborhoodsTitle: 'Por bairro',
         neighborhoodsTagline: 'Tá em algum desses bairros? Tem coisa boa por perto!',
         radius: 'Raio',
-        viewMoreNeighborhoods: 'ver mais bairros >',
+        viewMoreNeighborhoods: 'ver mais bairros ►',
         noNearbyResultsRadius: 'Não há nada dentro das proximidades no raio escolhido.'
       },
       header: {

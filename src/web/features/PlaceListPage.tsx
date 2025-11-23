@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { useDocumentTitle } from "@/web/hooks/useDocumentTitle";
 import { FaArrowLeft } from "react-icons/fa";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
@@ -124,6 +125,7 @@ export const PlaceListPage: React.FC = () => {
     // Título dinâmico
     const placeTypeForTitle = (routeType?.toUpperCase() || "RESTAURANT");
     const title = t(`placeType.${placeTypeForTitle}`);
+    useDocumentTitle(title);
 
     // DEBUG LOGS (diagnóstico)
     React.useEffect(() => {
@@ -147,7 +149,7 @@ export const PlaceListPage: React.FC = () => {
             </div>
             {/* Título e descrição */}
             <div className="px-4 py-6 bg-[#F5F5F5] text-black">
-                <h1 className="text-2xl font-bold mb-2 uppercase">{title}</h1>
+                <h1 className="text-2xl font-bold mb-2">{title}</h1>
             </div>
             {/* Chips de ambiente */}
             {environments.length > 0 && (

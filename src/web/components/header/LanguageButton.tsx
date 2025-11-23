@@ -27,18 +27,18 @@ export function LanguageButton() {
 
     return (
         <>
-            <button
-                type="button"
-                onClick={() => setOpen(true)}
-                className="inline-flex items-center gap-2 rounded-md border border-white/30 bg-bs-card px-3 py-1 text-xs font-semibold uppercase tracking-wide transition-colors hover:border-bs-red"
-            >
-                <img
-                    src={currentFlag}
-                    alt={currentLanguage}
-                    className="h-5 w-5 rounded-full border border-white/40"
-                />
-                <span>{currentLanguage}</span>
-            </button>
+        <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="inline-flex flex-col items-center gap-1 rounded-md border border-white/30 bg-bs-card px-1.5 py-1 text-xs font-semibold uppercase tracking-wide transition-colors hover:border-bs-red"
+        >
+            <img
+                src={currentFlag}
+                alt={currentLanguage}
+                className="h-5 w-5 rounded-full border border-white/40"
+            />
+            <span>{currentLanguage}</span>
+        </button>
 
             {open && <LanguageSelectorModal onClose={() => setOpen(false)} />}
         </>
