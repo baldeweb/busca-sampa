@@ -99,104 +99,117 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             )}
 
             {/* Main Content */}
-            <div className="flex-1 pb-4">
-                <div className="border-b-2 border-bs-red px-4 pt-4 pb-2 flex items-center">
-                    {icon || <span className="text-5xl mr-4">☕</span>}
-                    <div>
-                        <SectionHeading title={name} underline={false} sizeClass="text-2xl text-black" />
-                        <p className="text-sm text-gray-300">{description}</p>
-                        {priceRange && (
-                            <p className="text-xs mt-1 text-gray-300">
-                                <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
-                            </p>
-                        )}
-                        {/* Tipo de ambiente */}
-                        {ambienteList.length > 0 && (
-                            <div className="mt-2">
-                                <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
-                                <ul className="flex flex-wrap gap-2 mt-1">
-                                    {ambienteList.map((amb: string, idx: number) => (
-                                        <li key={idx} className="bg-gray-700 px-2 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
+            <div className="flex-1 pb-4 bg-[#F5F5F5] text-black flex flex-col min-h-0">
+                <div className="max-w-7xl px-16 py-2">
+                    <div className="border-b-2 border-bs-red px-1 pt-10 pb-10 flex items-center">
+                        {icon || <span className="text-5xl mr-4">☕</span>}
+                        <div>
+                            <SectionHeading title={name} underline={false} sizeClass="text-2xl text-black" />
+                            <p className="text-sm text-gray-700">{description}</p>
+                            {priceRange && (
+                                <p className="text-xs mt-1 text-gray-700">
+                                        <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
+                                </p>
+                            )}
+                            {/* Tipo de ambiente */}
+                            {ambienteList.length > 0 && (
+                                <div className="mt-2">
+                                    <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
+                                        <ul className="flex flex-wrap gap-2 mt-1">
+                                            {ambienteList.map((amb: string, idx: number) => (
+                                                <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                        <span className="ml-auto bg-[#48464C] text-white text-xs px-3 py-1 rounded">{type}</span>
+                    </div>
+
+                    {/* Horário de funcionamento */}
+                    <div className="px-1 py-3">
+                        <div className="flex items-center justify-between">
+                            <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
+                            <span
+                                className="text-xs text-black cursor-pointer"
+                                onClick={onShowOpeningHours}
+                            >
+                                {t('placeDetail.viewHours')}
+                            </span>
+                        </div>
+                        <div className="mt-2 space-y-1">
+                            {openingDays.map((day, idx) => (
+                                <div key={idx} className="flex items-center">
+                                    <input type="checkbox" checked readOnly className="accent-green-500 mr-2" />
+                                    <span className="text-sm text-gray-800">{day}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Localização */}
+                    <div className="border-t-2 border-bs-red px-1 py-3">
+                        <div className="flex items-center justify-between mb-2">
+                            <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
+                            {isOpenNow ? (
+                                <span className="bg-green-600 text-white text-xs px-0 py-1 rounded">{t('placeDetail.openNow')}</span>
+                            ) : (
+                                <span className="bg-red-600 text-white text-xs px-2 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                            )}
+                        </div>
+                        <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
+                        <div className="mt-4 mb-4 flex items-start justify-between">
+                            <div>
+                                <div>
+                                    <span className="font-bold uppercase text-black">{neighborhood}</span>
+                                </div>
+                                <div className="text-sm text-gray-800">{t('placeDetail.streetPrefix')} {address}</div>
+                            </div>
+                            <div className="flex-shrink-0">
+                                <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
+                                    <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="px-8 py-2 flex-1 bg-[#48464C] mt-4">
+                    <div className="mx-auto max-w-7xl px-10 py-10 h-full flex flex-col justify-between text-white">
+                        <div>
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h3 className="font-bold uppercase text-white">{t('placeDetail.instagramTitle')}</h3>
+                                    <p className="text-sm text-gray-300">{t('placeDetail.instagramSubtitle')}</p>
+                                </div>
+                                <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
+                                    <FaInstagram className="mr-2" /> {t('placeDetail.follow')}
+                                </a>
+                            </div>
+                            <div className="flex items-center justify-between mt-6">
+                                <div>
+                                    <h3 className="font-bold uppercase text-white">{t('placeDetail.menuTitle')}</h3>
+                                    <p className="text-sm text-gray-300">{t('placeDetail.menuSubtitle')}</p>
+                                </div>
+                                <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
+                                    {t('placeDetail.menuButton')}
+                                </a>
+                            </div>
+                        </div>
+
+                        {notes && notes.length > 0 && (
+                            <div className="mt-6">
+                                <h3 className="font-bold uppercase text-white">{t('placeDetail.notesTitle')}</h3>
+                                <ul className="list-disc ml-5 text-sm text-gray-200">
+                                    {notes.map((note, idx) => (
+                                        <li key={idx}>{note}</li>
                                     ))}
                                 </ul>
                             </div>
                         )}
                     </div>
-                    <span className="ml-auto bg-gray-700 text-xs px-3 py-1 rounded">{type}</span>
-                </div>
-
-                {/* Horário de funcionamento */}
-                <div className="px-4 py-3">
-                    <div className="flex items-center justify-between">
-                        <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
-                        <span
-                            className="text-xs text-gray-300 cursor-pointer"
-                            onClick={onShowOpeningHours}
-                        >
-                            {t('placeDetail.viewHours')}
-                        </span>
-                    </div>
-                    <div className="mt-2 space-y-1">
-                        {openingDays.map((day, idx) => (
-                            <div key={idx} className="flex items-center">
-                                <input type="checkbox" checked readOnly className="accent-green-500 mr-2" />
-                                <span className="text-sm">{day}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Localização */}
-                <div className="border-t-2 border-bs-red px-4 py-3">
-                    <div className="flex items-center justify-between mb-2">
-                        <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
-                        {isOpenNow ? (
-                            <span className="bg-green-600 text-xs px-2 py-1 rounded">{t('placeDetail.openNow')}</span>
-                        ) : (
-                            <span className="bg-red-600 text-xs px-2 py-1 rounded">{t('placeDetail.closedNow')}</span>
-                        )}
-                    </div>
-                    <p className="text-sm text-gray-200 mb-2">{t('placeDetail.locationDescription')}</p>
-                    <div className="mb-2">
-                        <span className="font-bold uppercase">{neighborhood}</span>
-                        <div className="text-sm">{t('placeDetail.streetPrefix')} {address}</div>
-                    </div>
-                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
-                        <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                    </a>
-                </div>
-
-                {/* Instagram, Cardápio, Observação */}
-                <div className="bg-gray-800 px-4 py-4 mt-4 space-y-4">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h3 className="font-bold uppercase">{t('placeDetail.instagramTitle')}</h3>
-                            <p className="text-sm text-gray-300">{t('placeDetail.instagramSubtitle')}</p>
-                        </div>
-                        <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
-                            <FaInstagram className="mr-2" /> {t('placeDetail.follow')}
-                        </a>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h3 className="font-bold uppercase">{t('placeDetail.menuTitle')}</h3>
-                            <p className="text-sm text-gray-300">{t('placeDetail.menuSubtitle')}</p>
-                        </div>
-                        <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
-                            {t('placeDetail.menuButton')}
-                        </a>
-                    </div>
-                    <div>
-                        <h3 className="font-bold uppercase">{t('placeDetail.notesTitle')}</h3>
-                        <ul className="list-disc ml-5 text-sm text-gray-300">
-                            {notes.map((note, idx) => (
-                                <li key={idx}>{note}</li>
-                            ))}
-                        </ul>
-                    </div>
                 </div>
             </div>
-
             {/* Footer */}
             <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
                 <FaExclamationTriangle className="mr-2 text-white" />
@@ -205,3 +218,5 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
         </div>
     );
 }
+
+
