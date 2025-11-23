@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactElement } from "react";
 import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
@@ -21,7 +21,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     }
 
     // Map tag to icon component (placeholder icons; will be replaced later)
-    function resolveIcon(tags: string[]): JSX.Element {
+    function resolveIcon(tags: string[]): ReactElement {
         const base = { className: "" };
         if (tags.includes("RESTAURANTS")) return <FaHamburger {...base} />;
         if (tags.includes("BARS")) return <FaBeer {...base} />;
