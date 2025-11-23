@@ -295,7 +295,7 @@ export function HomePage() {
                   <button
                     type="button"
                     onClick={() => setIsDistanceModalOpen(true)}
-                    className="rounded-full border border-bs-red px-4 py-2 text-sm"
+                    className="bg-bs-red text-white text-xs font-bold px-3 py-2 rounded"
                   >
                     {t('home.increaseRadius')}
                   </button>
@@ -355,7 +355,7 @@ export function HomePage() {
             <button
               type="button"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              className="w-full bg-black text-white font-semibold tracking-[0.01em] rounded-[2px] px-4 py-4 leading-tight shadow-sm border border-white/20 hover:border-bs-red transition-colors text-base"
+              className="w-full bg-bs-red text-white font-semibold tracking-[0.01em] rounded-[2px] px-4 py-4 leading-tight shadow-sm transition-colors text-base"
             >
               {t('home.viewMoreNeighborhoods')}
             </button>
