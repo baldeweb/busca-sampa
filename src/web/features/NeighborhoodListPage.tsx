@@ -221,7 +221,7 @@ export const NeighborhoodListPage: React.FC = () => {
         <div className="mx-auto max-w-7xl sm:px-16">
           <div className="rounded-t-lg overflow-hidden">
             <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
-              <div className="w-1/3 px-4 sm:px-8 py-3">{t('list.nameHeader')}</div>
+              <div className="w-1/3 px-4 sm:px-12 py-3">{t('list.nameHeader')}</div>
               <div className="w-1/3 py-3 ps-4 sm:ps-6">{t('list.typeHeader')}</div>
             </div>
             {sortedPlaces.length === 0 && (

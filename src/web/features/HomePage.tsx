@@ -250,7 +250,7 @@ export function HomePage() {
                 <button
                   type="button"
                   onClick={() => setIsDistanceModalOpen(true)}
-                  className="rounded-full border border-white/25 px-3 py-1 text-sm sm:px-4 sm:py-2 hover:border-bs-red"
+                  className="min-w-[140px] rounded-full border border-white/25 px-3 py-1 text-sm sm:px-4 sm:py-2 hover:border-bs-red"
                 >
                   {t('common.changeDistance')}
                 </button>
@@ -302,10 +302,10 @@ export function HomePage() {
                     .map((s) => (
                       <div
                         key={s.category}
-                        className="border-b border-white/10 py-1 flex items-center justify-between gap-2 text-xs"
+                        className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs"
                       >
-                        <div className="flex flex-col">
-                          <span className="font-bold uppercase tracking-[0.10em] text-lg">
+                        <div className="flex flex-col me-6">
+                          <span className="font-bold uppercase text-md">
                             {s.count} {s.label}
                           </span>
                           {s.nearestKm !== null && (
@@ -318,9 +318,9 @@ export function HomePage() {
                         <button
                           type="button"
                           onClick={() => setMapCategory(s.category)}
-                          className="text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                          className="min-w-[110px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
                         >
-                          ver no mapa &gt;
+                          ver no mapa
                         </button>
                       </div>
                     ))}
