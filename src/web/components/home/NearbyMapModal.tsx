@@ -73,8 +73,8 @@ export function NearbyMapModal({ onClose, userLocation, places, title }: NearbyM
 
   // Cleanup markers when closing (optional advanced handling omitted)
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
+    return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3">
       <div className="w-full max-w-lg rounded-md bg-bs-card border border-white/15 shadow relative">
         <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
           <h3 className="text-xs font-semibold uppercase tracking-[0.12em]">
@@ -83,13 +83,13 @@ export function NearbyMapModal({ onClose, userLocation, places, title }: NearbyM
           <button
             type="button"
             onClick={onClose}
-            className="text-[0.9rem] leading-none rounded-full border border-white/25 px-3 py-2 hover:border-bs-red font-bold"
+            className="text-sm leading-none rounded-full border border-white/25 px-2 py-1 sm:px-3 sm:py-2 hover:border-bs-red font-bold"
           >
             {t('common.close')}
           </button>
         </div>
-        <div ref={mapContainerRef} className="h-[420px] w-full" />
-        <div className="px-4 py-2 text-[0.6rem] text-gray-400 border-t border-white/10">
+        <div ref={mapContainerRef} className="h-[300px] sm:h-[420px] w-full" />
+        <div className="px-3 py-2 text-xs sm:text-[0.6rem] text-gray-400 border-t border-white/10">
           {places.length === 0 && <p>{t('nearbyMap.noneInRadius')}</p>}
           {places.length > 0 && <p>{t('nearbyMap.pointsDisplayed', { count: places.length })}</p>}
         </div>

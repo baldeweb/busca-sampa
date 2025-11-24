@@ -32,10 +32,10 @@ export function PlaceCard({ place }: Props) {
             onClick={() => navigate(`/place/${resolveCategoryKey()}/${place.id}`)}
         >
             {/* Conteúdo */}
-            <div className="p-3 space-y-2">
+            <div className="p-2 sm:p-3 space-y-1 sm:space-y-2">
                 {/* Nome + selo “já visitei” */}
                 <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-sm">{place.name}</h3>
+                    <h3 className="font-semibold text-sm sm:text-base">{place.name}</h3>
                     {isVisited && (
                         <span className="text-[0.6rem] px-2 py-[2px] rounded bg-bs-red text-white uppercase tracking-wider">
                             já fui

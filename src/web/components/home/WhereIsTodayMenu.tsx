@@ -83,9 +83,9 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
     const { t } = useTranslation();
     return (
-        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-6 sm:py-12">
             <div className="mx-auto max-w-5xl px-4">
-                <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-2xl" className="mb-1" />
+                <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
                 <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
             {error && (
@@ -95,7 +95,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                 <div className="relative mt-4">
                     <div
                         ref={listRef}
-                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
+                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 px-4 sm:px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
                         role="listbox"
                         aria-label="Categorias"
                         tabIndex={0}

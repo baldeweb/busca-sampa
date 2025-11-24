@@ -146,8 +146,8 @@ export const PlaceListPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
-            <div className="bg-black border-b-2 border-bs-red px-12">
-                <div className="mx-auto max-w-5xl flex items-center px-4 pt-12 pb-4">
+            <div className="bg-black border-b-2 border-bs-red px-4 sm:px-12">
+                <div className="mx-auto max-w-5xl flex items-center px-4 pt-8 sm:pt-12 pb-4">
                     <button
                         onClick={() => navigate(-1)}
                         className="text-white text-lg font-bold flex items-center"
@@ -156,7 +156,7 @@ export const PlaceListPage: React.FC = () => {
                     </button>
                 </div>
             </div>
-            <div className="max-w-7xl px-16 py-8 bg-[#F5F5F5] text-black">
+            <div className="max-w-7xl px-4 sm:px-16 py-6 sm:py-8 bg-[#F5F5F5] text-black">
                 {/* Título e descrição */}
                 <div>
                     <div className="flex items-start gap-4">
@@ -248,9 +248,9 @@ export const PlaceListPage: React.FC = () => {
             {/* Lista de lugares */}
             <div className="px-0 flex-1 bg-[#48464C]">
                 <div className="rounded-t-lg overflow-hidden">
-                    <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
-                        <div className="w-1/3 px-16 py-3">{t('list.nameHeader')}</div>
-                        <div className="w-1/3 py-3 ps-8">{t('list.neighborhoodHeader')}</div>
+                        <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
+                        <div className="w-1/3 px-4 sm:px-16 py-3">{t('list.nameHeader')}</div>
+                        <div className="w-1/3 py-3 ps-4 sm:ps-8">{t('list.neighborhoodHeader')}</div>
                     </div>
                     {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
                     {sortedPlaces.map((place, idx) => {
@@ -258,7 +258,7 @@ export const PlaceListPage: React.FC = () => {
                         return (
                             <div
                                 key={place.id}
-                                className={`flex items-center ${rowBg} px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
+                                className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
                             >
                                 <div className="w-1/3 px-4 py-6">{place.name}</div>
                                 <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>

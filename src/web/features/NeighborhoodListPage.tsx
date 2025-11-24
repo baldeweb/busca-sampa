@@ -124,16 +124,16 @@ export const NeighborhoodListPage: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-7xl px-16 py-12 bg-[#F5F5F5] text-black">
-        <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl text-black" />
-        <p className="text-lg text-gray-700 leading-relaxed">
+      <div className="max-w-7xl px-4 sm:px-16 py-6 sm:py-12 bg-[#F5F5F5] text-black">
+        <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
+        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
           {t('neighborhoodList.intro')}
         </p>
       </div>
 
       {/* Filtro por tipo (carrossel de CategoryCard igual à Home) */}
       {placeTypes.length > 0 && (
-        <div className="max-w-7xl px-16 pb-8 bg-[#F5F5F5] text-black">
+        <div className="max-w-7xl px-4 sm:px-16 pb-8 bg-[#F5F5F5] text-black">
           <h3 className="font-bold text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
           <div className="relative">
             <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory">
@@ -164,7 +164,7 @@ export const NeighborhoodListPage: React.FC = () => {
       )}
 
       {/* Filtro de ordenação */}
-      <div className="max-w-7xl px-16 py-4 bg-[#F5F5F5] text-black">
+      <div className="max-w-7xl px-4 sm:px-16 py-4 bg-[#F5F5F5] text-black">
         <div className="flex items-center justify-between">
           <label className="font-bold mr-2">{t('common.filter')}</label>
           <div className="relative inline-block">
@@ -214,18 +214,18 @@ export const NeighborhoodListPage: React.FC = () => {
       <div className="px-0 flex-1 bg-[#48464C]">
         <div className="rounded-t-lg overflow-hidden">
           <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
-            <div className="w-1/3 px-16 py-3">{t('list.nameHeader')}</div>
-            <div className="w-1/3 py-3 ps-8">{t('list.typeHeader')}</div>
+            <div className="w-1/3 px-4 sm:px-16 py-3">{t('list.nameHeader')}</div>
+            <div className="w-1/3 py-3 ps-4 sm:ps-8">{t('list.typeHeader')}</div>
           </div>
           {sortedPlaces.length === 0 && (
             <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
           )}
           {sortedPlaces.map((place, idx) => {
             const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
-            return (
+              return (
               <div
                 key={place.id}
-                className={`flex items-center ${rowBg} px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
+                className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
               >
                 <div className="w-1/3 px-4 py-6">{place.name}</div>
                 <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>

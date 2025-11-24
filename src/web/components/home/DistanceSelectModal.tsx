@@ -50,19 +50,19 @@ export function DistanceSelectModal({
                 </div>
 
                 {/* CONTROLES */}
-                <div className="flex items-center justify-around py-6">
+                <div className="flex items-center justify-around py-4 sm:py-6">
                     <button
                         onClick={decrement}
-                        className="flex h-10 w-10 items-center justify-center rounded-md border border-white/25 bg-bs-bg hover:border-bs-red"
+                        className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md border border-white/25 bg-bs-bg hover:border-bs-red"
                     >
                         -
                     </button>
 
-                    <div className="text-3xl font-bold">{km}</div>
+                    <div className="text-2xl sm:text-3xl font-bold">{km}</div>
 
                     <button
                         onClick={increment}
-                        className="flex h-10 w-10 items-center justify-center rounded-md border border-white/25 bg-bs-bg hover:border-bs-red"
+                        className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md border border-white/25 bg-bs-bg hover:border-bs-red"
                     >
                         +
                     </button>
