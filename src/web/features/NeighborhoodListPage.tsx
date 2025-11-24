@@ -7,6 +7,8 @@ import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { CategoryCard } from '@/web/components/ui/CategoryCard';
+import flagSp from '@/assets/imgs/flags/flag_sp.png';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -75,11 +77,38 @@ export const NeighborhoodListPage: React.FC = () => {
   }, [neighborhoodPlaces]);
 
   const [selectedType, setSelectedType] = useState<string | null>(null);
+  const ORDER_OPTIONS = [
+    { value: 'name-asc' },
+    { value: 'name-desc' },
+    { value: 'type-asc' },
+    { value: 'type-desc' },
+  ];
+  const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
+  const [showOrderDropdown, setShowOrderDropdown] = useState(false);
 
   const filteredPlaces = useMemo(() => {
     if (!selectedType) return neighborhoodPlaces;
     return neighborhoodPlaces.filter((p) => p.type === selectedType);
   }, [neighborhoodPlaces, selectedType]);
+
+  const sortedPlaces = useMemo(() => {
+    const arr = [...filteredPlaces];
+    switch (order) {
+      case 'name-asc':
+        arr.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'name-desc':
+        arr.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case 'type-asc':
+        arr.sort((a, b) => getPlaceTypeLabel(a.type).localeCompare(getPlaceTypeLabel(b.type)));
+        break;
+      case 'type-desc':
+        arr.sort((a, b) => getPlaceTypeLabel(b.type).localeCompare(getPlaceTypeLabel(a.type)));
+        break;
+    }
+    return arr;
+  }, [filteredPlaces, order]);
 
   const titleNeighborhood = slug?.replace(/-/g, " ") || "";
 
@@ -102,39 +131,84 @@ export const NeighborhoodListPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Filtro por tipo */}
+      {/* Filtro por tipo (carrossel de CategoryCard igual à Home) */}
       {placeTypes.length > 0 && (
-        <div className="max-w-7xl px-16 pb-12 flex gap-2 flex-wrap bg-[#F5F5F5] text-black pb-4">
-          {/* Chip reset */}
-          <button
-            className={`px-3 py-2 rounded border font-bold text-xs ${
-              selectedType === null
-                ? "bg-bs-red text-white border-bs-red"
-                : "bg-bs-card text-white border-bs-red"
-            }`}
-            onClick={() => setSelectedType(null)}
-          >
-            {t('common.all')}
-          </button>
-          {placeTypes.map((t) => {
-            const label = getPlaceTypeLabel(t);
-            return (
-              <button
-                key={t}
-                className={`px-3 py-2 rounded border font-bold text-xs ${
-                  selectedType === t
-                    ? "bg-bs-red text-white border-bs-red"
-                    : "bg-bs-card text-white border-bs-red"
-                }`}
-                onClick={() => setSelectedType(selectedType === t ? null : t)}
-              >
-                {label}
-              </button>
-            );
-          })}
-          {/* Removed trailing 'Todos' button, replaced by first 'Tudo' */}
+        <div className="max-w-7xl px-16 pb-8 bg-[#F5F5F5] text-black">
+          <h3 className="font-bold text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
+          <div className="relative">
+            <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory">
+              {placeTypes.length > 1 && (
+                <CategoryCard
+                  key="all-types"
+                  label={t('common.all')}
+                  icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                  selected={selectedType === null}
+                  onClick={() => setSelectedType(null)}
+                  index={0}
+                />
+              )}
+              {placeTypes.map((pt, idx) => (
+                <CategoryCard
+                  key={pt}
+                  label={getPlaceTypeLabel(pt)}
+                  icon={<img src={flagSp} alt={pt} className="w-8 h-8" />}
+                  selected={selectedType === pt}
+                  onClick={() => setSelectedType(selectedType === pt ? null : pt)}
+                  index={placeTypes.length > 1 ? idx + 1 : idx}
+                />
+              ))}
+            </div>
+          </div>
+          {/* Removed 'VER MAIS' button per design decision */}
         </div>
       )}
+
+      {/* Filtro de ordenação */}
+      <div className="max-w-7xl px-16 py-4 bg-[#F5F5F5] text-black">
+        <div className="flex items-center justify-between">
+          <label className="font-bold mr-2">{t('common.filter')}</label>
+          <div className="relative inline-block">
+            <button
+              className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+              onClick={() => setShowOrderDropdown((v) => !v)}
+            >
+              {(() => {
+                switch (order) {
+                  case 'name-asc': return t('list.orderNameAsc');
+                  case 'name-desc': return t('list.orderNameDesc');
+                  case 'type-asc': return t('list.orderNeighborhoodAsc');
+                  case 'type-desc': return t('list.orderNeighborhoodDesc');
+                  default: return '';
+                }
+              })()}
+            </button>
+            {showOrderDropdown && (
+              <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
+                {ORDER_OPTIONS.map((opt) => (
+                  <button
+                    key={opt.value}
+                    className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
+                    onClick={() => {
+                      setOrder(opt.value);
+                      setShowOrderDropdown(false);
+                    }}
+                  >
+                    {(() => {
+                      switch (opt.value) {
+                        case 'name-asc': return t('list.orderNameAsc');
+                        case 'name-desc': return t('list.orderNameDesc');
+                        case 'type-asc': return t('list.orderNeighborhoodAsc');
+                        case 'type-desc': return t('list.orderNeighborhoodDesc');
+                        default: return '';
+                      }
+                    })()}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
       <div className="px-0 flex-1 bg-[#48464C]">
@@ -143,10 +217,10 @@ export const NeighborhoodListPage: React.FC = () => {
             <div className="w-1/3 px-16 py-3">{t('list.nameHeader')}</div>
             <div className="w-1/3 py-3 ps-8">{t('list.typeHeader')}</div>
           </div>
-          {filteredPlaces.length === 0 && (
+          {sortedPlaces.length === 0 && (
             <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
           )}
-          {filteredPlaces.map((place, idx) => {
+          {sortedPlaces.map((place, idx) => {
             const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
             return (
               <div

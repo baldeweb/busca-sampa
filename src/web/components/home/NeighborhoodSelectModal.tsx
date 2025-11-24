@@ -1,4 +1,5 @@
 import type { Neighborhood } from "@/core/domain/models/Neighborhood";
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 interface Props {
     neighborhoods: Neighborhood[];

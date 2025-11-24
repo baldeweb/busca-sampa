@@ -156,14 +156,14 @@ export const PlaceListPage: React.FC = () => {
                     </button>
                 </div>
             </div>
-            <div className="max-w-7xl px-16 py-12 bg-[#F5F5F5] text-black">
+            <div className="max-w-7xl px-16 py-8 bg-[#F5F5F5] text-black">
                 {/* Título e descrição */}
                 <div>
                     <div className="flex items-start gap-4">
                         <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
                         <div>
                             <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
-                            <p className="mt-1 text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                            <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
                         </div>
                     </div>
                 </div>
@@ -200,46 +200,48 @@ export const PlaceListPage: React.FC = () => {
                 )}
                 {/* Filtro de ordenação */}
                 <div className="bg-[#F5F5F5] text-black pt-8">
-                    <label className="font-bold mr-2">{t('common.filter')}</label>
-                    <div className="relative inline-block">
-                        <button
-                            className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
-                            onClick={() => setShowOrderDropdown((v) => !v)}
-                        >
-                            {(() => {
-                                switch (order) {
-                                    case 'name-asc': return t('list.orderNameAsc');
-                                    case 'name-desc': return t('list.orderNameDesc');
-                                    case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                    case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                    default: return '';
-                                }
-                            })()}
-                        </button>
-                        {showOrderDropdown && (
-                            <div className="absolute left-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                                {ORDER_OPTIONS.map((opt) => (
-                                    <button
-                                        key={opt.value}
-                                        className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                                        onClick={() => {
-                                            setOrder(opt.value);
-                                            setShowOrderDropdown(false);
-                                        }}
-                                    >
-                                        {(() => {
-                                            switch (opt.value) {
-                                                case 'name-asc': return t('list.orderNameAsc');
-                                                case 'name-desc': return t('list.orderNameDesc');
-                                                case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                                case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                                default: return '';
-                                            }
-                                        })()}
-                                    </button>
-                                ))}
-                            </div>
-                        )}
+                    <div className="flex items-center justify-between">
+                        <label className="font-bold mr-2">{t('common.filter')}</label>
+                        <div className="relative inline-block">
+                            <button
+                                className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                                onClick={() => setShowOrderDropdown((v) => !v)}
+                            >
+                                {(() => {
+                                    switch (order) {
+                                        case 'name-asc': return t('list.orderNameAsc');
+                                        case 'name-desc': return t('list.orderNameDesc');
+                                        case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
+                                        case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
+                                        default: return '';
+                                    }
+                                })()}
+                            </button>
+                            {showOrderDropdown && (
+                                <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
+                                    {ORDER_OPTIONS.map((opt) => (
+                                        <button
+                                            key={opt.value}
+                                            className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
+                                            onClick={() => {
+                                                setOrder(opt.value);
+                                                setShowOrderDropdown(false);
+                                            }}
+                                        >
+                                            {(() => {
+                                                switch (opt.value) {
+                                                    case 'name-asc': return t('list.orderNameAsc');
+                                                    case 'name-desc': return t('list.orderNameDesc');
+                                                    case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
+                                                    case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
+                                                    default: return '';
+                                                }
+                                            })()}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

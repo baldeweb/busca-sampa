@@ -99,7 +99,7 @@ const resources = {
         you: 'Você'
       },
       neighborhoodList: {
-        intro: 'Lugares neste bairro (todas as categorias). Filtre por tipo usando os botões abaixo.'
+        intro: 'Descubra lugares incríveis neste bairro,\nescolhendo uma das opções abaixo :)'
       },
       recommendationsOrigin: {
         title: 'De onde vêm essas recomendações?'
@@ -238,6 +238,9 @@ const resources = {
         pointsDisplayed: '{{count}} punto(s) mostrados.',
         you: 'Tú'
       },
+      neighborhoodList: {
+        intro: 'Descubre lugares increíbles en este barrio,\nselecciona una de las opciones a continuación :)'
+      },
       recommendationsOrigin: { title: '¿De dónde vienen estas recomendaciones?' },
       support: { title: 'Apoya el sitio' },
       about: { title: '¿Quién soy?', paragraph: 'Página sobre ti. Diseño vendrá después.' },
@@ -303,6 +306,9 @@ const resources = {
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
       distanceSelect: { title: 'Sélectionnez la distance', searchButton: 'Chercher' },
       nearbyMap: { title: 'Carte proximité', noneInRadius: 'Aucun point dans le rayon.', pointsDisplayed: '{{count}} point(s) affiché(s).', you: 'Vous' },
+      neighborhoodList: {
+        intro: 'Découvrez des lieux incroyables dans ce quartier,\nchoisissez l\'une des options ci‑dessous :)'
+      },
       recommendationsOrigin: { title: 'D’où viennent ces recommandations ?' },
       support: { title: 'Soutenir le site' },
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
@@ -323,6 +329,9 @@ const resources = {
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
       distanceSelect: { title: 'Выберите расстояние', searchButton: 'Искать' },
       nearbyMap: { title: 'Карта рядом', noneInRadius: 'Нет точек в текущем радиусе.', pointsDisplayed: '{{count}} точк(и).', you: 'Вы' },
+      neighborhoodList: {
+        intro: 'Откройте для себя потрясающие места в этом районе,\nвыберите один из вариантов ниже :)'
+      },
       recommendationsOrigin: { title: 'Откуда эти рекомендации?' },
       support: { title: 'Поддержите сайт' },
       about: { title: 'Кто я?', paragraph: 'Страница о вас. Макет позже.' },
@@ -343,6 +352,9 @@ const resources = {
       footer: { home: '首页', search: '搜索', about: '关于' },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
       nearbyMap: { title: '附近地图', noneInRadius: '当前半径内无点。', pointsDisplayed: '显示 {{count}} 个点。', you: '你' },
+      neighborhoodList: {
+        intro: '在这个街区发现超棒的地方，\n请选择下面的选项之一 :)'
+      },
       recommendationsOrigin: { title: '这些推荐来自哪里？' },
       support: { title: '支持本网站' },
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
@@ -445,7 +457,7 @@ const resources = {
         you: 'You'
       },
       neighborhoodList: {
-        intro: 'Places in this neighborhood (all categories). Filter by type using the buttons below.'
+        intro: 'Discover amazing places in this neighborhood,\nby choosing one of the options below :)'
       },
       recommendationsOrigin: {
         title: 'Where do these recommendations come from?'

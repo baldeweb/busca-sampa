@@ -20,7 +20,7 @@ export function CategoryCard({ label, icon, selected, onClick, index }: Category
         "shrink-0 flex flex-col items-center justify-center gap-3 w-[116px] h-[116px] rounded-[6px] border text-center snap-start",
         selected
           ? "border-bs-red bg-bs-card-light text-black shadow"
-          : "border-[#0F0D13] bg-white/90 text-black hover:border-bs-red",
+          : "border-[#0F0D13] bg-[#E5E5E5] text-black hover:border-bs-red",
         "transition-colors focus:outline-none focus:ring-2 focus:ring-bs-red/70 focus:ring-offset-2 focus:ring-offset-transparent",
       ].join(" ")}
     >
