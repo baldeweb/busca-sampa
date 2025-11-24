@@ -1,8 +1,8 @@
-import { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 
 interface TextProps {
   children: ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   variant?: 'sectionTitle' | 'title' | 'subtitle' | 'body' | 'muted' | 'small' | 'label';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   className?: string;

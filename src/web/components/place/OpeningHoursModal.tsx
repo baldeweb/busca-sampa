@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '@/web/components/ui/SectionHeading';
 
 export interface Period {
   days: string[];
