@@ -114,8 +114,8 @@ export const NeighborhoodListPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-bs-bg text-white flex flex-col">
-      <div className="bg-black border-b-2 border-bs-red">
-        <div className="mx-auto max-w-5xl flex items-center px-4 pt-12 pb-4">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-black border-b-2 border-bs-red">
+        <div className="mx-auto max-w-6xl px-4 sm:px-0 flex items-center pt-8 sm:pt-12 pb-4">
           <button
             onClick={() => navigate(-1)}
             className="text-white text-lg font-bold flex items-center"
@@ -123,136 +123,144 @@ export const NeighborhoodListPage: React.FC = () => {
             <FaArrowLeft className="mr-2" /> {t('common.back')}
           </button>
         </div>
-      </div>
-      <div className="max-w-7xl px-4 sm:px-16 py-6 sm:py-12 bg-[#F5F5F5] text-black">
-        <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
-        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-          {t('neighborhoodList.intro')}
-        </p>
-      </div>
+      </section>
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-16 py-6 sm:py-12 text-black">
+          <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            {t('neighborhoodList.intro')}
+          </p>
+        </div>
+      </section>
 
       {/* Filtro por tipo (carrossel de CategoryCard igual à Home) */}
       {placeTypes.length > 0 && (
-        <div className="max-w-7xl px-4 sm:px-16 pb-8 bg-[#F5F5F5] text-black">
-          <h3 className="font-bold text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
-          <div className="relative">
-            <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory">
-              {placeTypes.length > 1 && (
-                <CategoryCard
-                  key="all-types"
-                  label={t('common.all')}
-                  icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
-                  selected={false}
-                  onClick={() => setSelectedType(null)}
-                  index={0}
-                />
-              )}
-              {placeTypes.map((pt, idx) => (
-                <CategoryCard
-                  key={pt}
-                  label={getPlaceTypeLabel(pt)}
-                  icon={<img src={flagSp} alt={pt} className="w-8 h-8" />}
-                  selected={selectedType === pt}
-                  onClick={() => setSelectedType(selectedType === pt ? null : pt)}
-                  index={placeTypes.length > 1 ? idx + 1 : idx}
-                />
-              ))}
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-16 pb-8 text-black">
+            <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
+              <div className="relative">
+              <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">
+                {placeTypes.length > 1 && (
+                  <CategoryCard
+                    key="all-types"
+                    label={t('common.all')}
+                    icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                    selected={false}
+                    onClick={() => setSelectedType(null)}
+                    index={0}
+                  />
+                )}
+                {placeTypes.map((pt, idx) => (
+                  <CategoryCard
+                    key={pt}
+                    label={getPlaceTypeLabel(pt)}
+                    icon={<img src={flagSp} alt={pt} className="w-8 h-8" />}
+                    selected={selectedType === pt}
+                    onClick={() => setSelectedType(selectedType === pt ? null : pt)}
+                    index={placeTypes.length > 1 ? idx + 1 : idx}
+                  />
+                ))}
+              </div>
             </div>
+            {/* Removed 'VER MAIS' button per design decision */}
           </div>
-          {/* Removed 'VER MAIS' button per design decision */}
-        </div>
+        </section>
       )}
 
       {/* Filtro de ordenação */}
-      <div className="max-w-7xl px-4 sm:px-16 py-4 bg-[#F5F5F5] text-black">
-        <div className="flex items-center justify-between">
-          <label className="font-bold mr-2">{t('common.filter')}</label>
-          <div className="relative inline-block">
-            <button
-              className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
-              onClick={() => setShowOrderDropdown((v) => !v)}
-            >
-              {(() => {
-                switch (order) {
-                  case 'name-asc': return t('list.orderNameAsc');
-                  case 'name-desc': return t('list.orderNameDesc');
-                  case 'type-asc': return t('list.orderNeighborhoodAsc');
-                  case 'type-desc': return t('list.orderNeighborhoodDesc');
-                  default: return '';
-                }
-              })()}
-            </button>
-            {showOrderDropdown && (
-              <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                {ORDER_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                    onClick={() => {
-                      setOrder(opt.value);
-                      setShowOrderDropdown(false);
-                    }}
-                  >
-                    {(() => {
-                      switch (opt.value) {
-                        case 'name-asc': return t('list.orderNameAsc');
-                        case 'name-desc': return t('list.orderNameDesc');
-                        case 'type-asc': return t('list.orderNeighborhoodAsc');
-                        case 'type-desc': return t('list.orderNeighborhoodDesc');
-                        default: return '';
-                      }
-                    })()}
-                  </button>
-                ))}
-              </div>
-            )}
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-16 py-4 text-black">
+          <div className="flex items-center justify-between">
+            <label className="font-bold mr-2">{t('common.filter')}</label>
+            <div className="relative inline-block">
+              <button
+                className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                onClick={() => setShowOrderDropdown((v) => !v)}
+              >
+                {(() => {
+                  switch (order) {
+                    case 'name-asc': return t('list.orderNameAsc');
+                    case 'name-desc': return t('list.orderNameDesc');
+                    case 'type-asc': return t('list.orderNeighborhoodAsc');
+                    case 'type-desc': return t('list.orderNeighborhoodDesc');
+                    default: return '';
+                  }
+                })()}
+              </button>
+              {showOrderDropdown && (
+                <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
+                  {ORDER_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.value}
+                      className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
+                      onClick={() => {
+                        setOrder(opt.value);
+                        setShowOrderDropdown(false);
+                      }}
+                    >
+                      {(() => {
+                        switch (opt.value) {
+                          case 'name-asc': return t('list.orderNameAsc');
+                          case 'name-desc': return t('list.orderNameDesc');
+                          case 'type-asc': return t('list.orderNeighborhoodAsc');
+                          case 'type-desc': return t('list.orderNeighborhoodDesc');
+                          default: return '';
+                        }
+                      })()}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
-      <div className="px-0 flex-1 bg-[#48464C]">
-        <div className="rounded-t-lg overflow-hidden">
-          <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
-            <div className="w-1/3 px-4 sm:px-16 py-3">{t('list.nameHeader')}</div>
-            <div className="w-1/3 py-3 ps-4 sm:ps-8">{t('list.typeHeader')}</div>
-          </div>
-          {sortedPlaces.length === 0 && (
-            <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
-          )}
-          {sortedPlaces.map((place, idx) => {
-            const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
-              return (
-              <div
-                key={place.id}
-                className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
-              >
-                <div className="w-1/3 px-4 py-6">{place.name}</div>
-                <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
-                <div className="flex-1 flex justify-end pr-4">
-                  <ActionButton
-                    onClick={() => {
-                      const typeMap: Record<string,string> = {
-                        RESTAURANT: "restaurants",
-                        BAR: "bars",
-                        COFFEE: "coffees",
-                        NIGHTLIFE: "nightlife",
-                        NATURE: "nature",
-                        TOURIST_SPOT: "tourist-spot",
-                      };
-                      const cat = typeMap[place.type] || "restaurants";
-                      navigate(`/place/${cat}/${place.id}`);
-                    }}
-                    size="xs"
-                  >
-                    {t('common.details')}
-                  </ActionButton>
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
+        <div className="mx-auto max-w-7xl sm:px-16">
+          <div className="rounded-t-lg overflow-hidden">
+            <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
+              <div className="w-1/3 px-4 sm:px-8 py-3">{t('list.nameHeader')}</div>
+              <div className="w-1/3 py-3 ps-4 sm:ps-6">{t('list.typeHeader')}</div>
+            </div>
+            {sortedPlaces.length === 0 && (
+              <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
+            )}
+            {sortedPlaces.map((place, idx) => {
+              const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
+                return (
+                <div
+                  key={place.id}
+                  className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
+                >
+                  <div className="w-1/3 px-0 py-6">{place.name}</div>
+                  <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
+                  <div className="flex-1 flex justify-end pr-4">
+                    <ActionButton
+                      onClick={() => {
+                        const typeMap: Record<string,string> = {
+                          RESTAURANT: "restaurants",
+                          BAR: "bars",
+                          COFFEE: "coffees",
+                          NIGHTLIFE: "nightlife",
+                          NATURE: "nature",
+                          TOURIST_SPOT: "tourist-spot",
+                        };
+                        const cat = typeMap[place.type] || "restaurants";
+                        navigate(`/place/${cat}/${place.id}`);
+                      }}
+                      size="xs"
+                    >
+                      {t('common.details')}
+                    </ActionButton>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

@@ -65,10 +65,25 @@ export const PlaceListPage: React.FC = () => {
             return allPlaces.filter(p => p.priceRange === "FREE");
         }
         if ((routeType || "").toLowerCase() === "aberto-agora") {
+            const patterns = openingPatterns || [];
+            function getPeriodsForPlace(place: any) {
+                const periods: any[] = [];
+                const patternId = place.openingHours?.patternId;
+                if (patternId) {
+                    const pat = patterns.find((p: any) => p.id === patternId);
+                    if (pat?.periods) periods.push(...pat.periods);
+                }
+                // customOverrides may contain period-like entries
+                if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
+                    periods.push(...place.openingHours.customOverrides);
+                }
+                return periods;
+            }
+
             return allPlaces.filter(place => {
-                const pattern = openingPatterns.find((pat: any) => pat.id === place.openingHours?.patternId);
-                if (!pattern) return false;
-                return isOpenNow(pattern.periods);
+                const periods = getPeriodsForPlace(place);
+                if (!periods || periods.length === 0) return false;
+                return isOpenNow(periods);
             });
         }
         return allPlaces.filter(p => p.type === mappedType);
@@ -126,9 +141,11 @@ export const PlaceListPage: React.FC = () => {
         return arr;
     }, [filteredPlaces, order]);
 
-    // Título dinâmico
-    const placeTypeForTitle = (routeType?.toUpperCase() || "RESTAURANT");
-    const title = t(`placeType.${placeTypeForTitle}`);
+    // Título dinâmico: use o tipo mapeado (RESTAURANT, BAR, ...) para buscar a chave de tradução
+    const placeTypeForTitle = mappedType;
+    const title = (routeType || "").toLowerCase() === "aberto-agora"
+        ? t('placeDetail.openNow')
+        : t(`placeType.${placeTypeForTitle}`);
     useDocumentTitle(title);
 
     // Subtítulo dinâmico usando chaves de tradução e textos por tipo
@@ -146,8 +163,8 @@ export const PlaceListPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
-            <div className="bg-black border-b-2 border-bs-red px-4 sm:px-12">
-                <div className="mx-auto max-w-5xl flex items-center px-4 pt-8 sm:pt-12 pb-4">
+            <div className="bg-black border-b-2 border-bs-red px-0 sm:px-12">
+                <div className="mx-auto max-w-6xl px-4 sm:px-0 flex items-center pt-8 sm:pt-12 pb-4">
                     <button
                         onClick={() => navigate(-1)}
                         className="text-white text-lg font-bold flex items-center"
@@ -155,52 +172,54 @@ export const PlaceListPage: React.FC = () => {
                         <FaArrowLeft className="mr-2" /> {t('common.back')}
                     </button>
                 </div>
-            </div>
-            <div className="max-w-7xl px-4 sm:px-16 py-6 sm:py-8 bg-[#F5F5F5] text-black">
-                {/* Título e descrição */}
-                <div>
-                    <div className="flex items-start gap-4">
-                        <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
+                <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+                    <div className="mx-auto max-w-7xl px-4 sm:px-16 py-6 sm:py-8 text-black">
+                        {/* Título e descrição */}
                         <div>
-                            <SectionHeading title={title} underline={false} sizeClass="text-2xl text-black" />
-                            <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
-                        </div>
-                    </div>
-                </div>
-                {/* Chips de ambiente */}
-                {environments.length > 0 && (
-                    <div className="bg-[#F5F5F5] text-black pb-4">
-                        <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                        <div className="relative">
-                            <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory">
-                                {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
-                                {environments.length > 1 && (
-                                    <CategoryCard
-                                        key="all-environments"
-                                        label={t('common.all')}
-                                        icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
-                                        selected={false}
-                                        onClick={() => setSelectedEnv(null)}
-                                        index={0}
-                                    />
-                                )}
-                                {environments.map((env, idx) => (
-                                    <CategoryCard
-                                        key={env.value}
-                                        label={env.label}
-                                        icon={<img src={flagSp} alt="cat" className="w-8 h-8" />}
-                                        selected={selectedEnv === env.value}
-                                        onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
-                                        index={environments.length > 1 ? idx + 1 : idx}
-                                    />
-                                ))}
+                            <div className="flex items-start gap-4">
+                                <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
+                                <div>
+                                    <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
+                                    <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                                </div>
                             </div>
                         </div>
+                        {/* Chips de ambiente */}
+                        {environments.length > 0 && (
+                            <div className="bg-[#F5F5F5] text-black pb-4">
+                                <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
+                                <div className="relative">
+                                    <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">
+                                        {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
+                                        {environments.length > 1 && (
+                                            <CategoryCard
+                                                key="all-environments"
+                                                label={t('common.all')}
+                                                icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                                                selected={false}
+                                                onClick={() => setSelectedEnv(null)}
+                                                index={0}
+                                            />
+                                        )}
+                                        {environments.map((env, idx) => (
+                                            <CategoryCard
+                                                key={env.value}
+                                                label={env.label}
+                                                icon={<img src={flagSp} alt="cat" className="w-8 h-8" />}
+                                                selected={selectedEnv === env.value}
+                                                onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                                index={environments.length > 1 ? idx + 1 : idx}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
-                )}
+                </section>
                 {/* Filtro de ordenação */}
-                <div className="bg-[#F5F5F5] text-black pt-8">
-                    <div className="flex items-center justify-between">
+                <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+                    <div className="mx-auto max-w-7xl px-4 sm:px-16 py-4 text-black">
                         <label className="font-bold mr-2">{t('common.filter')}</label>
                         <div className="relative inline-block">
                             <button
@@ -246,46 +265,48 @@ export const PlaceListPage: React.FC = () => {
                 </div>
             </div>
             {/* Lista de lugares */}
-            <div className="px-0 flex-1 bg-[#48464C]">
-                <div className="rounded-t-lg overflow-hidden">
-                        <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-[20px] leading-tight border-b-2 border-bs-red">
-                        <div className="w-1/3 px-4 sm:px-16 py-3">{t('list.nameHeader')}</div>
-                        <div className="w-1/3 py-3 ps-4 sm:ps-8">{t('list.neighborhoodHeader')}</div>
-                    </div>
-                    {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
-                    {sortedPlaces.map((place, idx) => {
-                        const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
-                        return (
-                            <div
-                                key={place.id}
-                                className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-base text-[#F5F5F5]`}
-                            >
-                                <div className="w-1/3 px-4 py-6">{place.name}</div>
-                                <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
-                                <div className="flex-1 flex justify-end pr-4">
-                                    <ActionButton
-                                        onClick={() => {
-                                            const typeToSlug: Record<string, string> = {
-                                                RESTAURANT: "restaurants",
-                                                BAR: "bars",
-                                                COFFEE: "coffees",
-                                                NIGHTLIFE: "nightlife",
-                                                NATURE: "nature",
-                                                TOURIST_SPOT: "tourist-spot",
-                                            };
-                                            const slug = typeToSlug[mappedType] || routeTypeLower;
-                                            navigate(`/place/${slug}/${place.id}`);
-                                        }}
-                                        size="xs"
-                                    >
-                                        {t('common.details')}
-                                    </ActionButton>
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
+                <div className="mx-auto max-w-7xl px-0 sm:px-16">
+                    <div className="rounded-t-lg overflow-hidden">
+                        <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
+                            <div className="w-1/3 px-6 sm:px-6 py-3">{t('list.nameHeader')}</div>
+                            <div className="w-1/3 py-3 ps-4 sm:ps-6">{t('list.neighborhoodHeader')}</div>
+                        </div>
+                        {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
+                        {sortedPlaces.map((place, idx) => {
+                            const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
+                            return (
+                                <div
+                                    key={place.id}
+                                    className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
+                                >
+                                    <div className="w-1/3 px-2 py-6">{place.name}</div>
+                                    <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
+                                    <div className="flex-1 flex justify-end pr-4">
+                                        <ActionButton
+                                            onClick={() => {
+                                                const typeToSlug: Record<string, string> = {
+                                                    RESTAURANT: "restaurants",
+                                                    BAR: "bars",
+                                                    COFFEE: "coffees",
+                                                    NIGHTLIFE: "nightlife",
+                                                    NATURE: "nature",
+                                                    TOURIST_SPOT: "tourist-spot",
+                                                };
+                                                const slug = typeToSlug[mappedType] || routeTypeLower;
+                                                navigate(`/place/${slug}/${place.id}`);
+                                            }}
+                                            size="xs"
+                                        >
+                                            {t('common.details')}
+                                        </ActionButton>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };

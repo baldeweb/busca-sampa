@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { WhereIsTodayMenu } from "@/web/components/home/WhereIsTodayMenu";
+import type { MenuWhereIsTodayOption } from '@/core/domain/models/MenuWhereIsTodayOption';
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { ActionButton } from '@/web/components/ui/ActionButton';
@@ -66,8 +67,16 @@ export function HomePage() {
   // Filtros removidos (logica migrada para páginas dedicadas)
 
   const navigate = useNavigate();
-  function handleWhereIsTodaySelect(option: { tags: string[] }) {
-    navigate(`/list/${option.tags[0]}`);
+  function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
+    // Caso especial: a opção 'Aberto agora' deve navegar para /list/aberto-agora
+    const title = (option.title || '').toLowerCase();
+    if (title === 'aberto agora' || title === 'aberto-agora') {
+      navigate('/list/aberto-agora');
+      return;
+    }
+    // Para as demais opções usamos a primeira tag para navegar (ex: 'RESTAURANTS')
+    const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
+    navigate(`/list/${tag}`);
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {
@@ -93,7 +102,6 @@ export function HomePage() {
           const parsed = JSON.parse(cached);
           if (parsed && parsed.latitude && parsed.longitude && parsed.timestamp) {
             setUserLocation({ latitude: parsed.latitude, longitude: parsed.longitude });
-            setLastLocationTimestamp(parsed.timestamp);
             return; // já restaurou do cache
           }
         } catch (_) { }
@@ -110,7 +118,6 @@ export function HomePage() {
           timestamp: Date.now(),
         };
         localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
-        setLastLocationTimestamp(payload.timestamp);
         setIsRequestingLocation(false);
       },
       (err) => {
@@ -216,17 +223,6 @@ export function HomePage() {
     setNearbyStats(stats);
   }, [userLocation, selectedDistance, allCategoryData]);
 
-  function timeAgo(ts: number) {
-    const diffMs = Date.now() - ts;
-    const diffMin = Math.floor(diffMs / 60000);
-    if (diffMin < 1) return "agora";
-    if (diffMin < 60) return `${diffMin} min atrás`;
-    const diffH = Math.floor(diffMin / 60);
-    if (diffH < 24) return `${diffH}h atrás`;
-    const diffD = Math.floor(diffH / 24);
-    return `${diffD}d atrás`;
-  }
-
   // Inicializa tentando restaurar cache
   useEffect(() => {
     requestUserLocation();
@@ -243,10 +239,10 @@ export function HomePage() {
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
-        <div className="mx-auto max-w-5xl px-4">
+        <div className="mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
-              <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-2xl" className="mb-1" />
+              <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-lg sm:text-xl" className="mb-1" />
               <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
             </div>
             {userLocation && (
@@ -254,7 +250,7 @@ export function HomePage() {
                 <button
                   type="button"
                   onClick={() => setIsDistanceModalOpen(true)}
-                  className="rounded-full border border-white/25 px-4 py-2 text-sm hover:border-bs-red"
+                  className="rounded-full border border-white/25 px-3 py-1 text-sm sm:px-4 sm:py-2 hover:border-bs-red"
                 >
                   {t('common.changeDistance')}
                 </button>
@@ -288,7 +284,7 @@ export function HomePage() {
                   <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
                 )}
                 {!loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0 && (
-                  <div className="text-center text-lg text-gray-300 flex flex-col items-center gap-5 py-6">
+                  <div className="text-center text-md text-gray-300 flex flex-col items-center gap-5 py-6">
                     <p>{t('home.noNearbyResultsRadius')}</p>
                     <ActionButton
                       type="button"
@@ -337,8 +333,8 @@ export function HomePage() {
       {/* Seção: Por bairro (grid 2x4 retangular) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
-        <div className="mx-auto max-w-5xl px-4">
-          <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-2xl" className="mb-6" underline={false} />
+        <div className="mx-auto max-w-5xl px-4 sm:px-4">
+          <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
             {neighborhoods.slice(0, 7).map((n) => (
               <button

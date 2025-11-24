@@ -8,7 +8,7 @@ export function Header() {
         <header className="bg-bs-bg-header text-white border-b-4 border-bs-red">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-4 py-6 sm:py-8">
                 {/* Logo + título */}
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-5 pe-4">
                     <img
                         src={flagSp}
                         alt="Bandeira do estado de São Paulo"
