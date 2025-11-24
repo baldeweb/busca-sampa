@@ -142,7 +142,7 @@ export const NeighborhoodListPage: React.FC = () => {
                   key="all-types"
                   label={t('common.all')}
                   icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
-                  selected={selectedType === null}
+                  selected={false}
                   onClick={() => setSelectedType(null)}
                   index={0}
                 />

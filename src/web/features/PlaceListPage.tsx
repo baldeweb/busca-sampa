@@ -146,7 +146,7 @@ export const PlaceListPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
-            <div className="bg-black border-b-2 border-bs-red">
+            <div className="bg-black border-b-2 border-bs-red px-12">
                 <div className="mx-auto max-w-5xl flex items-center px-4 pt-12 pb-4">
                     <button
                         onClick={() => navigate(-1)}
@@ -179,7 +179,7 @@ export const PlaceListPage: React.FC = () => {
                                         key="all-environments"
                                         label={t('common.all')}
                                         icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
-                                        selected={selectedEnv === null}
+                                        selected={false}
                                         onClick={() => setSelectedEnv(null)}
                                         index={0}
                                     />

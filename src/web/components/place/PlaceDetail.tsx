@@ -55,7 +55,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar - apenas botão Voltar */}
-            <div className="bg-black relative border-b-2 border-bs-red">
+            <div className="bg-black relative border-b-2 border-bs-red  px-12">
                 <div className="mx-auto max-w-5xl flex items-center px-4 pt-12 pb-4">
                     <button onClick={onBack} className="text-white text-lg font-bold flex items-center">
                         <FaArrowLeft className="mr-2" /> {t('common.back')}
@@ -99,7 +99,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             )}
 
             {/* Main Content */}
-            <div className="flex-1 pb-4 bg-[#F5F5F5] text-black flex flex-col min-h-0">
+            <div className="flex-1 bg-[#F5F5F5] text-black flex flex-col min-h-0">
                 <div className="max-w-7xl px-16 py-2">
                     <div className="border-b-2 border-bs-red px-1 pt-10 pb-10 flex items-center">
                         {icon || <span className="text-5xl mr-4">☕</span>}
@@ -152,9 +152,9 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         <div className="flex items-center justify-between mb-2">
                             <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
                             {isOpenNow ? (
-                                <span className="bg-green-600 text-white text-xs px-0 py-1 rounded">{t('placeDetail.openNow')}</span>
+                                <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
                             ) : (
-                                <span className="bg-red-600 text-white text-xs px-2 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                                <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
                             )}
                         </div>
                         <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
