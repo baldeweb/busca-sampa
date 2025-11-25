@@ -1,8 +1,42 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-// Load persisted language or default
-const savedLang = (typeof window !== 'undefined' && localStorage.getItem('lang')) || 'pt';
+// Load persisted language or detect from device/browser (no geolocation)
+const SUPPORTED_LANGS = ['pt', 'es', 'fr', 'ru', 'zh', 'en'];
+
+function detectPreferredLang(): string {
+  if (typeof window === 'undefined') return 'pt';
+
+  // 1) respect localStorage if user previously selected a language
+  const cached = localStorage.getItem('lang');
+  if (cached && SUPPORTED_LANGS.includes(cached)) return cached;
+
+  // 2) try navigator.languages (array) then navigator.language
+  try {
+    const nav = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
+    for (const tag of nav) {
+      if (!tag) continue;
+      const code = tag.split('-')[0];
+      if (SUPPORTED_LANGS.includes(code)) return code;
+    }
+  } catch (e) {
+    // ignore and fallback
+  }
+
+  // 3) try Intl locale
+  try {
+    const locale = (Intl as any)?.DateTimeFormat?.()?.resolvedOptions?.()?.locale;
+    if (locale) {
+      const code = locale.split('-')[0];
+      if (SUPPORTED_LANGS.includes(code)) return code;
+    }
+  } catch (_) {}
+
+  // default
+  return 'pt';
+}
+
+const savedLang = detectPreferredLang();
 
 const resources = {
   pt: {
@@ -522,11 +556,17 @@ i18n
     interpolation: { escapeValue: false }
   });
 
+// Persist selection and reflect on <html> when language changes
 i18n.on('languageChanged', (lng) => {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('lang', lng);
+    try { localStorage.setItem('lang', lng); } catch(_) {}
     document.documentElement.lang = lng;
   }
 });
+
+// Ensure document language is set initially
+if (typeof window !== 'undefined') {
+  try { document.documentElement.lang = i18n.language || savedLang; } catch (_) {}
+}
 
 export default i18n;

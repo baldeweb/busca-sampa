@@ -223,6 +223,9 @@ export function HomePage() {
     setNearbyStats(stats);
   }, [userLocation, selectedDistance, allCategoryData]);
 
+  // Indica que não há resultados próximos a partir dos dados carregados
+  const noNearbyResults = !loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0;
+
   // Inicializa tentando restaurar cache
   useEffect(() => {
     requestUserLocation();
@@ -245,7 +248,7 @@ export function HomePage() {
               <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-lg sm:text-xl" className="mb-1" />
               <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
             </div>
-            {userLocation && (
+            {userLocation && !noNearbyResults && (
               <div className="ml-4">
                 <button
                   type="button"
@@ -283,7 +286,7 @@ export function HomePage() {
                 {loadingNearby && (
                   <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
                 )}
-                {!loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0 && (
+                {!loadingNearby && noNearbyResults && (
                   <div className="text-center text-md text-gray-300 flex flex-col items-center gap-5 py-6">
                     <p>{t('home.noNearbyResultsRadius')}</p>
                     <ActionButton
@@ -292,7 +295,7 @@ export function HomePage() {
                       size="md"
                       className="px-4"
                     >
-                      {t('home.increaseRadius')}
+                      {t('common.changeDistance')}
                     </ActionButton>
                   </div>
                 )}
