@@ -136,7 +136,7 @@ export const NeighborhoodListPage: React.FC = () => {
       {/* Filtro por tipo (carrossel de CategoryCard igual à Home) */}
       {placeTypes.length > 0 && (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-16 pb-8 text-black">
+          <div className="mx-auto max-w-7xl pl-4 pr-0 sm:pl-16 sm:pr-0 pb-8 text-black">
             <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
               <div className="relative">
               <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">

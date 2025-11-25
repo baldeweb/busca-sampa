@@ -34,34 +34,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     }
 
     const listRef = useRef<HTMLDivElement | null>(null);
-    const [showLeft, setShowLeft] = useState(false);
-    const [showRight, setShowRight] = useState(false);
-
-    function updateArrows() {
-        if (!listRef.current) return;
-        const el = listRef.current;
-        setShowLeft(el.scrollLeft > 8);
-        setShowRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
-    }
-
-    // Inicializa listeners de scroll/resize
-    useEffect(() => {
-        const el = listRef.current;
-        if (!el) return;
-        const handler = () => updateArrows();
-        el.addEventListener("scroll", handler);
-        window.addEventListener("resize", handler);
-        updateArrows();
-        return () => {
-            el.removeEventListener("scroll", handler);
-            window.removeEventListener("resize", handler);
-        };
-    }, []);
-
-    // Recalcula quando opções são carregadas
-    useEffect(() => {
-        updateArrows();
-    }, [options.length, loading]);
 
     function handleKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
         if (!listRef.current) return;
@@ -75,16 +47,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         }
     }
 
-    function scrollByAmount(dir: 1 | -1) {
-        if (!listRef.current) return;
-        const scrollAmount = 140;
-        listRef.current.scrollBy({ left: dir * scrollAmount, behavior: "smooth" });
-    }
-
     const { t } = useTranslation();
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-6 sm:py-12">
-            <div className="mx-auto max-w-5xl px-4 sm:px-4">
+                <div className="mx-auto max-w-5xl pl-4 pr-0">
                 <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
                 <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
@@ -95,7 +61,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                 <div className="relative mt-4">
                     <div
                         ref={listRef}
-                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 px-4 sm:px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
+                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 pl-4 pr-0 sm:px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
                         role="listbox"
                         aria-label="Categorias"
                         tabIndex={0}
@@ -113,27 +79,8 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             />
                         ))}
                     </div>
-                    {/* Setas laterais fora da área dos cards */}
-                    {showLeft && (
-                        <button
-                            type="button"
-                            aria-label="Ver categorias anteriores"
-                            onClick={() => scrollByAmount(-1)}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-bs-card/80 backdrop-blur px-2 py-2 rounded-full border border-white/20 hover:border-bs-red text-white text-sm shadow transition-colors"
-                        >
-                            ◀
-                        </button>
-                    )}
-                    {showRight && (
-                        <button
-                            type="button"
-                            aria-label="Ver próximas categorias"
-                            onClick={() => scrollByAmount(1)}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 bg-bs-card/80 backdrop-blur px-2 py-2 rounded-full border border-white/20 hover:border-bs-red text-white text-sm shadow transition-colors"
-                        >
-                            ▶
-                        </button>
-                    )}
+                    {/* Right gradient overlay to indicate more items to scroll */}
+                    <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#48464C] to-transparent" />
                 </div>
             )}
             </div>
