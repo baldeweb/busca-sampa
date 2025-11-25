@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactElement } from "react";
+import { useRef, useState, type ReactElement } from "react";
 import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
