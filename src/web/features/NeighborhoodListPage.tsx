@@ -9,6 +9,14 @@ import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { CategoryCard } from '@/web/components/ui/CategoryCard';
 import flagSp from '@/assets/imgs/flags/flag_sp.png';
+import icBars from '@/assets/imgs/icons/ic_bars.png';
+import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
+import icDoorOpened from '@/assets/imgs/icons/ic_door_opened.png';
+import icFree from '@/assets/imgs/icons/ic_free.png';
+import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
+import icNature from '@/assets/imgs/icons/ic_nature.png';
+import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
+import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -150,16 +158,29 @@ export const NeighborhoodListPage: React.FC = () => {
                     index={0}
                   />
                 )}
-                {placeTypes.map((pt, idx) => (
-                  <CategoryCard
-                    key={pt}
-                    label={getPlaceTypeLabel(pt)}
-                    icon={<img src={flagSp} alt={pt} className="w-8 h-8" />}
-                    selected={selectedType === pt}
-                    onClick={() => setSelectedType(selectedType === pt ? null : pt)}
-                    index={placeTypes.length > 1 ? idx + 1 : idx}
-                  />
-                ))}
+                {placeTypes.map((pt, idx) => {
+                  const key = (pt || '').toString().replace(/-/g, '_').toUpperCase();
+                  let iconSrc = flagSp;
+                  if (key === 'FREE') iconSrc = icFree;
+                  else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
+                  else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
+                  else if (key === 'ABERTO' || key === 'ABERTO_AGORA') iconSrc = icDoorOpened;
+                  else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
+                  else if (key === 'NATURE') iconSrc = icNature;
+                  else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
+                  else if (key === 'TOURIST_SPOT' || key === 'TOURIST_SPOTS') iconSrc = icTouristSpot;
+
+                  return (
+                    <CategoryCard
+                      key={pt}
+                      label={getPlaceTypeLabel(pt)}
+                      icon={<img src={iconSrc} alt={pt} className="w-10 h-10 sm:w-12 sm:h-12" />}
+                      selected={selectedType === pt}
+                      onClick={() => setSelectedType(selectedType === pt ? null : pt)}
+                      index={placeTypes.length > 1 ? idx + 1 : idx}
+                    />
+                  );
+                })}
               </div>
             </div>
             {/* Removed 'VER MAIS' button per design decision */}

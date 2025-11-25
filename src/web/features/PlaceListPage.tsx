@@ -11,6 +11,14 @@ import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { CategoryCard } from '@/web/components/ui/CategoryCard';
 import flagSp from '@/assets/imgs/flags/flag_sp.png';
+import icBars from '@/assets/imgs/icons/ic_bars.png';
+import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
+import icDoorOpened from '@/assets/imgs/icons/ic_door_opened.png';
+import icFree from '@/assets/imgs/icons/ic_free.png';
+import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
+import icNature from '@/assets/imgs/icons/ic_nature.png';
+import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
+import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -198,23 +206,36 @@ export const PlaceListPage: React.FC = () => {
                                         {environments.length > 1 && (
                                             <CategoryCard
                                                 key="all-environments"
-                                                label={t('common.all')}
-                                                icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                                                    label={t('common.all')}
+                                                    icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
                                                 selected={false}
                                                 onClick={() => setSelectedEnv(null)}
                                                 index={0}
                                             />
                                         )}
-                                        {environments.map((env, idx) => (
-                                            <CategoryCard
-                                                key={env.value}
-                                                label={env.label}
-                                                icon={<img src={flagSp} alt="cat" className="w-8 h-8" />}
-                                                selected={selectedEnv === env.value}
-                                                onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
-                                                index={environments.length > 1 ? idx + 1 : idx}
-                                            />
-                                        ))}
+                                        {environments.map((env, idx) => {
+                                            const key = (env.value || '').toString().replace(/-/g, '_').toUpperCase();
+                                            let iconSrc = flagSp;
+                                            if (key === 'FREE') iconSrc = icFree;
+                                            else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
+                                            else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
+                                            else if (key === 'ABERTO' || key === 'ABERTO_AGORA') iconSrc = icDoorOpened;
+                                            else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
+                                            else if (key === 'NATURE') iconSrc = icNature;
+                                            else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
+                                            else if (key === 'TOURIST_SPOT' || key === 'TOURIST_SPOTS') iconSrc = icTouristSpot;
+
+                                            return (
+                                                <CategoryCard
+                                                    key={env.value}
+                                                    label={env.label}
+                                                    icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-12 sm:h-12" />}
+                                                    selected={selectedEnv === env.value}
+                                                    onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                                    index={environments.length > 1 ? idx + 1 : idx}
+                                                />
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>

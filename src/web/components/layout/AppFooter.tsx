@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import icHome from '../../../assets/imgs/icons/ic_home.png';
+import icSearch from '../../../assets/imgs/icons/ic_search.png';
+import icAbout from '../../../assets/imgs/icons/ic_about.png';
 
 export function AppFooter() {
     // Aumenta texto (+4px aprox) e ícones um nível
@@ -21,7 +24,7 @@ export function AppFooter() {
                         `${baseClasses} ${isActive ? "text-bs-red font-semibold" : "text-gray-300"}`
                     }
                 >
-                    <span className="text-2xl">🏠</span>
+                    <img src={icHome} alt="Home" className="w-6 h-6 mb-0.5" />
                     <span>{t('footer.home')}</span>
                 </NavLink>
 
@@ -31,7 +34,7 @@ export function AppFooter() {
                         `${baseClasses} ${isActive ? "text-bs-red font-semibold" : "text-gray-300"}`
                     }
                 >
-                    <span className="text-2xl">🔍</span>
+                    <img src={icSearch} alt="Buscar" className="w-6 h-6 mb-0.5" />
                     <span>{t('footer.search')}</span>
                 </NavLink>
 
@@ -41,7 +44,7 @@ export function AppFooter() {
                         `${baseClasses} ${isActive ? "text-bs-red font-semibold" : "text-gray-300"}`
                     }
                 >
-                    <span className="text-2xl">👤</span>
+                    <img src={icAbout} alt="Sobre" className="w-6 h-6 mb-0.5" />
                     <span>{t('footer.about')}</span>
                 </NavLink>
 

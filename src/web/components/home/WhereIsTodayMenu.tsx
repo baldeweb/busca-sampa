@@ -3,9 +3,15 @@ import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
 import { CategoryCard } from "@/web/components/ui/CategoryCard";
-import { FaHamburger, FaBeer, FaCoffee, FaTree } from "react-icons/fa";
-import { GiPartyPopper } from "react-icons/gi";
-import { FaLandmark } from "react-icons/fa6";
+// icons replaced by project image assets
+import icBars from '@/assets/imgs/icons/ic_bars.png';
+import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
+import icDoorOpened from '@/assets/imgs/icons/ic_door_opened.png';
+import icFree from '@/assets/imgs/icons/ic_free.png';
+import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
+import icNature from '@/assets/imgs/icons/ic_nature.png';
+import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
+import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import { useTranslation } from 'react-i18next';
 
 interface Props {
@@ -21,16 +27,20 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         onOptionSelect?.(option);
     }
 
-    // Map tag to icon component (placeholder icons; will be replaced later)
-    function resolveIcon(tags: string[]): ReactElement {
-        const base = { className: "" };
-        if (tags.includes("RESTAURANTS")) return <FaHamburger {...base} />;
-        if (tags.includes("BARS")) return <FaBeer {...base} />;
-        if (tags.includes("NIGHTLIFE")) return <GiPartyPopper {...base} />;
-        if (tags.includes("COFFEES") || tags.includes("CAFETERIAS")) return <FaCoffee {...base} />;
-        if (tags.includes("TOURIST_SPOT")) return <FaLandmark {...base} />;
-        if (tags.includes("NATURE")) return <FaTree {...base} />;
-        return <FaHamburger {...base} />; // fallback
+    // Map tag/title to project icons in `src/assets/imgs/icons`
+    function resolveIcon(tags: string[], title?: string): ReactElement {
+        const cls = "w-8 h-8 sm:w-10 sm:h-10 object-contain";
+        const keyTitle = (title || '').toLowerCase();
+        if (keyTitle.includes('aberto')) return <img src={icDoorOpened} className={cls} alt="" />;
+        if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" />;
+        if (tags.includes('RESTAURANTS') || tags.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" />;
+        if (tags.includes('BAR') || tags.includes('BARS')) return <img src={icBars} className={cls} alt="" />;
+        if (tags.includes('COFFEE') || tags.includes('COFFEES') || tags.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" />;
+        // specific icons
+        if (tags.includes('NIGHTLIFE')) return <img src={icNightlife} className={cls} alt="" />;
+        if (tags.includes('NATURE')) return <img src={icNature} className={cls} alt="" />;
+        if (tags.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" />;
+        return <img src={icRestaurants} className={cls} alt="" />;
     }
 
     const listRef = useRef<HTMLDivElement | null>(null);
@@ -112,14 +122,14 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             }
 
                             return (
-                                <CategoryCard
-                                    key={option.id}
-                                    label={label}
-                                    icon={resolveIcon(option.tags)}
-                                    selected={option.id === selectedId}
-                                    onClick={() => handleClick(option)}
-                                    index={idx}
-                                />
+                                    <CategoryCard
+                                        key={option.id}
+                                        label={label}
+                                        icon={resolveIcon(option.tags, raw)}
+                                        selected={option.id === selectedId}
+                                        onClick={() => handleClick(option)}
+                                        index={idx}
+                                    />
                             );
                         })}
                     </div>

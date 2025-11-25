@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import icPing from '@/assets/imgs/icons/ic_pin.png';
 import { useTranslation } from 'react-i18next';
 
 interface NearbyMapModalProps {
@@ -33,6 +34,7 @@ export function NearbyMapModal({ onClose, userLocation, places, title }: NearbyM
         attribution: "© OpenStreetMap contrib." 
       }).addTo(mapRef.current);
 
+      // restore original small red dot for user location
       const userIcon = L.divIcon({
         html: '<div style="background:#e11; width:16px; height:16px; border-radius:50%; border:2px solid #fff"></div>',
         className: "",
@@ -52,11 +54,18 @@ export function NearbyMapModal({ onClose, userLocation, places, title }: NearbyM
     });
     existingLayers.forEach((l) => mapRef.current?.removeLayer(l));
 
-    // Adiciona novos marcadores dos lugares
+    // Add new place markers all using the project pin icon `ic_pin`
+    const placeIcon = L.icon({
+      iconUrl: icPing,
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -30],
+    });
+
     places.forEach((p) => {
       const mainAddress = p.addresses?.find((a) => a.isMainUnity) || p.addresses?.[0];
       if (!mainAddress?.latitude || !mainAddress?.longitude) return;
-      L.marker([mainAddress.latitude, mainAddress.longitude]).addTo(mapRef.current as L.Map).bindPopup(p.name);
+      L.marker([mainAddress.latitude, mainAddress.longitude], { icon: placeIcon }).addTo(mapRef.current as L.Map).bindPopup(p.name);
     });
 
     if (places.length > 0) {
