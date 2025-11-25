@@ -5,7 +5,7 @@ import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
@@ -141,16 +141,20 @@ export const PlaceListPage: React.FC = () => {
         return arr;
     }, [filteredPlaces, order]);
 
-    // Título dinâmico: use o tipo mapeado (RESTAURANT, BAR, ...) para buscar a chave de tradução
+    // Título dinâmico: prefira um rótulo passado via navigation state (vindo do HomePage),
+    // caso contrário caia para a tradução baseada no tipo.
+    const location = useLocation();
+    const navLabel = (location.state as any)?.label as string | undefined;
     const placeTypeForTitle = mappedType;
-    const title = (routeType || "").toLowerCase() === "aberto-agora"
-        ? t('placeDetail.openNow')
-        : t(`placeType.${placeTypeForTitle}`);
+    const title = navLabel
+        || ((routeType || "").toLowerCase() === "aberto-agora"
+            ? t('placeDetail.openNow')
+            : t(`placeType.${placeTypeForTitle}`));
     useDocumentTitle(title);
 
     // Subtítulo dinâmico usando chaves de tradução e textos por tipo
     const article = t(`placeList.article.${placeTypeForTitle}`, { defaultValue: '' });
-    const nounTranslated = t(`placeList.noun.${placeTypeForTitle}`, { defaultValue: title.toLowerCase() });
+    const nounTranslated = t(`placeList.noun.${placeTypeForTitle}`, { defaultValue: (navLabel || title).toLowerCase() });
     const subtitle = t('placeList.subtitleTemplate', { article, noun: nounTranslated });
 
     // DEBUG LOGS (diagnóstico)

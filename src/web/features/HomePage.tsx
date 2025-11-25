@@ -69,14 +69,16 @@ export function HomePage() {
   const navigate = useNavigate();
   function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
     // Caso especial: a opção 'Aberto agora' deve navegar para /list/aberto-agora
-    const title = (option.title || '').toLowerCase();
+    // normaliza título removendo zero-width spaces e comparando em lower-case
+    const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
+    const title = rawTitle.toLowerCase();
     if (title === 'aberto agora' || title === 'aberto-agora') {
-      navigate('/list/aberto-agora');
+      navigate('/list/aberto-agora', { state: { label: rawTitle } });
       return;
     }
     // Para as demais opções usamos a primeira tag para navegar (ex: 'RESTAURANTS')
     const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
-    navigate(`/list/${tag}`);
+    navigate(`/list/${tag}`, { state: { label: rawTitle } });
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {
