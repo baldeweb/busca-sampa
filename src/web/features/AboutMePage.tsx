@@ -1,12 +1,27 @@
 import flagSp from "@/assets/imgs/flags/flag_sp.png";
-import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaEnvelope, FaArrowLeft } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { useNavigate } from 'react-router-dom';
 
 export function AboutMePage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
   return (
-    <div className="mx-auto max-w-md space-y-6 text-white">
+    <>
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-black border-b-2 border-bs-red">
+        <div className="mx-auto max-w-6xl px-4 sm:px-0 flex items-center pt-8 sm:pt-12 pb-4">
+          <button
+            onClick={() => navigate(-1)}
+            className="text-white text-lg font-bold flex items-center"
+          >
+            <FaArrowLeft className="mr-2" /> {t('common.back')}
+          </button>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-lg space-y-6 text-white">
 
       {/* FOTO + NOME */}
       <div className="flex flex-col items-center pt-4">
@@ -37,23 +52,26 @@ export function AboutMePage() {
 
       {/* REDES SOCIAIS */}
       <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-        <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="mb-3" />
+        <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="mb-1" />
+        <p className="text-sm text-gray-300 mb-3">Me encontre nas redes sociais abaixo :)</p>
 
-        <ul className="space-y-2 text-sm">
-          <li>
+        <style>{`@media (max-width:480px){ .about-grid{ grid-template-columns: 1fr !important; } }`}</style>
+        <ul className="about-grid grid grid-cols-2 gap-4 w-full text-sm items-center">
+          <li className="flex items-center justify-start sm:col-start-1 sm:row-start-1">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/balde_wb/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-bs-red transition-colors"
             >
               <FaInstagram aria-hidden="true" className="text-lg" />
-              <span>Instagram</span>
+              <span>Wallace Baldenebre</span>
             </a>
           </li>
-          <li>
+
+          <li className="flex items-center justify-end sm:col-start-2 sm:row-start-1">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/wallace-baldenebre/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-bs-red transition-colors"
@@ -62,13 +80,26 @@ export function AboutMePage() {
               <span>LinkedIn</span>
             </a>
           </li>
-          <li>
+
+          <li className="flex items-center justify-start sm:col-start-1 sm:row-start-2">
             <a
-              href="mailto:contato@example.com"
+              href="https://www.instagram.com/balde_wb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-bs-red transition-colors"
+            >
+              <FaInstagram aria-hidden="true" className="text-lg" />
+                <span>Busca Sampa</span>
+            </a>
+          </li>
+
+          <li className="flex items-center justify-end sm:col-start-2 sm:row-start-2">
+            <a
+              href="mailto:wallace.baldenebre@gmail.com"
               className="flex items-center gap-2 hover:text-bs-red transition-colors"
             >
               <FaEnvelope aria-hidden="true" className="text-lg" />
-              <span>Email</span>
+              <span>E-mail</span>
             </a>
           </li>
         </ul>
@@ -79,5 +110,6 @@ export function AboutMePage() {
         {t('common.version')} 1.0 — Busca Sampa
       </p>
     </div>
+    </>
   );
 }

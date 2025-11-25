@@ -7,9 +7,12 @@ export default function AppLayout() {
     const showHeader = location.pathname === "/";
 
     return (
-        <div className="min-h-screen bg-bs-bg text-white">
+        <div className="min-h-screen flex flex-col bg-bs-bg text-white">
             {showHeader && <Header />}
-            <main className={"w-full pb-20 pt-0"}>
+            <main
+                className={"flex-1 w-full pt-0"}
+                style={{ paddingBottom: "calc(4.5rem + env(safe-area-inset-bottom))" }}
+            >
                 <Outlet />
             </main>
             <AppFooter />

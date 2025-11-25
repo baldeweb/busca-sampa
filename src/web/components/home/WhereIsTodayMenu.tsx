@@ -68,16 +68,60 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                         onKeyDown={handleKeyDown}
                     >
                         <style>{`.flex.flex-nowrap::-webkit-scrollbar{display:none}`}</style>
-                        {options.map((option, idx) => (
-                            <CategoryCard
-                                key={option.id}
-                                label={option.title}
-                                icon={resolveIcon(option.tags)}
-                                selected={option.id === selectedId}
-                                onClick={() => handleClick(option)}
-                                index={idx}
-                            />
-                        ))}
+                        {options.map((option, idx) => {
+                            // normalize title (remove zero-width spaces)
+                            const raw = (option.title || '').replace(/\u200B/g, '');
+                            const lower = raw.toLowerCase();
+
+                            // titles we want to force-break into two lines
+                            const forceBreakKeys = new Set([
+                                'aberto agora',
+                                'vida noturna',
+                                'pontos turísticos',
+                                'pontos turisticos'
+                            ]);
+
+                            let label: React.ReactNode;
+                            if (forceBreakKeys.has(lower)) {
+                                const firstSpace = raw.indexOf(' ');
+                                if (firstSpace > -1) {
+                                    const a = raw.slice(0, firstSpace);
+                                    const b = raw.slice(firstSpace + 1);
+                                    label = (
+                                        <>
+                                            <span className="block whitespace-normal">{a}</span>
+                                            <span className="block whitespace-normal">{b}</span>
+                                        </>
+                                    );
+                                } else {
+                                    label = raw;
+                                }
+                            } else {
+                                const parts = raw.split(/\s+/).filter(Boolean);
+                                label = (
+                                    <>
+                                        {parts.map((p, i) => (
+                                            <span key={i} className="whitespace-normal">
+                                                {p}
+                                                {i < parts.length - 1 && <wbr />}
+                                                {i < parts.length - 1 ? ' ' : ''}
+                                            </span>
+                                        ))}
+                                    </>
+                                );
+                            }
+
+                            return (
+                                <CategoryCard
+                                    key={option.id}
+                                    label={label}
+                                    icon={resolveIcon(option.tags)}
+                                    selected={option.id === selectedId}
+                                    onClick={() => handleClick(option)}
+                                    index={idx}
+                                />
+                            );
+                        })}
                     </div>
                     {/* Right gradient overlay to indicate more items to scroll */}
                     <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#48464C] to-transparent" />

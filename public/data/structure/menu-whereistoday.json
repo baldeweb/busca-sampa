@@ -2,7 +2,7 @@
     {
         "id": 1,
         "isEnabled": true,
-        "title": "Aberto agora",
+        "title": "Aberto\u200B agora",
         "tags": [
             "RESTAURANTS",
             "BAR",
@@ -33,7 +33,7 @@
     {
         "id": 5,
         "isEnabled": true,
-        "title": "Vida Noturna",
+        "title": "Vida\u200B Noturna",
         "tags": [ "NIGHTLIFE" ]
     },
     {
@@ -51,7 +51,7 @@
     {
         "id": 8,
         "isEnabled": true,
-        "title": "Pontos Turísticos",
+        "title": "Pontos\u200B Turísticos",
         "tags": [ "TOURIST_SPOT" ]
     }
 ]

@@ -95,7 +95,7 @@ const resources = {
         hoursTitle: 'Horário de funcionamento',
         viewHours: 'ver horários ▼',
         locationTitle: 'Localização',
-        openNow: 'Aberto agora',
+        openNow: 'Aberto\u200B agora',
         closedNow: 'Fechado agora',
         locationDescription: 'Aqui tem a unidade e o endereço do estabelecimento, e você pode traçar a rota pra lá clicando no botão abaixo',
         streetPrefix: 'Rua:',
@@ -155,13 +155,13 @@ const resources = {
         title: 'Como faço para recomendar um local?'
       },
       placeType: {
-        RESTAURANT: 'Restaurantes',
-        BAR: 'Bares',
-        COFFEE: 'Cafeterias',
-        NIGHTLIFE: 'Vida Noturna',
-        NATURE: 'Natureza',
-        TOURIST_SPOT: 'Pontos Turísticos',
-        FREE: 'Gratuitos'
+        RESTAURANT: 'Restaurants',
+        BAR: 'Bars',
+        COFFEE: 'Coffee Shops',
+        NIGHTLIFE: 'Nightlife',
+        NATURE: 'Nature',
+        TOURIST_SPOT: 'Tourist\u200B Spots',
+        FREE: 'Free'
       },
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
@@ -242,7 +242,7 @@ const resources = {
         hoursTitle: 'Horario de funcionamiento',
         viewHours: 'ver horarios ▼',
         locationTitle: 'Ubicación',
-        openNow: 'Abierto ahora',
+        openNow: 'Abierto\u200B ahora',
         closedNow: 'Cerrado ahora',
         locationDescription: 'Aquí la unidad y dirección; traza la ruta con el botón abajo',
         streetPrefix: 'Calle:',
@@ -286,7 +286,7 @@ const resources = {
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
-        RESTAURANT: 'Restaurantes', BAR: 'Bares', COFFEE: 'Cafeterías', NIGHTLIFE: 'Vida nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos turísticos', FREE: 'Gratuitos'
+        RESTAURANT: 'Restaurantes', BAR: 'Bares', COFFEE: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FREE: 'Gratuitos'
       }
       ,
       placeList: {
@@ -334,7 +334,7 @@ const resources = {
         nameHeader: 'Nom', neighborhoodHeader: 'Quartier', typeHeader: 'Type', orderNameAsc: 'NOM A-Z', orderNameDesc: 'NOM Z-A', orderNeighborhoodAsc: 'QUARTIER A-Z', orderNeighborhoodDesc: 'QUARTIER Z-A'
       },
       placeDetail: {
-        loading: 'Chargement des détails...', notFound: 'Lieu introuvable.', opensMonday: 'ouvert le lundi', opensSunday: 'ouvert le dimanche', opensHoliday: 'ouvert les jours fériés', alreadyVisited: '✓ Déjà visité et recommandé', notVisited: '⚠️ Pas encore visité', visitModalTitle: 'À propos des lieux visités', visitModalParagraph: 'Toutes les recommandations sont des lieux que j’ai visités et recommande, plus d’autres encore non visités.', neverEmphasis: 'JAMAIS', priceLabel: 'Prix :', environmentTypeLabel: 'Type d’ambiance :', hoursTitle: 'Horaires', viewHours: 'voir horaires ▼', locationTitle: 'Localisation', openNow: 'Ouvert maintenant', closedNow: 'Fermé maintenant', locationDescription: 'Unité et adresse ici; tracez la route via le bouton ci-dessous', streetPrefix: 'Rue :', googleMapsButton: 'Ouvrir Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Suivez le profil officiel :', follow: 'Suivre', menuTitle: 'Menu', menuSubtitle: 'Voir le menu', menuButton: 'Ouvrir menu', notesTitle: 'Notes', reportProblem: 'Signaler un problème', visitModalEnding: 'recommanderais des lieux à éviter :)'
+        loading: 'Chargement des détails...', notFound: 'Lieu introuvable.', opensMonday: 'ouvert le lundi', opensSunday: 'ouvert le dimanche', opensHoliday: 'ouvert les jours fériés', alreadyVisited: '✓ Déjà visité et recommandé', notVisited: '⚠️ Pas encore visité', visitModalTitle: 'À propos des lieux visités', visitModalParagraph: 'Toutes les recommandations sont des lieux que j’ai visités et recommande, plus d’autres encore non visités.', neverEmphasis: 'JAMAIS', priceLabel: 'Prix :', environmentTypeLabel: 'Type d’ambiance :', hoursTitle: 'Horaires', viewHours: 'voir horaires ▼', locationTitle: 'Localisation', openNow: 'Ouvert\u200B maintenant', closedNow: 'Fermé maintenant', locationDescription: 'Unité et adresse ici; tracez la route via le bouton ci-dessous', streetPrefix: 'Rue :', googleMapsButton: 'Ouvrir Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Suivez le profil officiel :', follow: 'Suivre', menuTitle: 'Menu', menuSubtitle: 'Voir le menu', menuButton: 'Ouvrir menu', notesTitle: 'Notes', reportProblem: 'Signaler un problème', visitModalEnding: 'recommanderais des lieux à éviter :)'
       },
       openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre' },
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
@@ -348,7 +348,7 @@ const resources = {
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
       aboutMe: { authorTag: 'Créateur de Busca Sampa', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
-      placeType: { RESTAURANT: 'Restaurants', BAR: 'Bars', COFFEE: 'Cafés', NIGHTLIFE: 'Vie nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites touristiques', FREE: 'Gratuit' }
+      placeType: { RESTAURANT: 'Restaurants', BAR: 'Bars', COFFEE: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit' }
     }
   },
   ru: {
@@ -358,7 +358,7 @@ const resources = {
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', typeHeader: 'Тип', orderNameAsc: 'ИМЯ A-Z', orderNameDesc: 'ИМЯ Z-A', orderNeighborhoodAsc: 'РАЙОН A-Z', orderNeighborhoodDesc: 'РАЙОН Z-A' },
-      placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Все рекомендации — места где я был и рекомендую, плюс те, что мне советовали и я еще не посетил.', neverEmphasis: 'НИКОГДА', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: 'рекомендовал бы места куда не стоит идти :)' },
+      placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Все рекомендации — места где я был и рекомендую, плюс те, что мне советовали и я еще не посетил.', neverEmphasis: 'НИКОГДА', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: 'рекомендовал бы места куда не стоит идти :)' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
       distanceSelect: { title: 'Выберите расстояние', searchButton: 'Искать' },
@@ -371,7 +371,7 @@ const resources = {
       about: { title: 'Кто я?', paragraph: 'Страница о вас. Макет позже.' },
       aboutMe: { authorTag: 'Создатель Busca Sampa', aboutHeading: 'Обо мне', socialHeading: 'Соцсети', bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.' },
       howToRecommend: { title: 'Как порекомендовать место?' },
-      placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно' }
+      placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно' }
     }
   },
   zh: {
@@ -453,7 +453,7 @@ const resources = {
         hoursTitle: 'Opening hours',
         viewHours: 'see hours ▼',
         locationTitle: 'Location',
-        openNow: 'Open now',
+        openNow: 'Open\u200B now',
         closedNow: 'Closed now',
         locationDescription: 'Here is the unit and the address; you can trace the route by clicking the button below',
         streetPrefix: 'Street:',

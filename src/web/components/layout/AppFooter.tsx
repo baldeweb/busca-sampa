@@ -8,7 +8,10 @@ export function AppFooter() {
     const { t } = useTranslation();
 
     return (
-        <footer className="fixed bottom-0 left-0 right-0 bg-bs-bg-header border-t border-white/10 z-40 h-18">
+        <footer
+            className="fixed bottom-0 left-0 right-0 bg-bs-bg-header border-t border-white/10 z-50"
+            style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)" }}
+        >
             <nav className="flex text-white pt-2 pb-2">
 
                 <NavLink
