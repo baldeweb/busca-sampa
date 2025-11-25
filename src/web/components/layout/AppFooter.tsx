@@ -21,8 +21,9 @@ export function AppFooter() {
                     to="/"
                     end
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "text-bs-red font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
                     }
+                    style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
                     <img src={icHome} alt="Home" className="w-6 h-6 mb-0.5" />
                     <span>{t('footer.home')}</span>
@@ -31,8 +32,9 @@ export function AppFooter() {
                 <NavLink
                     to="/search"
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "text-bs-red font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
                     }
+                    style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
                     <img src={icSearch} alt="Buscar" className="w-6 h-6 mb-0.5" />
                     <span>{t('footer.search')}</span>
@@ -41,8 +43,9 @@ export function AppFooter() {
                 <NavLink
                     to="/about"
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "text-bs-red font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
                     }
+                    style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
                     <img src={icAbout} alt="Sobre" className="w-6 h-6 mb-0.5" />
                     <span>{t('footer.about')}</span>

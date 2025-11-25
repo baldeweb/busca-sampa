@@ -155,13 +155,13 @@ const resources = {
         title: 'Como faço para recomendar um local?'
       },
       placeType: {
-        RESTAURANT: 'Restaurants',
-        BAR: 'Bars',
-        COFFEE: 'Coffee Shops',
-        NIGHTLIFE: 'Nightlife',
-        NATURE: 'Nature',
-        TOURIST_SPOT: 'Tourist\u200B Spots',
-        FREE: 'Free'
+        RESTAURANT: 'Restaurantes',
+        BAR: 'Bares',
+        COFFEE: 'Cafeterias',
+        NIGHTLIFE: 'Vida Noturna',
+        NATURE: 'Natureza',
+        TOURIST_SPOT: 'Pontos\u200B Turísticos',
+        FREE: 'Gratuitos'
       },
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
@@ -576,7 +576,21 @@ const resources = {
         noPlaces: 'Keine Orte gefunden.',
         version: 'Version'
       },
-      footer: { home: 'Start', search: 'Suchen', about: 'Über' }
+      footer: { home: 'Start', search: 'Suchen', about: 'Über' },
+      placeDetail: {
+        openNow: 'Jetzt geöffnet',
+        closedNow: 'Geschlossen'
+      },
+      whereIsToday: { title: 'Also, wo ist es heute?' },
+      placeType: {
+        RESTAURANT: 'Restaurants',
+        BAR: 'Bars',
+        COFFEE: 'Cafés',
+        NIGHTLIFE: 'Nachtleben',
+        NATURE: 'Natur',
+        TOURIST_SPOT: 'Sehenswürdigkeiten',
+        FREE: 'Kostenlos'
+      }
     }
   },
   ja: {
@@ -609,7 +623,21 @@ const resources = {
         noPlaces: '場所が見つかりません。',
         version: 'バージョン'
       },
-      footer: { home: 'ホーム', search: '検索', about: '概要' }
+      footer: { home: 'ホーム', search: '検索', about: '概要' },
+      placeDetail: {
+        openNow: '営業中',
+        closedNow: '閉店'
+      },
+      whereIsToday: { title: 'さて、今日はどこに行く？' },
+      placeType: {
+        RESTAURANT: 'レストラン',
+        BAR: 'バー',
+        COFFEE: 'カフェ',
+        NIGHTLIFE: 'ナイトライフ',
+        NATURE: '自然',
+        TOURIST_SPOT: '観光名所',
+        FREE: '無料'
+      }
     }
   }
   ,
@@ -644,6 +672,20 @@ const resources = {
         version: 'الإصدار'
       },
       footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
+      placeDetail: {
+        openNow: 'مفتوح الآن',
+        closedNow: 'مغلق الآن'
+      },
+      whereIsToday: { title: 'فأين نذهب اليوم؟' },
+      placeType: {
+        RESTAURANT: 'مطاعم',
+        BAR: 'بارات',
+        COFFEE: 'مقاهي',
+        NIGHTLIFE: 'الحياة الليلية',
+        NATURE: 'طبيعة',
+        TOURIST_SPOT: 'معالم سياحية',
+        FREE: 'مجاني'
+      },
       nearbyMap: { title: 'خريطة القرب', noneInRadius: 'لا توجد نقاط ضمن النطاق الحالي.', pointsDisplayed: '{{count}} نقطة معروضة.', you: 'أنت' }
     }
   }
@@ -676,6 +718,20 @@ const resources = {
         version: 'Versione'
       },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
+      placeDetail: {
+        openNow: 'Aperto ora',
+        closedNow: 'Chiuso'
+      },
+      whereIsToday: { title: 'Allora, dove si va oggi?' },
+      placeType: {
+        RESTAURANT: 'Ristoranti',
+        BAR: 'Bar',
+        COFFEE: 'Caffetterie',
+        NIGHTLIFE: 'Vita notturna',
+        NATURE: 'Natura',
+        TOURIST_SPOT: 'Luoghi turistici',
+        FREE: 'Gratuito'
+      },
       nearbyMap: { title: 'Mappa vicinanza', noneInRadius: 'Nessun punto nel raggio corrente.', pointsDisplayed: '{{count}} punto(i) mostrati.', you: 'Tu' }
     }
   },
@@ -707,6 +763,20 @@ const resources = {
         version: 'Versie'
       },
       footer: { home: 'Home', search: 'Zoeken', about: 'Over' },
+      placeDetail: {
+        openNow: 'Nu open',
+        closedNow: 'Gesloten'
+      },
+      whereIsToday: { title: 'Dus, waar is het vandaag?' },
+      placeType: {
+        RESTAURANT: 'Restaurants',
+        BAR: 'Bars',
+        COFFEE: 'Koffiebars',
+        NIGHTLIFE: 'Uitgaansleven',
+        NATURE: 'Natuur',
+        TOURIST_SPOT: 'Toeristische bezienswaardigheden',
+        FREE: 'Gratis'
+      },
       nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
     }
   }
@@ -729,6 +799,20 @@ const resources = {
         back: 'Geri', details: 'detayları gör', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
       },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
+      placeDetail: {
+        openNow: 'Şu anda açık',
+        closedNow: 'Kapalı'
+      },
+      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?' },
+      placeType: {
+        RESTAURANT: 'Restoranlar',
+        BAR: 'Barlar',
+        COFFEE: 'Kafeler',
+        NIGHTLIFE: 'Gece hayatı',
+        NATURE: 'Doğa',
+        TOURIST_SPOT: 'Turistik noktalar',
+        FREE: 'Ücretsiz'
+      },
       nearbyMap: { title: 'Yakındaki Harita', noneInRadius: 'Mevcut yarıçap içinde nokta yok.', pointsDisplayed: '{{count}} nokta gösterildi.', you: 'Sen' }
     }
   },
@@ -750,6 +834,20 @@ const resources = {
         back: 'Wstecz', details: 'zobacz szczegóły', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
       },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
+      placeDetail: {
+        openNow: 'Otwarte teraz',
+        closedNow: 'Zamknięte'
+      },
+      whereIsToday: { title: 'A więc, gdzie dziś?' },
+      placeType: {
+        RESTAURANT: 'Restauracje',
+        BAR: 'Bary',
+        COFFEE: 'Kawiarnie',
+        NIGHTLIFE: 'Życie nocne',
+        NATURE: 'Przyroda',
+        TOURIST_SPOT: 'Atrakcje turystyczne',
+        FREE: 'Darmowe'
+      },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }
   }

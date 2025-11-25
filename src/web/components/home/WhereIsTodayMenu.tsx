@@ -13,6 +13,7 @@ import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import { useTranslation } from 'react-i18next';
+import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
 
 interface Props {
     onOptionSelect?: (option: MenuWhereIsTodayOption) => void;
@@ -28,10 +29,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     }
 
     // Map tag/title to project icons in `src/assets/imgs/icons`
-    function resolveIcon(tags: string[], title?: string): ReactElement {
+    function resolveIcon(tags: string[]): ReactElement {
         const cls = "w-8 h-8 sm:w-10 sm:h-10 object-contain";
-        const keyTitle = (title || '').toLowerCase();
-        if (keyTitle.includes('aberto')) return <img src={icDoorOpened} className={cls} alt="" />;
+        // detect 'Aberto agora' by tags aggregate (first menu option has many tags)
+        if (tags && tags.length > 1) return <img src={icDoorOpened} className={cls} alt="" />;
         if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" />;
         if (tags.includes('RESTAURANTS') || tags.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" />;
         if (tags.includes('BAR') || tags.includes('BARS')) return <img src={icBars} className={cls} alt="" />;
@@ -83,6 +84,19 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             const raw = (option.title || '').replace(/\u200B/g, '');
                             const lower = raw.toLowerCase();
 
+                            // translated label: prefer i18n keys (open now / placeType) when available
+                            let translatedRaw: string;
+                            if (lower.includes('aberto') || (option.tags && option.tags.length > 1)) {
+                                translatedRaw = t('placeDetail.openNow');
+                            } else if (option.tags && option.tags.includes('FREE')) {
+                                translatedRaw = t('placeType.FREE');
+                            } else {
+                                // find first known tag and translate via getPlaceTypeLabel
+                                const known = ['RESTAURANTS', 'RESTAURANT', 'BAR', 'BARS', 'COFFEE', 'COFFEES', 'NIGHTLIFE', 'NATURE', 'TOURIST_SPOT'];
+                                const found = option.tags?.find((tg) => known.includes(tg));
+                                translatedRaw = found ? getPlaceTypeLabel(found) : raw;
+                            }
+
                             // titles we want to force-break into two lines
                             const forceBreakKeys = new Set([
                                 'aberto agora',
@@ -92,11 +106,13 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             ]);
 
                             let label: React.ReactNode;
-                            if (forceBreakKeys.has(lower)) {
-                                const firstSpace = raw.indexOf(' ');
+                            // Build label using the translated string but maintain forced breaks for known phrases
+                            const translatedLower = (translatedRaw || '').toLowerCase();
+                            if (forceBreakKeys.has(lower) || forceBreakKeys.has(translatedLower)) {
+                                const firstSpace = translatedRaw.indexOf(' ');
                                 if (firstSpace > -1) {
-                                    const a = raw.slice(0, firstSpace);
-                                    const b = raw.slice(firstSpace + 1);
+                                    const a = translatedRaw.slice(0, firstSpace);
+                                    const b = translatedRaw.slice(firstSpace + 1);
                                     label = (
                                         <>
                                             <span className="block whitespace-normal">{a}</span>
@@ -104,10 +120,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                         </>
                                     );
                                 } else {
-                                    label = raw;
+                                    label = translatedRaw;
                                 }
                             } else {
-                                const parts = raw.split(/\s+/).filter(Boolean);
+                                const parts = translatedRaw.split(/\s+/).filter(Boolean);
                                 label = (
                                     <>
                                         {parts.map((p, i) => (
@@ -125,7 +141,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                     <CategoryCard
                                         key={option.id}
                                         label={label}
-                                        icon={resolveIcon(option.tags, raw)}
+                                        icon={resolveIcon(option.tags)}
                                         selected={option.id === selectedId}
                                         onClick={() => handleClick(option)}
                                         index={idx}
