@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { slugify } from "@/core/services/Slugify";
 import { distanceInKm, formatDistanceKm } from "@/core/services/Distance";
 import { fetchRecommendations } from "@/data/repositories/RecommendationRepository";
-import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
+import { getPlaceTypeLabel, getPlaceTypeLabelSingular } from "@/core/domain/enums/placeTypeLabel";
 import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import { NearbyMapModal } from "@/web/components/home/NearbyMapModal";
 
@@ -285,10 +285,10 @@ export function HomePage() {
           {userLocation && (
             <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
               <div className="mt-3 space-y-2">
-                {loadingNearby && (
-                  <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
-                )}
-                {!loadingNearby && noNearbyResults && (
+                        {loadingNearby && (
+                          <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
+                        )}
+                        {!loadingNearby && noNearbyResults && (
                   <div className="text-center text-md text-gray-300 flex flex-col items-center gap-5 py-6">
                     <p>{t('home.noNearbyResultsRadius')}</p>
                     <ActionButton
@@ -304,31 +304,34 @@ export function HomePage() {
                 {!loadingNearby &&
                   nearbyStats
                     .filter((s) => s.count > 0)
-                    .map((s) => (
-                      <div
-                        key={s.category}
-                        className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs"
-                      >
-                        <div className="flex flex-col me-6">
-                          <span className="font-bold uppercase text-md">
-                            {s.count} {s.label}
-                          </span>
-                          {s.nearestKm !== null && (
-                            <span className="text-sm text-gray-400">
-                              Mais próximo: {formatDistanceKm(s.nearestKm)}
-                              {s.nearestName ? ` - ${s.nearestName}` : ""}
-                            </span>
-                          )}
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => setMapCategory(s.category)}
-                          className="min-w-[110px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                    .map((s) => {
+                      const displayLabel = s.count === 1 ? getPlaceTypeLabelSingular(s.category) : s.label;
+                      return (
+                        <div
+                          key={s.category}
+                          className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs"
                         >
-                          ver no mapa
-                        </button>
-                      </div>
-                    ))}
+                          <div className="flex flex-col me-6">
+                            <span className="font-bold uppercase text-md">
+                              {s.count} {displayLabel}
+                            </span>
+                            {s.nearestKm !== null && (
+                              <span className="text-sm text-gray-400">
+                                Mais próximo: {formatDistanceKm(s.nearestKm)}
+                                {s.nearestName ? ` - ${s.nearestName}` : ""}
+                              </span>
+                            )}
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => setMapCategory(s.category)}
+                            className="min-w-[110px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                          >
+                            ver no mapa
+                          </button>
+                        </div>
+                      );
+                    })}
               </div>
             </div>
           )}
