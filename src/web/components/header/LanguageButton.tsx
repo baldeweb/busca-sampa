@@ -5,6 +5,13 @@ import spainFlag from "@/assets/imgs/flags/img_flag_spain.png";
 import franceFlag from "@/assets/imgs/flags/img_flag_france.png";
 import chinaFlag from "@/assets/imgs/flags/img_flag_china.png";
 import russiaFlag from "@/assets/imgs/flags/img_flag_russia.png";
+import germanyFlag from "@/assets/imgs/flags/img_flag_germany.png";
+import japanFlag from "@/assets/imgs/flags/img_flag_japan.png";
+import italyFlag from "@/assets/imgs/flags/img_flag_italy.png";
+import netherlandsFlag from "@/assets/imgs/flags/img_flag_netherlands.png";
+import polandFlag from "@/assets/imgs/flags/img_flag_poland.png";
+import turkiyeFlag from "@/assets/imgs/flags/img_flag_turkiye.png";
+import arabicFlag from "@/assets/imgs/flags/img_flag_arabic.png";
 import { LanguageSelectorModal } from "./LanguageSelectorModal";
 import { useTranslation } from 'react-i18next';
 
@@ -20,6 +27,13 @@ export function LanguageButton() {
         fr: { label: 'Français', flag: franceFlag },
         ru: { label: 'Русский', flag: russiaFlag },
         zh: { label: '中文', flag: chinaFlag },
+        de: { label: 'Deutsch', flag: germanyFlag },
+        ja: { label: '日本語', flag: japanFlag },
+        it: { label: 'Italiano', flag: italyFlag },
+        nl: { label: 'Nederlands', flag: netherlandsFlag },
+        pl: { label: 'Polski', flag: polandFlag },
+        tr: { label: 'Türkçe', flag: turkiyeFlag },
+        ar: { label: 'العربية', flag: arabicFlag }
     };
     const current = map[lang] || map['pt'];
     const currentFlag = current.flag;

@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 // Load persisted language or detect from device/browser (no geolocation)
-const SUPPORTED_LANGS = ['pt', 'es', 'fr', 'ru', 'zh', 'en'];
+const SUPPORTED_LANGS = ['pt', 'es', 'fr', 'ru', 'zh', 'en', 'de', 'ja', 'ar', 'it', 'nl', 'tr', 'pl'];
 
 function detectPreferredLang(): string {
   if (typeof window === 'undefined') return 'pt';
@@ -543,6 +543,214 @@ const resources = {
           FREE: 'free event'
         }
       }
+    }
+  }
+  ,
+  de: {
+    translation: {
+      home: {
+        nearMeTitle: 'In meiner Nähe',
+        nearMeSubtitle: '(innerhalb von {{km}}km Entfernung)',
+        allowLocation: 'Standort erlauben',
+        loadingCategories: 'Kategorien werden geladen...',
+        increaseRadius: 'Radius vergrößern',
+        neighborhoodsTitle: 'Nach Viertel',
+        neighborhoodsTagline: 'Bist du in einem dieser Viertel? Gute Orte in der Nähe!',
+        viewMoreNeighborhoods: 'mehr Viertel anzeigen >',
+        noNearbyResultsRadius: 'Keine Orte im ausgewählten Radius.'
+      },
+      header: {
+        title: 'Busca Sampa',
+        tagline: 'Die beste Empfehlung, wo ich war — mit nur einer Berührung'
+      },
+      common: {
+        back: 'Zurück',
+        details: 'Details ansehen',
+        selectLanguage: 'Wählen Sie eine Sprache',
+        changeDistance: 'Entfernung ändern',
+        all: 'Alle',
+        filter: 'Filter:',
+        close: 'Schließen',
+        loading: 'Lädt…',
+        loadError: 'Fehler beim Laden der Daten.',
+        noPlaces: 'Keine Orte gefunden.',
+        version: 'Version'
+      },
+      footer: { home: 'Start', search: 'Suchen', about: 'Über' }
+    }
+  },
+  ja: {
+    translation: {
+      home: {
+        nearMeTitle: '近くの場所',
+        nearMeSubtitle: '（{{km}}km以内）',
+        allowLocation: '位置情報を許可',
+        loadingCategories: 'カテゴリを読み込み中...',
+        increaseRadius: '半径を広げる',
+        neighborhoodsTitle: '地域別',
+        neighborhoodsTagline: 'これらの地域のどれかにいますか？近くに良い場所があります！',
+        viewMoreNeighborhoods: 'もっと見る >',
+        noNearbyResultsRadius: '選択した半径内に場所がありません。'
+      },
+      header: {
+        title: 'Busca Sampa',
+        tagline: '私が行った場所のおすすめ — ワンタップで'
+      },
+      common: {
+        back: '戻る',
+        details: '詳細を見る',
+        selectLanguage: '言語を選択',
+        changeDistance: '距離を変更',
+        all: 'すべて',
+        filter: 'フィルター：',
+        close: '閉じる',
+        loading: '読み込み中…',
+        loadError: 'データの読み込み中にエラーが発生しました。',
+        noPlaces: '場所が見つかりません。',
+        version: 'バージョン'
+      },
+      footer: { home: 'ホーム', search: '検索', about: '概要' }
+    }
+  }
+  ,
+  ar: {
+    translation: {
+      home: {
+        nearMeTitle: 'بالقرب مني',
+        nearMeSubtitle: '(ضمن {{km}} كم)',
+        allowLocation: 'السماح بالموقع',
+        loadingCategories: 'جارٍ تحميل الفئات...',
+        increaseRadius: 'زيادة النطاق',
+        neighborhoodsTitle: 'حسب الحي',
+        neighborhoodsTagline: 'هل أنت في أحد هذه الأحياء؟ هناك أماكن جيدة بالقرب منك!',
+        viewMoreNeighborhoods: 'عرض المزيد من الأحياء >',
+        noNearbyResultsRadius: 'لا توجد أماكن ضمن النطاق المحدد.'
+      },
+      header: {
+        title: 'Busca Sampa',
+        tagline: 'أفضل توصية للأماكن التي زرتها — بنقرة واحدة'
+      },
+      common: {
+        back: 'رجوع',
+        details: 'عرض التفاصيل',
+        selectLanguage: 'اختر اللغة',
+        changeDistance: 'تغيير المسافة',
+        all: 'الكل',
+        filter: 'تصفية:',
+        close: 'إغلاق',
+        loading: 'جارٍ التحميل…',
+        loadError: 'خطأ في تحميل البيانات.',
+        noPlaces: 'لم يتم العثور على أماكن.',
+        version: 'الإصدار'
+      },
+      footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
+      nearbyMap: { title: 'خريطة القرب', noneInRadius: 'لا توجد نقاط ضمن النطاق الحالي.', pointsDisplayed: '{{count}} نقطة معروضة.', you: 'أنت' }
+    }
+  }
+  ,
+  it: {
+    translation: {
+      home: {
+        nearMeTitle: 'Vicino a me',
+        nearMeSubtitle: '(entro {{km}} km)',
+        allowLocation: 'Consenti posizione',
+        loadingCategories: 'Caricamento categorie...',
+        increaseRadius: 'Aumenta raggio',
+        neighborhoodsTitle: 'Per quartiere',
+        neighborhoodsTagline: 'Sei in uno di questi quartieri? Ci sono bei posti nelle vicinanze!',
+        viewMoreNeighborhoods: 'vedi altri quartieri >',
+        noNearbyResultsRadius: 'Nessun luogo nel raggio selezionato.'
+      },
+      header: { title: 'Busca Sampa', tagline: 'La migliore raccomandazione dei posti che ho visitato, a portata di tocco' },
+      common: {
+        back: 'Indietro',
+        details: 'vedi dettagli',
+        selectLanguage: 'Seleziona una lingua',
+        changeDistance: 'Cambia distanza',
+        all: 'Tutto',
+        filter: 'Filtro:',
+        close: 'Chiudi',
+        loading: 'Caricamento…',
+        loadError: "Errore nel caricamento dei dati.",
+        noPlaces: 'Nessun luogo trovato.',
+        version: 'Versione'
+      },
+      footer: { home: 'Home', search: 'Cerca', about: 'Info' },
+      nearbyMap: { title: 'Mappa vicinanza', noneInRadius: 'Nessun punto nel raggio corrente.', pointsDisplayed: '{{count}} punto(i) mostrati.', you: 'Tu' }
+    }
+  },
+  nl: {
+    translation: {
+      home: {
+        nearMeTitle: 'Bij mij in de buurt',
+        nearMeSubtitle: '(binnen {{km}} km afstand)',
+        allowLocation: 'Locatie toestaan',
+        loadingCategories: 'Categorieën laden...',
+        increaseRadius: 'Vergroot straal',
+        neighborhoodsTitle: 'Per buurt',
+        neighborhoodsTagline: 'Ben je in een van deze buurten? Leuke plekken in de buurt!',
+        viewMoreNeighborhoods: 'meer buurten bekijken >',
+        noNearbyResultsRadius: 'Geen plaatsen binnen de gekozen straal.'
+      },
+      header: { title: 'Busca Sampa', tagline: 'De beste aanbeveling van plekken waar ik ben geweest, binnen handbereik' },
+      common: {
+        back: 'Terug',
+        details: 'bekijk details',
+        selectLanguage: 'Selecteer een taal',
+        changeDistance: 'Afstand wijzigen',
+        all: 'Alles',
+        filter: 'Filter:',
+        close: 'Sluiten',
+        loading: 'Laden…',
+        loadError: 'Fout bij het laden van gegevens.',
+        noPlaces: 'Geen plaatsen gevonden.',
+        version: 'Versie'
+      },
+      footer: { home: 'Home', search: 'Zoeken', about: 'Over' },
+      nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
+    }
+  }
+  ,
+  tr: {
+    translation: {
+      home: {
+        nearMeTitle: 'Yakınımda',
+        nearMeSubtitle: '({{km}} km içinde)',
+        allowLocation: 'Konuma izin ver',
+        loadingCategories: 'Kategoriler yükleniyor...',
+        increaseRadius: 'Yarıçapı artır',
+        neighborhoodsTitle: 'Mahalleye göre',
+        neighborhoodsTagline: 'Bu mahallelerden birindeyseniz? Yakında güzel yerler var!',
+        viewMoreNeighborhoods: 'daha fazla mahalle göster >',
+        noNearbyResultsRadius: 'Seçilen yarıçap içinde yer yok.'
+      },
+      header: { title: 'Busca Sampa', tagline: 'Gittiğim yerlerin en iyi önerisi — tek dokunuşla' },
+      common: {
+        back: 'Geri', details: 'detayları gör', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
+      },
+      footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
+      nearbyMap: { title: 'Yakındaki Harita', noneInRadius: 'Mevcut yarıçap içinde nokta yok.', pointsDisplayed: '{{count}} nokta gösterildi.', you: 'Sen' }
+    }
+  },
+  pl: {
+    translation: {
+      home: {
+        nearMeTitle: 'W pobliżu',
+        nearMeSubtitle: '(w promieniu {{km}} km)',
+        allowLocation: 'Zezwól na lokalizację',
+        loadingCategories: 'Ładowanie kategorii...',
+        increaseRadius: 'Zwiększ promień',
+        neighborhoodsTitle: 'Według dzielnicy',
+        neighborhoodsTagline: 'Jesteś w jednej z tych dzielnic? Dobre miejsca w pobliżu!',
+        viewMoreNeighborhoods: 'zobacz więcej dzielnic >',
+        noNearbyResultsRadius: 'Brak miejsc w wybranym promieniu.'
+      },
+      header: { title: 'Busca Sampa', tagline: 'Najlepsze rekomendacje miejsc, w których byłem — na wyciągnięcie ręki' },
+      common: {
+        back: 'Wstecz', details: 'zobacz szczegóły', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
+      },
+      footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
+      nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }
   }
 };
