@@ -13,6 +13,10 @@ export default {
                 "bs-card": "#3a3b40",
                 "bs-card-light": "#f5f5f5",
             },
+            fontFamily: {
+                montserrat: ["Montserrat", "system-ui", "-apple-system", "BlinkMacSystemFont", '"Segoe UI"', "sans-serif"],
+                gothic: ["Science Gothic", "Montserrat", "system-ui", "-apple-system", "BlinkMacSystemFont", '"Segoe UI"', "sans-serif"],
+            },
             borderRadius: {
                 app: "12px",
             },

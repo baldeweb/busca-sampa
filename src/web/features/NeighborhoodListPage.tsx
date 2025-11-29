@@ -142,7 +142,7 @@ export const NeighborhoodListPage: React.FC = () => {
                 {placeTypes.length > 1 && (
                   <CategoryCard
                     key="all-types"
-                    label={t('common.all')}
+                    label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(t('common.all'))}
                     icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
                     selected={false}
                     onClick={() => setSelectedType(null)}
@@ -164,8 +164,8 @@ export const NeighborhoodListPage: React.FC = () => {
                   return (
                     <CategoryCard
                       key={pt}
-                      label={getPlaceTypeLabel(pt)}
-                      icon={<img src={iconSrc} alt={pt} className="w-10 h-10 sm:w-12 sm:h-12" />}
+                      label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(getPlaceTypeLabel(pt))}
+                      icon={<img src={iconSrc} alt={pt} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
                       selected={selectedType === pt}
                       onClick={() => setSelectedType(selectedType === pt ? null : pt)}
                       index={placeTypes.length > 1 ? idx + 1 : idx}

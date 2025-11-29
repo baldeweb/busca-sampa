@@ -9,7 +9,7 @@ import icAbout from '../../../assets/imgs/icons/ic_about.png';
 export function AppFooter() {
     // Aumenta texto (+4px aprox) e ícones um nível
     const baseClasses =
-        "flex flex-col items-center justify-center flex-1 text-[0.7rem] tracking-wide";
+        "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide";
     const { t } = useTranslation();
     const [showSearchModal, setShowSearchModal] = React.useState(false);
 
@@ -29,20 +29,8 @@ export function AppFooter() {
                     style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
                     <img src={icHome} alt="Home" className="w-6 h-6 mb-0.5" />
-                    <span>{t('footer.home')}</span>
+                    <span className="footer-label">{t('footer.home')}</span>
                 </NavLink>
-
-                <button
-                    onClick={() => setShowSearchModal(true)}
-                    className={
-                        `${baseClasses} text-gray-300 focus:outline-none`
-                    }
-                    aria-haspopup="dialog"
-                    aria-expanded={showSearchModal}
-                >
-                    <img src={icSearch} alt="Buscar" className="w-6 h-6 mb-0.5" />
-                    <span>{t('footer.search')}</span>
-                </button>
 
                 <NavLink
                     to="/about"
@@ -52,7 +40,7 @@ export function AppFooter() {
                     style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
                     <img src={icAbout} alt="Sobre" className="w-6 h-6 mb-0.5" />
-                    <span>{t('footer.about')}</span>
+                    <span className="footer-label">{t('footer.about')}</span>
                 </NavLink>
 
             </nav>

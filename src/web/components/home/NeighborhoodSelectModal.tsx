@@ -44,7 +44,7 @@ export function NeighborhoodSelectModal({
                                 onClick={() => handleSelect(n)}
                                 className="flex w-full items-center justify-between px-4 py-2 text-sm hover:bg-bs-red/70"
                             >
-                                <span>{n.neighborhoodName}</span>
+                                <span className="category-card-label">{n.neighborhoodName}</span>
                                 <span className="text-xs opacity-70">{">"}</span>
                             </button>
                         </li>

@@ -30,7 +30,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
     // Map tag/title to project icons in `src/assets/imgs/icons`
     function resolveIcon(tags: string[]): ReactElement {
-        const cls = "w-8 h-8 sm:w-10 sm:h-10 object-contain";
+        const cls = "w-10 h-10 sm:w-14 sm:h-14 object-contain";
         // detect 'Aberto agora' by tags aggregate (first menu option has many tags)
         if (tags && tags.length > 1) return <img src={icDoorOpened} className={cls} alt="" />;
         if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" />;
@@ -105,14 +105,22 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                 'pontos turisticos'
                             ]);
 
+                            // convert to sentence case: first letter uppercase, rest lowercase
+                            const sentence = (s: string) => {
+                                if (!s) return s;
+                                const trimmed = s.trim();
+                                return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
+                            };
+
                             let label: React.ReactNode;
                             // Build label using the translated string but maintain forced breaks for known phrases
                             const translatedLower = (translatedRaw || '').toLowerCase();
+                            const translatedSentence = sentence(translatedRaw || '');
                             if (forceBreakKeys.has(lower) || forceBreakKeys.has(translatedLower)) {
-                                const firstSpace = translatedRaw.indexOf(' ');
+                                const firstSpace = translatedSentence.indexOf(' ');
                                 if (firstSpace > -1) {
-                                    const a = translatedRaw.slice(0, firstSpace);
-                                    const b = translatedRaw.slice(firstSpace + 1);
+                                    const a = translatedSentence.slice(0, firstSpace);
+                                    const b = translatedSentence.slice(firstSpace + 1);
                                     label = (
                                         <>
                                             <span className="block whitespace-normal">{a}</span>
@@ -120,10 +128,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                         </>
                                     );
                                 } else {
-                                    label = translatedRaw;
+                                    label = translatedSentence;
                                 }
                             } else {
-                                const parts = translatedRaw.split(/\s+/).filter(Boolean);
+                                const parts = translatedSentence.split(/\s+/).filter(Boolean);
                                 label = (
                                     <>
                                         {parts.map((p, i) => (

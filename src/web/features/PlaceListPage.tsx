@@ -107,6 +107,24 @@ export const PlaceListPage: React.FC = () => {
         return Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
     }, [filteredByType]);
 
+    // Mapeia o tipo atual para o ícone usado no cabeçalho e no cartão 'Todos'
+    const headerIcon = (() => {
+        switch (mappedType) {
+            case 'FREE': return icFree;
+            case 'BAR': return icBars;
+            case 'COFFEE': return icCoffee;
+            case 'NIGHTLIFE': return icNightlife;
+            case 'NATURE': return icNature;
+            case 'RESTAURANT': return icRestaurants;
+            case 'TOURIST_SPOT': return icTouristSpot;
+            case 'ABERTO-AGORA':
+            case 'ABERTO':
+            case 'ABERTO_AGORA':
+                return icDoorOpened;
+            default: return flagSp;
+        }
+    })();
+
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [showOrderDropdown, setShowOrderDropdown] = useState(false);
@@ -181,7 +199,7 @@ export const PlaceListPage: React.FC = () => {
                         {/* Título e descrição */}
                         <div>
                             <div className="flex items-start gap-4">
-                                <img src={flagSp} alt="flag" className="w-12 h-12 object-contain" />
+                                <img src={headerIcon} alt="flag" className="w-12 h-12 object-contain" />
                                 <div>
                                     <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
                                     <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
@@ -198,8 +216,8 @@ export const PlaceListPage: React.FC = () => {
                                         {environments.length > 1 && (
                                             <CategoryCard
                                                 key="all-environments"
-                                                    label={t('common.all')}
-                                                    icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                                                label={t('common.all')}
+                                                icon={<img src={headerIcon} alt="all" className="w-8 h-8" />}
                                                 selected={false}
                                                 onClick={() => setSelectedEnv(null)}
                                                 index={0}
@@ -221,7 +239,7 @@ export const PlaceListPage: React.FC = () => {
                                                 <CategoryCard
                                                     key={env.value}
                                                     label={env.label}
-                                                    icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-12 sm:h-12" />}
+                                                    icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
                                                     selected={selectedEnv === env.value}
                                                     onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
                                                     index={environments.length > 1 ? idx + 1 : idx}

@@ -2,7 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Science Gothic';
+  src: url('/src/assets/fonts/science-gothic/ScienceGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Some font files have internal names without a space; declare aliases to be resilient */
+@font-face {
+  font-family: 'ScienceGothic';
+  src: url('/src/assets/fonts/science-gothic/ScienceGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ScienceGothic-Regular';
+  src: url('/src/assets/fonts/science-gothic/ScienceGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Science Gothic';
+  src: url('/src/assets/fonts/science-gothic/ScienceGothic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   @apply bg-bs-bg text-white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Headings use Science Gothic Regular */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Science Gothic', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Ensure buttons use Montserrat (inherits from body but reinforce) */
+button {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Strong rule for carousel labels to ensure Science Gothic applies */
+.category-card-label {
+  font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Force the Gothic family on the label and any children (spans) to cover fragments/elements inside the label */
+.category-card-label,
+.category-card-label * {
+  font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+/* Footer labels use ScienceGothic-Regular */
+.footer-label,
+.footer-label * {
+  font-family: 'ScienceGothic-Regular', 'Science Gothic', 'ScienceGothic', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 400 !important;
 }

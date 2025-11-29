@@ -24,8 +24,8 @@ export function CategoryCard({ label, icon, selected, onClick, index }: Category
         "transition-colors focus:outline-none focus:ring-2 focus:ring-bs-red/70 focus:ring-offset-2 focus:ring-offset-transparent",
       ].join(" ")}
     >
-      <div className="h-10 sm:h-12 flex items-center justify-center text-2xl sm:text-4xl pt-3" aria-hidden="true">{icon}</div>
-      <span className="text-[0.55rem] sm:text-[0.6rem] font-bold uppercase leading-tight whitespace-normal text-cente pb-3">
+      <div className="h-10 sm:h-14 text-2xl sm:text-4xl flex items-center justify-center pt-3" aria-hidden="true">{icon}</div>
+      <span style={{ fontFamily: '"Science Gothic", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }} className="text-[0.65rem] sm:text-[0.80rem] font-light leading-[1.05] whitespace-normal text-center pb-2 font-gothic category-card-label">
         {label}
       </span>
     </button>
