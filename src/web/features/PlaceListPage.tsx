@@ -245,8 +245,10 @@ export const PlaceListPage: React.FC = () => {
                 {/* Filtro de ordenação */}
                 <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
                     <div className="mx-auto max-w-7xl px-4 sm:px-16 py-4 text-black">
-                        <label className="font-bold mr-2">{t('common.filter')}</label>
-                        <div className="relative inline-block">
+                            <div className="flex items-center justify-end">
+                                <div className="flex items-center gap-3">
+                                    <label className="font-bold">{t('common.filter')}</label>
+                                    <div className="relative inline-block">
                             <button
                                 className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
                                 onClick={() => setShowOrderDropdown((v) => !v)}
@@ -285,6 +287,8 @@ export const PlaceListPage: React.FC = () => {
                                     ))}
                                 </div>
                             )}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,7 +325,7 @@ export const PlaceListPage: React.FC = () => {
                                                 const slug = typeToSlug[mappedType] || routeTypeLower;
                                                 navigate(`/place/${slug}/${place.id}`);
                                             }}
-                                            size="xs"
+                                            size="md"
                                         >
                                             {t('common.details')}
                                         </ActionButton>

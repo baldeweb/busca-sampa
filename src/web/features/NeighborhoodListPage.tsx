@@ -189,53 +189,55 @@ export const NeighborhoodListPage: React.FC = () => {
       )}
 
       {/* Filtro de ordenação */}
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
         <div className="mx-auto max-w-7xl px-4 sm:px-16 py-4 text-black">
-          <div className="flex items-center justify-between">
-            <label className="font-bold mr-2">{t('common.filter')}</label>
-            <div className="relative inline-block">
-              <button
+            <div className="flex items-center justify-end">
+                <div className="flex items-center gap-3">
+                    <label className="font-bold">{t('common.filter')}</label>
+                    <div className="relative inline-block">
+            <button
                 className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
                 onClick={() => setShowOrderDropdown((v) => !v)}
-              >
+            >
                 {(() => {
-                  switch (order) {
-                    case 'name-asc': return t('list.orderNameAsc');
-                    case 'name-desc': return t('list.orderNameDesc');
-                    case 'type-asc': return t('list.orderNeighborhoodAsc');
-                    case 'type-desc': return t('list.orderNeighborhoodDesc');
-                    default: return '';
-                  }
+                    switch (order) {
+                        case 'name-asc': return t('list.orderNameAsc');
+                        case 'name-desc': return t('list.orderNameDesc');
+                        case 'type-asc': return t('list.orderNeighborhoodAsc');
+                        case 'type-desc': return t('list.orderNeighborhoodDesc');
+                        default: return '';
+                    }
                 })()}
-              </button>
-              {showOrderDropdown && (
+            </button>
+            {showOrderDropdown && (
                 <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                  {ORDER_OPTIONS.map((opt) => (
-                    <button
-                      key={opt.value}
-                      className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                      onClick={() => {
-                        setOrder(opt.value);
-                        setShowOrderDropdown(false);
-                      }}
-                    >
-                      {(() => {
-                        switch (opt.value) {
-                          case 'name-asc': return t('list.orderNameAsc');
-                          case 'name-desc': return t('list.orderNameDesc');
-                          case 'type-asc': return t('list.orderNeighborhoodAsc');
-                          case 'type-desc': return t('list.orderNeighborhoodDesc');
-                          default: return '';
-                        }
-                      })()}
-                    </button>
-                  ))}
+                    {ORDER_OPTIONS.map((opt) => (
+                        <button
+                            key={opt.value}
+                            className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
+                            onClick={() => {
+                                setOrder(opt.value);
+                                setShowOrderDropdown(false);
+                            }}
+                        >
+                            {(() => {
+                                switch (opt.value) {
+                                    case 'name-asc': return t('list.orderNameAsc');
+                                    case 'name-desc': return t('list.orderNameDesc');
+                                    case 'type-asc': return t('list.orderNeighborhoodAsc');
+                                    case 'type-desc': return t('list.orderNeighborhoodDesc');
+                                    default: return '';
+                                }
+                            })()}
+                        </button>
+                    ))}
                 </div>
-              )}
+            )}
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+      </div>
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
@@ -271,7 +273,7 @@ export const NeighborhoodListPage: React.FC = () => {
                         const cat = typeMap[place.type] || "restaurants";
                         navigate(`/place/${cat}/${place.id}`);
                       }}
-                      size="xs"
+                      size="md"
                     >
                       {t('common.details')}
                     </ActionButton>
