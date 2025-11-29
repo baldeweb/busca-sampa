@@ -100,86 +100,86 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
             {/* Main Content */}
             <div className="flex-1 bg-[#F5F5F5] text-black flex flex-col min-h-0">
-                <div className="px-4 sm:px-8">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-10 py-2">
-                    <div className="border-b-2 border-bs-red px-1 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
-                        {icon || <span className="text-4xl sm:text-5xl mr-4">☕</span>}
-                        <div>
-                            <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
-                            <p className="text-xs sm:text-sm text-gray-700">{description}</p>
-                            {priceRange && (
-                                <p className="text-xs mt-1 text-gray-700">
-                                    <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
-                                </p>
-                            )}
-                            {/* Tipo de ambiente */}
-                            {ambienteList.length > 0 && (
-                                <div className="mt-2">
-                                    <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
-                                    <ul className="flex flex-wrap gap-2 mt-1">
-                                        {ambienteList.map((amb: string, idx: number) => (
-                                            <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-                        <span className="ml-auto bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
-                    </div>
-
-                    {/* Horário de funcionamento */}
-                    <div className="px-1 py-8">
-                        <div className="flex items-center justify-between">
-                            <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
-                            <span
-                                className="text-xs text-black cursor-pointer"
-                                onClick={onShowOpeningHours}
-                            >
-                                {t('placeDetail.viewHours')}
-                            </span>
-                        </div>
-                        <div className="mt-2 space-y-1">
-                            {openingDays.map((day, idx) => (
-                                <div key={idx} className="flex items-center">
-                                    <input type="checkbox" checked readOnly className="accent-green-500 mr-2" />
-                                    <span className="text-sm text-gray-800">{day}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Localização: renderiza somente se houver endereço válido */}
-                    {(address && address.trim().length > 0) && (
-                        <div className="border-t-2 border-bs-red px-1 py-8">
-                            <div className="flex items-center justify-between mb-2">
-                                <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
-                                {isOpenNow ? (
-                                    <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
-                                ) : (
-                                    <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                <div className="px-4 sm:px-12">
+                    <div className="mx-auto max-w-5xl py-2">
+                        <div className="border-b-2 border-bs-red px-1 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
+                            {icon || <span className="text-4xl sm:text-5xl mr-4">☕</span>}
+                            <div>
+                                <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
+                                <p className="text-xs sm:text-sm text-gray-700">{description}</p>
+                                {priceRange && (
+                                    <p className="text-xs mt-1 text-gray-700">
+                                        <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
+                                    </p>
+                                )}
+                                {/* Tipo de ambiente */}
+                                {ambienteList.length > 0 && (
+                                    <div className="mt-2">
+                                        <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
+                                        <ul className="flex flex-wrap gap-2 mt-1">
+                                            {ambienteList.map((amb: string, idx: number) => (
+                                                <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 )}
                             </div>
-                            <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
-                            <div className="mt-4 mb-4 flex items-start justify-between">
-                                <div>
-                                    <div>
-                                        <span className="font-bold uppercase text-black">{neighborhood}</span>
+                            <span className="ml-auto bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
+                        </div>
+
+                        {/* Horário de funcionamento */}
+                        <div className="px-1 py-8">
+                            <div className="flex items-center justify-between">
+                                <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
+                                <span
+                                    className="text-xs text-black cursor-pointer"
+                                    onClick={onShowOpeningHours}
+                                >
+                                    {t('placeDetail.viewHours')}
+                                </span>
+                            </div>
+                            <div className="mt-2 space-y-1">
+                                {openingDays.map((day, idx) => (
+                                    <div key={idx} className="flex items-center">
+                                        <input type="checkbox" checked readOnly className="accent-green-500 mr-2" />
+                                        <span className="text-sm text-gray-800">{day}</span>
                                     </div>
-                                    <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {address}</div>
-                                </div>
-                                <div className="flex-shrink-0">
-                                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
-                                        <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                                    </a>
-                                </div>
+                                ))}
                             </div>
                         </div>
-                    )}
+
+                        {/* Localização: renderiza somente se houver endereço válido */}
+                        {(address && address.trim().length > 0) && (
+                            <div className="border-t-2 border-bs-red px-1 py-8">
+                                <div className="flex items-center justify-between mb-2">
+                                    <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
+                                    {isOpenNow ? (
+                                        <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
+                                    ) : (
+                                        <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                                    )}
+                                </div>
+                                <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
+                                <div className="mt-4 mb-4 flex items-start justify-between">
+                                    <div>
+                                        <div>
+                                            <span className="font-bold uppercase text-black">{neighborhood}</span>
+                                        </div>
+                                        <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {address}</div>
+                                    </div>
+                                    <div className="flex-shrink-0">
+                                        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                            <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
-                <div className="px-4 sm:px-8 py-2 flex-1 bg-[#48464C] mt-4">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-10 py-8 sm:py-10 h-full flex flex-col justify-between text-white">
+                <div className="px-4 sm:px-12 py-2 flex-1 bg-[#48464C] mt-4">
+                    <div className="mx-auto max-w-5xl py-8 sm:py-10 h-full flex flex-col justify-between text-white">
                         <div>
                             <div className="flex items-center justify-between">
                                 <div>

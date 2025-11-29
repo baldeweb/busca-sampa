@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { useDocumentTitle } from "@/web/hooks/useDocumentTitle";
-import { FaArrowLeft } from "react-icons/fa";
+import { BackHeader } from '@/web/components/layout/BackHeader';
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
@@ -175,17 +175,9 @@ export const PlaceListPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
-            <div className="bg-black border-b-2 border-bs-red px-0 sm:px-12">
-                <div className="mx-auto max-w-6xl px-4 sm:px-0 flex items-center pt-8 sm:pt-12 pb-4">
-                    <button
-                        onClick={() => navigate(-1)}
-                        className="text-white text-lg font-bold flex items-center"
-                    >
-                        <FaArrowLeft className="mr-2" /> {t('common.back')}
-                    </button>
-                </div>
-                <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-16 py-6 sm:py-8 text-black">
+            <BackHeader onBack={() => navigate(-1)} />
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-6 sm:py-8 text-black">
                         {/* Título e descrição */}
                         <div>
                             <div className="flex items-start gap-4">
@@ -244,7 +236,7 @@ export const PlaceListPage: React.FC = () => {
                 </section>
                 {/* Filtro de ordenação */}
                 <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-16 py-4 text-black">
+                    <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
                             <div className="flex items-center justify-end">
                                 <div className="flex items-center gap-3">
                                     <label className="font-bold">{t('common.filter')}</label>
@@ -292,10 +284,9 @@ export const PlaceListPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
             {/* Lista de lugares */}
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
-                <div className="mx-auto max-w-7xl px-0 sm:px-16">
+                <div className="mx-auto max-w-5xl px-0 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden">
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
                             <div className="w-1/3 px-6 sm:px-14 py-3">{t('list.nameHeader')}</div>

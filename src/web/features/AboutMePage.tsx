@@ -1,5 +1,5 @@
 import flagSp from "@/assets/imgs/flags/flag_sp.png";
-import { FaInstagram, FaLinkedin, FaEnvelope, FaArrowLeft } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { useNavigate } from 'react-router-dom';
@@ -10,16 +10,7 @@ export function AboutMePage() {
 
   return (
     <>
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-black border-b-2 border-bs-red">
-        <div className="mx-auto max-w-6xl px-4 sm:px-0 flex items-center pt-8 sm:pt-12 pb-4">
-          <button
-            onClick={() => navigate(-1)}
-            className="text-white text-lg font-bold flex items-center"
-          >
-            <FaArrowLeft className="mr-2" /> {t('common.back')}
-          </button>
-        </div>
-      </section>
+      <BackHeader onBack={() => navigate(-1)} />
 
       <div className="mx-auto max-w-lg space-y-6 text-white">
 
