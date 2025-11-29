@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import icHome from '../../../assets/imgs/icons/ic_home.png';
-import icSearch from '../../../assets/imgs/icons/ic_search.png';
 import icAbout from '../../../assets/imgs/icons/ic_about.png';
 
 export function AppFooter() {

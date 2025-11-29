@@ -25,7 +25,7 @@ export function CategoryCard({ label, icon, selected, onClick, index }: Category
       ].join(" ")}
     >
       <div className="h-10 sm:h-14 text-2xl sm:text-4xl flex items-center justify-center pt-3" aria-hidden="true">{icon}</div>
-      <span style={{ fontFamily: '"Science Gothic", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }} className="text-[0.65rem] sm:text-[0.80rem] font-light leading-[1.05] whitespace-normal text-center pb-2 font-gothic category-card-label">
+      <span style={{ fontFamily: 'Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }} className="text-[0.65rem] sm:text-[0.80rem] font-semibold leading-[1.05] whitespace-normal text-center pb-2 font-montserrat">
         {label}
       </span>
     </button>

@@ -3,6 +3,7 @@ import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { useNavigate } from 'react-router-dom';
+import BackHeader from "../components/layout/BackHeader";
 
 export function AboutMePage() {
   const { t } = useTranslation();

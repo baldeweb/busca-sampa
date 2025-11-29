@@ -11,6 +11,14 @@
 }
 
 @font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Science Gothic';
   src: url('/src/assets/fonts/science-gothic/ScienceGothic-Regular.ttf') format('truetype');
   font-weight: 400;
