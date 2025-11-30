@@ -148,7 +148,7 @@ export const PlaceListPage: React.FC = () => {
                 break;
             case "name-desc":
                 arr.sort((a, b) => b.name.localeCompare(a.name));
-                                            <SectionHeading title={title} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
+                break;
             case "neighborhood-asc":
                 arr.sort((a, b) => {
                     const na = a.addresses?.[0]?.neighborhood || "";
@@ -196,114 +196,114 @@ export const PlaceListPage: React.FC = () => {
             <BackHeader onBack={() => navigate(-1)} />
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-6 sm:py-8 text-black">
-                        {/* Título e descrição */}
-                        <div>
-                            <div className="flex items-start gap-4">
-                                <img src={headerIcon} alt="flag" className="w-12 h-12 object-contain" />
-                                <div>
-                                    <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
-                                    <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                    {/* Título e descrição */}
+                    <div>
+                        <div className="flex items-start gap-4">
+                            <img src={headerIcon} alt="flag" className="w-12 h-12 object-contain" />
+                            <div>
+                                <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
+                                <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Chips de ambiente */}
+                    {environments.length > 1 && (
+                        <div className="bg-[#F5F5F5] text-black pb-4">
+                            <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
+                            <div className="relative">
+                                <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">
+                                    {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
+                                    {environments.length > 1 && (
+                                        <CategoryCard
+                                            key="all-environments"
+                                            label={t('common.all')}
+                                            icon={<img src={headerIcon} alt="all" className="w-8 h-8" />}
+                                            selected={false}
+                                            lightSelected={true}
+                                            onClick={() => setSelectedEnv(null)}
+                                            index={0}
+                                        />
+                                    )}
+                                    {environments.map((env, idx) => {
+                                        const key = (env.value || '').toString().replace(/-/g, '_').toUpperCase();
+                                        let iconSrc = flagSp;
+                                        if (key === 'FREE') iconSrc = icFree;
+                                        else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
+                                        else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
+                                        else if (key === 'ABERTO' || key === 'ABERTO_AGORA') iconSrc = icDoorOpened;
+                                        else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
+                                        else if (key === 'NATURE') iconSrc = icNature;
+                                        else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
+                                        else if (key === 'TOURIST_SPOT' || key === 'TOURIST_SPOTS') iconSrc = icTouristSpot;
+
+                                        return (
+                                            <CategoryCard
+                                                key={env.value}
+                                                label={env.label}
+                                                icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
+                                                selected={selectedEnv === env.value}
+                                                lightSelected={true}
+                                                onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                                index={environments.length > 1 ? idx + 1 : idx}
+                                            />
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
-                        {/* Chips de ambiente */}
-                        {environments.length > 1 && (
-                            <div className="bg-[#F5F5F5] text-black pb-4">
-                                <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                                <div className="relative">
-                                    <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">
-                                        {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
-                                        {environments.length > 1 && (
-                                            <CategoryCard
-                                                key="all-environments"
-                                                label={t('common.all')}
-                                                icon={<img src={headerIcon} alt="all" className="w-8 h-8" />}
-                                                selected={false}
-                                                lightSelected={true}
-                                                onClick={() => setSelectedEnv(null)}
-                                                index={0}
-                                            />
-                                        )}
-                                        {environments.map((env, idx) => {
-                                            const key = (env.value || '').toString().replace(/-/g, '_').toUpperCase();
-                                            let iconSrc = flagSp;
-                                            if (key === 'FREE') iconSrc = icFree;
-                                            else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
-                                            else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
-                                            else if (key === 'ABERTO' || key === 'ABERTO_AGORA') iconSrc = icDoorOpened;
-                                            else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
-                                            else if (key === 'NATURE') iconSrc = icNature;
-                                            else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
-                                            else if (key === 'TOURIST_SPOT' || key === 'TOURIST_SPOTS') iconSrc = icTouristSpot;
-
-                                            return (
-                                                <CategoryCard
-                                                    key={env.value}
-                                                    label={env.label}
-                                                    icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
-                                                    selected={selectedEnv === env.value}
-                                                    lightSelected={true}
-                                                    onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
-                                                    index={environments.length > 1 ? idx + 1 : idx}
-                                                />
-                                            );
-                                        })}
+                    )}
+                </div>
+            </section>
+            {/* Filtro de ordenação */}
+            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
+                    <div className="flex items-center justify-end">
+                        <div className="flex items-center gap-3">
+                            <label className="font-bold">{t('common.filter')}</label>
+                            <div className="relative inline-block">
+                                <button
+                                    className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                                    onClick={() => setShowOrderDropdown((v) => !v)}
+                                >
+                                    {(() => {
+                                        switch (order) {
+                                            case 'name-asc': return t('list.orderNameAsc');
+                                            case 'name-desc': return t('list.orderNameDesc');
+                                            case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
+                                            case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
+                                            default: return '';
+                                        }
+                                    })()}
+                                </button>
+                                {showOrderDropdown && (
+                                    <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
+                                        {ORDER_OPTIONS.map((opt) => (
+                                            <button
+                                                key={opt.value}
+                                                className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
+                                                onClick={() => {
+                                                    setOrder(opt.value);
+                                                    setShowOrderDropdown(false);
+                                                }}
+                                            >
+                                                {(() => {
+                                                    switch (opt.value) {
+                                                        case 'name-asc': return t('list.orderNameAsc');
+                                                        case 'name-desc': return t('list.orderNameDesc');
+                                                        case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
+                                                        case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
+                                                        default: return '';
+                                                    }
+                                                })()}
+                                            </button>
+                                        ))}
                                     </div>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </section>
-                {/* Filtro de ordenação */}
-                <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
-                    <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
-                            <div className="flex items-center justify-end">
-                                <div className="flex items-center gap-3">
-                                    <label className="font-bold">{t('common.filter')}</label>
-                                    <div className="relative inline-block">
-                            <button
-                                className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
-                                onClick={() => setShowOrderDropdown((v) => !v)}
-                            >
-                                {(() => {
-                                    switch (order) {
-                                        case 'name-asc': return t('list.orderNameAsc');
-                                        case 'name-desc': return t('list.orderNameDesc');
-                                        case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                        case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                        default: return '';
-                                    }
-                                })()}
-                            </button>
-                            {showOrderDropdown && (
-                                <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                                    {ORDER_OPTIONS.map((opt) => (
-                                        <button
-                                            key={opt.value}
-                                            className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                                            onClick={() => {
-                                                setOrder(opt.value);
-                                                setShowOrderDropdown(false);
-                                            }}
-                                        >
-                                            {(() => {
-                                                switch (opt.value) {
-                                                    case 'name-asc': return t('list.orderNameAsc');
-                                                    case 'name-desc': return t('list.orderNameDesc');
-                                                    case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                                    case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                                    default: return '';
-                                                }
-                                            })()}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
-                                </div>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             {/* Lista de lugares */}
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
