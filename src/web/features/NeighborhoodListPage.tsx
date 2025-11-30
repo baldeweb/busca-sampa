@@ -10,6 +10,7 @@ import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { CategoryCard } from '@/web/components/ui/CategoryCard';
 import flagSp from '@/assets/imgs/flags/flag_sp.png';
+import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
 import icDoorOpened from '@/assets/imgs/icons/ic_door_opened.png';
@@ -130,10 +131,15 @@ export const NeighborhoodListPage: React.FC = () => {
       <BackHeader onBack={() => navigate(-1)} />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 py-6 sm:py-12 text-black">
-            <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            {t('neighborhoodList.intro')}
-          </p>
+            <div className="flex items-start gap-4">
+              <img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />
+              <div>
+                <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                  {t('neighborhoodList.intro')}
+                </p>
+              </div>
+            </div>
         </div>
       </section>
 
@@ -148,7 +154,7 @@ export const NeighborhoodListPage: React.FC = () => {
                   <CategoryCard
                     key="all-types"
                     label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(t('common.all'))}
-                    icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
+                    icon={<img src={icNeighborhood} alt="all" className="w-8 h-8" />}
                     selected={false}
                     lightSelected={true}
                     onClick={() => setSelectedType(null)}

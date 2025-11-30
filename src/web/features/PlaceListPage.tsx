@@ -19,6 +19,7 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -144,10 +145,13 @@ export const PlaceListPage: React.FC = () => {
             case 'NATURE': return icNature;
             case 'RESTAURANT': return icRestaurants;
             case 'TOURIST_SPOT': return icTouristSpot;
-            case 'ABERTO-AGORA':
             case 'ABERTO':
             case 'ABERTO_AGORA':
                 return icDoorOpened;
+            case 'ABREM-HOJE':
+            case 'ABREM_HOJE':
+            case 'OPEN_TODAY':
+                return icOpenToday;
             default: return flagSp;
         }
     })();

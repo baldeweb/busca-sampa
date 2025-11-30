@@ -78,7 +78,7 @@ const resources = {
         orderNeighborhoodAsc: 'BAIRRO em ordem alfabética A-Z',
         orderNeighborhoodDesc: 'BAIRRO em ordem alfabética Z-A'
       },
-      whereIsToday: { title: 'E aí, onde é hoje?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
+      whereIsToday: { title: 'E aí, onde é hoje?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Abrem hoje' },
       placeDetail: {
         loading: 'Carregando detalhes...',
         notFound: 'Local não encontrado.',
@@ -165,6 +165,7 @@ const resources = {
       },
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
+        opensAtHeader: 'Abre às...',
         subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
         article: {
           RESTAURANT: 'o',
@@ -216,7 +217,7 @@ const resources = {
         noPlaces: 'No se encontraron lugares.',
         version: 'Versión'
       },
-      whereIsToday: { title: '¿Y entonces, dónde es hoy?' },
+      whereIsToday: { title: '¿Y entonces, dónde es hoy?', opensToday: 'Abren hoy' },
       list: {
         nameHeader: 'Nombre',
         neighborhoodHeader: 'Barrio',
@@ -291,6 +292,7 @@ const resources = {
       ,
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
+        opensAtHeader: 'Abre a las...',
         subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti más cerca de ti :)',
         article: {
           RESTAURANT: 'el',
@@ -329,7 +331,10 @@ const resources = {
       common: {
         back: 'Retour', details: 'voir détails', selectLanguage: 'Choisir une langue', changeDistance: 'Changer distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
       },
-      whereIsToday: { title: 'Alors, c’est où aujourd’hui?' },
+      whereIsToday: { title: 'Alors, c’est où aujourd’hui?', opensToday: 'Ouvrent aujourd\'hui' },
+            placeList: {
+              opensAtHeader: 'Ouvre à...'
+            },
       list: {
         nameHeader: 'Nom', neighborhoodHeader: 'Quartier', typeHeader: 'Type', orderNameAsc: 'NOM A-Z', orderNameDesc: 'NOM Z-A', orderNeighborhoodAsc: 'QUARTIER A-Z', orderNeighborhoodDesc: 'QUARTIER Z-A'
       },
@@ -356,7 +361,7 @@ const resources = {
       home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По району', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
-      whereIsToday: { title: 'Ну что, где сегодня?'},
+      whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', typeHeader: 'Тип', orderNameAsc: 'ИМЯ A-Z', orderNameDesc: 'ИМЯ Z-A', orderNeighborhoodAsc: 'РАЙОН A-Z', orderNeighborhoodDesc: 'РАЙОН Z-A' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Все рекомендации — места где я был и рекомендую, плюс те, что мне советовали и я еще не посетил.', neverEmphasis: 'НИКОГДА', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: 'рекомендовал бы места куда не стоит идти :)' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться' },
@@ -379,7 +384,7 @@ const resources = {
       home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', noNearbyResultsRadius: '所选半径内没有地点。' },
       header: { title: 'Role Paulista', tagline: '我去过的最佳推荐，一触即达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
-      whereIsToday: { title: '那今天去哪儿?'},
+      whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '名称 A-Z', orderNameDesc: '名称 Z-A', orderNeighborhoodAsc: '街区 A-Z', orderNeighborhoodDesc: '街区 Z-A' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于我去过的地方', visitModalParagraph: '所有推荐都是我去过并推荐的地方，另有一些别人推荐我还没去。', neverEmphasis: '绝不', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里是地址，点击下方按钮可规划路线', streetPrefix: '街道:', googleMapsButton: '打开 Google 地图', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '会推荐你不该去的地方 :)' },
       openingHours: { title: '营业时间', closed: '关闭', range: '{{open}} - {{close}}', notProvided: '未提供时间。', followButton: '关注' },

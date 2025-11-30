@@ -14,6 +14,7 @@ import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icCalendar from '@/assets/imgs/icons/ic_door_opened.png';
 import { useTranslation } from 'react-i18next';
+import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
 
 interface Props {
@@ -81,17 +82,29 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                     >
                         <style>{`.flex.flex-nowrap::-webkit-scrollbar{display:none}`}</style>
                         {/* Static option: 'Abrem hoje' (opens today) */}
-                        <CategoryCard
-                            key="opens-today"
-                            label={t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' })}
-                            icon={<img src={icCalendar} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" alt="" />}
-                            selected={selectedId === -999}
-                            onClick={() => {
-                                setSelectedId(-999);
-                                onOptionSelect?.({ id: -999, title: t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' }), tags: ['OPEN_TODAY'] } as any);
-                            }}
-                            index={0}
-                        />
+                        {(() => {
+                            const raw = t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' });
+                            const parts = (raw || '').trim().split(/\s+/);
+                            const labelNode = parts.length > 1 ? (
+                                <>
+                                    <span className="block whitespace-normal">{parts[0]}</span>
+                                    <span className="block whitespace-normal">{parts.slice(1).join(' ')}</span>
+                                </>
+                            ) : raw;
+                            return (
+                                <CategoryCard
+                                    key="opens-today"
+                                    label={labelNode}
+                                    icon={<img src={icOpenToday} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" alt="" />}
+                                    selected={selectedId === -999}
+                                    onClick={() => {
+                                        setSelectedId(-999);
+                                        onOptionSelect?.({ id: -999, title: raw, tags: ['OPEN_TODAY'] } as any);
+                                    }}
+                                    index={0}
+                                />
+                            );
+                        })()}
                         {options.map((option, idx) => {
                             // normalize title (remove zero-width spaces)
                             const raw = (option.title || '').replace(/\u200B/g, '');
