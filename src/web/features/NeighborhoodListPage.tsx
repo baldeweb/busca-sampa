@@ -13,7 +13,6 @@ import flagSp from '@/assets/imgs/flags/flag_sp.png';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
-import icDoorOpened from '@/assets/imgs/icons/ic_door_opened.png';
 import icFree from '@/assets/imgs/icons/ic_free.png';
 import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
@@ -167,7 +166,6 @@ export const NeighborhoodListPage: React.FC = () => {
                   if (key === 'FREE') iconSrc = icFree;
                   else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
                   else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
-                  else if (key === 'ABERTO' || key === 'ABERTO_AGORA') iconSrc = icDoorOpened;
                   else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
                   else if (key === 'NATURE') iconSrc = icNature;
                   else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
