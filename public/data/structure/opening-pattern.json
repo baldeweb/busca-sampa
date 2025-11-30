@@ -444,5 +444,101 @@
     "periods": [
       { "days": ["EVERYDAY"], "open": "7:00", "close": "17:00" }
     ]
+  },
+  {
+    "id": "SUBASTOR_DAYTIME",
+    "description": "Horários do SubAstor (Bar do Cofre)",
+    "periods": [
+      { "days": ["TUESDAY"], "open": "16:00", "close": "23:00" },
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "16:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "14:00", "close": "01:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "BARIOBAR_DAYTIME",
+    "description": "Horários do Bario Bar",
+    "periods": [
+      { "days": ["MONDAY"], "open": "17:00", "close": "22:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "17:00", "close": "01:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "15:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "OLIVIOBAR_DAYTIME",
+    "description": "Horários do Olivio Bar",
+    "periods": [
+      { "days": ["MONDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["MONDAY"], "open": "18:00", "close": "23:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "02:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "REPUBLICPUB_DAYTIME",
+    "description": "Horários do Republic English Pub",
+    "periods": [
+      { "days": ["FRIDAY"], "open": "20:00", "close": "02:30" },
+      { "days": ["SATURDAY"], "open": "19:30", "close": "03:00" },
+      { "days": ["SUNDAY"], "open": "19:30", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "WASKABAR_DAYTIME",
+    "description": "Horários do Waska Restobar Latino",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "17:00", "close": "23:30" }
+    ]
+  },
+  {
+    "id": "MANIFESTOBAR_DAYTIME",
+    "description": "Horários do Manifesto Bar",
+    "periods": [
+      { "days": ["THURSDAY"], "open": "20:00", "close": "02:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "20:00", "close": "04:00" },
+      { "days": ["SUNDAY"], "open": "18:00", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "BARDOLUIZFERNANDES_DAYTIME",
+    "description": "Horários do Bar do Luiz Fernandes",
+    "periods": [
+      { "days": ["WEDNESDAY"], "open": "12:00", "close": "22:00" },
+      { "days": ["THURSDAY"], "open": "17:00", "close": "23:00" },
+      { "days": ["FRIDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "20:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "BARDOSARCOS_DAYTIME",
+    "description": "Horários do Bar dos Arcos",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY"], "open": "18:00", "close": "01:00" },
+      { "days": ["THURSDAY", "FRIDAY"], "open": "18:00", "close": "02:00" },
+      { "days": ["SATURDAY"], "open": "18:00", "close": "03:00" }
+    ]
+  },
+  {
+    "id": "JAVARI_DAYTIME",
+    "description": "Horários do Javari StrEat Park",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "14:00", "close": "01:00" },
+      { "days": ["SATURDAY"], "open": "14:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "CURTICABAR_DAYTIME",
+    "description": "Horários do Curtiça Bar",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:00", "close": "04:00" }
+    ]
   }
 ]

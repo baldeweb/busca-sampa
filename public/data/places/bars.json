@@ -1,44 +1,16 @@
 [
     {
         "id": 1,
-        "name": "SubAstor (Bar do Cofre) 🇧🇷",
+        "name": "SubAstor (Bar do Cofre)",
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "11943643170",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isFree": true,
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
-    },
-    {
-        "id": 2,
-        "name": "Bario Bar 🇧🇷",
-        "type": "BAR",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
+            "patternId": "SUBASTOR_DAYTIME",
             "customOverrides": []
         },
         "isFree": true,
@@ -46,22 +18,38 @@
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
+        "shouldSchedule": true,
+        "notes": [
+            "Bar localizado no subsolo do Farol Santander",
+            "Ambiente sofisticado, ideal para quem aprecia coquetéis elaborados.",
+            "Recomenda-se fazer reserva antecipada, especialmente nos finais de semana."
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "João Brícola",
+                "number": "24",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01014-010",
+                "isMainUnity": true,
+                "latitude": -23.5458897,
+                "longitude": -46.6367792
+            }
+        ],
+        "linkMenu": "https://livemenu.app/menu/64513977e74a9f0055b72ef7?cross_session=done",
+        "linkWebsite": "https://subastor.com.br/",
+        "linkInstagram": "https://www.instagram.com/obardocofre/",
         "tags": []
     },
     {
-        "id": 3,
-        "name": "Olivio Bar 🇧🇷",
+        "id": 2,
+        "name": "Bario Bar",
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "11915167135",
                 "isWhatsApp": true
             }
         ],
@@ -69,47 +57,143 @@
             "patternId": "",
             "customOverrides": []
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Bar com fliperamas e jogos retrô.",
+            "Ambiente descontraído, ideal para grupos de amigos."
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Euclides Pacheco",
+                "number": "880",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "03321-000",
+                "isMainUnity": true,
+                "latitude": -23.5480604,
+                "longitude": -46.5690443
+            },
+            {
+                "id": 2,
+                "street": "Washington Luís",
+                "number": "1860",
+                "city": "São Paulo",
+                "neighborhood": "Santo Amaro",
+                "postalCode": "04627-006",
+                "isMainUnity": false,
+                "latitude": -23.6530698,
+                "longitude": -46.6908723
+            },
+            {
+                "id": 3,
+                "street": "Coropé",
+                "number": "41",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05426-010",
+                "isMainUnity": false,
+                "latitude": -23.5613536,
+                "longitude": -46.6964748
+            }
+        ],
+        "linkMenu": "https://www.dguests.com.br/cardapio/Bario_Bar",
+        "linkWebsite": "https://www.bario.com.br/",
+        "linkInstagram": "https://www.instagram.com/bario_bar",
         "tags": []
     },
     {
-        "id": 4,
-        "name": "Republic English Pub 🇬🇧",
+        "id": 3,
+        "name": "Olivio Bar",
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "1146802967",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "OLIVIOBAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": false,
+        "isFree": false,
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar com drinks temáticos diversos",
+            "Recomenda-se fazer reserva antecipada, especialmente nos finais de semana."
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Delfina",
+                "number": "196",
+                "city": "São Paulo",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "05443-010",
+                "isMainUnity": true,
+                "latitude": -23.5535829,
+                "longitude": -46.6969024
+            }
+        ],
+        "linkMenu": "https://menu.getinapp.com.br/store/r2Prqk8v/1",
+        "linkWebsite": "http://www.oliviobar.com.br/",
+        "linkInstagram": "https://www.instagram.com/oliviobar/",
+        "tags": [ "THEMED" ]
+    },
+    {
+        "id": 4,
+        "name": "Republic English Pub",
+        "type": "BAR",
+        "phones": [
+            {
+                "number": "11993141221",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "REPUBLICPUB_DAYTIME",
+            "customOverrides": []
+        },
+        "isFree": false,
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Pub com temática inglesa, oferecendo uma variedade de cervejas importadas e pratos típicos do Reino Unido."
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Delfina",
+                "number": "110",
+                "city": "São Paulo",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "05443-010",
+                "isMainUnity": true,
+                "latitude": -23.5540818,
+                "longitude": -46.6947435
+            }
+        ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "linkWebsite": "https://englishpub.com.br/",
+        "linkInstagram": "https://www.instagram.com/republicpub/",
+        "tags": [
+            "THEMED", "ROCK_BAR"
+        ]
     },
     {
         "id": 5,
@@ -117,26 +201,43 @@
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "1138149899",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
-            "customOverrides": []
+            "patternId": "WASKABAR_DAYTIME",
+            "customOverrides": [
+                { "days": ["SATURDAY"], "open": "12:00", "close": "23:30" },
+                { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+            ]
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Bar com temática latina, oferecendo uma variedade de drinks e pratos típicos da América Latina, especialmente peruanos."
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Padre Carvalho",
+                "number": "46",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05427-100",
+                "isMainUnity": true,
+                "latitude": -23.5601764,
+                "longitude": -46.6992883
+            }
+        ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/waska.barepetiscos/",
         "tags": []
     },
     {
@@ -145,15 +246,15 @@
         "type": "BAR",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1125745256",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MANIFESTOBAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -161,11 +262,25 @@
         "shouldSchedule": false,
         "notes": [],
         "priceRange": "MEDIUM",
-        "addresses": [],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Ramos Batista",
+                "number": "207",
+                "city": "São Paulo",
+                "neighborhood": "Vila Olímpia",
+                "postalCode": "04552-020",
+                "isMainUnity": true,
+                "latitude": -23.5923993,
+                "longitude": -46.6864977
+            }
+        ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "linkWebsite": "http://www.manifestobar.com.br/",
+        "linkInstagram": "https://www.instagram.com/manifestobar/",
+        "tags": [
+            "ROCK_BAR"
+        ]
     },
     {
         "id": 7,
@@ -173,27 +288,58 @@
         "type": "BAR",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1129763556",
+                "isWhatsApp": false
+            },
+            {
+                "number": "1135642750",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BARDOLUIZFERNANDES_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Bar tradicional de São Paulo, com o famoso bolinho de carne"
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Augusto Tolle",
+                "number": "610",
+                "city": "São Paulo",
+                "neighborhood": "Mandaqui",
+                "postalCode": "02405-001",
+                "isMainUnity": true,
+                "latitude": -23.4881534,
+                "longitude": -46.6689643
+            },
+            {
+                "id": 2,
+                "street": "Eng. Caetano Álvares",
+                "number": "5470",
+                "city": "São Paulo",
+                "neighborhood": "Lauzane Paulista",
+                "postalCode": "02413-100",
+                "isMainUnity": false,
+                "latitude": -23.4881534,
+                "longitude": -46.6689643
+            }
+        ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "linkWebsite": "https://www.bardoluizfernandes.com.br/",
+        "linkInstagram": "https://www.instagram.com/bardoluizf/",
+        "tags": [
+            "BOTECO"
+        ]
     },
     {
         "id": 8,
@@ -201,25 +347,40 @@
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "1151480056",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BARDOSARCOS_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Bar localizado abaixo do Teatro Municipal de São Paulo, com ambiente histórico e aconchegante.",
+            "Recomenda-se fazer reserva antecipada, especialmente nos finais de semana."
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Praça Ramos de Azevedo",
+                "number": "s/n",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "01037-010",
+                "isMainUnity": true,
+                "latitude": -23.5452146,
+                "longitude": -46.6413184
+            }
+        ],
+        "linkMenu": "https://bardosarcos.com.br/cardapio-salao-dourado-almoco/",
+        "linkWebsite": "https://bardosarcos.com.br/",
         "linkInstagram": "",
         "tags": []
     },
@@ -229,15 +390,15 @@
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "1120811544",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "JAVARI_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -245,11 +406,25 @@
         "shouldSchedule": false,
         "notes": [],
         "priceRange": "MEDIUM",
-        "addresses": [],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Javari",
+                "number": "112",
+                "city": "São Paulo",
+                "neighborhood": "Mooca",
+                "postalCode": "03112-100",
+                "isMainUnity": true,
+                "latitude": -23.5540926,
+                "longitude": -46.6073916
+            }
+        ],
+        "linkMenu": "http://javaripark.com.br/menu",
+        "linkWebsite": "http://www.javaripark.com.br/",
+        "linkInstagram": "https://www.instagram.com/javaripark/",
+        "tags": [
+            "LIVE_MUSIC"
+        ]
     },
     {
         "id": 10,
@@ -257,26 +432,43 @@
         "type": "BAR",
         "phones": [
             {
-                "number": "",
+                "number": "11979825400",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CURTICABAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
+        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Bar com karaokê",
+            "As sextas, acontece um encontro de idiomas"
+        ],
         "priceRange": "MEDIUM",
-        "addresses": [],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": 0.0,
+                "longitude": 0.0
+            }
+        ],
+        "linkMenu": "https://curticabar.com.br/cardapio",
+        "linkWebsite": "https://curticabar.com.br/",
+        "linkInstagram": "https://www.instagram.com/curticabar/",
+        "tags": [
+            "KARAOKE"
+        ]
     }
 ]
