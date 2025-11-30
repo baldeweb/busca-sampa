@@ -89,7 +89,7 @@ export function AboutMePage() {
                 className="flex items-center gap-2 hover:text-bs-red transition-colors"
               >
                 <FaInstagram aria-hidden="true" className="text-lg" />
-                <span>Busca Sampa</span>
+                <span>Role Paulista</span>
               </a>
             </li>
 
@@ -107,7 +107,7 @@ export function AboutMePage() {
 
         {/* FINAL */}
         <p className="text-center text-[0.65rem] text-gray-500 pt-4 pb-10">
-          {t('common.version')} 1.0 — Busca Sampa
+          {t('common.version')} 1.0 — Role Paulista
         </p>
       </div>
     </>

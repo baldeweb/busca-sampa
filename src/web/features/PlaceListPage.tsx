@@ -207,7 +207,7 @@ export const PlaceListPage: React.FC = () => {
                             </div>
                         </div>
                         {/* Chips de ambiente */}
-                        {environments.length > 0 && (
+                        {environments.length > 1 && (
                             <div className="bg-[#F5F5F5] text-black pb-4">
                                 <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
                                 <div className="relative">

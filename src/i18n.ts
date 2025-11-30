@@ -53,7 +53,7 @@ const resources = {
         noNearbyResultsRadius: 'Não há nada dentro das proximidades no raio escolhido.'
       },
       header: {
-        title: 'Busca Sampa',
+        title: 'Role Paulista',
         tagline: 'A melhor recomendação de onde fui, com apenas um toque de distância'
       },
       common: {
@@ -146,7 +146,7 @@ const resources = {
         paragraph: 'Página sobre você. Depois a gente traz o layout do Marvel.'
       },
       aboutMe: {
-        authorTag: 'Criador do Busca Sampa',
+        authorTag: 'Criador do Role Paulista',
         aboutHeading: 'Sobre mim',
         socialHeading: 'Redes sociais',
         bio: 'Desenvolvedor Mobile há mais de 8 anos, especialista em Android e iOS. Apaixonado por tecnologia, viagens, restaurantes e por explorar cada canto novo de São Paulo.'
@@ -200,7 +200,7 @@ const resources = {
         noNearbyResultsRadius: 'No hay lugares dentro del radio elegido.'
       },
       header: {
-        title: 'Busca Sampa',
+        title: 'Role Paulista',
         tagline: 'La mejor recomendación de donde he ido, a un toque'
       },
       common: {
@@ -279,7 +279,7 @@ const resources = {
       support: { title: 'Apoya el sitio' },
       about: { title: '¿Quién soy?', paragraph: 'Página sobre ti. Diseño vendrá después.' },
       aboutMe: {
-        authorTag: 'Creador de Busca Sampa',
+        authorTag: 'Creador de Role Paulista',
         aboutHeading: 'Sobre mí',
         socialHeading: 'Redes sociales',
         bio: 'Desarrollador móvil hace más de 8 años. Apasionado por tecnología, viajes y explorar São Paulo.'
@@ -325,7 +325,7 @@ const resources = {
         viewMoreNeighborhoods: 'voir plus de quartiers >',
         noNearbyResultsRadius: 'Aucun endroit dans le rayon choisi.'
       },
-      header: { title: 'Busca Sampa', tagline: 'La meilleure recommandation des lieux visités, à portée de main' },
+      header: { title: 'Role Paulista', tagline: 'La meilleure recommandation des lieux visités, à portée de main' },
       common: {
         back: 'Retour', details: 'voir détails', selectLanguage: 'Choisir une langue', changeDistance: 'Changer distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
       },
@@ -346,7 +346,7 @@ const resources = {
       recommendationsOrigin: { title: 'D’où viennent ces recommandations ?' },
       support: { title: 'Soutenir le site' },
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
-      aboutMe: { authorTag: 'Créateur de Busca Sampa', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
+      aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
       placeType: { RESTAURANT: 'Restaurants', BAR: 'Bars', COFFEE: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit' }
     }
@@ -354,7 +354,7 @@ const resources = {
   ru: {
     translation: {
       home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По району', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
-      header: { title: 'Busca Sampa', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
+      header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', typeHeader: 'Тип', orderNameAsc: 'ИМЯ A-Z', orderNameDesc: 'ИМЯ Z-A', orderNeighborhoodAsc: 'РАЙОН A-Z', orderNeighborhoodDesc: 'РАЙОН Z-A' },
@@ -369,7 +369,7 @@ const resources = {
       recommendationsOrigin: { title: 'Откуда эти рекомендации?' },
       support: { title: 'Поддержите сайт' },
       about: { title: 'Кто я?', paragraph: 'Страница о вас. Макет позже.' },
-      aboutMe: { authorTag: 'Создатель Busca Sampa', aboutHeading: 'Обо мне', socialHeading: 'Соцсети', bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.' },
+      aboutMe: { authorTag: 'Создатель Role Paulista', aboutHeading: 'Обо мне', socialHeading: 'Соцсети', bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.' },
       howToRecommend: { title: 'Как порекомендовать место?' },
       placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно' }
     }
@@ -377,7 +377,7 @@ const resources = {
   zh: {
     translation: {
       home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', noNearbyResultsRadius: '所选半径内没有地点。' },
-      header: { title: 'Busca Sampa', tagline: '我去过的最佳推荐，一触即达' },
+      header: { title: 'Role Paulista', tagline: '我去过的最佳推荐，一触即达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?'},
       list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '名称 A-Z', orderNameDesc: '名称 Z-A', orderNeighborhoodAsc: '街区 A-Z', orderNeighborhoodDesc: '街区 Z-A' },
@@ -392,7 +392,7 @@ const resources = {
       recommendationsOrigin: { title: '这些推荐来自哪里？' },
       support: { title: '支持本网站' },
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
-      aboutMe: { authorTag: 'Busca Sampa 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
+      aboutMe: { authorTag: 'Role Paulista 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
       howToRecommend: { title: '如何推荐一个地点？' },
       placeType: { RESTAURANT: '餐厅', BAR: '酒吧', COFFEE: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FREE: '免费' }
     }
@@ -411,7 +411,7 @@ const resources = {
         noNearbyResultsRadius: 'No places within the chosen radius.'
       },
       header: {
-        title: 'Busca Sampa',
+        title: 'Role Paulista',
         tagline: 'The best recommendation of where I have been, just a tap away'
       },
       common: {
@@ -504,7 +504,7 @@ const resources = {
         paragraph: 'About page placeholder. We will bring Marvel layout later.'
       },
       aboutMe: {
-        authorTag: 'Creator of Busca Sampa',
+        authorTag: 'Creator of Role Paulista',
         aboutHeading: 'About me',
         socialHeading: 'Social networks',
         bio: 'Mobile developer for over 8 years, Android & iOS specialist. Passionate about technology, travel, restaurants and exploring every new corner of São Paulo.'
@@ -560,7 +560,7 @@ const resources = {
         noNearbyResultsRadius: 'Keine Orte im ausgewählten Radius.'
       },
       header: {
-        title: 'Busca Sampa',
+        title: 'Role Paulista',
         tagline: 'Die beste Empfehlung, wo ich war — mit nur einer Berührung'
       },
       common: {
@@ -607,7 +607,7 @@ const resources = {
         noNearbyResultsRadius: '選択した半径内に場所がありません。'
       },
       header: {
-        title: 'Busca Sampa',
+        title: 'Role Paulista',
         tagline: '私が行った場所のおすすめ — ワンタップで'
       },
       common: {
@@ -655,7 +655,7 @@ const resources = {
         noNearbyResultsRadius: 'لا توجد أماكن ضمن النطاق المحدد.'
       },
       header: {
-        title: 'Busca Sampa',
+        title: 'Role Paulista',
         tagline: 'أفضل توصية للأماكن التي زرتها — بنقرة واحدة'
       },
       common: {
@@ -703,7 +703,7 @@ const resources = {
         viewMoreNeighborhoods: 'vedi altri quartieri >',
         noNearbyResultsRadius: 'Nessun luogo nel raggio selezionato.'
       },
-      header: { title: 'Busca Sampa', tagline: 'La migliore raccomandazione dei posti che ho visitato, a portata di tocco' },
+      header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione dei posti che ho visitato, a portata di tocco' },
       common: {
         back: 'Indietro',
         details: 'vedi dettagli',
@@ -748,7 +748,7 @@ const resources = {
         viewMoreNeighborhoods: 'meer buurten bekijken >',
         noNearbyResultsRadius: 'Geen plaatsen binnen de gekozen straal.'
       },
-      header: { title: 'Busca Sampa', tagline: 'De beste aanbeveling van plekken waar ik ben geweest, binnen handbereik' },
+      header: { title: 'Role Paulista', tagline: 'De beste aanbeveling van plekken waar ik ben geweest, binnen handbereik' },
       common: {
         back: 'Terug',
         details: 'bekijk details',
@@ -794,7 +794,7 @@ const resources = {
         viewMoreNeighborhoods: 'daha fazla mahalle göster >',
         noNearbyResultsRadius: 'Seçilen yarıçap içinde yer yok.'
       },
-      header: { title: 'Busca Sampa', tagline: 'Gittiğim yerlerin en iyi önerisi — tek dokunuşla' },
+      header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — tek dokunuşla' },
       common: {
         back: 'Geri', details: 'detayları gör', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
       },
@@ -829,7 +829,7 @@ const resources = {
         viewMoreNeighborhoods: 'zobacz więcej dzielnic >',
         noNearbyResultsRadius: 'Brak miejsc w wybranym promieniu.'
       },
-      header: { title: 'Busca Sampa', tagline: 'Najlepsze rekomendacje miejsc, w których byłem — na wyciągnięcie ręki' },
+      header: { title: 'Role Paulista', tagline: 'Najlepsze rekomendacje miejsc, w których byłem — na wyciągnięcie ręki' },
       common: {
         back: 'Wstecz', details: 'zobacz szczegóły', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
       },

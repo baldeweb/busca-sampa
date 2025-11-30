@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { BackHeader } from '@/web/components/layout/BackHeader';
 import { useParams, useNavigate } from "react-router-dom";
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
@@ -118,7 +119,11 @@ export const NeighborhoodListPage: React.FC = () => {
     return arr;
   }, [filteredPlaces, order]);
 
-  const titleNeighborhood = slug?.replace(/-/g, " ") || "";
+  const titleNeighborhoodRaw = slug?.replace(/-/g, " ") || "";
+  const titleNeighborhood = titleNeighborhoodRaw
+    ? titleNeighborhoodRaw.charAt(0).toUpperCase() + titleNeighborhoodRaw.slice(1)
+    : "";
+  useDocumentTitle(titleNeighborhood);
 
   return (
     <div className="min-h-screen bg-bs-bg text-white flex flex-col">
@@ -133,7 +138,7 @@ export const NeighborhoodListPage: React.FC = () => {
       </section>
 
       {/* Filtro por tipo (carrossel de CategoryCard igual à Home) */}
-      {placeTypes.length > 0 && (
+      {placeTypes.length > 1 && (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
             <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
