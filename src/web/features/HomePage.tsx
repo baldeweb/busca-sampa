@@ -326,7 +326,7 @@ export function HomePage() {
                           <button
                             type="button"
                             onClick={() => setMapCategory(s.category)}
-                            className="min-w-[110px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                            className="min-w-[120px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
                           >
                             ver no mapa
                           </button>
