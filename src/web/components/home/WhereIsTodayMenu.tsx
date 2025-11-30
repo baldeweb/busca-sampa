@@ -12,7 +12,6 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
-import icCalendar from '@/assets/imgs/icons/ic_door_opened.png';
 import { useTranslation } from 'react-i18next';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
