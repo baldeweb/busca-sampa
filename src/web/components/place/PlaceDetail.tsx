@@ -150,8 +150,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             </div>
                         </div>
 
-                        {/* Localização: renderiza somente se houver ao menos um endereço válido */}
-                        {(addresses && Array.isArray(addresses) && addresses.length > 0) && (
+                        {/* Localização: renderiza endereços quando disponíveis; caso contrário usa os props legados */}
+                        {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
                             <div className="border-t-2 border-bs-red px-1 py-8">
                                 <div className="flex items-center justify-between mb-2">
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
@@ -163,29 +163,44 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 </div>
                                 <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
                                 <div className="mt-4 mb-4 space-y-4">
-                                    {addresses.map((addr: any, idx: number) => {
-                                        const neighborhoodText = addr?.neighborhood || '';
-                                        const streetText = `${addr?.street || ''}${addr?.number ? ', ' + addr.number : ''}`.trim();
-                                        // prefer lat/lng for maps link when available
-                                        const mapsHref = (addr?.latitude && addr?.longitude)
-                                            ? `https://maps.google.com/?q=${addr.latitude},${addr.longitude}`
-                                            : `https://maps.google.com/?q=${encodeURIComponent(streetText)}`;
-                                        return (
-                                            <div key={idx} className="flex items-start justify-between">
-                                                <div>
+                                    {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
+                                        addresses.map((addr: any, idx: number) => {
+                                            const neighborhoodText = addr?.neighborhood || '';
+                                            const streetText = `${addr?.street || ''}${addr?.number ? ', ' + addr.number : ''}`.trim();
+                                            const mapsHref = (addr?.latitude && addr?.longitude)
+                                                ? `https://maps.google.com/?q=${addr.latitude},${addr.longitude}`
+                                                : `https://maps.google.com/?q=${encodeURIComponent(streetText)}`;
+                                            return (
+                                                <div key={idx} className="flex items-start justify-between">
                                                     <div>
-                                                        <span className="font-bold uppercase text-black">{neighborhoodText}</span>
+                                                        <div>
+                                                            <span className="font-bold uppercase text-black">{neighborhoodText}</span>
+                                                        </div>
+                                                        <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
                                                     </div>
-                                                    <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
+                                                    <div className="flex-shrink-0">
+                                                        <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                                            <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div className="flex-shrink-0">
-                                                    <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
-                                                        <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                                                    </a>
+                                            );
+                                        })
+                                    ) : (
+                                        <div className="flex items-start justify-between">
+                                            <div>
+                                                <div>
+                                                    <span className="font-bold uppercase text-black">{neighborhood}</span>
                                                 </div>
+                                                <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {address}</div>
                                             </div>
-                                        );
-                                    })}
+                                            <div className="flex-shrink-0">
+                                                <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                                    <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         )}
