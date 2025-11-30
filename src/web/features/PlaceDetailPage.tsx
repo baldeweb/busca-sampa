@@ -100,9 +100,10 @@ export function PlaceDetailPage() {
         priceRange={place.priceRange}
         openingDays={openingDays}
         isOpenNow={abertoAgora}
-        neighborhood={mainAddress.neighborhood || ""}
-        address={`${mainAddress.street || ""}, ${mainAddress.number || ""}`}
-        googleMapsUrl={`https://maps.google.com/?q=${mainAddress.street || ""},${mainAddress.number || ""}`}
+            neighborhood={mainAddress.neighborhood || ""}
+            address={`${mainAddress.street || ""}, ${mainAddress.number || ""}`}
+            googleMapsUrl={`https://maps.google.com/?q=${mainAddress.street || ""},${mainAddress.number || ""}`}
+            addresses={place.addresses || []}
         instagramUrl={place.linkInstagram || ""}
         menuUrl={place.linkMenu || ""}
         notes={place.notes || []}

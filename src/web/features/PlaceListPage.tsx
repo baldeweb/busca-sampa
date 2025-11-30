@@ -245,6 +245,19 @@ export const PlaceListPage: React.FC = () => {
         return '-';
     }
 
+    // Helper: pick a neighborhood string for a place (prefer main unity)
+    function getPlaceNeighborhood(place: any): string | undefined {
+        const addrs = place?.addresses;
+        if (!addrs || !Array.isArray(addrs) || addrs.length === 0) return undefined;
+        const main = addrs.find((a: any) => a.isMainUnity);
+        if (main && main.neighborhood) return main.neighborhood;
+        // fallback to first non-empty neighborhood
+        for (const a of addrs) {
+            if (a && a.neighborhood) return a.neighborhood;
+        }
+        return undefined;
+    }
+
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
@@ -378,7 +391,7 @@ export const PlaceListPage: React.FC = () => {
                                     className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
-                                    <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{place.addresses?.[0]?.neighborhood || ""}</div>
+                                    <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{getPlaceNeighborhood(place) || ""}</div>
                                     {isOpensToday && (
                                         <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
                                             {getOpeningDisplayForToday(place)}
