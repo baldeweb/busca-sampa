@@ -112,9 +112,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
                             // translated label: prefer i18n keys (open now / placeType) when available
                             let translatedRaw: string;
-                            if (lower.includes('aberto') || (option.tags && option.tags.length > 1)) {
-                                translatedRaw = t('placeDetail.openNow');
-                            } else if (option.tags && option.tags.includes('FREE')) {
+                            if (option.tags && option.tags.includes('FREE')) {
                                 translatedRaw = t('placeType.FREE');
                             } else {
                                 // find first known tag and translate via getPlaceTypeLabel
@@ -125,7 +123,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
                             // titles we want to force-break into two lines
                             const forceBreakKeys = new Set([
-                                'aberto agora',
                                 'vida noturna',
                                 'pontos turísticos',
                                 'pontos turisticos'

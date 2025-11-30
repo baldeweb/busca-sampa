@@ -73,28 +73,7 @@ export const PlaceListPage: React.FC = () => {
         if ((routeType || "").toLowerCase() === "gratuito" || mappedType === "FREE") {
             return allPlaces.filter(p => p.priceRange === "FREE");
         }
-        if ((routeType || "").toLowerCase() === "aberto-agora") {
-            const patterns = openingPatterns || [];
-            function getPeriodsForPlace(place: any) {
-                const periods: any[] = [];
-                const patternId = place.openingHours?.patternId;
-                if (patternId) {
-                    const pat = patterns.find((p: any) => p.id === patternId);
-                    if (pat?.periods) periods.push(...pat.periods);
-                }
-                // customOverrides may contain period-like entries
-                if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
-                    periods.push(...place.openingHours.customOverrides);
-                }
-                return periods;
-            }
-
-            return allPlaces.filter(place => {
-                const periods = getPeriodsForPlace(place);
-                if (!periods || periods.length === 0) return false;
-                return isOpenNow(periods);
-            });
-        }
+        // NOTE: removed 'aberto-agora' special route — handled via other flows.
         if ((routeType || "").toLowerCase() === "abrem-hoje") {
             // places that have opening times for today (even if closed now)
             return allPlaces.filter(place => getOpenTimesForToday(place).length > 0);
@@ -200,14 +179,11 @@ export const PlaceListPage: React.FC = () => {
 
 
     // Título dinâmico: prefira um rótulo passado via navigation state (vindo do HomePage),
-    // caso contrário caia para a tradução baseada no tipo.
+    // caso contrário use a tradução baseada no tipo.
     const location = useLocation();
     const navLabel = (location.state as any)?.label as string | undefined;
     const placeTypeForTitle = mappedType;
-    const title = navLabel
-        || ((routeType || "").toLowerCase() === "aberto-agora"
-            ? t('placeDetail.openNow')
-            : t(`placeType.${placeTypeForTitle}`));
+    const title = navLabel || t(`placeType.${placeTypeForTitle}`);
     useDocumentTitle(title);
 
     // Subtítulo dinâmico usando chaves de tradução e textos por tipo
@@ -223,6 +199,55 @@ export const PlaceListPage: React.FC = () => {
     }, [routeType, mappedType, filteredByType]);
 
     const isOpensToday = routeTypeLower === 'abrem-hoje' || mappedType === 'ABREM-HOJE';
+
+    // Helper: get raw periods for today (merged pattern + overrides)
+    function getPeriodsForToday(place: any): any[] {
+        const periods: any[] = [];
+        const patternId = place.openingHours?.patternId;
+        if (patternId) {
+            const pat = (openingPatterns || []).find((p: any) => p.id === patternId);
+            if (pat?.periods) periods.push(...pat.periods);
+        }
+        if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
+            periods.push(...place.openingHours.customOverrides);
+        }
+        const now = new Date();
+        const currentDay = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][now.getDay()];
+        return periods.filter((p: any) => p.open && (p.days?.includes(currentDay) || p.days?.includes('EVERYDAY')));
+    }
+
+    // Helper: compute display value for the opening column per user's request
+    function getOpeningDisplayForToday(place: any): string {
+        const periods = getPeriodsForToday(place);
+        if (!periods || periods.length === 0) return '-';
+
+        // if currently open
+        if (isOpenNow(periods)) return t('placeList.openNow', { defaultValue: 'Aberto agora' });
+
+        // compute next opening time (minutes)
+        const now = new Date();
+        const currentMinutes = now.getHours() * 60 + now.getMinutes();
+        function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+
+        let nextOpenMinutes: number | null = null;
+        let nextOpenStr: string | null = null;
+        for (const p of periods) {
+            if (!p.open) continue;
+            const om = parseTime(p.open);
+            if (om > currentMinutes && (nextOpenMinutes === null || om < nextOpenMinutes)) {
+                nextOpenMinutes = om;
+                nextOpenStr = p.open;
+            }
+        }
+
+        if (nextOpenMinutes !== null && nextOpenStr) {
+            const diff = nextOpenMinutes - currentMinutes;
+            if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
+            return nextOpenStr;
+        }
+
+        return '-';
+    }
 
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
@@ -346,7 +371,7 @@ export const PlaceListPage: React.FC = () => {
                             <div className="w-1/3 px-6 sm:px-14 py-3">{t('list.nameHeader')}</div>
                             <div className={isOpensToday ? 'w-1/4 py-3 ps-4 sm:ps-6' : 'w-1/3 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
                             {isOpensToday && (
-                                <div className="w-1/6 py-3 ps-4 sm:ps-6">{t('placeList.opensAtHeader', { defaultValue: 'Abre às...' })}</div>
+                                <div className="w-1/6 py-3 ps-4 sm:ps-6">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
                             )}
                         </div>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
@@ -361,7 +386,7 @@ export const PlaceListPage: React.FC = () => {
                                     <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{place.addresses?.[0]?.neighborhood || ""}</div>
                                     {isOpensToday && (
                                         <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
-                                            {getOpenTimesForToday(place).join(', ') || '-'}
+                                            {getOpeningDisplayForToday(place)}
                                         </div>
                                     )}
                                     <div className="flex-1 flex justify-end">

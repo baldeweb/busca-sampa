@@ -72,10 +72,6 @@ export function HomePage() {
     // normaliza título removendo zero-width spaces e comparando em lower-case
     const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
     const title = rawTitle.toLowerCase();
-    if (title === 'aberto agora' || title === 'aberto-agora') {
-      navigate('/list/aberto-agora', { state: { label: rawTitle } });
-      return;
-    }
     // 'Abrem hoje' (opens today) synthetic option
     if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
       navigate('/list/abrem-hoje', { state: { label: rawTitle } });

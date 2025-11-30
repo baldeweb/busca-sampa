@@ -165,7 +165,9 @@ const resources = {
       },
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
-        opensAtHeader: 'Abre às...',
+        opensAtHeader: 'Abertura',
+        openNow: 'Aberto agora',
+        opensSoon: 'Abre em instantes',
         subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
         article: {
           RESTAURANT: 'o',
