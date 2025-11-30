@@ -219,6 +219,7 @@ export const PlaceListPage: React.FC = () => {
                                                 label={t('common.all')}
                                                 icon={<img src={headerIcon} alt="all" className="w-8 h-8" />}
                                                 selected={false}
+                                                lightSelected={true}
                                                 onClick={() => setSelectedEnv(null)}
                                                 index={0}
                                             />
@@ -321,7 +322,7 @@ export const PlaceListPage: React.FC = () => {
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
                                     <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
-                                    <div className="flex-1 flex justify-end pr-4">
+                                    <div className="flex-1 flex justify-end">
                                         <ActionButton
                                             onClick={() => {
                                                 const typeToSlug: Record<string, string> = {

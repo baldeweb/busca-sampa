@@ -145,6 +145,7 @@ export const NeighborhoodListPage: React.FC = () => {
                     label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(t('common.all'))}
                     icon={<img src={flagSp} alt="all" className="w-8 h-8" />}
                     selected={false}
+                    lightSelected={true}
                     onClick={() => setSelectedType(null)}
                     index={0}
                   />
@@ -167,6 +168,7 @@ export const NeighborhoodListPage: React.FC = () => {
                       label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(getPlaceTypeLabel(pt))}
                       icon={<img src={iconSrc} alt={pt} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
                       selected={selectedType === pt}
+                      lightSelected={true}
                       onClick={() => setSelectedType(selectedType === pt ? null : pt)}
                       index={placeTypes.length > 1 ? idx + 1 : idx}
                     />
@@ -250,7 +252,7 @@ export const NeighborhoodListPage: React.FC = () => {
                 >
                   <div className="w-1/3 px-0 py-6">{place.name}</div>
                   <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
-                  <div className="flex-1 flex justify-end pr-4">
+                  <div className="flex-1 flex justify-end">
                     <ActionButton
                       onClick={() => {
                         const typeMap: Record<string,string> = {
