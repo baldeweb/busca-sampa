@@ -148,7 +148,7 @@ export const PlaceListPage: React.FC = () => {
                 break;
             case "name-desc":
                 arr.sort((a, b) => b.name.localeCompare(a.name));
-                break;
+                                            <SectionHeading title={title} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
             case "neighborhood-asc":
                 arr.sort((a, b) => {
                     const na = a.addresses?.[0]?.neighborhood || "";
@@ -241,6 +241,7 @@ export const PlaceListPage: React.FC = () => {
                                                     label={env.label}
                                                     icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
                                                     selected={selectedEnv === env.value}
+                                                    lightSelected={true}
                                                     onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
                                                     index={environments.length > 1 ? idx + 1 : idx}
                                                 />

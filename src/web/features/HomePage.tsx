@@ -289,7 +289,7 @@ export function HomePage() {
                           <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
                         )}
                         {!loadingNearby && noNearbyResults && (
-                  <div className="text-center text-md text-gray-300 flex flex-col items-center gap-5 py-6">
+                  <div className="text-center text-base text-gray-300 flex flex-col items-center gap-5 py-6">
                     <p>{t('home.noNearbyResultsRadius')}</p>
                     <ActionButton
                       type="button"

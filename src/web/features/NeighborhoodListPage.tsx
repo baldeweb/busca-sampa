@@ -125,7 +125,7 @@ export const NeighborhoodListPage: React.FC = () => {
       <BackHeader onBack={() => navigate(-1)} />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 py-6 sm:py-12 text-black">
-          <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
+            <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             {t('neighborhoodList.intro')}
           </p>
@@ -138,7 +138,7 @@ export const NeighborhoodListPage: React.FC = () => {
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
             <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
               <div className="relative">
-              <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">
+              <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start rounded-t-lg">
                 {placeTypes.length > 1 && (
                   <CategoryCard
                     key="all-types"
