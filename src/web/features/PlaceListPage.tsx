@@ -94,6 +94,10 @@ export const PlaceListPage: React.FC = () => {
                 return isOpenNow(periods);
             });
         }
+        if ((routeType || "").toLowerCase() === "abrem-hoje") {
+            // places that have opening times for today (even if closed now)
+            return allPlaces.filter(place => getOpenTimesForToday(place).length > 0);
+        }
         return allPlaces.filter(p => p.type === mappedType);
     }, [allPlaces, mappedType, routeType, restaurants, openingPatterns]);
 
@@ -106,6 +110,29 @@ export const PlaceListPage: React.FC = () => {
         });
         return Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
     }, [filteredByType]);
+
+    // Helper: get opening times for today for a place (returns array of open times strings like '08:00')
+    function getOpenTimesForToday(place: any): string[] {
+        const periods: any[] = [];
+        const patternId = place.openingHours?.patternId;
+        if (patternId) {
+            const pat = (openingPatterns || []).find((p: any) => p.id === patternId);
+            if (pat?.periods) periods.push(...pat.periods);
+        }
+        if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
+            periods.push(...place.openingHours.customOverrides);
+        }
+        const now = new Date();
+        const currentDay = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][now.getDay()];
+        const opens = periods
+            .filter((p: any) => p.open && (p.days?.includes(currentDay) || p.days?.includes('EVERYDAY')))
+            .map((p: any) => p.open)
+            .filter(Boolean);
+        // unique + sort
+        const uniq = Array.from(new Set(opens));
+        uniq.sort();
+        return uniq;
+    }
 
     // Mapeia o tipo atual para o ícone usado no cabeçalho e no cartão 'Todos'
     const headerIcon = (() => {
@@ -167,6 +194,7 @@ export const PlaceListPage: React.FC = () => {
         return arr;
     }, [filteredPlaces, order]);
 
+
     // Título dinâmico: prefira um rótulo passado via navigation state (vindo do HomePage),
     // caso contrário caia para a tradução baseada no tipo.
     const location = useLocation();
@@ -189,6 +217,8 @@ export const PlaceListPage: React.FC = () => {
         console.log("mappedType:", mappedType);
         console.log("filteredByType length:", filteredByType.length);
     }, [routeType, mappedType, filteredByType]);
+
+    const isOpensToday = routeTypeLower === 'abrem-hoje' || mappedType === 'ABREM-HOJE';
 
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
@@ -310,7 +340,10 @@ export const PlaceListPage: React.FC = () => {
                     <div className="rounded-t-lg overflow-hidden">
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
                             <div className="w-1/3 px-6 sm:px-14 py-3">{t('list.nameHeader')}</div>
-                            <div className="w-1/3 py-3 ps-4 sm:ps-6">{t('list.neighborhoodHeader')}</div>
+                            <div className={isOpensToday ? 'w-1/4 py-3 ps-4 sm:ps-6' : 'w-1/3 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
+                            {isOpensToday && (
+                                <div className="w-1/6 py-3 ps-4 sm:ps-6">{t('placeList.opensAtHeader', { defaultValue: 'Abre às...' })}</div>
+                            )}
                         </div>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
                         {sortedPlaces.map((place, idx) => {
@@ -321,7 +354,12 @@ export const PlaceListPage: React.FC = () => {
                                     className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
-                                    <div className="w-1/3 px-4 py-6">{place.addresses?.[0]?.neighborhood || ""}</div>
+                                    <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{place.addresses?.[0]?.neighborhood || ""}</div>
+                                    {isOpensToday && (
+                                        <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
+                                            {getOpenTimesForToday(place).join(', ') || '-'}
+                                        </div>
+                                    )}
                                     <div className="flex-1 flex justify-end">
                                         <ActionButton
                                             onClick={() => {

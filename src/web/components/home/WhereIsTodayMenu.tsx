@@ -12,6 +12,7 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icCalendar from '@/assets/imgs/icons/ic_door_opened.png';
 import { useTranslation } from 'react-i18next';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
 
@@ -79,6 +80,18 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                         onKeyDown={handleKeyDown}
                     >
                         <style>{`.flex.flex-nowrap::-webkit-scrollbar{display:none}`}</style>
+                        {/* Static option: 'Abrem hoje' (opens today) */}
+                        <CategoryCard
+                            key="opens-today"
+                            label={t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' })}
+                            icon={<img src={icCalendar} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" alt="" />}
+                            selected={selectedId === -999}
+                            onClick={() => {
+                                setSelectedId(-999);
+                                onOptionSelect?.({ id: -999, title: t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' }), tags: ['OPEN_TODAY'] } as any);
+                            }}
+                            index={0}
+                        />
                         {options.map((option, idx) => {
                             // normalize title (remove zero-width spaces)
                             const raw = (option.title || '').replace(/\u200B/g, '');
@@ -152,7 +165,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                         icon={resolveIcon(option.tags)}
                                         selected={option.id === selectedId}
                                         onClick={() => handleClick(option)}
-                                        index={idx}
+                                        index={idx + 1}
                                     />
                             );
                         })}

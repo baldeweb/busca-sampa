@@ -76,6 +76,11 @@ export function HomePage() {
       navigate('/list/aberto-agora', { state: { label: rawTitle } });
       return;
     }
+    // 'Abrem hoje' (opens today) synthetic option
+    if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
+      navigate('/list/abrem-hoje', { state: { label: rawTitle } });
+      return;
+    }
     // Para as demais opções usamos a primeira tag para navegar (ex: 'RESTAURANTS')
     const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
     navigate(`/list/${tag}`, { state: { label: rawTitle } });
