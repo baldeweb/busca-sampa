@@ -8,7 +8,7 @@
   "description": "Recomendações de lugares em São Paulo",
   "icons": [
     {
-      "src": "/vite.svg",
+      "src": "/assets/imgs/flags/flag_sp.png",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
