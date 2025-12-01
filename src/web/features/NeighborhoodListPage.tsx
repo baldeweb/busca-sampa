@@ -277,7 +277,16 @@ export const NeighborhoodListPage: React.FC = () => {
                       }}
                       size="md"
                     >
-                      {t('common.details')}
+                      {(() => {
+                        const details = t('common.details');
+                        const mobile = details.replace(' ', '\n');
+                        return (
+                          <>
+                            <span className="sm:hidden whitespace-pre-line">{mobile}</span>
+                            <span className="hidden sm:inline">{details}</span>
+                          </>
+                        );
+                      })()}
                     </ActionButton>
                   </div>
                 </div>

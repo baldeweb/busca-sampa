@@ -428,8 +428,18 @@ export const PlaceListPage: React.FC = () => {
                                                 navigate(`/place/${slug}/${place.id}`);
                                             }}
                                             size="md"
+                                            className="!px-1 sm:!px-4"
                                         >
-                                            {t('common.details')}
+                                            {(() => {
+                                                const details = t('common.details');
+                                                const mobile = details.replace(' ', '\n');
+                                                return (
+                                                    <>
+                                                        <span className="sm:hidden whitespace-pre-line">{mobile}</span>
+                                                        <span className="hidden sm:inline">{details}</span>
+                                                    </>
+                                                );
+                                            })()}
                                         </ActionButton>
                                     </div>
                                 </div>

@@ -163,6 +163,7 @@ const resources = {
         TOURIST_SPOT: 'Pontos\u200B Turísticos',
         FREE: 'Gratuitos'
       },
+      
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
         opensAtHeader: 'Abertura',
@@ -598,6 +599,17 @@ const resources = {
         TOURIST_SPOT: 'Sehenswürdigkeiten',
         FREE: 'Kostenlos'
       }
+      ,
+      about: {
+        title: 'Wer bin ich?',
+        paragraph: 'Platzhalter für die „Über“-Seite. Das vollständige Layout folgt später.'
+      },
+      aboutMe: {
+        authorTag: 'Ersteller von Role Paulista',
+        aboutHeading: 'Über mich',
+        socialHeading: 'Soziale Netzwerke',
+        bio: 'Mobile-Entwickler mit über 8 Jahren Erfahrung, Spezialist für Android & iOS. Begeistert von Technologie, Reisen, Restaurants und dem Erkunden von São Paulo.'
+      }
     }
   },
   ja: {
@@ -644,6 +656,17 @@ const resources = {
         NATURE: '自然',
         TOURIST_SPOT: '観光名所',
         FREE: '無料'
+      }
+      ,
+      about: {
+        title: '私は誰？',
+        paragraph: '概要ページのプレースホルダー。完全なレイアウトは後で追加します。'
+      },
+      aboutMe: {
+        authorTag: 'Role Paulista の作成者',
+        aboutHeading: '私について',
+        socialHeading: 'ソーシャルネットワーク',
+        bio: 'モバイル開発者（8年以上）、Android と iOS の専門家。テクノロジー、旅行、レストラン、サンパウロのあらゆる場所を探索することに情熱を持っています。'
       }
     }
   }
@@ -693,6 +716,16 @@ const resources = {
         TOURIST_SPOT: 'معالم سياحية',
         FREE: 'مجاني'
       },
+      about: {
+        title: 'من أنا؟',
+        paragraph: 'صفحة "حول". سيتم إضافة التصميم الكامل لاحقًا.'
+      },
+      aboutMe: {
+        authorTag: 'مبتكر Role Paulista',
+        aboutHeading: 'نبذة عني',
+        socialHeading: 'وسائل التواصل الاجتماعي',
+        bio: 'مطور تطبيقات جوال لأكثر من 8 سنوات، متخصص في Android و iOS. شغوف بالتقنية والسفر والمطاعم واستكشاف كل زاوية في ساو باولو.'
+      },
       nearbyMap: { title: 'خريطة القرب', noneInRadius: 'لا توجد نقاط ضمن النطاق الحالي.', pointsDisplayed: '{{count}} نقطة معروضة.', you: 'أنت' }
     }
   }
@@ -739,6 +772,16 @@ const resources = {
         TOURIST_SPOT: 'Luoghi turistici',
         FREE: 'Gratuito'
       },
+      about: {
+        title: 'Chi sono?',
+        paragraph: 'Pagina "Chi sono". Il layout completo sarà aggiunto più tardi.'
+      },
+      aboutMe: {
+        authorTag: 'Creatore di Role Paulista',
+        aboutHeading: 'Su di me',
+        socialHeading: 'Reti sociali',
+        bio: 'Sviluppatore mobile da oltre 8 anni, specialista Android e iOS. Appassionato di tecnologia, viaggi, ristoranti e dell’esplorazione di ogni angolo di San Paolo.'
+      },
       nearbyMap: { title: 'Mappa vicinanza', noneInRadius: 'Nessun punto nel raggio corrente.', pointsDisplayed: '{{count}} punto(i) mostrati.', you: 'Tu' }
     }
   },
@@ -784,6 +827,16 @@ const resources = {
         TOURIST_SPOT: 'Toeristische bezienswaardigheden',
         FREE: 'Gratis'
       },
+      about: {
+        title: 'Wie ben ik?',
+        paragraph: 'Pagina over mij. We voegen later de volledige lay-out toe.'
+      },
+      aboutMe: {
+        authorTag: 'Maker van Role Paulista',
+        aboutHeading: 'Over mij',
+        socialHeading: 'Sociale netwerken',
+        bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+      },
       nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
     }
   }
@@ -819,6 +872,16 @@ const resources = {
         NATURE: 'Doğa',
         TOURIST_SPOT: 'Turistik noktalar',
         FREE: 'Ücretsiz'
+      },
+      about: {
+        title: 'Ben kimim?',
+        paragraph: 'Hakkında sayfası yer tutucu. Tam düzen daha sonra eklenecek.'
+      },
+      aboutMe: {
+        authorTag: 'Role Paulista Oluşturucusu',
+        aboutHeading: 'Hakkımda',
+        socialHeading: 'Sosyal ağlar',
+        bio: '8 yılı aşkın süredir mobil geliştirici, Android ve iOS uzmanı. Teknolojiye, seyahate, restoranlara ve São Paulo’nun her köşesini keşfetmeye tutkuyla bağlıyım.'
       },
       nearbyMap: { title: 'Yakındaki Harita', noneInRadius: 'Mevcut yarıçap içinde nokta yok.', pointsDisplayed: '{{count}} nokta gösterildi.', you: 'Sen' }
     }
