@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Kofi & Co 🇧🇷",
+        "name": "Kofi & Co",
         "type": "COFFEE",
         "phones": [
             {
@@ -45,7 +45,7 @@
     },
     {
         "id": 2,
-        "name": "Griffinn Café e Afins 🇧🇷",
+        "name": "Griffinn Café e Afins",
         "type": "COFFEE",
         "phones": [
             {

@@ -19,7 +19,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": true,
         "notes": [
-            "🇷🇺 Culinária Russa",
+            "Culinária Russa",
             "Necessário agendamento",
             "Dança típica toda terça-feira",
             "Café da manhã Russo 1x ao mês (verificar no Instagram as datas)"
@@ -33,7 +33,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Aclimação",
                 "postalCode": "01533-000",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.573513,
+                "longitude": -46.641636
             }
         ],
         "linkMenu": "http://www.barskiydom.com.br/",
@@ -63,7 +65,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇧🇴 Culinária Boliviana"
+            "Culinária Boliviana"
         ],
         "priceRange": "LOW",
         "addresses": [
@@ -74,7 +76,9 @@
                 "city": "Barueri",
                 "neighborhood": "Centro",
                 "postalCode": "06453-035",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.4963814,
+                "longitude": -46.8524462
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/18207619627198895/",
@@ -98,13 +102,13 @@
             "patternId": "MON_TO_SAT_LUNCH_DINNER",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇰🇷 Culinária Sul-Coreana"
+            "Culinária Sul-Coreana"
         ],
         "priceRange": "MEDIUM",
         "addresses": [
@@ -115,7 +119,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
                 "postalCode": "01135-020",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.5266098,
+                "longitude": -46.6544387
             }
         ],
         "linkMenu": "https://komahdelivery.com.br/",
@@ -127,7 +133,7 @@
     },
     {
         "id": 4,
-        "name": "Méqui 1000",
+        "name": "McDonald's - Méqui 1000",
         "type": "RESTAURANT",
         "phones": [],
         "openingHours": {
@@ -152,14 +158,16 @@
                 "city": "São Paulo",
                 "neighborhood": "Bela Vista",
                 "postalCode": "01311-200",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.5603666,
+                "longitude": -46.6606012
             }
         ],
         "linkMenu": "https://www.mcdonalds.com.br/cardapio",
         "linkWebsite": "https://www.mcdonalds.com.br/",
         "linkInstagram": "",
         "tags": [
-            "FAST-FOOD",
+            "FASTFOOD",
             "AMERICAN"
         ]
     },
@@ -183,7 +191,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇰🇷 Culinária Sul-Coreana",
+            "Culinária Sul-Coreana",
             "Churrasco Coreano"
         ],
         "priceRange": "MEDIUM-UP",
@@ -195,7 +203,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Liberdade",
                 "postalCode": "01510-001",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.5590511,
+                "longitude": -46.636289
             },
             {
                 "id": 2,
@@ -204,7 +214,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Bom Retiro",
                 "postalCode": "01124-010",
-                "isMainUnity": false
+                "isMainUnity": false,
+                "latitude": -23.5275839,
+                "longitude": -46.6383209
             },
             {
                 "id": 3,
@@ -213,7 +225,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Tatuapé",
                 "postalCode": "03336-000",
-                "isMainUnity": false
+                "isMainUnity": false,
+                "latitude": -23.5531632,
+                "longitude": -46.566681
             }
         ],
         "linkMenu": "https://qrfy.io/p/MvlnlIJsDu",
@@ -243,7 +257,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇧🇷 Culinária Brasileira",
+            "Culinária Brasileira",
             "Pratos típicos da região Norte do Brasil, em específico do estado do Pará"
         ],
         "priceRange": "LOW-UP",
@@ -255,7 +269,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Casa Verde",
                 "postalCode": "02512-060",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.5102988,
+                "longitude": -46.6673437
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/18048424670168633/",
@@ -285,7 +301,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": true,
         "notes": [
-            "🇮🇹 Culinária Italo-Brasileira",
+            "Culinária Italo-Brasileira",
             "Jazz ao vivo toda Terça-Feira",
             "Mix de culinária Italiana com Brasileira"
         ],
@@ -298,7 +314,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Consolação",
                 "postalCode": "01221-030",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.5461076,
+                "longitude": -46.6512114
             }
         ],
         "linkMenu": "http://www.fornosp.com.br/menu_qr.pdf",
@@ -328,7 +346,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇪🇸 Culinária Espanhola",
+            "Culinária Espanhola",
             "Ambiente instagramável"
         ],
         "priceRange": "MEDIUM",
@@ -340,7 +358,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Santo Amaro",
                 "postalCode": "04717-002",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.6329906,
+                "longitude": -46.7050549
             }
         ],
         "linkMenu": "https://shop.fastget.com.br/#/store/carmen-la-loca/4007c816-46a3-11ee-9cc5-029f9b6db48b",
@@ -370,7 +390,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇹🇷 Culinária Turca",
+            "Culinária Turca",
             "Relação Custo x Benefício excelente"
         ],
         "priceRange": "LOW",
@@ -382,7 +402,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Granja Julieta",
                 "postalCode": "04722-000",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.6434314,
+                "longitude": -46.7039282
             }
         ],
         "linkMenu": "https://www.casaturca.com.br/menus",
@@ -424,7 +446,9 @@
                 "city": "São Paulo",
                 "neighborhood": "Chácara Santo Antônio",
                 "postalCode": "04719-050",
-                "isMainUnity": true
+                "isMainUnity": true,
+                "latitude": -23.6321744,
+                "longitude": -46.7126204
             }
         ],
         "linkMenu": "",
@@ -1066,7 +1090,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇧🇷 Culinária Brasileira",
+            "Culinária Brasileira",
             "Culinária Baiana"
         ],
         "priceRange": "MEDIUM",
@@ -1448,7 +1472,7 @@
     },
     {
         "id": 32,
-        "name": "The Circus Bar e Kitchen 🇧🇷",
+        "name": "The Circus Bar e Kitchen",
         "type": "RESTAURANT",
         "phones": [
             {
@@ -1568,7 +1592,7 @@
     },
     {
         "id": 35,
-        "name": "Taverna Medieval 🇧🇷",
+        "name": "Taverna Medieval",
         "type": "RESTAURANT",
         "phones": [
             {
@@ -1608,7 +1632,7 @@
     },
     {
         "id": 36,
-        "name": "Camarões SP 🇧🇷",
+        "name": "Camarões SP",
         "type": "RESTAURANT",
         "phones": [
             {
@@ -1648,7 +1672,7 @@
     },
     {
         "id": 37,
-        "name": "Casa do Saulo 🇧🇷",
+        "name": "Casa do Saulo",
         "type": "RESTAURANT",
         "phones": [
             {
