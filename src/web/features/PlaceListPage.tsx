@@ -250,11 +250,27 @@ export const PlaceListPage: React.FC = () => {
         const addrs = place?.addresses;
         if (!addrs || !Array.isArray(addrs) || addrs.length === 0) return undefined;
         const main = addrs.find((a: any) => a.isMainUnity);
-        if (main && main.neighborhood) return main.neighborhood;
-        // fallback to first non-empty neighborhood
-        for (const a of addrs) {
-            if (a && a.neighborhood) return a.neighborhood;
+        if (main) {
+            if (main.neighborhood) return main.neighborhood;
+            // try alternate keys (defensive for different data sources)
+            for (const key of Object.keys(main)) {
+                if (/neighbou?rhood/i.test(key) && main[key]) return main[key];
+            }
+            if (main.city) return main.city;
         }
+        // fallback to first non-empty neighborhood or city
+        for (const a of addrs) {
+            if (!a) continue;
+            if (a.neighborhood) return a.neighborhood;
+            for (const key of Object.keys(a)) {
+                if (/neighbou?rhood/i.test(key) && a[key]) return a[key];
+            }
+            if (a.city) return a.city;
+        }
+        // nothing found — emit a warning to aid debugging in production
+        try {
+            console.warn(`PlaceListPage: no neighborhood for place id=${place?.id}`, place?.addresses?.slice?.(0,3) || place?.addresses);
+        } catch (_) {}
         return undefined;
     }
 
