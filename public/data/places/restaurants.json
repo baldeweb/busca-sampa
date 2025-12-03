@@ -1476,12 +1476,12 @@
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "1132134826",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "THECIRCUSBAR_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -1489,39 +1489,42 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Ambiente temático de circo",
+            "Opções de hambúrguer e milkshake"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Itapeti",
+                "number": "319",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Tatuapé",
+                "postalCode": "03324-002",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5512106,
+                "longitude": -46.5708013
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://menu.getinapp.com.br/store/D1ZdNgkm/1/d1VM2nPv/",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkInstagram": "https://www.instagram.com/thecircusbarekitchen/",
+        "tags": ["HAMBURGUER", "MILKSHAKE", "THEMED"],
+        "foodStyle": ["HAMBURGUER", "MILKSHAKE"]
     },
     {
         "id": 33,
-        "name": "Bao N Sando 🇹🇼",
+        "name": "Bao N Sando",
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "11998217777",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BAONSANDO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -1529,39 +1532,43 @@
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "A especialidade da casa são os baos (pão chinês no vapor) recheados com diversas opções inspiradas na culinária taiwanesa.",
+            "Tem a cerveja do Jaspion (consultar disponibilidade)",
+            "O local funciona como um Take Away/Delivery, possuindo apenas 1 mesa para consumo no local, então recomendo que compre e coma ali em frente mesmo da portinha."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Wisard",
+                "number": "397",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "05434-080",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5561516,
+                "longitude": -46.6932038
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://www.ifood.com.br/delivery/sao-paulo-sp/asiatico-bao-n-sando-vila-madalena-vila-madalena/f9ebf8ca-3d62-492a-b4ea-4816d49ab360?utm_medium=share&utm_source=ig&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndKJwZVNKVxJU56LmynY4CH3XBi54G_mvHDWO9OS-kpCiXAIfrfRrqiM3Apo_aem_n3vaId7n2zguqmAOuv3Aag",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkInstagram": "https://www.instagram.com/bao_n_sando/",
+        "tags": ["TAIWANESE"],
+        "foodStyle": ["TAIWANESE"]
     },
     {
         "id": 34,
-        "name": "Mapu Baos e comidinhas 🇹🇼",
+        "name": "Mapu Baos e comidinhas",
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "1133848535",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MAPUBAOS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1569,26 +1576,30 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Culinária Taiwanesa",
+            "Especialidade em baos (pão chinês no vapor) recheados com diversas opções inspiradas na culinária taiwanesa.",
+            "Opções veganas disponíveis"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Áurea",
+                "number": "267",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04015-070",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5866566,
+                "longitude": -46.6481073
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkMenu": "https://mapurestaurante.com.br/cardapio",
+        "linkWebsite": "https://mapurestaurante.com.br/",
+        "linkInstagram": "https://www.instagram.com/mapubaos/",
+        "tags": ["TAIWANESE"],
+        "foodStyle": ["TAIWANESE"]
     },
     {
         "id": 35,
@@ -1596,39 +1607,41 @@
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "1141142816",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "TAVERNAMEDIEVAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
+        "shouldSchedule": true,
+        "notes": [
+            "Temático Medieval"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Gandavo",
+                "number": "456",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04023-001",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5917118,
+                "longitude": -46.6462691
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkMenu": "https://www.tavernamedieval.com.br/cardapio/index.html",
+        "linkWebsite": "https://www.tavernamedieval.com.br",
+        "linkInstagram": "https://www.instagram.com/taverna_medieval/",
+        "tags": ["HAMBURGUER", "THEMED"],
+        "foodStyle": ["HAMBURGUER"]
     },
     {
         "id": 36,
@@ -1992,7 +2005,7 @@
     },
     {
         "id": 45,
-        "name": "Arais do Carlinhos 🇦🇲",
+        "name": "Arais do Carlinhos",
         "type": "RESTAURANT",
         "phones": [
             {

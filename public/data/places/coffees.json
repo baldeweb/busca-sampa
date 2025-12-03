@@ -79,9 +79,9 @@
                 "longitude": -46.7268279
             }
         ],
-        "linkMenu": "a",
+        "linkMenu": "",
         "linkWebsite": "https://griffinncafeeafins.com.br/",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/griffinncafeeafins/",
         "tags": [
             "THEMED"
         ]
@@ -99,7 +99,7 @@
         "openingHours": {
             "patternId": "CAFE_FLORESTA_DAYTIME",
             "customOverrides": [
-                { "days": ["SUNDAY"], "open": "07:00", "close": "20:30" }
+                { "days": ["SATURDAY", "SUNDAY"], "open": "07:00", "close": "20:30" }
             ]
         },
         "isAlreadyVisited": false,
@@ -108,7 +108,8 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Localizado no edifício Copan"
+            "Localizado no edifício Copan",
+            "Cafeteria mais antiga de SP"
         ],
         "priceRange": "LOW",
         "addresses": [
@@ -126,7 +127,9 @@
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "linkInstagram": "https://www.instagram.com/cafeflorestacopan/",
+        "tags": [
+            "HISTORIC_PLACE"
+        ]
     }
 ]

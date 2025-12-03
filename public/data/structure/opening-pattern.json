@@ -540,5 +540,71 @@
     "periods": [
       { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:00", "close": "04:00" }
     ]
+  },
+  {
+    "id": "JARDIMBOTANICO_ZOO_DAYTIME",
+    "description": "Horários do Jardim Botanico",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "09:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "PICODOJARAGUA_DAYTIME",
+    "description": "Horários do Pico/Parque do Jaraguá",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "07:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "PARQUEIBIRAPUERA_DAYTIME",
+    "description": "Horários do Parque do Ibirapuera",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "05:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "PARQUEVILLALOBOS_DAYTIME",
+    "description": "Horários do Parque Villa Lobos",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "08:00", "close": "19:00" }
+    ]
+  },
+  {
+    "id": "THECIRCUSBAR_DAYTIME",
+    "description": "Horários do The Circus Bar",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:30", "close": "22:30" },
+      { "days": ["FRIDAY"], "open": "17:30", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "BAONSANDO_DAYTIME",
+    "description": "Horários do Bao N Sando",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "18:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "MAPUBAOS_DAYTIME",
+    "description": "Horários do Bao N Sando",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "11:30", "close": "14:30" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:30", "close": "22:30" },
+      { "days": ["FRIDAY"], "open": "11:30", "close": "14:30" },
+      { "days": ["FRIDAY"], "open": "18:30", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "14:30" },
+      { "days": ["SATURDAY"], "open": "18:30", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "TAVERNAMEDIEVAL_DAYTIME",
+    "description": "Horários do Taverna Medieval",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:20", "close": "23:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "14:00", "close": "23:00" }
+    ]
   }
 ]

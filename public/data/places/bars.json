@@ -106,7 +106,9 @@
         "linkMenu": "https://www.dguests.com.br/cardapio/Bario_Bar",
         "linkWebsite": "https://www.bario.com.br/",
         "linkInstagram": "https://www.instagram.com/bario_bar",
-        "tags": []
+        "tags": [
+            "THEMED"
+        ]
     },
     {
         "id": 3,
@@ -238,7 +240,9 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/waska.barepetiscos/",
-        "tags": []
+        "tags": [
+            "CULTURAL"
+        ]
     },
     {
         "id": 6,

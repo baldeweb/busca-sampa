@@ -36,6 +36,7 @@ export function getEnvironmentLabel(tag: string): string {
     PERUVIAN: "Peruano",
     ARGENTINIAN: "Argentino",
     AFRICAN: "Africano",
+    TAIWANESE: "Taiwanês",
     HAMBURGUER: "Hamburgueria",
     MOLECULAR_GASTRONOMY: "Gastronomia Molecular",
     EXPERIENCE: "Jantar com Experiência",
@@ -44,7 +45,11 @@ export function getEnvironmentLabel(tag: string): string {
     ARGENTINE: "Argentino",
     VIETNAMESE: "Vietnamita",
     BOLIVIAN: "Boliviano",
-    RUSSIAN: "Russo"
+    RUSSIAN: "Russo",
+    HISTORIC_PLACE: "Local Histórico",
+    SAMBA: "Samba",
+    FORRO: "Forró",
+    PAGODE: "Pagode"
   };
   return map[tag] || tag;
 }

@@ -259,9 +259,9 @@
             {
                 "id": 1,
                 "street": "Mourato Coelho",
-                "number": "Vila Madalena",
+                "number": "1156",
                 "city": "São Paulo",
-                "neighborhood": "1156",
+                "neighborhood": "Vila Madalena",
                 "postalCode": "05417-002",
                 "isMainUnity": true,
                 "latitude": -23.5578849,
@@ -361,26 +361,16 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Necessário checar os eventos no Instagram, pois sempre há variações"
+            "Necessário checar os eventos no Instagram, pois sempre há variações de datas e locais de ocorrência"
         ],
         "priceRange": "LOW",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
+        "addresses": [],
         "linkMenu": "",
         "linkWebsite": "https://www.sambadarosa.com.br/link-tree?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnukxE5-yheGafbbbfdviEXbTThpUYfneptVZgXgk8H_VNcd1le-_MHb08ziY_aem_DW968ksmC3MeTO28bNQmBQ",
         "linkInstagram": "https://www.instagram.com/sambadarosazn/",
-        "tags": []
+        "tags": [
+            "SAMBA"
+        ]
     },
     {
         "id": 11,
@@ -422,7 +412,9 @@
         "linkMenu": "",
         "linkWebsite": "http://www.cantodaema.com.br/",
         "linkInstagram": "https://www.instagram.com/cantodaema/",
-        "tags": []
+        "tags": [
+            "FORRO"
+        ]
     },
     {
         "id": 12,
@@ -445,7 +437,9 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Ás Quintas-feiras acontece o encontro multicultural com o pessoal do Multilingo"
+            "Ás Quintas-feiras acontece o encontro multicultural com o pessoal do Multilingo",
+            "Ambiente com Karaokê",
+            "Ambiente com pagode no rooftop"
         ],
         "priceRange": "LOW-UP",
         "addresses": [
@@ -465,7 +459,8 @@
         "linkWebsite": "https://barbaixopinheiros.com.br/link-na-bio/",
         "linkInstagram": "https://www.instagram.com/baixopinheirosbar/",
         "tags": [
-            "KARAOKE"
+            "KARAOKE",
+            "PAGODE"
         ]
     },
     {

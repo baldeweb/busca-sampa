@@ -194,8 +194,10 @@
         ],
         "linkMenu": "",
         "linkWebsite": "http://www.kitepointsp.com.br/",
-        "linkInstagram": "",
-        "tags": []
+        "linkInstagram": "https://www.instagram.com/kite.point_guarapiranga/",
+        "tags": [
+            "TOUR"
+        ]
     },
     {
         "id": 6,
@@ -203,12 +205,12 @@
         "type": "NATURE",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1149346804",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "JARDIMBOTANICO_ZOO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -217,22 +219,22 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Miguel Estefno",
+                "number": "3031",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Jabaquara",
+                "postalCode": "04301-905",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.6548571,
+                "longitude": -46.6480377
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://jardimbotanico.com.br/",
         "linkInstagram": "",
         "tags": []
     },
@@ -242,51 +244,56 @@
         "type": "NATURE",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1149346804",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
-            "customOverrides": []
+            "patternId": "JARDIMBOTANICO_ZOO_DAYTIME",
+            "customOverrides": [
+                { "days": ["SATURDAY", "SUNDAY"], "open": "09:00", "close": "18:00" }
+            ]
         },
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Ingressos podem ser comprados no local ou online",
+            "Possui uma grande variedade de animais"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Miguel Estefno",
+                "number": "4241",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Jabaquara",
+                "postalCode": "04301-905",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.6548571,
+                "longitude": -46.6480377
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "linkMenu": "https://ingressos.zoologico.com.br/?utm_source=google&utm_content=cid|21288890589|gid|165438531594|kwid|kwd-462107190130&gad_source=1&gclid=CjwKCAiAk8G9BhA0EiwAOQxmfpB3tJupD4Sm97b0OWRJyFnyAY6SJXmltDUFKe4Z-bvmF3hVe3EzGxoCHB4QAvD_BwE",
+        "linkWebsite": "http://www.zoologico.com.br/",
         "linkInstagram": "",
         "tags": []
     },
     {
         "id": 8,
-        "name": "Pico do Jaraguá",
+        "name": "Pico/Parque do Jaraguá",
         "type": "NATURE",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1139454532",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PICODOJARAGUA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -294,23 +301,26 @@
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Há trilhas para o pico do Jaraguá e mirantes",
+            "Há uma reserva indígena na área do parque"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Turística do Jaraguá",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Jaraguá",
+                "postalCode": "02675-031",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.4583126,
+                "longitude": -46.7755777
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.picodojaragua.com.br/",
         "linkInstagram": "",
         "tags": []
     },
@@ -320,12 +330,12 @@
         "type": "NATURE",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1138893000",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PARQUEIBIRAPUERA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -333,23 +343,32 @@
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Planetário do Ibirapuera",
+            "Pavilhão Japonês",
+            "Museu Afro Brasil",
+            "Monumento as Bandeiras",
+            "Museu de Arte Moderna (MAM)",
+            "Auditório Ibirapuera",
+            "Obelisco de Ibirapuera",
+            "Fonte Milão"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pedro Álvares Cabral,",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5859546,
+                "longitude": -46.6610095
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.parquedoibirapuera.org/",
         "linkInstagram": "",
         "tags": []
     },
@@ -359,12 +378,12 @@
         "type": "NATURE",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "11983481921",
+                "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PARQUEVILLALOBOS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -372,19 +391,22 @@
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Anfiteatro Paulo Sperati",
+            "Roda Gigante (Roda Rico)"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Prof. Fonseca Rodrigues",
+                "number": "2001",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05317-020",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5463039,
+                "longitude": -46.7279507
             }
         ],
         "linkMenu": "",
