@@ -15,7 +15,17 @@ export function useNeighborhoodList() {
         StructureRepository.fetchNeighborhoodList()
             .then((res) => {
                 if (!isMounted) return;
-                setData(res);
+                try {
+                    const sorted = (res || []).slice().sort((a, b) => {
+                        const na = (a.neighborhoodName || '').trim();
+                        const nb = (b.neighborhoodName || '').trim();
+                        return na.localeCompare(nb, 'pt-BR', { sensitivity: 'base' });
+                    });
+                    setData(sorted);
+                } catch (e) {
+                    // fallback to original order on any error
+                    setData(res);
+                }
             })
             .catch((err) => {
                 if (!isMounted) return;
