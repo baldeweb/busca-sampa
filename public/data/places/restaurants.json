@@ -1645,11 +1645,11 @@
     },
     {
         "id": 36,
-        "name": "Camarões SP",
+        "name": "Camarões Restaurante",
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "1135088080",
                 "isWhatsApp": true
             }
         ],
@@ -1662,26 +1662,29 @@
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "🇧🇷 Culinária Brasileira",
+            "Especialidade em frutos do mar, com vastas opções de pratos com camarão."
+        ],
+        "priceRange": "MEDIUM-UP",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pres. Juscelino Kubitschek",
+                "number": "627",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Nova Conceição",
+                "postalCode": "04543-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5887666,
+                "longitude": -46.6781708
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkMenu": "https://irp.cdn-website.com/60356b88/files/uploaded/Sa-o_Paulo_PDF.pdf",
+        "linkWebsite": "http://www.camaroes.com.br/",
+        "linkInstagram": "https://www.instagram.com/camaroes.sp/",
+        "tags": ["SEAFOOD", "BRAZILIAN"],
+        "foodStyle": ["SEAFOOD", "BRAZILIAN"]
     },
     {
         "id": 37,
@@ -1689,39 +1692,46 @@
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "11916870039",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
-            "customOverrides": []
+            "patternId": "ALLDAY_PATTERN_2_DAYTIME",
+            "customOverrides": [
+                { "days": ["SATURDAY"], "open": "12:00", "close": "16:00" },
+                { "days": ["SATURDAY"], "open": "19:00", "close": "23:00" },
+                { "days": ["SUNDAY"], "open": "12:00", "close": "17:00" }
+            ]
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Culinária Brasileira focada na região Norte do país",
+            "Ambiente aconchegante e agradável"
+        ],
+        "priceRange": "HIGH",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "R. Gomes de Carvalho",
+                "number": "1666",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Olímpia",
+                "postalCode": "04547-006",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5952271,
+                "longitude": -46.6908807
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://menu.getinapp.com.br/store/Z6RqVo1L/1",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkInstagram": "https://www.instagram.com/casadosaulo/",
+        "tags": ["BRAZILIAN"],
+        "foodStyle": ["BRAZILIAN"]
     },
     {
         "id": 38,
@@ -1729,43 +1739,47 @@
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "1122731760",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
-            "customOverrides": []
+            "patternId": "ALLDAY_PATTERN_2_DAYTIME",
+            "customOverrides": [
+                { "days": ["SATURDAY", "SUNDAY"], "open": "12:00", "close": "23:00" }
+            ]
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Rodizio de sushi e comida japonesa"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Bom Pastor",
+                "number": "2077",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Ipiranga",
+                "postalCode": "04203-052",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5949181,
+                "longitude": -46.6088854
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
+        "linkWebsite": "https://linklist.bio/sushishii?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnSclxq8e0MweeBxmzyiyDA-jZfoejHldE1m_fJrgeHm5Ql2PnLpGBIiD-N7k_aem_48eeBE_pP7NJlmceHaGonQ",
+        "linkInstagram": "https://www.instagram.com/ishii_sushi/",
+        "tags": ["JAPANESE", "ALLYOUCAN_EAT"],
+        "foodStyle": ["JAPANESE", "ALLYOUCAN_EAT"]
     },
     {
         "id": 39,
-        "name": "Macondo Raízes Colombianas 🇨🇴",
+        "name": "Macondo Raízes Colombianas",
         "type": "RESTAURANT",
         "phones": [
             {

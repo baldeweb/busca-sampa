@@ -118,6 +118,14 @@
     ]
   },
   {
+    "id": "ALLDAY_PATTERN_2_DAYTIME",
+    "description": "Horários dos restaurantes Casa do Saulo, Sushi Ishii",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["EVERYDAY"], "open": "19:00", "close": "23:00" }
+    ]
+  },
+  {
     "id": "EAT_ASIA_HELLOKITTY_DAYTIME",
     "description": "Horários do restaurante Eat Asia Thomaz Gonzaga.",
     "periods": [
@@ -605,6 +613,14 @@
     "periods": [
       { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:20", "close": "23:00" },
       { "days": ["SATURDAY", "SUNDAY"], "open": "14:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "CASADOSAULO_DAYTIME",
+    "description": "Horários do Casa do Saulo",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "23:00" }
     ]
   }
 ]

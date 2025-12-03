@@ -49,7 +49,8 @@ export function getEnvironmentLabel(tag: string): string {
     HISTORIC_PLACE: "Local Histórico",
     SAMBA: "Samba",
     FORRO: "Forró",
-    PAGODE: "Pagode"
+    PAGODE: "Pagode",
+    ALLYOUCAN_EAT: "Rodízio",
   };
   return map[tag] || tag;
 }
