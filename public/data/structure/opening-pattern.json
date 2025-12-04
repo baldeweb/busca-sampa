@@ -622,5 +622,85 @@
       { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
       { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "23:00" }
     ]
+  },
+  {
+    "id": "CAMAROES_DAYTIME",
+    "description": "Horários do Camarões Restaurante",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "22:30" },
+      { "days": ["SATURDAY"], "open": "11:30", "close": "16:00" },
+      { "days": ["SATURDAY"], "open": "18:30", "close": "23:30" },
+      { "days": ["SUNDAY"], "open": "11:30", "close": "16:00" },
+      { "days": ["SUNDAY"], "open": "19:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "MACONDO_DAYTIME",
+    "description": "Horários do Macondo Raizes Colombianas",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "17:00", "close": "22:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "22:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "BARGUANABARA_DAYTIME",
+    "description": "Horários do Bar Guanabara",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "16:00" }
+    ]
+  },
+  {
+    "id": "RESTAURANTEILLIMANI_DAYTIME",
+    "description": "Horários do Restaurante Illimani",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "10:00", "close": "20:00" },
+      { "days": ["SATURDAY"], "open": "09:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "MIIROOFTOP_DAYTIME",
+    "description": "Horários do Mii Rooftop Lounge",
+    "periods": [
+      { "days": ["TUESDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["TUESDAY"], "open": "18:00", "close": "23:00" },
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "23:30" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "URUMARYPARRILLA_DAYTIME",
+    "description": "Horários do Uru Mar y Parrilla",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "ARAISDOCARLINHOS_DAYTIME",
+    "description": "Horários do Arais do Carlinhos",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY"], "open": "12:00", "close": "15:30" },
+      { "days": ["MONDAY", "TUESDAY"], "open": "18:00", "close": "22:30" },
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "15:30" },
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "23:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "18:00", "close": "23:30" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "17:00" },
+      { "days": ["SUNDAY"], "open": "18:00", "close": "21:30" }
+    ]
+  },
+  {
+    "id": "WABAR_DAYTIME",
+    "description": "Horários do Wa Bar",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:30", "close": "01:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "17:30", "close": "03:00" }
+    ]
   }
 ]

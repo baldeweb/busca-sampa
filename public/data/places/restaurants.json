@@ -1654,7 +1654,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CAMAROES_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1783,292 +1783,12 @@
         "type": "RESTAURANT",
         "phones": [
             {
-                "number": "",
+                "number": "11986164184",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": true,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 40,
-        "name": "Bar Guanabara",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": false,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 41,
-        "name": "Restaurante Illimani 🇻🇪",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 42,
-        "name": "Mii Rooftop",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 43,
-        "name": "URU Mar y Parrilla",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 44,
-        "name": "Bar e Lanches Estadão",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 45,
-        "name": "Arais do Carlinhos",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "foodStyle": [""]
-    },
-    {
-        "id": 46,
-        "name": "Wa Bar",
-        "type": "RESTAURANT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
+            "patternId": "MACONDO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -2077,29 +1797,324 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇰🇷 Culinária Sul-Coreana",
+            "Culinária Colombiana"
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cardeal Arcoverde",
+                "number": "1361",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05407-002",
+                "isMainUnity": true,
+                "latitude": -23.5597278,
+                "longitude": -46.6875312
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/macondo_raizes_colombianas/",
+        "tags": ["COLOMBIAN"],
+        "foodStyle": ["COLOMBIAN"]
+    },
+    {
+        "id": 40,
+        "name": "Bar Guanabara",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "1132287400",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "BARGUANABARA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "O bar mais antigo de São Paulo",
+            "Local com história e traços tradicionais"
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "São João",
+                "number": "128",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01035-000",
+                "isMainUnity": true,
+                "latitude": -23.5446757,
+                "longitude": -46.6383647
+            }
+        ],
+        "linkMenu": "https://www.menuart.com.br/pdfs/guanabara.pdf?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnF33cJE6rEJwj-3rtW0VfXhrSs-Hr9f57kApqZ8oRsd5XOte7GqUXHGjvRTQ_aem_Ou4oeoG75erl4CmNoqSV5Q",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/barguanabara1910/",
+        "tags": ["HISTORIC_PLACE"],
+        "foodStyle": ["HISTORIC_PLACE"]
+    },
+    {
+        "id": 41,
+        "name": "Restaurante Illimani",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "11917068727",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "RESTAURANTEILLIMANI_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Boliviana"
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Coimbra",
+                "number": "141",
+                "city": "São Paulo",
+                "neighborhood": "Brás",
+                "postalCode": "03052-030",
+                "isMainUnity": true,
+                "latitude": -23.5412547,
+                "longitude": -46.6121469
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/restaurante.illimani/",
+        "tags": ["BOLIVIAN"],
+        "foodStyle": ["BOLIVIAN"]
+    },
+    {
+        "id": 42,
+        "name": "Mii Rooftop",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "1126740843",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "MIIROOFTOP_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Grega"
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cândido Lacerda",
+                "number": "33",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Anália Franco",
+                "postalCode": "03336-010",
+                "isMainUnity": true,
+                "latitude": -23.5534955,
+                "longitude": -46.566306
+            }
+        ],
+        "linkMenu": "https://livemenu.app/menu/6241de323b243900116e5adb?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZGIOX3CZNy9nkCPbdwkJkbGWIv9hJNIwZ-MlWYJjYkyInPPpfL7KVrN8Ztk_aem_VWfNKbx8rZhS382NeOIEEg&cross_session=done",
+        "linkWebsite": "https://vilaanalia.com.br/",
+        "linkInstagram": "https://www.instagram.com/miirooftop/",
+        "tags": ["GREEK"],
+        "foodStyle": ["GREEK"]
+    },
+    {
+        "id": 43,
+        "name": "URU Mar y Parrilla",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "1123089499",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "URUMARYPARRILLA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Uruguaia",
+            "Especialidade em frutos do mar e parrillada uruguaia"
+        ],
+        "priceRange": "MEDIUM-UP",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Emília Marengo",
+                "number": "109",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Anália Franco",
+                "postalCode": "03324-060",
+                "isMainUnity": true,
+                "latitude": -23.5502813,
+                "longitude": -46.5776657
+            }
+        ],
+        "linkMenu": "https://livemenu.app/menu/61fd682e1e9cd60012ad6b6b?cross_session=done",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/urumaryparrilla/",
+        "tags": ["URUGUAYAN", "SEAFOOD"],
+        "foodStyle": ["URUGUAYAN", "SEAFOOD"]
+    },
+    {
+        "id": 44,
+        "name": "Bar e Lanches Estadão",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "1132577121",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Tradicional bar de São Paulo conhecido pelos lanches e petiscos",
+            "Fica aberto 24h"
+        ],
+        "priceRange": "LOW",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Viaduto Nove de Julho",
+                "number": "193",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01050-060",
+                "isMainUnity": true,
+                "latitude": -23.5486427,
+                "longitude": -46.6452315
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/barelanchesestadao/",
+        "tags": ["OPEN_24_HOURS"],
+        "foodStyle": ["OPEN_24_HOURS"]
+    },
+    {
+        "id": 45,
+        "name": "Arais do Carlinhos",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "1126740843",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "ARAISDOCARLINHOS_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Armênia"
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cândido Lacerda",
+                "number": "33",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Anália Franco",
+                "postalCode": "03336-010",
+                "isMainUnity": true,
+                "latitude": -23.5534955,
+                "longitude": -46.566306
+            }
+        ],
+        "linkMenu": "https://livemenu.app/menu/6241fb73923ad30011604bc6?cross_session=done",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/araisdocarlinhostatuape/",
+        "tags": ["ARMENIAN"],
+        "foodStyle": ["ARMENIAN"]
+    },
+    {
+        "id": 46,
+        "name": "Wa Bar",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "11996114331",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "WABAR_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Sul-Coreana",
             "Tem karaoke (necessário verificar a disponibilidade das salas)"
         ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Prates",
+                "number": "613",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "01121-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.528626,
+                "longitude": -46.6383055
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://www.wabar.com.br/blank-1",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [
-            "KOREAN"
-        ],
-        "foodStyle": [""]
+        "linkInstagram": "https://www.instagram.com/wabar_brasil/",
+        "tags": ["KOREAN", "KARAOKE"],
+        "foodStyle": ["KOREAN", "KARAOKE"]
     }
 ]
