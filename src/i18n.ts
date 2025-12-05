@@ -43,7 +43,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Perto de mim',
-        nearMeSubtitle: '(com menos de {{km}}km de distância)',
+        nearMeSubtitle: '(mostrando lugares num raio de {{km}}km próximo a você)',
         allowLocation: 'Permitir localização',
         loadingCategories: 'Carregando categorias...',
         increaseRadius: 'Aumentar raio',
@@ -412,7 +412,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Near Me',
-        nearMeSubtitle: '(com menos de {{km}}km de distância)',
+        nearMeSubtitle: '(showing places within a {{km}}km radius near you)',
         allowLocation: 'Allow Location',
         loadingCategories: 'Loading categories...',
         increaseRadius: 'Increase radius',
@@ -562,7 +562,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'In meiner Nähe',
-        nearMeSubtitle: '(innerhalb von {{km}}km Entfernung)',
+        nearMeSubtitle: '(zeigt Orte in einem Umkreis von {{km}} km in Ihrer Nähe)',
         allowLocation: 'Standort erlauben',
         loadingCategories: 'Kategorien werden geladen...',
         increaseRadius: 'Radius vergrößern',
@@ -621,7 +621,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: '近くの場所',
-        nearMeSubtitle: '（{{km}}km以内）',
+        nearMeSubtitle: '（あなたの近く{{km}}kmの範囲内の場所を表示）',
         allowLocation: '位置情報を許可',
         loadingCategories: 'カテゴリを読み込み中...',
         increaseRadius: '半径を広げる',
@@ -681,7 +681,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'بالقرب مني',
-        nearMeSubtitle: '(ضمن {{km}} كم)',
+        nearMeSubtitle: '(يعرض الأماكن ضمن دائرة نصف قطرها {{km}} كم بالقرب منك)',
         allowLocation: 'السماح بالموقع',
         loadingCategories: 'جارٍ تحميل الفئات...',
         increaseRadius: 'زيادة النطاق',
@@ -741,7 +741,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Vicino a me',
-        nearMeSubtitle: '(entro {{km}} km)',
+        nearMeSubtitle: '(mostrando luoghi in un raggio di {{km}} km vicino a te)',
         allowLocation: 'Consenti posizione',
         loadingCategories: 'Caricamento categorie...',
         increaseRadius: 'Aumenta raggio',
@@ -797,7 +797,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Bij mij in de buurt',
-        nearMeSubtitle: '(binnen {{km}} km afstand)',
+        nearMeSubtitle: '(plaatsen tonen binnen een straal van {{km}} km bij jou)',
         allowLocation: 'Locatie toestaan',
         loadingCategories: 'Categorieën laden...',
         increaseRadius: 'Vergroot straal',
@@ -854,7 +854,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Yakınımda',
-        nearMeSubtitle: '({{km}} km içinde)',
+        nearMeSubtitle: '({{km}} km yarıçapında yakınınızdaki yerleri gösterir)',
         allowLocation: 'Konuma izin ver',
         loadingCategories: 'Kategoriler yükleniyor...',
         increaseRadius: 'Yarıçapı artır',
@@ -900,7 +900,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'W pobliżu',
-        nearMeSubtitle: '(w promieniu {{km}} km)',
+        nearMeSubtitle: '(wyświetlając miejsca w promieniu {{km}} km w pobliżu Ciebie)',
         allowLocation: 'Zezwól na lokalizację',
         loadingCategories: 'Ładowanie kategorii...',
         increaseRadius: 'Zwiększ promień',
