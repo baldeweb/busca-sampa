@@ -497,8 +497,7 @@
         "linkMenu": "https://a9afa647-436a-4f08-adf7-f711dedd44b8.filesusr.com/ugd/f568e5_84a975402bef421a8db10667bd39455c.pdf",
         "linkWebsite": "https://palomafaizi.wixsite.com/manish",
         "linkInstagram": "https://www.instagram.com/manishrestaurante?igsh=ODU1OXZ1aThscHFv",
-        "tags": [],
-        "foodStyle": ["LEBANESE"]
+        "tags": ["LEBANESE"]
     },
     {
         "id": 12,
@@ -547,10 +546,7 @@
         "linkMenu": "https://www.tandoor.com.br/cardapio/",
         "linkWebsite": "https://www.tandoor.com.br/",
         "linkInstagram": "https://www.instagram.com/tandoorsp/",
-        "tags": [
-            "PET_FRIENDLY"
-        ],
-        "foodStyle": ["INDIAN"]
+        "tags": ["INDIAN"]
     },
     {
         "id": 13,
@@ -591,10 +587,7 @@
         "linkMenu": "",
         "linkWebsite": "https://www.thaitaibrasil.com.br/",
         "linkInstagram": "https://www.instagram.com/thaitaibrasil/",
-        "tags": [
-            "AMBIANCE"
-        ],
-        "foodStyle": ["THAI"]
+        "tags": ["THAI"]
     },
     {
         "id": 14,
@@ -635,10 +628,7 @@
         "linkMenu": "https://ideaecia.wixsite.com/cardapiokouzina?fbclid=PAZXh0bgNhZW0CMTEAAad2PW9qGImG-dEDTOVWO80A46y5EFLDG1uPa7qpsuVuC1x6jljB1m_O3hb5pg_aem_48Zo-afbSKvwJ-pK42mA8Q",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/kouzinamyk/",
-        "tags": [
-            "PET_FRIENDLY"
-        ],
-        "foodStyle": ["GREEK"]
+        "tags": ["GREEK"]
     },
     {
         "id": 15,
@@ -682,10 +672,7 @@
         "linkMenu": "",
         "linkWebsite": "https://eatasia.com.br/",
         "linkInstagram": "https://www.instagram.com/eatasiabr/",
-        "tags": [
-            "THEMED"
-        ],
-        "foodStyle": ["JAPANESE"]
+        "tags": ["JAPANESE"]
     },
     {
         "id": 16,
@@ -724,10 +711,7 @@
         "linkMenu": "https://www.instagram.com/stories/highlights/18123493756379887/",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/eatasia2d/",
-        "tags": [
-            "THEMED"
-        ],
-        "foodStyle": ["JAPANESE"]
+        "tags": ["JAPANESE"]
     },
     {
         "id": 17,
@@ -766,8 +750,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/filipinasoriental/",
-        "tags": [],
-        "foodStyle": ["FILIPINO", "MALAYSIAN"]
+        "tags": ["FILIPINO", "MALAYSIAN"]
     },
     {
         "id": 18,
@@ -811,8 +794,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/izakayaissa",
-        "tags": [],
-        "foodStyle": ["JAPANESE"]
+        "tags": ["JAPANESE"]
     },
     {
         "id": 19,
@@ -855,8 +837,7 @@
         "linkMenu": "https://www.amigodorei.com.br/jantarpersa.html",
         "linkWebsite": "http://www.amigodorei.com.br/",
         "linkInstagram": "https://www.instagram.com/amigo_do_rei/",
-        "tags": ["AMBIANCE", "EXPERIENCE"],
-        "foodStyle": ["IRANIAN"]
+        "tags": ["IRANIAN"]
     },
     {
         "id": 20,
@@ -908,8 +889,7 @@
         "linkMenu": "https://reservation-widget.tagme.com.br/group/64c7c03ce5f5b30053b0964c?fbclid=PAZXh0bgNhZW0CMTEAAafs3RM0GsE3FpWb769dj93NFOl80iGjrmy8-Gi80viUhXiMP7atY5_u5WsmPQ_aem_FIEz98tK1xlwnvt7q_Klzg",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/becohexagonal/",
-        "tags": ["THEMED"],
-        "foodStyle": ["HAMBURGUER"]
+        "tags": ["HAMBURGUER"]
     },
     {
         "id": 21,
@@ -952,8 +932,7 @@
         "linkMenu": "https://o-burguer-1.goomer.app/menu#1564309",
         "linkWebsite": "http://www.oburguer.com.br/",
         "linkInstagram": "https://www.instagram.com/oburguer/",
-        "tags": [],
-        "foodStyle": ["HAMBURGUER", "THEMED", "MOLECULAR_GASTRONOMY"]
+        "tags": ["HAMBURGUER", "THEMED", "MOLECULAR_GASTRONOMY"]
     },
     {
         "id": 22,
@@ -995,10 +974,7 @@
         "linkMenu": "https://drive.google.com/drive/folders/1RGLkBk6MEn7AfvUvuylo-AVwdsguCSsK",
         "linkWebsite": "https://bio.site/cadillacbbqoficial?fbclid=PAZXh0bgNhZW0CMTEAAad2ntQGavKZcr98qEbAsS8se6wmZXgYwe-xC-pcu-8r2l8r4dGnlbO9uvjdlg_aem_y2K_VX92yiwYOHOovmC-VA",
         "linkInstagram": "https://www.instagram.com/cadillacbbq",
-        "tags": [
-            "THEMED"
-        ],
-        "foodStyle": ["AMERICAN"]
+        "tags": ["AMERICAN"]
     },
     {
         "id": 23,
@@ -1061,10 +1037,7 @@
         "linkMenu": "https://www.dguests.com.br/cardapio/vassouraquebrada",
         "linkWebsite": "https://www.vassouraquebrada.com.br/",
         "linkInstagram": "https://www.instagram.com/vassouraquebrada/",
-        "tags": [
-            "THEMED"
-        ],
-        "foodStyle": ["HAMBURGUER"]
+        "tags": ["HAMBURGUER"]
     },
     {
         "id": 24,
@@ -1110,8 +1083,7 @@
         "linkMenu": "",
         "linkWebsite": "http://www.consuladodabahia.com.br/",
         "linkInstagram": "https://www.instagram.com/consuladodabahia/",
-        "tags": [],
-        "foodStyle": ["BRAZILIAN"]
+        "tags": ["BRAZILIAN"]
     },
     {
         "id": 25,
@@ -1152,8 +1124,7 @@
         "linkMenu": "https://escandinavo.com.br/confira-nosso-menu/",
         "linkWebsite": "https://escandinavo.com.br/",
         "linkInstagram": "https://www.instagram.com/o.escandinavo/",
-        "tags": [],
-        "foodStyle": ["NORDIC"]
+        "tags": ["NORDIC"]
     },
     {
         "id": 26,
@@ -1195,8 +1166,7 @@
         "linkMenu": "",
         "linkWebsite": "https://taplink.cc/grindhouse_braserito?fbclid=PAZXh0bgNhZW0CMTEAAac-0uTD8H5jJSoAu-uk2LimVYm454g5drKIOvNzuJJKb_Kqq8PVDJ0JB7LJ_Q_aem_z20kLUd9naK46yw159V3Lg",
         "linkInstagram": "https://www.instagram.com/grindhouse_braserito/",
-        "tags": [],
-        "foodStyle": ["ARGENTINE"]
+        "tags": ["ARGENTINE"]
     },
     {
         "id": 27,
@@ -1268,8 +1238,7 @@
         "linkMenu": "",
         "linkWebsite": "https://www.rinconcitoperuano.com.br/",
         "linkInstagram": "https://www.instagram.com/rinconcitoperuano/",
-        "tags": ["THEMED"],
-        "foodStyle": ["PERUVIAN"]
+        "tags": ["PERUVIAN"]
     },
     {
         "id": 28,
@@ -1310,8 +1279,7 @@
         "linkMenu": "https://biahoi.com.br/menu.php",
         "linkWebsite": "https://biahoi.com.br/",
         "linkInstagram": "https://www.instagram.com/biahoisp/",
-        "tags": [],
-        "foodStyle": ["VIETNAMESE"]
+        "tags": ["VIETNAMESE"]
     },
     {
         "id": 29,
@@ -1367,8 +1335,7 @@
         "linkMenu": "https://www.biyouzrestauranteafricano.com.br/pratos-quentes",
         "linkWebsite": "https://biyouzgastronomiafricana.com.br/",
         "linkInstagram": "https://www.instagram.com/biyouzgastronomiaafricana/",
-        "tags": [],
-        "foodStyle": ["AFRICAN"]
+        "tags": ["AFRICAN"]
     },
     {
         "id": 30,
@@ -1410,8 +1377,7 @@
         "linkMenu": "http://www.sushihiroshisp.com.br/cardapio-sushi-hiroshi.html",
         "linkWebsite": "http://www.sushihiroshisp.com.br/index.html",
         "linkInstagram": "https://www.instagram.com/sushihiroshioficial/",
-        "tags": ["EXPERIENCE"],
-        "foodStyle": ["JAPANESE"]
+        "tags": ["JAPANESE"]
     },
     {
         "id": 31,
@@ -1467,8 +1433,7 @@
         "linkMenu": "https://www.instagram.com/stories/highlights/17864408108059100/",
         "linkWebsite": "http://www.mamaafricalabonnebouffe.com.br/",
         "linkInstagram": "https://www.instagram.com/mamaafrica_labonnebouffe/",
-        "tags": [],
-        "foodStyle": ["AFRICAN"]
+        "tags": ["AFRICAN"]
     },
     {
         "id": 32,
@@ -1510,8 +1475,7 @@
         "linkMenu": "https://menu.getinapp.com.br/store/D1ZdNgkm/1/d1VM2nPv/",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/thecircusbarekitchen/",
-        "tags": ["HAMBURGUER", "MILKSHAKE", "THEMED"],
-        "foodStyle": ["HAMBURGUER", "MILKSHAKE"]
+        "tags": ["HAMBURGUER", "MILKSHAKE"]
     },
     {
         "id": 33,
@@ -1554,8 +1518,7 @@
         "linkMenu": "https://www.ifood.com.br/delivery/sao-paulo-sp/asiatico-bao-n-sando-vila-madalena-vila-madalena/f9ebf8ca-3d62-492a-b4ea-4816d49ab360?utm_medium=share&utm_source=ig&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndKJwZVNKVxJU56LmynY4CH3XBi54G_mvHDWO9OS-kpCiXAIfrfRrqiM3Apo_aem_n3vaId7n2zguqmAOuv3Aag",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/bao_n_sando/",
-        "tags": ["TAIWANESE"],
-        "foodStyle": ["TAIWANESE"]
+        "tags": ["TAIWANESE"]
     },
     {
         "id": 34,
@@ -1598,8 +1561,7 @@
         "linkMenu": "https://mapurestaurante.com.br/cardapio",
         "linkWebsite": "https://mapurestaurante.com.br/",
         "linkInstagram": "https://www.instagram.com/mapubaos/",
-        "tags": ["TAIWANESE"],
-        "foodStyle": ["TAIWANESE"]
+        "tags": ["TAIWANESE"]
     },
     {
         "id": 35,
@@ -1640,8 +1602,7 @@
         "linkMenu": "https://www.tavernamedieval.com.br/cardapio/index.html",
         "linkWebsite": "https://www.tavernamedieval.com.br",
         "linkInstagram": "https://www.instagram.com/taverna_medieval/",
-        "tags": ["HAMBURGUER", "THEMED"],
-        "foodStyle": ["HAMBURGUER"]
+        "tags": ["HAMBURGUER"]
     },
     {
         "id": 36,
@@ -1683,8 +1644,7 @@
         "linkMenu": "https://irp.cdn-website.com/60356b88/files/uploaded/Sa-o_Paulo_PDF.pdf",
         "linkWebsite": "http://www.camaroes.com.br/",
         "linkInstagram": "https://www.instagram.com/camaroes.sp/",
-        "tags": ["SEAFOOD", "BRAZILIAN"],
-        "foodStyle": ["SEAFOOD", "BRAZILIAN"]
+        "tags": ["SEAFOOD", "BRAZILIAN"]
     },
     {
         "id": 37,
@@ -1730,8 +1690,7 @@
         "linkMenu": "https://menu.getinapp.com.br/store/Z6RqVo1L/1",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/casadosaulo/",
-        "tags": ["BRAZILIAN"],
-        "foodStyle": ["BRAZILIAN"]
+        "tags": ["BRAZILIAN"]
     },
     {
         "id": 38,
@@ -1774,8 +1733,7 @@
         "linkMenu": "",
         "linkWebsite": "https://linklist.bio/sushishii?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnSclxq8e0MweeBxmzyiyDA-jZfoejHldE1m_fJrgeHm5Ql2PnLpGBIiD-N7k_aem_48eeBE_pP7NJlmceHaGonQ",
         "linkInstagram": "https://www.instagram.com/ishii_sushi/",
-        "tags": ["JAPANESE", "ALLYOUCAN_EAT"],
-        "foodStyle": ["JAPANESE", "ALLYOUCAN_EAT"]
+        "tags": ["JAPANESE", "ALLYOUCAN_EAT"]
     },
     {
         "id": 39,
@@ -1816,8 +1774,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/macondo_raizes_colombianas/",
-        "tags": ["COLOMBIAN"],
-        "foodStyle": ["COLOMBIAN"]
+        "tags": ["COLOMBIAN"]
     },
     {
         "id": 40,
@@ -1859,8 +1816,7 @@
         "linkMenu": "https://www.menuart.com.br/pdfs/guanabara.pdf?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnF33cJE6rEJwj-3rtW0VfXhrSs-Hr9f57kApqZ8oRsd5XOte7GqUXHGjvRTQ_aem_Ou4oeoG75erl4CmNoqSV5Q",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/barguanabara1910/",
-        "tags": ["HISTORIC_PLACE"],
-        "foodStyle": ["HISTORIC_PLACE"]
+        "tags": ["HISTORIC_PLACE"]
     },
     {
         "id": 41,
@@ -1901,8 +1857,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/restaurante.illimani/",
-        "tags": ["BOLIVIAN"],
-        "foodStyle": ["BOLIVIAN"]
+        "tags": ["BOLIVIAN"]
     },
     {
         "id": 42,
@@ -1943,8 +1898,7 @@
         "linkMenu": "https://livemenu.app/menu/6241de323b243900116e5adb?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZGIOX3CZNy9nkCPbdwkJkbGWIv9hJNIwZ-MlWYJjYkyInPPpfL7KVrN8Ztk_aem_VWfNKbx8rZhS382NeOIEEg&cross_session=done",
         "linkWebsite": "https://vilaanalia.com.br/",
         "linkInstagram": "https://www.instagram.com/miirooftop/",
-        "tags": ["GREEK"],
-        "foodStyle": ["GREEK"]
+        "tags": ["GREEK"]
     },
     {
         "id": 43,
@@ -1986,8 +1940,7 @@
         "linkMenu": "https://livemenu.app/menu/61fd682e1e9cd60012ad6b6b?cross_session=done",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/urumaryparrilla/",
-        "tags": ["URUGUAYAN", "SEAFOOD"],
-        "foodStyle": ["URUGUAYAN", "SEAFOOD"]
+        "tags": ["URUGUAYAN", "SEAFOOD"]
     },
     {
         "id": 44,
@@ -2029,8 +1982,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/barelanchesestadao/",
-        "tags": ["OPEN_24_HOURS"],
-        "foodStyle": ["OPEN_24_HOURS"]
+        "tags": ["OPEN_24_HOURS"]
     },
     {
         "id": 45,
@@ -2071,8 +2023,7 @@
         "linkMenu": "https://livemenu.app/menu/6241fb73923ad30011604bc6?cross_session=done",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/araisdocarlinhostatuape/",
-        "tags": ["ARMENIAN"],
-        "foodStyle": ["ARMENIAN"]
+        "tags": ["ARMENIAN"]
     },
     {
         "id": 46,
@@ -2114,7 +2065,6 @@
         "linkMenu": "https://www.wabar.com.br/blank-1",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/wabar_brasil/",
-        "tags": ["KOREAN", "KARAOKE"],
-        "foodStyle": ["KOREAN", "KARAOKE"]
+        "tags": ["KOREAN", "KARAOKE"]
     }
 ]
