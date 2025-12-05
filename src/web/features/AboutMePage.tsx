@@ -1,4 +1,4 @@
-import imgMe from "@/assets/imgs/etc/img_me.jpeg";
+import imgMe from "@/assets/imgs/etc/img_me.jpg";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
@@ -55,9 +55,8 @@ export function AboutMePage() {
           <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-sm" className="mb-1" />
           <p className="text-sm text-gray-300 mb-3">Me encontre nas redes sociais abaixo :)</p>
 
-          <style>{`@media (max-width:480px){ .about-grid{ grid-template-columns: 1fr !important; } }`}</style>
-          <ul className="about-grid grid grid-cols-2 gap-4 w-full text-sm items-center">
-            <li className="flex items-center justify-start sm:col-start-1 sm:row-start-1">
+          <ul className="flex flex-col gap-4 w-full text-sm items-center">
+            <li className="flex items-center justify-center pt-4">
               <a
                 href="https://www.instagram.com/balde_wb/"
                 target="_blank"
@@ -69,7 +68,19 @@ export function AboutMePage() {
               </a>
             </li>
 
-            <li className="flex items-center justify-end sm:col-start-2 sm:row-start-1">
+            <li className="flex items-center justify-center pt-4">
+              <a
+                href="https://www.instagram.com/rolepaulistaoficial/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-bs-red transition-colors"
+              >
+                <FaInstagram aria-hidden="true" className="text-lg" />
+                <span>Role Paulista</span>
+              </a>
+            </li>
+
+            <li className="flex items-center justify-center pt-4">
               <a
                 href="https://www.linkedin.com/in/wallace-baldenebre/"
                 target="_blank"
@@ -81,19 +92,7 @@ export function AboutMePage() {
               </a>
             </li>
 
-            <li className="flex items-center justify-start sm:col-start-1 sm:row-start-2">
-              <a
-                href="https://www.instagram.com/balde_wb/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-bs-red transition-colors"
-              >
-                <FaInstagram aria-hidden="true" className="text-lg" />
-                <span>Role Paulista</span>
-              </a>
-            </li>
-
-            <li className="flex items-center justify-end sm:col-start-2 sm:row-start-2">
+            <li className="flex items-center justify-center pt-4 pb-4">
               <a
                 href="mailto:wallace.baldenebre@gmail.com"
                 className="flex items-center gap-2 hover:text-bs-red transition-colors"

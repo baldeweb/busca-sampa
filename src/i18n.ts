@@ -50,6 +50,7 @@ const resources = {
         neighborhoodsTitle: 'Por bairro',
         neighborhoodsTagline: 'Tá em algum desses bairros? Tem coisa boa por perto!',
         viewMoreNeighborhoods: 'ver mais bairros ►',
+        viewMore: 'ver mais',
         noNearbyResultsRadius: 'Não há nada dentro das proximidades no raio escolhido.'
       },
       header: {
@@ -201,6 +202,7 @@ const resources = {
         neighborhoodsTitle: 'Por barrio',
         neighborhoodsTagline: '¿Estás en uno de estos barrios? ¡Hay cosas buenas cerca!',
         viewMoreNeighborhoods: 'ver más barrios >',
+        viewMore: 'ver más',
         noNearbyResultsRadius: 'No hay lugares dentro del radio elegido.'
       },
       header: {
@@ -328,6 +330,7 @@ const resources = {
         neighborhoodsTitle: 'Par quartier',
         neighborhoodsTagline: 'Vous êtes dans un de ces quartiers ? Des bons endroits à proximité !',
         viewMoreNeighborhoods: 'voir plus de quartiers >',
+        viewMore: 'voir plus',
         noNearbyResultsRadius: 'Aucun endroit dans le rayon choisi.'
       },
       header: { title: 'Role Paulista', tagline: 'La meilleure recommandation des lieux visités, à portée de main' },
@@ -361,7 +364,7 @@ const resources = {
   },
   ru: {
     translation: {
-      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По району', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
+      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', viewMore: 'ещё', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
@@ -384,7 +387,7 @@ const resources = {
   },
   zh: {
     translation: {
-      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', noNearbyResultsRadius: '所选半径内没有地点。' },
+      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', viewMore: '更多', noNearbyResultsRadius: '所选半径内没有地点。' },
       header: { title: 'Role Paulista', tagline: '我去过的最佳推荐，一触即达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
@@ -416,6 +419,7 @@ const resources = {
         neighborhoodsTitle: 'By Neighborhood',
         neighborhoodsTagline: 'Are you in one of these neighborhoods? Good stuff nearby!',
         viewMoreNeighborhoods: 'see more neighborhoods >',
+        viewMore: 'see more',
         noNearbyResultsRadius: 'No places within the chosen radius.'
       },
       header: {
@@ -565,6 +569,7 @@ const resources = {
         neighborhoodsTitle: 'Nach Viertel',
         neighborhoodsTagline: 'Bist du in einem dieser Viertel? Gute Orte in der Nähe!',
         viewMoreNeighborhoods: 'mehr Viertel anzeigen >',
+        viewMore: 'mehr anzeigen',
         noNearbyResultsRadius: 'Keine Orte im ausgewählten Radius.'
       },
       header: {
@@ -623,6 +628,7 @@ const resources = {
         neighborhoodsTitle: '地域別',
         neighborhoodsTagline: 'これらの地域のどれかにいますか？近くに良い場所があります！',
         viewMoreNeighborhoods: 'もっと見る >',
+        viewMore: 'もっと見る',
         noNearbyResultsRadius: '選択した半径内に場所がありません。'
       },
       header: {
@@ -682,6 +688,7 @@ const resources = {
         neighborhoodsTitle: 'حسب الحي',
         neighborhoodsTagline: 'هل أنت في أحد هذه الأحياء؟ هناك أماكن جيدة بالقرب منك!',
         viewMoreNeighborhoods: 'عرض المزيد من الأحياء >',
+        viewMore: 'عرض المزيد',
         noNearbyResultsRadius: 'لا توجد أماكن ضمن النطاق المحدد.'
       },
       header: {
@@ -741,6 +748,7 @@ const resources = {
         neighborhoodsTitle: 'Per quartiere',
         neighborhoodsTagline: 'Sei in uno di questi quartieri? Ci sono bei posti nelle vicinanze!',
         viewMoreNeighborhoods: 'vedi altri quartieri >',
+        viewMore: 'vedi altro',
         noNearbyResultsRadius: 'Nessun luogo nel raggio selezionato.'
       },
       header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione dei posti che ho visitato, a portata di tocco' },
@@ -796,6 +804,7 @@ const resources = {
         neighborhoodsTitle: 'Per buurt',
         neighborhoodsTagline: 'Ben je in een van deze buurten? Leuke plekken in de buurt!',
         viewMoreNeighborhoods: 'meer buurten bekijken >',
+        viewMore: 'meer bekijken',
         noNearbyResultsRadius: 'Geen plaatsen binnen de gekozen straal.'
       },
       header: { title: 'Role Paulista', tagline: 'De beste aanbeveling van plekken waar ik ben geweest, binnen handbereik' },
@@ -852,6 +861,7 @@ const resources = {
         neighborhoodsTitle: 'Mahalleye göre',
         neighborhoodsTagline: 'Bu mahallelerden birindeyseniz? Yakında güzel yerler var!',
         viewMoreNeighborhoods: 'daha fazla mahalle göster >',
+        viewMore: 'daha fazla göster',
         noNearbyResultsRadius: 'Seçilen yarıçap içinde yer yok.'
       },
       header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — tek dokunuşla' },
@@ -897,6 +907,7 @@ const resources = {
         neighborhoodsTitle: 'Według dzielnicy',
         neighborhoodsTagline: 'Jesteś w jednej z tych dzielnic? Dobre miejsca w pobliżu!',
         viewMoreNeighborhoods: 'zobacz więcej dzielnic >',
+        viewMore: 'zobacz więcej',
         noNearbyResultsRadius: 'Brak miejsc w wybranym promieniu.'
       },
       header: { title: 'Role Paulista', tagline: 'Najlepsze rekomendacje miejsc, w których byłem — na wyciągnięcie ręki' },

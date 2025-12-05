@@ -9,7 +9,7 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
-import { CategoryCard } from '@/web/components/ui/CategoryCard';
+import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
 import flagSp from '@/assets/imgs/flags/flag_sp.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
@@ -134,6 +134,7 @@ export const PlaceListPage: React.FC = () => {
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [showOrderDropdown, setShowOrderDropdown] = useState(false);
+    const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 
     // Filtro de ambiente
     const filteredPlaces = useMemo(() => {
@@ -290,48 +291,49 @@ export const PlaceListPage: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Chips de ambiente */}
+                    {/* Grid de tipos de ambiente */}
                     {environments.length > 1 && (
                         <div className="bg-[#F5F5F5] text-black pb-4">
                             <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                            <div className="relative">
-                                <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start">
-                                    {/* Mostrar opção 'Todos' somente quando houver mais de 1 ambiente */}
-                                    {environments.length > 1 && (
-                                        <CategoryCard
-                                            key="all-environments"
-                                            label={t('common.all')}
-                                            icon={<img src={headerIcon} alt="all" className="w-8 h-8" />}
-                                            selected={false}
-                                            lightSelected={true}
-                                            onClick={() => setSelectedEnv(null)}
-                                            index={0}
-                                        />
-                                    )}
-                                    {environments.map((env, idx) => {
-                                        const key = (env.value || '').toString().replace(/-/g, '_').toUpperCase();
-                                        let iconSrc = flagSp;
-                                        if (key === 'FREE') iconSrc = icFree;
-                                        else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
-                                        else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
-                                        else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
-                                        else if (key === 'NATURE') iconSrc = icNature;
-                                        else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
-                                        else if (key === 'TOURIST_SPOT' || key === 'TOURIST_SPOTS') iconSrc = icTouristSpot;
-
-                                        return (
-                                            <CategoryCard
-                                                key={env.value}
-                                                label={env.label}
-                                                icon={<img src={iconSrc} alt={env.label} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
-                                                selected={selectedEnv === env.value}
-                                                lightSelected={true}
-                                                onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
-                                                index={environments.length > 1 ? idx + 1 : idx}
-                                            />
-                                        );
-                                    })}
-                                </div>
+                            <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-xs w-full">
+                                {/* Botão "Todos" */}
+                                <button
+                                    type="button"
+                                    onClick={() => setSelectedEnv(null)}
+                                    className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+                                        selectedEnv === null 
+                                            ? 'bg-bs-red text-white border-bs-red' 
+                                            : 'bg-white text-black border-[#0F0D13]'
+                                    }`}
+                                >
+                                    {t('common.all')}
+                                </button>
+                                {/* Primeiros 8 tipos */}
+                                {environments.slice(0, 8).map((env) => (
+                                    <button
+                                        key={env.value}
+                                        type="button"
+                                        onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                        className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+                                            selectedEnv === env.value 
+                                                ? 'bg-bs-red text-white border-bs-red' 
+                                                : 'bg-white text-black border-[#0F0D13]'
+                                        }`}
+                                    >
+                                        {env.label}
+                                    </button>
+                                ))}
+                                {/* Botão "Ver mais" se houver mais de 8 */}
+                                {environments.length > 8 && (
+                                    <ActionButton
+                                        type="button"
+                                        onClick={() => setShowEnvironmentModal(true)}
+                                        size="md"
+                                        className="w-full py-4 font-semibold text-base rounded-md"
+                                    >
+                                        {t('home.viewMore')}
+                                    </ActionButton>
+                                )}
                             </div>
                         </div>
                     )}
@@ -448,6 +450,16 @@ export const PlaceListPage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Modal de tipos de ambiente */}
+            {showEnvironmentModal && (
+                <EnvironmentSelectModal
+                    environments={environments}
+                    selectedEnv={selectedEnv}
+                    onClose={() => setShowEnvironmentModal(false)}
+                    onSelect={(env) => setSelectedEnv(env?.value || null)}
+                />
+            )}
         </div>
     );
 };
