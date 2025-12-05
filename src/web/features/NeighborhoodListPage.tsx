@@ -8,16 +8,8 @@ import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
-import { CategoryCard } from '@/web/components/ui/CategoryCard';
-import flagSp from '@/assets/imgs/flags/flag_sp.png';
+import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
-import icBars from '@/assets/imgs/icons/ic_bars.png';
-import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
-import icFree from '@/assets/imgs/icons/ic_free.png';
-import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
-import icNature from '@/assets/imgs/icons/ic_nature.png';
-import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
-import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -85,6 +77,13 @@ export const NeighborhoodListPage: React.FC = () => {
     return Array.from(set);
   }, [neighborhoodPlaces]);
 
+  // Mapeia placeTypes para formato usado pelo filtro (label + value)
+  const environments = useMemo(() => {
+    return placeTypes.map(pt => ({ label: getPlaceTypeLabel(pt), value: pt }));
+  }, [placeTypes]);
+
+  const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
+
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const ORDER_OPTIONS = [
     { value: 'name-asc' },
@@ -142,50 +141,49 @@ export const NeighborhoodListPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Filtro por tipo (carrossel de CategoryCard igual à Home) */}
-      {placeTypes.length > 1 && (
+      {/* Filtro por tipo (grid, igual à página de lugares) */}
+      {environments.length > 1 && (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
             <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
-              <div className="relative">
-              <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory w-full justify-start rounded-t-lg">
-                {placeTypes.length > 1 && (
-                  <CategoryCard
-                    key="all-types"
-                    label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(t('common.all'))}
-                    icon={<img src={icNeighborhood} alt="all" className="w-8 h-8" />}
-                    selected={false}
-                    lightSelected={true}
-                    onClick={() => setSelectedType(null)}
-                    index={0}
-                  />
+            <div className="bg-[#F5F5F5] text-black pb-4">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-xs w-full">
+                {/* Botão "Todos" */}
+                <button
+                  type="button"
+                  onClick={() => setSelectedType(null)}
+                  className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+                    selectedType === null ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
+                  }`}
+                >
+                  {t('common.all')}
+                </button>
+                {/* Primeiros 4 tipos em mobile, 8 em desktop */}
+                {environments.slice(0, 8).map((env, idx) => (
+                  <button
+                    key={env.value}
+                    type="button"
+                    onClick={() => setSelectedType(selectedType === env.value ? null : env.value)}
+                    className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+                      selectedType === env.value ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
+                    } ${idx >= 4 ? 'hidden sm:block' : ''}`}
+                  >
+                    {env.label}
+                  </button>
+                ))}
+                {/* Botão "Ver mais" */}
+                {environments.length > 4 && (
+                  <ActionButton
+                    type="button"
+                    onClick={() => setShowEnvironmentModal(true)}
+                    size="md"
+                    className={`w-full py-4 font-semibold text-base rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
+                  >
+                    {t('home.viewMore')}
+                  </ActionButton>
                 )}
-                {placeTypes.map((pt, idx) => {
-                  const key = (pt || '').toString().replace(/-/g, '_').toUpperCase();
-                  let iconSrc = flagSp;
-                  if (key === 'FREE') iconSrc = icFree;
-                  else if (key === 'BAR' || key === 'BARS') iconSrc = icBars;
-                  else if (key === 'COFFEE' || key === 'COFFEES') iconSrc = icCoffee;
-                  else if (key === 'NIGHTLIFE') iconSrc = icNightlife;
-                  else if (key === 'NATURE') iconSrc = icNature;
-                  else if (key === 'RESTAURANT' || key === 'RESTAURANTS') iconSrc = icRestaurants;
-                  else if (key === 'TOURIST_SPOT' || key === 'TOURIST_SPOTS') iconSrc = icTouristSpot;
-
-                  return (
-                    <CategoryCard
-                      key={pt}
-                      label={(function sentence(s: string){ if(!s) return s; const t = s.trim(); return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase(); })(getPlaceTypeLabel(pt))}
-                      icon={<img src={iconSrc} alt={pt} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" />}
-                      selected={selectedType === pt}
-                      lightSelected={true}
-                      onClick={() => setSelectedType(selectedType === pt ? null : pt)}
-                      index={placeTypes.length > 1 ? idx + 1 : idx}
-                    />
-                  );
-                })}
               </div>
             </div>
-            {/* Removed 'VER MAIS' button per design decision */}
           </div>
         </section>
       )}
@@ -295,6 +293,23 @@ export const NeighborhoodListPage: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Modal de tipos de ambiente (completo) */}
+      {showEnvironmentModal && (
+        <EnvironmentSelectModal
+          environments={environments}
+          excludedValues={environments.slice(0, 8).map(e => e.value)}
+          selectedEnv={selectedType}
+          onClose={() => setShowEnvironmentModal(false)}
+          onSelect={(env) => setSelectedType(env?.value || null)}
+        />
+      )}
     </div>
   );
 };
+
+// Modal de seleção completa (usado pelo botão "ver mais")
+// Renderizamos o componente abaixo do return principal para manter consistência
+// com a forma como é usado em PlaceListPage.
+// NOTE: o modal é exibido condicionalmente via state `showEnvironmentModal`.
+// A declaração do modal deve ficar antes do final do JSX retornado, mas aqui
+// adicionamos como parte do componente root.

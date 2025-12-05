@@ -54,6 +54,8 @@ export function getEnvironmentLabel(tag: string): string {
     URUGUAYAN: "Uruguaio",
     OPEN_24_HOURS: "24 Horas",
     ARMENIAN: "Armênio",
+    COLOMBIAN: "Colombiano",
+    MILKSHAKE: "Milkshake",
   };
   return map[tag] || tag;
 }

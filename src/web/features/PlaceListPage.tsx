@@ -87,7 +87,9 @@ export const PlaceListPage: React.FC = () => {
             p.tags?.forEach((t: string) => envSet.add(t));
             p.foodStyle?.forEach((f: string) => envSet.add(f));
         });
-        return Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
+        const arr = Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
+        arr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+        return arr;
     }, [filteredByType]);
 
     // Helper: get opening times for today for a place (returns array of open times strings like '08:00')
@@ -308,8 +310,8 @@ export const PlaceListPage: React.FC = () => {
                                 >
                                     {t('common.all')}
                                 </button>
-                                {/* Primeiros 8 tipos */}
-                                {environments.slice(0, 8).map((env) => (
+                                {/* Primeiros 4 tipos em mobile, 8 em desktop */}
+                                {environments.slice(0, 8).map((env, idx) => (
                                     <button
                                         key={env.value}
                                         type="button"
@@ -318,18 +320,18 @@ export const PlaceListPage: React.FC = () => {
                                             selectedEnv === env.value 
                                                 ? 'bg-bs-red text-white border-bs-red' 
                                                 : 'bg-white text-black border-[#0F0D13]'
-                                        }`}
+                                        } ${idx >= 4 ? 'hidden sm:block' : ''}`}
                                     >
                                         {env.label}
                                     </button>
                                 ))}
-                                {/* Botão "Ver mais" se houver mais de 8 */}
-                                {environments.length > 8 && (
+                                {/* Botão "Ver mais" se houver mais de 4 em mobile ou mais de 8 em desktop */}
+                                {environments.length > 4 && (
                                     <ActionButton
                                         type="button"
                                         onClick={() => setShowEnvironmentModal(true)}
                                         size="md"
-                                        className="w-full py-4 font-semibold text-base rounded-md"
+                                        className={`w-full py-4 font-semibold text-base rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
                                     >
                                         {t('home.viewMore')}
                                     </ActionButton>
@@ -455,6 +457,7 @@ export const PlaceListPage: React.FC = () => {
             {showEnvironmentModal && (
                 <EnvironmentSelectModal
                     environments={environments}
+                    excludedValues={environments.slice(0, 8).map(e => e.value)}
                     selectedEnv={selectedEnv}
                     onClose={() => setShowEnvironmentModal(false)}
                     onSelect={(env) => setSelectedEnv(env?.value || null)}

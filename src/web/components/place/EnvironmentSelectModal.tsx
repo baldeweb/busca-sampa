@@ -10,6 +10,7 @@ interface Props {
     onClose: () => void;
     onSelect: (environment: EnvironmentOption | null) => void;
     selectedEnv: string | null;
+    excludedValues?: string[];
 }
 
 export function EnvironmentSelectModal({
@@ -17,11 +18,14 @@ export function EnvironmentSelectModal({
     onClose,
     onSelect,
     selectedEnv,
+    excludedValues,
 }: Props) {
     function handleSelect(env: EnvironmentOption | null) {
         onSelect(env);
         onClose();
     }
+
+    const shownEnvironments = environments.filter(e => !excludedValues?.includes(e.value));
 
     return (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
@@ -56,7 +60,7 @@ export function EnvironmentSelectModal({
                             <span className="text-sm opacity-70">{">"}</span>
                         </button>
                     </li>
-                    {environments.map((env) => (
+                    {shownEnvironments.map((env) => (
                         <li key={env.value}>
                             <button
                                 type="button"
