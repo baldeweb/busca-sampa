@@ -167,6 +167,7 @@ const resources = {
       
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
         opensAtHeader: 'Abertura',
         openNow: 'Aberto agora',
         opensSoon: 'Abre em instantes',
@@ -297,6 +298,7 @@ const resources = {
       ,
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horario no disponible',
         opensAtHeader: 'Abre a las...',
         subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti más cerca de ti :)',
         article: {
@@ -339,6 +341,7 @@ const resources = {
       },
       whereIsToday: { title: 'Alors, c’est où aujourd’hui?', opensToday: 'Ouvrent aujourd\'hui' },
             placeList: {
+              hoursUnavailable: 'Horaires indisponibles',
               opensAtHeader: 'Ouvre à...'
             },
       list: {
@@ -535,6 +538,7 @@ const resources = {
       },
       placeList: {
         environmentTitle: 'Environment type:',
+        hoursUnavailable: 'Hours unavailable',
         subtitleTemplate: 'Discover {{article}} {{noun}} of your type closest to you :)',
         article: {
           RESTAURANT: 'the',

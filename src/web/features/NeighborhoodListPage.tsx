@@ -41,7 +41,7 @@ export const NeighborhoodListPage: React.FC = () => {
   // Aliases para slugs especiais (acentuação ou variações)
   const slugAliases: Record<string, string[]> = {
     // Centro Histórico deve abranger variantes e áreas centrais adjacentes
-    "centro-historico": ["centro-historico", "centro", "se"],
+    "centro-historico": ["centro-historico", "centro-histórico", "Centro Histórico", "centro", "se"],
     // Rota /neighborhood/se deve considerar acentos
     "se": ["se"],
   };

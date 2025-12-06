@@ -228,6 +228,10 @@ export const PlaceListPage: React.FC = () => {
     // Helper: compute display value for the opening column per user's request
     function getOpeningDisplayForToday(place: any): string {
         const periods = getPeriodsForToday(place);
+        // If there is no patternId and no custom overrides, explicitly show 'hours unavailable'
+        if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
+            return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
+        }
         if (!periods || periods.length === 0) return '-';
 
         // if currently open
@@ -262,23 +266,36 @@ export const PlaceListPage: React.FC = () => {
     function getPlaceNeighborhood(place: any): string | undefined {
         const addrs = place?.addresses;
         if (!addrs || !Array.isArray(addrs) || addrs.length === 0) return undefined;
-        const main = addrs.find((a: any) => a.isMainUnity);
-        if (main) {
-            if (main.neighborhood) return main.neighborhood;
-            // try alternate keys (defensive for different data sources)
-            for (const key of Object.keys(main)) {
-                if (/neighbou?rhood/i.test(key) && main[key]) return main[key];
+
+        // prefer main unity neighborhood if present
+        const main = addrs.find((a: any) => a.isMainUnity) || addrs[0];
+        const candidateKeys = [/neighbou?rhood/i, /neighborhoodname/i, /bairro/i, /district/i, /suburb/i];
+
+        function findNeighborhood(obj: any) {
+            if (!obj) return undefined;
+            // direct common key
+            if (obj.neighborhood) return obj.neighborhood;
+            // other potential keys
+            for (const key of Object.keys(obj)) {
+                for (const rx of candidateKeys) {
+                    if (rx.test(key) && obj[key]) return obj[key];
+                }
             }
-            if (main.city) return main.city;
+            return undefined;
         }
-        // fallback to first non-empty neighborhood or city
+
+        const mainNeighborhood = findNeighborhood(main);
+        if (mainNeighborhood) return mainNeighborhood;
+
+        // search other addresses for any neighborhood-like key
         for (const a of addrs) {
-            if (!a) continue;
-            if (a.neighborhood) return a.neighborhood;
-            for (const key of Object.keys(a)) {
-                if (/neighbou?rhood/i.test(key) && a[key]) return a[key];
-            }
-            if (a.city) return a.city;
+            const n = findNeighborhood(a);
+            if (n) return n;
+        }
+
+        // final fallback: return city only if no neighborhood-like data exists
+        for (const a of addrs) {
+            if (a && a.city) return a.city;
         }
         // nothing found — emit a warning to aid debugging in production
         try {
