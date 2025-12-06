@@ -30,7 +30,6 @@ const ORDER_OPTIONS = [
 
 export const PlaceListPage: React.FC = () => {
     const { t } = useTranslation();
-    const { data: openingPatterns } = useOpeningPatterns();
     const { type: routeType } = useParams();
     const routeTypeRaw = routeType || "restaurants";
     const routeTypeLower = routeTypeRaw.toLowerCase();
@@ -42,6 +41,8 @@ export const PlaceListPage: React.FC = () => {
     const { data: nightlife } = useRecommendationList("nightlife");
     const { data: nature } = useRecommendationList("nature");
     const { data: touristSpots } = useRecommendationList("tourist-spot");
+    const { data: openingPatternsData } = useOpeningPatterns();
+    const openingPatterns = openingPatternsData || [];
 
     // Junta todos os lugares em um único array para filtros especiais
     const allPlaces = useMemo(() => [
@@ -81,12 +82,11 @@ export const PlaceListPage: React.FC = () => {
         return allPlaces.filter(p => p.type === mappedType);
     }, [allPlaces, mappedType, routeType, restaurants, openingPatterns]);
 
-    // Chips de ambiente (foodStyle + tags únicos)
+    // Chips de ambiente (tags únicos)
     const environments = useMemo(() => {
         const envSet = new Set<string>();
         filteredByType.forEach(p => {
             p.tags?.forEach((t: string) => envSet.add(t));
-            p.foodStyle?.forEach((f: string) => envSet.add(f));
         });
         const tagArr = Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
         if (tagArr.length > 0) {
@@ -94,7 +94,7 @@ export const PlaceListPage: React.FC = () => {
             return tagArr;
         }
 
-        // Fallback: se não houver tags/foodStyle, use os tipos de lugar presentes (ex: TOURIST_SPOT, RESTAURANT)
+        // Fallback: se não houver tags, use os tipos de lugar presentes (ex: TOURIST_SPOT, RESTAURANT)
         const typeSet = new Set<string>();
         filteredByType.forEach(p => { if (p.type) typeSet.add(p.type); });
         const typeArr = Array.from(typeSet).map(e => ({ label: getPlaceTypeLabel(e), value: e }));
@@ -144,7 +144,6 @@ export const PlaceListPage: React.FC = () => {
     })();
 
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
-    const [isListFading, setIsListFading] = useState<boolean>(false);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [showOrderDropdown, setShowOrderDropdown] = useState(false);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
@@ -152,12 +151,50 @@ export const PlaceListPage: React.FC = () => {
     // Filtro de ambiente
     const filteredPlaces = useMemo(() => {
         if (!selectedEnv) return filteredByType;
-        return filteredByType.filter(p =>
-            p.tags?.includes(selectedEnv) ||
-            p.foodStyle?.includes(selectedEnv) ||
-            p.tags?.includes(selectedEnv)
-        );
+        const normalize = (s: any) => String(s || '').trim().toLowerCase();
+        const sel = normalize(selectedEnv);
+        return filteredByType.filter(p => {
+            if (normalize(p.type) === sel) return true;
+            if (Array.isArray(p.tags)) {
+                for (const tg of p.tags) if (normalize(tg) === sel) return true;
+            }
+            return false;
+        });
     }, [filteredByType, selectedEnv]);
+
+    // Debug: log selected environment and result counts to aid troubleshooting
+    React.useEffect(() => {
+        if (!selectedEnv) return;
+        try {
+            console.log(`[PlaceListPage] selectedEnv=${selectedEnv} filteredByType=${filteredByType.length} result=${filteredPlaces.length} sampleIds=${filteredPlaces.slice(0,5).map(p=>p.id).join(',')}`);
+        } catch (_) {}
+    }, [selectedEnv, filteredByType, filteredPlaces]);
+
+    // Debug: print available environments (label/value) to verify what the UI shows
+    React.useEffect(() => {
+        try {
+            console.log('[PlaceListPage] environments=', environments.map(e => ({ label: e.label, value: e.value })));
+            const sample = filteredByType.slice(0, 5);
+            console.log('[PlaceListPage] filteredByType sample (5):', sample.map(p => ({ id: p.id, name: p.name, type: p.type, tags: p.tags })));
+        } catch (_) {}
+    }, [environments, filteredByType]);
+
+    // Debug: test filter matching when selectedEnv changes
+    React.useEffect(() => {
+        if (!selectedEnv) return;
+        try {
+            const normalize = (s: any) => String(s || '').trim().toLowerCase();
+            const sel = normalize(selectedEnv);
+            const matches = filteredByType.filter(p => {
+                if (normalize(p.type) === sel) return true;
+                if (Array.isArray(p.tags)) {
+                    for (const tg of p.tags) if (normalize(tg) === sel) return true;
+                }
+                return false;
+            });
+            console.log(`[PlaceListPage] selectedEnv="${selectedEnv}" normalized="${sel}" matches=${matches.length} samples=[${matches.slice(0,3).map(p=>`${p.id}:${p.name}`).join(', ')}]`);
+        } catch (e) { console.error('Debug filter error:', e); }
+    }, [selectedEnv, filteredByType]);
 
     // Ordenação
     const sortedPlaces = useMemo(() => {
@@ -348,8 +385,7 @@ export const PlaceListPage: React.FC = () => {
                                 <button
                                     type="button"
                                     onClick={() => {
-                                        setIsListFading(true);
-                                        setTimeout(() => { setSelectedEnv(null); setIsListFading(false); }, 220);
+                                        setSelectedEnv(null);
                                     }}
                                     className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                                         selectedEnv === null 
@@ -366,8 +402,7 @@ export const PlaceListPage: React.FC = () => {
                                         type="button"
                                         onClick={() => {
                                             const next = selectedEnv === env.value ? null : env.value;
-                                            setIsListFading(true);
-                                            setTimeout(() => { setSelectedEnv(next); setIsListFading(false); }, 220);
+                                            setSelectedEnv(next);
                                         }}
                                         className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                                             selectedEnv === env.value 
@@ -445,9 +480,10 @@ export const PlaceListPage: React.FC = () => {
                 </div>
             </div>
             {/* Lista de lugares */}
-            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
+            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
+                {console.log('[PlaceListPage SECTION] selectedEnv:', selectedEnv, 'sortedPlaces.length:', sortedPlaces.length, 'filteredPlaces.length:', filteredPlaces.length) || null}
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
-                    <div className="rounded-t-lg overflow-hidden">
+                    <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}`}>
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
                             <div className="w-1/3 px-6 sm:px-14 py-3">{t('list.nameHeader')}</div>
                             <div className={isOpensToday ? 'w-1/4 py-3 ps-4 sm:ps-6' : 'w-1/3 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
@@ -457,10 +493,11 @@ export const PlaceListPage: React.FC = () => {
                         </div>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
                         {sortedPlaces.map((place, idx) => {
+                            console.log('[PlaceListPage LIST MAP] rendering place id:', place.id, 'name:', place.name, 'total in sortedPlaces:', sortedPlaces.length);
                             const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
                             return (
                                 <div
-                                    key={place.id}
+                                    key={`${place.id}-${selectedEnv || 'all'}`}
                                     className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
@@ -481,7 +518,9 @@ export const PlaceListPage: React.FC = () => {
                                                     NATURE: "nature",
                                                     TOURIST_SPOT: "tourist-spot",
                                                 };
-                                                const slug = typeToSlug[mappedType] || routeTypeLower;
+                                                // Use the actual place.type when available (fixes 'Abrem hoje' mixed lists)
+                                                const placeTypeKey = place.type || mappedType;
+                                                const slug = typeToSlug[placeTypeKey] || routeTypeLower;
                                                 navigate(`/place/${slug}/${place.id}`);
                                             }}
                                             size="md"
@@ -515,8 +554,7 @@ export const PlaceListPage: React.FC = () => {
                     onClose={() => setShowEnvironmentModal(false)}
                     onSelect={(env) => {
                         const next = env?.value || null;
-                        setIsListFading(true);
-                        setTimeout(() => { setSelectedEnv(next); setIsListFading(false); }, 220);
+                        setSelectedEnv(next);
                     }}
                 />
             )}

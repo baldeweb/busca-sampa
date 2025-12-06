@@ -23,7 +23,6 @@ interface PlaceDetailProps {
     menuUrl: string;
     notes: string[];
     onBack: () => void;
-    foodStyle?: string[];
     tags?: string[];
 }
 
@@ -45,14 +44,13 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     onBack,
     onShowOpeningHours,
     isAlreadyVisited,
-    foodStyle = [],
     tags = [],
 }) => {
     const { t } = useTranslation();
     const [showVisitModal, setShowVisitModal] = React.useState(false);
 
-    // Ambiente: foodStyle para RESTAURANT, tags para outros
-    const ambienteList: string[] = type === "RESTAURANT" ? foodStyle : tags;
+    // Ambiente: use `tags` consistently
+    const ambienteList: string[] = tags || [];
 
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">

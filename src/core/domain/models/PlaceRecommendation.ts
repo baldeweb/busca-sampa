@@ -16,7 +16,8 @@ export interface PlaceRecommendation {
     isOpenOnHolidays: boolean;
     shouldSchedule: boolean;
     notes: string[];
-    foodStyle: string[];
+    // migrated: use `tags` for environment/style descriptors
+    tags: string[];
     priceRange: PriceRange;
     addresses: Address[];
     linkMenu: string;

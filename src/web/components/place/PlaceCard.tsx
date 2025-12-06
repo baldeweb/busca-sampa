@@ -11,7 +11,7 @@ export function PlaceCard({ place }: Props) {
     const neighborhood = mainAddress?.neighborhood ?? "São Paulo";
     const isVisited = place.isAlreadyVisited;
     const price = getPriceRangeLabel(place.priceRange);
-    const style = place.foodStyle?.[0] ?? "";
+    const style = place.tags?.[0] ?? "";
     const navigate = useNavigate();
 
     function resolveCategoryKey(): string {
