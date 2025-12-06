@@ -481,7 +481,6 @@ export const PlaceListPage: React.FC = () => {
             </div>
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
-                {console.log('[PlaceListPage SECTION] selectedEnv:', selectedEnv, 'sortedPlaces.length:', sortedPlaces.length, 'filteredPlaces.length:', filteredPlaces.length) || null}
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}`}>
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
