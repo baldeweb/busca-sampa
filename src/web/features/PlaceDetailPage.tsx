@@ -106,6 +106,7 @@ export function PlaceDetailPage() {
             addresses={place.addresses || []}
         instagramUrl={place.linkInstagram || ""}
         menuUrl={place.linkMenu || ""}
+        websiteUrl={place.linkWebsite || ""}
         notes={place.notes || []}
         onBack={() => navigate(-1)}
         onShowOpeningHours={() => setShowModal(true)}
