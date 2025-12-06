@@ -92,44 +92,7 @@ export function HomePage() {
     setSelectedDistance(n);
   }
 
-  function requestUserLocation(force?: boolean) {
-    if (!navigator.geolocation) {
-      setGeoError("Geolocalização não suportada");
-      return;
-    }
-    if (!force) {
-      // tenta usar cache se existir
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached);
-          if (parsed && parsed.latitude && parsed.longitude && parsed.timestamp) {
-            setUserLocation({ latitude: parsed.latitude, longitude: parsed.longitude });
-            return; // já restaurou do cache
-          }
-        } catch (_) { }
-      }
-    }
-    setIsRequestingLocation(true);
-    setGeoError(null);
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setUserLocation({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
-        const payload = {
-          latitude: pos.coords.latitude,
-          longitude: pos.coords.longitude,
-          timestamp: Date.now(),
-        };
-        localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
-        setIsRequestingLocation(false);
-      },
-      (err) => {
-        setGeoError(err.message);
-        setIsRequestingLocation(false);
-      },
-      { enableHighAccuracy: true, timeout: 10000 }
-    );
-  }
+
 
   // Carrega categorias quando temos localização (para evitar requisição desnecessária)
   useEffect(() => {
@@ -234,9 +197,75 @@ export function HomePage() {
     requestUserLocation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const { t } = useTranslation();
   useDocumentTitle(t('header.title'));
+
+  async function requestUserLocation(force?: boolean) {
+    if (!navigator.geolocation) {
+      setGeoError(t('home.locationNotSupported') || "Geolocalização não suportada");
+      return;
+    }
+    if (!force) {
+      // tenta usar cache se existir
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          if (parsed && parsed.latitude && parsed.longitude && parsed.timestamp) {
+            setUserLocation({ latitude: parsed.latitude, longitude: parsed.longitude });
+            return; // já restaurou do cache
+          }
+        } catch (_) { }
+      }
+    }
+
+    setIsRequestingLocation(true);
+    setGeoError(null);
+
+    // If Permissions API is available, check for denied state to avoid silent failure
+    try {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore - PermissionName typing in some envs
+      if (navigator.permissions && (navigator.permissions as any).query) {
+        try {
+          const status = await (navigator.permissions as any).query({ name: 'geolocation' });
+          if (status && status.state === 'denied') {
+            setGeoError(t('home.locationDeniedInstructions') || 'Permissão de localização negada. Por favor, habilite a localização nas configurações do seu navegador.');
+            setIsRequestingLocation(false);
+            return;
+          }
+        } catch (_) {
+          // ignore permission query errors and fallback to getCurrentPosition call
+        }
+      }
+    } catch (_) {
+      // ignore
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setUserLocation({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
+        const payload = {
+          latitude: pos.coords.latitude,
+          longitude: pos.coords.longitude,
+          timestamp: Date.now(),
+        };
+        localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+        setIsRequestingLocation(false);
+      },
+      (err) => {
+        // If permission denied, show friendly instruction
+        // err.code === 1 is PERMISSION_DENIED
+        if ((err as any)?.code === 1) {
+          setGeoError(t('home.locationDeniedInstructions') || err.message);
+        } else {
+          setGeoError(err.message);
+        }
+        setIsRequestingLocation(false);
+      },
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  }
   const MARCO_ZERO_LAT = -23.4780169;
   const MARCO_ZERO_LNG = -46.7378296;
   const distanceFromMarco = userLocation

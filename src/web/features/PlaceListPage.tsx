@@ -210,8 +210,8 @@ export const PlaceListPage: React.FC = () => {
 
     const isOpensToday = routeTypeLower === 'abrem-hoje' || mappedType === 'ABREM-HOJE';
 
-    // Helper: get raw periods for today (merged pattern + overrides)
-    function getPeriodsForToday(place: any): any[] {
+    // Helper: get raw periods for a relative day (0 = today, 1 = tomorrow)
+    function getPeriodsForDay(place: any, dayOffset = 0): any[] {
         const periods: any[] = [];
         const patternId = place.openingHours?.patternId;
         if (patternId) {
@@ -222,8 +222,13 @@ export const PlaceListPage: React.FC = () => {
             periods.push(...place.openingHours.customOverrides);
         }
         const now = new Date();
-        const currentDay = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][now.getDay()];
-        return periods.filter((p: any) => p.open && (p.days?.includes(currentDay) || p.days?.includes('EVERYDAY')));
+        const dayNames = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+        const targetDay = dayNames[(now.getDay() + dayOffset) % 7];
+        return periods.filter((p: any) => p.open && (p.days?.includes(targetDay) || p.days?.includes('EVERYDAY')));
+    }
+
+    function getPeriodsForToday(place: any): any[] {
+        return getPeriodsForDay(place, 0);
     }
 
     // Helper: compute display value for the opening column per user's request
@@ -258,6 +263,19 @@ export const PlaceListPage: React.FC = () => {
             const diff = nextOpenMinutes - currentMinutes;
             if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
             return nextOpenStr;
+        }
+
+        // No more openings today — check tomorrow's first opening and present it (better than '-')
+        const tomorrowPeriods = getPeriodsForDay(place, 1);
+        if (tomorrowPeriods && tomorrowPeriods.length > 0) {
+            // find earliest open tomorrow
+            let earliest: string | null = null;
+            function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+            for (const p of tomorrowPeriods) {
+                if (!p.open) continue;
+                if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
+            }
+            if (earliest) return earliest; // small UX: show time (tomorrow)
         }
 
         return '-';

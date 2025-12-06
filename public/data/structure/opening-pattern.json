@@ -167,7 +167,7 @@
   },
   {
     "id": "OBURGUER_DAYTIME",
-    "description": "Horários do restaurante O Burguer.",
+    "description": "Horários do restaurante 'O' Burguer.",
     "periods": [
       { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "23:00" },
       { "days": ["FRIDAY"], "open": "17:00", "close": "00:00" },
@@ -760,6 +760,13 @@
     "description": "Horários do MASSP",
     "periods": [
       { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "MERCADOMUNICIPAL_DAYTIME",
+    "description": "Horários do Mercado Municipal de São Paulo",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "06:00", "close": "18:00" }
     ]
   }
 ]

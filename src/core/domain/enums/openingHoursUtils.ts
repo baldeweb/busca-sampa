@@ -15,8 +15,13 @@ export function isOpenNow(periods: Period[]): boolean {
       if (period.days.includes(currentDay) || period.days.includes("EVERYDAY")) {
         const openMinutes = parseTime(period.open);
         const closeMinutes = parseTime(period.close);
-        if (openMinutes <= currentMinutes && currentMinutes < closeMinutes) {
-          return true;
+        // Normal same-day window
+        if (openMinutes <= closeMinutes) {
+          if (openMinutes <= currentMinutes && currentMinutes < closeMinutes) return true;
+        } else {
+          // Overnight window (e.g. open 22:00, close 05:00)
+          // Consider open if current time is after open (today) or before close (next day)
+          if (currentMinutes >= openMinutes || currentMinutes < closeMinutes) return true;
         }
       }
     }
