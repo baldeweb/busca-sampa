@@ -1242,7 +1242,7 @@
     },
     {
         "id": 34,
-        "name": "Neoquímica Arena (Itaquerão)",
+        "name": "Neo Química Arena (Itaquerão)",
         "type": "TOURIST_SPOT",
         "phones": [
             {
@@ -1259,7 +1259,9 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Vai Corinthians!"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
