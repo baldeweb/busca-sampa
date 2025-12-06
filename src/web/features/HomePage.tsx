@@ -237,6 +237,12 @@ export function HomePage() {
 
   const { t } = useTranslation();
   useDocumentTitle(t('header.title'));
+  const MARCO_ZERO_LAT = -23.4780169;
+  const MARCO_ZERO_LNG = -46.7378296;
+  const distanceFromMarco = userLocation
+    ? distanceInKm(userLocation.latitude, userLocation.longitude, MARCO_ZERO_LAT, MARCO_ZERO_LNG)
+    : null;
+  const isOutsideGreaterRegion = distanceFromMarco !== null ? distanceFromMarco > 40 : false;
   return (
     <div>
       {/* Seção: E aí, onde é hoje? */}
@@ -251,7 +257,7 @@ export function HomePage() {
               <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
               <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
             </div>
-            {userLocation && !noNearbyResults && (
+            {userLocation && !noNearbyResults && !isOutsideGreaterRegion && (
               <div className="ml-4">
                 <button
                   type="button"
@@ -291,15 +297,17 @@ export function HomePage() {
                         )}
                         {!loadingNearby && noNearbyResults && (
                   <div className="text-center text-base text-gray-300 flex flex-col items-center gap-5 py-6">
-                    <p>{t('home.noNearbyResultsRadius')}</p>
-                    <ActionButton
-                      type="button"
-                      onClick={() => setIsDistanceModalOpen(true)}
-                      size="md"
-                      className="px-4"
-                    >
-                      {t('common.changeDistance')}
-                    </ActionButton>
+                    <p>{isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}</p>
+                    {!isOutsideGreaterRegion && (
+                      <ActionButton
+                        type="button"
+                        onClick={() => setIsDistanceModalOpen(true)}
+                        size="md"
+                        className="px-4"
+                      >
+                        {t('common.changeDistance')}
+                      </ActionButton>
+                    )}
                   </div>
                 )}
                 {!loadingNearby &&

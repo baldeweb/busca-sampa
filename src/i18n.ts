@@ -51,7 +51,8 @@ const resources = {
         neighborhoodsTagline: 'Tá em algum desses bairros? Tem coisa boa por perto!',
         viewMoreNeighborhoods: 'ver mais bairros ►',
         viewMore: 'ver mais',
-        noNearbyResultsRadius: 'Não há nada dentro das proximidades no raio escolhido.'
+        noNearbyResultsRadius: 'Não há nada dentro das proximidades no raio escolhido.',
+        outsideGreaterSP: 'Você está fora da região da Grande SP. Que tal visitar a cidade em breve? :)'
       },
       header: {
         title: 'Role Paulista',
@@ -204,7 +205,8 @@ const resources = {
         neighborhoodsTagline: '¿Estás en uno de estos barrios? ¡Hay cosas buenas cerca!',
         viewMoreNeighborhoods: 'ver más barrios >',
         viewMore: 'ver más',
-        noNearbyResultsRadius: 'No hay lugares dentro del radio elegido.'
+        noNearbyResultsRadius: 'No hay lugares dentro del radio elegido.',
+        outsideGreaterSP: 'Estás fuera de la región del Gran São Paulo. ¿Qué tal visitar la ciudad pronto? :)'
       },
       header: {
         title: 'Role Paulista',
@@ -333,7 +335,8 @@ const resources = {
         neighborhoodsTagline: 'Vous êtes dans un de ces quartiers ? Des bons endroits à proximité !',
         viewMoreNeighborhoods: 'voir plus de quartiers >',
         viewMore: 'voir plus',
-        noNearbyResultsRadius: 'Aucun endroit dans le rayon choisi.'
+        noNearbyResultsRadius: 'Aucun endroit dans le rayon choisi.',
+        outsideGreaterSP: 'Vous êtes en dehors de la région du Grand São Paulo. Pourquoi ne pas visiter la ville bientôt ? :)'
       },
       header: { title: 'Role Paulista', tagline: 'La meilleure recommandation des lieux visités, à portée de main' },
       common: {
@@ -367,7 +370,7 @@ const resources = {
   },
   ru: {
     translation: {
-      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', viewMore: 'ещё', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.' },
+      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы >', viewMore: 'ещё', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
@@ -390,7 +393,7 @@ const resources = {
   },
   zh: {
     translation: {
-      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', viewMore: '更多', noNearbyResultsRadius: '所选半径内没有地点。' },
+      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区 >', viewMore: '更多', noNearbyResultsRadius: '所选半径内没有地点。', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)' },
       header: { title: 'Role Paulista', tagline: '我去过的最佳推荐，一触即达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
@@ -423,7 +426,8 @@ const resources = {
         neighborhoodsTagline: 'Are you in one of these neighborhoods? Good stuff nearby!',
         viewMoreNeighborhoods: 'see more neighborhoods >',
         viewMore: 'see more',
-        noNearbyResultsRadius: 'No places within the chosen radius.'
+        noNearbyResultsRadius: 'No places within the chosen radius.',
+        outsideGreaterSP: 'You are outside the Greater São Paulo region. How about visiting the city soon? :)'
       },
       header: {
         title: 'Role Paulista',
@@ -574,7 +578,8 @@ const resources = {
         neighborhoodsTagline: 'Bist du in einem dieser Viertel? Gute Orte in der Nähe!',
         viewMoreNeighborhoods: 'mehr Viertel anzeigen >',
         viewMore: 'mehr anzeigen',
-        noNearbyResultsRadius: 'Keine Orte im ausgewählten Radius.'
+        noNearbyResultsRadius: 'Keine Orte im ausgewählten Radius.',
+        outsideGreaterSP: 'Sie befinden sich außerhalb der Metropolregion São Paulo. Wie wäre es, die Stadt bald zu besuchen? :)'
       },
       header: {
         title: 'Role Paulista',
@@ -633,7 +638,8 @@ const resources = {
         neighborhoodsTagline: 'これらの地域のどれかにいますか？近くに良い場所があります！',
         viewMoreNeighborhoods: 'もっと見る >',
         viewMore: 'もっと見る',
-        noNearbyResultsRadius: '選択した半径内に場所がありません。'
+        noNearbyResultsRadius: '選択した半径内に場所がありません。',
+        outsideGreaterSP: 'あなたはグランサンパウロ地域の外にいます。近いうちに街を訪れてみませんか？ :)'
       },
       header: {
         title: 'Role Paulista',
@@ -693,7 +699,8 @@ const resources = {
         neighborhoodsTagline: 'هل أنت في أحد هذه الأحياء؟ هناك أماكن جيدة بالقرب منك!',
         viewMoreNeighborhoods: 'عرض المزيد من الأحياء >',
         viewMore: 'عرض المزيد',
-        noNearbyResultsRadius: 'لا توجد أماكن ضمن النطاق المحدد.'
+        noNearbyResultsRadius: 'لا توجد أماكن ضمن النطاق المحدد.',
+        outsideGreaterSP: 'أنت خارج منطقة ساو باولو الكبرى. ماذا عن زيارة المدينة قريبًا؟ :)'
       },
       header: {
         title: 'Role Paulista',
@@ -753,7 +760,8 @@ const resources = {
         neighborhoodsTagline: 'Sei in uno di questi quartieri? Ci sono bei posti nelle vicinanze!',
         viewMoreNeighborhoods: 'vedi altri quartieri >',
         viewMore: 'vedi altro',
-        noNearbyResultsRadius: 'Nessun luogo nel raggio selezionato.'
+        noNearbyResultsRadius: 'Nessun luogo nel raggio selezionato.',
+        outsideGreaterSP: 'Sei al di fuori della regione della Grande San Paolo. Che ne dici di visitare la città presto? :)'
       },
       header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione dei posti che ho visitato, a portata di tocco' },
       common: {
@@ -809,7 +817,8 @@ const resources = {
         neighborhoodsTagline: 'Ben je in een van deze buurten? Leuke plekken in de buurt!',
         viewMoreNeighborhoods: 'meer buurten bekijken >',
         viewMore: 'meer bekijken',
-        noNearbyResultsRadius: 'Geen plaatsen binnen de gekozen straal.'
+        noNearbyResultsRadius: 'Geen plaatsen binnen de gekozen straal.',
+        outsideGreaterSP: 'Je bevindt je buiten de regio Groot-São Paulo. Wat dacht je ervan om de stad binnenkort te bezoeken? :)'
       },
       header: { title: 'Role Paulista', tagline: 'De beste aanbeveling van plekken waar ik ben geweest, binnen handbereik' },
       common: {
@@ -866,7 +875,8 @@ const resources = {
         neighborhoodsTagline: 'Bu mahallelerden birindeyseniz? Yakında güzel yerler var!',
         viewMoreNeighborhoods: 'daha fazla mahalle göster >',
         viewMore: 'daha fazla göster',
-        noNearbyResultsRadius: 'Seçilen yarıçap içinde yer yok.'
+        noNearbyResultsRadius: 'Seçilen yarıçap içinde yer yok.',
+        outsideGreaterSP: 'Büyük São Paulo bölgesi dışında bulunuyorsunuz. Yakında şehri ziyaret etmeye ne dersiniz? :)'
       },
       header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — tek dokunuşla' },
       common: {
@@ -912,7 +922,8 @@ const resources = {
         neighborhoodsTagline: 'Jesteś w jednej z tych dzielnic? Dobre miejsca w pobliżu!',
         viewMoreNeighborhoods: 'zobacz więcej dzielnic >',
         viewMore: 'zobacz więcej',
-        noNearbyResultsRadius: 'Brak miejsc w wybranym promieniu.'
+        noNearbyResultsRadius: 'Brak miejsc w wybranym promieniu.',
+        outsideGreaterSP: 'Znajdujesz się poza regionem Wielkiego São Paulo. Może odwiedzisz miasto wkrótce? :)'
       },
       header: { title: 'Role Paulista', tagline: 'Najlepsze rekomendacje miejsc, w których byłem — na wyciągnięcie ręki' },
       common: {
