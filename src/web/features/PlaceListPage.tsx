@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { useDocumentTitle } from "@/web/hooks/useDocumentTitle";
 import { BackHeader } from '@/web/components/layout/BackHeader';
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
+import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
@@ -87,9 +88,18 @@ export const PlaceListPage: React.FC = () => {
             p.tags?.forEach((t: string) => envSet.add(t));
             p.foodStyle?.forEach((f: string) => envSet.add(f));
         });
-        const arr = Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
-        arr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
-        return arr;
+        const tagArr = Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
+        if (tagArr.length > 0) {
+            tagArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+            return tagArr;
+        }
+
+        // Fallback: se não houver tags/foodStyle, use os tipos de lugar presentes (ex: TOURIST_SPOT, RESTAURANT)
+        const typeSet = new Set<string>();
+        filteredByType.forEach(p => { if (p.type) typeSet.add(p.type); });
+        const typeArr = Array.from(typeSet).map(e => ({ label: getPlaceTypeLabel(e), value: e }));
+        typeArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+        return typeArr;
     }, [filteredByType]);
 
     // Helper: get opening times for today for a place (returns array of open times strings like '08:00')
@@ -294,7 +304,7 @@ export const PlaceListPage: React.FC = () => {
                         </div>
                     </div>
                     {/* Grid de tipos de ambiente */}
-                    {environments.length > 1 && (
+                    {environments.length > 0 && (
                         <div className="bg-[#F5F5F5] text-black pb-4">
                             <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
                             <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-xs w-full">
@@ -392,7 +402,7 @@ export const PlaceListPage: React.FC = () => {
                 </div>
             </div>
             {/* Lista de lugares */}
-            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden">
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">

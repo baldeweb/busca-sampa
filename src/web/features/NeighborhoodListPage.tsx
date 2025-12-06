@@ -142,7 +142,7 @@ export const NeighborhoodListPage: React.FC = () => {
       </section>
 
       {/* Filtro por tipo (grid, igual à página de lugares) */}
-      {environments.length > 1 && (
+      {environments.length > 0 && (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
             <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
@@ -240,7 +240,7 @@ export const NeighborhoodListPage: React.FC = () => {
       </div>
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg">
         <div className="mx-auto max-w-5xl px-0 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">

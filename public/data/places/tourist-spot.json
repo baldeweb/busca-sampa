@@ -82,7 +82,7 @@
         "linkMenu": "",
         "linkInstagram": "https://www.instagram.com/ctnsp/",
         "tags": [
-            "LIVE_MUSIC"
+            "LIVE_MUSIC", "CULTURE"
         ]
     },
     {
@@ -125,7 +125,7 @@
         ],
         "linkWebsite": "http://www.memorial.org.br/",
         "linkInstagram": "https://www.instagram.com/memorialdaamericalatina/",
-        "tags": []
+        "tags": ["CULTURE"]
     },
     {
         "id": 4,
@@ -147,7 +147,8 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": true,
         "notes": [
-            "Necessário agendar para realizar a visitação"
+            "Necessário agendar para realizar a visitação",
+            "Entrada gratuita às terças-feiras"
         ],
         "priceRange": "MEDIUM",
         "addresses": [
@@ -165,7 +166,7 @@
         ],
         "linkMenu": "",
         "linkInstagram": "https://www.instagram.com/masp/",
-        "tags": []
+        "tags": ["ART_EXHIBITION", "CULTURE", "MUSEUM"]
     },
     {
         "id": 5,
@@ -199,7 +200,8 @@
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.energiaesaneamento.org.br/",
-        "linkInstagram": "https://www.instagram.com/museudaenergia/"
+        "linkInstagram": "https://www.instagram.com/museudaenergia/",
+        "tags": ["MUSEUM"]
     },
     {
         "id": 6,
@@ -237,7 +239,8 @@
         ],
         "linkMenu": "",
         "linkWebsite": "http://museudaimigracao.org.br/",
-        "linkInstagram": "https://www.instagram.com/museudaimigracao/"
+        "linkInstagram": "https://www.instagram.com/museudaimigracao/",
+        "tags": ["MUSEUM"]
     },
     {
         "id": 7,
@@ -289,38 +292,38 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1126279452",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEUBIOLOGICO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
+        "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Vital Brasil",
+                "number": "1500",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Butantã",
+                "postalCode": "05503-900",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.564589,
+                "longitude": -46.721756
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://butantan.gov.br/atracoes/museu-biologico",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 9,
@@ -328,77 +331,40 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1134683360",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEUPOLICIACIVIL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
+        "isOpenOnSundays": false,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "isOpenOnHolidays": false,
+        "shouldSchedule": true,
+        "notes": [
+            "Museu da Polícia Civil com diversas exposições sobre a história da polícia em São Paulo"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Prof. Reynaldo Porchat",
+                "number": "219",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Butantã",
+                "postalCode": "05508-100",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.566303,
+                "longitude": -46.7154282
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.policiacivil.sp.gov.br/portal/faces/pages_home/institucional/museuPoliciaCivil?_afrLoop=1903915162033890&_afrWindowMode=0&_afrWindowId=null#!%40%40%3F_afrWindowId%3Dnull%26_afrLoop%3D1903915162033890%26_afrWindowMode%3D0%26_adf.ctrl-state%3D1vv7ecbsd_4",
         "linkInstagram": "",
-        "tags": []
-    },
-    {
-        "id": 10,
-        "name": "Museu de Arqueologia e Etnologia",
-        "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 11,
@@ -406,12 +372,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1126279300",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEUHISTORICOBUTANTAN_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -424,59 +390,56 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Vital Brasil",
+                "number": "1500",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Butantã",
+                "postalCode": "05503-900",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5645096,
+                "longitude": -46.7198953
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.butantan.gov.br/cultura/museus/museuhistorico",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 12,
         "name": "Praça do Relógio da USP",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Localizado dentro da Universidade de São Paulo (USP), o relógio é um ponto de encontro popular entre estudantes e visitantes"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "do Anfiteatro",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Butantã",
+                "postalCode": "05508-060",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5597125,
+                "longitude": -46.726788
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["PARK"]
     },
     {
         "id": 13,
@@ -484,12 +447,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "11966332598",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BASILICAARAUTOSDOEVANGELHO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -502,59 +465,20 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "street": "Avaí",
+                "number": "430",
+                "city": "Caieiras",
+                "neighborhood": "Santa Inês",
+                "postalCode": "07733-005",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.4095783,
+                "longitude": -46.6733394
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://basilicaarautos.com.br/",
         "linkInstagram": "",
-        "tags": []
-    },
-    {
-        "id": 14,
-        "name": "Sambódromo Anhembi",
-        "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "tags": ["RELIGIOUS_SITE"]
     },
     {
         "id": 15,
@@ -562,12 +486,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133214400",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CAIXACULTURAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -576,24 +500,24 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça da Sé",
+                "number": "111",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01016-040",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5495057,
+                "longitude": -46.6341659
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.caixacultural.gov.br/Paginas/SaoPaulo.aspx",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["HISTORIC_PLACE", "MUSEUM"]
     },
     {
         "id": 16,
@@ -601,7 +525,7 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1131076832",
                 "isWhatsApp": false
             }
         ],
@@ -614,38 +538,44 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Também chamada de Catedral Metropolitana Nossa Senhora da Assunção",
+            "Catedral Metropolitana de São Paulo, um dos principais marcos históricos e religiosos da cidade",
+            "Localizada na Praça da Sé, no centro histórico de São Paulo",
+            "Existe um tour guiado disponível para visitantes interessados em conhecer mais sobre a história e arquitetura da catedral",
+            "É possível agendar um Brunch na Catedral da Sé. Necessário agendar com alguns meses de antecedência"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça da Sé",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01001-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5512802,
+                "longitude": -46.6369123
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://catedraldasesp.com/",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
     {
         "id": 17,
-        "name": "Centro Cultural Banco do Brasil",
+        "name": "Centro Cultural Banco do Brasil (CCBB)",
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1142970600",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CCBB_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -653,25 +583,27 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Edifício de 1901 que abriga um centro de exposições e um teatro com cinema, performances e obras de arte."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Álvares Penteado",
+                "number": "112",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01012-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5474747,
+                "longitude": -46.6347657
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://ccbb.com.br/sao-paulo/programacao/",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["HISTORIC_PLACE", "ART_EXHIBITION", "CULTURE"]
     },
     {
         "id": 18,
@@ -679,12 +611,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1132595917",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "EDIFICIOCOPAN_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -692,25 +624,30 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Projetado por Oscar Niemeyer, o Edifício Copan é um dos marcos arquitetônicos mais famosos de São Paulo",
+            "Localizado na Avenida Ipiranga, no centro da cidade",
+            "É possível fazer uma visita guiada na cobertura do edifício",
+            "O local de saída no passeio é na ALA F no prédio"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Ipiranga",
+                "number": "200",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01046-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5466147,
+                "longitude": -46.6474209
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.copansp.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["HISTORIC_PLACE"]
     },
     {
         "id": 19,
@@ -718,12 +655,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133265393",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MASSP_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -731,64 +668,68 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Coleção de objetos religiosos, incluindo altares, pinturas e livros no histórico mosteiro da Luz."
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Tiradentes",
+                "number": "676",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Luz",
+                "postalCode": "01102-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5304958,
+                "longitude": -46.6340982
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "linkWebsite": "http://museuartesacra.org.br/",
+        "linkInstagram": "https://www.instagram.com/museuartesacra/",
+        "tags": ["MUSEUM", "RELIGIOUS_SITE"]
     },
     {
         "id": 20,
-        "name": "Mercado Municipal Paulistano",
+        "name": "Mercado Municipal de São Paulo",
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1145801390",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MERCADOMUNICIPAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Prédio histórico com praça de alimentação e boxes que vendem frutas raras, verduras, legumes e laticínios."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "da Cantareira",
+                "number": "306",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01024-900",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5420217,
+                "longitude": -46.631986
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "linkWebsite": "https://linktr.ee/mercadaospoficial?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn6YHLAbYGaKfhQdtFm_SY9u8TtC-Oiy2pTrs8ZmCmYpCZO1RY9gugrq9Z-s0_aem_87DhFjJR_-jwExxTAlW0oA",
+        "linkInstagram": "https://www.instagram.com/mercadaospoficial/",
+        "tags": ["SHOP_LOCATION", "HISTORIC_PLACE"]
     },
     {
         "id": 21,
@@ -827,7 +768,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
     {
         "id": 22,
@@ -866,7 +807,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 23,
@@ -905,7 +846,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 24,
@@ -944,7 +885,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 25,
@@ -983,11 +924,11 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM", "CULTURE"]
     },
     {
         "id": 26,
-        "name": "Pateo Collegio",
+        "name": "Pateo do Collegio",
         "type": "TOURIST_SPOT",
         "phones": [
             {
@@ -1022,7 +963,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
     {
         "id": 27,
@@ -1043,7 +984,9 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Entrada gratuita aos sábados"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
@@ -1061,7 +1004,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["CULTURE", "HISTORIC_PLACE"]
     },
     {
         "id": 28,
@@ -1100,7 +1043,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["OPENED_SPACE"]
     },
     {
         "id": 29,
@@ -1139,7 +1082,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["OPENED_SPACE"]
     },
     {
         "id": 30,
@@ -1178,7 +1121,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["LIVE_MUSIC", "HISTORIC_PLACE", "CULTURE"]
     },
     {
         "id": 31,
@@ -1217,7 +1160,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["THEATER", "LIVE_MUSIC", "HISTORIC_PLACE", "CULTURE"]
     },
     {
         "id": 32,
@@ -1256,7 +1199,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["OPENED_SPACE"]
     },
     {
         "id": 33,
@@ -1295,7 +1238,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["THEATER", "CULTURE"]
     },
     {
         "id": 34,
@@ -1334,46 +1277,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
-    },
-    {
-        "id": 35,
-        "name": "MCB - Museu da Casa Brasileira",
-        "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": []
+        "tags": ["STADIUM", "TOUR"]
     },
     {
         "id": 36,
@@ -1412,7 +1316,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM"]
     },
     {
         "id": 37,
@@ -1451,7 +1355,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
     {
         "id": 38,
@@ -1490,7 +1394,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["SHOP_LOCATION"]
     },
     {
         "id": 39,
@@ -1529,7 +1433,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["SHOP_LOCATION"]
     },
     {
         "id": 40,
@@ -1568,7 +1472,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM", "CULTURE"]
     },
     {
         "id": 41,
@@ -1607,7 +1511,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["STADIUM", "TOUR"]
     },
     {
         "id": 42,
@@ -1646,7 +1550,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["OPENED_SPACE", "MONUMENT"]
     },
     {
         "id": 43,
@@ -1685,7 +1589,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["MUSEUM", "CULTURE"]
     },
     {
         "id": 44,
@@ -1724,7 +1628,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["OPENED_SPACE", "MONUMENT"]
     },
     {
         "id": 45,
@@ -1763,7 +1667,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["FUN"]
     },
     {
         "id": 46,
@@ -1802,7 +1706,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["ART_EXHIBITION"]
     },
     {
         "id": 47,
@@ -1841,7 +1745,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["SHOP_LOCATION"]
     },
     {
         "id": 48,
@@ -1880,7 +1784,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["FUN"]
     },
     {
         "id": 49,
@@ -1919,7 +1823,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["FUN"]
     },
     {
         "id": 50,
@@ -1958,7 +1862,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["OTHERS"]
     },
     {
         "id": 51,
@@ -1997,7 +1901,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["ART_EXHIBITION", "CULTURE"]
     },
     {
         "id": 52,
@@ -2036,7 +1940,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["ART_EXHIBITION", "CULTURE"]
     },
     {
         "id": 53,
@@ -2075,6 +1979,6 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": ["ART_EXHIBITION", "CULTURE"]
     }
 ]

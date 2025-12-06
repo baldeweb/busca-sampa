@@ -1,6 +1,6 @@
 export function getEnvironmentLabel(tag: string): string {
   const map: Record<string, string> = {
-    PET_FRIENDLY: "Pet friendly",
+    PET_FRIENDLY: "Permite animais",
     BISTRO: "Bistrô",
     THEMED: "Temático",
     TOUR: "Tours",
@@ -46,7 +46,7 @@ export function getEnvironmentLabel(tag: string): string {
     VIETNAMESE: "Vietnamita",
     BOLIVIAN: "Boliviano",
     RUSSIAN: "Russo",
-    HISTORIC_PLACE: "Local Histórico",
+    HISTORIC_PLACE: "Histórico",
     SAMBA: "Samba",
     FORRO: "Forró",
     PAGODE: "Pagode",
@@ -56,6 +56,18 @@ export function getEnvironmentLabel(tag: string): string {
     ARMENIAN: "Armênio",
     COLOMBIAN: "Colombiano",
     MILKSHAKE: "Milkshake",
+    CULTURE: "Cultural",
+    ART_EXHIBITION: "Exposições",
+    MUSEUM: "Museu",
+    PARK: "Parque",
+    ZOO: "Zoológico",
+    THEATER: "Teatro",
+    RELIGIOUS_SITE: "Religioso",
+    SHOP_LOCATION: "Compras",
+    OPENED_SPACE: "Espaço Aberto",
+    MONUMENT: "Monumento",
+    FUN: "Diversão",
+    OTHERS: "Outros",
   };
   return map[tag] || tag;
 }

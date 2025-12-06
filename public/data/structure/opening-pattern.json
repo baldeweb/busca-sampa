@@ -702,5 +702,64 @@
       { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:30", "close": "01:00" },
       { "days": ["FRIDAY", "SATURDAY"], "open": "17:30", "close": "03:00" }
     ]
+  },
+  {
+    "id": "MUSEUBIOLOGICO_DAYTIME",
+    "description": "Horários do Museu Biológico",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "09:00", "close": "16:45" }
+    ]
+  },
+  {
+    "id": "MUSEUPOLICIACIVIL_DAYTIME",
+    "description": "Horários do Museu da Policia Civil",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "09:00", "close": "16:45" }
+    ]
+  },
+  {
+    "id": "MUSEUHISTORICOBUTANTAN_DAYTIME",
+    "description": "Horários do Museu Histórico do Instituto Butantan",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "16:45" }
+    ]
+  },
+  {
+    "id": "BASILICAARAUTOSDOEVANGELHO_DAYTIME",
+    "description": "Horários da Basilica dos Arautos do Evangelho",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "09:30", "close": "12:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "14:45", "close": "17:30" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "09:30", "close": "12:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "14:45", "close": "16:30" }
+    ]
+  },
+  {
+    "id": "CAIXACULTURAL_DAYTIME",
+    "description": "Horários do Caixa Cultural",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "CCBB_DAYTIME",
+    "description": "Horários do CCBB",
+    "periods": [
+      { "days": ["MONDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "EDIFICIOCOPAN_DAYTIME",
+    "description": "Horários do Edifício Copan",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "10:30", "close": "15:30" }
+    ]
+  },
+  {
+    "id": "MASSP_DAYTIME",
+    "description": "Horários do MASSP",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "17:00" }
+    ]
   }
 ]
