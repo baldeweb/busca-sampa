@@ -144,6 +144,7 @@ export const PlaceListPage: React.FC = () => {
     })();
 
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
+    const [isListFading, setIsListFading] = useState<boolean>(false);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [showOrderDropdown, setShowOrderDropdown] = useState(false);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
@@ -328,7 +329,10 @@ export const PlaceListPage: React.FC = () => {
                                 {/* Botão "Todos" */}
                                 <button
                                     type="button"
-                                    onClick={() => setSelectedEnv(null)}
+                                    onClick={() => {
+                                        setIsListFading(true);
+                                        setTimeout(() => { setSelectedEnv(null); setIsListFading(false); }, 220);
+                                    }}
                                     className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                                         selectedEnv === null 
                                             ? 'bg-bs-red text-white border-bs-red' 
@@ -342,7 +346,11 @@ export const PlaceListPage: React.FC = () => {
                                     <button
                                         key={env.value}
                                         type="button"
-                                        onClick={() => setSelectedEnv(selectedEnv === env.value ? null : env.value)}
+                                        onClick={() => {
+                                            const next = selectedEnv === env.value ? null : env.value;
+                                            setIsListFading(true);
+                                            setTimeout(() => { setSelectedEnv(next); setIsListFading(false); }, 220);
+                                        }}
                                         className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                                             selectedEnv === env.value 
                                                 ? 'bg-bs-red text-white border-bs-red' 
@@ -419,7 +427,7 @@ export const PlaceListPage: React.FC = () => {
                 </div>
             </div>
             {/* Lista de lugares */}
-            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg">
+            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden">
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
@@ -487,7 +495,11 @@ export const PlaceListPage: React.FC = () => {
                     excludedValues={environments.slice(0, 8).map(e => e.value)}
                     selectedEnv={selectedEnv}
                     onClose={() => setShowEnvironmentModal(false)}
-                    onSelect={(env) => setSelectedEnv(env?.value || null)}
+                    onSelect={(env) => {
+                        const next = env?.value || null;
+                        setIsListFading(true);
+                        setTimeout(() => { setSelectedEnv(next); setIsListFading(false); }, 220);
+                    }}
                 />
             )}
         </div>

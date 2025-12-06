@@ -85,6 +85,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 
   const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [isListFading, setIsListFading] = useState<boolean>(false);
   const ORDER_OPTIONS = [
     { value: 'name-asc' },
     { value: 'name-desc' },
@@ -151,7 +152,10 @@ export const NeighborhoodListPage: React.FC = () => {
                 {/* Botão "Todos" */}
                 <button
                   type="button"
-                  onClick={() => setSelectedType(null)}
+                  onClick={() => {
+                    setIsListFading(true);
+                    setTimeout(() => { setSelectedType(null); setIsListFading(false); }, 220);
+                  }}
                   className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                     selectedType === null ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
                   }`}
@@ -163,7 +167,11 @@ export const NeighborhoodListPage: React.FC = () => {
                   <button
                     key={env.value}
                     type="button"
-                    onClick={() => setSelectedType(selectedType === env.value ? null : env.value)}
+                    onClick={() => {
+                      const next = selectedType === env.value ? null : env.value;
+                      setIsListFading(true);
+                      setTimeout(() => { setSelectedType(next); setIsListFading(false); }, 220);
+                    }}
                     className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                       selectedType === env.value ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
                     } ${idx >= 4 ? 'hidden sm:block' : ''}`}
@@ -240,7 +248,7 @@ export const NeighborhoodListPage: React.FC = () => {
       </div>
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg">
+      <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
         <div className="mx-auto max-w-5xl px-0 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
@@ -300,7 +308,11 @@ export const NeighborhoodListPage: React.FC = () => {
           excludedValues={environments.slice(0, 8).map(e => e.value)}
           selectedEnv={selectedType}
           onClose={() => setShowEnvironmentModal(false)}
-          onSelect={(env) => setSelectedType(env?.value || null)}
+          onSelect={(env) => {
+            const next = env?.value || null;
+            setIsListFading(true);
+            setTimeout(() => { setSelectedType(next); setIsListFading(false); }, 220);
+          }}
         />
       )}
     </div>
