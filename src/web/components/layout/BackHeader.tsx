@@ -23,14 +23,14 @@ export const BackHeader: React.FC<BackHeaderProps> = ({ onBack, showVisitedButto
           {showVisitedButton && (
             isAlreadyVisited ? (
               <button
-                className="bg-green-600 text-white text-base font-bold px-4 py-2 rounded shadow flex items-center"
+                className="bg-green-600 text-white text-sm font-bold px-3 py-1.5 rounded shadow flex items-center"
                 onClick={onVisitedClick}
               >
                 {t('placeDetail.alreadyVisited')}
               </button>
             ) : (
               <button
-                className="bg-yellow-400 text-black text-base font-bold px-4 py-2 rounded shadow flex items-center border border-yellow-600"
+                className="bg-yellow-400 text-black text-sm font-bold px-3 py-1.5 rounded shadow flex items-center border border-yellow-600"
                 onClick={onVisitedClick}
               >
                 {t('placeDetail.notVisited')}
