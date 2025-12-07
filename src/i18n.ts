@@ -60,7 +60,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'A melhor recomendação de onde fui, com apenas um toque de distância'
+        tagline: 'A melhor recomendação, com 3 toques de distância'
       },
       common: {
         back: 'Voltar',
@@ -222,7 +222,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'La mejor recomendación de donde he ido, a un toque'
+        tagline: 'La mejor recomendación, a 3 toques de distancia'
       },
       common: {
         back: 'Volver',
@@ -358,7 +358,7 @@ const resources = {
         viewPlace: 'voir lieu',
         viewPlaces: 'voir lieux'
       },
-      header: { title: 'Role Paulista', tagline: 'La meilleure recommandation des lieux visités, à portée de main' },
+      header: { title: 'Role Paulista', tagline: 'La meilleure recommandation, à 3 touches de distance' },
       common: {
         back: 'Retour', details: 'voir détails', selectLanguage: 'Choisir une langue', changeDistance: 'Changer distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
       },
@@ -423,7 +423,7 @@ const resources = {
   ru: {
     translation: {
       home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'ещё', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: 'Доступ к геолокации запрещён. Пожалуйста, включите геолокацию в настройках браузера, чтобы использовать эту функцию.', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
-      header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации мест, где я был — в один клик' },
+      header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в 3 касания' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', typeHeader: 'Тип', orderNameAsc: 'ИМЯ A-Z', orderNameDesc: 'ИМЯ Z-A', orderNeighborhoodAsc: 'РАЙОН A-Z', orderNeighborhoodDesc: 'РАЙОН Z-A' },
@@ -470,7 +470,7 @@ const resources = {
   zh: {
     translation: {
       home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多', noNearbyResultsRadius: '所选半径内没有地点。', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '位置权限被拒绝。请在浏览器设置中启用位置以使用此功能。', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
-      header: { title: 'Role Paulista', tagline: '我去过的最佳推荐，一触即达' },
+      header: { title: 'Role Paulista', tagline: '最好的推荐，三次点击即可到达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '名称 A-Z', orderNameDesc: '名称 Z-A', orderNeighborhoodAsc: '街区 A-Z', orderNeighborhoodDesc: '街区 Z-A' },
@@ -535,7 +535,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'The best recommendation of where I have been, just a tap away'
+        tagline: 'The best recommendation, just 3 taps away'
       },
       common: {
         back: 'Back',
@@ -693,7 +693,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'Die beste Empfehlung, wo ich war — mit nur einer Berührung'
+        tagline: 'Die beste Empfehlung, in 3 Tippen erreichbar'
       },
       common: {
         back: 'Zurück',
@@ -775,7 +775,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: '私が行った場所のおすすめ — ワンタップで'
+        tagline: '私が行った場所のおすすめ — 3回タップで'
       },
       common: {
         back: '戻る',
@@ -885,7 +885,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'أفضل توصية للأماكن التي زرتها — بنقرة واحدة'
+        tagline: 'أفضل توصية، على بعد 3 نقرات'
       },
       common: {
         back: 'رجوع',
@@ -964,7 +964,7 @@ const resources = {
         locationDeniedInstructions: 'Autorizzazione alla posizione negata. Abilita la posizione nelle impostazioni del browser per usare questa funzione.',
         outsideGreaterSP: 'Sei al di fuori della regione della Grande San Paolo. Che ne dici di visitare la città presto? :)'
       },
-      header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione dei posti che ho visitato, a portata di tocco' },
+      header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione, a 3 tocchi di distanza' },
       common: {
         back: 'Indietro',
         details: 'vedi dettagli',
@@ -1041,7 +1041,7 @@ const resources = {
         locationDeniedInstructions: 'Locatie-toestemming geweigerd. Schakel locatie in de instellingen van uw browser in om deze functie te gebruiken.',
         outsideGreaterSP: 'Je bevindt je buiten de regio Groot-São Paulo. Wat dacht je ervan om de stad binnenkort te bezoeken? :)'
       },
-      header: { title: 'Role Paulista', tagline: 'De beste aanbeveling van plekken waar ik ben geweest, binnen handbereik' },
+      header: { title: 'Role Paulista', tagline: 'De beste aanbeveling, binnen 3 tikken' },
       common: {
         back: 'Terug',
         details: 'bekijk details',
@@ -1118,7 +1118,7 @@ const resources = {
         locationDeniedInstructions: 'Konum izni reddedildi. Bu özelliği kullanmak için lütfen tarayıcı ayarlarından konumu etkinleştirin.',
         outsideGreaterSP: 'Büyük São Paulo bölgesi dışında bulunuyorsunuz. Yakında şehri ziyaret etmeye ne dersiniz? :)'
       },
-      header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — tek dokunuşla' },
+      header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — 3 dokunuş uzaklıkta' },
       common: {
         back: 'Geri', details: 'detayları gör', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
       },
@@ -1184,7 +1184,7 @@ const resources = {
         locationDeniedInstructions: 'Odmowa dostępu do lokalizacji. Włącz lokalizację w ustawieniach przeglądarki, aby skorzystać z tej funkcji.',
         outsideGreaterSP: 'Znajdujesz się poza regionem Wielkiego São Paulo. Może odwiedzisz miasto wkrótce? :)'
       },
-      header: { title: 'Role Paulista', tagline: 'Najlepsze rekomendacje miejsc, w których byłem — na wyciągnięcie ręki' },
+      header: { title: 'Role Paulista', tagline: 'Najlepsza rekomendacja — w odległości 3 stuknięć' },
       common: {
         back: 'Wstecz', details: 'zobacz szczegóły', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
       },
