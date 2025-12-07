@@ -56,7 +56,7 @@ export function HomePage() {
     }[]
   >([]);
   const [mapCategory, setMapCategory] = useState<string | null>(null);
-  const CACHE_KEY = "bs_geolocation";
+  // Não usar cache de localização — sempre solicitar posição atual
 
   // Estado de opção 'onde é hoje?' não usado nesta versão
 
@@ -205,19 +205,7 @@ export function HomePage() {
       setGeoError(t('home.locationNotSupported') || "Geolocalização não suportada");
       return;
     }
-    if (!force) {
-      // tenta usar cache se existir
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached);
-          if (parsed && parsed.latitude && parsed.longitude && parsed.timestamp) {
-            setUserLocation({ latitude: parsed.latitude, longitude: parsed.longitude });
-            return; // já restaurou do cache
-          }
-        } catch (_) { }
-      }
-    }
+    // sempre pedir localização atual (não restauramos de cache)
 
     setIsRequestingLocation(true);
     setGeoError(null);
@@ -245,12 +233,6 @@ export function HomePage() {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setUserLocation({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
-        const payload = {
-          latitude: pos.coords.latitude,
-          longitude: pos.coords.longitude,
-          timestamp: Date.now(),
-        };
-        localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
         setIsRequestingLocation(false);
       },
       (err) => {
