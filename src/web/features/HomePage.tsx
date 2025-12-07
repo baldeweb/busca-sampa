@@ -200,7 +200,7 @@ export function HomePage() {
   const { t } = useTranslation();
   useDocumentTitle(t('header.title'));
 
-  async function requestUserLocation(force?: boolean) {
+  async function requestUserLocation() {
     if (!navigator.geolocation) {
       setGeoError(t('home.locationNotSupported') || "Geolocalização não suportada");
       return;
@@ -288,7 +288,7 @@ export function HomePage() {
               </p>
               <button
                 type="button"
-                onClick={() => requestUserLocation(true)}
+                onClick={() => requestUserLocation()}
                 disabled={isRequestingLocation}
                 className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50"
               >
@@ -342,13 +342,22 @@ export function HomePage() {
                               </span>
                             )}
                           </div>
-                          <button
-                            type="button"
-                            onClick={() => setMapCategory(s.category)}
-                            className="min-w-[120px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
-                          >
-                            ver no mapa
-                          </button>
+                          <div className="flex flex-col items-end">
+                            <button
+                              type="button"
+                              onClick={() => setMapCategory(s.category)}
+                              className="min-w-[120px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                            >
+                              ver no mapa
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => navigate(`/list/${s.category}`)}
+                              className="min-w-[120px] mt-2 text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                            >
+                              {s.count === 1 ? t('home.viewPlace') : t('home.viewPlaces')}
+                            </button>
+                          </div>
                         </div>
                       );
                     })}
