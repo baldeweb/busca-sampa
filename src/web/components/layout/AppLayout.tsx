@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 import { Header } from "../header/Header";
 import { AppFooter } from "./AppFooter";
+import { useSeo } from '@/web/hooks/useSeo';
 
 export default function AppLayout() {
     const location = useLocation();
@@ -18,6 +19,12 @@ export default function AppLayout() {
             /* ignore */
         }
     }, [location.pathname]);
+
+    // SEO: set homepage title and description so search engines display the desired text
+    useSeo({
+        title: showHeader ? 'Rolê Paulista' : undefined,
+        description: showHeader ? 'A melhor recomendação, com 3 toques de distância' : undefined,
+    });
 
     return (
         <div className="min-h-screen flex flex-col bg-bs-bg text-white">
