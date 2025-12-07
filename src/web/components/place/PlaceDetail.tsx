@@ -106,15 +106,22 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         </div>
 
                         {/* Horário de funcionamento */}
-                        <div className="px-0 py-8">
+                        <div className="px-0 pt-2 pb-8">
                             <div className="flex items-center justify-between">
                                 <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
-                                <span
-                                    className="text-sm sm:text-base text-black cursor-pointer"
-                                    onClick={onShowOpeningHours}
-                                >
-                                    {t('placeDetail.viewHours')}
-                                </span>
+                                <div className="flex flex-col items-end justify-center gap-1 mt-6">
+                                    {isOpenNow ? (
+                                        <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
+                                    ) : (
+                                        <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                                    )}
+                                    <span
+                                        className="text-sm sm:text-base text-black cursor-pointer"
+                                        onClick={onShowOpeningHours}
+                                    >
+                                        {t('placeDetail.viewHours')}
+                                    </span>
+                                </div>
                             </div>
                             <div className="mt-2 space-y-1">
                                 {openingDays.map((day, idx) => (
@@ -129,16 +136,11 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         {/* Localização: renderiza endereços quando disponíveis; caso contrário usa os props legados */}
                         {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
                             <div className="border-t-2 border-bs-red px-0 py-8">
-                                <div className="flex items-center justify-between mb-2">
+                                <div className="flex items-center justify-between">
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
-                                    {isOpenNow ? (
-                                        <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
-                                    ) : (
-                                        <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
-                                    )}
                                 </div>
                                 <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
-                                <div className="mt-4 mb-4 space-y-4">
+                                <div className="mt-12 mb-4 space-y-4">
                                     {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
                                         addresses.map((addr: any, idx: number) => {
                                             const neighborhoodText = addr?.neighborhood || '';

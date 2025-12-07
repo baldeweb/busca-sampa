@@ -1,5 +1,13 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { PlaceDetail } from "@/web/components/place/PlaceDetail";
+import icBars from '@/assets/imgs/icons/ic_bars.png';
+import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
+import icFree from '@/assets/imgs/icons/ic_free.png';
+import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
+import icNature from '@/assets/imgs/icons/ic_nature.png';
+import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
+import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import flagSp from '@/assets/imgs/flags/flag_sp.png';
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { useMemo, useState } from "react";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
@@ -91,12 +99,34 @@ export function PlaceDetailPage() {
   const openingPattern = patterns.find(p => p.id === patternId) || null;
 
   const abertoAgora = openingPattern ? isOpenNow(openingPattern.periods) : false;
+  // choose icon based on place.type
+  const iconNode = (() => {
+    const typeKey = place?.type || '';
+    switch ((typeKey || '').toUpperCase()) {
+      case 'BAR':
+        return <img src={icBars} alt="bar" className="w-10 h-10 object-contain mr-4" />;
+      case 'COFFEE':
+        return <img src={icCoffee} alt="coffee" className="w-10 h-10 object-contain mr-4" />;
+      case 'FREE':
+        return <img src={icFree} alt="free" className="w-10 h-10 object-contain mr-4" />;
+      case 'NIGHTLIFE':
+        return <img src={icNightlife} alt="nightlife" className="w-10 h-10 object-contain mr-4" />;
+      case 'NATURE':
+        return <img src={icNature} alt="nature" className="w-10 h-10 object-contain mr-4" />;
+      case 'TOURIST_SPOT':
+        return <img src={icTouristSpot} alt="tourist" className="w-10 h-10 object-contain mr-4" />;
+      case 'RESTAURANT':
+      default:
+        return <img src={icRestaurants} alt="restaurant" className="w-10 h-10 object-contain mr-4" />;
+    }
+  })();
   return (
     <>
       <PlaceDetail
         name={place.name}
         description={""}
         type={getPlaceTypeLabel(place.type)}
+        icon={iconNode}
         priceRange={place.priceRange}
         openingDays={openingDays}
         isOpenNow={abertoAgora}
