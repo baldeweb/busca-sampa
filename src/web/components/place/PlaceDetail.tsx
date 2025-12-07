@@ -2,7 +2,8 @@ import React from "react";
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
-import { FaArrowLeft, FaInstagram, FaMapMarkerAlt, FaExclamationTriangle } from "react-icons/fa";
+import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle } from "react-icons/fa";
+import { BackHeader } from '@/web/components/layout/BackHeader';
 import { useTranslation } from 'react-i18next';
 
 interface PlaceDetailProps {
@@ -56,32 +57,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
-            {/* Top Bar - apenas botão Voltar */}
-            <div className="bg-black relative border-b-2 border-bs-red px-4 sm:px-12">
-                <div className="mx-auto max-w-5xl flex items-center px-4 pt-6 sm:pt-12 pb-4">
-                    <button onClick={onBack} className="text-white text-lg font-bold flex items-center">
-                        <FaArrowLeft className="mr-2" /> {t('common.back')}
-                    </button>
-                    {/* Chips de status */}
-                    <div className="ml-auto flex gap-2">
-                        {isAlreadyVisited ? (
-                            <button
-                                className="bg-green-600 text-white text-xs font-bold px-4 py-2 rounded shadow flex items-center"
-                                onClick={() => setShowVisitModal(true)}
-                            >
-                                {t('placeDetail.alreadyVisited')}
-                            </button>
-                        ) : (
-                            <button
-                                className="bg-yellow-400 text-black text-xs font-bold px-4 py-2 rounded shadow flex items-center border border-yellow-600"
-                                onClick={() => setShowVisitModal(true)}
-                            >
-                                {t('placeDetail.notVisited')}
-                            </button>
-                        )}
-                    </div>
-                </div>
-            </div>
+            {/* Top Bar - BackHeader (consistent with Neighborhood list) */}
+            <BackHeader onBack={onBack} showVisitedButton={true} isAlreadyVisited={Boolean(isAlreadyVisited)} onVisitedClick={() => setShowVisitModal(true)} />
             {/* Modal explicativo */}
             {showVisitModal && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
