@@ -94,7 +94,7 @@ export function AboutMePage() {
 
             <li className="flex items-center justify-center pt-4 pb-4">
               <a
-                href="mailto:wallace.baldenebre@gmail.com"
+                href="mailto:wallace.baldenebre@gmail.com?subject=Contato%20sobre%20o%20Rol%C3%AA%20Paulista"
                 className="flex items-center gap-2 hover:text-bs-red transition-colors"
               >
                 <FaEnvelope aria-hidden="true" className="text-lg" />

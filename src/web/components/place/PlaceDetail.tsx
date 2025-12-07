@@ -110,7 +110,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             <div className="flex items-center justify-between">
                                 <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 <span
-                                    className="text-xs text-black cursor-pointer"
+                                    className="text-sm sm:text-base text-black cursor-pointer"
                                     onClick={onShowOpeningHours}
                                 >
                                     {t('placeDetail.viewHours')}
@@ -155,7 +155,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                         <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
                                                     </div>
                                                     <div className="flex-shrink-0">
-                                                        <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                                        <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-2 py-1 sm:px-3 sm:py-1 rounded font-bold text-xs sm:text-sm">
                                                             <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                         </a>
                                                     </div>
@@ -171,7 +171,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {address}</div>
                                             </div>
                                             <div className="flex-shrink-0">
-                                                <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                                <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-2 py-1 sm:px-3 sm:py-1 rounded font-bold text-xs sm:text-sm">
                                                     <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                 </a>
                                             </div>
@@ -238,7 +238,12 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             {/* Footer */}
             <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
                 <FaExclamationTriangle className="mr-2 text-white" />
-                <span className="text-white font-bold">{t('placeDetail.reportProblem')}</span>
+                <a
+                    href={`mailto:wallace.baldenebre@gmail.com?subject=${encodeURIComponent(`Reportar um problema do local ${name}`)}`}
+                    className="text-white font-bold"
+                >
+                    {t('placeDetail.reportProblem')}
+                </a>
             </div>
         </div>
     );
