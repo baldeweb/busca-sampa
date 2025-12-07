@@ -7,7 +7,6 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
-import flagSp from '@/assets/imgs/flags/flag_sp.png';
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { useMemo, useState } from "react";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
