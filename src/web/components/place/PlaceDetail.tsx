@@ -77,11 +77,10 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 </div>
             )}
 
-            {/* Main Content */}
-            <div className="flex-1 bg-[#F5F5F5] text-black flex flex-col min-h-0">
-                <div className="px-4 sm:px-12">
-                    <div className="mx-auto max-w-5xl py-2">
-                        <div className="border-b-2 border-bs-red px-1 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
+            {/* Main Content (match NeighborhoodList full-bleed + inner padding) */}
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5] text-black">
+                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-2">
+                        <div className="border-b-2 border-bs-red px-0 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
                             {icon || <span className="text-4xl sm:text-5xl mr-4">☕</span>}
                             <div>
                                 <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
@@ -107,7 +106,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         </div>
 
                         {/* Horário de funcionamento */}
-                        <div className="px-1 py-8">
+                        <div className="px-0 py-8">
                             <div className="flex items-center justify-between">
                                 <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 <span
@@ -129,7 +128,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
                         {/* Localização: renderiza endereços quando disponíveis; caso contrário usa os props legados */}
                         {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
-                            <div className="border-t-2 border-bs-red px-1 py-8">
+                            <div className="border-t-2 border-bs-red px-0 py-8">
                                 <div className="flex items-center justify-between mb-2">
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                     {isOpenNow ? (
@@ -181,11 +180,11 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 </div>
                             </div>
                         )}
-                    </div>
                 </div>
+            </section>
 
-                <div className="px-4 sm:px-12 py-2 flex-1 bg-[#48464C] mt-4">
-                    <div className="mx-auto max-w-5xl py-8 sm:py-10 h-full flex flex-col justify-between text-white">
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] mt-4">
+                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-8 sm:py-10 h-full flex flex-col justify-between text-white">
                         <div>
                             {instagramUrl && instagramUrl.trim().length > 0 && (
                                 <div className="flex items-center justify-between">
@@ -234,9 +233,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 </ul>
                             </div>
                         )}
-                    </div>
                 </div>
-            </div>
+            </section>
             {/* Footer */}
             <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
                 <FaExclamationTriangle className="mr-2 text-white" />
