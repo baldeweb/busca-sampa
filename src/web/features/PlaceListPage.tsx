@@ -34,6 +34,9 @@ export const PlaceListPage: React.FC = () => {
     const routeTypeRaw = routeType || "restaurants";
     const routeTypeLower = routeTypeRaw.toLowerCase();
     const navigate = useNavigate();
+    const listLocation = useLocation();
+    const allowedIdsFromState = (listLocation.state as any)?.ids as Array<string | number> | undefined;
+    const allowedIdsSet = useMemo(() => new Set((allowedIdsFromState || []).map(v => String(v))), [allowedIdsFromState]);
     // Carrega todas as categorias
     const { data: restaurants } = useRecommendationList("restaurants");
     const { data: bars } = useRecommendationList("bars");
@@ -82,10 +85,16 @@ export const PlaceListPage: React.FC = () => {
         return allPlaces.filter(p => p.type === mappedType);
     }, [allPlaces, mappedType, routeType, restaurants, openingPatterns]);
 
+    // Intersect with IDs passed via navigation state, if any
+    const baseList = useMemo(() => {
+        if (!allowedIdsSet || allowedIdsSet.size === 0) return filteredByType;
+        return filteredByType.filter(p => allowedIdsSet.has(String(p.id)));
+    }, [filteredByType, allowedIdsSet]);
+
     // Chips de ambiente (tags únicos)
     const environments = useMemo(() => {
         const envSet = new Set<string>();
-        filteredByType.forEach(p => {
+        baseList.forEach(p => {
             p.tags?.forEach((t: string) => envSet.add(t));
         });
         const tagArr = Array.from(envSet).map(e => ({ label: getEnvironmentLabel(e), value: e }));
@@ -96,11 +105,11 @@ export const PlaceListPage: React.FC = () => {
 
         // Fallback: se não houver tags, use os tipos de lugar presentes (ex: TOURIST_SPOT, RESTAURANT)
         const typeSet = new Set<string>();
-        filteredByType.forEach(p => { if (p.type) typeSet.add(p.type); });
+        baseList.forEach(p => { if (p.type) typeSet.add(p.type); });
         const typeArr = Array.from(typeSet).map(e => ({ label: getPlaceTypeLabel(e), value: e }));
         typeArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
         return typeArr;
-    }, [filteredByType]);
+    }, [baseList]);
 
     // Helper: get opening times for today for a place (returns array of open times strings like '08:00')
     function getOpenTimesForToday(place: any): string[] {
@@ -150,34 +159,34 @@ export const PlaceListPage: React.FC = () => {
 
     // Filtro de ambiente
     const filteredPlaces = useMemo(() => {
-        if (!selectedEnv) return filteredByType;
+        if (!selectedEnv) return baseList;
         const normalize = (s: any) => String(s || '').trim().toLowerCase();
         const sel = normalize(selectedEnv);
-        return filteredByType.filter(p => {
+        return baseList.filter(p => {
             if (normalize(p.type) === sel) return true;
             if (Array.isArray(p.tags)) {
                 for (const tg of p.tags) if (normalize(tg) === sel) return true;
             }
             return false;
         });
-    }, [filteredByType, selectedEnv]);
+    }, [baseList, selectedEnv]);
 
     // Debug: log selected environment and result counts to aid troubleshooting
     React.useEffect(() => {
         if (!selectedEnv) return;
         try {
-            console.log(`[PlaceListPage] selectedEnv=${selectedEnv} filteredByType=${filteredByType.length} result=${filteredPlaces.length} sampleIds=${filteredPlaces.slice(0,5).map(p=>p.id).join(',')}`);
+            console.log(`[PlaceListPage] selectedEnv=${selectedEnv} baseList=${baseList.length} result=${filteredPlaces.length} sampleIds=${filteredPlaces.slice(0,5).map(p=>p.id).join(',')}`);
         } catch (_) {}
-    }, [selectedEnv, filteredByType, filteredPlaces]);
+    }, [selectedEnv, baseList, filteredPlaces]);
 
     // Debug: print available environments (label/value) to verify what the UI shows
     React.useEffect(() => {
         try {
             console.log('[PlaceListPage] environments=', environments.map(e => ({ label: e.label, value: e.value })));
-            const sample = filteredByType.slice(0, 5);
+            const sample = baseList.slice(0, 5);
             console.log('[PlaceListPage] filteredByType sample (5):', sample.map(p => ({ id: p.id, name: p.name, type: p.type, tags: p.tags })));
         } catch (_) {}
-    }, [environments, filteredByType]);
+    }, [environments, baseList]);
 
     // Debug: test filter matching when selectedEnv changes
     React.useEffect(() => {
@@ -185,7 +194,7 @@ export const PlaceListPage: React.FC = () => {
         try {
             const normalize = (s: any) => String(s || '').trim().toLowerCase();
             const sel = normalize(selectedEnv);
-            const matches = filteredByType.filter(p => {
+            const matches = baseList.filter(p => {
                 if (normalize(p.type) === sel) return true;
                 if (Array.isArray(p.tags)) {
                     for (const tg of p.tags) if (normalize(tg) === sel) return true;
@@ -194,7 +203,7 @@ export const PlaceListPage: React.FC = () => {
             });
             console.log(`[PlaceListPage] selectedEnv="${selectedEnv}" normalized="${sel}" matches=${matches.length} samples=[${matches.slice(0,3).map(p=>`${p.id}:${p.name}`).join(', ')}]`);
         } catch (e) { console.error('Debug filter error:', e); }
-    }, [selectedEnv, filteredByType]);
+    }, [selectedEnv, baseList]);
 
     // Ordenação
     const sortedPlaces = useMemo(() => {
@@ -242,8 +251,8 @@ export const PlaceListPage: React.FC = () => {
     React.useEffect(() => {
         console.log("routeType param:", routeType);
         console.log("mappedType:", mappedType);
-        console.log("filteredByType length:", filteredByType.length);
-    }, [routeType, mappedType, filteredByType]);
+        console.log("baseList length:", baseList.length);
+    }, [routeType, mappedType, baseList]);
 
     const isOpensToday = routeTypeLower === 'abrem-hoje' || mappedType === 'ABREM-HOJE';
 

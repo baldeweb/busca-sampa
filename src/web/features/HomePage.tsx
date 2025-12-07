@@ -352,7 +352,19 @@ export function HomePage() {
                             </button>
                             <button
                               type="button"
-                              onClick={() => navigate(`/list/${s.category}`)}
+                              onClick={() => {
+                                if (s.count === 1) {
+                                  const only = s.withinRadius[0];
+                                  if (only) {
+                                    navigate(`/place/${s.category}/${only.id}`);
+                                  } else {
+                                    navigate(`/list/${s.category}`);
+                                  }
+                                } else {
+                                  const ids = s.withinRadius.map((p) => p.id);
+                                  navigate(`/list/${s.category}`, { state: { ids } });
+                                }
+                              }}
                               className="min-w-[120px] mt-2 text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
                             >
                               {s.count === 1 ? t('home.viewPlace') : t('home.viewPlaces')}
