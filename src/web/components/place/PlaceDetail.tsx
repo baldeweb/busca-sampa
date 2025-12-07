@@ -235,36 +235,30 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-8 sm:py-10 h-full flex flex-col justify-between text-white">
                         <div>
                             {instagramUrl && instagramUrl.trim().length > 0 && (
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <h3 className="font-bold uppercase text-white">{t('placeDetail.instagramTitle')}</h3>
-                                        <p className="text-xs sm:text-sm text-gray-300">{t('placeDetail.instagramSubtitle')}</p>
-                                    </div>
-                                    <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                <div className="mt-4">
+                                    <h3 className="font-bold uppercase text-white">{t('placeDetail.instagramTitle')}</h3>
+                                    <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.instagramSubtitle')}</p>
+                                    <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3">
                                         <FaInstagram className="mr-2" /> {t('placeDetail.follow')}
                                     </a>
                                 </div>
                             )}
 
                             {menuUrl && menuUrl.trim().length > 0 && (
-                                <div className="flex items-center justify-between mt-8">
-                                    <div>
-                                        <h3 className="font-bold uppercase text-white">{t('placeDetail.menuTitle')}</h3>
-                                        <p className="text-xs sm:text-sm text-gray-300">{t('placeDetail.menuSubtitle')}</p>
-                                    </div>
-                                    <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                <div className="mt-8">
+                                    <h3 className="font-bold uppercase text-white">{t('placeDetail.menuTitle')}</h3>
+                                    <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.menuSubtitle')}</p>
+                                    <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3">
                                         {t('placeDetail.menuButton')}
                                     </a>
                                 </div>
                             )}
 
                             {websiteUrl && websiteUrl.trim().length > 0 && (
-                                <div className="flex items-center justify-between mt-8">
-                                    <div>
-                                        <h3 className="font-bold uppercase text-white">{t('placeDetail.websiteTitle')}</h3>
-                                        <p className="text-xs sm:text-sm text-gray-300">{t('placeDetail.websiteSubtitle')}</p>
-                                    </div>
-                                    <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold">
+                                <div className="mt-8">
+                                    <h3 className="font-bold uppercase text-white">{t('placeDetail.websiteTitle')}</h3>
+                                    <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.websiteSubtitle')}</p>
+                                    <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3">
                                         {t('placeDetail.websiteButton')}
                                     </a>
                                 </div>
