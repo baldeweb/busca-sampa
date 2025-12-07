@@ -50,7 +50,28 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     isAlreadyVisited,
     tags = [],
 }) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const OPEN_UBER_MAP: Record<string, string> = {
+        pt: 'Abrir no Uber',
+        es: 'Abrir en Uber',
+        fr: 'Ouvrir dans Uber',
+        ru: 'Открыть в Uber',
+        zh: '在 Uber 中打开',
+        en: 'Open in Uber',
+        de: 'In Uber öffnen',
+        ja: 'Uberで開く',
+        ar: 'افتح في Uber',
+        it: 'Apri in Uber',
+        nl: 'Open in Uber',
+        tr: "Uber'da aç",
+        pl: 'Otwórz w Uberze'
+    };
+    const domLang = (typeof document !== 'undefined' && document.documentElement.lang) ? document.documentElement.lang : '';
+    const uiLang = (domLang || i18n.language || 'en').split('-')[0];
+    const key = 'placeDetail.openUber';
+    const openUberLabel = i18n.exists(key, { lng: uiLang })
+        ? i18n.t(key, { lng: uiLang })
+        : (OPEN_UBER_MAP[uiLang] || OPEN_UBER_MAP.en);
     const [showVisitModal, setShowVisitModal] = React.useState(false);
 
     // Ambiente: use `tags` consistently
@@ -179,7 +200,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                                 <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                             </a>
                                                             <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
-                                                                <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {t('placeDetail.openUber')}
+                                                                <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                             </a>
                                                         </div>
                                                     </div>
@@ -198,7 +219,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                         <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                     </a>
                                                     <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address || '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
-                                                        <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {t('placeDetail.openUber')}
+                                                        <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                     </a>
                                                 </div>
                                             </div>

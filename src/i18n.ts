@@ -268,6 +268,7 @@ const resources = {
         locationDescription: 'Aquí la unidad y dirección; traza la ruta con el botón abajo',
         streetPrefix: 'Calle:',
         googleMapsButton: 'Abrir en Google Maps',
+        openUber: 'Abrir en Uber',
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Sigue el perfil oficial:',
         follow: 'Seguir',
@@ -370,7 +371,39 @@ const resources = {
         nameHeader: 'Nom', neighborhoodHeader: 'Quartier', typeHeader: 'Type', orderNameAsc: 'NOM A-Z', orderNameDesc: 'NOM Z-A', orderNeighborhoodAsc: 'QUARTIER A-Z', orderNeighborhoodDesc: 'QUARTIER Z-A'
       },
       placeDetail: {
-        loading: 'Chargement des détails...', notFound: 'Lieu introuvable.', opensMonday: 'ouvert le lundi', opensSunday: 'ouvert le dimanche', opensHoliday: 'ouvert les jours fériés', alreadyVisited: '✓ Déjà visité et recommandé', notVisited: '⚠️ Pas encore visité', visitModalTitle: 'À propos des lieux visités', visitModalParagraph: 'Toutes les recommandations sont des lieux que j’ai visités et recommande, plus d’autres encore non visités.', neverEmphasis: 'JAMAIS', priceLabel: 'Prix :', environmentTypeLabel: 'Type d’ambiance :', hoursTitle: 'Horaires', viewHours: 'voir horaires ▼', locationTitle: 'Localisation', openNow: 'Ouvert\u200B maintenant', closedNow: 'Fermé maintenant', locationDescription: 'Unité et adresse ici; tracez la route via le bouton ci-dessous', streetPrefix: 'Rue :', googleMapsButton: 'Ouvrir Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Suivez le profil officiel :', follow: 'Suivre', menuTitle: 'Menu', menuSubtitle: 'Voir le menu', menuButton: 'Ouvrir menu', websiteTitle: 'Site du lieu', websiteSubtitle: 'Visitez le site de ce lieu et consultez les informations détaillées', websiteButton: 'accéder au site', notesTitle: 'Notes', reportProblem: 'Signaler un problème', visitModalEnding: 'recommanderais des lieux à éviter :)'
+        loading: 'Chargement des détails...',
+        notFound: 'Lieu introuvable.',
+        opensMonday: 'ouvert le lundi',
+        opensSunday: 'ouvert le dimanche',
+        opensHoliday: 'ouvert les jours fériés',
+        alreadyVisited: '✓ Déjà visité et recommandé',
+        notVisited: '⚠️ Pas encore visité',
+        visitModalTitle: 'À propos des lieux visités',
+        visitModalParagraph: 'Toutes les recommandations sont des lieux que j’ai visités et recommande, plus d’autres encore non visités.',
+        neverEmphasis: 'JAMAIS',
+        priceLabel: 'Prix :',
+        environmentTypeLabel: 'Type d’ambiance :',
+        hoursTitle: 'Horaires',
+        viewHours: 'voir horaires ▼',
+        locationTitle: 'Localisation',
+        openNow: 'Ouvert\u200B maintenant',
+        closedNow: 'Fermé maintenant',
+        locationDescription: 'Unité et adresse ici; tracez la route via le bouton ci-dessous',
+        streetPrefix: 'Rue :',
+        googleMapsButton: 'Ouvrir Google Maps',
+        openUber: 'Ouvrir dans Uber',
+        instagramTitle: 'Instagram',
+        instagramSubtitle: 'Suivez le profil officiel :',
+        follow: 'Suivre',
+        menuTitle: 'Menu',
+        menuSubtitle: 'Voir le menu',
+        menuButton: 'Ouvrir menu',
+        websiteTitle: 'Site du lieu',
+        websiteSubtitle: 'Visitez le site de ce lieu et consultez les informations détaillées',
+        websiteButton: 'accéder au site',
+        notesTitle: 'Notes',
+        reportProblem: 'Signaler un problème',
+        visitModalEnding: 'recommanderais des lieux à éviter :)'
       },
       openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre' },
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
@@ -633,7 +666,8 @@ const resources = {
         closedNow: 'Geschlossen',
         websiteTitle: 'Website',
         websiteSubtitle: 'Besuchen Sie die Website dieses Ortes und sehen Sie sich die detaillierten Informationen an',
-        websiteButton: 'Website öffnen'
+        websiteButton: 'Website öffnen',
+        openUber: 'In Uber öffnen'
       },
       whereIsToday: { title: 'Also, wo ist es heute?' },
       placeType: {
@@ -698,7 +732,8 @@ const resources = {
         closedNow: '閉店',
         websiteTitle: '公式サイト',
         websiteSubtitle: 'この施設のサイトにアクセスして詳細情報をご確認ください',
-        websiteButton: 'サイトを開く'
+        websiteButton: 'サイトを開く',
+        openUber: 'Uberで開く'
       },
       whereIsToday: { title: 'さて、今日はどこに行く？' },
       placeType: {
@@ -764,7 +799,8 @@ const resources = {
         closedNow: 'مغلق الآن',
         websiteTitle: 'موقع المكان',
         websiteSubtitle: 'ادخل إلى موقع هذا المكان وتحقق من المعلومات التفصيلية',
-        websiteButton: 'زيارة الموقع'
+        websiteButton: 'زيارة الموقع',
+        openUber: 'افتح في Uber'
       },
       whereIsToday: { title: 'فأين نذهب اليوم؟' },
       placeType: {
@@ -827,7 +863,8 @@ const resources = {
         closedNow: 'Chiuso',
         websiteTitle: 'Sito del luogo',
         websiteSubtitle: 'Visita il sito di questo luogo e controlla le informazioni dettagliate',
-        websiteButton: 'accedi al sito'
+        websiteButton: 'accedi al sito',
+        openUber: 'Apri in Uber'
       },
       whereIsToday: { title: 'Allora, dove si va oggi?' },
       placeType: {
