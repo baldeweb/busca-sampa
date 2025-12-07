@@ -8,7 +8,7 @@ import { AboutMePage } from "../features/AboutMePage";
 import { RecommendationsOriginPage } from "../features/RecommendationsOriginPage";
 import { HowToRecommendPage } from "../features/HowToRecommendPage";
 import { SupportPage } from "../features/SupportPage";
-import { RestaurantsPage } from "../features/RestaurantsPage";
+// RestaurantsPage was removed from explicit routes to let the generic PlaceListPage handle '/restaurants'
 import { PlaceListPage } from "../features/PlaceListPage";
 
 export const router = createBrowserRouter([
@@ -23,14 +23,14 @@ export const router = createBrowserRouter([
             { path: "/how-to-recommend", element: <HowToRecommendPage /> },
             { path: "/support", element: <SupportPage /> },
 
-            //  Listagens
-            { path: "/restaurants", element: <RestaurantsPage /> },
-            { path: "/list/:type", element: <PlaceListPage /> },
+            //  Listagens (friendly list route: /:type, ex: /restaurants, /bars)
+            { path: "/:type", element: <PlaceListPage /> },
 
 
-            //  Detalhes do local (nova rota com categoria para evitar colisão de IDs)
+            //  Detalhes do local (friendly slug route: /:type/:slug)
+            { path: "/:type/:slug", element: <PlaceDetailPage /> },
+            //  Detalhes - legacy routes (mantidas para compatibilidade)
             { path: "/place/:category/:id", element: <PlaceDetailPage /> },
-            //  Rota legacy (mantida para compatibilidade, pesquisa em allPlaces)
             { path: "/place/:id", element: <PlaceDetailPage /> },
 
             //  Pagina Sobre

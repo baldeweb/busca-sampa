@@ -1,6 +1,7 @@
 import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { useNavigate } from "react-router-dom";
+import { slugify } from '@/core/services/Slugify';
 
 interface Props {
     place: PlaceRecommendation;
@@ -29,7 +30,7 @@ export function PlaceCard({ place }: Props) {
     return (
         <div
             className="rounded-app bg-bs-card border border-white/10 overflow-hidden shadow-md hover:border-bs-red transition-colors cursor-pointer"
-            onClick={() => navigate(`/place/${resolveCategoryKey()}/${place.id}`)}
+            onClick={() => navigate(`/${resolveCategoryKey()}/${slugify(place.name)}`)}
         >
             {/* Conteúdo */}
             <div className="p-2 sm:p-3 space-y-1 sm:space-y-2">

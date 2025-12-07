@@ -8,6 +8,7 @@ import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import { slugify } from '@/core/services/Slugify';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
@@ -529,7 +530,7 @@ export const PlaceListPage: React.FC = () => {
                                                 // Use the actual place.type when available (fixes 'Abrem hoje' mixed lists)
                                                 const placeTypeKey = place.type || mappedType;
                                                 const slug = typeToSlug[placeTypeKey] || routeTypeLower;
-                                                navigate(`/place/${slug}/${place.id}`);
+                                                navigate(`/${slug}/${slugify(place.name)}`);
                                             }}
                                             size="md"
                                             className="!px-1 sm:!px-4"

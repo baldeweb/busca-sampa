@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { slugify } from '@/core/services/Slugify';
 import { PlaceDetail } from "@/web/components/place/PlaceDetail";
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
@@ -19,9 +20,10 @@ import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 export function PlaceDetailPage() {
       const { t } = useTranslation();
     // Importa utilitário para verificar se está aberto agora
+    // params can be legacy (id/category) or new friendly (type/slug)
     // @ts-ignore
-  const { id, category } = useParams();
-  const normalizedCategory = (category || "").toLowerCase();
+    const { id, category, type, slug } = useParams();
+    const normalizedCategory = ((category || type) || "").toLowerCase();
   const navigate = useNavigate();
 
   // Carrega todas as categorias
@@ -65,13 +67,24 @@ export function PlaceDetailPage() {
   const { data: patterns } = useOpeningPatterns();
 
   const place = useMemo(() => {
-    let found = sourceArray.find(p => String(p.id) === id);
-    if (!found && !categoryExplicita) {
-      // Apenas se rota legacy sem categoria
-      found = allPlaces.find(p => String(p.id) === id);
+    // 1) If slug provided (friendly URL), resolve by slugified name within selected sourceArray
+    if (slug) {
+      const foundBySlug = sourceArray.find(p => slugify(p.name) === slug);
+      if (foundBySlug) return foundBySlug;
+      // If not found in explicit category, search allPlaces as fallback
+      const globalFound = allPlaces.find(p => slugify(p.name) === slug);
+      if (globalFound) return globalFound;
     }
-    return found;
-  }, [sourceArray, id, categoryExplicita, allPlaces]);
+    // 2) Legacy id-based routes
+    if (id) {
+      let found = sourceArray.find(p => String(p.id) === id);
+      if (!found && !categoryExplicita) {
+        found = allPlaces.find(p => String(p.id) === id);
+      }
+      if (found) return found;
+    }
+    return undefined;
+  }, [sourceArray, id, slug, categoryExplicita, allPlaces]);
 
   const mostrandoLoading = categoryExplicita && !place && datasetsLoading;
 

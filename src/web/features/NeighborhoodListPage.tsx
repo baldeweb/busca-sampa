@@ -279,7 +279,8 @@ export const NeighborhoodListPage: React.FC = () => {
                           TOURIST_SPOT: "tourist-spot",
                         };
                         const cat = typeMap[place.type] || "restaurants";
-                        navigate(`/place/${cat}/${place.id}`);
+                        // navigate to friendly slug URL
+                        navigate(`/${cat}/${slugify(place.name)}`);
                       }}
                       size="md"
                     >

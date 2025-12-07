@@ -74,12 +74,12 @@ export function HomePage() {
     const title = rawTitle.toLowerCase();
     // 'Abrem hoje' (opens today) synthetic option
     if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
-      navigate('/list/abrem-hoje', { state: { label: rawTitle } });
+      navigate('/abrem-hoje', { state: { label: rawTitle } });
       return;
     }
     // Para as demais opções usamos a primeira tag para navegar (ex: 'RESTAURANTS')
     const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
-    navigate(`/list/${tag}`, { state: { label: rawTitle } });
+    navigate(`/${tag}`, { state: { label: rawTitle } });
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {
@@ -350,19 +350,19 @@ export function HomePage() {
                             >
                               ver no mapa
                             </button>
-                            <button
+                                <button
                               type="button"
                               onClick={() => {
                                 if (s.count === 1) {
                                   const only = s.withinRadius[0];
                                   if (only) {
-                                    navigate(`/place/${s.category}/${only.id}`);
+                                    navigate(`/${s.category}/${slugify(only.name)}`);
                                   } else {
-                                    navigate(`/list/${s.category}`);
+                                    navigate(`/${s.category}`);
                                   }
                                 } else {
                                   const ids = s.withinRadius.map((p) => p.id);
-                                  navigate(`/list/${s.category}`, { state: { ids } });
+                                  navigate(`/${s.category}`, { state: { ids } });
                                 }
                               }}
                               className="min-w-[120px] mt-2 text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
