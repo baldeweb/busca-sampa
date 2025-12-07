@@ -494,7 +494,7 @@
             "patternId": "CAIXACULTURAL_DAYTIME",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
@@ -578,7 +578,7 @@
             "patternId": "CCBB_DAYTIME",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
@@ -586,7 +586,7 @@
         "notes": [
             "Edifício de 1901 que abriga um centro de exposições e um teatro com cinema, performances e obras de arte."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
@@ -626,9 +626,7 @@
         "shouldSchedule": false,
         "notes": [
             "Projetado por Oscar Niemeyer, o Edifício Copan é um dos marcos arquitetônicos mais famosos de São Paulo",
-            "Localizado na Avenida Ipiranga, no centro da cidade",
-            "É possível fazer uma visita guiada na cobertura do edifício",
-            "O local de saída no passeio é na ALA F no prédio"
+            "Localizado na Avenida Ipiranga, no centro da cidade"
         ],
         "priceRange": "MEDIUM",
         "addresses": [
@@ -663,7 +661,7 @@
             "patternId": "MASSP_DAYTIME",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
@@ -671,7 +669,7 @@
         "notes": [
             "Coleção de objetos religiosos, incluindo altares, pinturas e livros no histórico mosteiro da Luz."
         ],
-        "priceRange": "LOW",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
@@ -849,45 +847,6 @@
         "tags": ["MUSEUM"]
     },
     {
-        "id": 24,
-        "name": "Museu da Polícia Militar de São Paulo",
-        "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": ["MUSEUM"]
-    },
-    {
         "id": 25,
         "name": "Museu das Favelas",
         "type": "TOURIST_SPOT",
@@ -979,7 +938,7 @@
             "patternId": "",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,

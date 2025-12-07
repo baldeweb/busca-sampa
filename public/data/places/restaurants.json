@@ -1790,7 +1790,7 @@
             "patternId": "BARGUANABARA_DAYTIME",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
