@@ -440,6 +440,30 @@ const resources = {
       about: { title: 'Кто я?', paragraph: 'Страница о вас. Макет позже.' },
       aboutMe: { authorTag: 'Создатель Role Paulista', aboutHeading: 'Обо мне', socialHeading: 'Соцсети', bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.' },
       howToRecommend: { title: 'Как порекомендовать место?' },
+      placeList: {
+        environmentTitle: 'Тип окружения:',
+        hoursUnavailable: 'Часы недоступны',
+        opensAtHeader: 'Открывается в',
+        subtitleTemplate: 'Откройте {{article}} {{noun}} вашего типа, ближайший к вам :)',
+        article: {
+          RESTAURANT: 'ресторан',
+          BAR: 'бар',
+          COFFEE: 'кофейня',
+          NIGHTLIFE: 'ночной клуб',
+          NATURE: 'парк',
+          TOURIST_SPOT: 'достопримечательность',
+          FREE: 'бесплатное'
+        },
+        noun: {
+          RESTAURANT: 'ресторан',
+          BAR: 'бар',
+          COFFEE: 'кофейня',
+          NIGHTLIFE: 'место для вечеринок',
+          NATURE: 'место на природе',
+          TOURIST_SPOT: 'туристическое место',
+          FREE: 'бесплатное событие'
+        }
+      },
       placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно' }
     }
   },
@@ -450,7 +474,31 @@ const resources = {
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '名称 A-Z', orderNameDesc: '名称 Z-A', orderNeighborhoodAsc: '街区 A-Z', orderNeighborhoodDesc: '街区 Z-A' },
-      placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于我去过的地方', visitModalParagraph: '所有推荐都是我去过并推荐的地方，另有一些别人推荐我还没去。', neverEmphasis: '绝不', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里是地址，点击下方按钮可规划路线', streetPrefix: '街道:', googleMapsButton: '打开 Google 地图', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '会推荐你不该去的地方 :)' },
+      placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于我去过的地方', visitModalParagraph: '所有推荐都是我去过并推荐的地方，另有一些别人推荐我还没去。', neverEmphasis: '绝不', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了该门店的地址，点击下面的按钮可规划前往路线。', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '会推荐你不该去的地方 :)' },
+      placeList: {
+        environmentTitle: '环境类型：',
+        hoursUnavailable: '营业时间不可用',
+        opensAtHeader: '开门时间',
+        subtitleTemplate: '发现离你最近的{{article}} {{noun}}，符合你的类型 :)',
+        article: {
+          RESTAURANT: '餐厅',
+          BAR: '酒吧',
+          COFFEE: '咖啡店',
+          NIGHTLIFE: '夜生活场所',
+          NATURE: '自然景点',
+          TOURIST_SPOT: '旅游景点',
+          FREE: '免费活动'
+        },
+        noun: {
+          RESTAURANT: '餐厅',
+          BAR: '酒吧',
+          COFFEE: '咖啡店',
+          NIGHTLIFE: '娱乐场所',
+          NATURE: '自然场所',
+          TOURIST_SPOT: '景点',
+          FREE: '免费活动'
+        }
+      },
       openingHours: { title: '营业时间', closed: '关闭', range: '{{open}} - {{close}}', notProvided: '未提供时间。', followButton: '关注' },
       footer: { home: '首页', search: '搜索', about: '关于' },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
@@ -662,6 +710,11 @@ const resources = {
       },
       footer: { home: 'Start', search: 'Suchen', about: 'Über' },
       placeDetail: {
+        hoursTitle: 'Öffnungszeiten',
+        opensMonday: 'öffnet montags',
+        opensSunday: 'öffnet sonntags',
+        opensHoliday: 'öffnet an Feiertagen',
+        viewHours: 'Öffnungszeiten anzeigen ▼',
         openNow: 'Jetzt geöffnet',
         closedNow: 'Geschlossen',
         websiteTitle: 'Website',
@@ -728,12 +781,46 @@ const resources = {
       },
       footer: { home: 'ホーム', search: '検索', about: '概要' },
       placeDetail: {
+        hoursTitle: '営業時間',
+        opensMonday: '月曜日に営業',
+        opensSunday: '日曜日に営業',
+        opensHoliday: '祝日に営業',
+        viewHours: '営業時間を見る ▼',
         openNow: '営業中',
         closedNow: '閉店',
         websiteTitle: '公式サイト',
         websiteSubtitle: 'この施設のサイトにアクセスして詳細情報をご確認ください',
         websiteButton: 'サイトを開く',
-        openUber: 'Uberで開く'
+        openUber: 'Uberで開く',
+        environmentTypeLabel: '環境タイプ：',
+        locationTitle: '場所',
+        locationDescription: 'ここには店舗の住所が表示されます。下のボタンをクリックしてルートを検索できます。',
+        streetPrefix: '住所：',
+        googleMapsButton: 'Google マップで開く'
+      },
+      placeList: {
+        environmentTitle: '環境タイプ：',
+        hoursUnavailable: '営業時間情報なし',
+        opensAtHeader: '開店時間',
+        subtitleTemplate: 'あなたのタイプに合った{{article}} {{noun}}で、最も近いものを見つけよう :)',
+        article: {
+          RESTAURANT: 'レストラン',
+          BAR: 'バー',
+          COFFEE: 'カフェ',
+          NIGHTLIFE: 'ナイトライフ',
+          NATURE: '自然',
+          TOURIST_SPOT: '観光地',
+          FREE: '無料'
+        },
+        noun: {
+          RESTAURANT: 'レストラン',
+          BAR: 'バー',
+          COFFEE: 'カフェ',
+          NIGHTLIFE: 'ナイトスポット',
+          NATURE: '自然スポット',
+          TOURIST_SPOT: '観光スポット',
+          FREE: '無料イベント'
+        }
       },
       whereIsToday: { title: 'さて、今日はどこに行く？' },
       placeType: {
@@ -795,6 +882,11 @@ const resources = {
       },
       footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
       placeDetail: {
+        hoursTitle: 'ساعات العمل',
+        opensMonday: 'يفتح أيام الإثنين',
+        opensSunday: 'يفتح أيام الأحد',
+        opensHoliday: 'يفتح في العطلات',
+        viewHours: 'عرض الساعات ▼',
         openNow: 'مفتوح الآن',
         closedNow: 'مغلق الآن',
         websiteTitle: 'موقع المكان',
@@ -859,6 +951,11 @@ const resources = {
       },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       placeDetail: {
+        hoursTitle: 'Orari di apertura',
+        opensMonday: 'apre il lunedì',
+        opensSunday: 'apre la domenica',
+        opensHoliday: 'apre nei giorni festivi',
+        viewHours: 'vedi orari ▼',
         openNow: 'Aperto ora',
         closedNow: 'Chiuso',
         websiteTitle: 'Sito del luogo',
@@ -922,6 +1019,11 @@ const resources = {
       },
       footer: { home: 'Home', search: 'Zoeken', about: 'Over' },
       placeDetail: {
+        hoursTitle: 'Openingstijden',
+        opensMonday: 'open op maandag',
+        opensSunday: 'open op zondag',
+        opensHoliday: 'open op feestdagen',
+        viewHours: 'bekijk tijden ▼',
         openNow: 'Nu open',
         closedNow: 'Gesloten',
         websiteTitle: 'Website',
@@ -975,6 +1077,11 @@ const resources = {
       },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
       placeDetail: {
+        hoursTitle: 'Çalışma saatleri',
+        opensMonday: 'pazartesi günü açılır',
+        opensSunday: 'pazar günü açılır',
+        opensHoliday: 'tatil günlerinde açılır',
+        viewHours: 'saatleri göster ▼',
         openNow: 'Şu anda açık',
         closedNow: 'Kapalı',
         websiteTitle: 'Mekan web sitesi',
@@ -1027,6 +1134,11 @@ const resources = {
       },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
       placeDetail: {
+        hoursTitle: 'Godziny otwarcia',
+        opensMonday: 'otwarte w poniedziałki',
+        opensSunday: 'otwarte w niedziele',
+        opensHoliday: 'otwarte w święta',
+        viewHours: 'zobacz godziny ▼',
         openNow: 'Otwarte teraz',
         closedNow: 'Zamknięte',
         websiteTitle: 'Strona miejsca',

@@ -148,7 +148,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             <div className="mt-2 space-y-2 mb-2">
                                 {openingDays.map((day, idx) => {
                                         const normalized = String(day).toLowerCase();
-                                        const isLarge = /domingo|sábado|sabado|feriado/.test(normalized);
+                                        const isLarge = /domingo|sábado|sabado|feriado|segunda/.test(normalized);
                                         return (
                                             <div key={idx} className="flex items-center">
                                                 <input
