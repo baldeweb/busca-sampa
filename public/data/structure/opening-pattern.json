@@ -813,4 +813,35 @@
       { "days": ["MONDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "10:00", "close": "18:00" }
     ]
   },
+  {
+    "id": "THEATROMUNICIPAL_DAYTIME",
+    "description": "Horários do Theatro Municipal",
+    "periods": [
+      { "days": ["MONDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "10:00", "close": "19:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "10:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "MIS_DAYTIME",
+    "description": "Horários do Museu da Imagem e do Som",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "10:00", "close": "19:00" },
+      { "days": ["SATURDAY"], "open": "10:00", "close": "20:00" },
+      { "days": ["SUNDAY"], "open": "10:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "PAROQUIANOSSASRA_DAYTIME",
+    "description": "Horários da Paroquia Nossa Senhora do Brasil",
+    "periods": [
+      { "days": ["MONDAY"], "open": "08:00", "close": "09:00" },
+      { "days": ["MONDAY"], "open": "17:30", "close": "18:30" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "08:00", "close": "13:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "17:30", "close": "18:30" },
+      { "days": ["SATURDAY"], "open": "08:00", "close": "13:00" },
+      { "days": ["SATURDAY"], "open": "16:00", "close": "17:00" },
+      { "days": ["SUNDAY"], "open": "08:00", "close": "13:00" },
+      { "days": ["SUNDAY"], "open": "16:00", "close": "21:00" }
+    ]
+  }
 ]

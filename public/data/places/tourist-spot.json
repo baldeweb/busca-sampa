@@ -1088,16 +1088,16 @@
     },
     {
         "id": 31,
-        "name": "Teatro Municipal de São Paulo",
+        "name": "Theatro Municipal de São Paulo",
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133677200",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "THEATROMUNICIPAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1105,24 +1105,27 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Fundado em 1911 com arquitetura renascentista e barroca do século XVII, apresenta óperas, concertos e balé.",
+            "Necessário verificar se há algum evento no dia que for realizar a visita, pois os horários se limitam"
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Ramos de Azevedo",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "República",
+                "postalCode": "01037-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5452298,
+                "longitude": -46.6434859
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://www.theatromunicipal.org.br/",
+        "linkInstagram": "https://www.instagram.com/theatromunicipal/",
         "tags": ["THEATER", "LIVE_MUSIC", "HISTORIC_PLACE", "CULTURE"]
     },
     {
@@ -1131,36 +1134,38 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1156668822",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
+        "isOpenOnSundays": false,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
+        "shouldSchedule": true,
+        "notes": [
+            "Autódromo e também usado como espaço para eventos e shows."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Sen. Teotônio Vilela",
+                "number": "261",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Interlagos",
+                "postalCode": "04801-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.7045881,
+                "longitude": -46.7042885
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://autodromodeinterlagos.prefeitura.sp.gov.br",
         "linkInstagram": "",
         "tags": ["OPENED_SPACE"]
     },
@@ -1170,12 +1175,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1148106868",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1183,23 +1188,25 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Teatro moderno com peças locais e em turnê, concertos e shows de dança."
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pres. Juscelino Kubitschek",
+                "number": "2041",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "04543-011",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.592854,
+                "longitude": -46.6918039
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.teatrosantander.com.br/",
         "linkInstagram": "",
         "tags": ["THEATER", "CULTURE"]
     },
@@ -1209,12 +1216,54 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1131524001",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
+        "notes": [
+            "Estádio do maior clube das américas: Corinthians!",
+            "É possivel fazer uma tour pelo estádio, conhecendo os bastidores e a história do time"
+        ],
+        "priceRange": "MEDIUM",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Miguel Ignácio Curi",
+                "number": "111",
+                "city": "São Paulo",
+                "neighborhood": "Itaquera",
+                "postalCode": "08295-005",
+                "isMainUnity": true,
+                "latitude": -23.5453085,
+                "longitude": -46.4768041
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.neoquimicaarena.com.br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnMIOMquYXVfJPs9E-dUWfEX1KXiJ3CH0rN3fSaeyJWXLXusCcU69pwzveyxw_aem_BGawLRQB7eJGcOsJ50sM6Q",
+        "linkInstagram": "https://www.instagram.com/neoquimicaarena/",
+        "tags": ["STADIUM", "TOUR"]
+    },
+    {
+        "id": 36,
+        "name": "Museu da Imagem e do Som (MIS)",
+        "type": "TOURIST_SPOT",
+        "phones": [
+            {
+                "number": "1121174777",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "MIS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1223,63 +1272,24 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Vai Corinthians!"
+            "Espaço multicultural destinado a coleta, preservação e registro do som e imagem da vida e costumes no país."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Europa",
+                "number": "158",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Jardins",
+                "postalCode": "01449-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5728853,
+                "longitude": -46.6786346
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": ["STADIUM", "TOUR"]
-    },
-    {
-        "id": 36,
-        "name": "MIS - Museu da Imagem e do Som",
-        "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://mis-sp.org.br/",
         "linkInstagram": "",
         "tags": ["MUSEUM"]
     },
@@ -1289,17 +1299,17 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1130829786",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PAROQUIANOSSASRA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
@@ -1307,18 +1317,18 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Nossa Senhora do Brasil",
+                "number": "01",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Jardins",
+                "postalCode": "01438-060",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5687565,
+                "longitude": -46.6754123
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.nossasenhoradobrasil.com.br/",
         "linkInstagram": "",
         "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
