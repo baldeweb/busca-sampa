@@ -186,7 +186,17 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                             const street = addr?.street || '';
                                             const number = addr?.number || '';
                                             const postal = addr?.postalCode || addr?.postal_code || addr?.postal || addr?.cep || '';
-                                            const streetParts = [street, number].filter(Boolean).join(', ');
+                                            // Normalize 's/n' (sem número) display
+                                            let displayNumber = number || '';
+                                            try {
+                                                const normalized = String(displayNumber).toLowerCase().replace(/[^a-z0-9]/g, '');
+                                                if (normalized === 'sn' || normalized === 's' || normalized === 'n') {
+                                                    displayNumber = 'sem número';
+                                                }
+                                            } catch (_) {
+                                                // ignore
+                                            }
+                                            const streetParts = [street, displayNumber].filter(Boolean).join(', ');
                                             const streetText = postal ? `${streetParts}${streetParts ? ' - ' : ''}${postal}` : streetParts;
                                             const hasCoords = addr?.latitude != null && addr?.longitude != null;
                                             const mapsHref = hasCoords

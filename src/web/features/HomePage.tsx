@@ -273,7 +273,7 @@ export function HomePage() {
                 <button
                   type="button"
                   onClick={() => setIsDistanceModalOpen(true)}
-                  className="min-w-[140px] rounded-full border border-white/25 px-3 py-1 text-sm sm:px-4 sm:py-2 hover:border-bs-red"
+                  className="min-w-[140px] rounded-full bg-[#0F0D13] text-white px-3 py-1 text-sm sm:px-4 sm:py-2 border-2 border-[#F5F5F5]"
                 >
                   {t('common.changeDistance')}
                 </button>
@@ -329,7 +329,21 @@ export function HomePage() {
                       return (
                         <div
                           key={s.category}
-                          className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs"
+                          onClick={() => {
+                            // same behavior as the "ver locais" button when tapping the row
+                            if (s.count === 1) {
+                              const only = s.withinRadius[0];
+                              if (only) {
+                                navigate(`/${s.category}/${slugify(only.name)}`);
+                              } else {
+                                navigate(`/${s.category}`);
+                              }
+                            } else {
+                              const ids = s.withinRadius.map((p) => p.id);
+                              navigate(`/${s.category}`, { state: { ids } });
+                            }
+                          }}
+                          className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs cursor-pointer"
                         >
                           <div className="flex flex-col me-6">
                             <span className="font-bold uppercase text-md">
@@ -345,14 +359,14 @@ export function HomePage() {
                           <div className="flex flex-col items-end">
                             <button
                               type="button"
-                              onClick={() => setMapCategory(s.category)}
-                              className="min-w-[120px] text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                              onClick={(e) => { e.stopPropagation(); setMapCategory(s.category); }}
+                              className="min-w-[120px] text-sm rounded-full bg-[#0F0D13] text-white px-3 py-1 border-2 border-[#F5F5F5]"
                             >
                               ver no mapa
                             </button>
                                 <button
                               type="button"
-                              onClick={() => {
+                              onClick={(e) => { e.stopPropagation();
                                 if (s.count === 1) {
                                   const only = s.withinRadius[0];
                                   if (only) {
@@ -365,7 +379,7 @@ export function HomePage() {
                                   navigate(`/${s.category}`, { state: { ids } });
                                 }
                               }}
-                              className="min-w-[120px] mt-2 text-sm rounded-full border border-white/25 px-3 py-1 hover:border-bs-red"
+                              className="min-w-[120px] mt-2 text-sm rounded-full bg-bs-red text-white px-3 py-1"
                             >
                               {s.count === 1 ? t('home.viewPlace') : t('home.viewPlaces')}
                             </button>
