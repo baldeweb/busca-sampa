@@ -530,7 +530,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CATEDRALSE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -545,7 +545,7 @@
             "Existe um tour guiado disponível para visitantes interessados em conhecer mais sobre a história e arquitetura da catedral",
             "É possível agendar um Brunch na Catedral da Sé. Necessário agendar com alguns meses de antecedência"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
@@ -658,7 +658,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "MASSP_DAYTIME",
+            "patternId": "PATTERN_1_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -735,36 +735,39 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133288799",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MOSTEIROSAOBENTO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Igreja histórica ornamentada, missas com canto gregoriano e um monastério com padaria própria.",
+            "Necessário verificar os horários antes de visitar"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Largo São Bento",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01029-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5435437,
+                "longitude": -46.6365736
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.mosteirodesaobentosp.com.br/",
         "linkInstagram": "",
         "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
@@ -774,36 +777,38 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133150051",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PATTERN_1_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
+        "isOpenOnHolidays": false,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Museu de ciência com exposições interativas que oferecem experiências sociais e educativas."
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Mercúrio",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "03003-060",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5444029,
+                "longitude": -46.6299271
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.museucatavento.org.br/",
         "linkInstagram": "",
         "tags": ["MUSEUM"]
     },
@@ -813,12 +818,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1144701515",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEULINGUAPORTUGUESA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -826,25 +831,27 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "A história e evolução do idioma são contadas de forma interativa numa ampla e moderna área de exposição."
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça da Luz",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Luz",
+                "postalCode": "01120-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5349622,
+                "longitude": -46.637739
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.museudalinguaportuguesa.org.br/",
         "linkInstagram": "",
-        "tags": ["MUSEUM"]
+        "tags": ["MUSEUM", "CULTURE"]
     },
     {
         "id": 25,
@@ -852,12 +859,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1142403355",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEUDASFAVELAS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -866,22 +873,22 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Largo Páteo do Colégio",
+                "number": "148",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01016-040",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5484911,
+                "longitude": -46.635101
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.museudasfavelas.org.br/",
         "linkInstagram": "",
         "tags": ["MUSEUM", "CULTURE"]
     },
@@ -896,7 +903,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PATEOCOLLEGIO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -904,23 +911,25 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Local da primeira missão jesuíta de São Paulo, em 1554, com réplica da capela construída em 1896."
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Largo Páteo do Colégio",
+                "number": "2",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01016-040",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5479822,
+                "longitude": -46.6351942
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.pateodocollegio.com.br/",
         "linkInstagram": "",
         "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
     },
@@ -930,12 +939,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133241000",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PINACOTECA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -944,24 +953,25 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Entrada gratuita aos sábados"
+            "Entrada gratuita aos sábados",
+            "Museu antigo com pinturas e esculturas brasileiras do século XIX que conta com programas educacionais."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
+                "street": "Praça da Luz",
                 "number": "",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Luz",
+                "postalCode": "01120-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5343563,
+                "longitude": -46.6362509
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://pinacoteca.org.br/",
         "linkInstagram": "",
         "tags": ["CULTURE", "HISTORIC_PLACE"]
     },
@@ -969,34 +979,29 @@
         "id": 28,
         "name": "Praça da Sé",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça da Sé",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01001-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.550305,
+                "longitude": -46.6367758
             }
         ],
         "linkMenu": "",
@@ -1008,34 +1013,31 @@
         "id": 29,
         "name": "Rua 25 de Março",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Famosa rua de comércio popular, repleta de lojas que vendem uma variedade de produtos a preços acessíveis."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Rua 25 de Março",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
+                "neighborhood": "Centro Histórico",
                 "postalCode": "",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5436189,
+                "longitude": -46.6350948
             }
         ],
         "linkMenu": "",
@@ -1049,12 +1051,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133679500",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1062,23 +1064,25 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "O imponente e clássico edifício é sede da Orquestra Sinfônica da cidade e oferece espetáculos e visitações."
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Júlio Prestes",
+                "number": "16",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Campos Elíseos",
+                "postalCode": "01218-020",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.534199,
+                "longitude": -46.6423433
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.salasaopaulo.art.br/",
         "linkInstagram": "",
         "tags": ["LIVE_MUSIC", "HISTORIC_PLACE", "CULTURE"]
     },

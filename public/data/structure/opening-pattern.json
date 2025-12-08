@@ -8,7 +8,7 @@
   },
   {
     "id": "CHECK_AVAILABILITY_DAYTIME",
-    "description": "Horários do Samba da Rosa.",
+    "description": "Horários do Samba da Rosa, Sala São Paulo, Cineclube Cortina.",
     "periods": [
       { "days": ["CHECK_AVAILABILITY"] }
     ]
@@ -123,6 +123,13 @@
     "periods": [
       { "days": ["EVERYDAY"], "open": "12:00", "close": "15:00" },
       { "days": ["EVERYDAY"], "open": "19:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "PATTERN_1_DAYTIME",
+    "description": "Horários dos MASSP, Museu Catavento.",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "17:00" }
     ]
   },
   {
@@ -756,17 +763,54 @@
     ]
   },
   {
-    "id": "MASSP_DAYTIME",
-    "description": "Horários do MASSP",
-    "periods": [
-      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "17:00" }
-    ]
-  },
-  {
     "id": "MERCADOMUNICIPAL_DAYTIME",
     "description": "Horários do Mercado Municipal de São Paulo",
     "periods": [
       { "days": ["EVERYDAY"], "open": "06:00", "close": "18:00" }
     ]
-  }
+  },
+  {
+    "id": "CATEDRALSE_DAYTIME",
+    "description": "Horários da Catedral Sé",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "07:30", "close": "18:30" }
+    ]
+  },
+  {
+    "id": "MOSTEIROSAOBENTO_DAYTIME",
+    "description": "Horários do Mosteiro São Bento",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "07:00", "close": "18:00" },
+      { "days": ["SATURDAY"], "open": "06:00", "close": "13:00" },
+      { "days": ["SUNDAY"], "open": "07:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "MUSEULINGUAPORTUGUESA_DAYTIME",
+    "description": "Horários do Museu da Lingua Portuguesa",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "16:30" }
+    ]
+  },
+  {
+    "id": "MUSEUDASFAVELAS_DAYTIME",
+    "description": "Horários do Museu das Favelas",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "10:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "PATEOCOLLEGIO_DAYTIME",
+    "description": "Horários do Pateo do Collegio",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "09:00", "close": "16:30" }
+    ]
+  },
+  {
+    "id": "PINACOTECA_DAYTIME",
+    "description": "Horários da Pinacoteca",
+    "periods": [
+      { "days": ["MONDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "10:00", "close": "18:00" }
+    ]
+  },
 ]
