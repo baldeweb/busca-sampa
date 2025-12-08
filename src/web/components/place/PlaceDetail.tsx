@@ -91,8 +91,16 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         </div>
                         <div className="p-5 text-center">
                             <p className="mb-2 text-sm text-gray-200">
-                                {t('placeDetail.visitModalParagraph')}<br /><br />
-                                <span className="font-bold text-red-400">{t('placeDetail.neverEmphasis')}</span> {t('placeDetail.visitModalEnding')}
+                                {isAlreadyVisited ? (
+                                    // text for places already visited
+                                    t('placeDetail.visitedModalParagraph')
+                                ) : (
+                                    // text for places pending visit (existing behavior)
+                                    <>
+                                        {t('placeDetail.visitModalParagraph')}<br /><br />
+                                        <span className="font-bold text-red-400">{t('placeDetail.neverEmphasis')}</span> {t('placeDetail.visitModalEnding')}
+                                    </>
+                                )}
                             </p>
                         </div>
                     </div>
