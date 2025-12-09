@@ -156,6 +156,7 @@ export const PlaceListPage: React.FC = () => {
 
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
+    const [orderVersion, setOrderVersion] = useState(0);
     
     const [showFiltersModal, setShowFiltersModal] = useState(false);
     const [filterOpenNow, setFilterOpenNow] = useState(false);
@@ -246,7 +247,7 @@ export const PlaceListPage: React.FC = () => {
                 break;
         }
         return arr;
-    }, [filteredPlaces, order]);
+    }, [filteredPlacesWithOpenNow, order, orderVersion]);
 
 
     // Título dinâmico: prefira um rótulo passado via navigation state (vindo do HomePage),
@@ -474,7 +475,7 @@ export const PlaceListPage: React.FC = () => {
                 isOpen={showFiltersModal}
                 onClose={() => setShowFiltersModal(false)}
                 order={order}
-                setOrder={(v: string) => setOrder(v)}
+                setOrder={(v: string) => { setOrder(v); setOrderVersion(x => x + 1); }}
                 openNowOnly={filterOpenNow}
                 setOpenNowOnly={(v: boolean) => setFilterOpenNow(v)}
                     showOpenNowOption={!isOpensToday}
@@ -482,7 +483,7 @@ export const PlaceListPage: React.FC = () => {
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
-                    <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}`}>
+                    <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
                             <div className="w-1/3 px-6 sm:px-14 py-3">{t('list.nameHeader')}</div>
                             <div className={isOpensToday ? 'w-1/4 py-3 ps-4 sm:ps-6' : 'w-1/3 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>

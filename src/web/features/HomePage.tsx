@@ -379,7 +379,7 @@ export function HomePage() {
                                   navigate(`/${s.category}`, { state: { ids } });
                                 }
                               }}
-                              className="min-w-[120px] mt-2 text-sm rounded-full bg-bs-red text-white px-3 py-1"
+                              className="min-w-[120px] mt-3 text-sm rounded-full bg-bs-red text-white px-3 py-1"
                             >
                               {s.count === 1 ? t('home.viewPlace') : t('home.viewPlaces')}
                             </button>

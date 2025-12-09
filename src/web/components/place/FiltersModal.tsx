@@ -45,7 +45,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
               <li>
                 <button
                   type="button"
-                  onClick={() => { setOrder('name-asc'); setOpenNowOnly(false); onClose(); }}
+                  onClick={() => { console.log('[FiltersModal] order=name-asc'); setOrder('name-asc'); setOpenNowOnly(false); onClose(); }}
                   className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${order === 'name-asc' ? 'bg-bs-red/40' : ''}`}
                 >
                   <span className="text-sm">{t('list.orderNameAsc')}</span>
@@ -55,7 +55,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
               <li>
                 <button
                   type="button"
-                  onClick={() => { setOrder('name-desc'); setOpenNowOnly(false); onClose(); }}
+                  onClick={() => { console.log('[FiltersModal] order=name-desc'); setOrder('name-desc'); setOpenNowOnly(false); onClose(); }}
                   className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${order === 'name-desc' ? 'bg-bs-red/40' : ''}`}
                 >
                   <span className="text-sm">{t('list.orderNameDesc')}</span>
@@ -65,7 +65,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
               <li>
                 <button
                   type="button"
-                  onClick={() => { setOrder('neighborhood-asc'); setOpenNowOnly(false); onClose(); }}
+                  onClick={() => { console.log('[FiltersModal] order=neighborhood-asc'); setOrder('neighborhood-asc'); setOpenNowOnly(false); onClose(); }}
                   className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${order === 'neighborhood-asc' ? 'bg-bs-red/40' : ''}`}
                 >
                   <span className="text-sm">{t('list.orderNeighborhoodAsc')}</span>
@@ -75,7 +75,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
               <li>
                 <button
                   type="button"
-                  onClick={() => { setOrder('neighborhood-desc'); setOpenNowOnly(false); onClose(); }}
+                  onClick={() => { console.log('[FiltersModal] order=neighborhood-desc'); setOrder('neighborhood-desc'); setOpenNowOnly(false); onClose(); }}
                   className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${order === 'neighborhood-desc' ? 'bg-bs-red/40' : ''}`}
                 >
                   <span className="text-sm">{t('list.orderNeighborhoodDesc')}</span>
