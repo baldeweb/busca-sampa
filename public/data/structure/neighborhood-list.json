@@ -170,5 +170,13 @@
     {
         "id": 43,
         "neighborhoodName": "Jardim Anália Franco"
+    },
+    {
+        "id": 44,
+        "neighborhoodName": "Vila Leopoldina"
+    },
+    {
+        "id": 45,
+        "neighborhoodName": "Canindé"
     }
 ]

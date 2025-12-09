@@ -843,5 +843,97 @@
       { "days": ["SUNDAY"], "open": "08:00", "close": "13:00" },
       { "days": ["SUNDAY"], "open": "16:00", "close": "21:00" }
     ]
+  },
+  {
+    "id": "TOYSHOW_DAYTIME",
+    "description": "Horários da Toyshow",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:00", "close": "19:00" },
+      { "days": ["SATURDAY"], "open": "10:00", "close": "20:00" },
+      { "days": ["SUNDAY"], "open": "11:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "MERCADOLAPA_DAYTIME",
+    "description": "Horários da Mercadão da Lapa",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "08:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "MUSEUIMIGRACAOJAPONESA_DAYTIME",
+    "description": "Horários do Museu da Imigração Japonesa",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "10:00", "close": "16:00" }
+    ]
+  },
+  {
+    "id": "MUSEUAFROBRASIL_DAYTIME",
+    "description": "Horários do Museu Afro Brasil",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "10:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "OBELISCOIBIRAPUERA_DAYTIME",
+    "description": "Horários do Obelisco do Ibirapuera",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "10:00", "close": "16:00" }
+    ]
+  },
+  {
+    "id": "RODARICO_DAYTIME",
+    "description": "Horários do Rodar Rico",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "19:30" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "10:00", "close": "19:30" }
+    ]
+  },
+  {
+    "id": "INSTITUTOTOMIEOHTAKE_DAYTIME",
+    "description": "Horários do Instituto Tomie Ohtake",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "11:00", "close": "19:00" }
+    ]
+  },
+  {
+    "id": "ROLLERJAM_DAYTIME",
+    "description": "Horários do Roller Jam",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY"], "open": "16:00", "close": "22:00" },
+      { "days": ["THURSDAY"], "open": "15:00", "close": "22:00" },
+      { "days": ["FRIDAY"], "open": "15:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "15:00", "close": "02:00" },
+      { "days": ["SUNDAY"], "open": "16:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "ARENAPIXEL_DAYTIME",
+    "description": "Horários do Arena Pixel",
+    "periods": [
+      { "days": ["WEDNESDAY"], "open": "10:00", "close": "20:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "10:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "CENTROCULTURALDESP_DAYTIME",
+    "description": "Horários do Centro Cultural de São Paulo",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "10:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "FEIRAANTIGUIDADES_DAYTIME",
+    "description": "Horários da Feira de Antiguidades",
+    "periods": [
+      { "days": ["SATURDAY"], "open": "10:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "FEIRABOLIVIANAKANTUTA_DAYTIME",
+    "description": "Horários da Feira Boliviana Kantuta",
+    "periods": [
+      { "days": ["SUNDAY"], "open": "11:00", "close": "19:30" }
+    ]
   }
 ]

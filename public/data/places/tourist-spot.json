@@ -1334,40 +1334,37 @@
     },
     {
         "id": 38,
-        "name": "ToyShow",
+        "name": "Toyshow Colecionáveis e Presentes Geek",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "TOYSHOW_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Loja especializada em colecionáveis, action figures, quadrinhos e itens geek."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pamplona",
+                "number": "1135",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01405-001",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5671468,
+                "longitude": -46.6596811
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.toyshow.com.br/",
         "linkInstagram": "",
         "tags": ["SHOP_LOCATION"]
     },
@@ -1377,36 +1374,36 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1136413946",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MERCADOLAPA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Herbart",
+                "number": "47",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Lapa",
+                "postalCode": "05072-030",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.519351,
+                "longitude": -46.7043011
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://mercadodalapa.com.br/",
         "linkInstagram": "",
         "tags": ["SHOP_LOCATION"]
     },
@@ -1416,12 +1413,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1132095465",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEUIMIGRACAOJAPONESA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1430,96 +1427,96 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "São Joaquim",
+                "number": "381",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Liberdade",
+                "postalCode": "01508-900",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5612483,
+                "longitude": -46.6377126
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.bunkyo.org.br/br/museu-historico/",
         "linkInstagram": "",
         "tags": ["MUSEUM", "CULTURE"]
     },
     {
         "id": 41,
-        "name": "MorumBis",
+        "name": "Estádio MorumBIS",
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1137498000",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
+        "shouldSchedule": true,
+        "notes": [
+            "Tour pelo estádio do São Paulo Futebol Clube, incluindo visita aos bastidores, vestiários e campo de jogo."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Roberto Gomes Pedrosa",
+                "number": "1",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Morumbi",
+                "postalCode": "05653-070",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.6010078,
+                "longitude": -46.7226197
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://passaportefc.com/produto/morumbis-tour/",
+        "linkInstagram": "https://www.instagram.com/estadiodomorumbi/",
         "tags": ["STADIUM", "TOUR"]
     },
     {
         "id": 42,
         "name": "Monumento às Bandeiras",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "O Monumento às Bandeiras é uma estátua maciça e interativa em homenagem aos colonos do século XVII.",
+            "Localizado ao lado do Parque Ibirapuera, é um dos marcos mais icônicos de São Paulo."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Armando de Sales Oliveira",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04001-070",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5800191,
+                "longitude": -46.6632873
             }
         ],
         "linkMenu": "",
@@ -1533,12 +1530,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133208900",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MUSEUAFROBRASIL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1546,23 +1543,26 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Museu etnográfico em um prédio projetado por Oscar Niemeyer, dedicado à diáspora africana no Brasil.",
+            "Localizado no Parque Ibirapuera, a entrada mais próxima fica no Portão 10"
+        ],
+        "priceRange": "LOW",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pedro Álvares Cabral",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5837837,
+                "longitude": -46.6617006
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.museuafrobrasil.org.br/",
         "linkInstagram": "",
         "tags": ["MUSEUM", "CULTURE"]
     },
@@ -1570,14 +1570,9 @@
         "id": 44,
         "name": "Obelisco do Ibirapuera",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "OBELISCOIBIRAPUERA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1585,19 +1580,21 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Localizado no Parque Ibirapuera, o Obelisco do Ibirapuera é um monumento histórico que homenageia os heróis da Revolução Constitucionalista de 1932."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pedro Álvares Cabral",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5837837,
+                "longitude": -46.6617006
             }
         ],
         "linkMenu": "",
@@ -1609,14 +1606,9 @@
         "id": 45,
         "name": "Roda Gigante Roda Rico",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "RODARICO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1624,24 +1616,26 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Localizado dentro do Parque Villa-Lobos"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Queiroz Filho",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Leopoldina",
+                "postalCode": "05319-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5464795,
+                "longitude": -46.7334527
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "http://www.rodarico.com.br/",
+        "linkInstagram": "https://www.instagram.com/rodarico/",
         "tags": ["FUN"]
     },
     {
@@ -1650,77 +1644,40 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1122451900",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "INSTITUTOTOMIEOHTAKE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
+        "isOpenOnHolidays": false,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Apresentação de novas tendências da arte nacional e internacional, com ateliês, cursos, livraria e bistrô."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Coropé",
+                "number": "88",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05426-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5611812,
+                "longitude": -46.6969418
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.institutotomieohtake.org.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION"]
-    },
-    {
-        "id": 47,
-        "name": "Shopping Eldorado",
-        "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": ["SHOP_LOCATION"]
+        "tags": ["ART_EXHIBITION", "CULTURE"]
     },
     {
         "id": 48,
@@ -1728,12 +1685,16 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1139690931",
+                "isWhatsApp": false
+            },
+            {
+                "number": "1145610090",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ROLLERJAM_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1741,24 +1702,37 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
+        "notes": [
+            "Rinque de patinação"
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Alameda dos Nhambiquaras",
+                "number": "1980",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Moema",
+                "postalCode": "04090-004",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.6141937,
+                "longitude": -46.6690055
+            },
+            {
+                "id": 1,
+                "street": "Fernando Falcão",
+                "number": "393",
+                "city": "São Paulo",
+                "neighborhood": "Mooca",
+                "postalCode": "03180-001",
+                "isMainUnity": false,
+                "latitude": -23.5564666,
+                "longitude": -46.6007529
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "http://www.rollerjam.com.br/",
+        "linkInstagram": "https://www.instagram.com/rollerjammoema/",
         "tags": ["FUN"]
     },
     {
@@ -1767,37 +1741,39 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1138194001",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ARENAPIXEL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [],
+        "shouldSchedule": true,
+        "notes": [
+            "Espaço de jogos eletrônicos com consoles, computadores e realidade virtual."
+        ],
         "priceRange": "MEDIUM",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Girassol",
+                "number": "927",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "05433-002",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5513816,
+                "longitude": -46.6947995
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://www.arenapixel.com.br/",
+        "linkInstagram": "https://www.instagram.com/arenapixel/",
         "tags": ["FUN"]
     },
     {
@@ -1806,12 +1782,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1151974889",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1819,23 +1795,26 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Cemitério histórico conhecido por suas esculturas e túmulos elaborados, além de ser o local de descanso final de várias figuras notáveis da história brasileira.",
+            "Neste cemitério está a estátua do anjo usada na capa do álbum Angels Cry, da banda Angra."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "da Consolação",
+                "number": "1660",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Consolação",
+                "postalCode": "01302-001",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5511676,
+                "longitude": -46.6591912
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://cemiteriodaconsolacao.net/",
         "linkInstagram": "",
         "tags": ["OTHERS"]
     },
@@ -1845,12 +1824,12 @@
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "",
+                "number": "1133974002",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CENTROCULTURALDESP_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1858,58 +1837,57 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Espaço moderno com galerias de exposições, teatros, uma biblioteca e jardins, incluindo um gramado na cobertura."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Vergueiro",
+                "number": "1000",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Liberdade",
+                "postalCode": "01504-000",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5711135,
+                "longitude": -46.6427098
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.centrocultural.sp.gov.br/",
         "linkInstagram": "",
         "tags": ["ART_EXHIBITION", "CULTURE"]
     },
     {
         "id": 52,
-        "name": "Feira de Arte - Praça Benedito Calixto",
+        "name": "Feira de Antiguidades",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "FEIRAANTIGUIDADES_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
+        "isOpenOnSundays": false,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Feira de antiguidades realizada aos sábados na Praça Benedito Calixto, em Pinheiros."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Benedito Calixto",
+                "number": "s/n",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05406-040",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5582252,
+                "longitude": -46.680618
             }
         ],
         "linkMenu": "",
@@ -1921,14 +1899,9 @@
         "id": 53,
         "name": "Feira Boliviana Kantuta",
         "type": "TOURIST_SPOT",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "FEIRABOLIVIANAKANTUTA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1936,19 +1909,21 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MEDIUM",
+        "notes": [
+            "Feira de artesanato boliviano realizada aos domingos na Praça Kantuta, no Canindé."
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça kantuta",
+                "number": "924",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Canindé",
+                "postalCode": "01109-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.5254687,
+                "longitude": -46.6220265
             }
         ],
         "linkMenu": "",
