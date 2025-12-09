@@ -2,7 +2,7 @@ import React from "react";
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
-import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle } from "react-icons/fa";
+import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { BackHeader } from '@/web/components/layout/BackHeader';
 import icUber from '@/assets/imgs/icons/ic_uber.png';
 import { useTranslation } from 'react-i18next';
@@ -21,9 +21,11 @@ interface PlaceDetailProps {
     address?: string;
     googleMapsUrl?: string;
     addresses?: Array<any>;
+    phones?: Array<{ number?: string; isWhatsApp?: boolean }>;
     instagramUrl: string;
     menuUrl: string;
     websiteUrl?: string;
+    openingPatternId?: string;
     notes: string[];
     onBack: () => void;
     tags?: string[];
@@ -41,9 +43,11 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     address,
     googleMapsUrl,
     addresses = [],
+    phones = [],
     instagramUrl,
     menuUrl,
     websiteUrl = "",
+    openingPatternId = "",
     notes,
     onBack,
     onShowOpeningHours,
@@ -154,7 +158,10 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 </div>
                             </div>
                             <div className="mt-2 space-y-2 mb-2">
-                                {openingDays.map((day, idx) => {
+                                {openingPatternId === 'CHECK_AVAILABILITY_DAYTIME' ? (
+                                    <div className="text-sm text-gray-700">{t('openingHours.checkAvailabilityMessage')}</div>
+                                ) : (
+                                    openingDays.map((day, idx) => {
                                         const normalized = String(day).toLowerCase();
                                         const isLarge = /domingo|sábado|sabado|feriado|segunda/.test(normalized);
                                         return (
@@ -168,7 +175,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 <span className="text-sm text-gray-800">{day}</span>
                                             </div>
                                         );
-                                    })}
+                                    })
+                                )}
                             </div>
                         </div>
 
@@ -261,6 +269,34 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     </a>
                                 </div>
                             )}
+
+                                    {phones && phones.length > 0 && (
+                                        <div className="mt-8">
+                                            <h3 className="font-bold uppercase text-white">{t('placeDetail.phoneTitle')}</h3>
+                                            <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.phonesSubtitle')}</p>
+                                            <div className="mt-3 space-y-2">
+                                                {phones.map((p, idx) => {
+                                                    const raw = String(p?.number || '').trim();
+                                                    if (!raw) return null;
+                                                    const clean = raw.replace(/[^0-9+]/g, '');
+                                                    const telHref = `tel:${clean}`;
+                                                    const waHref = `https://wa.me/${clean.replace(/^\+/, '')}`;
+                                                    return (
+                                                        <div key={idx} className="flex items-center gap-2">
+                                                            <a href={telHref} aria-label={`call-${idx}`} className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                                <FaPhone className="mr-2" />Ligar
+                                                            </a>
+                                                            {p.isWhatsApp && (
+                                                                <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label={`whatsapp-${idx}`} className="inline-flex items-center bg-green-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                                    <FaWhatsapp className="mr-2" />WhatsApp
+                                                                </a>
+                                                            )}
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
 
                             {menuUrl && menuUrl.trim().length > 0 && (
                                 <div className="mt-8">

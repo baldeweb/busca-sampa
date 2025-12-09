@@ -147,8 +147,10 @@ export function PlaceDetailPage() {
             googleMapsUrl={`https://maps.google.com/?q=${mainAddress.street || ""},${mainAddress.number || ""}`}
             addresses={place.addresses || []}
         instagramUrl={place.linkInstagram || ""}
+        phones={place.phones || []}
         menuUrl={place.linkMenu || ""}
         websiteUrl={place.linkWebsite || ""}
+        openingPatternId={openingPattern?.id || patternId || ""}
         notes={place.notes || []}
         onBack={() => navigate(-1)}
         onShowOpeningHours={() => setShowModal(true)}
@@ -159,6 +161,13 @@ export function PlaceDetailPage() {
         isOpen={showModal}
         onClose={() => setShowModal(false)}
         instagramUrl={place.linkInstagram}
+        customMessage={
+          openingPattern?.id === 'CHECK_AVAILABILITY_DAYTIME'
+            ? t('openingHours.checkAvailabilityMessage')
+            : openingPattern?.id === 'ALWAYS_OPEN'
+            ? t('openingHours.alwaysOpenMessage')
+            : undefined
+        }
       />
     </>
   );

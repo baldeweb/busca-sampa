@@ -111,6 +111,8 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Siga o perfil oficial do estabelecimento:',
         follow: 'Seguir',
+        phoneTitle: 'Telefone',
+        phonesSubtitle: 'Estes são os contatos oficiais deste local',
         menuTitle: 'Cardápio',
         menuSubtitle: 'Veja o cardápio do estabelecimento',
         menuButton: 'Abrir cardápio',
@@ -126,7 +128,9 @@ const resources = {
         closed: 'Fechado',
         range: 'das {{open}} às {{close}}',
         notProvided: 'Horários não informados.',
-        followButton: 'Seguir'
+        followButton: 'Seguir',
+        checkAvailabilityMessage: 'Os horários variam de acordo com a disponibilidade. Verifique no site e na página do Instagram do local para entender como funciona',
+        alwaysOpenMessage: 'Este local fica aberto 24h'
       },
       footer: {
         home: 'Home',
@@ -274,6 +278,8 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Sigue el perfil oficial:',
         follow: 'Seguir',
+        phoneTitle: 'Teléfono',
+        phonesSubtitle: 'Estos son los contactos oficiales de este lugar',
         menuTitle: 'Menú',
         menuSubtitle: 'Ver el menú del lugar',
         menuButton: 'Abrir menú',
@@ -289,7 +295,9 @@ const resources = {
         closed: 'Cerrado',
         range: 'de {{open}} a {{close}}',
         notProvided: 'Horarios no informados.',
-        followButton: 'Seguir'
+        followButton: 'Seguir',
+        checkAvailabilityMessage: 'Los horarios varían según la disponibilidad. Verifica en el sitio web y en la página de Instagram del lugar para entender cómo funciona',
+        alwaysOpenMessage: 'Este lugar está abierto las 24 horas'
       },
       footer: { home: 'Inicio', search: 'Buscar', about: 'Sobre' },
       distanceSelect: { title: 'Seleccione la distancia', searchButton: 'Buscar' },
@@ -398,6 +406,8 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Suivez le profil officiel :',
         follow: 'Suivre',
+        phoneTitle: 'Téléphone',
+        phonesSubtitle: 'Voici les contacts officiels de cet endroit',
         menuTitle: 'Menu',
         menuSubtitle: 'Voir le menu',
         menuButton: 'Ouvrir menu',
@@ -408,7 +418,7 @@ const resources = {
         reportProblem: 'Signaler un problème',
         visitModalEnding: ''
       },
-      openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre' },
+      openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre', checkAvailabilityMessage: 'Les horaires varient selon la disponibilité. Consultez le site et la page Instagram du lieu pour en savoir plus', alwaysOpenMessage: 'Cet endroit est ouvert 24h/24' },
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
       distanceSelect: { title: 'Sélectionnez la distance', searchButton: 'Chercher' },
       nearbyMap: { title: 'Carte proximité', noneInRadius: 'Aucun point dans le rayon.', pointsDisplayed: '{{count}} point(s) affiché(s).', you: 'Vous' },
@@ -430,8 +440,8 @@ const resources = {
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', typeHeader: 'Тип', orderNameAsc: 'ИМЯ A-Z', orderNameDesc: 'ИМЯ Z-A', orderNeighborhoodAsc: 'РАЙОН A-Z', orderNeighborhoodDesc: 'РАЙОН Z-A' },
-      placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
-      openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться' },
+      placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
+      openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
       distanceSelect: { title: 'Выберите расстояние', searchButton: 'Искать' },
       nearbyMap: { title: 'Карта рядом', noneInRadius: 'Нет точек в текущем радиусе.', pointsDisplayed: '{{count}} точк(и).', you: 'Вы' },
@@ -477,7 +487,7 @@ const resources = {
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '名称 A-Z', orderNameDesc: '名称 Z-A', orderNeighborhoodAsc: '街区 A-Z', orderNeighborhoodDesc: '街区 Z-A' },
-      placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于该地点', visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。', visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。', neverEmphasis: '', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了该门店的地址，点击下面的按钮可规划前往路线。', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '' },
+      placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于该地点', visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。', visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。', neverEmphasis: '', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了该门店的地址，点击下面的按钮可规划前往路线。', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', phoneTitle: '电话', phonesSubtitle: '这些是该地点的官方联系方式', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '' },
       placeList: {
         environmentTitle: '环境类型：',
         hoursUnavailable: '营业时间不可用',
@@ -502,7 +512,7 @@ const resources = {
           FREE: '免费活动'
         }
       },
-      openingHours: { title: '营业时间', closed: '关闭', range: '{{open}} - {{close}}', notProvided: '未提供时间。', followButton: '关注' },
+      openingHours: { title: '营业时间', closed: '关闭', range: '{{open}} - {{close}}', notProvided: '未提供时间。', followButton: '关注', checkAvailabilityMessage: '营业时间根据可用性而变化。请查看该地点的网站和 Instagram 页面以了解详情', alwaysOpenMessage: '此地点全天24小时开放' },
       footer: { home: '首页', search: '搜索', about: '关于' },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
       nearbyMap: { title: '附近地图', noneInRadius: '当前半径内无点。', pointsDisplayed: '显示 {{count}} 个点。', you: '你' },
@@ -589,6 +599,8 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Follow the official profile:',
         follow: 'Follow',
+        phoneTitle: 'Phone',
+        phonesSubtitle: 'These are the official contacts for this place',
         menuTitle: 'Menu',
         menuSubtitle: 'See the place menu',
         menuButton: 'Open menu',
@@ -604,7 +616,9 @@ const resources = {
         closed: 'Closed',
         range: 'from {{open}} to {{close}}',
         notProvided: 'Hours not provided.',
-        followButton: 'Follow'
+        followButton: 'Follow',
+        checkAvailabilityMessage: "Hours vary according to availability. Check the place's website and Instagram page to understand how it works",
+        alwaysOpenMessage: 'This place is open 24 hours'
       },
       footer: {
         home: 'Home',
@@ -734,6 +748,8 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Folgen Sie dem offiziellen Profil:',
         follow: 'Folgen',
+        phoneTitle: 'Telefon',
+        phonesSubtitle: 'Dies sind die offiziellen Kontakte dieses Ortes',
         menuTitle: 'Speisekarte',
         menuSubtitle: 'Speisekarte des Standorts anzeigen',
         menuButton: 'Speisekarte öffnen',
@@ -741,6 +757,7 @@ const resources = {
         reportProblem: 'Ein Problem melden',
         visitModalEnding: 'Ich werde Orte empfehlen, die Sie nicht besuchen sollten :)'
       },
+      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet' },
       whereIsToday: { title: 'Also, wo ist es heute?' },
       placeType: {
         RESTAURANT: 'Restaurants',
@@ -825,11 +842,14 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: '公式アカウントをフォロー：',
         follow: 'フォロー',
+        phoneTitle: '電話',
+        phonesSubtitle: 'これらはこの場所の公式連絡先です',
         menuTitle: 'メニュー',
         menuSubtitle: '店舗のメニューを確認',
         menuButton: 'メニューを開く',
         notesTitle: '備考'
       },
+      openingHours: { checkAvailabilityMessage: '営業時間は都度変動します。詳細は施設のウェブサイトおよびInstagramページでご確認ください', alwaysOpenMessage: 'この場所は24時間営業です' },
       placeList: {
         environmentTitle: '環境タイプ：',
         hoursUnavailable: '営業時間情報なし',
@@ -934,11 +954,14 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'تابع الملف الرسمي للمكان:',
         follow: 'تابع',
+        phoneTitle: 'هاتف',
+        phonesSubtitle: 'هذه هي وسائل الاتصال الرسمية لهذا المكان',
         menuTitle: 'القائمة',
         menuSubtitle: 'عرض قائمة المطعم',
         menuButton: 'فتح القائمة',
         notesTitle: 'ملاحظات'
       },
+      openingHours: { checkAvailabilityMessage: 'تختلف أوقات العمل حسب التوفر. تحقق من موقع المكان وصفحة الإنستغرام لمعرفة التفاصيل', alwaysOpenMessage: 'هذا المكان مفتوح على مدار 24 ساعة' },
       whereIsToday: { title: 'فأين نذهب اليوم؟' },
       placeType: {
         RESTAURANT: 'مطاعم',
@@ -1016,11 +1039,14 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Segui il profilo ufficiale del locale:',
         follow: 'Segui',
+        phoneTitle: 'Telefono',
+        phonesSubtitle: 'Questi sono i contatti ufficiali di questo luogo',
         menuTitle: 'Menu',
         menuSubtitle: 'Vedi il menu del locale',
         menuButton: 'Apri menu',
         notesTitle: 'Note'
       },
+      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24' },
       whereIsToday: { title: 'Allora, dove si va oggi?' },
       placeType: {
         RESTAURANT: 'Ristoranti',
@@ -1096,11 +1122,14 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Volg het officiële profiel van de locatie:',
         follow: 'Volgen',
+        phoneTitle: 'Telefoon',
+        phonesSubtitle: 'Dit zijn de officiële contactgegevens van deze locatie',
         menuTitle: 'Menu',
         menuSubtitle: 'Bekijk het menu van de locatie',
         menuButton: 'Open menu',
         notesTitle: 'Opmerkingen'
       },
+      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open' },
       whereIsToday: { title: 'Dus, waar is het vandaag?' },
       placeType: {
         RESTAURANT: 'Restaurants',
@@ -1167,11 +1196,14 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Mekanının resmi profilini takip edin:',
         follow: 'Takip et',
+        phoneTitle: 'Telefon',
+        phonesSubtitle: 'Bunlar bu yerin resmi iletişim bilgileri',
         menuTitle: 'Menü',
         menuSubtitle: 'Mekan menüsünü görüntüle',
         menuButton: 'Menüyü aç',
         notesTitle: 'Notlar'
       },
+      openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır' },
       whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?' },
       placeType: {
         RESTAURANT: 'Restoranlar',
@@ -1237,11 +1269,14 @@ const resources = {
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Śledź oficjalny profil lokalu:',
         follow: 'Śledź',
+        phoneTitle: 'Telefon',
+        phonesSubtitle: 'To są oficjalne kontakty tego miejsca',
         menuTitle: 'Menu',
         menuSubtitle: 'Zobacz menu miejsca',
         menuButton: 'Otwórz menu',
         notesTitle: 'Notatki'
       },
+      openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę' },
       whereIsToday: { title: 'A więc, gdzie dziś?' },
       placeType: {
         RESTAURANT: 'Restauracje',

@@ -65,11 +65,6 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
         {customMessage ? (
           <div className="p-5 text-center">
             <p className="mb-4 text-sm text-gray-200">{customMessage}</p>
-            {instagramUrl && (
-              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-2 rounded font-bold">
-                <span className="mr-2">📷</span> {t('openingHours.followButton')}
-              </a>
-            )}
           </div>
         ) : (
           <div className="p-4">
