@@ -84,6 +84,14 @@ const resources = {
         orderNeighborhoodAsc: 'BAIRRO em ordem crescente A-Z',
         orderNeighborhoodDesc: 'BAIRRO em ordem decrescente Z-A'
       },
+      filters: {
+        title: 'Filtros',
+        subtitle: 'Ajuste os filtros abaixo para refinar os resultados',
+        sortingTitle: 'Ordenação',
+        hoursTitle: 'Horários',
+        openNowLabel: 'Aberto agora',
+        button: 'Filtros'
+      },
       whereIsToday: { title: 'E aí, onde é hoje?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Abrem hoje' },
       placeDetail: {
         loading: 'Carregando detalhes...',
@@ -252,6 +260,14 @@ const resources = {
         orderNeighborhoodAsc: 'BARRIO en orden ascendente A-Z',
         orderNeighborhoodDesc: 'BARRIO en orden descendente Z-A'
       },
+      filters: {
+        title: 'Filtros',
+        subtitle: 'Ajusta los filtros a continuación para refinar los resultados',
+        sortingTitle: 'Ordenación',
+        hoursTitle: 'Horarios',
+        openNowLabel: 'Abierto ahora',
+        button: 'Filtros'
+      },
       placeDetail: {
         loading: 'Cargando detalles...',
         notFound: 'Lugar no encontrado.',
@@ -380,6 +396,14 @@ const resources = {
       list: {
         nameHeader: 'Nom', neighborhoodHeader: 'Quartier', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNameDesc: 'NOM par ordre décroissant Z-A', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z', orderNeighborhoodDesc: 'QUARTIER par ordre décroissant Z-A'
       },
+      filters: {
+        title: 'Filtres',
+        subtitle: 'Ajustez les filtres ci-dessous pour affiner les résultats',
+        sortingTitle: 'Ordre',
+        hoursTitle: 'Horaires',
+        openNowLabel: 'Ouvert maintenant',
+        button: 'Filtres'
+      },
       placeDetail: {
         loading: 'Chargement des détails...',
         notFound: 'Lieu introuvable.',
@@ -440,6 +464,7 @@ const resources = {
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNameDesc: 'ИМЯ по убыванию Z-A', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z', orderNeighborhoodDesc: 'РАЙОН по убыванию Z-A' },
+      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
@@ -487,6 +512,7 @@ const resources = {
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '按名称升序 A-Z', orderNameDesc: '按名称降序 Z-A', orderNeighborhoodAsc: '按街区升序 A-Z', orderNeighborhoodDesc: '按街区降序 Z-A' },
+      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于该地点', visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。', visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。', neverEmphasis: '', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了该门店的地址，点击下面的按钮可规划前往路线。', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', phoneTitle: '电话', phonesSubtitle: '这些是该地点的官方联系方式', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '' },
       placeList: {
         environmentTitle: '环境类型：',
@@ -572,6 +598,14 @@ const resources = {
         orderNameDesc: 'NAME descending Z-A',
         orderNeighborhoodAsc: 'NEIGHBORHOOD ascending A-Z',
         orderNeighborhoodDesc: 'NEIGHBORHOOD descending Z-A'
+      },
+      filters: {
+        title: 'Filters',
+        subtitle: 'Adjust the filters below to refine results',
+        sortingTitle: 'Sorting',
+        hoursTitle: 'Hours',
+        openNowLabel: 'Open now',
+        button: 'Filters'
       },
       placeDetail: {
         loading: 'Loading details...',

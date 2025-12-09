@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
+import { FiltersModal } from '@/web/components/place/FiltersModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
 
 // Página que lista todos os lugares de um bairro específico,
@@ -93,7 +94,8 @@ export const NeighborhoodListPage: React.FC = () => {
     { value: 'type-desc' },
   ];
   const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
-  const [showOrderDropdown, setShowOrderDropdown] = useState(false);
+  const [showFiltersModal, setShowFiltersModal] = useState(false);
+  const [filterOpenNow, setFilterOpenNow] = useState(false);
 
   const filteredPlaces = useMemo(() => {
     if (!selectedType) return neighborhoodPlaces;
@@ -141,6 +143,16 @@ export const NeighborhoodListPage: React.FC = () => {
             </div>
         </div>
       </section>
+
+        <FiltersModal
+          isOpen={showFiltersModal}
+          onClose={() => setShowFiltersModal(false)}
+          order={order}
+          setOrder={(v: string) => setOrder(v)}
+          openNowOnly={filterOpenNow}
+          setOpenNowOnly={(v: boolean) => setFilterOpenNow(v)}
+          showOpenNowOption={false}
+        />
 
       {/* Filtro por tipo (grid, igual à página de lugares) */}
       {environments.length > 0 && (
@@ -200,47 +212,14 @@ export const NeighborhoodListPage: React.FC = () => {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
             <div className="flex items-center justify-end">
-                <div className="flex items-center gap-3">
-                    <label className="font-bold">{t('common.filter')}</label>
+                <div>
                     <div className="relative inline-block">
-            <button
-                className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
-                onClick={() => setShowOrderDropdown((v) => !v)}
-            >
-                {(() => {
-                    switch (order) {
-                        case 'name-asc': return t('list.orderNameAsc');
-                        case 'name-desc': return t('list.orderNameDesc');
-                        case 'type-asc': return t('list.orderNeighborhoodAsc');
-                        case 'type-desc': return t('list.orderNeighborhoodDesc');
-                        default: return '';
-                    }
-                })()}
-            </button>
-            {showOrderDropdown && (
-                <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                    {ORDER_OPTIONS.map((opt) => (
-                        <button
-                            key={opt.value}
-                            className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                            onClick={() => {
-                                setOrder(opt.value);
-                                setShowOrderDropdown(false);
-                            }}
-                        >
-                            {(() => {
-                                switch (opt.value) {
-                                    case 'name-asc': return t('list.orderNameAsc');
-                                    case 'name-desc': return t('list.orderNameDesc');
-                                    case 'type-asc': return t('list.orderNeighborhoodAsc');
-                                    case 'type-desc': return t('list.orderNeighborhoodDesc');
-                                    default: return '';
-                                }
-                            })()}
-                        </button>
-                    ))}
-                </div>
-            )}
+                <button
+                  className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                  onClick={() => setShowFiltersModal(true)}
+                >
+                  {t('filters.button')}
+                </button>
                     </div>
                 </div>
             </div>

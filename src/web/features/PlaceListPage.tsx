@@ -12,6 +12,7 @@ import { slugify } from '@/core/services/Slugify';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
+import { FiltersModal } from '@/web/components/place/FiltersModal';
 import flagSp from '@/assets/imgs/flags/flag_sp.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
@@ -155,7 +156,9 @@ export const PlaceListPage: React.FC = () => {
 
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
-    const [showOrderDropdown, setShowOrderDropdown] = useState(false);
+    
+    const [showFiltersModal, setShowFiltersModal] = useState(false);
+    const [filterOpenNow, setFilterOpenNow] = useState(false);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 
     // Filtro de ambiente
@@ -171,6 +174,17 @@ export const PlaceListPage: React.FC = () => {
             return false;
         });
     }, [baseList, selectedEnv]);
+
+    // Apply 'open now' filter if requested
+    const filteredPlacesWithOpenNow = useMemo(() => {
+        if (!filterOpenNow) return filteredPlaces;
+        return filteredPlaces.filter(p => {
+            try {
+                const periods = getPeriodsForToday(p);
+                return isOpenNow(periods);
+            } catch (_) { return false; }
+        });
+    }, [filteredPlaces, filterOpenNow]);
 
     // Debug: log selected environment and result counts to aid troubleshooting
     React.useEffect(() => {
@@ -208,7 +222,7 @@ export const PlaceListPage: React.FC = () => {
 
     // Ordenação
     const sortedPlaces = useMemo(() => {
-        const arr = [...filteredPlaces];
+        const arr = [...filteredPlacesWithOpenNow];
         switch (order) {
             case "name-asc":
                 arr.sort((a, b) => a.name.localeCompare(b.name));
@@ -443,52 +457,28 @@ export const PlaceListPage: React.FC = () => {
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
                     <div className="flex items-center justify-end">
-                        <div className="flex items-center gap-3">
-                            <label className="font-bold">{t('common.filter')}</label>
-                            <div className="relative inline-block">
-                                <button
-                                    className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
-                                    onClick={() => setShowOrderDropdown((v) => !v)}
-                                >
-                                    {(() => {
-                                        switch (order) {
-                                            case 'name-asc': return t('list.orderNameAsc');
-                                            case 'name-desc': return t('list.orderNameDesc');
-                                            case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                            case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                            default: return '';
-                                        }
-                                    })()}
-                                </button>
-                                {showOrderDropdown && (
-                                    <div className="absolute right-0 mt-2 w-64 bg-bs-card border border-bs-red rounded shadow-lg z-10">
-                                        {ORDER_OPTIONS.map((opt) => (
-                                            <button
-                                                key={opt.value}
-                                                className="block w-full text-left px-4 py-2 text-white hover:bg-bs-red"
-                                                onClick={() => {
-                                                    setOrder(opt.value);
-                                                    setShowOrderDropdown(false);
-                                                }}
-                                            >
-                                                {(() => {
-                                                    switch (opt.value) {
-                                                        case 'name-asc': return t('list.orderNameAsc');
-                                                        case 'name-desc': return t('list.orderNameDesc');
-                                                        case 'neighborhood-asc': return t('list.orderNeighborhoodAsc');
-                                                        case 'neighborhood-desc': return t('list.orderNeighborhoodDesc');
-                                                        default: return '';
-                                                    }
-                                                })()}
-                                            </button>
-                                        ))}
-                                    </div>
-                                )}
+                            <div>
+                                <div className="relative inline-block">
+                                    <button
+                                        className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                                        onClick={() => setShowFiltersModal(true)}
+                                    >
+                                        {t('filters.button')}
+                                    </button>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
+            <FiltersModal
+                isOpen={showFiltersModal}
+                onClose={() => setShowFiltersModal(false)}
+                order={order}
+                setOrder={(v: string) => setOrder(v)}
+                openNowOnly={filterOpenNow}
+                setOpenNowOnly={(v: boolean) => setFilterOpenNow(v)}
+                    showOpenNowOption={!isOpensToday}
+            />
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
