@@ -20,7 +20,6 @@ interface Props {
   isOpen: boolean;
   onClose: () => void;
   customMessage?: string;
-  instagramUrl?: string;
 }
 
 const dayLabels: Record<string, Record<string,string>> = {
@@ -36,7 +35,7 @@ const dayLabels: Record<string, Record<string,string>> = {
   CHECK_AVAILABILITY: { pt: "Consultar Instagram", en: "Check Instagram" }
 };
 
-export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, customMessage, instagramUrl }) => {
+export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, customMessage }) => {
   if (!isOpen) return null;
   const { t, i18n } = useTranslation();
 

@@ -160,7 +160,6 @@ export function PlaceDetailPage() {
         pattern={openingPattern}
         isOpen={showModal}
         onClose={() => setShowModal(false)}
-        instagramUrl={place.linkInstagram}
         customMessage={
           openingPattern?.id === 'CHECK_AVAILABILITY_DAYTIME'
             ? t('openingHours.checkAvailabilityMessage')
