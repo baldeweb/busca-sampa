@@ -439,7 +439,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["PARK"]
+        "tags": ["PARK", "OPEN_24_HOURS"]
     },
     {
         "id": 13,
@@ -1007,7 +1007,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE"]
+        "tags": ["OPENED_SPACE", "OPEN_24_HOURS"]
     },
     {
         "id": 29,
@@ -1043,7 +1043,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE"]
+        "tags": ["OPENED_SPACE", "OPEN_24_HOURS"]
     },
     {
         "id": 30,
@@ -1522,7 +1522,7 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE", "MONUMENT"]
+        "tags": ["OPENED_SPACE", "MONUMENT", "OPEN_24_HOURS"]
     },
     {
         "id": 43,
@@ -1816,7 +1816,7 @@
         "linkMenu": "",
         "linkWebsite": "https://cemiteriodaconsolacao.net/",
         "linkInstagram": "",
-        "tags": ["OTHERS"]
+        "tags": ["OTHERS", "OPEN_24_HOURS"]
     },
     {
         "id": 51,
