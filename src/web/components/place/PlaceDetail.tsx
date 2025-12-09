@@ -2,7 +2,7 @@ import React from "react";
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
-import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp, FaStar } from "react-icons/fa";
 import { BackHeader } from '@/web/components/layout/BackHeader';
 import icUber from '@/assets/imgs/icons/ic_uber.png';
 import { useTranslation } from 'react-i18next';
@@ -188,7 +188,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 </div>
                                 <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
                                 <div className="mt-12 mb-4 space-y-4">
-                                    {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
+                                        {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
                                         addresses.map((addr: any, idx: number) => {
                                             const neighborhoodText = addr?.neighborhood || '';
                                             const street = addr?.street || '';
@@ -218,7 +218,18 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 <div key={idx} className="flex items-start justify-between">
                                                     <div>
                                                         <div>
-                                                            <span className="font-bold uppercase text-black">{neighborhoodText}</span>
+                                                            {addresses.length > 1 ? (
+                                                                <div className="mb-1">
+                                                                    <div className="flex items-center">
+                                                                        {addr?.isMainUnity && <FaStar className="mr-2 text-yellow-400" />}
+                                                                        <span className="font-bold uppercase text-black">Unidade {neighborhoodText}</span>
+                                                                    </div>
+                                                                </div>
+                                                            ) : (
+                                                                <div>
+                                                                    <span className="font-bold uppercase text-black">{neighborhoodText}</span>
+                                                                </div>
+                                                            )}
                                                         </div>
                                                         <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
                                                         <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
@@ -239,7 +250,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 <div>
                                                     <span className="font-bold uppercase text-black">{neighborhood}</span>
                                                 </div>
-                                                <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {address}</div>
+                                                <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</div>
                                                 <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
                                                     <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
                                                         <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
