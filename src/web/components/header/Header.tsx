@@ -8,11 +8,11 @@ export function Header() {
         <header className="bg-bs-bg-header text-white border-b-4 border-bs-red">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-4 py-6 sm:py-8">
                 {/* Logo + tagline (title removed). Mobile: stacked; Desktop: inline to the right */}
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-5 pe-4">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 pe-4">
                     <img
                         src={flagSp}
                         alt="Bandeira do estado de São Paulo"
-                        className="h-[60px] w-[130px] sm:h-[68px] sm:w-[130px]"
+                        className="h-[60px] w-[120px] sm:h-[68px] sm:w-[130px] me-4"
                     />
                     <p className="max-w-xs text-xs sm:text-sm text-gray-300">
                         {t('header.tagline')}
