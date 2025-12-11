@@ -8,7 +8,7 @@
   "description": "Recomendações de lugares em São Paulo",
   "icons": [
     {
-      "src": "/assets/imgs/flags/flag_sp.png",
+      "src": "/assets/imgs/etc/logo-role-paulista.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"

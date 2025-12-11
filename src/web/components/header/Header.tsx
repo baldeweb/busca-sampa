@@ -1,4 +1,4 @@
-import flagSp from "@/assets/imgs/flags/flag_sp.png";
+import flagSp from "@/assets/imgs/etc/logo-role-paulista.svg";
 import { LanguageButton } from "./LanguageButton";
 import { useTranslation } from 'react-i18next';
 
@@ -12,7 +12,7 @@ export function Header() {
                     <img
                         src={flagSp}
                         alt="Bandeira do estado de São Paulo"
-                        className="h-[48px] w-[48px] sm:h-[64px] sm:w-[64px] rounded-app"
+                        className="h-[60px] w-[150px] sm:h-[68px] sm:w-[150px]"
                     />
 
                     <div className="leading-tight">
