@@ -56,7 +56,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "FRI_TO_SUN_DAYTIME",
+            "patternId": "SABORESDEMITIERRA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,

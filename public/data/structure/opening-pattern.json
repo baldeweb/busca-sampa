@@ -22,8 +22,8 @@
     ]
   },
   {
-    "id": "FRI_TO_SUN_DAYTIME",
-    "description": "Abre de sexta a domingo, com horários diurnos.",
+    "id": "SABORESDEMITIERRA_DAYTIME",
+    "description": "Horários do Sabores de Mi Tierra.",
     "periods": [
       { "days": ["FRIDAY"], "open": "10:00", "close": "15:00" },
       { "days": ["SATURDAY", "SUNDAY"], "open": "10:00", "close": "17:00" }
@@ -62,6 +62,23 @@
     "periods": [
       { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "22:00" },
       { "days": ["SUNDAY"], "open": "12:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "FORNO_SP_DAYTIME",
+    "description": "Horários do Fôrno",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "THAITAI_DAYTIME",
+    "description": "Horários do restaurante ThaiTai Brasil",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
     ]
   },
   {

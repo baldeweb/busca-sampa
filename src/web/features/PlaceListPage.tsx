@@ -524,10 +524,8 @@ export const PlaceListPage: React.FC = () => {
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
                             <div className="w-1/3 px-2 sm:px-6 py-3">{t('list.nameHeader')}</div>
-                            <div className={isOpensToday ? 'w-1/4 py-3 ps-4 sm:ps-6' : 'w-1/3 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
-                            {isOpensToday && (
-                                <div className="w-1/6 py-3 ps-2">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
-                            )}
+                            <div className={'w-1/4 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
+                            <div className="w-1/6 py-3 ps-2">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
                         </div>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
                         {sortedPlaces.map((place, idx) => {
@@ -539,12 +537,10 @@ export const PlaceListPage: React.FC = () => {
                                     className={`flex items-center ${rowBg} px-4 sm:px-4 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
-                                    <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{getPlaceNeighborhood(place) || ((!place.addresses || place.addresses.length === 0) ? t('list.variablePlace') : "")}</div>
-                                    {isOpensToday && (
-                                        <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
-                                            {getOpeningDisplayForToday(place)}
-                                        </div>
-                                    )}
+                                    <div className={'w-1/4 px-4 py-6'}>{getPlaceNeighborhood(place) || ((!place.addresses || place.addresses.length === 0) ? t('list.variablePlace') : "")}</div>
+                                    <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
+                                        {getOpeningDisplayForToday(place)}
+                                    </div>
                                     <div className="flex-1 flex justify-end">
                                         <ActionButton
                                             onClick={() => {

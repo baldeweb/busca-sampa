@@ -6,6 +6,8 @@ import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { slugify } from "@/core/services/Slugify";
 import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useTranslation } from 'react-i18next';
+import { useOpeningPatterns } from '@/web/hooks/useOpeningPatterns';
+import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
@@ -26,6 +28,8 @@ export const NeighborhoodListPage: React.FC = () => {
   const { data: nightlife } = useRecommendationList("nightlife");
   const { data: nature } = useRecommendationList("nature");
   const { data: touristSpots } = useRecommendationList("tourist-spot");
+  const { data: openingPatternsData } = useOpeningPatterns();
+  const openingPatterns = openingPatternsData || [];
 
   const allPlaces = useMemo(
     () => [
@@ -120,6 +124,77 @@ export const NeighborhoodListPage: React.FC = () => {
     }
     return arr;
   }, [filteredPlaces, order]);
+
+  // Helper: get raw periods for a relative day (0 = today, 1 = tomorrow)
+  function getPeriodsForDay(place: any, dayOffset = 0): any[] {
+    const periods: any[] = [];
+    const patternId = place.openingHours?.patternId;
+    if (patternId) {
+      const pat = (openingPatterns || []).find((p: any) => p.id === patternId);
+      if (pat?.periods) periods.push(...pat.periods);
+    }
+    if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
+      periods.push(...place.openingHours.customOverrides);
+    }
+    const now = new Date();
+    const dayNames = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+    const targetDay = dayNames[(now.getDay() + dayOffset) % 7];
+    return periods.filter((p: any) => p.open && (p.days?.includes(targetDay) || p.days?.includes('EVERYDAY')));
+  }
+
+  function getPeriodsForToday(place: any): any[] {
+    return getPeriodsForDay(place, 0);
+  }
+
+  // Helper: compute display value for the opening column per user's request
+  function getOpeningDisplayForToday(place: any): string {
+    const periods = getPeriodsForToday(place);
+    // If there is no patternId and no custom overrides, explicitly show 'hours unavailable'
+    if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
+      return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
+    }
+    if (!periods || periods.length === 0) return '-';
+
+    // if currently open
+    try { if (isOpenNow(periods)) return t('placeList.openNow', { defaultValue: 'Aberto agora' }); } catch (_) {}
+
+    // compute next opening time (minutes)
+    const now = new Date();
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+    function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+
+    let nextOpenMinutes: number | null = null;
+    let nextOpenStr: string | null = null;
+    for (const p of periods) {
+      if (!p.open) continue;
+      const om = parseTime(p.open);
+      if (om > currentMinutes && (nextOpenMinutes === null || om < nextOpenMinutes)) {
+        nextOpenMinutes = om;
+        nextOpenStr = p.open;
+      }
+    }
+
+    if (nextOpenMinutes !== null && nextOpenStr) {
+      const diff = nextOpenMinutes - currentMinutes;
+      if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
+      return nextOpenStr;
+    }
+
+    // No more openings today — check tomorrow's first opening and present it (better than '-')
+    const tomorrowPeriods = getPeriodsForDay(place, 1);
+    if (tomorrowPeriods && tomorrowPeriods.length > 0) {
+      // find earliest open tomorrow
+      let earliest: string | null = null;
+      function parseTime2(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+      for (const p of tomorrowPeriods) {
+        if (!p.open) continue;
+        if (earliest === null || parseTime2(p.open) < parseTime2(earliest)) earliest = p.open;
+      }
+      if (earliest) return earliest; // small UX: show time (tomorrow)
+    }
+
+    return '-';
+  }
 
   const titleNeighborhoodRaw = slug?.replace(/-/g, " ") || "";
   const titleNeighborhood = titleNeighborhoodRaw
@@ -231,13 +306,14 @@ export const NeighborhoodListPage: React.FC = () => {
         <div className="mx-auto max-w-5xl px-0 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
-              <div className="w-1/3 px-4 sm:px-6 py-3">{t('list.nameHeader')}</div>
-              <div className="w-1/3 py-3 ps-4 sm:ps-6">{t('list.typeHeader')}</div>
+                <div className="w-1/3 px-4 sm:px-6 py-3">{t('list.nameHeader')}</div>
+                <div className="w-1/4 py-3 ps-4 sm:ps-6">{t('list.typeHeader')}</div>
+                <div className="w-1/6 py-3 ps-2">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
             </div>
             {sortedPlaces.length === 0 && (
               <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
             )}
-            {sortedPlaces.map((place, idx) => {
+                {sortedPlaces.map((place, idx) => {
               const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
                 return (
                 <div
@@ -245,7 +321,8 @@ export const NeighborhoodListPage: React.FC = () => {
                   className={`flex items-center ${rowBg} px-4 sm:px-6 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                 >
                   <div className="w-1/3 px-0 py-6">{place.name}</div>
-                  <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
+                  <div className="w-1/4 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
+                  <div className="w-1/6 px-4 py-6 text-sm text-gray-200">{getOpeningDisplayForToday(place)}</div>
                   <div className="flex-1 flex justify-end">
                     <ActionButton
                       onClick={() => {
