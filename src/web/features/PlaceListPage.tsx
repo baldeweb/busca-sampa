@@ -13,7 +13,7 @@ import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
 import { FiltersModal } from '@/web/components/place/FiltersModal';
-import flagSp from '@/assets/imgs/etc/logo-role-paulista.svg';
+import flagSp from '@/assets/imgs/etc/logo-role-paulista.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
 import icFree from '@/assets/imgs/icons/ic_free.png';
