@@ -158,7 +158,7 @@ const resources = {
         you: 'Você'
       },
       neighborhoodList: {
-        intro: 'Descubra lugares incríveis neste bairro,\nescolhendo uma das opções abaixo :)'
+        intro: 'Descubra lugares incríveis neste bairro, escolhendo uma das opções abaixo :)'
       },
       recommendationsOrigin: {
         title: 'De onde vêm essas recomendações?'

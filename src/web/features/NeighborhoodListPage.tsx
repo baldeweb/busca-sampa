@@ -212,9 +212,7 @@ export const NeighborhoodListPage: React.FC = () => {
               <img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />
               <div>
                 <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                  {t('neighborhoodList.intro')}
-                </p>
+                <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('neighborhoodList.intro')}</p>
               </div>
             </div>
         </div>
