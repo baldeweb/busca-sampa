@@ -13,6 +13,7 @@ import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
 import { FiltersModal } from '@/web/components/place/FiltersModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
+import icFilter from '@/assets/imgs/icons/ic_filter.png';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -290,10 +291,11 @@ export const NeighborhoodListPage: React.FC = () => {
                 <div>
                     <div className="relative inline-block">
                 <button
-                  className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                  className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs flex items-center"
                   onClick={() => setShowFiltersModal(true)}
                 >
-                  {t('filters.button')}
+                  <img src={icFilter} alt="filter" className="w-4 h-4 mr-2 inline-block" />
+                  <span>{t('filters.button')}</span>
                 </button>
                     </div>
                 </div>

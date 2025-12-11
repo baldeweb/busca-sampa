@@ -22,6 +22,7 @@ import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
+import icFilter from '@/assets/imgs/icons/ic_filter.png';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -499,10 +500,11 @@ export const PlaceListPage: React.FC = () => {
                             <div>
                                 <div className="relative inline-block">
                                     <button
-                                        className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs"
+                                        className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs flex items-center"
                                         onClick={() => setShowFiltersModal(true)}
                                     >
-                                        {t('filters.button')}
+                                        <img src={icFilter} alt="filter" className="w-4 h-4 mr-2 inline-block" />
+                                        <span>{t('filters.button')}</span>
                                     </button>
                                 </div>
                             </div>
