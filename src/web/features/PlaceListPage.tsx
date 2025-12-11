@@ -405,7 +405,7 @@ export const PlaceListPage: React.FC = () => {
                     {environments.length > 0 && (
                         <div className="bg-[#F5F5F5] text-black pb-4">
                             <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                            <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-xs w-full">
+                            <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 text-xs w-full">
                                 {/* Botão "Todos" */}
                                 <button
                                     type="button"
@@ -477,18 +477,18 @@ export const PlaceListPage: React.FC = () => {
                 order={order}
                 setOrder={(v: string) => { setOrder(v); setOrderVersion(x => x + 1); }}
                 openNowOnly={filterOpenNow}
-                setOpenNowOnly={(v: boolean) => setFilterOpenNow(v)}
-                    showOpenNowOption={!isOpensToday}
+                setOpenNowOnly={(v: boolean) => { console.log('[PlaceListPage] setOpenNowOnly', v); setFilterOpenNow(v); setOrderVersion(x => x + 1); }}
+                showOpenNowOption={!isOpensToday}
             />
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
-                            <div className="w-1/3 px-6 sm:px-14 py-3">{t('list.nameHeader')}</div>
+                            <div className="w-1/3 px-2 sm:px-6 py-3">{t('list.nameHeader')}</div>
                             <div className={isOpensToday ? 'w-1/4 py-3 ps-4 sm:ps-6' : 'w-1/3 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
                             {isOpensToday && (
-                                <div className="w-1/6 py-3 ps-4 sm:ps-6">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
+                                <div className="w-1/6 py-3 ps-2">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
                             )}
                         </div>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
@@ -498,7 +498,7 @@ export const PlaceListPage: React.FC = () => {
                             return (
                                 <div
                                     key={`${place.id}-${selectedEnv || 'all'}`}
-                                    className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
+                                    className={`flex items-center ${rowBg} px-4 sm:px-4 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
                                     <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{getPlaceNeighborhood(place) || ""}</div>

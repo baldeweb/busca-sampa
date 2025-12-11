@@ -92,7 +92,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
                 <li>
                   <button
                     type="button"
-                    onClick={() => { setOpenNowOnly(true); setOrder(''); onClose(); }}
+                    onClick={() => { console.log('[FiltersModal] openNow selected'); setOpenNowOnly(true); setOrder(''); onClose(); }}
                     className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${openNowOnly ? 'bg-bs-red/40' : ''}`}
                   >
                     <span className="text-sm">{t('filters.openNowLabel')}</span>

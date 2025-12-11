@@ -160,7 +160,7 @@ export const NeighborhoodListPage: React.FC = () => {
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
             <h3 className="font-bold text-base sm:text-lg mb-2">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
             <div className="bg-[#F5F5F5] text-black pb-4">
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-xs w-full">
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 text-xs w-full">
                 {/* Botão "Todos" */}
                 <button
                   type="button"
@@ -231,7 +231,7 @@ export const NeighborhoodListPage: React.FC = () => {
         <div className="mx-auto max-w-5xl px-0 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
-              <div className="w-1/3 px-4 sm:px-12 py-3">{t('list.nameHeader')}</div>
+              <div className="w-1/3 px-4 sm:px-6 py-3">{t('list.nameHeader')}</div>
               <div className="w-1/3 py-3 ps-4 sm:ps-6">{t('list.typeHeader')}</div>
             </div>
             {sortedPlaces.length === 0 && (
@@ -242,7 +242,7 @@ export const NeighborhoodListPage: React.FC = () => {
                 return (
                 <div
                   key={place.id}
-                  className={`flex items-center ${rowBg} px-4 sm:px-12 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
+                  className={`flex items-center ${rowBg} px-4 sm:px-6 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                 >
                   <div className="w-1/3 px-0 py-6">{place.name}</div>
                   <div className="w-1/3 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
