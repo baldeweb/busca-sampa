@@ -501,7 +501,7 @@ export const PlaceListPage: React.FC = () => {
                                     className={`flex items-center ${rowBg} px-4 sm:px-4 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                                 >
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
-                                    <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{getPlaceNeighborhood(place) || ""}</div>
+                                    <div className={isOpensToday ? 'w-1/4 px-4 py-6' : 'w-1/3 px-4 py-6'}>{getPlaceNeighborhood(place) || ((!place.addresses || place.addresses.length === 0) ? t('list.variablePlace') : "")}</div>
                                     {isOpensToday && (
                                         <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
                                             {getOpeningDisplayForToday(place)}
