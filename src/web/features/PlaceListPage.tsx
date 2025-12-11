@@ -81,8 +81,46 @@ export const PlaceListPage: React.FC = () => {
         }
         // NOTE: removed 'aberto-agora' special route — handled via other flows.
         if ((routeType || "").toLowerCase() === "abrem-hoje") {
-            // places that have opening times for today (even if closed now)
-            return allPlaces.filter(place => getOpenTimesForToday(place).length > 0);
+            // places that have opening times for today AND are either open now
+            // or have a future opening later today. Exclude places that only
+            // had past openings earlier today but are currently closed.
+            const now = new Date();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+            return allPlaces.filter(place => {
+                const periods = getPeriodsForToday(place);
+                if (!periods || periods.length === 0) return false;
+                // if currently open by existing helper, include
+                try { if (isOpenNow(periods)) return true; } catch (_) {}
+
+                // otherwise check each period's open/close to see if any opening is later today
+                for (const p of periods) {
+                    if (!p.open) continue;
+                    const openM = parseTime(p.open);
+                    // if there's no close, treat as a single opening time (future if open > now)
+                    const hasClose = Boolean(p.close);
+                    let closeM = hasClose ? parseTime(p.close) : null;
+
+                    // normalize overnight closes (close earlier than open => close is next day)
+                    if (hasClose && closeM! <= openM) {
+                        closeM = closeM! + 24 * 60;
+                    }
+
+                    // consider current minutes in 0..(24*60) and also current + 24h window for overnight checks
+                    const nowCandidates = [currentMinutes, currentMinutes + 24 * 60];
+
+                    // if any candidate falls within open..close range, it means currently open (should have been caught), skip
+                    if (hasClose) {
+                        for (const cand of nowCandidates) {
+                            if (cand >= openM && cand < (closeM as number)) return true;
+                        }
+                    }
+
+                    // if open is later today (openM > currentMinutes and openM < 24h), include
+                    if (openM > currentMinutes && openM < 24 * 60) return true;
+                }
+                return false;
+            });
         }
         return allPlaces.filter(p => p.type === mappedType);
     }, [allPlaces, mappedType, routeType, restaurants, openingPatterns]);
