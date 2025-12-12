@@ -952,5 +952,26 @@
     "periods": [
       { "days": ["SUNDAY"], "open": "11:00", "close": "19:30" }
     ]
+  },
+  {
+    "id": "CASARAOAUGUSTA_DAYTIME",
+    "description": "Horários do Casarão Augusta",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "22:00", "close": "05:00" }
+    ]
+  },
+  {
+    "id": "BAHAMAS_DAYTIME",
+    "description": "Horários do Bahamas",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "13:00", "close": "05:00" }
+    ]
+  },
+  {
+    "id": "SCANDALLO_DAYTIME",
+    "description": "Horários do Scandallo",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "12:00", "close": "05:00" }
+    ]
   }
 ]

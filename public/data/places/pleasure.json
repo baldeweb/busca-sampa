@@ -1,0 +1,129 @@
+[
+    {
+        "id": 1,
+        "name": "Casarão Augusta",
+        "type": "PLEASURE",
+        "phones": [],
+        "openingHours": {
+            "patternId": "CASARAOAUGUSTA_DAYTIME",
+            "customOverrides": []
+        },
+        "isFree": false,
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Média de preço das profissionais começam em R$500",
+            "Há um hotel anexo ao casarão para desfrutar de sua noite de prazer",
+            "O local conta com chapelaria e bar"
+        ],
+        "priceRange": "HIGH",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Augusta",
+                "number": "791",
+                "city": "São Paulo",
+                "neighborhood": "Consolação",
+                "postalCode": "01305-1000",
+                "isMainUnity": true,
+                "latitude": -23.5525558,
+                "longitude": -46.6559719
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://casaraoaugusta.com.br/",
+        "linkInstagram": "",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "name": "Bahamas Hotel Club",
+        "type": "PLEASURE",
+        "phones": [
+            {
+                "number": "1155422748",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "BAHAMAS_DAYTIME",
+            "customOverrides": []
+        },
+        "isFree": false,
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Média de preço das profissionais começam em R$500 (as de biquini) e R$1.000 as de vestido",
+            "Os quartos ficam dentro do local, para você desfrutar de sua noite de prazer",
+            "O local conta com chapelaria, bar, mesa de sinuca e um vestiário",
+            "Há diversas opções de bebidas nacionais e importadas"
+        ],
+        "priceRange": "HIGH",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "dos Chanés",
+                "number": "571",
+                "city": "São Paulo",
+                "neighborhood": "Indianópolis",
+                "postalCode": "04087-032",
+                "isMainUnity": true,
+                "latitude": -23.6154149,
+                "longitude": -46.6680987
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://bahamashotelclub.com.br/",
+        "linkInstagram": "",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "name": "Scandallo",
+        "type": "PLEASURE",
+        "phones": [
+            {
+                "number": "1155422748",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "SCANDALLO_DAYTIME",
+            "customOverrides": []
+        },
+        "isFree": false,
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Há um valor de entrada",
+            "Há diversas opções de bebidas nacionais e importadas"
+        ],
+        "priceRange": "HIGH",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cel. Diogo",
+                "number": "1199",
+                "city": "São Paulo",
+                "neighborhood": "Vila Monumento",
+                "postalCode": "01545-001",
+                "isMainUnity": true,
+                "latitude": -23.5798491,
+                "longitude": -46.6193216
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.scandallolounge.com.br/",
+        "linkInstagram": "",
+        "tags": []
+    }
+]
