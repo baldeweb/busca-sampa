@@ -34,6 +34,7 @@ export function PlaceDetailPage() {
   const { data: nightlife } = useRecommendationList("nightlife");
   const { data: nature } = useRecommendationList("nature");
   const { data: touristSpots } = useRecommendationList("tourist-spot");
+  const { data: pleasures } = useRecommendationList("pleasure");
 
   // Junta todos os lugares
   const allPlaces = useMemo(() => [
@@ -42,8 +43,9 @@ export function PlaceDetailPage() {
     ...coffees,
     ...nightlife,
     ...nature,
+    ...pleasures,
     ...touristSpots,
-  ], [restaurants, bars, coffees, nightlife, nature, touristSpots]);
+  ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots]);
 
   function selectDatasetArray(key?: string) {
     switch (key) {
@@ -51,6 +53,7 @@ export function PlaceDetailPage() {
       case "bars": return bars;
       case "coffees": return coffees;
       case "nightlife": return nightlife;
+      case "pleasure": return pleasures;
       case "nature": return nature;
       case "tourist-spot": return touristSpots;
       default: return allPlaces;
@@ -61,7 +64,7 @@ export function PlaceDetailPage() {
   // Evita fallback precoce para restaurantes enquanto dados da categoria ainda carregam
   const categoryExplicita = Boolean(normalizedCategory);
   const datasetsLoading = (
-    restaurants.length === 0 || bars.length === 0 || coffees.length === 0 || nightlife.length === 0 || nature.length === 0 || touristSpots.length === 0
+    restaurants.length === 0 || bars.length === 0 || coffees.length === 0 || nightlife.length === 0 || nature.length === 0 || pleasures.length === 0 || touristSpots.length === 0
   );
 
   const [showModal, setShowModal] = useState(false);

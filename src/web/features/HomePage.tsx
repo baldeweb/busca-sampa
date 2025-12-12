@@ -38,7 +38,7 @@ export function HomePage() {
   const [isRequestingLocation, setIsRequestingLocation] = useState(false);
 
   // Dados de todas as categorias para cálculo de proximidade
-  const CATEGORY_CODES = ["restaurants", "bars", "nightlife", "coffees", "tourist-spot"] as const;
+  const CATEGORY_CODES = ["restaurants", "bars", "nightlife", "coffees", "tourist-spot", "pleasure"] as const;
   const [allCategoryData, setAllCategoryData] = useState<Record<string, PlaceRecommendation[]>>({});
   const [loadingNearby, setLoadingNearby] = useState(false);
 
@@ -67,19 +67,66 @@ export function HomePage() {
   // Filtros removidos (logica migrada para páginas dedicadas)
 
   const navigate = useNavigate();
-  function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
-    // Caso especial: a opção 'Aberto agora' deve navegar para /list/aberto-agora
-    // normaliza título removendo zero-width spaces e comparando em lower-case
+  // Small UX: allow a quick double-tap combination on mobile (Bares + Vida Noturna)
+  // to open the special 'pleasure' listing. We implement a small delay to allow
+  // the user to tap two categories in quick succession without immediately
+  // navigating away on the first tap.
+  const pendingNavRef = ({} as { timeoutId?: number | null });
+  const lastSelectedRef = ({} as { tag?: string; time?: number });
+
+  function performNavigateForOption(option: MenuWhereIsTodayOption) {
     const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
     const title = rawTitle.toLowerCase();
-    // 'Abrem hoje' (opens today) synthetic option
     if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
       navigate('/abrem-hoje', { state: { label: rawTitle } });
       return;
     }
-    // Para as demais opções usamos a primeira tag para navegar (ex: 'RESTAURANTS')
     const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
     navigate(`/${tag}`, { state: { label: rawTitle } });
+  }
+
+  function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
+    // Immediate path for 'Abrem hoje' (don't delay)
+    const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
+    const title = rawTitle.toLowerCase();
+    if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
+      // clear any pending nav and navigate immediately
+      if (pendingNavRef.timeoutId) { clearTimeout(pendingNavRef.timeoutId); pendingNavRef.timeoutId = undefined; }
+      lastSelectedRef.tag = undefined;
+      performNavigateForOption(option);
+      return;
+    }
+
+    const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
+
+    // detect mobile viewport (match Tailwind 'sm' breakpoint)
+    const isMobile = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
+
+    const now = Date.now();
+    // If there is a pending navigation, cancel it (we'll decide below)
+    if (pendingNavRef.timeoutId) { clearTimeout(pendingNavRef.timeoutId); pendingNavRef.timeoutId = undefined; }
+
+    // Check for quick combination: previous selection exists and within 700ms
+    if (isMobile && lastSelectedRef.tag && lastSelectedRef.time && (now - lastSelectedRef.time) < 700) {
+      const prev = lastSelectedRef.tag;
+      const combo = new Set([prev, tag]);
+      if (combo.has('bars') && combo.has('nightlife')) {
+        // Navigate to pleasure listing
+        lastSelectedRef.tag = undefined;
+        performNavigateForOption({ id: -1, title: 'Prazer', tags: ['PLEASURE'] } as any);
+        return;
+      }
+    }
+
+    // Not a combo — schedule normal navigation after a short delay so a second
+    // tap can form a combo. This avoids navigating away immediately on first tap.
+    lastSelectedRef.tag = tag;
+    lastSelectedRef.time = now;
+    pendingNavRef.timeoutId = window.setTimeout(() => {
+      pendingNavRef.timeoutId = undefined;
+      lastSelectedRef.tag = undefined;
+      performNavigateForOption(option);
+    }, 350) as unknown as number;
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {

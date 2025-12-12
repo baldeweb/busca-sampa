@@ -21,6 +21,7 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
 
@@ -46,6 +47,7 @@ export const PlaceListPage: React.FC = () => {
     const { data: coffees } = useRecommendationList("coffees");
     const { data: nightlife } = useRecommendationList("nightlife");
     const { data: nature } = useRecommendationList("nature");
+    const { data: pleasures } = useRecommendationList("pleasure");
     const { data: touristSpots } = useRecommendationList("tourist-spot");
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
@@ -57,8 +59,9 @@ export const PlaceListPage: React.FC = () => {
         ...coffees,
         ...nightlife,
         ...nature,
+        ...pleasures,
         ...touristSpots,
-    ], [restaurants, bars, coffees, nightlife, nature, touristSpots]);
+    ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots]);
 
     // Mapeia slug para tipo utilizado nos dados
     const typeMap: Record<string, string> = {
@@ -68,6 +71,7 @@ export const PlaceListPage: React.FC = () => {
         nightlife: "NIGHTLIFE",
         nature: "NATURE",
         "tourist-spot": "TOURIST_SPOT",
+        "pleasure": "PLEASURE",
         free: "FREE",
     };
     const mappedType = typeMap[routeTypeLower] || routeTypeLower.toUpperCase() || "RESTAURANT";
@@ -185,6 +189,7 @@ export const PlaceListPage: React.FC = () => {
             case 'NATURE': return icNature;
             case 'RESTAURANT': return icRestaurants;
             case 'TOURIST_SPOT': return icTouristSpot;
+            case 'PLEASURE': return icMouth;
             case 'ABREM-HOJE':
             case 'ABREM_HOJE':
             case 'OPEN_TODAY':
@@ -553,6 +558,7 @@ export const PlaceListPage: React.FC = () => {
                                                     NIGHTLIFE: "nightlife",
                                                     NATURE: "nature",
                                                     TOURIST_SPOT: "tourist-spot",
+                                                    PLEASURE: "pleasure",
                                                 };
                                                 // Use the actual place.type when available (fixes 'Abrem hoje' mixed lists)
                                                 const placeTypeKey = place.type || mappedType;
