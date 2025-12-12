@@ -76,6 +76,17 @@ export const PlaceListPage: React.FC = () => {
     };
     const mappedType = typeMap[routeTypeLower] || routeTypeLower.toUpperCase() || "RESTAURANT";
 
+    // If someone navigates directly to /pleasure (via URL), force them to /nightlife.
+    // Only allow /pleasure when location.state.fromLongPress === true.
+    React.useEffect(() => {
+        try {
+            const allow = (listLocation.state as any)?.fromLongPress === true;
+            if (routeTypeLower === 'pleasure' && !allow) {
+                navigate('/nightlife', { replace: true });
+            }
+        } catch (_) {}
+    }, [routeTypeLower, listLocation.state, navigate]);
+
     // Filtra pelo tipo da URL
     const filteredByType = useMemo(() => {
         if ((routeType || "").toLowerCase() === "restaurants") {
@@ -189,14 +200,14 @@ export const PlaceListPage: React.FC = () => {
         };
     }, []);
 
-    function startHeaderLongPress(e: React.MouseEvent | React.TouchEvent) {
+    function startHeaderLongPress() {
         if (mappedType !== 'NIGHTLIFE') return;
         if (longPressTimer.current) { clearTimeout(longPressTimer.current); longPressTimer.current = null; }
-        // 3000ms = 3 seconds
+        // 2000ms = 2 seconds
         longPressTimer.current = window.setTimeout(() => {
             longPressTimer.current = null;
-            navigate('/pleasure');
-        }, 3000) as unknown as number;
+            navigate('/pleasure', { state: { fromLongPress: true } });
+        }, 2000) as unknown as number;
     }
 
     function cancelHeaderLongPress() {
@@ -450,6 +461,10 @@ export const PlaceListPage: React.FC = () => {
                                 src={headerIcon}
                                 alt="flag"
                                 className="w-12 h-12 object-contain"
+                                draggable={false}
+                                onDragStart={(ev) => ev.preventDefault()}
+                                onContextMenu={(ev) => ev.preventDefault()}
+                                style={{ WebkitTouchCallout: 'none', WebkitUserDrag: 'none', userSelect: 'none' } as any}
                                 onMouseDown={startHeaderLongPress}
                                 onTouchStart={startHeaderLongPress}
                                 onMouseUp={cancelHeaderLongPress}
