@@ -8,6 +8,7 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { useMemo, useState } from "react";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
@@ -127,6 +128,8 @@ export function PlaceDetailPage() {
         return <img src={icNature} alt="nature" className="w-10 h-10 object-contain mr-4" />;
       case 'TOURIST_SPOT':
         return <img src={icTouristSpot} alt="tourist" className="w-10 h-10 object-contain mr-4" />;
+      case 'PLEASURE':
+        return <img src={icMouth} alt="pleasure" className="w-10 h-10 object-contain mr-4" />;
       case 'RESTAURANT':
       default:
         return <img src={icRestaurants} alt="restaurant" className="w-10 h-10 object-contain mr-4" />;

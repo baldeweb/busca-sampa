@@ -4,4 +4,5 @@ export type RecommendationType =
     | "COFFEE"
     | "NIGHTLIFE"
     | "NATURE"
-    | "TOURIST_SPOT";
+    | "TOURIST_SPOT"
+    | "PLEASURE";

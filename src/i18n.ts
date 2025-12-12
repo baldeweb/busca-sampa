@@ -186,7 +186,8 @@ const resources = {
         NIGHTLIFE: 'Vida Noturna',
         NATURE: 'Natureza',
         TOURIST_SPOT: 'Pontos\u200B Turísticos',
-        FREE: 'Gratuitos'
+        FREE: 'Gratuitos',
+        PLEASURE: "Casa de Prazeres"
       },
       
       placeList: {
@@ -203,7 +204,8 @@ const resources = {
           NIGHTLIFE: 'a',
           NATURE: 'a',
           TOURIST_SPOT: 'o',
-          FREE: 'o'
+          FREE: 'o',
+          PLEASURE: 'a'
         },
         noun: {
           RESTAURANT: 'restaurante',
@@ -212,7 +214,8 @@ const resources = {
           NIGHTLIFE: 'vida noturna',
           NATURE: 'natureza',
           TOURIST_SPOT: 'ponto turístico',
-          FREE: 'evento gratuito'
+          FREE: 'evento gratuito',
+          PLEASURE: 'casa de prazeres'
         }
       }
     }
