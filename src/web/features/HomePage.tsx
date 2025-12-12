@@ -38,7 +38,7 @@ export function HomePage() {
   const [isRequestingLocation, setIsRequestingLocation] = useState(false);
 
   // Dados de todas as categorias para cálculo de proximidade
-  const CATEGORY_CODES = ["restaurants", "bars", "nightlife", "coffees", "tourist-spot", "pleasure"] as const;
+  const CATEGORY_CODES = ["restaurants", "bars", "nightlife", "coffees", "tourist-spot"] as const;
   const [allCategoryData, setAllCategoryData] = useState<Record<string, PlaceRecommendation[]>>({});
   const [loadingNearby, setLoadingNearby] = useState(false);
 
@@ -106,8 +106,8 @@ export function HomePage() {
     // If there is a pending navigation, cancel it (we'll decide below)
     if (pendingNavRef.timeoutId) { clearTimeout(pendingNavRef.timeoutId); pendingNavRef.timeoutId = undefined; }
 
-    // Check for quick combination: previous selection exists and within 700ms
-    if (isMobile && lastSelectedRef.tag && lastSelectedRef.time && (now - lastSelectedRef.time) < 700) {
+    // Check for quick combination: previous selection exists and within 500ms
+    if (isMobile && lastSelectedRef.tag && lastSelectedRef.time && (now - lastSelectedRef.time) < 500) {
       const prev = lastSelectedRef.tag;
       const combo = new Set([prev, tag]);
       if (combo.has('bars') && combo.has('nightlife')) {
@@ -126,7 +126,7 @@ export function HomePage() {
       pendingNavRef.timeoutId = undefined;
       lastSelectedRef.tag = undefined;
       performNavigateForOption(option);
-    }, 350) as unknown as number;
+    }, 250) as unknown as number;
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {
