@@ -106,8 +106,18 @@ export function HomePage() {
     // If there is a pending navigation, cancel it (we'll decide below)
     if (pendingNavRef.timeoutId) { clearTimeout(pendingNavRef.timeoutId); pendingNavRef.timeoutId = undefined; }
 
-    // Check for quick combination: previous selection exists and within 500ms
-    if (isMobile && lastSelectedRef.tag && lastSelectedRef.time && (now - lastSelectedRef.time) < 500) {
+    // If not mobile OR this tag is not involved in the Bars+Nightlife combo,
+    // navigate immediately to avoid any perceptible delay for most options.
+    if (!isMobile || (tag !== 'bars' && tag !== 'nightlife')) {
+      lastSelectedRef.tag = undefined;
+      performNavigateForOption(option);
+      return;
+    }
+
+    // For mobile and when the tapped tag is 'bars' or 'nightlife', we allow a
+    // short window to detect a combo before navigating. Check for quick
+    // combination: previous selection exists and within 500ms
+    if (lastSelectedRef.tag && lastSelectedRef.time && (now - lastSelectedRef.time) < 500) {
       const prev = lastSelectedRef.tag;
       const combo = new Set([prev, tag]);
       if (combo.has('bars') && combo.has('nightlife')) {
