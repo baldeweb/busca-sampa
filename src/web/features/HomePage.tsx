@@ -67,14 +67,7 @@ export function HomePage() {
   // Filtros removidos (logica migrada para páginas dedicadas)
 
   const navigate = useNavigate();
-  // Small UX: allow a quick double-tap combination on mobile (Bares + Vida Noturna)
-  // to open the special 'pleasure' listing. We implement a small delay to allow
-  // the user to tap two categories in quick succession without immediately
-  // navigating away on the first tap.
-  const pendingNavRef = ({} as { timeoutId?: number | null });
-  const lastSelectedRef = ({} as { tag?: string; time?: number });
-
-  function performNavigateForOption(option: MenuWhereIsTodayOption) {
+  function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
     const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
     const title = rawTitle.toLowerCase();
     if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
@@ -83,60 +76,6 @@ export function HomePage() {
     }
     const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
     navigate(`/${tag}`, { state: { label: rawTitle } });
-  }
-
-  function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
-    // Immediate path for 'Abrem hoje' (don't delay)
-    const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
-    const title = rawTitle.toLowerCase();
-    if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
-      // clear any pending nav and navigate immediately
-      if (pendingNavRef.timeoutId) { clearTimeout(pendingNavRef.timeoutId); pendingNavRef.timeoutId = undefined; }
-      lastSelectedRef.tag = undefined;
-      performNavigateForOption(option);
-      return;
-    }
-
-    const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
-
-    // detect mobile viewport (match Tailwind 'sm' breakpoint)
-    const isMobile = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
-
-    const now = Date.now();
-    // If there is a pending navigation, cancel it (we'll decide below)
-    if (pendingNavRef.timeoutId) { clearTimeout(pendingNavRef.timeoutId); pendingNavRef.timeoutId = undefined; }
-
-    // If not mobile OR this tag is not involved in the Bars+Nightlife combo,
-    // navigate immediately to avoid any perceptible delay for most options.
-    if (!isMobile || (tag !== 'bars' && tag !== 'nightlife')) {
-      lastSelectedRef.tag = undefined;
-      performNavigateForOption(option);
-      return;
-    }
-
-    // For mobile and when the tapped tag is 'bars' or 'nightlife', we allow a
-    // short window to detect a combo before navigating. Check for quick
-    // combination: previous selection exists and within 500ms
-    if (lastSelectedRef.tag && lastSelectedRef.time && (now - lastSelectedRef.time) < 500) {
-      const prev = lastSelectedRef.tag;
-      const combo = new Set([prev, tag]);
-      if (combo.has('bars') && combo.has('nightlife')) {
-        // Navigate to pleasure listing
-        lastSelectedRef.tag = undefined;
-        performNavigateForOption({ id: -1, title: 'Prazer', tags: ['PLEASURE'] } as any);
-        return;
-      }
-    }
-
-    // Not a combo — schedule normal navigation after a short delay so a second
-    // tap can form a combo. This avoids navigating away immediately on first tap.
-    lastSelectedRef.tag = tag;
-    lastSelectedRef.time = now;
-    pendingNavRef.timeoutId = window.setTimeout(() => {
-      pendingNavRef.timeoutId = undefined;
-      lastSelectedRef.tag = undefined;
-      performNavigateForOption(option);
-    }, 250) as unknown as number;
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {
@@ -148,6 +87,8 @@ export function HomePage() {
   function handleDistanceConfirm(n: number) {
     setSelectedDistance(n);
   }
+
+  // no-op cleanup kept for parity (no refs used anymore)
 
 
 

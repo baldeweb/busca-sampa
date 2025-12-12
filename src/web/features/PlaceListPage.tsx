@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import { useDocumentTitle } from "@/web/hooks/useDocumentTitle";
 import { BackHeader } from '@/web/components/layout/BackHeader';
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
@@ -156,28 +156,7 @@ export const PlaceListPage: React.FC = () => {
         return typeArr;
     }, [baseList]);
 
-    // Helper: get opening times for today for a place (returns array of open times strings like '08:00')
-    function getOpenTimesForToday(place: any): string[] {
-        const periods: any[] = [];
-        const patternId = place.openingHours?.patternId;
-        if (patternId) {
-            const pat = (openingPatterns || []).find((p: any) => p.id === patternId);
-            if (pat?.periods) periods.push(...pat.periods);
-        }
-        if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
-            periods.push(...place.openingHours.customOverrides);
-        }
-        const now = new Date();
-        const currentDay = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][now.getDay()];
-        const opens = periods
-            .filter((p: any) => p.open && (p.days?.includes(currentDay) || p.days?.includes('EVERYDAY')))
-            .map((p: any) => p.open)
-            .filter(Boolean);
-        // unique + sort
-        const uniq = Array.from(new Set(opens));
-        uniq.sort();
-        return uniq;
-    }
+    
 
     // Mapeia o tipo atual para o ícone usado no cabeçalho e no cartão 'Todos'
     const headerIcon = (() => {
@@ -197,6 +176,35 @@ export const PlaceListPage: React.FC = () => {
             default: return flagSp;
         }
     })();
+
+    // Long-press support: when viewing NIGHTLIFE, pressing the header icon for 3s
+    // will navigate to the 'pleasure' listing. We attach handlers to the image.
+    const longPressTimer = useRef<number | null>(null);
+    useEffect(() => {
+        return () => {
+            if (longPressTimer.current) {
+                clearTimeout(longPressTimer.current);
+                longPressTimer.current = null;
+            }
+        };
+    }, []);
+
+    function startHeaderLongPress(e: React.MouseEvent | React.TouchEvent) {
+        if (mappedType !== 'NIGHTLIFE') return;
+        if (longPressTimer.current) { clearTimeout(longPressTimer.current); longPressTimer.current = null; }
+        // 3000ms = 3 seconds
+        longPressTimer.current = window.setTimeout(() => {
+            longPressTimer.current = null;
+            navigate('/pleasure');
+        }, 3000) as unknown as number;
+    }
+
+    function cancelHeaderLongPress() {
+        if (longPressTimer.current) {
+            clearTimeout(longPressTimer.current);
+            longPressTimer.current = null;
+        }
+    }
 
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
@@ -438,7 +446,17 @@ export const PlaceListPage: React.FC = () => {
                     {/* Título e descrição */}
                     <div>
                         <div className="flex items-start gap-4">
-                            <img src={headerIcon} alt="flag" className="w-12 h-12 object-contain" />
+                            <img
+                                src={headerIcon}
+                                alt="flag"
+                                className="w-12 h-12 object-contain"
+                                onMouseDown={startHeaderLongPress}
+                                onTouchStart={startHeaderLongPress}
+                                onMouseUp={cancelHeaderLongPress}
+                                onMouseLeave={cancelHeaderLongPress}
+                                onTouchEnd={cancelHeaderLongPress}
+                                onTouchCancel={cancelHeaderLongPress}
+                            />
                             <div>
                                 <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
                                 <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
