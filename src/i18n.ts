@@ -255,7 +255,7 @@ const resources = {
         noPlaces: 'No se encontraron lugares.',
         version: 'Versión'
       },
-      whereIsToday: { title: '¿Y entonces, dónde es hoy?', opensToday: 'Abren hoy' },
+      whereIsToday: { title: '¿Y entonces, dónde es hoy?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Abren hoy' },
       list: {
         nameHeader: 'Nombre',
         neighborhoodHeader: 'Barrio',
@@ -343,13 +343,15 @@ const resources = {
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
-        RESTAURANT: 'Restaurantes', BAR: 'Bares', COFFEE: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FREE: 'Gratuitos'
+        RESTAURANT: 'Restaurantes', BAR: 'Bares', COFFEE: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
       }
       ,
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
         hoursUnavailable: 'Horario no disponible',
         opensAtHeader: 'Abre a las...',
+        // placeholder from pt
+        // 'Abertura'
         subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti más cerca de ti :)',
         article: {
           RESTAURANT: 'el',
@@ -394,10 +396,11 @@ const resources = {
       common: {
         back: 'Retour', details: 'voir détails', selectLanguage: 'Choisir une langue', changeDistance: 'Changer distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
       },
-      whereIsToday: { title: 'Alors, c’est où aujourd’hui?', opensToday: 'Ouvrent aujourd\'hui' },
+      whereIsToday: { title: 'Alors, c’est où aujourd’hui?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Ouvrent aujourd\'hui' },
             placeList: {
               hoursUnavailable: 'Horaires indisponibles',
-              opensAtHeader: 'Ouvre à...'
+              opensAtHeader: 'Ouvre à...',
+              // placeholder from pt: 'Abertura'
             },
       list: {
         nameHeader: 'Nom', neighborhoodHeader: 'Quartier', variablePlace: 'lieu variable', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNameDesc: 'NOM par ordre décroissant Z-A', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z', orderNeighborhoodDesc: 'QUARTIER par ordre décroissant Z-A'
@@ -460,7 +463,7 @@ const resources = {
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
       aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
-      placeType: { RESTAURANT: 'Restaurants', BAR: 'Bars', COFFEE: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit' }
+      placeType: { RESTAURANT: 'Restaurants', BAR: 'Bars', COFFEE: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
     }
   },
   ru: {
@@ -468,7 +471,7 @@ const resources = {
       home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'ещё', noNearbyResultsRadius: 'Нет мест в выбранном радиусе.', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: 'Доступ к геолокации запрещён. Пожалуйста, включите геолокацию в настройках браузера, чтобы использовать эту функцию.', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в 3 касания' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
-      whereIsToday: { title: 'Ну что, где сегодня?', opensToday: 'Открываются сегодня'},
+      whereIsToday: { title: 'Ну что, где сегодня?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', variablePlace: 'изменяемое место', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNameDesc: 'ИМЯ по убыванию Z-A', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z', orderNeighborhoodDesc: 'РАЙОН по убыванию Z-A' },
       filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
@@ -488,6 +491,7 @@ const resources = {
         environmentTitle: 'Тип окружения:',
         hoursUnavailable: 'Часы недоступны',
         opensAtHeader: 'Открывается в',
+        // placeholder from pt: 'Abertura'
         subtitleTemplate: 'Откройте {{article}} {{noun}} вашего типа, ближайший к вам :)',
         article: {
           RESTAURANT: 'ресторан',
@@ -508,7 +512,7 @@ const resources = {
           FREE: 'бесплатное событие'
         }
       },
-      placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно' }
+      placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно', PLEASURE: 'Casa de Prazeres' }
     }
   },
   zh: {
@@ -516,7 +520,7 @@ const resources = {
       home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多', noNearbyResultsRadius: '所选半径内没有地点。', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '位置权限被拒绝。请在浏览器设置中启用位置以使用此功能。', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，三次点击即可到达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
-      whereIsToday: { title: '那今天去哪儿?', opensToday: '今天开放' },
+      whereIsToday: { title: '那今天去哪儿?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', variablePlace: '位置可变', typeHeader: '类型', orderNameAsc: '按名称升序 A-Z', orderNameDesc: '按名称降序 Z-A', orderNeighborhoodAsc: '按街区升序 A-Z', orderNeighborhoodDesc: '按街区降序 Z-A' },
       filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于该地点', visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。', visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。', neverEmphasis: '', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了该门店的地址，点击下面的按钮可规划前往路线。', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', phoneTitle: '电话', phonesSubtitle: '这些是该地点的官方联系方式', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '' },
@@ -524,6 +528,7 @@ const resources = {
         environmentTitle: '环境类型：',
         hoursUnavailable: '营业时间不可用',
         opensAtHeader: '开门时间',
+        // placeholder from pt: 'Abertura'
         subtitleTemplate: '发现离你最近的{{article}} {{noun}}，符合你的类型 :)',
         article: {
           RESTAURANT: '餐厅',
@@ -556,7 +561,7 @@ const resources = {
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
       aboutMe: { authorTag: 'Role Paulista 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
       howToRecommend: { title: '如何推荐一个地点？' },
-      placeType: { RESTAURANT: '餐厅', BAR: '酒吧', COFFEE: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FREE: '免费' }
+      placeType: { RESTAURANT: '餐厅', BAR: '酒吧', COFFEE: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
     }
   },
   en: {
@@ -595,7 +600,7 @@ const resources = {
         noPlaces: 'No places found.',
         version: 'Version',
       },
-      whereIsToday: { title: 'So, where is it today?'},
+      whereIsToday: { title: 'So, where is it today?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)'},
       list: {
         nameHeader: 'Name',
         neighborhoodHeader: 'Neighborhood',
@@ -704,11 +709,13 @@ const resources = {
         NIGHTLIFE: 'Nightlife',
         NATURE: 'Nature',
         TOURIST_SPOT: 'Tourist Spots',
-        FREE: 'Free'
+        FREE: 'Free',
+        PLEASURE: 'Casa de Prazeres'
       },
       placeList: {
         environmentTitle: 'Environment type:',
         hoursUnavailable: 'Hours unavailable',
+        opensAtHeader: 'Abertura',
         subtitleTemplate: 'Discover {{article}} {{noun}} of your type closest to you :)',
         article: {
           RESTAURANT: 'the',
@@ -799,7 +806,7 @@ const resources = {
         visitModalEnding: 'Ich werde Orte empfehlen, die Sie nicht besuchen sollten :)'
       },
       openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet' },
-      whereIsToday: { title: 'Also, wo ist es heute?' },
+      whereIsToday: { title: 'Also, wo ist es heute?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
         BAR: 'Bars',
@@ -807,7 +814,15 @@ const resources = {
         NIGHTLIFE: 'Nachtleben',
         NATURE: 'Natur',
         TOURIST_SPOT: 'Sehenswürdigkeiten',
-        FREE: 'Kostenlos'
+        FREE: 'Kostenlos',
+        PLEASURE: 'Casa de Prazeres'
+      }
+      ,
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
+        opensAtHeader: 'Abertura',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
       }
       ,
       about: {
@@ -896,6 +911,7 @@ const resources = {
         environmentTitle: '環境タイプ：',
         hoursUnavailable: '営業時間情報なし',
         opensAtHeader: '開店時間',
+        // placeholder from pt: 'Abertura'
         subtitleTemplate: 'あなたのタイプに合った{{article}} {{noun}}で、最も近いものを見つけよう :)',
         article: {
           RESTAURANT: 'レストラン',
@@ -916,15 +932,16 @@ const resources = {
           FREE: '無料イベント'
         }
       },
-      whereIsToday: { title: 'さて、今日はどこに行く？' },
+      whereIsToday: { title: 'さて、今日はどこに行く？', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'レストラン',
         BAR: 'バー',
         COFFEE: 'カフェ',
         NIGHTLIFE: 'ナイトライフ',
         NATURE: '自然',
-        TOURIST_SPOT: '観光名所',
-        FREE: '無料'
+        TOURIST_SPOT: '観光地',
+        FREE: '無料',
+        PLEASURE: 'Casa de Prazeres'
       }
       ,
       about: {
@@ -1005,7 +1022,7 @@ const resources = {
         notesTitle: 'ملاحظات'
       },
       openingHours: { checkAvailabilityMessage: 'تختلف أوقات العمل حسب التوفر. تحقق من موقع المكان وصفحة الإنستغرام لمعرفة التفاصيل', alwaysOpenMessage: 'هذا المكان مفتوح على مدار 24 ساعة' },
-      whereIsToday: { title: 'فأين نذهب اليوم؟' },
+      whereIsToday: { title: 'فأين نذهب اليوم؟', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'مطاعم',
         BAR: 'بارات',
@@ -1013,7 +1030,14 @@ const resources = {
         NIGHTLIFE: 'الحياة الليلية',
         NATURE: 'طبيعة',
         TOURIST_SPOT: 'معالم سياحية',
-        FREE: 'مجاني'
+        FREE: 'مجاني',
+        PLEASURE: 'Casa de Prazeres'
+      },
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
+        opensAtHeader: 'Abertura',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
       },
       about: {
         title: 'من أنا؟',
@@ -1091,7 +1115,7 @@ const resources = {
         notesTitle: 'Note'
       },
       openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24' },
-      whereIsToday: { title: 'Allora, dove si va oggi?' },
+      whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Ristoranti',
         BAR: 'Bar',
@@ -1099,7 +1123,14 @@ const resources = {
         NIGHTLIFE: 'Vita notturna',
         NATURE: 'Natura',
         TOURIST_SPOT: 'Luoghi turistici',
-        FREE: 'Gratuito'
+        FREE: 'Gratuito',
+        PLEASURE: 'Casa de Prazeres'
+      },
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
+        opensAtHeader: 'Abertura',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
       },
       about: {
         title: 'Chi sono?',
@@ -1175,7 +1206,7 @@ const resources = {
         notesTitle: 'Opmerkingen'
       },
       openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open' },
-      whereIsToday: { title: 'Dus, waar is het vandaag?' },
+      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
         BAR: 'Bars',
@@ -1183,7 +1214,14 @@ const resources = {
         NIGHTLIFE: 'Uitgaansleven',
         NATURE: 'Natuur',
         TOURIST_SPOT: 'Toeristische bezienswaardigheden',
-        FREE: 'Gratis'
+        FREE: 'Gratis',
+        PLEASURE: 'Casa de Prazeres'
+      },
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
+        opensAtHeader: 'Abertura',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
       },
       about: {
         title: 'Wie ben ik?',
@@ -1250,7 +1288,7 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır' },
-      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?' },
+      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
         BAR: 'Barlar',
@@ -1258,7 +1296,14 @@ const resources = {
         NIGHTLIFE: 'Gece hayatı',
         NATURE: 'Doğa',
         TOURIST_SPOT: 'Turistik noktalar',
-        FREE: 'Ücretsiz'
+        FREE: 'Ücretsiz',
+        PLEASURE: 'Casa de Prazeres'
+      },
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
+        opensAtHeader: 'Abertura',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
       },
       about: {
         title: 'Ben kimim?',
@@ -1324,7 +1369,7 @@ const resources = {
         notesTitle: 'Notatki'
       },
       openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę' },
-      whereIsToday: { title: 'A więc, gdzie dziś?' },
+      whereIsToday: { title: 'A więc, gdzie dziś?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restauracje',
         BAR: 'Bary',
@@ -1332,7 +1377,14 @@ const resources = {
         NIGHTLIFE: 'Życie nocne',
         NATURE: 'Przyroda',
         TOURIST_SPOT: 'Atrakcje turystyczne',
-        FREE: 'Darmowe'
+        FREE: 'Darmowe',
+        PLEASURE: 'Casa de Prazeres'
+      },
+      placeList: {
+        environmentTitle: 'Tipo de ambiente:',
+        hoursUnavailable: 'Horário indisponível',
+        opensAtHeader: 'Abertura',
+        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }

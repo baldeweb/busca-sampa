@@ -267,11 +267,11 @@ export function HomePage() {
               <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
             </div>
             {userLocation && !noNearbyResults && !isOutsideGreaterRegion && (
-              <div className="ml-4">
+                <div className="ml-4">
                 <button
                   type="button"
                   onClick={() => setIsDistanceModalOpen(true)}
-                  className="min-w-[140px] rounded-full bg-[#0F0D13] text-white px-3 py-1 text-sm sm:px-4 sm:py-2 border-2 border-[#F5F5F5]"
+                  className="min-w-[140px] rounded-full bg-[#0F0D13] text-white px-3 py-1 text-sm sm:px-4 sm:py-2 border border-[#F5F5F5]"
                 >
                   {t('common.changeDistance')}
                 </button>
@@ -358,7 +358,7 @@ export function HomePage() {
                             <button
                               type="button"
                               onClick={(e) => { e.stopPropagation(); setMapCategory(s.category); }}
-                              className="min-w-[120px] text-sm rounded-full bg-[#0F0D13] text-white px-3 py-1 border-2 border-[#F5F5F5]"
+                              className="min-w-[120px] text-sm rounded-full bg-[#0F0D13] text-white px-3 py-1 border border-[#F5F5F5]"
                             >
                               ver no mapa
                             </button>
