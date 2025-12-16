@@ -527,7 +527,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇮🇳 Culinária Indiana"
+            "Culinária Indiana"
         ],
         "priceRange": "MEDIUM",
         "addresses": [
@@ -568,7 +568,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇹🇭 Culinária Tailandêsa"
+            "Culinária Tailandêsa"
         ],
         "priceRange": "MEDIUM",
         "addresses": [
@@ -724,14 +724,14 @@
                 { "days": ["SATURDAY", "SUNDAY"], "open": "11:00", "close": "22:00" }
             ]
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇵🇭 Culinária Filipina",
-            "🇲🇾 Culinária Malásio"
+            "Culinária Filipina",
+            "Culinária Malásio"
         ],
         "priceRange": "LOW",
         "addresses": [
@@ -772,7 +772,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇯🇵 Culinária Japonesa",
+            "Culinária Japonesa",
             "Padrão Izakaya raíz",
             "Você come sentado no tatame",
             "Rápida lotação, necessário chegar cedo"
@@ -816,7 +816,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": true,
         "notes": [
-            "🇮🇷 Culinária Iraniana/Persa",
+            "Culinária Iraniana/Persa",
             "Cozinha familiar",
             "Necessário agendar, a casa possui apenas 8 lugares"
         ],
@@ -954,7 +954,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇺🇸 Culinária Americana",
+            "Culinária Americana",
             "Churrasco BBQ"
         ],
         "priceRange": "MEDIUM",
@@ -1105,7 +1105,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": true,
         "notes": [
-            "🇸🇪🇳🇴🇫🇮 Culinária Nórdica (Sueca, Norueguesa, Finlandesa)"
+            "Culinária Nórdica (Sueca, Norueguesa, Finlandesa)"
         ],
         "priceRange": "MEDIUM-UP",
         "addresses": [
@@ -1146,7 +1146,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": true,
         "notes": [
-            "🇦🇷 Culinária Argentina",
+            "Culinária Argentina",
             "Parrillada"
         ],
         "priceRange": "MEDIUM",

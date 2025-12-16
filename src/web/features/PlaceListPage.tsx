@@ -364,7 +364,20 @@ export const PlaceListPage: React.FC = () => {
         if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
             return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
         }
-        if (!periods || periods.length === 0) return '-';
+        if (!periods || periods.length === 0) {
+            // If there are no periods for today, check tomorrow and show "Abre amanhã às XXX" when applicable
+            const tomorrowPeriodsEarly = getPeriodsForDay(place, 1);
+            if (tomorrowPeriodsEarly && tomorrowPeriodsEarly.length > 0) {
+                let earliestTomorrow: string | null = null;
+                function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+                for (const p of tomorrowPeriodsEarly) {
+                    if (!p.open) continue;
+                    if (earliestTomorrow === null || parseTime(p.open) < parseTime(earliestTomorrow)) earliestTomorrow = p.open;
+                }
+                if (earliestTomorrow) return t('placeList.opensTomorrowAt', { time: earliestTomorrow, defaultValue: `Abre amanhã às ${earliestTomorrow}` });
+            }
+            return '-';
+        }
 
         // if currently open
         if (isOpenNow(periods)) return t('placeList.openNow', { defaultValue: 'Aberto agora' });
@@ -391,19 +404,32 @@ export const PlaceListPage: React.FC = () => {
             return nextOpenStr;
         }
 
-        // No more openings today — check tomorrow's first opening and present it (better than '-')
-        const tomorrowPeriods = getPeriodsForDay(place, 1);
-        if (tomorrowPeriods && tomorrowPeriods.length > 0) {
-            // find earliest open tomorrow
-            let earliest: string | null = null;
-            function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
-            for (const p of tomorrowPeriods) {
-                if (!p.open) continue;
-                if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
-            }
-            if (earliest) return earliest; // small UX: show time (tomorrow)
-        }
+            // No more openings today — attempt a robust next-opening search across the next 7 days.
+            // If the next opening is tomorrow, return the localized "Abre amanhã às XXX".
+            try {
+                for (let offset = 1; offset <= 7; offset++) {
+                    const futurePeriods = getPeriodsForDay(place, offset);
+                    if (!futurePeriods || futurePeriods.length === 0) continue;
 
+                    // find earliest opening in that future day
+                    let earliest: string | null = null;
+                    function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+                    for (const p of futurePeriods) {
+                        if (!p.open) continue;
+                        if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
+                    }
+                    if (earliest) {
+                        if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+                        // if not tomorrow, just return the time (avoid adding weekday names for now)
+                        return earliest;
+                    }
+                }
+            } catch (e) {
+                // on error, fallthrough to '-'
+                console.warn('[getOpeningDisplayForToday] next-opening search failed for place id=', place?.id, e);
+            }
+
+            return '-';
         return '-';
     }
 

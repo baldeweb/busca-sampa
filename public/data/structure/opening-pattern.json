@@ -174,8 +174,10 @@
     "id": "IZAKAYA_ISSA_DAYTIME",
     "description": "Horários do restaurante Izakaya Issa.",
     "periods": [
-      { "days": ["MONDAY", "TUESDAY", "THURSDAY", "FRIDAY"], "open": "11:00", "close": "14:30" },
-      { "days": ["MONDAY", "TUESDAY", "THURSDAY", "FRIDAY"], "open": "11:00", "close": "14:30" },
+      { "days": ["MONDAY", "TUESDAY"], "open": "11:00", "close": "14:30" },
+      { "days": ["MONDAY", "TUESDAY"], "open": "18:00", "close": "20:00" },
+      { "days": ["THURSDAY", "FRIDAY"], "open": "11:00", "close": "14:30" },
+      { "days": ["THURSDAY", "FRIDAY"], "open": "18:00", "close": "22:00" },
       { "days": ["SATURDAY", "SUNDAY"], "open": "11:00", "close": "15:00" },
       { "days": ["SATURDAY", "SUNDAY"], "open": "18:00", "close": "20:30" }
     ]
