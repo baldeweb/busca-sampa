@@ -975,5 +975,12 @@
     "periods": [
       { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "12:00", "close": "05:00" }
     ]
+  },
+  {
+    "id": "AMIGODOREI_DAYTIME",
+    "description": "Horários do Amigo do Rei",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "20:00", "close": "22:00" }
+    ]
   }
 ]

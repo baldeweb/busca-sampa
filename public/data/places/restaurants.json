@@ -807,7 +807,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "AMIGODOREI_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1953,7 +1953,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
