@@ -12,7 +12,6 @@ import { slugify } from '@/core/services/Slugify';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
-import { FiltersModal } from '@/web/components/place/FiltersModal';
 import flagSp from '@/assets/imgs/etc/logo-role-paulista.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
@@ -24,6 +23,7 @@ import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
+import icArrowDown from '@/assets/imgs/icons/ic_arrow_down.png';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -221,7 +221,8 @@ export const PlaceListPage: React.FC = () => {
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [orderVersion, setOrderVersion] = useState(0);
     
-    const [showFiltersModal, setShowFiltersModal] = useState(false);
+    const [showSortingMenu, setShowSortingMenu] = useState(false);
+    const [showHoursMenu, setShowHoursMenu] = useState(false);
     const [filterOpenNow, setFilterOpenNow] = useState(false);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 
@@ -531,33 +532,81 @@ export const PlaceListPage: React.FC = () => {
                     )}
                 </div>
             </section>
-            {/* Filtro de ordenação */}
+            {/* Barra de filtros: ícone à esquerda e menus à direita */}
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
-                    <div className="flex items-center justify-end">
-                            <div>
-                                <div className="relative inline-block">
-                                    <button
-                                        className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs flex items-center"
-                                        onClick={() => setShowFiltersModal(true)}
-                                    >
-                                        <img src={icFilter} alt="filter" className="w-4 h-4 mr-2 inline-block" />
-                                        <span>{t('filters.button')}</span>
-                                    </button>
-                                </div>
+                    <div className="flex items-center justify-start gap-4">
+                        {/* Ícone de filtro alinhado à esquerda */}
+                        <div className="flex items-center">
+                            <img src={icFilter} alt="filter" className="w-5 h-5 mr-2" />
+                            <span className="text-sm text-gray-700">{t('filters.filter', { defaultValue: 'Filtros' })}</span>
+                        </div>
+                        {/* Botões à esquerda, ao lado do ícone */}
+                        <div className="flex items-center gap-2">
+                            {/* Ordenação */}
+                            <div className="relative">
+                                <button
+                                    type="button"
+                                    className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                    style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                                    onClick={() => { setShowSortingMenu((v) => !v); setShowHoursMenu(false); }}
+                                >
+                                    <span className="mr-2">{t('filters.sortingTitle')}</span>
+                                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                                </button>
+                                {showSortingMenu && (
+                                    <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg z-10">
+                                        {ORDER_OPTIONS.map(opt => (
+                                            <button
+                                                key={opt.value}
+                                                type="button"
+                                                className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === opt.value ? 'font-semibold' : ''}`}
+                                                onClick={() => { setOrder(opt.value); setOrderVersion(x => x + 1); setShowSortingMenu(false); setFilterOpenNow(false); }}
+                                            >
+                                                {opt.value === 'name-asc' && t('list.orderNameAsc')}
+                                                {opt.value === 'name-desc' && t('list.orderNameDesc')}
+                                                {opt.value === 'neighborhood-asc' && t('list.orderNeighborhoodAsc')}
+                                                {opt.value === 'neighborhood-desc' && t('list.orderNeighborhoodDesc')}
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
+                            {/* Horários */}
+                            <div className="relative">
+                                <button
+                                    type="button"
+                                    className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                    style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                                    onClick={() => { setShowHoursMenu((v) => !v); setShowSortingMenu(false); }}
+                                >
+                                    <span className="mr-2">{t('filters.hoursTitle')}</span>
+                                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                                </button>
+                                {showHoursMenu && (
+                                    <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10">
+                                        <button
+                                            type="button"
+                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${filterOpenNow ? 'font-semibold' : ''}`}
+                                            onClick={() => { setFilterOpenNow(true); setOrder(''); setOrderVersion(x => x + 1); setShowHoursMenu(false); }}
+                                        >
+                                            {t('filters.openNowLabel')}
+                                        </button>
+                                        <button
+                                            type="button"
+                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!filterOpenNow ? 'font-semibold' : ''}`}
+                                            onClick={() => { setFilterOpenNow(false); setOrderVersion(x => x + 1); setShowHoursMenu(false); }}
+                                        >
+                                            {t('filters.anyHourLabel', { defaultValue: 'Qualquer horário' })}
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <FiltersModal
-                isOpen={showFiltersModal}
-                onClose={() => setShowFiltersModal(false)}
-                order={order}
-                setOrder={(v: string) => { setOrder(v); setOrderVersion(x => x + 1); }}
-                openNowOnly={filterOpenNow}
-                setOpenNowOnly={(v: boolean) => { console.log('[PlaceListPage] setOpenNowOnly', v); setFilterOpenNow(v); setOrderVersion(x => x + 1); }}
-                showOpenNowOption={!isOpensToday}
-            />
+            {/* Modal antigo de filtros removido em favor dos menus inline */}
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
                 <div className="mx-auto max-w-5xl px-0 sm:px-12">
