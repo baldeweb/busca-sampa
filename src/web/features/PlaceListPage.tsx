@@ -223,22 +223,49 @@ export const PlaceListPage: React.FC = () => {
     
     const [showSortingMenu, setShowSortingMenu] = useState(false);
     const [showHoursMenu, setShowHoursMenu] = useState(false);
+    const [showScheduleMenu, setShowScheduleMenu] = useState(false);
+    const [showCityMenu, setShowCityMenu] = useState(false);
     const [filterOpenNow, setFilterOpenNow] = useState(false);
+    const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
+    const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 
-    // Filtro de ambiente
-    const filteredPlaces = useMemo(() => {
-        if (!selectedEnv) return baseList;
-        const normalize = (s: any) => String(s || '').trim().toLowerCase();
-        const sel = normalize(selectedEnv);
-        return baseList.filter(p => {
-            if (normalize(p.type) === sel) return true;
-            if (Array.isArray(p.tags)) {
-                for (const tg of p.tags) if (normalize(tg) === sel) return true;
-            }
-            return false;
+    // Cities available for current base list
+    const cities = useMemo(() => {
+        const s = new Set<string>();
+        baseList.forEach(p => {
+            (p.addresses || []).forEach((a: any) => { if (a && a.city) s.add(String(a.city)); });
         });
-    }, [baseList, selectedEnv]);
+        return Array.from(s).sort((a,b)=>a.localeCompare(b));
+    }, [baseList]);
+
+    // Combined filters: environment, schedule and city
+    const filteredPlaces = useMemo(() => {
+        const normalize = (s: any) => String(s || '').trim().toLowerCase();
+        const sel = selectedEnv ? normalize(selectedEnv) : null;
+        return baseList.filter(p => {
+            // environment/type filter
+            if (sel) {
+                if (normalize(p.type) === sel) {
+                    // ok
+                } else if (Array.isArray(p.tags) && p.tags.some((tg: any) => normalize(tg) === sel)) {
+                    // ok
+                } else return false;
+            }
+
+            // schedule filter
+            if (scheduleFilter === 'required' && !p.shouldSchedule) return false;
+            if (scheduleFilter === 'not-required' && p.shouldSchedule) return false;
+
+            // city filter
+            if (cityFilter) {
+                const hasCity = (p.addresses || []).some((a: any) => String(a.city || '').toLowerCase() === cityFilter.toLowerCase());
+                if (!hasCity) return false;
+            }
+
+            return true;
+        });
+    }, [baseList, selectedEnv, scheduleFilter, cityFilter]);
 
     // Apply 'open now' filter if requested
     const filteredPlacesWithOpenNow = useMemo(() => {
@@ -643,6 +670,47 @@ export const PlaceListPage: React.FC = () => {
                                     </div>
                                 )}
                             </div>
+                            {/* Agendar */}
+                            <div className="relative">
+                                <button
+                                    type="button"
+                                    className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                    style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                                    onClick={() => { setShowScheduleMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); }}
+                                >
+                                    <span className="mr-2">{t('filters.scheduleTitle', { defaultValue: 'Agendar' })}</span>
+                                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                                </button>
+                                {showScheduleMenu && (
+                                    <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10">
+                                        <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'required' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('required'); setShowScheduleMenu(false); }}>{t('filters.scheduleRequired', { defaultValue: 'Necessário agendar' })}</button>
+                                        <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'not-required' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('not-required'); setShowScheduleMenu(false); }}>{t('filters.scheduleNotRequired', { defaultValue: 'Não precisa agendar' })}</button>
+                                        <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'any' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('any'); setShowScheduleMenu(false); }}>{t('filters.anySchedule', { defaultValue: 'Qualquer' })}</button>
+                                    </div>
+                                )}
+                            </div>
+                            {/* Cidade (se aplicável) */}
+                            {cities.length > 1 && (
+                                <div className="relative">
+                                    <button
+                                        type="button"
+                                        className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                        style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                                        onClick={() => { setShowCityMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); }}
+                                    >
+                                        <span className="mr-2">{t('filters.cityTitle', { defaultValue: 'Cidade' })}</span>
+                                        <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                                    </button>
+                                    {showCityMenu && (
+                                        <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                                            <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!cityFilter ? 'font-semibold' : ''}`} onClick={() => { setCityFilter(null); setShowCityMenu(false); }}>{t('filters.anyCity', { defaultValue: 'Qualquer cidade' })}</button>
+                                            {cities.map(c => (
+                                                <button key={c} type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${cityFilter === c ? 'font-semibold' : ''}`} onClick={() => { setCityFilter(c); setShowCityMenu(false); }}>{c}</button>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

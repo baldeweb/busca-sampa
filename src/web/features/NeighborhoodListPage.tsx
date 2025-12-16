@@ -103,11 +103,30 @@ export const NeighborhoodListPage: React.FC = () => {
   const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
   const [showFiltersModal, setShowFiltersModal] = useState(false);
   const [filterOpenNow, setFilterOpenNow] = useState(false);
+  const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
+  const [selectedCity, setSelectedCity] = useState<string | null>(null);
+
+  const cities = useMemo(() => {
+    const s = new Set<string>();
+    neighborhoodPlaces.forEach((p: any) => {
+      (p.addresses || []).forEach((a: any) => { if (a && a.city) s.add(String(a.city)); });
+    });
+    return Array.from(s).sort((a,b)=>a.localeCompare(b));
+  }, [neighborhoodPlaces]);
 
   const filteredPlaces = useMemo(() => {
-    if (!selectedType) return neighborhoodPlaces;
-    return neighborhoodPlaces.filter((p) => p.type === selectedType);
-  }, [neighborhoodPlaces, selectedType]);
+    const arr = neighborhoodPlaces.filter((p) => {
+      if (selectedType && p.type !== selectedType) return false;
+      if (scheduleFilter === 'required' && !p.shouldSchedule) return false;
+      if (scheduleFilter === 'not-required' && p.shouldSchedule) return false;
+      if (selectedCity) {
+        const hasCity = (p.addresses || []).some((a: any) => String(a.city || '').toLowerCase() === selectedCity.toLowerCase());
+        if (!hasCity) return false;
+      }
+      return true;
+    });
+    return arr;
+  }, [neighborhoodPlaces, selectedType, scheduleFilter, selectedCity]);
 
   const sortedPlaces = useMemo(() => {
     const arr = [...filteredPlaces];
@@ -265,6 +284,11 @@ export const NeighborhoodListPage: React.FC = () => {
           openNowOnly={filterOpenNow}
           setOpenNowOnly={(v: boolean) => setFilterOpenNow(v)}
           showOpenNowOption={false}
+          scheduleFilter={scheduleFilter}
+          setScheduleFilter={(v) => setScheduleFilter(v)}
+          cities={cities}
+          selectedCity={selectedCity}
+          setSelectedCity={(v) => setSelectedCity(v)}
         />
 
       {/* Filtro por tipo (grid, igual à página de lugares) */}

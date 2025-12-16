@@ -10,9 +10,15 @@ interface Props {
   openNowOnly: boolean;
   setOpenNowOnly: (v: boolean) => void;
   showOpenNowOption?: boolean;
+  // new filters
+  scheduleFilter?: 'any' | 'required' | 'not-required';
+  setScheduleFilter?: (v: 'any' | 'required' | 'not-required') => void;
+  cities?: string[];
+  selectedCity?: string | null;
+  setSelectedCity?: (v: string | null) => void;
 }
 
-export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder, openNowOnly, setOpenNowOnly, showOpenNowOption = true }) => {
+export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder, openNowOnly, setOpenNowOnly, showOpenNowOption = true, scheduleFilter, setScheduleFilter, cities, selectedCity, setSelectedCity }) => {
   const { t } = useTranslation();
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
@@ -99,6 +105,69 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
                     {openNowOnly && <span className="text-xs font-bold">✓</span>}
                   </button>
                 </li>
+              </ul>
+            </div>
+          )}
+
+          {/* Schedule filter */}
+          <div className="mt-6">
+            <div className="font-bold mb-2">{t('filters.scheduleTitle', { defaultValue: 'Agendar' })}</div>
+            <ul>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => { setOpenNowOnly(false); setOrder(''); setScheduleFilter && setScheduleFilter('required'); onClose(); }}
+                  className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ scheduleFilter === 'required' ? 'bg-bs-red/40' : '' }`}
+                >
+                  <span className="text-sm">{t('filters.scheduleRequired', { defaultValue: 'Necessário agendar' })}</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => { setOpenNowOnly(false); setOrder(''); setScheduleFilter && setScheduleFilter('not-required'); onClose(); }}
+                  className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ scheduleFilter === 'not-required' ? 'bg-bs-red/40' : '' }`}
+                >
+                  <span className="text-sm">{t('filters.scheduleNotRequired', { defaultValue: 'Não precisa agendar' })}</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => { setOpenNowOnly(false); setOrder(''); setScheduleFilter && setScheduleFilter('any'); onClose(); }}
+                  className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ scheduleFilter === 'any' ? 'bg-bs-red/40' : '' }`}
+                >
+                  <span className="text-sm">{t('filters.anySchedule', { defaultValue: 'Qualquer' })}</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* City filter (if provided) */}
+          {(Array.isArray(cities) ? cities.length > 1 : false) && (
+            <div className="mt-6">
+              <div className="font-bold mb-2">{t('filters.cityTitle', { defaultValue: 'Cidade' })}</div>
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => { setSelectedCity && setSelectedCity(null); setOrder(''); setOpenNowOnly(false); onClose(); }}
+                    className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ selectedCity === null ? 'bg-bs-red/40' : '' }`}
+                  >
+                    <span className="text-sm">{t('filters.anyCity', { defaultValue: 'Qualquer cidade' })}</span>
+                  </button>
+                </li>
+                {(cities || []).map((c: string) => (
+                  <li key={c}>
+                    <button
+                      type="button"
+                      onClick={() => { setSelectedCity && setSelectedCity(c); setOrder(''); setOpenNowOnly(false); onClose(); }}
+                      className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ selectedCity === c ? 'bg-bs-red/40' : '' }`}
+                    >
+                      <span className="text-sm">{c}</span>
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           )}
