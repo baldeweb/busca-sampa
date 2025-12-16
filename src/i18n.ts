@@ -196,6 +196,8 @@ const resources = {
         opensAtHeader: 'Abertura',
         openNow: 'Aberto agora',
         opensSoon: 'Abre em instantes',
+        opensTomorrowAt: 'Abre amanhã às {{time}}',
+        opensOnAt: 'Abre {{day}} às {{time}}',
         subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
         article: {
           RESTAURANT: 'o',

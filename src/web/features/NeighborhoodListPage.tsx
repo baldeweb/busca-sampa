@@ -157,16 +157,28 @@ export const NeighborhoodListPage: React.FC = () => {
       return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
     }
     if (!periods || periods.length === 0) {
-      // If there are no periods for today, check tomorrow and show "Abre amanhã às XXX" when applicable
-      const tomorrowPeriodsEarly = getPeriodsForDay(place, 1);
-      if (tomorrowPeriodsEarly && tomorrowPeriodsEarly.length > 0) {
-        let earliestTomorrow: string | null = null;
-        function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
-        for (const p of tomorrowPeriodsEarly) {
-          if (!p.open) continue;
-          if (earliestTomorrow === null || parseTime(p.open) < parseTime(earliestTomorrow)) earliestTomorrow = p.open;
+      // No periods today — scan the next 7 days and return the first upcoming opening.
+      try {
+        const now = new Date();
+        for (let offset = 1; offset <= 7; offset++) {
+          const futurePeriods = getPeriodsForDay(place, offset);
+          if (!futurePeriods || futurePeriods.length === 0) continue;
+
+          let earliest: string | null = null;
+          function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+          for (const p of futurePeriods) {
+            if (!p.open) continue;
+            if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
+          }
+          if (earliest) {
+            if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+            const weekdaysPt = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+            const weekday = weekdaysPt[(now.getDay() + offset) % 7];
+            return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
+          }
         }
-        if (earliestTomorrow) return t('placeList.opensTomorrowAt', { time: earliestTomorrow, defaultValue: `Abre amanhã às ${earliestTomorrow}` });
+      } catch (e) {
+        console.warn('[getOpeningDisplayForToday] future scan failed for place id=', place?.id, e);
       }
       return '-';
     }
@@ -212,7 +224,9 @@ export const NeighborhoodListPage: React.FC = () => {
         }
         if (earliest) {
           if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
-          return earliest;
+          const weekdaysPt = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+          const weekday = weekdaysPt[(now.getDay() + offset) % 7];
+          return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
         }
       }
     } catch (e) {
