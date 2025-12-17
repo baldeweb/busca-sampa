@@ -105,6 +105,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const [filterOpenNow, setFilterOpenNow] = useState(false);
   const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
+  const [priceFilter, setPriceFilter] = useState<string | null>(null);
 
   const cities = useMemo(() => {
     const s = new Set<string>();
@@ -114,11 +115,18 @@ export const NeighborhoodListPage: React.FC = () => {
     return Array.from(s).sort((a,b)=>a.localeCompare(b));
   }, [neighborhoodPlaces]);
 
+  const priceOptions = useMemo(() => {
+    const s = new Set<string>();
+    neighborhoodPlaces.forEach((p: any) => { if (p.priceRange) s.add(String(p.priceRange)); });
+    return Array.from(s).sort();
+  }, [neighborhoodPlaces]);
+
   const filteredPlaces = useMemo(() => {
     const arr = neighborhoodPlaces.filter((p) => {
       if (selectedType && p.type !== selectedType) return false;
       if (scheduleFilter === 'required' && !p.shouldSchedule) return false;
       if (scheduleFilter === 'not-required' && p.shouldSchedule) return false;
+      if (priceFilter && String(p.priceRange || '').toLowerCase() !== String(priceFilter || '').toLowerCase()) return false;
       if (selectedCity) {
         const hasCity = (p.addresses || []).some((a: any) => String(a.city || '').toLowerCase() === selectedCity.toLowerCase());
         if (!hasCity) return false;
@@ -286,9 +294,12 @@ export const NeighborhoodListPage: React.FC = () => {
           showOpenNowOption={false}
           scheduleFilter={scheduleFilter}
           setScheduleFilter={(v) => setScheduleFilter(v)}
-          cities={cities}
-          selectedCity={selectedCity}
-          setSelectedCity={(v) => setSelectedCity(v)}
+            cities={cities}
+            selectedCity={selectedCity}
+            setSelectedCity={(v) => setSelectedCity(v)}
+            priceOptions={priceOptions}
+            priceFilter={priceFilter}
+            setPriceFilter={(v) => setPriceFilter(v)}
         />
 
       {/* Filtro por tipo (grid, igual à página de lugares) */}

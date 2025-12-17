@@ -225,9 +225,11 @@ export const PlaceListPage: React.FC = () => {
     const [showHoursMenu, setShowHoursMenu] = useState(false);
     const [showScheduleMenu, setShowScheduleMenu] = useState(false);
     const [showCityMenu, setShowCityMenu] = useState(false);
+    const [showPriceMenu, setShowPriceMenu] = useState(false);
     const [filterOpenNow, setFilterOpenNow] = useState(false);
     const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
     const [cityFilter, setCityFilter] = useState<string | null>(null);
+    const [priceFilter, setPriceFilter] = useState<string | null>(null);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 
     // Cities available for current base list
@@ -237,6 +239,13 @@ export const PlaceListPage: React.FC = () => {
             (p.addresses || []).forEach((a: any) => { if (a && a.city) s.add(String(a.city)); });
         });
         return Array.from(s).sort((a,b)=>a.localeCompare(b));
+    }, [baseList]);
+
+    // Price options available for current base list
+    const priceOptions = useMemo(() => {
+        const s = new Set<string>();
+        baseList.forEach(p => { if (p.priceRange) s.add(String(p.priceRange)); });
+        return Array.from(s).sort();
     }, [baseList]);
 
     // Combined filters: environment, schedule and city
@@ -262,6 +271,9 @@ export const PlaceListPage: React.FC = () => {
                 const hasCity = (p.addresses || []).some((a: any) => String(a.city || '').toLowerCase() === cityFilter.toLowerCase());
                 if (!hasCity) return false;
             }
+
+            // price filter
+            if (priceFilter && String(p.priceRange || '').toLowerCase() !== String(priceFilter || '').toLowerCase()) return false;
 
             return true;
         });
@@ -603,14 +615,14 @@ export const PlaceListPage: React.FC = () => {
             {/* Barra de filtros: ícone à esquerda e menus à direita */}
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
-                    <div className="flex items-center justify-start gap-4">
-                        {/* Ícone de filtro alinhado à esquerda */}
+                    <div className="flex flex-col justify-start gap-2">
+                        {/* Heading: icon + label styled like 'Tipo de ambiente:' */}
                         <div className="flex items-center">
-                            <img src={icFilter} alt="filter" className="w-5 h-5 mr-2" />
-                            <span className="text-sm text-gray-700">{t('filters.filter', { defaultValue: 'Filtros' })}</span>
+                            <h3 className="font-bold text-lg text-black">{t('filters.filter', { defaultValue: 'Filtros' })}</h3>
                         </div>
-                        {/* Botões à esquerda, ao lado do ícone */}
+                        {/* Botões abaixo do título (nova linha) */}
                         <div className="flex items-center gap-2">
+                            <img src={icFilter} alt="filter" className="w-5 h-5 mr-3 self-center" />
                             {/* Ordenação */}
                             <div className="relative">
                                 <button
@@ -676,7 +688,7 @@ export const PlaceListPage: React.FC = () => {
                                     type="button"
                                     className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                     style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                                    onClick={() => { setShowScheduleMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); }}
+                                    onClick={() => { setShowScheduleMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
                                 >
                                     <span className="mr-2">{t('filters.scheduleTitle', { defaultValue: 'Agendar' })}</span>
                                     <img src={icArrowDown} alt="expand" className="w-3 h-3" />
@@ -696,7 +708,7 @@ export const PlaceListPage: React.FC = () => {
                                         type="button"
                                         className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                         style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                                        onClick={() => { setShowCityMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); }}
+                                        onClick={() => { setShowCityMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowPriceMenu(false); }}
                                     >
                                         <span className="mr-2">{t('filters.cityTitle', { defaultValue: 'Cidade' })}</span>
                                         <img src={icArrowDown} alt="expand" className="w-3 h-3" />
@@ -710,7 +722,29 @@ export const PlaceListPage: React.FC = () => {
                                         </div>
                                     )}
                                 </div>
-                            )}
+                                )}
+                                {/* Preço (se aplicável) */}
+                                {priceOptions.length > 1 && (
+                                    <div className="relative">
+                                        <button
+                                            type="button"
+                                            className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                            style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                                            onClick={() => { /* toggle price menu */ setShowPriceMenu((v)=>!v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
+                                        >
+                                            <span className="mr-2">{t('filters.priceTitle', { defaultValue: 'Preço' })}</span>
+                                            <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                                        </button>
+                                        {showPriceMenu && (
+                                            <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                                                <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!priceFilter ? 'font-semibold' : ''}`} onClick={() => { setPriceFilter(null); setShowPriceMenu(false); }}>{t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}</button>
+                                                {priceOptions.map(p => (
+                                                    <button key={p} type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === p ? 'font-semibold' : ''}`} onClick={() => { setPriceFilter(p); setShowPriceMenu(false); }}>{t(`priceRange.${p}`, { defaultValue: p })}</button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                         </div>
                     </div>
                 </div>

@@ -16,6 +16,9 @@ interface Props {
   cities?: string[];
   selectedCity?: string | null;
   setSelectedCity?: (v: string | null) => void;
+  priceOptions?: string[];
+  priceFilter?: string | null;
+  setPriceFilter?: (v: string | null) => void;
 }
 
 export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder, openNowOnly, setOpenNowOnly, showOpenNowOption = true, scheduleFilter, setScheduleFilter, cities, selectedCity, setSelectedCity }) => {
@@ -165,6 +168,35 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
                       className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ selectedCity === c ? 'bg-bs-red/40' : '' }`}
                     >
                       <span className="text-sm">{c}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Price filter (if provided and >1 option) */}
+          {(Array.isArray(priceOptions) ? priceOptions.length > 1 : false) && (
+            <div className="mt-6">
+              <div className="font-bold mb-2">{t('filters.priceTitle', { defaultValue: 'Preço' })}</div>
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => { setPriceFilter && setPriceFilter(null); setOrder(''); setOpenNowOnly(false); onClose(); }}
+                    className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ priceFilter === null ? 'bg-bs-red/40' : '' }`}
+                  >
+                    <span className="text-sm">{t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}</span>
+                  </button>
+                </li>
+                {(priceOptions || []).map((p: string) => (
+                  <li key={p}>
+                    <button
+                      type="button"
+                      onClick={() => { setPriceFilter && setPriceFilter(p); setOrder(''); setOpenNowOnly(false); onClose(); }}
+                      className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ priceFilter === p ? 'bg-bs-red/40' : '' }`}
+                    >
+                      <span className="text-sm">{t(`priceRange.${p}`, { defaultValue: p })}</span>
                     </button>
                   </li>
                 ))}
