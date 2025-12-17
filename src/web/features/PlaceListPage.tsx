@@ -386,7 +386,7 @@ export const PlaceListPage: React.FC = () => {
         console.log("baseList length:", baseList.length);
     }, [routeType, mappedType, baseList]);
 
-    const isOpensToday = routeTypeLower === 'abrem-hoje' || mappedType === 'ABREM-HOJE';
+    // removed unused variable isOpensToday
 
     // Helper: get raw periods for a relative day (0 = today, 1 = tomorrow)
     function getPeriodsForDay(place: any, dayOffset = 0): any[] {
