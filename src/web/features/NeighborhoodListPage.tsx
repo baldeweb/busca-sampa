@@ -11,8 +11,10 @@ import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
-import { FiltersModal } from '@/web/components/place/FiltersModal';
+// import { FiltersModal } from '@/web/components/place/FiltersModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
+import icArrowDown from '@/assets/imgs/icons/ic_arrow_down.png';
+import { PriceFilterList } from '@/web/components/place/PriceFilterList';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
 
 // Página que lista todos os lugares de um bairro específico,
@@ -101,11 +103,16 @@ export const NeighborhoodListPage: React.FC = () => {
     { value: 'type-desc' },
   ];
   const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
-  const [showFiltersModal, setShowFiltersModal] = useState(false);
+  // const [showFiltersModal, setShowFiltersModal] = useState(false);
   const [filterOpenNow, setFilterOpenNow] = useState(false);
   const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
   const [priceFilter, setPriceFilter] = useState<string | null>(null);
+  const [showSortingMenu, setShowSortingMenu] = useState(false);
+  const [showHoursMenu, setShowHoursMenu] = useState(false);
+  const [showScheduleMenu, setShowScheduleMenu] = useState(false);
+  const [showCityMenu, setShowCityMenu] = useState(false);
+  const [showPriceMenu, setShowPriceMenu] = useState(false);
 
   const cities = useMemo(() => {
     const s = new Set<string>();
@@ -296,23 +303,7 @@ export const NeighborhoodListPage: React.FC = () => {
         </div>
       </section>
 
-        <FiltersModal
-          isOpen={showFiltersModal}
-          onClose={() => setShowFiltersModal(false)}
-          order={order}
-          setOrder={(v: string) => setOrder(v)}
-          openNowOnly={filterOpenNow}
-          setOpenNowOnly={(v: boolean) => setFilterOpenNow(v)}
-          showOpenNowOption={false}
-          scheduleFilter={scheduleFilter}
-          setScheduleFilter={(v) => setScheduleFilter(v)}
-            cities={cities}
-            selectedCity={selectedCity}
-            setSelectedCity={(v) => setSelectedCity(v)}
-            priceOptions={priceOptions}
-            priceFilter={priceFilter}
-            setPriceFilter={(v) => setPriceFilter(v)}
-        />
+        {/* Inline filters replace the old FiltersModal */}
 
       {/* Filtro por tipo (grid, igual à página de lugares) */}
       {environments.length > 0 && (
@@ -368,22 +359,126 @@ export const NeighborhoodListPage: React.FC = () => {
         </section>
       )}
 
-      {/* Filtro de ordenação */}
+      {/* Inline filters (same block used in places list) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
-            <div className="flex items-center justify-end">
-                <div>
-                    <div className="relative inline-block">
-                <button
-                  className="bg-bs-card text-white px-3 py-2 rounded border border-bs-red font-bold text-xs flex items-center"
-                  onClick={() => setShowFiltersModal(true)}
-                >
-                  <img src={icFilter} alt="filter" className="w-4 h-4 mr-2 inline-block" />
-                  <span>{t('filters.button')}</span>
-                </button>
-                    </div>
-                </div>
+          <div className="flex flex-col justify-start gap-2">
+            {/* Heading: icon + label styled like in places */}
+            <div className="flex items-center">
+              <h3 className="font-bold text-lg text-black">{t('filters.filter', { defaultValue: 'Filtros' })}</h3>
             </div>
+            {/* Buttons below the title */}
+            <div className="flex items-center gap-2">
+              <img src={icFilter} alt="filter" className="w-5 h-5 mr-3 self-center" />
+            {/* Ordenação */}
+            <div className="relative">
+              <button
+                type="button"
+                className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                onClick={() => { setShowSortingMenu(v => !v); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
+              >
+                <span className="mr-2">{t('filters.sortingTitle', { defaultValue: 'Ordenação' })}</span>
+                <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+              </button>
+              {showSortingMenu && (
+                <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'name-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('name-asc'); setShowSortingMenu(false); }}>{t('filters.sortNameAsc', { defaultValue: 'Nome (A-Z)' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'name-desc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('name-desc'); setShowSortingMenu(false); }}>{t('filters.sortNameDesc', { defaultValue: 'Nome (Z-A)' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'type-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('type-asc'); setShowSortingMenu(false); }}>{t('filters.sortTypeAsc', { defaultValue: 'Tipo (A-Z)' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'type-desc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('type-desc'); setShowSortingMenu(false); }}>{t('filters.sortTypeDesc', { defaultValue: 'Tipo (Z-A)' })}</button>
+                </div>
+              )}
+            </div>
+
+            {/* Horários */}
+            <div className="relative">
+              <button
+                type="button"
+                className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                onClick={() => { setShowHoursMenu(v => !v); setShowSortingMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
+              >
+                <span className="mr-2">{t('filters.hoursTitle', { defaultValue: 'Horários' })}</span>
+                <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+              </button>
+              {showHoursMenu && (
+                <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!filterOpenNow ? 'font-semibold' : ''}`} onClick={() => { setFilterOpenNow(false); setShowHoursMenu(false); }}>{t('filters.anyHour', { defaultValue: 'Qualquer horário' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${filterOpenNow ? 'font-semibold' : ''}`} onClick={() => { setFilterOpenNow(true); setShowHoursMenu(false); }}>{t('filters.openNow', { defaultValue: 'Aberto agora' })}</button>
+                </div>
+              )}
+            </div>
+
+            {/* Agendar */}
+            <div className="relative">
+              <button
+                type="button"
+                className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                onClick={() => { setShowScheduleMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
+              >
+                <span className="mr-2">{t('filters.scheduleTitle', { defaultValue: 'Agendar' })}</span>
+                <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+              </button>
+              {showScheduleMenu && (
+                <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'any' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('any'); setShowScheduleMenu(false); }}>{t('filters.anySchedule', { defaultValue: 'Qualquer' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'required' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('required'); setShowScheduleMenu(false); }}>{t('filters.scheduleRequired', { defaultValue: 'Necessário agendar' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'not-required' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('not-required'); setShowScheduleMenu(false); }}>{t('filters.scheduleNotRequired', { defaultValue: 'Não precisa agendar' })}</button>
+                </div>
+              )}
+            </div>
+
+            {/* Cidade (se houver mais de uma) */}
+            {(cities.length > 1) && (
+              <div className="relative">
+                <button
+                  type="button"
+                  className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                  style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                  onClick={() => { setShowCityMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowPriceMenu(false); }}
+                >
+                  <span className="mr-2">{t('filters.cityTitle', { defaultValue: 'Cidade' })}</span>
+                  <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                </button>
+                {showCityMenu && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                    <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === null ? 'font-semibold' : ''}`} onClick={() => { setSelectedCity(null); setShowCityMenu(false); }}>{t('filters.anyCity', { defaultValue: 'Qualquer cidade' })}</button>
+                    {cities.map(c => (
+                      <button key={c} type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === c ? 'font-semibold' : ''}`} onClick={() => { setSelectedCity(c); setShowCityMenu(false); }}>{c}</button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Preço */}
+            {(priceOptions.length >= 1) && (
+              <div className="relative">
+                <button
+                  type="button"
+                  className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                  style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                  onClick={() => { setShowPriceMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
+                >
+                  <span className="mr-2">{t('filters.priceTitle', { defaultValue: 'Preço' })}</span>
+                  <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                </button>
+                {showPriceMenu && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                    <PriceFilterList
+                      options={priceOptions}
+                      selected={priceFilter}
+                      anyLabel={t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}
+                      onSelect={(v) => { setPriceFilter(v); setShowPriceMenu(false); }}
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+            </div>
+          </div>
         </div>
       </div>
 
