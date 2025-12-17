@@ -22,7 +22,7 @@
             "Tour de visitação do estádio Allianz Parque, do time do Palmeiras",
             "Necessário acessar o site para mais informações sobre a tour"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -65,7 +65,7 @@
         "notes": [
             "Centro de Tradições Nordestinas, com eventos semanais"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -150,7 +150,7 @@
             "Necessário agendar para realizar a visitação",
             "Entrada gratuita às terças-feiras"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -223,7 +223,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -267,7 +267,7 @@
             "A bilheteria fica na loja do Parque da Ciência, localizada atrás do Museu Biológico.",
             "O ingresso pode ser comprado até as 16h. Os museus estão abertos à visitação até 16h45."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -306,7 +306,7 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -386,7 +386,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -461,7 +461,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -628,7 +628,7 @@
             "Projetado por Oscar Niemeyer, o Edifício Copan é um dos marcos arquitetônicos mais famosos de São Paulo",
             "Localizado na Avenida Ipiranga, no centro da cidade"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -793,7 +793,7 @@
         "notes": [
             "Museu de ciência com exposições interativas que oferecem experiências sociais e educativas."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -834,7 +834,7 @@
         "notes": [
             "A história e evolução do idioma são contadas de forma interativa numa ampla e moderna área de exposição."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -914,7 +914,7 @@
         "notes": [
             "Local da primeira missão jesuíta de São Paulo, em 1554, com réplica da capela construída em 1896."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -956,7 +956,7 @@
             "Entrada gratuita aos sábados",
             "Museu antigo com pinturas e esculturas brasileiras do século XIX que conta com programas educacionais."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1067,7 +1067,7 @@
         "notes": [
             "O imponente e clássico edifício é sede da Orquestra Sinfônica da cidade e oferece espetáculos e visitações."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1109,7 +1109,7 @@
             "Fundado em 1911 com arquitetura renascentista e barroca do século XVII, apresenta óperas, concertos e balé.",
             "Necessário verificar se há algum evento no dia que for realizar a visita, pois os horários se limitam"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1150,7 +1150,7 @@
         "notes": [
             "Autódromo e também usado como espaço para eventos e shows."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1191,7 +1191,7 @@
         "notes": [
             "Teatro moderno com peças locais e em turnê, concertos e shows de dança."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1233,7 +1233,7 @@
             "Estádio do maior clube das américas: Corinthians!",
             "É possivel fazer uma tour pelo estádio, conhecendo os bastidores e a história do time"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1274,7 +1274,7 @@
         "notes": [
             "Espaço multicultural destinado a coleta, preservação e registro do som e imagem da vida e costumes no país."
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1313,7 +1313,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1349,7 +1349,7 @@
         "notes": [
             "Loja especializada em colecionáveis, action figures, quadrinhos e itens geek."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1427,7 +1427,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1468,7 +1468,7 @@
         "notes": [
             "Tour pelo estádio do São Paulo Futebol Clube, incluindo visita aos bastidores, vestiários e campo de jogo."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1547,7 +1547,7 @@
             "Museu etnográfico em um prédio projetado por Oscar Niemeyer, dedicado à diáspora africana no Brasil.",
             "Localizado no Parque Ibirapuera, a entrada mais próxima fica no Portão 10"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1619,7 +1619,7 @@
         "notes": [
             "Localizado dentro do Parque Villa-Lobos"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1660,7 +1660,7 @@
         "notes": [
             "Apresentação de novas tendências da arte nacional e internacional, com ateliês, cursos, livraria e bistrô."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1705,7 +1705,7 @@
         "notes": [
             "Rinque de patinação"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1757,7 +1757,7 @@
         "notes": [
             "Espaço de jogos eletrônicos com consoles, computadores e realidade virtual."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,

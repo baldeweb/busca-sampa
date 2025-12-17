@@ -118,7 +118,19 @@ export const NeighborhoodListPage: React.FC = () => {
   const priceOptions = useMemo(() => {
     const s = new Set<string>();
     neighborhoodPlaces.forEach((p: any) => { if (p.priceRange) s.add(String(p.priceRange)); });
-    return Array.from(s).sort();
+    const arr = Array.from(s);
+    const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "EXPENSIVE"]; // requested sequence (FREE first)
+    return arr.sort((a, b) => {
+      const ia = ORDER.indexOf(a);
+      const ib = ORDER.indexOf(b);
+      if (ia !== -1 || ib !== -1) {
+        if (ia === -1 && ib === -1) return a.localeCompare(b);
+        if (ia === -1) return 1;
+        if (ib === -1) return -1;
+        return ia - ib;
+      }
+      return a.localeCompare(b);
+    });
   }, [neighborhoodPlaces]);
 
   const filteredPlaces = useMemo(() => {

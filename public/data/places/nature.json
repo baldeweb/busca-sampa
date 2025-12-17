@@ -178,7 +178,7 @@
         "notes": [
             "Passeios de barco pela represa Guarapiranga"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -219,7 +219,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -263,7 +263,7 @@
             "Ingressos podem ser comprados no local ou online",
             "Possui uma grande variedade de animais"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,

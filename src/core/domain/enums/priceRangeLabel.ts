@@ -4,16 +4,14 @@ export function getPriceRangeLabel(price: PriceRange): string {
   switch (price) {
     case "FREE":
       return "Gratuito";
-    case "LOW":
-      return "Barato";
-    case "LOW-UP":
-      return "Moderado";
-    case "MEDIUM":
-      return "Preço justo";
-    case "MEDIUM-UP":
-      return "Pouco elevado";
-    case "HIGH":
-      return "Caro";
+    case "ECONOMIC":
+      return "Econômico (R$20 - R$59)";
+    case "MODERATE":
+      return "Moderado (R$50 - R$79)";
+    case "EXPENSIVE":
+      return "Caro (R$80 - R$149)";
+    case "VERY-EXPENSIVE":
+      return "Acima da média: R$150+";
     default:
       return "-";
   }

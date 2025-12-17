@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 
 interface Props {
   isOpen: boolean;
@@ -21,7 +22,7 @@ interface Props {
   setPriceFilter?: (v: string | null) => void;
 }
 
-export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder, openNowOnly, setOpenNowOnly, showOpenNowOption = true, scheduleFilter, setScheduleFilter, cities, selectedCity, setSelectedCity }) => {
+export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder, openNowOnly, setOpenNowOnly, showOpenNowOption = true, scheduleFilter, setScheduleFilter, cities, selectedCity, setSelectedCity, priceOptions, priceFilter, setPriceFilter }) => {
   const { t } = useTranslation();
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
@@ -196,7 +197,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
                       onClick={() => { setPriceFilter && setPriceFilter(p); setOrder(''); setOpenNowOnly(false); onClose(); }}
                       className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${ priceFilter === p ? 'bg-bs-red/40' : '' }`}
                     >
-                      <span className="text-sm">{t(`priceRange.${p}`, { defaultValue: p })}</span>
+                      <span className="text-sm">{getPriceRangeLabel(p as any)}</span>
                     </button>
                   </li>
                 ))}

@@ -22,7 +22,7 @@
             "Opções variadas de preparo de café",
             "Diferentes opções de pratos"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -65,7 +65,7 @@
         "notes": [
             "Ambiente temático medieval"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -111,7 +111,7 @@
             "Localizado no edifício Copan",
             "Cafeteria mais antiga de SP"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,

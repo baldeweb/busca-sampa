@@ -19,7 +19,7 @@
             "Há um hotel anexo ao casarão para desfrutar de sua noite de prazer",
             "O local conta com chapelaria e bar"
         ],
-        "priceRange": "HIGH",
+        "priceRange": "EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -64,7 +64,7 @@
             "O local conta com chapelaria, bar, mesa de sinuca e um vestiário",
             "Há diversas opções de bebidas nacionais e importadas"
         ],
-        "priceRange": "HIGH",
+        "priceRange": "EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -107,7 +107,7 @@
             "Há um valor de entrada",
             "Há diversas opções de bebidas nacionais e importadas"
         ],
-        "priceRange": "HIGH",
+        "priceRange": "EXPENSIVE",
         "addresses": [
             {
                 "id": 1,

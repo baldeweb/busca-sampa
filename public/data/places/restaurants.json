@@ -24,7 +24,7 @@
             "Dança típica toda terça-feira",
             "Café da manhã Russo 1x ao mês (verificar no Instagram as datas)"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -67,7 +67,7 @@
         "notes": [
             "Culinária Boliviana"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -110,7 +110,7 @@
         "notes": [
             "Culinária Sul-Coreana"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -149,7 +149,7 @@
             "Unidade 1000 do McDonald's no Brasil",
             "Costuma ter decorações na fachada do estabelecimento"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -194,7 +194,7 @@
             "Culinária Sul-Coreana",
             "Churrasco Coreano"
         ],
-        "priceRange": "MEDIUM-UP",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -260,7 +260,7 @@
             "Culinária Brasileira",
             "Pratos típicos da região Norte do Brasil, em específico do estado do Pará"
         ],
-        "priceRange": "LOW-UP",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -305,7 +305,7 @@
             "Jazz ao vivo toda Terça-Feira",
             "Mix de culinária Italiana com Brasileira"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -349,7 +349,7 @@
             "Culinária Espanhola",
             "Ambiente instagramável"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -393,7 +393,7 @@
             "Culinária Turca",
             "Relação Custo x Benefício excelente"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -437,7 +437,7 @@
             "Culinária Asiática",
             "Refrigerante de gengibre feito na casa"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -480,7 +480,7 @@
         "notes": [
             "🇱🇧 Culinária Libanesa"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -529,7 +529,7 @@
         "notes": [
             "Culinária Indiana"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -570,7 +570,7 @@
         "notes": [
             "Culinária Tailandêsa"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -611,7 +611,7 @@
         "notes": [
             "🇬🇷 Culinária Grega"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -655,7 +655,7 @@
             "🇯🇵 Culinária Japonesa",
             "Temático Hello Kitty"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -694,7 +694,7 @@
             "🇯🇵 Culinária Japonesa",
             "Temático Hello Kitty"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -733,7 +733,7 @@
             "Culinária Filipina",
             "Culinária Malásio"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -777,7 +777,7 @@
             "Você come sentado no tatame",
             "Rápida lotação, necessário chegar cedo"
         ],
-        "priceRange": "LOW-UP",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -820,7 +820,7 @@
             "Cozinha familiar",
             "Necessário agendar, a casa possui apenas 8 lugares"
         ],
-        "priceRange": "HIGH",
+        "priceRange": "EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -861,7 +861,7 @@
         "notes": [
             "Temático Idade Média"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -915,7 +915,7 @@
             "Gastronomia Molecular",
             "Temático"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -957,7 +957,7 @@
             "Culinária Americana",
             "Churrasco BBQ"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -998,7 +998,7 @@
         "notes": [
             "Temático bruxo e mágia"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1066,7 +1066,7 @@
             "Culinária Brasileira",
             "Culinária Baiana"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1107,7 +1107,7 @@
         "notes": [
             "Culinária Nórdica (Sueca, Norueguesa, Finlandesa)"
         ],
-        "priceRange": "MEDIUM-UP",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1149,7 +1149,7 @@
             "Culinária Argentina",
             "Parrillada"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1199,7 +1199,7 @@
             "🇵🇪 Culinária Peruana",
             "Rede de restaurantes de comida peruana com ambiente temático"
         ],
-        "priceRange": "LOW-UP",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1262,7 +1262,7 @@
         "notes": [
             "🇻🇳 Culinária Vietnamita"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1307,7 +1307,7 @@
         "notes": [
             "🌍 Culinária Africana"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -1360,7 +1360,7 @@
             "🇯🇵 Culinária Japonesa",
             "Experiência gastronômica"
         ],
-        "priceRange": "HIGH",
+        "priceRange": "EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -1405,7 +1405,7 @@
         "notes": [
             "🌍 Culinária Africana"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1458,7 +1458,7 @@
             "Ambiente temático de circo",
             "Opções de hambúrguer e milkshake"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1501,7 +1501,7 @@
             "Tem a cerveja do Jaspion (consultar disponibilidade)",
             "O local funciona como um Take Away/Delivery, possuindo apenas 1 mesa para consumo no local, então recomendo que compre e coma ali em frente mesmo da portinha."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1544,7 +1544,7 @@
             "Especialidade em baos (pão chinês no vapor) recheados com diversas opções inspiradas na culinária taiwanesa.",
             "Opções veganas disponíveis"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1585,7 +1585,7 @@
         "notes": [
             "Temático Medieval"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1627,7 +1627,7 @@
             "🇧🇷 Culinária Brasileira",
             "Especialidade em frutos do mar, com vastas opções de pratos com camarão."
         ],
-        "priceRange": "MEDIUM-UP",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1673,7 +1673,7 @@
             "Culinária Brasileira focada na região Norte do país",
             "Ambiente aconchegante e agradável"
         ],
-        "priceRange": "HIGH",
+        "priceRange": "EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -1716,7 +1716,7 @@
         "notes": [
             "Rodizio de sushi e comida japonesa"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1757,7 +1757,7 @@
         "notes": [
             "Culinária Colombiana"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1799,7 +1799,7 @@
             "O bar mais antigo de São Paulo",
             "Local com história e traços tradicionais"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1840,7 +1840,7 @@
         "notes": [
             "Culinária Boliviana"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1881,7 +1881,7 @@
         "notes": [
             "Culinária Grega"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1923,7 +1923,7 @@
             "Culinária Uruguaia",
             "Especialidade em frutos do mar e parrillada uruguaia"
         ],
-        "priceRange": "MEDIUM-UP",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -1965,7 +1965,7 @@
             "Tradicional bar de São Paulo conhecido pelos lanches e petiscos",
             "Fica aberto 24h"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -2006,7 +2006,7 @@
         "notes": [
             "Culinária Armênia"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -2048,7 +2048,7 @@
             "Culinária Sul-Coreana",
             "Tem karaoke (necessário verificar a disponibilidade das salas)"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,

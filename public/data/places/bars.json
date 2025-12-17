@@ -24,7 +24,7 @@
             "Ambiente sofisticado, ideal para quem aprecia coquetéis elaborados.",
             "Recomenda-se fazer reserva antecipada, especialmente nos finais de semana."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -67,7 +67,7 @@
             "Bar com fliperamas e jogos retrô.",
             "Ambiente descontraído, ideal para grupos de amigos."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -134,7 +134,7 @@
             "Bar com drinks temáticos diversos",
             "Recomenda-se fazer reserva antecipada, especialmente nos finais de semana."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -176,7 +176,7 @@
         "notes": [
             "Pub com temática inglesa, oferecendo uma variedade de cervejas importadas e pratos típicos do Reino Unido."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -223,7 +223,7 @@
         "notes": [
             "Bar com temática latina, oferecendo uma variedade de drinks e pratos típicos da América Latina, especialmente peruanos."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -265,7 +265,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -313,7 +313,7 @@
         "notes": [
             "Bar tradicional de São Paulo, com o famoso bolinho de carne"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -369,7 +369,7 @@
             "Bar localizado abaixo do Teatro Municipal de São Paulo, com ambiente histórico e aconchegante.",
             "Recomenda-se fazer reserva antecipada, especialmente nos finais de semana."
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -409,7 +409,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -454,7 +454,7 @@
             "Bar com karaokê",
             "As sextas, acontece um encontro de idiomas"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,

@@ -24,7 +24,7 @@
             "Balada sertaneja",
             "Há opções para comer no local"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -61,7 +61,7 @@
         "notes": [
             "Drinks variados da casa"
         ],
-        "priceRange": "MEDIUM-UP",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -99,7 +99,7 @@
             "Há opções para comer no local",
             "Drinks variados da casa"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -137,7 +137,7 @@
             "Há opções para comer no local",
             "Drinks variados da casa"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -177,7 +177,7 @@
             "Karaokê comum e privado",
             "Ambiente alternativo"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -217,7 +217,7 @@
             "Drinks variados da casa",
             "Ambiente alternativo"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -254,7 +254,7 @@
         "notes": [
             "Ambiente alternativo"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -289,7 +289,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -326,7 +326,7 @@
         "notes": [
             "Necessário checar os eventos no Instagram, pois sempre há variações"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -363,7 +363,7 @@
         "notes": [
             "Necessário checar os eventos no Instagram, pois sempre há variações de datas e locais de ocorrência"
         ],
-        "priceRange": "LOW",
+        "priceRange": "ECONOMIC",
         "addresses": [],
         "linkMenu": "",
         "linkWebsite": "https://www.sambadarosa.com.br/link-tree?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnukxE5-yheGafbbbfdviEXbTThpUYfneptVZgXgk8H_VNcd1le-_MHb08ziY_aem_DW968ksmC3MeTO28bNQmBQ",
@@ -395,7 +395,7 @@
         "notes": [
             "Forró de Quarta a Domingo"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
@@ -441,7 +441,7 @@
             "Ambiente com Karaokê",
             "Ambiente com pagode no rooftop"
         ],
-        "priceRange": "LOW-UP",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
@@ -486,7 +486,7 @@
         "notes": [
             "Ás Sextas-feiras acontece o encontro multicultural com o pessoal do Multilingo"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,

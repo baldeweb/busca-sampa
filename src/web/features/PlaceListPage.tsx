@@ -24,6 +24,7 @@ import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
 import icArrowDown from '@/assets/imgs/icons/ic_arrow_down.png';
+import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -245,7 +246,19 @@ export const PlaceListPage: React.FC = () => {
     const priceOptions = useMemo(() => {
         const s = new Set<string>();
         baseList.forEach(p => { if (p.priceRange) s.add(String(p.priceRange)); });
-        return Array.from(s).sort();
+        const arr = Array.from(s);
+        const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "EXPENSIVE"]; // requested sequence (FREE first)
+        return arr.sort((a, b) => {
+            const ia = ORDER.indexOf(a);
+            const ib = ORDER.indexOf(b);
+            if (ia !== -1 || ib !== -1) {
+                if (ia === -1 && ib === -1) return a.localeCompare(b);
+                if (ia === -1) return 1;
+                if (ib === -1) return -1;
+                return ia - ib;
+            }
+            return a.localeCompare(b);
+        });
     }, [baseList]);
 
     // Combined filters: environment, schedule and city
@@ -738,9 +751,16 @@ export const PlaceListPage: React.FC = () => {
                                         {showPriceMenu && (
                                             <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
                                                 <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!priceFilter ? 'font-semibold' : ''}`} onClick={() => { setPriceFilter(null); setShowPriceMenu(false); }}>{t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}</button>
-                                                {priceOptions.map(p => (
-                                                    <button key={p} type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === p ? 'font-semibold' : ''}`} onClick={() => { setPriceFilter(p); setShowPriceMenu(false); }}>{t(`priceRange.${p}`, { defaultValue: p })}</button>
-                                                ))}
+                                                                                                {priceOptions.map(p => (
+                                                                                                        <button
+                                                                                                            key={p}
+                                                                                                            type="button"
+                                                                                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === p ? 'font-semibold' : ''}`}
+                                                                                                            onClick={() => { setPriceFilter(p); setShowPriceMenu(false); }}
+                                                                                                        >
+                                                                                                            {getPriceRangeLabel(p as any)}
+                                                                                                        </button>
+                                                                                                ))}
                                             </div>
                                         )}
                                     </div>
