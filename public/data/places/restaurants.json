@@ -2066,5 +2066,68 @@
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/wabar_brasil/",
         "tags": ["KOREAN", "KARAOKE"]
+    },
+    {
+        "id": 47,
+        "name": "Rong He",
+        "type": "RESTAURANT",
+        "phones": [
+            {
+                "number": "1135599996",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "RONGHE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Chinesa"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Tutóia",
+                "number": "312",
+                "city": "São Paulo",
+                "neighborhood": "Paraíso",
+                "postalCode": "04007-001",
+                "isMainUnity": true,
+                "latitude": -23.5739155,
+                "longitude": -46.6538855
+            },
+            {
+                "id": 2,
+                "street": "Ibirapuera",
+                "number": "2343",
+                "city": "São Paulo",
+                "neighborhood": "Indianópolis",
+                "postalCode": "04029-200",
+                "isMainUnity": false,
+                "latitude": -23.6045611,
+                "longitude": -46.6630425
+            },
+            {
+                "id": 3,
+                "street": "da Glória",
+                "number": "622",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "01510-001",
+                "isMainUnity": false,
+                "latitude": -23.558835,
+                "longitude": -46.6341575
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://ronghe.com.br/",
+        "linkInstagram": "https://www.instagram.com/rongheoficial/",
+        "tags": ["CHINESE"]
     }
 ]

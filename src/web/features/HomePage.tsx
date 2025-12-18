@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { WhereIsTodayMenu } from "@/web/components/home/WhereIsTodayMenu";
 import type { MenuWhereIsTodayOption } from '@/core/domain/models/MenuWhereIsTodayOption';
 import { useTranslation } from 'react-i18next';
@@ -252,6 +252,33 @@ export function HomePage() {
     ? distanceInKm(userLocation.latitude, userLocation.longitude, MARCO_ZERO_LAT, MARCO_ZERO_LNG)
     : null;
   const isOutsideGreaterRegion = distanceFromMarco !== null ? distanceFromMarco > 40 : false;
+
+  // Ordena e prioriza bairros exibidos na grade principal
+  const topNeighborhoods = useMemo(() => {
+    const prefer = [
+      "Pinheiros",
+      "Vila Madalena",
+      "Bela Vista",
+      "Centro Histórico",
+      "Liberdade",
+      "Paraíso",
+      "Vila Olímpia",
+    ];
+    const norm = (s: string) => slugify(s || '').toLowerCase();
+    const used = new Set<number>();
+
+    const preferredMatches: Neighborhood[] = [];
+    prefer.forEach((name) => {
+      const match = neighborhoods.find((n) => norm(n.neighborhoodName) === norm(name));
+      if (match && !used.has(match.id)) {
+        used.add(match.id);
+        preferredMatches.push(match);
+      }
+    });
+
+    const remaining = neighborhoods.filter((n) => !used.has(n.id));
+    return [...preferredMatches, ...remaining].slice(0, 7);
+  }, [neighborhoods]);
   return (
     <div>
       {/* Seção: E aí, onde é hoje? */}
@@ -397,7 +424,7 @@ export function HomePage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-4">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
-            {neighborhoods.slice(0, 7).map((n) => (
+            {topNeighborhoods.map((n) => (
               <button
                 key={n.id}
                 type="button"

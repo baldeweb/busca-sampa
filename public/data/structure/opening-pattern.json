@@ -982,5 +982,15 @@
     "periods": [
       { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "20:00", "close": "22:00" }
     ]
+  },
+  {
+    "id": "RONGHE_DAYTIME",
+    "description": "Horários do Rong He",
+    "periods": [
+      { "days": ["MONDAY","TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:30", "close": "15:00" },
+      { "days": ["MONDAY","TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:00", "close": "22:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "11:30", "close": "16:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "18:00", "close": "22:00" }
+    ]
   }
 ]
