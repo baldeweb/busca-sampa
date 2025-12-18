@@ -13,7 +13,6 @@
             "patternId": "VILLACOUNTRY_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -52,7 +51,6 @@
             "patternId": "MEOW_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -89,7 +87,6 @@
             "patternId": "AMATA_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -127,7 +124,6 @@
             "patternId": "COFFEESHOP_CLUB_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -165,7 +161,6 @@
             "patternId": "TOKYO_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -207,7 +202,6 @@
             "patternId": "MILO_GARAGE_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -245,7 +239,6 @@
             "patternId": "NOLA_BAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -282,7 +275,6 @@
             "patternId": "THEHISTORY_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -317,7 +309,6 @@
             "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -354,7 +345,6 @@
             "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -386,7 +376,6 @@
             "patternId": "CANTODAEMA_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -430,7 +419,6 @@
             "patternId": "BAIXOPINHEIROS_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
@@ -477,7 +465,6 @@
             "patternId": "TAROT_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,

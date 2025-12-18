@@ -13,7 +13,6 @@
             "patternId": "SUBASTOR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -54,10 +53,9 @@
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BARIOBAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
@@ -124,7 +122,6 @@
             "patternId": "OLIVIOBAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
@@ -167,7 +164,6 @@
             "patternId": "REPUBLICPUB_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -214,7 +210,6 @@
                 { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
             ]
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -258,7 +253,6 @@
             "patternId": "MANIFESTOBAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -304,7 +298,6 @@
             "patternId": "BARDOLUIZFERNANDES_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -359,7 +352,6 @@
             "patternId": "BARDOSARCOS_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
@@ -402,7 +394,6 @@
             "patternId": "JAVARI_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -444,7 +435,6 @@
             "patternId": "CURTICABAR_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,

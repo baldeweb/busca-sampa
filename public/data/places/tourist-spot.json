@@ -99,7 +99,6 @@
             "patternId": "FRI_TO_SUN_1017_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -177,7 +176,6 @@
             "patternId": "MUSEU_ENERGIA_DAYTIME",
             "customOverrides": []
         },
-        "isFree": true,
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,

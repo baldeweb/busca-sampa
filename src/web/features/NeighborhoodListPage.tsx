@@ -60,7 +60,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const neighborhoodPlaces = useMemo(() => {
     if (!slug) return [];
     const candidates = slugAliases[slug] || [slug];
-    return allPlaces.filter((place) =>
+    const matches = allPlaces.filter((place) =>
       place.addresses?.some((addr) => {
         const raw = (addr.neighborhood || "").trim();
         if (!raw) return false;
@@ -72,10 +72,17 @@ export const NeighborhoodListPage: React.FC = () => {
           .normalize("NFD")
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/(^-|-$)/g, "")
-          .replace(/\u0300-\u036f/g, "");
+          .replace(/[\u0300-\u036f]/g, "");
         return candidates.includes(plain);
       })
     );
+    // Deduplicação defensiva por tipo+id, evitando entradas repetidas
+    const byKey = new Map<string, any>();
+    for (const p of matches) {
+      const key = `${String(p.type)}:${String(p.id)}`;
+      if (!byKey.has(key)) byKey.set(key, p);
+    }
+    return Array.from(byKey.values());
   }, [allPlaces, slug]);
 
   // Constrói lista de tipos presentes no bairro
@@ -124,7 +131,12 @@ export const NeighborhoodListPage: React.FC = () => {
 
   const priceOptions = useMemo(() => {
     const s = new Set<string>();
-    neighborhoodPlaces.forEach((p: any) => { if (p.priceRange) s.add(String(p.priceRange)); });
+    neighborhoodPlaces.forEach((p: any) => {
+      if (p?.priceRange) {
+        const clean = String(p.priceRange).trim().toUpperCase();
+        s.add(clean);
+      }
+    });
     const arr = Array.from(s);
     const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "EXPENSIVE"]; // requested sequence (FREE first)
     return arr.sort((a, b) => {
@@ -141,22 +153,49 @@ export const NeighborhoodListPage: React.FC = () => {
   }, [neighborhoodPlaces]);
 
   const filteredPlaces = useMemo(() => {
+    const norm = (s: any) => String(s || '').trim().toLowerCase();
+    
     const arr = neighborhoodPlaces.filter((p) => {
-      if (selectedType && p.type !== selectedType) return false;
+      // Filtro de tipo (case-insensitive, também considera tags)
+      if (selectedType) {
+        const sel = norm(selectedType);
+        const typeMatches = norm(p.type) === sel;
+        const tagMatches = Array.isArray(p.tags) && p.tags.some((tg: any) => norm(tg) === sel);
+        if (!typeMatches && !tagMatches) return false;
+      }
+      
+      // Filtro de agendamento
       if (scheduleFilter === 'required' && !p.shouldSchedule) return false;
       if (scheduleFilter === 'not-required' && p.shouldSchedule) return false;
-      if (priceFilter && String(p.priceRange || '').toLowerCase() !== String(priceFilter || '').toLowerCase()) return false;
+      
+      // Filtro de preço
+      if (priceFilter && norm(p.priceRange) !== norm(priceFilter)) return false;
+      
+      // Filtro de cidade
       if (selectedCity) {
-        const hasCity = (p.addresses || []).some((a: any) => String(a.city || '').toLowerCase() === selectedCity.toLowerCase());
+        const hasCity = (p.addresses || []).some((a: any) => norm(a.city) === norm(selectedCity));
         if (!hasCity) return false;
       }
+      
       return true;
     });
+    
     return arr;
-  }, [neighborhoodPlaces, selectedType, scheduleFilter, selectedCity]);
+  }, [neighborhoodPlaces, selectedType, scheduleFilter, selectedCity, priceFilter]);
+
+  // Apply 'open now' filter if requested
+  const filteredPlacesWithOpenNow = useMemo(() => {
+    if (!filterOpenNow) return filteredPlaces;
+    return filteredPlaces.filter(p => {
+      try {
+        const periods = getPeriodsForToday(p);
+        return isOpenNow(periods);
+      } catch (_) { return false; }
+    });
+  }, [filteredPlaces, filterOpenNow]);
 
   const sortedPlaces = useMemo(() => {
-    const arr = [...filteredPlaces];
+    const arr = [...filteredPlacesWithOpenNow];
     switch (order) {
       case 'name-asc':
         arr.sort((a, b) => a.name.localeCompare(b.name));
@@ -172,7 +211,7 @@ export const NeighborhoodListPage: React.FC = () => {
         break;
     }
     return arr;
-  }, [filteredPlaces, order]);
+  }, [filteredPlacesWithOpenNow, order]);
 
   // Helper: get raw periods for a relative day (0 = today, 1 = tomorrow)
   function getPeriodsForDay(place: any, dayOffset = 0): any[] {
@@ -498,7 +537,7 @@ export const NeighborhoodListPage: React.FC = () => {
               const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
                 return (
                 <div
-                  key={place.id}
+                  key={`${String(place.type)}:${String(place.id)}`}
                   className={`flex items-center ${rowBg} px-4 sm:px-6 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
                 >
                   <div className="w-1/3 px-0 py-6">{place.name}</div>

@@ -290,7 +290,7 @@ export const PlaceListPage: React.FC = () => {
 
             return true;
         });
-    }, [baseList, selectedEnv, scheduleFilter, cityFilter]);
+    }, [baseList, selectedEnv, scheduleFilter, cityFilter, priceFilter]);
 
     // Apply 'open now' filter if requested
     const filteredPlacesWithOpenNow = useMemo(() => {

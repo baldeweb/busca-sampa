@@ -8,7 +8,6 @@
             "patternId": "CASARAOAUGUSTA_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
@@ -19,7 +18,7 @@
             "Há um hotel anexo ao casarão para desfrutar de sua noite de prazer",
             "O local conta com chapelaria e bar"
         ],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "VERY-EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -52,7 +51,6 @@
             "patternId": "BAHAMAS_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -64,7 +62,7 @@
             "O local conta com chapelaria, bar, mesa de sinuca e um vestiário",
             "Há diversas opções de bebidas nacionais e importadas"
         ],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "VERY-EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
@@ -97,7 +95,6 @@
             "patternId": "SCANDALLO_DAYTIME",
             "customOverrides": []
         },
-        "isFree": false,
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
@@ -107,7 +104,7 @@
             "Há um valor de entrada",
             "Há diversas opções de bebidas nacionais e importadas"
         ],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "VERY-EXPENSIVE",
         "addresses": [
             {
                 "id": 1,
