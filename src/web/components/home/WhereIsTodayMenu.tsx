@@ -32,17 +32,44 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     // Map tag/title to project icons in `src/assets/imgs/icons`
     function resolveIcon(tags: string[]): ReactElement {
         const cls = "w-10 h-10 sm:w-14 sm:h-14 object-contain";
-        // detect 'Abrem hoje' by tags aggregate (first menu option has many tags)
-        if (tags.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" />;
-        if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" />;
-        if (tags.includes('RESTAURANTS') || tags.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" />;
-        if (tags.includes('BAR') || tags.includes('BARS')) return <img src={icBars} className={cls} alt="" />;
-        if (tags.includes('COFFEE') || tags.includes('COFFEES') || tags.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" />;
-        // specific icons
-        if (tags.includes('NIGHTLIFE')) return <img src={icNightlife} className={cls} alt="" />;
-        if (tags.includes('NATURE')) return <img src={icNature} className={cls} alt="" />;
-        if (tags.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" />;
-        return <img src={icFlagSP} className={cls} alt="" />;
+        // Todas as imagens do carrossel não podem ser arrastadas!
+        const imgProps = { draggable: false, onDragStart: (e: React.DragEvent) => e.preventDefault() };
+        if (tags.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('RESTAURANTS') || tags.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('BAR') || tags.includes('BARS')) return <img src={icBars} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('COFFEE') || tags.includes('COFFEES') || tags.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('NIGHTLIFE')) return <img src={icNightlife} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('NATURE')) return <img src={icNature} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" {...imgProps} />;
+        return <img src={icFlagSP} className={cls} alt="" {...imgProps} />;
+    }
+    // Drag-to-scroll (desktop):
+    const isDragging = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+
+    function handleMouseDown(e: React.MouseEvent<HTMLDivElement>) {
+        if (!listRef.current) return;
+        isDragging.current = true;
+        startX.current = e.pageX - listRef.current.offsetLeft;
+        scrollLeft.current = listRef.current.scrollLeft;
+        listRef.current.classList.add('cursor-grabbing');
+    }
+    function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+        if (!isDragging.current || !listRef.current) return;
+        e.preventDefault();
+        const x = e.pageX - listRef.current.offsetLeft;
+        const walk = (x - startX.current) * 1.2; // scroll speed
+        listRef.current.scrollLeft = scrollLeft.current - walk;
+    }
+    function handleMouseUp() {
+        isDragging.current = false;
+        if (listRef.current) listRef.current.classList.remove('cursor-grabbing');
+    }
+    function handleMouseLeave() {
+        isDragging.current = false;
+        if (listRef.current) listRef.current.classList.remove('cursor-grabbing');
     }
 
     const listRef = useRef<HTMLDivElement | null>(null);
@@ -73,11 +100,17 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                 <div className="relative mt-4">
                     <div
                         ref={listRef}
-                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 pl-4 pr-0 sm:px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth"
+                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 pl-4 pr-0 sm:px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth select-none cursor-grab"
                         role="listbox"
                         aria-label="Categorias"
                         tabIndex={0}
                         onKeyDown={handleKeyDown}
+                        onMouseDown={handleMouseDown}
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseLeave}
+                        // Não permite seleção de texto durante drag
+                        style={{ userSelect: isDragging.current ? 'none' : undefined }}
                     >
                         <style>{`.flex.flex-nowrap::-webkit-scrollbar{display:none}`}</style>
                         {/* Static option: 'Abrem hoje' (opens today) */}
