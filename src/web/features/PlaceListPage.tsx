@@ -105,6 +105,8 @@ export const PlaceListPage: React.FC = () => {
             const currentMinutes = now.getHours() * 60 + now.getMinutes();
             function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
             return allPlaces.filter(place => {
+                // Oculta itens de Casa de Prazeres nesta listagem
+                if ((place.type || '').toUpperCase() === 'PLEASURE') return false;
                 const periods = getPeriodsForToday(place);
                 if (!periods || periods.length === 0) return false;
                 // if currently open by existing helper, include
