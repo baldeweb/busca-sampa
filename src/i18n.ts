@@ -354,9 +354,11 @@ const resources = {
         environmentTitle: 'Tipo de ambiente:',
         hoursUnavailable: 'Horario no disponible',
         opensAtHeader: 'Abre a las...',
+        openNow: 'Abierto ahora',
+        opensTomorrowAt: 'Abre mañana a las {{time}}',
         // placeholder from pt
         // 'Abertura'
-        subtitleTemplate: 'Descubra {{article}} {{noun}} cerca de ti más cerca de ti :)',
+        subtitleTemplate: 'Descubre {{article}} {{noun}} de tu tipo, más cerca de ti :)',
         article: {
           RESTAURANT: 'el',
           BAR: 'el',
@@ -402,8 +404,11 @@ const resources = {
       },
       whereIsToday: { title: 'Alors, c’est où aujourd’hui?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Ouvrent aujourd\'hui' },
             placeList: {
+              environmentTitle: 'Type d’ambiance :',
               hoursUnavailable: 'Horaires indisponibles',
               opensAtHeader: 'Ouvre à...',
+              openNow: 'Ouvert maintenant',
+              opensTomorrowAt: 'Ouvre demain à {{time}}',
               // placeholder from pt: 'Abertura'
             },
       list: {
@@ -495,6 +500,8 @@ const resources = {
         environmentTitle: 'Тип окружения:',
         hoursUnavailable: 'Часы недоступны',
         opensAtHeader: 'Открывается в',
+        openNow: 'Открыто сейчас',
+        opensTomorrowAt: 'Откроется завтра в {{time}}',
         // placeholder from pt: 'Abertura'
         subtitleTemplate: 'Откройте {{article}} {{noun}} вашего типа, ближайший к вам :)',
         article: {
@@ -532,8 +539,10 @@ const resources = {
         environmentTitle: '环境类型：',
         hoursUnavailable: '营业时间不可用',
         opensAtHeader: '开门时间',
+        openNow: '正在营业',
+        opensTomorrowAt: '明天 {{time}} 开门',
         // placeholder from pt: 'Abertura'
-        subtitleTemplate: '发现离你最近的{{article}} {{noun}}，符合你的类型 :)',
+        subtitleTemplate: '发现离你最近、符合你类型的 {{article}} {{noun}} :)',
         article: {
           RESTAURANT: '餐厅',
           BAR: '酒吧',
@@ -720,7 +729,9 @@ const resources = {
       placeList: {
         environmentTitle: 'Environment type:',
         hoursUnavailable: 'Hours unavailable',
-        opensAtHeader: 'Abertura',
+        opensAtHeader: 'Opens at',
+        openNow: 'Open now',
+        opensTomorrowAt: 'Opens tomorrow at {{time}}',
         subtitleTemplate: 'Discover {{article}} {{noun}} of your type closest to you :)',
         article: {
           RESTAURANT: 'the',
@@ -824,10 +835,12 @@ const resources = {
       }
       ,
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
+        environmentTitle: 'Umgebungstyp:',
+        hoursUnavailable: 'Öffnungszeiten nicht verfügbar',
+        opensAtHeader: 'Öffnet um',
+        openNow: 'Jetzt geöffnet',
+        opensTomorrowAt: 'Öffnet morgen um {{time}}',
+        subtitleTemplate: 'Entdecken Sie {{article}} {{noun}} in Ihrer Nähe, passend zu Ihrem Stil :)'
       }
       ,
       about: {
@@ -917,6 +930,8 @@ const resources = {
         hoursUnavailable: '営業時間情報なし',
         opensAtHeader: '開店時間',
         // placeholder from pt: 'Abertura'
+        openNow: '営業中',
+        opensTomorrowAt: '明日 {{time}} に開店',
         subtitleTemplate: 'あなたのタイプに合った{{article}} {{noun}}で、最も近いものを見つけよう :)',
         article: {
           RESTAURANT: 'レストラン',
@@ -996,6 +1011,15 @@ const resources = {
         noPlaces: 'لم يتم العثور على أماكن.',
         version: 'الإصدار'
       },
+      filters: {
+        title: 'الفلاتر',
+        filter: 'الفلاتر',
+        subtitle: 'قم بضبط الفلاتر أدناه لتحسين النتائج',
+        sortingTitle: 'الترتيب',
+        hoursTitle: 'ساعات العمل',
+        openNowLabel: 'مفتوح الآن',
+        button: 'الفلاتر'
+      },
       list: { nameHeader: 'الاسم', neighborhoodHeader: 'الحي', typeHeader: 'النوع', orderNameAsc: 'الاسم بترتيب تصاعدي A-Z', orderNameDesc: 'الاسم بترتيب تنازلي Z-A', orderNeighborhoodAsc: 'الحي بترتيب تصاعدي A-Z', orderNeighborhoodDesc: 'الحي بترتيب تنازلي Z-A' },
       footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
       placeDetail: {
@@ -1039,10 +1063,12 @@ const resources = {
         PLEASURE: 'Casa de Prazeres'
       },
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
+        environmentTitle: 'نوع البيئة:',
+        hoursUnavailable: 'ساعات العمل غير متوفرة',
+        opensAtHeader: 'الافتتاح',
+        openNow: 'مفتوح الآن',
+        opensTomorrowAt: 'يفتح غدًا الساعة {{time}}',
+        subtitleTemplate: 'اكتشف أماكن رائعة في هذا الحي، باختيار إحدى الخيارات أدناه :)'
       },
       about: {
         title: 'من أنا؟',
@@ -1055,6 +1081,10 @@ const resources = {
         bio: 'مطور تطبيقات جوال لأكثر من 8 سنوات، متخصص في Android و iOS. شغوف بالتقنية والسفر والمطاعم واستكشاف كل زاوية في ساو باولو.'
       },
       nearbyMap: { title: 'خريطة القرب', noneInRadius: 'لا توجد نقاط ضمن النطاق الحالي.', pointsDisplayed: '{{count}} نقطة معروضة.', you: 'أنت' }
+      ,
+      neighborhoodList: {
+        intro: 'اكتشف أماكن رائعة في هذا الحي، باختيار إحدى الخيارات أدناه :)'
+      }
     }
   }
   ,
@@ -1132,10 +1162,12 @@ const resources = {
         PLEASURE: 'Casa de Prazeres'
       },
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
+        environmentTitle: 'Tipo di ambiente:',
+        hoursUnavailable: 'Orari non disponibili',
+        opensAtHeader: 'Apertura',
+        openNow: 'Aperto ora',
+        opensTomorrowAt: 'Apre domani alle {{time}}',
+        subtitleTemplate: 'Scopri {{article}} {{noun}} del tuo tipo più vicino a te :)'
       },
       about: {
         title: 'Chi sono?',
@@ -1223,10 +1255,12 @@ const resources = {
         PLEASURE: 'Casa de Prazeres'
       },
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
+        environmentTitle: 'Type omgeving:',
+        hoursUnavailable: 'Openingstijden niet beschikbaar',
+        opensAtHeader: 'Opening',
+        openNow: 'Nu open',
+        opensTomorrowAt: 'Opent morgen om {{time}}',
+        subtitleTemplate: 'Ontdek {{article}} {{noun}} van jouw type, dicht bij jou :)'
       },
       about: {
         title: 'Wie ben ik?',
@@ -1305,10 +1339,12 @@ const resources = {
         PLEASURE: 'Casa de Prazeres'
       },
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
+        environmentTitle: 'Mekan türü:',
+        hoursUnavailable: 'Çalışma saatleri mevcut değil',
+        opensAtHeader: 'Açılış saati',
+        openNow: 'Şu anda açık',
+        opensTomorrowAt: 'Yarın {{time}} saatinde açılır',
+        subtitleTemplate: 'Sana en yakın, tarzına uygun {{article}} {{noun}} keşfet :)'
       },
       about: {
         title: 'Ben kimim?',
@@ -1386,10 +1422,12 @@ const resources = {
         PLEASURE: 'Casa de Prazeres'
       },
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)'
+        environmentTitle: 'Typ miejsca:',
+        hoursUnavailable: 'Godziny otwarcia niedostępne',
+        opensAtHeader: 'Otwarcie',
+        openNow: 'Otwarte teraz',
+        opensTomorrowAt: 'Otwiera się jutro o {{time}}',
+        subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }

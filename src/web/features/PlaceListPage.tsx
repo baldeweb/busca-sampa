@@ -633,7 +633,7 @@ export const PlaceListPage: React.FC = () => {
                     <div className="flex flex-col justify-start gap-2">
                         {/* Heading: icon + label styled like 'Tipo de ambiente:' */}
                         <div className="flex items-center">
-                            <h3 className="font-bold text-lg text-black">{t('filters.filter', { defaultValue: 'Filtros' })}</h3>
+                            <h3 className="font-bold text-lg text-black">{t('filters.title', { defaultValue: 'Filtros' })}</h3>
                         </div>
                         {/* Botões abaixo do título (nova linha) */}
                         <div className="flex items-center gap-2">

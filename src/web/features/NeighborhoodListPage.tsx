@@ -404,7 +404,7 @@ export const NeighborhoodListPage: React.FC = () => {
           <div className="flex flex-col justify-start gap-2">
             {/* Heading: icon + label styled like in places */}
             <div className="flex items-center">
-              <h3 className="font-bold text-lg text-black">{t('filters.filter', { defaultValue: 'Filtros' })}</h3>
+              <h3 className="font-bold text-lg text-black">{t('filters.title', { defaultValue: 'Filtros' })}</h3>
             </div>
             {/* Buttons below the title */}
             <div className="flex items-center gap-2">
