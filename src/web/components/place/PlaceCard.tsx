@@ -52,6 +52,13 @@ export function PlaceCard({ place }: Props) {
                     <span className="text-gray-300">Preço:</span>{" "}
                     <span className="font-semibold">{price}</span>
                 </p>
+                {/* Horário especial CHECK_AVAILABILITY_DAYTIME */}
+                {(place.openingHours.patternId === 'CHECK_AVAILABILITY_DAYTIME') && (
+                    <p className="text-sm text-gray-200">
+                        {/* @ts-ignore */}
+                        {require('react-i18next').useTranslation().t('openingHours.checkAvailabilityLabel')}
+                    </p>
+                )}
                 {/* Estilo culinário */}
                 {style && (
                     <p className="text-xs text-gray-300">

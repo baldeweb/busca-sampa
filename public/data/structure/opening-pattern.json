@@ -10,7 +10,7 @@
     "id": "CHECK_AVAILABILITY_DAYTIME",
     "description": "Horários do Samba da Rosa, Sala São Paulo, Cineclube Cortina.",
     "periods": [
-      { "days": ["CHECK_AVAILABILITY"] }
+      { "days": ["CHECK_AVAILABILITY_DAYTIME"] }
     ]
   },
   {
@@ -402,7 +402,7 @@
     "id": "CINECLUB_CORTINA_DAYTIME",
     "description": "Horários do Cineclube Cortina.",
     "periods": [
-      { "days": ["CHECK_AVAILABILITY"] }
+      { "days": ["CHECK_AVAILABILITY_DAYTIME"] }
     ]
   },
   {

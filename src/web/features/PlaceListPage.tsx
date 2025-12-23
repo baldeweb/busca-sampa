@@ -793,7 +793,11 @@ export const PlaceListPage: React.FC = () => {
                                     <div className="w-1/3 px-2 py-6">{place.name}</div>
                                     <div className={'w-1/4 px-4 py-6'}>{getPlaceNeighborhood(place) || ((!place.addresses || place.addresses.length === 0) ? t('list.variablePlace') : "")}</div>
                                     <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
-                                        {getOpeningDisplayForToday(place)}
+                                        {(place.openingHours.patternId === 'CHECK_AVAILABILITY_DAYTIME') ? (
+                                            <span className="text-sm text-gray-200">
+                                                {t('openingHours.checkAvailabilityLabel')}
+                                            </span>
+                                        ) : getOpeningDisplayForToday(place)}
                                     </div>
                                     <div className="flex-1 flex justify-end">
                                         <ActionButton

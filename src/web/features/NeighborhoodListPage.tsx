@@ -542,7 +542,15 @@ export const NeighborhoodListPage: React.FC = () => {
                 >
                   <div className="w-1/3 px-0 py-6">{place.name}</div>
                   <div className="w-1/4 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
-                  <div className="w-1/6 px-4 py-6 text-sm text-gray-200">{getOpeningDisplayForToday(place)}</div>
+                  <div className="w-1/6 px-4 py-6 text-sm">
+                    {['CHECK_AVAILABILITY_DAYTIME'].includes(place.openingHours?.patternId)
+                      ? (
+                        <span className="text-sm text-gray-200">{t('openingHours.checkAvailabilityLabel')}</span>
+                      )
+                      : (
+                        <span className="text-gray-200">{getOpeningDisplayForToday(place)}</span>
+                    )}
+                  </div>
                   <div className="flex-1 flex justify-end">
                     <ActionButton
                       onClick={() => {

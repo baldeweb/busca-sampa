@@ -32,7 +32,7 @@ const dayLabels: Record<string, Record<string,string>> = {
   SUNDAY: { pt: "Domingo", en: "Sunday" },
   HOLIDAY: { pt: "Feriado", en: "Holiday" },
   EVERYDAY: { pt: "Todos os dias", en: "Everyday" },
-  CHECK_AVAILABILITY: { pt: "Consultar Instagram", en: "Check Instagram" }
+  CHECK_AVAILABILITY_DAYTIME: { pt: "Consultar Instagram", en: "Check Instagram" }
 };
 
 export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, customMessage }) => {

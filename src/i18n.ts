@@ -140,7 +140,8 @@ const resources = {
         notProvided: 'Horários não informados.',
         followButton: 'Seguir',
         checkAvailabilityMessage: 'Os horários variam de acordo com a disponibilidade. Verifique no site e na página do Instagram do local para entender como funciona',
-        alwaysOpenMessage: 'Este local fica aberto 24h'
+        alwaysOpenMessage: 'Este local fica aberto 24h',
+        checkAvailabilityLabel: 'Verificar disponibilidade'
       },
       footer: {
         home: 'Home',
@@ -321,7 +322,8 @@ const resources = {
         notProvided: 'Horarios no informados.',
         followButton: 'Seguir',
         checkAvailabilityMessage: 'Los horarios varían según la disponibilidad. Verifica en el sitio web y en la página de Instagram del lugar para entender cómo funciona',
-        alwaysOpenMessage: 'Este lugar está abierto las 24 horas'
+        alwaysOpenMessage: 'Este lugar está abierto las 24 horas',
+        checkAvailabilityLabel: 'Verificar disponibilidad'
       },
       footer: { home: 'Inicio', search: 'Buscar', about: 'Sobre' },
       distanceSelect: { title: 'Seleccione la distancia', searchButton: 'Buscar' },
@@ -453,7 +455,7 @@ const resources = {
         reportProblem: 'Signaler un problème',
         visitModalEnding: ''
       },
-      openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre', checkAvailabilityMessage: 'Les horaires varient selon la disponibilité. Consultez le site et la page Instagram du lieu pour en savoir plus', alwaysOpenMessage: 'Cet endroit est ouvert 24h/24' },
+      openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre', checkAvailabilityMessage: 'Les horaires varient selon la disponibilité. Consultez le site et la page Instagram du lieu pour en savoir plus', alwaysOpenMessage: 'Cet endroit est ouvert 24h/24', checkAvailabilityLabel: 'Vérifier la disponibilité' },
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
       distanceSelect: { title: 'Sélectionnez la distance', searchButton: 'Chercher' },
       nearbyMap: { title: 'Carte proximité', noneInRadius: 'Aucun point dans le rayon.', pointsDisplayed: '{{count}} point(s) affiché(s).', you: 'Vous' },
@@ -477,7 +479,7 @@ const resources = {
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', variablePlace: 'изменяемое место', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNameDesc: 'ИМЯ по убыванию Z-A', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z', orderNeighborhoodDesc: 'РАЙОН по убыванию Z-A' },
       filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь адрес и можно проложить маршрут кнопкой ниже', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
-      openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно' },
+      openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
       distanceSelect: { title: 'Выберите расстояние', searchButton: 'Искать' },
       nearbyMap: { title: 'Карта рядом', noneInRadius: 'Нет точек в текущем радиусе.', pointsDisplayed: '{{count}} точк(и).', you: 'Вы' },
@@ -551,7 +553,7 @@ const resources = {
           FREE: '免费活动'
         }
       },
-      openingHours: { title: '营业时间', closed: '关闭', range: '{{open}} - {{close}}', notProvided: '未提供时间。', followButton: '关注', checkAvailabilityMessage: '营业时间根据可用性而变化。请查看该地点的网站和 Instagram 页面以了解详情', alwaysOpenMessage: '此地点全天24小时开放' },
+      openingHours: { title: '营业时间', closed: '关闭', range: '{{open}} - {{close}}', notProvided: '未提供时间。', followButton: '关注', checkAvailabilityMessage: '营业时间根据可用性而变化。请查看该地点的网站和 Instagram 页面以了解详情', alwaysOpenMessage: '此地点全天24小时开放', checkAvailabilityLabel: '查看可用性' },
       footer: { home: '首页', search: '搜索', about: '关于' },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
       nearbyMap: { title: '附近地图', noneInRadius: '当前半径内无点。', pointsDisplayed: '显示 {{count}} 个点。', you: '你' },
@@ -665,7 +667,8 @@ const resources = {
         notProvided: 'Hours not provided.',
         followButton: 'Follow',
         checkAvailabilityMessage: "Hours vary according to availability. Check the place's website and Instagram page to understand how it works",
-        alwaysOpenMessage: 'This place is open 24 hours'
+        alwaysOpenMessage: 'This place is open 24 hours',
+        checkAvailabilityLabel: 'Check availability'
       },
       footer: {
         home: 'Home',
@@ -807,7 +810,7 @@ const resources = {
         reportProblem: 'Ein Problem melden',
         visitModalEnding: 'Ich werde Orte empfehlen, die Sie nicht besuchen sollten :)'
       },
-      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet' },
+      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
       whereIsToday: { title: 'Also, wo ist es heute?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
@@ -908,7 +911,7 @@ const resources = {
         menuButton: 'メニューを開く',
         notesTitle: '備考'
       },
-      openingHours: { checkAvailabilityMessage: '営業時間は都度変動します。詳細は施設のウェブサイトおよびInstagramページでご確認ください', alwaysOpenMessage: 'この場所は24時間営業です' },
+      openingHours: { checkAvailabilityMessage: '営業時間は都度変動します。詳細は施設のウェブサイトおよびInstagramページでご確認ください', alwaysOpenMessage: 'この場所は24時間営業です', checkAvailabilityLabel: '空き状況を確認' },
       placeList: {
         environmentTitle: '環境タイプ：',
         hoursUnavailable: '営業時間情報なし',
@@ -1023,7 +1026,7 @@ const resources = {
         menuButton: 'فتح القائمة',
         notesTitle: 'ملاحظات'
       },
-      openingHours: { checkAvailabilityMessage: 'تختلف أوقات العمل حسب التوفر. تحقق من موقع المكان وصفحة الإنستغرام لمعرفة التفاصيل', alwaysOpenMessage: 'هذا المكان مفتوح على مدار 24 ساعة' },
+      openingHours: { checkAvailabilityMessage: 'تختلف أوقات العمل حسب التوفر. تحقق من موقع المكان وصفحة الإنستغرام لمعرفة التفاصيل', alwaysOpenMessage: 'هذا المكان مفتوح على مدار 24 ساعة', checkAvailabilityLabel: 'تحقق من التوفر' },
       whereIsToday: { title: 'فأين نذهب اليوم؟', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'مطاعم',
@@ -1116,7 +1119,7 @@ const resources = {
         menuButton: 'Apri menu',
         notesTitle: 'Note'
       },
-      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24' },
+      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', checkAvailabilityLabel: 'Verifica disponibilità' },
       whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Ristoranti',
@@ -1207,7 +1210,7 @@ const resources = {
         menuButton: 'Open menu',
         notesTitle: 'Opmerkingen'
       },
-      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open' },
+      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', checkAvailabilityLabel: 'Beschikbaarheid controleren' },
       whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
@@ -1289,7 +1292,7 @@ const resources = {
         menuButton: 'Menüyü aç',
         notesTitle: 'Notlar'
       },
-      openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır' },
+      openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
       whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
@@ -1370,7 +1373,7 @@ const resources = {
         menuButton: 'Otwórz menu',
         notesTitle: 'Notatki'
       },
-      openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę' },
+      openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę', checkAvailabilityLabel: 'Sprawdź dostępność' },
       whereIsToday: { title: 'A więc, gdzie dziś?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restauracje',

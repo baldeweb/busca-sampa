@@ -1,6 +1,6 @@
 export type OpeningDay =
     | "EVERYDAY"
-    | "CHECK_AVAILABILITY"
+    | "CHECK_AVAILABILITY_DAYTIME"
     | "MONDAY"
     | "TUESDAY"
     | "WEDNESDAY"
