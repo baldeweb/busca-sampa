@@ -121,7 +121,7 @@ export function PlaceDetailPage() {
     switch ((typeKey || '').toUpperCase()) {
       case 'BAR':
         return <img src={icBars} alt="bar" className="w-10 h-10 object-contain mr-4" />;
-      case 'COFFEE':
+      case 'COFFEES':
         return <img src={icCoffee} alt="coffee" className="w-10 h-10 object-contain mr-4" />;
       case 'FREE':
         return <img src={icFree} alt="free" className="w-10 h-10 object-contain mr-4" />;
@@ -133,7 +133,7 @@ export function PlaceDetailPage() {
         return <img src={icTouristSpot} alt="tourist" className="w-10 h-10 object-contain mr-4" />;
       case 'PLEASURE':
         return <img src={icMouth} alt="pleasure" className="w-10 h-10 object-contain mr-4" />;
-      case 'RESTAURANT':
+      case 'RESTAURANTS':
       default:
         return <img src={icRestaurants} alt="restaurant" className="w-10 h-10 object-contain mr-4" />;
     }

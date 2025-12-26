@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "SubAstor (Bar do Cofre)",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "11943643170",
@@ -45,7 +45,7 @@
     {
         "id": 2,
         "name": "Bario Bar",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "11915167135",
@@ -111,7 +111,7 @@
     {
         "id": 3,
         "name": "Olivio Bar",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "1146802967",
@@ -153,7 +153,7 @@
     {
         "id": 4,
         "name": "Republic English Pub",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "11993141221",
@@ -196,7 +196,7 @@
     {
         "id": 5,
         "name": "Waska Restobar Latino",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "1138149899",
@@ -242,7 +242,7 @@
     {
         "id": 6,
         "name": "Manifesto Bar",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "1125745256",
@@ -283,7 +283,7 @@
     {
         "id": 7,
         "name": "Bar do Luiz Fernandes",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "1129763556",
@@ -341,7 +341,7 @@
     {
         "id": 8,
         "name": "Bar dos Arcos",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "1151480056",
@@ -383,7 +383,7 @@
     {
         "id": 9,
         "name": "Javari StrEat Park",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "1120811544",
@@ -424,7 +424,7 @@
     {
         "id": 10,
         "name": "Curtiça Bar",
-        "type": "BAR",
+        "type": "BARS",
         "phones": [
             {
                 "number": "11979825400",

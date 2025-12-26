@@ -1,7 +1,7 @@
 export type RecommendationType =
-    | "RESTAURANT"
-    | "BAR"
-    | "COFFEE"
+    | "RESTAURANTS"
+    | "BARS"
+    | "COFFEES"
     | "NIGHTLIFE"
     | "NATURE"
     | "TOURIST_SPOT"

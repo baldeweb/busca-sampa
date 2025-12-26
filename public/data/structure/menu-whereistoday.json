@@ -5,9 +5,9 @@
         "title": "Abrem\u200B hoje",
         "tags": [
             "RESTAURANTS",
-            "BAR",
+            "BARS",
             "NIGHTLIFE",
-            "COFFEE",
+            "COFFEES",
             "NATURE",
             "TOURIST_SPOT"
         ]
@@ -28,7 +28,7 @@
         "id": 4,
         "isEnabled": true,
         "title": "Bares",
-        "tags": [ "BAR" ]
+        "tags": [ "BARS" ]
     },
     {
         "id": 5,
@@ -40,7 +40,7 @@
         "id": 6,
         "isEnabled": true,
         "title": "Cafeterias",
-        "tags": [ "COFFEE" ]
+        "tags": [ "COFFEES" ]
     },
     {
         "id": 7,

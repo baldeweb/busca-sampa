@@ -37,8 +37,8 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         if (tags.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
         if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
         if (tags.includes('RESTAURANTS') || tags.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('BAR') || tags.includes('BARS')) return <img src={icBars} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('COFFEE') || tags.includes('COFFEES') || tags.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('BARS')) return <img src={icBars} className={cls} alt="" {...imgProps} />;
+        if (tags.includes('COFFEES') || tags.includes('COFFEES') || tags.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" {...imgProps} />;
         if (tags.includes('NIGHTLIFE')) return <img src={icNightlife} className={cls} alt="" {...imgProps} />;
         if (tags.includes('NATURE')) return <img src={icNature} className={cls} alt="" {...imgProps} />;
         if (tags.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" {...imgProps} />;
@@ -158,7 +158,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                 translatedRaw = t('placeType.FREE');
                             } else {
                                 // find first known tag and translate via getPlaceTypeLabel
-                                const known = ['RESTAURANTS', 'RESTAURANT', 'BAR', 'BARS', 'COFFEE', 'COFFEES', 'NIGHTLIFE', 'NATURE', 'TOURIST_SPOT'];
+                                const known = ['RESTAURANTS', 'RESTAURANT', 'BARS', 'COFFEES', 'NIGHTLIFE', 'NATURE', 'TOURIST_SPOT'];
                                 const found = option.tags?.find((tg) => known.includes(tg));
                                 translatedRaw = found ? getPlaceTypeLabel(found) : raw;
                             }

@@ -66,9 +66,9 @@ export const PlaceListPage: React.FC = () => {
 
     // Mapeia slug para tipo utilizado nos dados
     const typeMap: Record<string, string> = {
-        restaurants: "RESTAURANT",
-        bars: "BAR",
-        coffees: "COFFEE",
+        restaurants: "RESTAURANTS",
+        bars: "BARS",
+        coffees: "COFFEES",
         nightlife: "NIGHTLIFE",
         nature: "NATURE",
         "tourist-spot": "TOURIST_SPOT",
@@ -176,11 +176,11 @@ export const PlaceListPage: React.FC = () => {
     const headerIcon = (() => {
         switch (mappedType) {
             case 'FREE': return icFree;
-            case 'BAR': return icBars;
-            case 'COFFEE': return icCoffee;
+            case 'BARS': return icBars;
+            case 'COFFEES': return icCoffee;
             case 'NIGHTLIFE': return icNightlife;
             case 'NATURE': return icNature;
-            case 'RESTAURANT': return icRestaurants;
+            case 'RESTAURANTS': return icRestaurants;
             case 'TOURIST_SPOT': return icTouristSpot;
             case 'PLEASURE': return icMouth;
             case 'ABREM-HOJE':
@@ -803,9 +803,9 @@ export const PlaceListPage: React.FC = () => {
                                         <ActionButton
                                             onClick={() => {
                                                 const typeToSlug: Record<string, string> = {
-                                                    RESTAURANT: "restaurants",
-                                                    BAR: "bars",
-                                                    COFFEE: "coffees",
+                                                    RESTAURANTS: "restaurants",
+                                                    BARS: "bars",
+                                                    COFFEES: "coffees",
                                                     NIGHTLIFE: "nightlife",
                                                     NATURE: "nature",
                                                     TOURIST_SPOT: "tourist-spot",

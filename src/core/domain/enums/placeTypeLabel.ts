@@ -6,31 +6,21 @@ function normalizeTypeKey(type: string) {
 }
 
 const PLURAL_MAP: Record<string, string> = {
-  RESTAURANT: 'Restaurantes',
   RESTAURANTS: 'Restaurantes',
-  BAR: 'Bares',
   BARS: 'Bares',
   NIGHTLIFE: 'Vida Noturna',
-  COFFEE: 'Cafeterias',
   COFFEES: 'Cafeterias',
   NATURE: 'Natureza',
-  NATURES: 'Natureza',
   TOURIST_SPOT: 'Pontos Turísticos',
-  TOURIST_SPOTS: 'Pontos Turísticos',
 };
 
 const SINGULAR_MAP: Record<string, string> = {
-  RESTAURANT: 'Restaurante',
   RESTAURANTS: 'Restaurante',
-  BAR: 'Bar',
   BARS: 'Bar',
   NIGHTLIFE: 'Vida Noturna',
-  COFFEE: 'Cafeteria',
   COFFEES: 'Cafeteria',
   NATURE: 'Natureza',
-  NATURES: 'Natureza',
   TOURIST_SPOT: 'Ponto Turístico',
-  TOURIST_SPOTS: 'Ponto Turístico',
 };
 
 export function getPlaceTypeLabel(type: string): string {
@@ -47,10 +37,10 @@ export function getPlaceTypeLabel(type: string): string {
     // try explicit known mappings
     const fallbackMap: Record<string, string> = {
       RESTAURANTS: 'RESTAURANT',
-      COFFEES: 'COFFEE',
+      COFFEES: 'COFFEES',
       BARS: 'BAR',
-      TOURIST_SPOTS: 'TOURIST_SPOT',
-      NATURES: 'NATURE'
+      TOURIST_SPOT: 'TOURIST_SPOT',
+      NATURE: 'NATURE'
     };
     if (i18n && fallbackMap[key]) {
       const pathMap = `placeType.${fallbackMap[key]}`;
@@ -73,10 +63,10 @@ export function getPlaceTypeLabelSingular(type: string): string {
     }
     const fallbackMap: Record<string, string> = {
       RESTAURANTS: 'RESTAURANT',
-      COFFEES: 'COFFEE',
+      COFFEES: 'COFFEES',
       BARS: 'BAR',
-      TOURIST_SPOTS: 'TOURIST_SPOT',
-      NATURES: 'NATURE'
+      TOURIST_SPOT: 'TOURIST_SPOT',
+      NATURE: 'NATURE'
     };
     if (i18n && fallbackMap[key]) {
       const pathMap = `placeList.noun.${fallbackMap[key]}`;

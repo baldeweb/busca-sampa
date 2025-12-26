@@ -17,9 +17,9 @@ export function PlaceCard({ place }: Props) {
 
     function resolveCategoryKey(): string {
         switch (place.type) {
-            case "RESTAURANT": return "restaurants";
-            case "BAR": return "bars";
-            case "COFFEE": return "coffees";
+            case "RESTAURANTS": return "restaurants";
+            case "BARS": return "bars";
+            case "COFFEES": return "coffees";
             case "NATURE": return "nature";
             case "NIGHTLIFE": return "nightlife";
             case "TOURIST_SPOT": return "tourist-spot";

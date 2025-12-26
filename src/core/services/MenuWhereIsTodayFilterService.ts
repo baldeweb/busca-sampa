@@ -38,13 +38,13 @@ export class MenuWhereIsTodayFilterService {
     ): PlaceRecommendation[] {
         switch (tag) {
             case "RESTAURANTS":
-                return list.filter((item) => item.type === "RESTAURANT");
+                return list.filter((item) => item.type === "RESTAURANTS");
 
-            case "BAR":
-                return list.filter((item) => item.type === "BAR");
+            case "BARS":
+                return list.filter((item) => item.type === "BARS");
 
-            case "COFFEE":
-                return list.filter((item) => item.type === "COFFEE");
+            case "COFFEES":
+                return list.filter((item) => item.type === "COFFEES");
 
             case "NIGHTLIFE":
                 return list.filter((item) => item.type === "NIGHTLIFE");

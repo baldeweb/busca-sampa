@@ -555,9 +555,9 @@ export const NeighborhoodListPage: React.FC = () => {
                     <ActionButton
                       onClick={() => {
                         const typeMap: Record<string,string> = {
-                          RESTAURANT: "restaurants",
-                          BAR: "bars",
-                          COFFEE: "coffees",
+                          RESTAURANTS: "restaurants",
+                          BARS: "bars",
+                          COFFEES: "coffees",
                           NIGHTLIFE: "nightlife",
                           NATURE: "nature",
                           TOURIST_SPOT: "tourist-spot",

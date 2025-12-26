@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Barskiy Dom",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11942409445",
@@ -48,7 +48,7 @@
     {
         "id": 2,
         "name": "Sabores de Mi Tierra",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11955898944",
@@ -91,7 +91,7 @@
     {
         "id": 3,
         "name": "Komah Restaurante",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11933386182",
@@ -134,7 +134,7 @@
     {
         "id": 4,
         "name": "McDonald's - Méqui 1000",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
@@ -174,7 +174,7 @@
     {
         "id": 5,
         "name": "Cho Sun Gal Bi",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126733337",
@@ -240,7 +240,7 @@
     {
         "id": 6,
         "name": "Quintal Paraense",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11986181944",
@@ -284,7 +284,7 @@
     {
         "id": 7,
         "name": "Fôrno",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11981957207",
@@ -329,7 +329,7 @@
     {
         "id": 8,
         "name": "Carmen La Loca",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135399724",
@@ -373,7 +373,7 @@
     {
         "id": 9,
         "name": "Casa Turca",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11998431775",
@@ -417,7 +417,7 @@
     {
         "id": 10,
         "name": "Jui Restaurante",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1121931086",
@@ -461,7 +461,7 @@
     {
         "id": 11,
         "name": "Manish",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130851658",
@@ -502,7 +502,7 @@
     {
         "id": 12,
         "name": "Tandoor",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1138859470",
@@ -551,7 +551,7 @@
     {
         "id": 13,
         "name": "Thaithai Brasil",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1123072503",
@@ -592,7 +592,7 @@
     {
         "id": 14,
         "name": "Kouzina",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1129350888",
@@ -633,7 +633,7 @@
     {
         "id": 15,
         "name": "Eat Asia Thomaz Gonzaga",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11943243830",
@@ -677,7 +677,7 @@
     {
         "id": 16,
         "name": "Eat Asia 2D",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
             "patternId": "EAT_ASIA_2D_DAYTIME",
@@ -716,7 +716,7 @@
     {
         "id": 17,
         "name": "Filipinas Oriental",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
             "patternId": "FILIPINAS_ORIENTAL_DAYTIME",
@@ -755,7 +755,7 @@
     {
         "id": 18,
         "name": "Izakaya Issa",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132088819.",
@@ -799,7 +799,7 @@
     {
         "id": 19,
         "name": "Amigo do Rei (Iraniano/Persa)",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11981948190",
@@ -842,7 +842,7 @@
     {
         "id": 20,
         "name": "Beco Hexagonal",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126672397",
@@ -894,7 +894,7 @@
     {
         "id": 21,
         "name": "'O' Burguer",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11964896612",
@@ -937,7 +937,7 @@
     {
         "id": 22,
         "name": "Cadillac BBQ",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1123090484",
@@ -979,7 +979,7 @@
     {
         "id": 23,
         "name": "Vassoura Quebrada",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11990276568",
@@ -1042,7 +1042,7 @@
     {
         "id": 24,
         "name": "Consulado da Bahia",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130853873",
@@ -1088,7 +1088,7 @@
     {
         "id": 25,
         "name": "Escandinavo",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11951444486",
@@ -1129,7 +1129,7 @@
     {
         "id": 26,
         "name": "Grindhouse Braserito",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11948846626",
@@ -1171,7 +1171,7 @@
     {
         "id": 27,
         "name": "Rinconcito Peruano",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130620093",
@@ -1243,7 +1243,7 @@
     {
         "id": 28,
         "name": "Bia Hoi SP",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1131594897",
@@ -1284,7 +1284,7 @@
     {
         "id": 29,
         "name": "Biyou'Z",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132216806",
@@ -1340,7 +1340,7 @@
     {
         "id": 30,
         "name": "Sushi Hiroshi",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1129787128",
@@ -1382,7 +1382,7 @@
     {
         "id": 31,
         "name": "Mama Africa La Bonne Bouffe",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135827438",
@@ -1438,7 +1438,7 @@
     {
         "id": 32,
         "name": "The Circus Bar e Kitchen",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132134826",
@@ -1480,7 +1480,7 @@
     {
         "id": 33,
         "name": "Bao N Sando",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11998217777",
@@ -1523,7 +1523,7 @@
     {
         "id": 34,
         "name": "Mapu Baos e comidinhas",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1133848535",
@@ -1566,7 +1566,7 @@
     {
         "id": 35,
         "name": "Taverna Medieval",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1141142816",
@@ -1607,7 +1607,7 @@
     {
         "id": 36,
         "name": "Camarões Restaurante",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135088080",
@@ -1649,7 +1649,7 @@
     {
         "id": 37,
         "name": "Casa do Saulo",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11916870039",
@@ -1695,7 +1695,7 @@
     {
         "id": 38,
         "name": "Sushi Ishii",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1122731760",
@@ -1738,7 +1738,7 @@
     {
         "id": 39,
         "name": "Macondo Raízes Colombianas",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11986164184",
@@ -1779,7 +1779,7 @@
     {
         "id": 40,
         "name": "Bar Guanabara",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132287400",
@@ -1821,7 +1821,7 @@
     {
         "id": 41,
         "name": "Restaurante Illimani",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11917068727",
@@ -1862,7 +1862,7 @@
     {
         "id": 42,
         "name": "Mii Rooftop",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126740843",
@@ -1903,7 +1903,7 @@
     {
         "id": 43,
         "name": "URU Mar y Parrilla",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1123089499",
@@ -1945,7 +1945,7 @@
     {
         "id": 44,
         "name": "Bar e Lanches Estadão",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132577121",
@@ -1987,7 +1987,7 @@
     {
         "id": 45,
         "name": "Arais do Carlinhos",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126740843",
@@ -2028,7 +2028,7 @@
     {
         "id": 46,
         "name": "Wa Bar",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11996114331",
@@ -2070,7 +2070,7 @@
     {
         "id": 47,
         "name": "Rong He",
-        "type": "RESTAURANT",
+        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135599996",

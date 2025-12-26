@@ -182,8 +182,8 @@ const resources = {
       },
       placeType: {
         RESTAURANT: 'Restaurantes',
-        BAR: 'Bares',
-        COFFEE: 'Cafeterias',
+        BARS: 'Bares',
+        COFFEES: 'Cafeterias',
         NIGHTLIFE: 'Vida Noturna',
         NATURE: 'Natureza',
         TOURIST_SPOT: 'Pontos\u200B Turísticos',
@@ -202,8 +202,8 @@ const resources = {
         subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
         article: {
           RESTAURANT: 'o',
-          BAR: 'o',
-          COFFEE: 'a',
+          BARS: 'o',
+          COFFEES: 'a',
           NIGHTLIFE: 'a',
           NATURE: 'a',
           TOURIST_SPOT: 'o',
@@ -212,8 +212,8 @@ const resources = {
         },
         noun: {
           RESTAURANT: 'restaurante',
-          BAR: 'bar',
-          COFFEE: 'cafeteria',
+          BARS: 'bar',
+          COFFEES: 'cafeteria',
           NIGHTLIFE: 'vida noturna',
           NATURE: 'natureza',
           TOURIST_SPOT: 'ponto turístico',
@@ -347,7 +347,7 @@ const resources = {
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
-        RESTAURANT: 'Restaurantes', BAR: 'Bares', COFFEE: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
+        RESTAURANT: 'Restaurantes', BARS: 'Bares', COFFEES: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
       }
       ,
       placeList: {
@@ -361,8 +361,8 @@ const resources = {
         subtitleTemplate: 'Descubre {{article}} {{noun}} de tu tipo, más cerca de ti :)',
         article: {
           RESTAURANT: 'el',
-          BAR: 'el',
-          COFFEE: 'la',
+          BARS: 'el',
+          COFFEES: 'la',
           NIGHTLIFE: 'la',
           NATURE: 'la',
           TOURIST_SPOT: 'el',
@@ -370,8 +370,8 @@ const resources = {
         },
         noun: {
           RESTAURANT: 'restaurante',
-          BAR: 'bar',
-          COFFEE: 'cafetería',
+          BARS: 'bar',
+          COFFEES: 'cafetería',
           NIGHTLIFE: 'vida nocturna',
           NATURE: 'naturaleza',
           TOURIST_SPOT: 'lugar turístico',
@@ -472,7 +472,7 @@ const resources = {
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
       aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
-      placeType: { RESTAURANT: 'Restaurants', BAR: 'Bars', COFFEE: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
     }
   },
   ru: {
@@ -506,8 +506,8 @@ const resources = {
         subtitleTemplate: 'Откройте {{article}} {{noun}} вашего типа, ближайший к вам :)',
         article: {
           RESTAURANT: 'ресторан',
-          BAR: 'бар',
-          COFFEE: 'кофейня',
+          BARS: 'бар',
+          COFFEES: 'кофейня',
           NIGHTLIFE: 'ночной клуб',
           NATURE: 'парк',
           TOURIST_SPOT: 'достопримечательность',
@@ -515,15 +515,15 @@ const resources = {
         },
         noun: {
           RESTAURANT: 'ресторан',
-          BAR: 'бар',
-          COFFEE: 'кофейня',
+          BARS: 'бар',
+          COFFEES: 'кофейня',
           NIGHTLIFE: 'место для вечеринок',
           NATURE: 'место на природе',
           TOURIST_SPOT: 'туристическое место',
           FREE: 'бесплатное событие'
         }
       },
-      placeType: { RESTAURANT: 'Рестораны', BAR: 'Бары', COFFEE: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: 'Рестораны', BARS: 'Бары', COFFEES: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно', PLEASURE: 'Casa de Prazeres' }
     }
   },
   zh: {
@@ -545,8 +545,8 @@ const resources = {
         subtitleTemplate: '发现离你最近、符合你类型的 {{article}} {{noun}} :)',
         article: {
           RESTAURANT: '餐厅',
-          BAR: '酒吧',
-          COFFEE: '咖啡店',
+          BARS: '酒吧',
+          COFFEES: '咖啡店',
           NIGHTLIFE: '夜生活场所',
           NATURE: '自然景点',
           TOURIST_SPOT: '旅游景点',
@@ -554,8 +554,8 @@ const resources = {
         },
         noun: {
           RESTAURANT: '餐厅',
-          BAR: '酒吧',
-          COFFEE: '咖啡店',
+          BARS: '酒吧',
+          COFFEES: '咖啡店',
           NIGHTLIFE: '娱乐场所',
           NATURE: '自然场所',
           TOURIST_SPOT: '景点',
@@ -574,7 +574,7 @@ const resources = {
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
       aboutMe: { authorTag: 'Role Paulista 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
       howToRecommend: { title: '如何推荐一个地点？' },
-      placeType: { RESTAURANT: '餐厅', BAR: '酒吧', COFFEE: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
     }
   },
   en: {
@@ -718,8 +718,8 @@ const resources = {
       },
       placeType: {
         RESTAURANT: 'Restaurants',
-        BAR: 'Bars',
-        COFFEE: 'Coffee Shops',
+        BARS: 'Bars',
+        COFFEES: 'Coffee Shops',
         NIGHTLIFE: 'Nightlife',
         NATURE: 'Nature',
         TOURIST_SPOT: 'Tourist Spots',
@@ -735,8 +735,8 @@ const resources = {
         subtitleTemplate: 'Discover {{article}} {{noun}} of your type closest to you :)',
         article: {
           RESTAURANT: 'the',
-          BAR: 'the',
-          COFFEE: 'the',
+          BARS: 'the',
+          COFFEES: 'the',
           NIGHTLIFE: 'the',
           NATURE: 'the',
           TOURIST_SPOT: 'the',
@@ -744,8 +744,8 @@ const resources = {
         },
         noun: {
           RESTAURANT: 'restaurant',
-          BAR: 'bar',
-          COFFEE: 'coffee shop',
+          BARS: 'bar',
+          COFFEES: 'coffee shop',
           NIGHTLIFE: 'nightlife spot',
           NATURE: 'nature spot',
           TOURIST_SPOT: 'tourist spot',
@@ -826,8 +826,8 @@ const resources = {
       whereIsToday: { title: 'Also, wo ist es heute?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
-        BAR: 'Bars',
-        COFFEE: 'Cafés',
+        BARS: 'Bars',
+        COFFEES: 'Cafés',
         NIGHTLIFE: 'Nachtleben',
         NATURE: 'Natur',
         TOURIST_SPOT: 'Sehenswürdigkeiten',
@@ -936,8 +936,8 @@ const resources = {
         subtitleTemplate: 'あなたのタイプに合った{{article}} {{noun}}で、最も近いものを見つけよう :)',
         article: {
           RESTAURANT: 'レストラン',
-          BAR: 'バー',
-          COFFEE: 'カフェ',
+          BARS: 'バー',
+          COFFEES: 'カフェ',
           NIGHTLIFE: 'ナイトライフ',
           NATURE: '自然',
           TOURIST_SPOT: '観光地',
@@ -945,8 +945,8 @@ const resources = {
         },
         noun: {
           RESTAURANT: 'レストラン',
-          BAR: 'バー',
-          COFFEE: 'カフェ',
+          BARS: 'バー',
+          COFFEES: 'カフェ',
           NIGHTLIFE: 'ナイトスポット',
           NATURE: '自然スポット',
           TOURIST_SPOT: '観光スポット',
@@ -956,8 +956,8 @@ const resources = {
       whereIsToday: { title: 'さて、今日はどこに行く？', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'レストラン',
-        BAR: 'バー',
-        COFFEE: 'カフェ',
+        BARS: 'バー',
+        COFFEES: 'カフェ',
         NIGHTLIFE: 'ナイトライフ',
         NATURE: '自然',
         TOURIST_SPOT: '観光地',
@@ -1056,8 +1056,8 @@ const resources = {
       whereIsToday: { title: 'فأين نذهب اليوم؟', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'مطاعم',
-        BAR: 'بارات',
-        COFFEE: 'مقاهي',
+        BARS: 'بارات',
+        COFFEES: 'مقاهي',
         NIGHTLIFE: 'الحياة الليلية',
         NATURE: 'طبيعة',
         TOURIST_SPOT: 'معالم سياحية',
@@ -1156,8 +1156,8 @@ const resources = {
       whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Ristoranti',
-        BAR: 'Bar',
-        COFFEE: 'Caffetterie',
+        BARS: 'Bar',
+        COFFEES: 'Caffetterie',
         NIGHTLIFE: 'Vita notturna',
         NATURE: 'Natura',
         TOURIST_SPOT: 'Luoghi turistici',
@@ -1250,8 +1250,8 @@ const resources = {
       whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
-        BAR: 'Bars',
-        COFFEE: 'Koffiebars',
+        BARS: 'Bars',
+        COFFEES: 'Koffiebars',
         NIGHTLIFE: 'Uitgaansleven',
         NATURE: 'Natuur',
         TOURIST_SPOT: 'Toeristische bezienswaardigheden',
@@ -1335,8 +1335,8 @@ const resources = {
       whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
-        BAR: 'Barlar',
-        COFFEE: 'Kafeler',
+        BARS: 'Barlar',
+        COFFEES: 'Kafeler',
         NIGHTLIFE: 'Gece hayatı',
         NATURE: 'Doğa',
         TOURIST_SPOT: 'Turistik noktalar',
@@ -1419,8 +1419,8 @@ const resources = {
       whereIsToday: { title: 'A więc, gdzie dziś?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
       placeType: {
         RESTAURANT: 'Restauracje',
-        BAR: 'Bary',
-        COFFEE: 'Kawiarnie',
+        BARS: 'Bary',
+        COFFEES: 'Kawiarnie',
         NIGHTLIFE: 'Życie nocne',
         NATURE: 'Przyroda',
         TOURIST_SPOT: 'Atrakcje turystyczne',

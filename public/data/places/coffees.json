@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Kofi & Co",
-        "type": "COFFEE",
+        "type": "COFFEES",
         "phones": [
             {
                 "number": "1136244838",
@@ -46,7 +46,7 @@
     {
         "id": 2,
         "name": "Griffinn Café e Afins",
-        "type": "COFFEE",
+        "type": "COFFEES",
         "phones": [
             {
                 "number": "11913586058",
@@ -89,7 +89,7 @@
     {
         "id": 3,
         "name": "Café Floresta",
-        "type": "COFFEE",
+        "type": "COFFEES",
         "phones": [
             {
                 "number": "1132598416",
