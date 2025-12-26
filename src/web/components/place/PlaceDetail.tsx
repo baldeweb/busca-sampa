@@ -75,6 +75,30 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
         if (Math.abs(lng) > 180) return false;
         return true;
     };
+
+    const formatPhoneForDisplay = (rawNumber: string) => {
+        const rawTrimmed = String(rawNumber || '').trim();
+        if (!rawTrimmed) return '';
+
+        const digits = rawTrimmed.replace(/\D/g, '');
+        if (digits.startsWith('11') || digits.startsWith('12')) {
+            const ddd = digits.slice(0, 2);
+            const rest = digits.slice(2);
+
+            if (rest.length === 9) {
+                return `(${ddd}) ${rest.slice(0, 5)}-${rest.slice(5)}`;
+            }
+            if (rest.length === 8) {
+                return `(${ddd}) ${rest.slice(0, 4)}-${rest.slice(4)}`;
+            }
+
+            // If it starts with 11/12 but doesn't match 8/9 digits, at least apply the parentheses rule.
+            return `(${ddd}) ${rest}`;
+        }
+
+        // Fallback: keep exactly what comes from JSON.
+        return rawTrimmed;
+    };
     const OPEN_UBER_MAP: Record<string, string> = {
         pt: 'Abrir no Uber',
         es: 'Abrir en Uber',
@@ -323,11 +347,17 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     const clean = raw.replace(/[^0-9+]/g, '');
                                                     const telHref = `tel:${clean}`;
                                                     const waHref = `https://wa.me/${clean.replace(/^\+/, '')}`;
+                                                    const phoneDisplay = formatPhoneForDisplay(raw);
                                                     return (
                                                         <div key={idx} className="flex items-center gap-2">
                                                             <a href={telHref} aria-label={`call-${idx}`} className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm">
                                                                 <FaPhone className="mr-2" />Ligar
                                                             </a>
+                                                            {phoneDisplay && (
+                                                                <span className="text-xs sm:text-sm text-gray-200 font-semibold">
+                                                                    {phoneDisplay}
+                                                                </span>
+                                                            )}
                                                             {p.isWhatsApp && (
                                                                 <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label={`whatsapp-${idx}`} className="inline-flex items-center bg-green-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm">
                                                                     <FaWhatsapp className="mr-2" />WhatsApp

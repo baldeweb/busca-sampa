@@ -66,7 +66,9 @@ export function getEnvironmentLabel(tag: string): string {
     SHOP_LOCATION: "Compras",
     OPENED_SPACE: "Espaço Aberto",
     MONUMENT: "Monumento",
-    FUN: "Diversão",
+    SINGLE_ACTIVITY: "Individual",
+    FAMILY_ACTIVITY: "Família",
+    GROUP_ACTIVITY: "Grupos",
     OTHERS: "Outros",
   };
   return map[tag] || tag;

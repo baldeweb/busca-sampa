@@ -1565,42 +1565,6 @@
         "tags": ["OPENED_SPACE", "MONUMENT"]
     },
     {
-        "id": 45,
-        "name": "Roda Gigante Roda Rico",
-        "type": "TOURIST_SPOT",
-        "phones": [],
-        "openingHours": {
-            "patternId": "RODARICO_DAYTIME",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [
-            "Localizado dentro do Parque Villa-Lobos"
-        ],
-        "priceRange": "MODERATE",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "Queiroz Filho",
-                "number": "s/n",
-                "city": "São Paulo",
-                "neighborhood": "Vila Leopoldina",
-                "postalCode": "05319-000",
-                "isMainUnity": true,
-                "latitude": -23.5464795,
-                "longitude": -46.7334527
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "http://www.rodarico.com.br/",
-        "linkInstagram": "https://www.instagram.com/rodarico/",
-        "tags": ["FUN"]
-    },
-    {
         "id": 46,
         "name": "Instituto Tomie Ohtake",
         "type": "TOURIST_SPOT",

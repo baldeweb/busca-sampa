@@ -53,7 +53,7 @@
         "linkMenu": "",
         "linkWebsite": "http://www.rollerjam.com.br/",
         "linkInstagram": "https://www.instagram.com/rollerjammoema/",
-        "tags": []
+        "tags": [ "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY" ]
     },
     {
         "id": 2,
@@ -94,7 +94,7 @@
         "linkMenu": "",
         "linkWebsite": "https://www.arenapixel.com.br/",
         "linkInstagram": "https://www.instagram.com/arenapixel/",
-        "tags": []
+        "tags": [ "FAMILY_ACTIVITY", "GROUP_ACTIVITY"]
     },
     {
         "id": 3,
@@ -158,6 +158,42 @@
         "linkMenu": "https://www.dguests.com.br/cardapio/Bario_Bar",
         "linkWebsite": "https://www.bario.com.br/",
         "linkInstagram": "https://www.instagram.com/bario_bar",
-        "tags": [ "THEMED" ]
+        "tags": [ "THEMED", "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY" ]
+    },
+    {
+        "id": 45,
+        "name": "Roda Gigante Roda Rico",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "RODARICO_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Localizado dentro do Parque Villa-Lobos"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Queiroz Filho",
+                "number": "s/n",
+                "city": "São Paulo",
+                "neighborhood": "Vila Leopoldina",
+                "postalCode": "05319-000",
+                "isMainUnity": true,
+                "latitude": -23.5464795,
+                "longitude": -46.7334527
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.rodarico.com.br/",
+        "linkInstagram": "https://www.instagram.com/rodarico/",
+        "tags": [ "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY"]
     }
 ]
