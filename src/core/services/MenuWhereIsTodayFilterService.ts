@@ -55,6 +55,12 @@ export class MenuWhereIsTodayFilterService {
             case "TOURIST_SPOT":
                 return list.filter((item) => item.type === "TOURIST_SPOT");
 
+            case "FORFUN":
+                return list.filter((item) => item.type === "FORFUN");
+
+            case "STORES":
+                return list.filter((item) => item.type === "STORES");
+
             case "FREE":
                 return list.filter((item) => item.priceRange === "FREE");
 

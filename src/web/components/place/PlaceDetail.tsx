@@ -208,7 +208,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 </div>
                                 <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
-                                <div className="mt-8 mb-4">
+                                <div className="mt-8 mb-4 space-y-6">
                                         {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
                                         addresses.map((addr: any, idx: number) => {
                                             const neighborhoodText = addr?.neighborhood || '';

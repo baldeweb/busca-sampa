@@ -9,7 +9,9 @@
             "NIGHTLIFE",
             "COFFEES",
             "NATURE",
-            "TOURIST_SPOT"
+            "TOURIST_SPOT",
+            "FORFUN",
+            "STORES"
         ]
     },
     {
@@ -53,5 +55,17 @@
         "isEnabled": true,
         "title": "Pontos\u200B Turísticos",
         "tags": [ "TOURIST_SPOT" ]
+    },
+    {
+        "id": 9,
+        "isEnabled": true,
+        "title": "Diversão",
+        "tags": [ "FORFUN" ]
+    },
+    {
+        "id": 10,
+        "isEnabled": true,
+        "title": "Lojas",
+        "tags": [ "STORES" ]
     }
 ]

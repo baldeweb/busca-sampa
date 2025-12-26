@@ -561,6 +561,8 @@ export const NeighborhoodListPage: React.FC = () => {
                           NIGHTLIFE: "nightlife",
                           NATURE: "nature",
                           TOURIST_SPOT: "tourist-spot",
+                          FORFUN: "forfun",
+                          STORES: "stores",
                         };
                         const cat = typeMap[place.type] || "restaurants";
                         // navigate to friendly slug URL

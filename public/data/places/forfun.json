@@ -1,0 +1,163 @@
+[
+    {
+        "id": 1,
+        "name": "Roller Jam",
+        "type": "FORFUN",
+        "phones": [
+            {
+                "number": "1139690931",
+                "isWhatsApp": false
+            },
+            {
+                "number": "1145610090",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "ROLLERJAM_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Rinque de patinação"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alameda dos Nhambiquaras",
+                "number": "1980",
+                "city": "São Paulo",
+                "neighborhood": "Moema",
+                "postalCode": "04090-004",
+                "isMainUnity": true,
+                "latitude": -23.6141937,
+                "longitude": -46.6690055
+            },
+            {
+                "id": 1,
+                "street": "Fernando Falcão",
+                "number": "393",
+                "city": "São Paulo",
+                "neighborhood": "Mooca",
+                "postalCode": "03180-001",
+                "isMainUnity": false,
+                "latitude": -23.5564666,
+                "longitude": -46.6007529
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.rollerjam.com.br/",
+        "linkInstagram": "https://www.instagram.com/rollerjammoema/",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "name": "Arena Pixel",
+        "type": "FORFUN",
+        "phones": [
+            {
+                "number": "1138194001",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "ARENAPIXEL_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
+        "notes": [
+            "Espaço de jogos eletrônicos com consoles, computadores e realidade virtual."
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Girassol",
+                "number": "927",
+                "city": "São Paulo",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "05433-002",
+                "isMainUnity": true,
+                "latitude": -23.5513816,
+                "longitude": -46.6947995
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.arenapixel.com.br/",
+        "linkInstagram": "https://www.instagram.com/arenapixel/",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "name": "Bario Bar",
+        "type": "FORFUN",
+        "phones": [
+            {
+                "number": "11915167135",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "BARIOBAR_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar com fliperamas e jogos retrô.",
+            "Ambiente descontraído, ideal para grupos de amigos."
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Euclides Pacheco",
+                "number": "880",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "03321-000",
+                "isMainUnity": true,
+                "latitude": -23.5480604,
+                "longitude": -46.5690443
+            },
+            {
+                "id": 2,
+                "street": "Washington Luís",
+                "number": "1860",
+                "city": "São Paulo",
+                "neighborhood": "Santo Amaro",
+                "postalCode": "04627-006",
+                "isMainUnity": false,
+                "latitude": -23.6530698,
+                "longitude": -46.6908723
+            },
+            {
+                "id": 3,
+                "street": "Coropé",
+                "number": "41",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05426-010",
+                "isMainUnity": false,
+                "latitude": -23.5613536,
+                "longitude": -46.6964748
+            }
+        ],
+        "linkMenu": "https://www.dguests.com.br/cardapio/Bario_Bar",
+        "linkWebsite": "https://www.bario.com.br/",
+        "linkInstagram": "https://www.instagram.com/bario_bar",
+        "tags": [ "THEMED" ]
+    }
+]

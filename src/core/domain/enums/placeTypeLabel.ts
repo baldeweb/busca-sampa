@@ -12,6 +12,8 @@ const PLURAL_MAP: Record<string, string> = {
   COFFEES: 'Cafeterias',
   NATURE: 'Natureza',
   TOURIST_SPOT: 'Pontos Turísticos',
+  FORFUN: 'Diversão',
+  STORES: 'Lojas',
 };
 
 const SINGULAR_MAP: Record<string, string> = {
@@ -21,6 +23,8 @@ const SINGULAR_MAP: Record<string, string> = {
   COFFEES: 'Cafeteria',
   NATURE: 'Natureza',
   TOURIST_SPOT: 'Ponto Turístico',
+  FORFUN: 'Diversão',
+  STORES: 'Loja',
 };
 
 export function getPlaceTypeLabel(type: string): string {
@@ -40,7 +44,9 @@ export function getPlaceTypeLabel(type: string): string {
       COFFEES: 'COFFEES',
       BARS: 'BAR',
       TOURIST_SPOT: 'TOURIST_SPOT',
-      NATURE: 'NATURE'
+      NATURE: 'NATURE',
+      FORFUN: 'FORFUN',
+      STORES: 'STORES'
     };
     if (i18n && fallbackMap[key]) {
       const pathMap = `placeType.${fallbackMap[key]}`;
@@ -66,7 +72,9 @@ export function getPlaceTypeLabelSingular(type: string): string {
       COFFEES: 'COFFEES',
       BARS: 'BAR',
       TOURIST_SPOT: 'TOURIST_SPOT',
-      NATURE: 'NATURE'
+      NATURE: 'NATURE',
+      FORFUN: 'FORFUN',
+      STORES: 'STORES'
     };
     if (i18n && fallbackMap[key]) {
       const pathMap = `placeList.noun.${fallbackMap[key]}`;

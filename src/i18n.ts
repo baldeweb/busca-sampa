@@ -187,6 +187,8 @@ const resources = {
         NIGHTLIFE: 'Vida Noturna',
         NATURE: 'Natureza',
         TOURIST_SPOT: 'Pontos\u200B Turísticos',
+        FORFUN: 'Diversão',
+        STORES: 'Lojas',
         FREE: 'Gratuitos',
         PLEASURE: "Casa de Prazeres"
       },
@@ -347,7 +349,7 @@ const resources = {
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
-        RESTAURANT: 'Restaurantes', BARS: 'Bares', COFFEES: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
+        RESTAURANT: 'Restaurantes', BARS: 'Bares', COFFEES: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FORFUN: 'Diversión', STORES: 'Tiendas', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
       }
       ,
       placeList: {
@@ -472,7 +474,7 @@ const resources = {
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
       aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
-      placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FORFUN: 'Divertissement', STORES: 'Magasins', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
     }
   },
   ru: {
@@ -523,7 +525,7 @@ const resources = {
           FREE: 'бесплатное событие'
         }
       },
-      placeType: { RESTAURANT: 'Рестораны', BARS: 'Бары', COFFEES: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FREE: 'Бесплатно', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: 'Рестораны', BARS: 'Бары', COFFEES: 'Кофейни', NIGHTLIFE: 'Ночная\u200B жизнь', NATURE: 'Природа', TOURIST_SPOT: 'Достопримечательности', FORFUN: 'Развлечения', STORES: 'Магазины', FREE: 'Бесплатно', PLEASURE: 'Casa de Prazeres' }
     }
   },
   zh: {
@@ -574,7 +576,7 @@ const resources = {
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
       aboutMe: { authorTag: 'Role Paulista 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
       howToRecommend: { title: '如何推荐一个地点？' },
-      placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FORFUN: '娱乐', STORES: '商店', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
     }
   },
   en: {
@@ -723,6 +725,8 @@ const resources = {
         NIGHTLIFE: 'Nightlife',
         NATURE: 'Nature',
         TOURIST_SPOT: 'Tourist Spots',
+        FORFUN: 'For Fun',
+        STORES: 'Stores',
         FREE: 'Free',
         PLEASURE: 'Casa de Prazeres'
       },
@@ -831,6 +835,8 @@ const resources = {
         NIGHTLIFE: 'Nachtleben',
         NATURE: 'Natur',
         TOURIST_SPOT: 'Sehenswürdigkeiten',
+        FORFUN: 'Spaß',
+        STORES: 'Geschäfte',
         FREE: 'Kostenlos',
         PLEASURE: 'Casa de Prazeres'
       }
@@ -961,6 +967,8 @@ const resources = {
         NIGHTLIFE: 'ナイトライフ',
         NATURE: '自然',
         TOURIST_SPOT: '観光地',
+        FORFUN: '娯楽',
+        STORES: '店舗',
         FREE: '無料',
         PLEASURE: 'Casa de Prazeres'
       }
@@ -1061,6 +1069,8 @@ const resources = {
         NIGHTLIFE: 'الحياة الليلية',
         NATURE: 'طبيعة',
         TOURIST_SPOT: 'معالم سياحية',
+        FORFUN: 'للترفيه',
+        STORES: 'متاجر',
         FREE: 'مجاني',
         PLEASURE: 'Casa de Prazeres'
       },
@@ -1161,6 +1171,8 @@ const resources = {
         NIGHTLIFE: 'Vita notturna',
         NATURE: 'Natura',
         TOURIST_SPOT: 'Luoghi turistici',
+        FORFUN: 'Per divertimento',
+        STORES: 'Negozi',
         FREE: 'Gratuito',
         PLEASURE: 'Casa de Prazeres'
       },
@@ -1255,6 +1267,8 @@ const resources = {
         NIGHTLIFE: 'Uitgaansleven',
         NATURE: 'Natuur',
         TOURIST_SPOT: 'Toeristische bezienswaardigheden',
+        FORFUN: 'Voor plezier',
+        STORES: 'Winkels',
         FREE: 'Gratis',
         PLEASURE: 'Casa de Prazeres'
       },
@@ -1340,6 +1354,8 @@ const resources = {
         NIGHTLIFE: 'Gece hayatı',
         NATURE: 'Doğa',
         TOURIST_SPOT: 'Turistik noktalar',
+        FORFUN: 'Eğlence için',
+        STORES: 'Mağazalar',
         FREE: 'Ücretsiz',
         PLEASURE: 'Casa de Prazeres'
       },
@@ -1424,6 +1440,8 @@ const resources = {
         NIGHTLIFE: 'Życie nocne',
         NATURE: 'Przyroda',
         TOURIST_SPOT: 'Atrakcje turystyczne',
+        FORFUN: 'Dla zabawy',
+        STORES: 'Sklepy',
         FREE: 'Darmowe',
         PLEASURE: 'Casa de Prazeres'
       },

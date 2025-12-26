@@ -8,6 +8,8 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icForfun from '@/assets/imgs/icons/ic_forfun.png';
+import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { useMemo, useState } from "react";
@@ -34,6 +36,8 @@ export function PlaceDetailPage() {
   const { data: nightlife } = useRecommendationList("nightlife");
   const { data: nature } = useRecommendationList("nature");
   const { data: touristSpots } = useRecommendationList("tourist-spot");
+  const { data: forfun } = useRecommendationList("forfun");
+  const { data: stores } = useRecommendationList("stores");
   const { data: pleasures } = useRecommendationList("pleasure");
 
   // Junta todos os lugares
@@ -45,7 +49,9 @@ export function PlaceDetailPage() {
     ...nature,
     ...pleasures,
     ...touristSpots,
-  ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots]);
+    ...forfun,
+    ...stores,
+  ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
 
   function selectDatasetArray(key?: string) {
     switch (key) {
@@ -56,6 +62,8 @@ export function PlaceDetailPage() {
       case "pleasure": return pleasures;
       case "nature": return nature;
       case "tourist-spot": return touristSpots;
+      case "forfun": return forfun;
+      case "stores": return stores;
       default: return allPlaces;
     }
   }
@@ -131,6 +139,10 @@ export function PlaceDetailPage() {
         return <img src={icNature} alt="nature" className="w-10 h-10 object-contain mr-4" />;
       case 'TOURIST_SPOT':
         return <img src={icTouristSpot} alt="tourist" className="w-10 h-10 object-contain mr-4" />;
+      case 'FORFUN':
+        return <img src={icForfun} alt="forfun" className="w-10 h-10 object-contain mr-4" />;
+      case 'STORES':
+        return <img src={icStores} alt="stores" className="w-10 h-10 object-contain mr-4" />;
       case 'PLEASURE':
         return <img src={icMouth} alt="pleasure" className="w-10 h-10 object-contain mr-4" />;
       case 'RESTAURANTS':

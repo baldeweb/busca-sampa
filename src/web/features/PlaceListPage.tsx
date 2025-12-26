@@ -20,6 +20,8 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icForfun from '@/assets/imgs/icons/ic_forfun.png';
+import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
@@ -50,6 +52,8 @@ export const PlaceListPage: React.FC = () => {
     const { data: nature } = useRecommendationList("nature");
     const { data: pleasures } = useRecommendationList("pleasure");
     const { data: touristSpots } = useRecommendationList("tourist-spot");
+    const { data: forfun } = useRecommendationList("forfun");
+    const { data: stores } = useRecommendationList("stores");
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
 
@@ -62,7 +66,9 @@ export const PlaceListPage: React.FC = () => {
         ...nature,
         ...pleasures,
         ...touristSpots,
-    ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots]);
+        ...forfun,
+        ...stores,
+    ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
 
     // Mapeia slug para tipo utilizado nos dados
     const typeMap: Record<string, string> = {
@@ -72,6 +78,8 @@ export const PlaceListPage: React.FC = () => {
         nightlife: "NIGHTLIFE",
         nature: "NATURE",
         "tourist-spot": "TOURIST_SPOT",
+        forfun: "FORFUN",
+        stores: "STORES",
         "pleasure": "PLEASURE",
         free: "FREE",
     };
@@ -182,6 +190,8 @@ export const PlaceListPage: React.FC = () => {
             case 'NATURE': return icNature;
             case 'RESTAURANTS': return icRestaurants;
             case 'TOURIST_SPOT': return icTouristSpot;
+            case 'FORFUN': return icForfun;
+            case 'STORES': return icStores;
             case 'PLEASURE': return icMouth;
             case 'ABREM-HOJE':
             case 'ABREM_HOJE':
@@ -809,6 +819,8 @@ export const PlaceListPage: React.FC = () => {
                                                     NIGHTLIFE: "nightlife",
                                                     NATURE: "nature",
                                                     TOURIST_SPOT: "tourist-spot",
+                                                    FORFUN: "forfun",
+                                                    STORES: "stores",
                                                     PLEASURE: "pleasure",
                                                 };
                                                 // Use the actual place.type when available (fixes 'Abrem hoje' mixed lists)

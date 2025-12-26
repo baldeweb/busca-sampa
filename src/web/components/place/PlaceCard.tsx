@@ -23,6 +23,8 @@ export function PlaceCard({ place }: Props) {
             case "NATURE": return "nature";
             case "NIGHTLIFE": return "nightlife";
             case "TOURIST_SPOT": return "tourist-spot";
+            case "FORFUN": return "forfun";
+            case "STORES": return "stores";
             default: return "unknown";
         }
     }
