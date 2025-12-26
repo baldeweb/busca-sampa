@@ -150,7 +150,7 @@ export function PlaceDetailPage() {
         isOpenNow={abertoAgora}
             neighborhood={mainAddress.neighborhood || ""}
             address={`${mainAddress.street || ""}, ${mainAddress.number || ""}`}
-            googleMapsUrl={`https://maps.google.com/?q=${mainAddress.street || ""},${mainAddress.number || ""}`}
+            googleMapsUrl={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${mainAddress.street || ""}, ${mainAddress.number || ""} - ${mainAddress.neighborhood || ""} - ${mainAddress.city || ""} - SP - Brasil`)}`}
             addresses={place.addresses || []}
         instagramUrl={place.linkInstagram || ""}
         phones={place.phones || []}

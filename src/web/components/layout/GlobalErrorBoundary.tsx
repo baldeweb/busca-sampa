@@ -10,7 +10,7 @@ export class GlobalErrorBoundary extends React.Component<React.PropsWithChildren
     this.state = { hasError: false };
   }
 
-  componentDidCatch(error: any, info: any) {
+  componentDidCatch() {
     // Estratégia:
     // 1) Na primeira vez que um erro global acontece, recarrega a página.
     // 2) Se acontecer de novo (nova montagem), redireciona para a home.

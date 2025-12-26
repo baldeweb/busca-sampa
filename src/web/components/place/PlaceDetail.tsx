@@ -2,7 +2,7 @@ import React from "react";
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
-import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp, FaStar } from "react-icons/fa";
+import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp, FaStar, FaCheck } from "react-icons/fa";
 import { BackHeader } from '@/web/components/layout/BackHeader';
 import icUber from '@/assets/imgs/icons/ic_uber.png';
 import { useTranslation } from 'react-i18next';
@@ -55,6 +55,26 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     tags = [],
 }) => {
     const { t, i18n } = useTranslation();
+
+    const toNumberOrNull = (value: unknown): number | null => {
+        if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+        if (typeof value === 'string') {
+            const trimmed = value.trim();
+            if (!trimmed) return null;
+            const normalized = trimmed.replace(',', '.');
+            const parsed = Number.parseFloat(normalized);
+            return Number.isFinite(parsed) ? parsed : null;
+        }
+        return null;
+    };
+
+    const hasValidCoords = (lat: number | null, lng: number | null) => {
+        if (lat == null || lng == null) return false;
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) return false;
+        if (Math.abs(lat) > 90) return false;
+        if (Math.abs(lng) > 180) return false;
+        return true;
+    };
     const OPEN_UBER_MAP: Record<string, string> = {
         pt: 'Abrir no Uber',
         es: 'Abrir en Uber',
@@ -164,14 +184,15 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     openingDays.map((day, idx) => {
                                         const normalized = String(day).toLowerCase();
                                         const isLarge = /domingo|sábado|sabado|feriado|segunda/.test(normalized);
+                                        const boxSizeClass = isLarge ? 'w-5 h-5 sm:w-5 sm:h-5' : 'w-4 h-4 sm:w-4 sm:h-4';
                                         return (
                                             <div key={idx} className="flex items-center">
-                                                <input
-                                                    type="checkbox"
-                                                    checked
-                                                    readOnly
-                                                    className={`accent-green-500 mr-2 ${isLarge ? 'w-5 h-5 sm:w-6 sm:h-6' : ''}`}
-                                                />
+                                                <span
+                                                    aria-hidden="true"
+                                                    className={`inline-flex items-center justify-center rounded-sm bg-green-600 mr-2 flex-shrink-0 ${boxSizeClass}`}
+                                                >
+                                                    <FaCheck className="text-white text-[10px] sm:text-xs" />
+                                                </span>
                                                 <span className="text-sm text-gray-800">{day}</span>
                                             </div>
                                         );
@@ -187,12 +208,13 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 </div>
                                 <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
-                                <div className="mt-12 mb-4 space-y-4">
+                                <div className="mt-8 mb-4">
                                         {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
                                         addresses.map((addr: any, idx: number) => {
                                             const neighborhoodText = addr?.neighborhood || '';
                                             const street = addr?.street || '';
                                             const number = addr?.number || '';
+                                            const city = addr?.city || '';
                                             const postal = addr?.postalCode || addr?.postal_code || addr?.postal || addr?.cep || '';
                                             // Normalize 's/n' (sem número) display
                                             let displayNumber = number || '';
@@ -206,17 +228,26 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                             }
                                             const streetParts = [street, displayNumber].filter(Boolean).join(', ');
                                             const streetText = postal ? `${streetParts}${streetParts ? ' - ' : ''}${postal}` : streetParts;
-                                            const hasCoords = addr?.latitude != null && addr?.longitude != null;
+                                            const lat = toNumberOrNull(addr?.latitude);
+                                            const lng = toNumberOrNull(addr?.longitude);
+                                            const hasCoords = hasValidCoords(lat, lng);
+                                            const fullAddress = [
+                                                streetText,
+                                                neighborhoodText,
+                                                city,
+                                                'SP',
+                                                'Brasil',
+                                            ].filter(Boolean).join(' - ');
                                             const mapsHref = hasCoords
-                                                ? `https://maps.google.com/?q=${addr.latitude},${addr.longitude}`
-                                                : `https://maps.google.com/?q=${encodeURIComponent(streetText)}`;
+                                                ? `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
+                                                : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
                                             const uberHref = hasCoords
-                                                ? `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=${addr.latitude}&dropoff[longitude]=${addr.longitude}&dropoff[nickname]=${encodeURIComponent(name)}`
-                                                : `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(streetText)}`;
+                                                ? `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}&dropoff[nickname]=${encodeURIComponent(name)}`
+                                                : `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(fullAddress)}`;
 
                                             return (
-                                                <div key={idx} className="flex items-start justify-between">
-                                                    <div>
+                                                <div key={idx} className="flex items-start w-full">
+                                                    <div className="w-full">
                                                         <div>
                                                             {addresses.length > 1 ? (
                                                                 <div className="mb-1">
@@ -232,11 +263,11 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                             )}
                                                         </div>
                                                         <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
-                                                        <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
-                                                            <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                        <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
+                                                            <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
                                                                 <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                             </a>
-                                                            <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                            <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
                                                                 <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                             </a>
                                                         </div>
@@ -245,17 +276,17 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                             );
                                         })
                                     ) : (
-                                        <div className="flex items-start justify-between">
-                                            <div>
+                                        <div className="flex items-start w-full">
+                                            <div className="w-full">
                                                 <div>
                                                     <span className="font-bold uppercase text-black">{neighborhood}</span>
                                                 </div>
                                                 <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</div>
-                                                <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
-                                                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
+                                                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
                                                         <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                     </a>
-                                                    <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address || '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                    <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address || '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
                                                         <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                     </a>
                                                 </div>
