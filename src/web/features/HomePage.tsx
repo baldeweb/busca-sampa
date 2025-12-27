@@ -70,12 +70,26 @@ export function HomePage() {
   function handleWhereIsTodaySelect(option: MenuWhereIsTodayOption) {
     const rawTitle = (option.title || '').replace(/\u200B/g, '').trim();
     const title = rawTitle.toLowerCase();
-    if (title === 'abrem hoje' || title === 'abrem-hoje' || (option.tags || []).includes('OPEN_TODAY')) {
+    const normalizedTags = (option.tags || [])
+      .map((t) => String(t || '').trim())
+      .filter(Boolean)
+      .map((t) => t.replace(/-/g, '_').toUpperCase());
+
+    if (title === 'abrem hoje' || title === 'abrem-hoje' || normalizedTags.includes('OPEN_TODAY')) {
       navigate('/abrem-hoje', { state: { label: rawTitle } });
       return;
     }
-    const tag = option.tags && option.tags.length > 0 ? option.tags[0].toLowerCase() : 'restaurants';
-    navigate(`/${tag}`, { state: { label: rawTitle } });
+
+    const tagToRouteSlug = (tag: string): string => {
+      const t = tag.replace(/-/g, '_').toUpperCase();
+      if (t === 'RESTAURANT' || t === 'RESTAURANTS') return 'restaurants';
+      // default: use kebab-case (TOURIST_SPOT -> tourist-spot)
+      return t.toLowerCase().replace(/_/g, '-');
+    };
+
+    const firstTag = normalizedTags[0] || 'RESTAURANTS';
+    const slug = tagToRouteSlug(firstTag);
+    navigate(`/${slug}`, { state: { label: rawTitle } });
   }
 
   function handleNeighborhoodSelect(n: Neighborhood) {

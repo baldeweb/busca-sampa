@@ -36,16 +36,20 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         const cls = "w-10 h-10 sm:w-14 sm:h-14 object-contain";
         // Todas as imagens do carrossel não podem ser arrastadas!
         const imgProps = { draggable: false, onDragStart: (e: React.DragEvent) => e.preventDefault() };
-        if (tags.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('RESTAURANTS') || tags.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('BARS')) return <img src={icBars} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('COFFEES') || tags.includes('COFFEES') || tags.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('NIGHTLIFE')) return <img src={icNightlife} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('NATURE')) return <img src={icNature} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('FORFUN')) return <img src={icForfun} className={cls} alt="" {...imgProps} />;
-        if (tags.includes('STORES')) return <img src={icStores} className={cls} alt="" {...imgProps} />;
+        const normalized = (tags || [])
+            .map((t) => String(t || '').trim())
+            .filter(Boolean)
+            .map((t) => t.replace(/-/g, '_').toUpperCase());
+        if (normalized.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('RESTAURANTS') || normalized.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('BARS')) return <img src={icBars} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('COFFEES') || normalized.includes('CAFETERIAS')) return <img src={icCoffee} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('NIGHTLIFE')) return <img src={icNightlife} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('NATURE')) return <img src={icNature} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('FORFUN')) return <img src={icForfun} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('STORES')) return <img src={icStores} className={cls} alt="" {...imgProps} />;
         return <img src={icFlagSP} className={cls} alt="" {...imgProps} />;
     }
     // Drag-to-scroll (desktop):

@@ -3,7 +3,9 @@ import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendati
 export async function fetchRecommendations(
     category: string
 ): Promise<PlaceRecommendation[]> {
-    const res = await fetch(`/data/places/${category}.json`);
+    const base = (import.meta.env.BASE_URL || "/").replace(/\/+$/, "/");
+    const url = `${base}data/places/${category}.json`;
+    const res = await fetch(url);
 
     if (!res.ok) {
         throw new Error(`Erro ao carregar ${category}.json`);
