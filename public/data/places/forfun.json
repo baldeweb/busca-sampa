@@ -161,9 +161,9 @@
         "tags": [ "THEMED", "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY" ]
     },
     {
-        "id": 45,
+        "id": 4,
         "name": "Roda Gigante Roda Rico",
-        "type": "TOURIST_SPOT",
+        "type": "FORFUN",
         "phones": [],
         "openingHours": {
             "patternId": "RODARICO_DAYTIME",
