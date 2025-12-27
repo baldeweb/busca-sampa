@@ -78,10 +78,10 @@ export const PlaceListPage: React.FC = () => {
         nightlife: "NIGHTLIFE",
         nature: "NATURE",
         "tourist-spot": "TOURIST_SPOT",
-        forfun: "FORFUN",
-        stores: "STORES",
         "pleasure": "PLEASURE",
         free: "FREE",
+        forfun: "FORFUN",
+        stores: "STORES",
     };
     const mappedType = typeMap[routeTypeLower] || routeTypeLower.toUpperCase() || "RESTAURANT";
 

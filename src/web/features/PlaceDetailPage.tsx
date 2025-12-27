@@ -72,7 +72,7 @@ export function PlaceDetailPage() {
   // Evita fallback precoce para restaurantes enquanto dados da categoria ainda carregam
   const categoryExplicita = Boolean(normalizedCategory);
   const datasetsLoading = (
-    restaurants.length === 0 || bars.length === 0 || coffees.length === 0 || nightlife.length === 0 || nature.length === 0 || pleasures.length === 0 || touristSpots.length === 0
+    restaurants.length === 0 || bars.length === 0 || coffees.length === 0 || nightlife.length === 0 || nature.length === 0 || pleasures.length === 0 || touristSpots.length === 0 || forfun.length === 0 || stores.length === 0
   );
 
   const [showModal, setShowModal] = useState(false);
@@ -130,7 +130,7 @@ export function PlaceDetailPage() {
       case 'BAR':
         return <img src={icBars} alt="bar" className="w-10 h-10 object-contain mr-4" />;
       case 'COFFEES':
-        return <img src={icCoffee} alt="coffee" className="w-10 h-10 object-contain mr-4" />;
+        return <img src={icCoffee} alt="coffees" className="w-10 h-10 object-contain mr-4" />;
       case 'FREE':
         return <img src={icFree} alt="free" className="w-10 h-10 object-contain mr-4" />;
       case 'NIGHTLIFE':
