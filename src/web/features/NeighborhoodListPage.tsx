@@ -31,6 +31,8 @@ export const NeighborhoodListPage: React.FC = () => {
   const { data: nightlife } = useRecommendationList("nightlife");
   const { data: nature } = useRecommendationList("nature");
   const { data: touristSpots } = useRecommendationList("tourist-spot");
+  const { data: forfun } = useRecommendationList("forfun");
+  const { data: stores } = useRecommendationList("stores");
   const { data: pleasures } = useRecommendationList("pleasure");
   const { data: openingPatternsData } = useOpeningPatterns();
   const openingPatterns = openingPatternsData || [];
@@ -44,8 +46,10 @@ export const NeighborhoodListPage: React.FC = () => {
       ...nature,
       ...pleasures,
       ...touristSpots,
+      ...forfun,
+      ...stores,
     ],
-    [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots]
+    [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]
   );
 
   // Aliases para slugs especiais (acentuação ou variações)

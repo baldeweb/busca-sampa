@@ -38,7 +38,7 @@ export function HomePage() {
   const [isRequestingLocation, setIsRequestingLocation] = useState(false);
 
   // Dados de todas as categorias para cálculo de proximidade
-  const CATEGORY_CODES = ["restaurants", "bars", "nightlife", "coffees", "tourist-spot"] as const;
+  const CATEGORY_CODES = ["restaurants", "bars", "nightlife", "coffees", "tourist-spot", "forfun", "stores"] as const;
   const [allCategoryData, setAllCategoryData] = useState<Record<string, PlaceRecommendation[]>>({});
   const [loadingNearby, setLoadingNearby] = useState(false);
 
