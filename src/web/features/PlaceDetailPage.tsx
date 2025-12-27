@@ -127,7 +127,7 @@ export function PlaceDetailPage() {
   const iconNode = (() => {
     const typeKey = place?.type || '';
     switch ((typeKey || '').toUpperCase()) {
-      case 'BAR':
+      case 'BARS':
         return <img src={icBars} alt="bar" className="w-10 h-10 object-contain mr-4" />;
       case 'COFFEES':
         return <img src={icCoffee} alt="coffees" className="w-10 h-10 object-contain mr-4" />;

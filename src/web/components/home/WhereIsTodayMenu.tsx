@@ -40,6 +40,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             .map((t) => String(t || '').trim())
             .filter(Boolean)
             .map((t) => t.replace(/-/g, '_').toUpperCase());
+        console.log('[PUDIM]: normalized > ', normalized);
         if (normalized.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('RESTAURANTS') || normalized.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
@@ -218,6 +219,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                 );
                             }
 
+                            console.log('[PUDIM]: label > ', label)
                             return (
                                 <CategoryCard
                                     key={option.id}

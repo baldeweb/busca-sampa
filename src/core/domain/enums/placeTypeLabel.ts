@@ -42,7 +42,7 @@ export function getPlaceTypeLabel(type: string): string {
     const fallbackMap: Record<string, string> = {
       RESTAURANTS: 'RESTAURANT',
       COFFEES: 'COFFEES',
-      BARS: 'BAR',
+      BARS: 'BARS',
       TOURIST_SPOT: 'TOURIST_SPOT',
       NATURE: 'NATURE',
       FORFUN: 'FORFUN',
@@ -70,7 +70,7 @@ export function getPlaceTypeLabelSingular(type: string): string {
     const fallbackMap: Record<string, string> = {
       RESTAURANTS: 'RESTAURANT',
       COFFEES: 'COFFEES',
-      BARS: 'BAR',
+      BARS: 'BARS',
       TOURIST_SPOT: 'TOURIST_SPOT',
       NATURE: 'NATURE',
       FORFUN: 'FORFUN',
