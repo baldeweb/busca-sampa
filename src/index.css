@@ -69,9 +69,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Science Gothic', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Ensure buttons use Montserrat (inherits from body but reinforce) */
+/* Unified button style */
 button {
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  text-transform: uppercase !important;
+  border-radius: 50px !important;
+  background: #F5F5F5 !important;
+  border: 2px solid #48464C !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
+  color: #48464C !important;
+}
+
+/* Plain button (opt-out of global style) */
+button.btn-plain {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  color: inherit !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
 }
 
 /* Strong rule for carousel labels to ensure Science Gothic applies */
