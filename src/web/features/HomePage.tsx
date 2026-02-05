@@ -329,7 +329,7 @@ export function HomePage() {
                 type="button"
                 onClick={() => requestUserLocation()}
                 disabled={isRequestingLocation}
-                className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50"
+                className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50 btn-red"
               >
                 {t('home.allowLocationButton')}
               </button>
@@ -353,7 +353,7 @@ export function HomePage() {
                         type="button"
                         onClick={() => setIsDistanceModalOpen(true)}
                         size="md"
-                        className="px-4"
+                        className="px-4 btn-red"
                       >
                         {t('common.changeDistance')}
                       </ActionButton>
@@ -418,7 +418,7 @@ export function HomePage() {
                                   navigate(`/${s.category}`, { state: { ids } });
                                 }
                               }}
-                              className="min-w-[120px] mt-3 text-sm rounded-full bg-bs-red text-white px-3 py-1"
+                              className="min-w-[120px] mt-3 text-sm rounded-full bg-bs-red text-white px-3 py-1 btn-red"
                             >
                               {s.count === 1 ? t('home.viewPlace') : t('home.viewPlaces')}
                             </button>
@@ -452,7 +452,7 @@ export function HomePage() {
               type="button"
               onClick={() => setIsNeighborhoodModalOpen(true)}
               size="md"
-              className="w-full py-4 font-semibold text-base rounded-[2px]"
+              className="w-full py-4 font-semibold rounded-[2px] btn-red"
             >
               {t('home.viewMoreNeighborhoods')}
             </ActionButton>

@@ -288,7 +288,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                         </div>
                                                         <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
                                                         <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
-                                                            <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
+                                                            <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-red">
                                                                 <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                             </a>
                                                             <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
@@ -307,7 +307,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 </div>
                                                 <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</div>
                                                 <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
-                                                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
+                                                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-red">
                                                         <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                     </a>
                                                     <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address || '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
@@ -330,7 +330,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 <div className="mt-4">
                                     <h3 className="font-bold uppercase text-white">{t('placeDetail.instagramTitle')}</h3>
                                     <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.instagramSubtitle')}</p>
-                                    <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3">
+                                    <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3 btn-red">
                                         <FaInstagram className="mr-2" /> {t('placeDetail.follow')}
                                     </a>
                                 </div>
@@ -350,7 +350,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     const phoneDisplay = formatPhoneForDisplay(raw);
                                                     return (
                                                         <div key={idx} className="flex items-center gap-2">
-                                                            <a href={telHref} aria-label={`call-${idx}`} className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm">
+                                                            <a href={telHref} aria-label={`call-${idx}`} className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm btn-red">
                                                                 <FaPhone className="mr-2" />Ligar
                                                             </a>
                                                             {phoneDisplay && (
@@ -374,7 +374,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 <div className="mt-8">
                                     <h3 className="font-bold uppercase text-white">{t('placeDetail.menuTitle')}</h3>
                                     <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.menuSubtitle')}</p>
-                                    <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3">
+                                    <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm mt-3 btn-red">
                                         {t('placeDetail.menuButton')}
                                     </a>
                                 </div>
@@ -384,7 +384,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 <div className="mt-8">
                                     <h3 className="font-bold uppercase text-white">{t('placeDetail.websiteTitle')}</h3>
                                     <p className="text-xs sm:text-sm text-gray-300 mt-1">{t('placeDetail.websiteSubtitle')}</p>
-                                    <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold mt-3">
+                                    <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm mt-3 btn-red">
                                         {t('placeDetail.websiteButton')}
                                     </a>
                                 </div>

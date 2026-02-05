@@ -73,7 +73,7 @@ export function DistanceSelectModal({
                     <button
                         type="button"
                         onClick={confirm}
-                        className="w-full rounded-md bg-bs-red px-4 py-2 text-center text-sm font-bold uppercase tracking-[0.18em] hover:bg-bs-red/80"
+                        className="w-full rounded-md bg-bs-red px-4 py-2 text-center text-sm font-bold uppercase tracking-[0.18em] hover:bg-bs-red/80 btn-red"
                     >
                         {t('distanceSelect.searchButton')}
                     </button>

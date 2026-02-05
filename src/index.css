@@ -91,6 +91,17 @@ button.btn-plain {
   padding: 0 !important;
 }
 
+/* Red button variant */
+.btn-red {
+  background: #B3261E !important;
+  color: #F5F5F5 !important;
+  border: 2px solid #F5F5F5 !important;
+  border-radius: 50px !important;
+  text-transform: uppercase !important;
+  font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* Strong rule for carousel labels to ensure Science Gothic applies */
 .category-card-label {
   font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
