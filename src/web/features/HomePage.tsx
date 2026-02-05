@@ -230,7 +230,7 @@ export function HomePage() {
         try {
           const status = await (navigator.permissions as any).query({ name: 'geolocation' });
           if (status && status.state === 'denied') {
-            setGeoError(t('home.locationDeniedInstructions') || 'Permissão de localização negada. Por favor, habilite a localização nas configurações do seu navegador.');
+            setGeoError(t('home.locationDeniedInstructions'));
             setIsRequestingLocation(false);
             return;
           }
@@ -331,7 +331,7 @@ export function HomePage() {
                 disabled={isRequestingLocation}
                 className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50"
               >
-                {isRequestingLocation ? "Localizando..." : "Permitir localização"}
+                {isRequestingLocation ? "Localizando..." : "Permitir vasco localização"}
               </button>
               {geoError && !geoError.includes("User denied Geolocation") && (
                 <p className="mt-3 text-[0.65rem] text-red-400">{geoError}</p>
@@ -346,8 +346,8 @@ export function HomePage() {
                           <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
                         )}
                         {!loadingNearby && noNearbyResults && (
-                  <div className="text-center text-base text-gray-300 flex flex-col items-center gap-5 py-6">
-                    <p>{isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}</p>
+                          <div className="text-center text-base text-gray-300 flex flex-col items-center gap-5 py-6">
+                            <p className="whitespace-pre-line">{isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}</p>
                     {!isOutsideGreaterRegion && (
                       <ActionButton
                         type="button"
