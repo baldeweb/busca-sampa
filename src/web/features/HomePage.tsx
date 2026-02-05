@@ -322,7 +322,7 @@ export function HomePage() {
           {/* Placeholder quando não há localização */}
           {!userLocation && (
             <div className="mt-6 flex flex-col items-center text-center text-xs">
-              <p className="max-w-xs text-lg text-gray-300 leading-relaxed mb-4">
+              <p className="max-w-xs text-lg text-gray-300 leading-relaxed mb-4 whitespace-pre-line">
                 {t('home.allowLocation')}
               </p>
               <button
@@ -331,7 +331,7 @@ export function HomePage() {
                 disabled={isRequestingLocation}
                 className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50"
               >
-                {isRequestingLocation ? "Localizando..." : "Permitir vasco localização"}
+                {t('home.allowLocationButton')}
               </button>
               {geoError && !geoError.includes("User denied Geolocation") && (
                 <p className="mt-3 text-[0.65rem] text-red-400">{geoError}</p>

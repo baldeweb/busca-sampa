@@ -44,7 +44,8 @@ const resources = {
       home: {
         nearMeTitle: 'Perto de mim',
         nearMeSubtitle: '(mostrando lugares em um raio de {{km}}km próximo a você)',
-        allowLocation: 'Permitir localização',
+        allowLocation: 'Ops, não encontramos sua localização...\n\nPara encontrar lugares perto de você, clique no botão abaixo:',
+        allowLocationButton: 'Permitir localização',
         loadingCategories: 'Carregando categorias...',
         increaseRadius: 'Aumentar raio',
         neighborhoodsTitle: 'Por bairro',
@@ -229,7 +230,8 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Cerca de mí',
-        allowLocation: 'Permitir ubicación',
+        allowLocation: 'Ops, no encontramos tu ubicación...\n\nPara encontrar lugares cerca de ti, haz clic en el botón de abajo:',
+        allowLocationButton: 'Permitir ubicación',
         loadingCategories: 'Cargando categorías...',
         increaseRadius: 'Aumentar radio',
         neighborhoodsTitle: 'Por barrio',
@@ -386,7 +388,8 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Près de moi',
-        allowLocation: 'Autoriser la localisation',
+        allowLocation: 'Oups, nous n\'avons pas trouvé votre position...\n\nPour trouver des lieux près de vous, cliquez sur le bouton ci-dessous :',
+        allowLocationButton: 'Autoriser la localisation',
         loadingCategories: 'Chargement des catégories...',
         increaseRadius: 'Augmenter le rayon',
         neighborhoodsTitle: 'Par quartier',
@@ -479,7 +482,7 @@ const resources = {
   },
   ru: {
     translation: {
-      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'ещё', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
+      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'ещё', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Открываются сегодня'},
@@ -530,7 +533,7 @@ const resources = {
   },
   zh: {
     translation: {
-      home: { nearMeTitle: '附近', allowLocation: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
+      home: { nearMeTitle: '附近', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: '今天开放' },
@@ -584,7 +587,8 @@ const resources = {
       home: {
         nearMeTitle: 'Near Me',
         nearMeSubtitle: '(showing places in a {{km}}km radius near you)',
-        allowLocation: 'Allow Location',
+        allowLocation: 'Oops, we couldn\'t find your location...\n\nTo find places near you, click the button below:',
+        allowLocationButton: 'Allow Location',
         loadingCategories: 'Loading categories...',
         increaseRadius: 'Increase radius',
         neighborhoodsTitle: 'By Neighborhood',
@@ -764,7 +768,8 @@ const resources = {
       home: {
         nearMeTitle: 'In meiner Nähe',
         nearMeSubtitle: '(zeigt Orte in einem Umkreis von {{km}} km in Ihrer Nähe)',
-        allowLocation: 'Standort erlauben',
+        allowLocation: 'Ups, wir konnten deinen Standort nicht finden...\n\nUm Orte in deiner Nähe zu finden, klicke auf die Schaltfläche unten:',
+        allowLocationButton: 'Standort erlauben',
         loadingCategories: 'Kategorien werden geladen...',
         increaseRadius: 'Radius vergrößern',
         neighborhoodsTitle: 'Nach Viertel',
@@ -867,7 +872,8 @@ const resources = {
       home: {
         nearMeTitle: '近くの場所',
         nearMeSubtitle: '（あなたの近く{{km}}kmの範囲内の場所を表示）',
-        allowLocation: '位置情報を許可',
+        allowLocation: 'おっと、あなたの位置情報が見つかりませんでした...\n\n近くの場所を見つけるには、下のボタンをクリックしてください：',
+        allowLocationButton: '位置情報を許可',
         loadingCategories: 'カテゴリを読み込み中...',
         increaseRadius: '半径を広げる',
         neighborhoodsTitle: '地域別',
@@ -991,7 +997,8 @@ const resources = {
       home: {
         nearMeTitle: 'بالقرب مني',
         nearMeSubtitle: '(يعرض الأماكن ضمن دائرة نصف قطرها {{km}} كم بالقرب منك)',
-        allowLocation: 'السماح بالموقع',
+        allowLocation: 'عذرًا، لم نتمكن من العثور على موقعك...\n\nللعثور على أماكن بالقرب منك، انقر على الزر أدناه:',
+        allowLocationButton: 'السماح بالموقع',
         loadingCategories: 'جارٍ تحميل الفئات...',
         increaseRadius: 'زيادة النطاق',
         neighborhoodsTitle: 'حسب الحي',
@@ -1105,7 +1112,8 @@ const resources = {
       home: {
         nearMeTitle: 'Vicino a me',
         nearMeSubtitle: '(mostrando luoghi in un raggio di {{km}}km vicino a te)',
-        allowLocation: 'Consenti posizione',
+        allowLocation: 'Ops, non abbiamo trovato la tua posizione...\n\nPer trovare luoghi vicino a te, clicca sul pulsante qui sotto:',
+        allowLocationButton: 'Consenti posizione',
         loadingCategories: 'Caricamento categorie...',
         increaseRadius: 'Aumenta raggio',
         neighborhoodsTitle: 'Per quartiere',
@@ -1202,7 +1210,8 @@ const resources = {
       home: {
         nearMeTitle: 'Bij mij in de buurt',
         nearMeSubtitle: '(plaatsen tonen binnen een straal van {{km}}km bij jou)',
-        allowLocation: 'Locatie toestaan',
+        allowLocation: 'Oeps, we hebben je locatie niet gevonden...\n\nOm plaatsen bij jou in de buurt te vinden, klik op de knop hieronder:',
+        allowLocationButton: 'Locatie toestaan',
         loadingCategories: 'Categorieën laden...',
         increaseRadius: 'Vergroot straal',
         neighborhoodsTitle: 'Per buurt',
@@ -1299,7 +1308,8 @@ const resources = {
       home: {
         nearMeTitle: 'Yakınımda',
         nearMeSubtitle: '({{km}}km yarıçapında yakınınızdaki yerleri gösterir)',
-        allowLocation: 'Konuma izin ver',
+        allowLocation: 'Ups, konumunu bulamadık...\n\nYakınındaki yerleri bulmak için, aşağıdaki düğmeye tıkla:',
+        allowLocationButton: 'Konuma izin ver',
         loadingCategories: 'Kategoriler yükleniyor...',
         increaseRadius: 'Yarıçapı artır',
         neighborhoodsTitle: 'Mahalleye göre',
@@ -1385,7 +1395,8 @@ const resources = {
       home: {
         nearMeTitle: 'W pobliżu',
         nearMeSubtitle: '(wyświetlając miejsca w promieniu {{km}}km w pobliżu Ciebie)',
-        allowLocation: 'Zezwól na lokalizację',
+        allowLocation: 'Ups, nie znaleźliśmy Twojej lokalizacji...\n\nAby znaleźć miejsca w pobliżu, kliknij przycisk poniżej:',
+        allowLocationButton: 'Zezwól na lokalizację',
         loadingCategories: 'Ładowanie kategorii...',
         increaseRadius: 'Zwiększ promień',
         neighborhoodsTitle: 'Według dzielnicy',
