@@ -18,7 +18,7 @@ export function CategoryCard({ label, icon, selected, lightSelected = false, onC
       aria-selected={selected}
       tabIndex={index === 0 ? 0 : -1}
       className={[
-        "category-card flex items-center gap-2 w-full border px-3 text-left",
+        "category-card btn-hover-red flex items-center gap-2 w-full border px-3 text-left",
         selected
           ? (lightSelected ? "border-bs-red bg-[#F5F5F5] text-black shadow" : "border-bs-red bg-bs-card-light text-black shadow")
           : "border-[#0F0D13] bg-[#E5E5E5] text-black hover:border-bs-red",

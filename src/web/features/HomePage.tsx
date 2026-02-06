@@ -443,7 +443,7 @@ export function HomePage() {
                 key={n.id}
                 type="button"
                 onClick={() => handleNeighborhoodSelect(n)}
-                className="w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[2px] px-4 py-4 leading-tight transition-colors"
+                className="btn-hover-red w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[2px] px-4 py-4 leading-tight transition-colors"
               >
                 {n.neighborhoodName}
               </button>
