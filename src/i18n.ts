@@ -65,7 +65,7 @@ const resources = {
       },
       common: {
         back: 'Voltar',
-        details: 'ver detalhes',
+        details: 'Saiba mais',
         selectLanguage: 'Selecione um idioma',
         changeDistance: 'Alterar distância',
         all: 'Tudo',
@@ -249,7 +249,7 @@ const resources = {
       },
       common: {
         back: 'Volver',
-        details: 'ver detalles',
+        details: 'Saber más',
         selectLanguage: 'Seleccione un idioma',
         changeDistance: 'Cambiar distancia',
         all: 'Todo',
@@ -401,7 +401,7 @@ const resources = {
       },
       header: { title: 'Role Paulista', tagline: 'La meilleure recommandation, à quelques clics de distance' },
       common: {
-        back: 'Retour', details: 'voir détails', selectLanguage: 'Choisir une langue', changeDistance: 'Changer distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
+        back: 'Retour', details: 'En savoir plus', selectLanguage: 'Choisir une langue', changeDistance: 'Changer distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
       },
       whereIsToday: { title: 'Alors, c’est où aujourd’hui?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Ouvrent aujourd\'hui' },
             placeList: {
@@ -480,7 +480,7 @@ const resources = {
     translation: {
       home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'ещё', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
-      common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
+      common: { back: 'Назад', details: 'Узнать больше', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', variablePlace: 'изменяемое место', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z' },
       filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', button: 'Фильтры' },
@@ -531,7 +531,7 @@ const resources = {
     translation: {
       home: { nearMeTitle: '附近', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
-      common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
+      common: { back: '返回', details: '了解更多', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', variablePlace: '位置可变', typeHeader: '类型', orderNameAsc: '按名称升序 A-Z', orderNeighborhoodAsc: '按街区升序 A-Z' },
       filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', button: '筛选' },
@@ -604,7 +604,7 @@ const resources = {
       },
       common: {
         back: 'Back',
-        details: 'see details',
+        details: 'Learn more',
         selectLanguage: 'Select a language',
         changeDistance: 'Change distance',
         all: 'All',
@@ -781,7 +781,7 @@ const resources = {
       },
       common: {
         back: 'Zurück',
-        details: 'Details ansehen',
+        details: 'Mehr erfahren',
         selectLanguage: 'Wählen Sie eine Sprache',
         changeDistance: 'Entfernung ändern',
         all: 'Alle',
@@ -885,7 +885,7 @@ const resources = {
       },
       common: {
         back: '戻る',
-        details: '詳細を見る',
+        details: '詳しく見る',
         selectLanguage: '言語を選択',
         changeDistance: '距離を変更',
         all: 'すべて',
@@ -1010,7 +1010,7 @@ const resources = {
       },
       common: {
         back: 'رجوع',
-        details: 'عرض التفاصيل',
+        details: 'اعرف المزيد',
         selectLanguage: 'اختر اللغة',
         changeDistance: 'تغيير المسافة',
         all: 'الكل',
@@ -1122,7 +1122,7 @@ const resources = {
       header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione, a pochi clic di distanza' },
       common: {
         back: 'Indietro',
-        details: 'vedi dettagli',
+        details: 'Scopri di più',
         selectLanguage: 'Seleziona una lingua',
         changeDistance: 'Cambia distanza',
         all: 'Tutto',
@@ -1220,7 +1220,7 @@ const resources = {
       header: { title: 'Role Paulista', tagline: 'De beste aanbeveling, op een paar klikken afstand' },
       common: {
         back: 'Terug',
-        details: 'bekijk details',
+        details: 'Meer info',
         selectLanguage: 'Selecteer een taal',
         changeDistance: 'Afstand wijzigen',
         all: 'Alles',
@@ -1317,7 +1317,7 @@ const resources = {
       },
       header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — birkaç tık uzağında' },
       common: {
-        back: 'Geri', details: 'detayları gör', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
+        back: 'Geri', details: 'Daha fazla bilgi', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
       },
       list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
@@ -1404,7 +1404,7 @@ const resources = {
       },
       header: { title: 'Role Paulista', tagline: 'Najlepsza rekomendacja — o kilka kliknięć stąd' },
       common: {
-        back: 'Wstecz', details: 'zobacz szczegóły', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
+        back: 'Wstecz', details: 'Dowiedz się więcej', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
       },
       list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z' },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },

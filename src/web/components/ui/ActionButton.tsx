@@ -4,7 +4,7 @@ import { AppButton } from './AppButton';
 interface ActionButtonProps {
   children: ReactNode;
   onClick?: () => void;
-  size?: 'xs' | 'sm' | 'md';
+  size?: 'xxs' | 'xs' | 'sm' | 'md';
   disabled?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';

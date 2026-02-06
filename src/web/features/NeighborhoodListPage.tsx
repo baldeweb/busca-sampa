@@ -14,6 +14,17 @@ import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelect
 // import { FiltersModal } from '@/web/components/place/FiltersModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
 import icArrowDown from '@/assets/imgs/icons/ic_arrow_down.png';
+import icBars from '@/assets/imgs/icons/ic_bars.png';
+import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
+import icForfun from '@/assets/imgs/icons/ic_forfun.png';
+import icNature from '@/assets/imgs/icons/ic_nature.png';
+import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
+import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
+import icStores from '@/assets/imgs/icons/ic_stores.png';
+import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
+import icPin from '@/assets/imgs/icons/ic_pin.png';
+import icClock from '@/assets/imgs/icons/ic_clock.png';
+import { AppButton } from '@/web/components/ui/AppButton';
 import { PriceFilterList } from '@/web/components/place/PriceFilterList';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
 
@@ -195,6 +206,20 @@ export const NeighborhoodListPage: React.FC = () => {
       } catch (_) { return false; }
     });
   }, [filteredPlaces, filterOpenNow]);
+
+  const getPlaceIconSrc = (type?: string) => {
+    switch (type) {
+      case 'BARS': return icBars;
+      case 'COFFEES': return icCoffee;
+      case 'NIGHTLIFE': return icNightlife;
+      case 'NATURE': return icNature;
+      case 'RESTAURANTS': return icRestaurants;
+      case 'TOURIST_SPOT': return icTouristSpot;
+      case 'FORFUN': return icForfun;
+      case 'STORES': return icStores;
+      default: return icNeighborhood;
+    }
+  };
 
   const sortedPlaces = useMemo(() => {
     const arr = [...filteredPlacesWithOpenNow];
@@ -521,68 +546,63 @@ export const NeighborhoodListPage: React.FC = () => {
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
       <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
-        <div className="mx-auto max-w-5xl px-0 sm:px-12">
+        <div className="mx-auto max-w-5xl px-4 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
-            <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
-                <div className="w-1/3 px-4 sm:px-6 py-3">{t('list.nameHeader')}</div>
-                <div className="w-1/4 py-3 ps-4 sm:ps-6">{t('list.typeHeader')}</div>
-                <div className="w-1/6 py-3 ps-2">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
-            </div>
             {sortedPlaces.length === 0 && (
               <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
             )}
-                {sortedPlaces.map((place, idx) => {
-              const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
-                return (
-                <div
-                  key={`${String(place.type)}:${String(place.id)}`}
-                  className={`flex items-center ${rowBg} px-4 sm:px-6 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
-                >
-                  <div className="w-1/3 px-0 py-6">{place.name}</div>
-                  <div className="w-1/4 px-4 py-6">{getPlaceTypeLabel(place.type)}</div>
-                  <div className="w-1/6 px-4 py-6 text-sm">
-                    {['CHECK_AVAILABILITY_DAYTIME'].includes(place.openingHours?.patternId)
-                      ? (
-                        <span className="text-sm text-gray-200">{t('openingHours.checkAvailabilityLabel')}</span>
-                      )
-                      : (
-                        <span className="text-gray-200">{getOpeningDisplayForToday(place)}</span>
-                    )}
-                  </div>
-                  <div className="flex-1 flex justify-end">
-                    <ActionButton
-                      onClick={() => {
-                        const typeMap: Record<string,string> = {
-                          RESTAURANTS: "restaurants",
-                          BARS: "bars",
-                          COFFEES: "coffees",
-                          NIGHTLIFE: "nightlife",
-                          NATURE: "nature",
-                          TOURIST_SPOT: "tourist-spot",
-                          FORFUN: "forfun",
-                          STORES: "stores",
-                        };
-                        const cat = typeMap[place.type] || "restaurants";
-                        // navigate to friendly slug URL
-                        navigate(`/${cat}/${slugify(place.name)}`);
-                      }}
-                      size="md"
+            {sortedPlaces.length > 0 && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
+                {sortedPlaces.map((place) => {
+                  const neighborhood = place.addresses?.[0]?.neighborhood || place.neighborhood || '';
+                  const openingText = ['CHECK_AVAILABILITY_DAYTIME'].includes(place.openingHours?.patternId)
+                    ? t('openingHours.checkAvailabilityLabel')
+                    : getOpeningDisplayForToday(place);
+                  return (
+                    <div
+                      key={`${String(place.type)}:${String(place.id)}`}
+                      className="category-card grid grid-cols-[auto,1fr,auto] grid-rows-[auto,auto] items-start gap-x-4 gap-y-0 border border-[#0F0D13] bg-[#F5F5F5] text-black px-3 text-left"
                     >
-                      {(() => {
-                        const details = t('common.details');
-                        const mobile = details.replace(' ', '\n');
-                        return (
-                          <>
-                            <span className="sm:hidden whitespace-pre-line">{mobile}</span>
-                            <span className="hidden sm:inline">{details}</span>
-                          </>
-                        );
-                      })()}
-                    </ActionButton>
-                  </div>
-                </div>
-              );
-            })}
+                      <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
+                        <img src={getPlaceIconSrc(place.type)} alt="" className="w-7 h-7 object-contain" />
+                      </div>
+                      <div className="category-card-label font-bold uppercase tracking-[0.03em] text-sm sm:text-base min-w-0 col-start-2 col-end-4 row-start-1 truncate">{place.name}</div>
+                      <div className="flex flex-col gap-1 min-w-0 col-start-2 row-start-2 mt-2">
+                        <div className="flex items-center text-xs sm:text-sm text-black min-w-0">
+                          <img src={icPin} alt="" className="w-5 h-5 mr-2 flex-shrink-0" />
+                          <span className="truncate">{neighborhood || t('list.variablePlace')}</span>
+                        </div>
+                        <div className="flex items-center text-xs sm:text-sm text-black min-w-0 mt-1">
+                          <img src={icClock} alt="" className="w-4 h-4 mr-2 ml-0.5 flex-shrink-0" />
+                          <span className="truncate">{openingText}</span>
+                        </div>
+                      </div>
+                      <AppButton
+                        variant="outline"
+                        size="xxs"
+                        onClick={() => {
+                          const typeMap: Record<string,string> = {
+                            RESTAURANTS: "restaurants",
+                            BARS: "bars",
+                            COFFEES: "coffees",
+                            NIGHTLIFE: "nightlife",
+                            NATURE: "nature",
+                            TOURIST_SPOT: "tourist-spot",
+                            FORFUN: "forfun",
+                            STORES: "stores",
+                          };
+                          const cat = typeMap[place.type] || "restaurants";
+                          navigate(`/${cat}/${slugify(place.name)}`);
+                        }}
+                        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0"
+                      >
+                        {t('common.details')}
+                      </AppButton>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </section>

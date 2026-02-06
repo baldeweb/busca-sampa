@@ -26,7 +26,10 @@ import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import icFilter from '@/assets/imgs/icons/ic_filter.png';
 import icArrowDown from '@/assets/imgs/icons/ic_arrow_down.png';
+import icPin from '@/assets/imgs/icons/ic_pin.png';
+import icClock from '@/assets/imgs/icons/ic_clock.png';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
+import { AppButton } from '@/web/components/ui/AppButton';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -91,7 +94,7 @@ export const PlaceListPage: React.FC = () => {
             if (routeTypeLower === 'pleasure' && !allow) {
                 navigate('/nightlife', { replace: true });
             }
-        } catch (_) {}
+        } catch (_) { }
     }, [routeTypeLower, listLocation.state, navigate]);
 
     // Filtra pelo tipo da URL
@@ -116,7 +119,7 @@ export const PlaceListPage: React.FC = () => {
                 const periods = getPeriodsForToday(place);
                 if (!periods || periods.length === 0) return false;
                 // if currently open by existing helper, include
-                try { if (isOpenNow(periods)) return true; } catch (_) {}
+                try { if (isOpenNow(periods)) return true; } catch (_) { }
 
                 // otherwise check each period's open/close to see if any opening is later today
                 for (const p of periods) {
@@ -176,7 +179,7 @@ export const PlaceListPage: React.FC = () => {
         return typeArr;
     }, [baseList]);
 
-    
+
 
     // Mapeia o tipo atual para o ícone usado no cabeçalho e no cartão 'Todos'
     const headerIcon = (() => {
@@ -198,6 +201,22 @@ export const PlaceListPage: React.FC = () => {
             default: return flagSp;
         }
     })();
+
+    const getPlaceIconSrc = (type?: string) => {
+        switch (type) {
+            case 'FREE': return icFree;
+            case 'BARS': return icBars;
+            case 'COFFEES': return icCoffee;
+            case 'NIGHTLIFE': return icNightlife;
+            case 'NATURE': return icNature;
+            case 'RESTAURANTS': return icRestaurants;
+            case 'TOURIST_SPOT': return icTouristSpot;
+            case 'FORFUN': return icForfun;
+            case 'STORES': return icStores;
+            case 'PLEASURE': return icMouth;
+            default: return flagSp;
+        }
+    };
 
     // Long-press support: when viewing NIGHTLIFE, pressing the header icon for 3s
     // will navigate to the 'pleasure' listing. We attach handlers to the image.
@@ -231,14 +250,14 @@ export const PlaceListPage: React.FC = () => {
     const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [orderVersion, setOrderVersion] = useState(0);
-    
+
     const [showSortingMenu, setShowSortingMenu] = useState(false);
     const [showHoursMenu, setShowHoursMenu] = useState(false);
     const [showScheduleMenu, setShowScheduleMenu] = useState(false);
     const [showCityMenu, setShowCityMenu] = useState(false);
     const [showPriceMenu, setShowPriceMenu] = useState(false);
     const [filterOpenNow, setFilterOpenNow] = useState(false);
-    const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
+    const [scheduleFilter, setScheduleFilter] = useState<'any' | 'required' | 'not-required'>('any');
     const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [priceFilter, setPriceFilter] = useState<string | null>(null);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
@@ -249,7 +268,7 @@ export const PlaceListPage: React.FC = () => {
         baseList.forEach(p => {
             (p.addresses || []).forEach((a: any) => { if (a && a.city) s.add(String(a.city)); });
         });
-        return Array.from(s).sort((a,b)=>a.localeCompare(b));
+        return Array.from(s).sort((a, b) => a.localeCompare(b));
     }, [baseList]);
 
     // Price options available for current base list
@@ -317,8 +336,8 @@ export const PlaceListPage: React.FC = () => {
     React.useEffect(() => {
         if (!selectedEnv) return;
         try {
-            console.log(`[PlaceListPage] selectedEnv=${selectedEnv} baseList=${baseList.length} result=${filteredPlaces.length} sampleIds=${filteredPlaces.slice(0,5).map(p=>p.id).join(',')}`);
-        } catch (_) {}
+            console.log(`[PlaceListPage] selectedEnv=${selectedEnv} baseList=${baseList.length} result=${filteredPlaces.length} sampleIds=${filteredPlaces.slice(0, 5).map(p => p.id).join(',')}`);
+        } catch (_) { }
     }, [selectedEnv, baseList, filteredPlaces]);
 
     // Debug: print available environments (label/value) to verify what the UI shows
@@ -327,7 +346,7 @@ export const PlaceListPage: React.FC = () => {
             console.log('[PlaceListPage] environments=', environments.map(e => ({ label: e.label, value: e.value })));
             const sample = baseList.slice(0, 5);
             console.log('[PlaceListPage] filteredByType sample (5):', sample.map(p => ({ id: p.id, name: p.name, type: p.type, tags: p.tags })));
-        } catch (_) {}
+        } catch (_) { }
     }, [environments, baseList]);
 
     // Debug: test filter matching when selectedEnv changes
@@ -343,7 +362,7 @@ export const PlaceListPage: React.FC = () => {
                 }
                 return false;
             });
-            console.log(`[PlaceListPage] selectedEnv="${selectedEnv}" normalized="${sel}" matches=${matches.length} samples=[${matches.slice(0,3).map(p=>`${p.id}:${p.name}`).join(', ')}]`);
+            console.log(`[PlaceListPage] selectedEnv="${selectedEnv}" normalized="${sel}" matches=${matches.length} samples=[${matches.slice(0, 3).map(p => `${p.id}:${p.name}`).join(', ')}]`);
         } catch (e) { console.error('Debug filter error:', e); }
     }, [selectedEnv, baseList]);
 
@@ -400,7 +419,7 @@ export const PlaceListPage: React.FC = () => {
             periods.push(...place.openingHours.customOverrides);
         }
         const now = new Date();
-        const dayNames = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+        const dayNames = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
         const targetDay = dayNames[(now.getDay() + dayOffset) % 7];
         return periods.filter((p: any) => p.open && (p.days?.includes(targetDay) || p.days?.includes('EVERYDAY')));
     }
@@ -469,34 +488,34 @@ export const PlaceListPage: React.FC = () => {
             return nextOpenStr;
         }
 
-            // No more openings today — attempt a robust next-opening search across the next 7 days.
-            // If the next opening is tomorrow, return the localized "Abre amanhã às XXX".
-            try {
-                for (let offset = 1; offset <= 7; offset++) {
-                    const futurePeriods = getPeriodsForDay(place, offset);
-                    if (!futurePeriods || futurePeriods.length === 0) continue;
+        // No more openings today — attempt a robust next-opening search across the next 7 days.
+        // If the next opening is tomorrow, return the localized "Abre amanhã às XXX".
+        try {
+            for (let offset = 1; offset <= 7; offset++) {
+                const futurePeriods = getPeriodsForDay(place, offset);
+                if (!futurePeriods || futurePeriods.length === 0) continue;
 
-                    // find earliest opening in that future day
-                    let earliest: string | null = null;
-                    function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
-                    for (const p of futurePeriods) {
-                        if (!p.open) continue;
-                        if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
-                    }
-                    if (earliest) {
-                        if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
-                        // if not tomorrow, show weekday + time (e.g. "Abre sexta-feira às 18:00")
-                        const weekdaysPt = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
-                        const weekday = weekdaysPt[(now.getDay() + offset) % 7];
-                        return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
-                    }
+                // find earliest opening in that future day
+                let earliest: string | null = null;
+                function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+                for (const p of futurePeriods) {
+                    if (!p.open) continue;
+                    if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
                 }
-            } catch (e) {
-                // on error, fallthrough to '-'
-                console.warn('[getOpeningDisplayForToday] next-opening search failed for place id=', place?.id, e);
+                if (earliest) {
+                    if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+                    // if not tomorrow, show weekday + time (e.g. "Abre sexta-feira às 18:00")
+                    const weekdaysPt = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+                    const weekday = weekdaysPt[(now.getDay() + offset) % 7];
+                    return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
+                }
             }
+        } catch (e) {
+            // on error, fallthrough to '-'
+            console.warn('[getOpeningDisplayForToday] next-opening search failed for place id=', place?.id, e);
+        }
 
-            return '-';
+        return '-';
         return '-';
     }
 
@@ -537,8 +556,8 @@ export const PlaceListPage: React.FC = () => {
         }
         // nothing found — emit a warning to aid debugging in production
         try {
-            console.warn(`PlaceListPage: no neighborhood for place id=${place?.id}`, place?.addresses?.slice?.(0,3) || place?.addresses);
-        } catch (_) {}
+            console.warn(`PlaceListPage: no neighborhood for place id=${place?.id}`, place?.addresses?.slice?.(0, 3) || place?.addresses);
+        } catch (_) { }
         return undefined;
     }
 
@@ -583,11 +602,10 @@ export const PlaceListPage: React.FC = () => {
                                     onClick={() => {
                                         setSelectedEnv(null);
                                     }}
-                                    className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
-                                        selectedEnv === null 
-                                            ? 'bg-bs-red text-white border-bs-red' 
+                                    className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === null
+                                            ? 'bg-bs-red text-white border-bs-red'
                                             : 'bg-white text-black border-[#0F0D13]'
-                                    }`}
+                                        }`}
                                 >
                                     {t('common.all')}
                                 </button>
@@ -600,11 +618,10 @@ export const PlaceListPage: React.FC = () => {
                                             const next = selectedEnv === env.value ? null : env.value;
                                             setSelectedEnv(next);
                                         }}
-                                        className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
-                                            selectedEnv === env.value 
-                                                ? 'bg-bs-red text-white border-bs-red' 
+                                        className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === env.value
+                                                ? 'bg-bs-red text-white border-bs-red'
                                                 : 'bg-white text-black border-[#0F0D13]'
-                                        } ${idx >= 4 ? 'hidden sm:block' : ''}`}
+                                            } ${idx >= 4 ? 'hidden sm:block' : ''}`}
                                     >
                                         {env.label}
                                     </button>
@@ -733,36 +750,36 @@ export const PlaceListPage: React.FC = () => {
                                         </div>
                                     )}
                                 </div>
-                                )}
-                                {/* Preço (se aplicável) */}
-                                {priceOptions.length > 1 && (
-                                    <div className="relative">
-                                        <button
-                                            type="button"
-                                            className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                                            style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                                            onClick={() => { /* toggle price menu */ setShowPriceMenu((v)=>!v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
-                                        >
-                                            <span className="mr-2">{t('filters.priceTitle', { defaultValue: 'Preço' })}</span>
-                                            <img src={icArrowDown} alt="expand" className="w-3 h-3" />
-                                        </button>
-                                        {showPriceMenu && (
-                                            <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                                                <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!priceFilter ? 'font-semibold' : ''}`} onClick={() => { setPriceFilter(null); setShowPriceMenu(false); }}>{t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}</button>
-                                                                                                {priceOptions.map(p => (
-                                                                                                        <button
-                                                                                                            key={p}
-                                                                                                            type="button"
-                                                                                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === p ? 'font-semibold' : ''}`}
-                                                                                                            onClick={() => { setPriceFilter(p); setShowPriceMenu(false); }}
-                                                                                                        >
-                                                                                                            {getPriceRangeLabel(p as any)}
-                                                                                                        </button>
-                                                                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                )}
+                            )}
+                            {/* Preço (se aplicável) */}
+                            {priceOptions.length > 1 && (
+                                <div className="relative">
+                                    <button
+                                        type="button"
+                                        className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                        style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
+                                        onClick={() => { /* toggle price menu */ setShowPriceMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
+                                    >
+                                        <span className="mr-2">{t('filters.priceTitle', { defaultValue: 'Preço' })}</span>
+                                        <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                                    </button>
+                                    {showPriceMenu && (
+                                        <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                                            <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!priceFilter ? 'font-semibold' : ''}`} onClick={() => { setPriceFilter(null); setShowPriceMenu(false); }}>{t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}</button>
+                                            {priceOptions.map(p => (
+                                                <button
+                                                    key={p}
+                                                    type="button"
+                                                    className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === p ? 'font-semibold' : ''}`}
+                                                    onClick={() => { setPriceFilter(p); setShowPriceMenu(false); }}
+                                                >
+                                                    {getPriceRangeLabel(p as any)}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -770,68 +787,63 @@ export const PlaceListPage: React.FC = () => {
             {/* Modal antigo de filtros removido em favor dos menus inline */}
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
-                <div className="mx-auto max-w-5xl px-0 sm:px-12">
+                <div className="mx-auto max-w-5xl px-4 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
-                        <div className="flex bg-bs-card text-[#F5F5F5] font-bold text-lg sm:text-[20px] leading-tight border-b-2 border-bs-red">
-                            <div className="w-1/3 px-2 sm:px-6 py-3">{t('list.nameHeader')}</div>
-                            <div className={'w-1/4 py-3 ps-4 sm:ps-6'}>{t('list.neighborhoodHeader')}</div>
-                            <div className="w-1/6 py-3 ps-2">{t('placeList.opensAtHeader', { defaultValue: 'Abertura' })}</div>
-                        </div>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
-                        {sortedPlaces.map((place, idx) => {
-                            console.log('[PlaceListPage LIST MAP] rendering place id:', place.id, 'name:', place.name, 'total in sortedPlaces:', sortedPlaces.length);
-                            const rowBg = idx % 2 === 0 ? 'bg-[#403E44]' : 'bg-[#48464C]';
-                            return (
-                                <div
-                                    key={`${place.id}-${selectedEnv || 'all'}`}
-                                    className={`flex items-center ${rowBg} px-4 sm:px-4 border-b border-bs-bg text-sm sm:text-base text-[#F5F5F5]`}
-                                >
-                                    <div className="w-1/3 px-2 py-6">{place.name}</div>
-                                    <div className={'w-1/4 px-4 py-6'}>{getPlaceNeighborhood(place) || ((!place.addresses || place.addresses.length === 0) ? t('list.variablePlace') : "")}</div>
-                                    <div className="w-1/6 px-4 py-6 text-sm text-gray-200">
-                                        {(place.openingHours.patternId === 'CHECK_AVAILABILITY_DAYTIME') ? (
-                                            <span className="text-sm text-gray-200">
-                                                {t('openingHours.checkAvailabilityLabel')}
-                                            </span>
-                                        ) : getOpeningDisplayForToday(place)}
-                                    </div>
-                                    <div className="flex-1 flex justify-end">
-                                        <ActionButton
-                                            onClick={() => {
-                                                const typeToSlug: Record<string, string> = {
-                                                    RESTAURANTS: "restaurants",
-                                                    BARS: "bars",
-                                                    COFFEES: "coffees",
-                                                    NIGHTLIFE: "nightlife",
-                                                    NATURE: "nature",
-                                                    TOURIST_SPOT: "tourist-spot",
-                                                    FORFUN: "forfun",
-                                                    STORES: "stores",
-                                                    PLEASURE: "pleasure",
-                                                };
-                                                // Use the actual place.type when available (fixes 'Abrem hoje' mixed lists)
-                                                const placeTypeKey = place.type || mappedType;
-                                                const slug = typeToSlug[placeTypeKey] || routeTypeLower;
-                                                navigate(`/${slug}/${slugify(place.name)}`);
-                                            }}
-                                            size="md"
-                                            className="!px-1 sm:!px-4"
+                        {sortedPlaces.length > 0 && (
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
+                                {sortedPlaces.map((place) => {
+                                    const neighborhood = getPlaceNeighborhood(place) || ((!place.addresses || place.addresses.length === 0) ? t('list.variablePlace') : "");
+                                    const openingText = (place.openingHours.patternId === 'CHECK_AVAILABILITY_DAYTIME')
+                                        ? t('openingHours.checkAvailabilityLabel')
+                                        : getOpeningDisplayForToday(place);
+                                    return (
+                                        <div
+                                            key={`${place.id}-${selectedEnv || 'all'}`}
+                                            className="grid grid-cols-[auto,1fr,auto] grid-rows-[auto,auto] items-start gap-x-4 gap-y-0 bg-white border border-[#403E44] rounded-[8px] px-4 py-3 text-[#403E44]"
                                         >
-                                            {(() => {
-                                                const details = t('common.details');
-                                                const mobile = details.replace(' ', '\n');
-                                                return (
-                                                    <>
-                                                        <span className="sm:hidden whitespace-pre-line">{mobile}</span>
-                                                        <span className="hidden sm:inline">{details}</span>
-                                                    </>
-                                                );
-                                            })()}
-                                        </ActionButton>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                                            <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
+                                                <img src={getPlaceIconSrc(place.type)} alt="" className="w-7 h-7 object-contain" />
+                                            </div>
+                                            <div className="category-card-label font-bold uppercase tracking-[0.03em] text-sm sm:text-base min-w-0 col-start-2 col-end-4 row-start-1 truncate">{place.name}</div>
+                                            <div className="flex flex-col gap-1 min-w-0 col-start-2 row-start-2">
+                                                <div className="flex items-center text-xs sm:text-sm text-[#403E44] min-w-0">
+                                                    <img src={icPin} alt="" className="w-4 h-4 mr-2 flex-shrink-0" />
+                                                    <span className="truncate">{neighborhood}</span>
+                                                </div>
+                                                <div className="flex items-center text-xs sm:text-sm text-[#403E44] min-w-0">
+                                                    <img src={icClock} alt="" className="w-4 h-4 mr-2 flex-shrink-0" />
+                                                    <span className="truncate">{openingText}</span>
+                                                </div>
+                                            </div>
+                                            <AppButton
+                                                variant="outline"
+                                                size="xxs"
+                                                onClick={() => {
+                                                    const typeToSlug: Record<string, string> = {
+                                                        RESTAURANTS: "restaurants",
+                                                        BARS: "bars",
+                                                        COFFEES: "coffees",
+                                                        NIGHTLIFE: "nightlife",
+                                                        NATURE: "nature",
+                                                        TOURIST_SPOT: "tourist-spot",
+                                                        FORFUN: "forfun",
+                                                        STORES: "stores",
+                                                        PLEASURE: "pleasure",
+                                                    };
+                                                    const placeTypeKey = place.type || mappedType;
+                                                    const slug = typeToSlug[placeTypeKey] || routeTypeLower;
+                                                    navigate(`/${slug}/${slugify(place.name)}`);
+                                                }}
+                                                className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0"
+                                            >
+                                                {t('common.details')}
+                                            </AppButton>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>
