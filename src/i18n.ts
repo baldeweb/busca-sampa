@@ -91,6 +91,15 @@ const resources = {
         sortingTitle: 'Ordenação',
         hoursTitle: 'Horários',
         openNowLabel: 'Aberto agora',
+        openNow: 'Aberto agora',
+        anyHourLabel: 'Qualquer horário',
+        anyHour: 'Qualquer horário',
+        scheduleTitle: 'Agendar',
+        scheduleRequired: 'Necessário agendar',
+        scheduleNotRequired: 'Não precisa agendar',
+        anySchedule: 'Qualquer',
+        priceTitle: 'Preço',
+        anyPrice: 'Qualquer preço',
         button: 'Filtros'
       },
       whereIsToday: { title: 'E aí, onde é hoje?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Abrem hoje' },
@@ -228,6 +237,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Cerca de mí',
+        nearMeSubtitle: '(mostrando lugares en un radio de {{km}}km cerca de ti)',
         allowLocation: 'Ops, no encontramos tu ubicación...\n\nPara encontrar lugares cerca de ti, haz clic en el botón de abajo:',
         allowLocationButton: 'Permitir ubicación',
         loadingCategories: 'Cargando categorías...',
@@ -275,6 +285,15 @@ const resources = {
         sortingTitle: 'Ordenación',
         hoursTitle: 'Horarios',
         openNowLabel: 'Abierto ahora',
+        openNow: 'Abierto ahora',
+        anyHourLabel: 'Cualquier horario',
+        anyHour: 'Cualquier horario',
+        scheduleTitle: 'Reservar',
+        scheduleRequired: 'Es necesario reservar',
+        scheduleNotRequired: 'No es necesario reservar',
+        anySchedule: 'Cualquiera',
+        priceTitle: 'Precio',
+        anyPrice: 'Cualquier precio',
         button: 'Filtros'
       },
       placeDetail: {
@@ -384,6 +403,7 @@ const resources = {
     translation: {
       home: {
         nearMeTitle: 'Près de moi',
+        nearMeSubtitle: '(affichant des lieux dans un rayon de {{km}} km près de vous)',
         allowLocation: 'Oups, nous n\'avons pas trouvé votre position...\n\nPour trouver des lieux près de vous, cliquez sur le bouton ci-dessous :',
         allowLocationButton: 'Autoriser la localisation',
         loadingCategories: 'Chargement des catégories...',
@@ -421,6 +441,15 @@ const resources = {
         sortingTitle: 'Ordre',
         hoursTitle: 'Horaires',
         openNowLabel: 'Ouvert maintenant',
+        openNow: 'Ouvert maintenant',
+        anyHourLabel: 'N’importe quel horaire',
+        anyHour: 'N’importe quel horaire',
+        scheduleTitle: 'Réserver',
+        scheduleRequired: 'Réservation requise',
+        scheduleNotRequired: 'Réservation non requise',
+        anySchedule: 'Peu importe',
+        priceTitle: 'Prix',
+        anyPrice: 'N’importe quel prix',
         button: 'Filtres'
       },
       placeDetail: {
@@ -478,12 +507,12 @@ const resources = {
   },
   ru: {
     translation: {
-      home: { nearMeTitle: 'Рядом со мной', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'Больше вариантов', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
+      home: { nearMeTitle: 'Рядом со мной', nearMeSubtitle: '(показаны места в радиусе {{km}} км рядом с вами)', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'Больше вариантов', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
       common: { back: 'Назад', details: 'Узнать больше', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Открываются сегодня'},
       list: { nameHeader: 'Название', neighborhoodHeader: 'Район', variablePlace: 'изменяемое место', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z' },
-      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', button: 'Фильтры' },
+      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', openNow: 'Открыто сейчас', anyHourLabel: 'Любое время', anyHour: 'Любое время', scheduleTitle: 'Бронирование', scheduleRequired: 'Требуется бронирование', scheduleNotRequired: 'Бронирование не требуется', anySchedule: 'Любой', priceTitle: 'Цена', anyPrice: 'Любая цена', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь указаны все филиалы этого места и их адреса. Вы также можете построить маршрут как вам удобнее: через Google Maps или заказав Uber :)', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
@@ -529,12 +558,12 @@ const resources = {
   },
   zh: {
     translation: {
-      home: { nearMeTitle: '附近', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多选项', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
+      home: { nearMeTitle: '附近', nearMeSubtitle: '（显示你附近 {{km}}km 半径内的地点）', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多选项', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '了解更多', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: '今天开放' },
       list: { nameHeader: '名称', neighborhoodHeader: '街区', variablePlace: '位置可变', typeHeader: '类型', orderNameAsc: '按名称升序 A-Z', orderNeighborhoodAsc: '按街区升序 A-Z' },
-      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', button: '筛选' },
+      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于该地点', visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。', visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。', neverEmphasis: '', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了这家店的所有门店与地址。你也可以按自己喜欢的方式规划路线：用 Google 地图，或叫一辆 Uber :)', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', phoneTitle: '电话', phonesSubtitle: '这些是该地点的官方联系方式', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '' },
       placeList: {
         environmentTitle: '环境类型：',
@@ -629,6 +658,15 @@ const resources = {
         sortingTitle: 'Sorting',
         hoursTitle: 'Hours',
         openNowLabel: 'Open now',
+        openNow: 'Open now',
+        anyHourLabel: 'Any time',
+        anyHour: 'Any time',
+        scheduleTitle: 'Reservation',
+        scheduleRequired: 'Reservation required',
+        scheduleNotRequired: 'No reservation needed',
+        anySchedule: 'Any',
+        priceTitle: 'Price',
+        anyPrice: 'Any price',
         button: 'Filters'
       },
       placeDetail: {
@@ -792,6 +830,23 @@ const resources = {
         noPlaces: 'Keine Orte gefunden.',
         version: 'Version'
       },
+      filters: {
+        title: 'Filter',
+        subtitle: 'Passen Sie die Filter unten an, um die Ergebnisse einzugrenzen',
+        sortingTitle: 'Sortierung',
+        hoursTitle: 'Öffnungszeiten',
+        openNowLabel: 'Jetzt geöffnet',
+        openNow: 'Jetzt geöffnet',
+        anyHourLabel: 'Beliebige Uhrzeit',
+        anyHour: 'Beliebige Uhrzeit',
+        scheduleTitle: 'Reservierung',
+        scheduleRequired: 'Reservierung erforderlich',
+        scheduleNotRequired: 'Keine Reservierung erforderlich',
+        anySchedule: 'Beliebig',
+        priceTitle: 'Preis',
+        anyPrice: 'Beliebiger Preis',
+        button: 'Filter'
+      },
       list: { nameHeader: 'NAME', neighborhoodHeader: 'STADTTEIL', variablePlace: 'variabler Ort', typeHeader: 'Typ', orderNameAsc: 'NAME in aufsteigender Reihenfolge A-Z', orderNeighborhoodAsc: 'STADTTEIL in aufsteigender Reihenfolge A-Z' },
       footer: { home: 'Start', search: 'Suchen', about: 'Über' },
       placeDetail: {
@@ -895,6 +950,23 @@ const resources = {
         loadError: 'データの読み込み中にエラーが発生しました。',
         noPlaces: '場所が見つかりません。',
         version: 'バージョン'
+      },
+      filters: {
+        title: 'フィルター',
+        subtitle: '以下のフィルターで結果を絞り込みます',
+        sortingTitle: '並び替え',
+        hoursTitle: '営業時間',
+        openNowLabel: '営業中',
+        openNow: '営業中',
+        anyHourLabel: '任意の時間',
+        anyHour: '任意の時間',
+        scheduleTitle: '予約',
+        scheduleRequired: '予約が必要',
+        scheduleNotRequired: '予約不要',
+        anySchedule: '指定なし',
+        priceTitle: '価格',
+        anyPrice: '任意の価格',
+        button: 'フィルター'
       },
       list: { nameHeader: '名前', neighborhoodHeader: '地区', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNeighborhoodAsc: '地区 昇順 A-Z' },
       footer: { home: 'ホーム', search: '検索', about: '概要' },
@@ -1028,6 +1100,15 @@ const resources = {
         sortingTitle: 'الترتيب',
         hoursTitle: 'ساعات العمل',
         openNowLabel: 'مفتوح الآن',
+        openNow: 'مفتوح الآن',
+        anyHourLabel: 'أي وقت',
+        anyHour: 'أي وقت',
+        scheduleTitle: 'الحجز',
+        scheduleRequired: 'الحجز مطلوب',
+        scheduleNotRequired: 'لا يحتاج حجز',
+        anySchedule: 'أي',
+        priceTitle: 'السعر',
+        anyPrice: 'أي سعر',
         button: 'الفلاتر'
       },
       list: { nameHeader: 'الاسم', neighborhoodHeader: 'الحي', typeHeader: 'النوع', orderNameAsc: 'الاسم بترتيب تصاعدي A-Z', orderNeighborhoodAsc: 'الحي بترتيب تصاعدي A-Z' },
@@ -1133,6 +1214,23 @@ const resources = {
         noPlaces: 'Nessun luogo trovato.',
         version: 'Versione'
       },
+      filters: {
+        title: 'Filtri',
+        subtitle: 'Regola i filtri sotto per affinare i risultati',
+        sortingTitle: 'Ordinamento',
+        hoursTitle: 'Orari',
+        openNowLabel: 'Aperto ora',
+        openNow: 'Aperto ora',
+        anyHourLabel: 'Qualsiasi orario',
+        anyHour: 'Qualsiasi orario',
+        scheduleTitle: 'Prenotazione',
+        scheduleRequired: 'Prenotazione richiesta',
+        scheduleNotRequired: 'Nessuna prenotazione necessaria',
+        anySchedule: 'Qualsiasi',
+        priceTitle: 'Prezzo',
+        anyPrice: 'Qualsiasi prezzo',
+        button: 'Filtri'
+      },
       list: { nameHeader: 'NOME', neighborhoodHeader: 'QUARTIERE', typeHeader: 'Tipo', orderNameAsc: 'NOME in ordine crescente A-Z', orderNeighborhoodAsc: 'QUARTIERE in ordine crescente A-Z' },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       placeDetail: {
@@ -1231,6 +1329,23 @@ const resources = {
         noPlaces: 'Geen plaatsen gevonden.',
         version: 'Versie'
       },
+      filters: {
+        title: 'Filters',
+        subtitle: 'Pas de filters hieronder aan om de resultaten te verfijnen',
+        sortingTitle: 'Sorteren',
+        hoursTitle: 'Openingstijden',
+        openNowLabel: 'Nu open',
+        openNow: 'Nu open',
+        anyHourLabel: 'Elke tijd',
+        anyHour: 'Elke tijd',
+        scheduleTitle: 'Reserveren',
+        scheduleRequired: 'Reservering vereist',
+        scheduleNotRequired: 'Geen reservering nodig',
+        anySchedule: 'Elke',
+        priceTitle: 'Prijs',
+        anyPrice: 'Elke prijs',
+        button: 'Filters'
+      },
       list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', typeHeader: 'Type', orderNameAsc: 'NAAM oplopend A-Z', orderNeighborhoodAsc: 'BUURT oplopend A-Z' },
       footer: { home: 'Home', search: 'Zoeken', about: 'Over' },
       placeDetail: {
@@ -1319,6 +1434,23 @@ const resources = {
       common: {
         back: 'Geri', details: 'Daha fazla bilgi', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
       },
+      filters: {
+        title: 'Filtreler',
+        subtitle: 'Sonuçları daraltmak için aşağıdaki filtreleri ayarlayın',
+        sortingTitle: 'Sıralama',
+        hoursTitle: 'Saatler',
+        openNowLabel: 'Şu an açık',
+        openNow: 'Şu an açık',
+        anyHourLabel: 'Herhangi bir saat',
+        anyHour: 'Herhangi bir saat',
+        scheduleTitle: 'Rezervasyon',
+        scheduleRequired: 'Rezervasyon gerekli',
+        scheduleNotRequired: 'Rezervasyon gerekmez',
+        anySchedule: 'Herhangi',
+        priceTitle: 'Fiyat',
+        anyPrice: 'Herhangi bir fiyat',
+        button: 'Filtreler'
+      },
       list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
       placeDetail: {
@@ -1405,6 +1537,23 @@ const resources = {
       header: { title: 'Role Paulista', tagline: 'Najlepsza rekomendacja — o kilka kliknięć stąd' },
       common: {
         back: 'Wstecz', details: 'Dowiedz się więcej', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
+      },
+      filters: {
+        title: 'Filtry',
+        subtitle: 'Dostosuj filtry poniżej, aby zawęzić wyniki',
+        sortingTitle: 'Sortowanie',
+        hoursTitle: 'Godziny',
+        openNowLabel: 'Otwarte teraz',
+        openNow: 'Otwarte teraz',
+        anyHourLabel: 'Dowolna pora',
+        anyHour: 'Dowolna pora',
+        scheduleTitle: 'Rezerwacja',
+        scheduleRequired: 'Wymagana rezerwacja',
+        scheduleNotRequired: 'Rezerwacja nie jest wymagana',
+        anySchedule: 'Dowolne',
+        priceTitle: 'Cena',
+        anyPrice: 'Dowolna cena',
+        button: 'Filtry'
       },
       list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z' },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },

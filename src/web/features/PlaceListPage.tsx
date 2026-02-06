@@ -565,10 +565,10 @@ export const PlaceListPage: React.FC = () => {
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
             <BackHeader onBack={() => navigate(-1)} />
-            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
-                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-6 sm:py-8 text-black">
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
+                <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-8 text-black">
                     {/* Título e descrição */}
-                    <div>
+                    <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[30px] px-4 py-8">
                         <div className="flex items-start gap-4">
                             <img
                                 src={headerIcon}
@@ -593,9 +593,9 @@ export const PlaceListPage: React.FC = () => {
                     </div>
                     {/* Grid de tipos de ambiente */}
                     {environments.length > 0 && (
-                        <div className="bg-[#F5F5F5] text-black pb-4">
-                            <h3 className="font-bold text-lg mb-3 pt-8">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                            <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 text-xs w-full">
+                        <div className="bg-[#FFFFFF] text-black pb-4">
+                            <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
+                            <div className="grid grid-cols-3 min-[790px]:grid-cols-5 gap-4 text-xs w-full px-4 min-[790px]:px-0">
                                 {/* Botão "Todos" */}
                                 <button
                                     type="button"
@@ -643,7 +643,7 @@ export const PlaceListPage: React.FC = () => {
                 </div>
             </section>
             {/* Barra de filtros: ícone à esquerda e menus à direita */}
-            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5]">
+            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
                     <div className="flex flex-col justify-start gap-2">
                         {/* Heading: icon + label styled like 'Tipo de ambiente:' */}
@@ -651,8 +651,9 @@ export const PlaceListPage: React.FC = () => {
                             <h3 className="font-bold text-lg text-black">{t('filters.title', { defaultValue: 'Filtros' })}</h3>
                         </div>
                         {/* Botões abaixo do título (nova linha) */}
-                        <div className="flex items-center gap-2">
-                            <img src={icFilter} alt="filter" className="w-5 h-5 mr-3 self-center" />
+                        <div className="flex items-start gap-2">
+                            <img src={icFilter} alt="filter" className="w-5 h-5 mr-1 mt-1" />
+                            <div className="flex flex-wrap items-center gap-2 w-full">
                             {/* Ordenação */}
                             <div className="relative">
                                 <button
@@ -780,6 +781,7 @@ export const PlaceListPage: React.FC = () => {
                                     )}
                                 </div>
                             )}
+                            </div>
                         </div>
                     </div>
                 </div>

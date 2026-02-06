@@ -156,37 +156,38 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             )}
 
             {/* Main Content (match NeighborhoodList full-bleed + inner padding) */}
-            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5] text-black">
-                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-2">
-                        <div className="px-0 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
-                            {icon || <span className="text-4xl sm:text-5xl mr-4">☕</span>}
-                            <div>
-                                <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
-                                <p className="text-xs sm:text-sm text-gray-700">{description}</p>
-                                {priceRange && (
-                                    <p className="text-xs mt-1 text-gray-700">
-                                        <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
-                                    </p>
-                                )}
-                                {/* Tipo de ambiente */}
-                                {ambienteList.length > 0 && (
-                                    <div className="mt-2">
-                                        <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
-                                        <ul className="flex flex-wrap gap-2 mt-1">
-                                            {ambienteList.map((amb: string, idx: number) => (
-                                                <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                )}
-                            </div>
-                            <div className="ml-auto flex flex-col items-end gap-1">
-                                {isOpenNow ? (
-                                    <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
-                                ) : (
-                                    <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
-                                )}
-                                <span className="bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF] text-black">
+                <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12">
+                        <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[30px] px-4 py-8">
+                            <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                                <div className="flex-1 min-w-0">
+                                    <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black break-words mr-6" />
+                                    <p className="text-xs sm:text-sm text-gray-700">{description}</p>
+                                    {priceRange && (
+                                        <p className="text-xs mt-1 text-gray-700">
+                                            <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
+                                        </p>
+                                    )}
+                                    {/* Tipo de ambiente */}
+                                    {ambienteList.length > 0 && (
+                                        <div className="mt-2">
+                                            <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
+                                            <ul className="flex flex-wrap gap-2 mt-1">
+                                                {ambienteList.map((amb: string, idx: number) => (
+                                                    <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="sm:ml-auto flex flex-row sm:flex-col items-start sm:items-end gap-2 sm:gap-1 shrink-0">
+                                    {isOpenNow ? (
+                                        <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
+                                    ) : (
+                                        <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                                    )}
+                                    <span className="bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
+                                </div>
                             </div>
                         </div>
 
