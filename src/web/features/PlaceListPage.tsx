@@ -30,9 +30,7 @@ import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
-    { value: "name-desc" },
     { value: "neighborhood-asc" },
-    { value: "neighborhood-desc" },
 ];
 
 export const PlaceListPage: React.FC = () => {
@@ -356,21 +354,11 @@ export const PlaceListPage: React.FC = () => {
             case "name-asc":
                 arr.sort((a, b) => a.name.localeCompare(b.name));
                 break;
-            case "name-desc":
-                arr.sort((a, b) => b.name.localeCompare(a.name));
-                break;
             case "neighborhood-asc":
                 arr.sort((a, b) => {
                     const na = a.addresses?.[0]?.neighborhood || "";
                     const nb = b.addresses?.[0]?.neighborhood || "";
                     return na.localeCompare(nb);
-                });
-                break;
-            case "neighborhood-desc":
-                arr.sort((a, b) => {
-                    const na = a.addresses?.[0]?.neighborhood || "";
-                    const nb = b.addresses?.[0]?.neighborhood || "";
-                    return nb.localeCompare(na);
                 });
                 break;
         }
@@ -669,9 +657,7 @@ export const PlaceListPage: React.FC = () => {
                                                 onClick={() => { setOrder(opt.value); setOrderVersion(x => x + 1); setShowSortingMenu(false); setFilterOpenNow(false); }}
                                             >
                                                 {opt.value === 'name-asc' && t('list.orderNameAsc')}
-                                                {opt.value === 'name-desc' && t('list.orderNameDesc')}
                                                 {opt.value === 'neighborhood-asc' && t('list.orderNeighborhoodAsc')}
-                                                {opt.value === 'neighborhood-desc' && t('list.orderNeighborhoodDesc')}
                                             </button>
                                         ))}
                                     </div>

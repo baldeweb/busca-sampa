@@ -81,9 +81,7 @@ const resources = {
         neighborhoodHeader: 'Bairro',
         typeHeader: 'Tipo',
         orderNameAsc: 'NOME em ordem crescente A-Z',
-        orderNameDesc: 'NOME em ordem decrescente Z-A',
         orderNeighborhoodAsc: 'BAIRRO em ordem crescente A-Z',
-        orderNeighborhoodDesc: 'BAIRRO em ordem decrescente Z-A',
         variablePlace: 'lugar variável',
         seeDetails: 'ver detalhes'
       },
@@ -269,9 +267,7 @@ const resources = {
         seeDetails: 'ver detalles',
         typeHeader: 'Tipo',
         orderNameAsc: 'NOMBRE en orden ascendente A-Z',
-        orderNameDesc: 'NOMBRE en orden descendente Z-A',
-        orderNeighborhoodAsc: 'BARRIO en orden ascendente A-Z',
-        orderNeighborhoodDesc: 'BARRIO en orden descendente Z-A'
+        orderNeighborhoodAsc: 'BARRIO en orden ascendente A-Z'
       },
       filters: {
         title: 'Filtros',
@@ -417,7 +413,7 @@ const resources = {
               // placeholder from pt: 'Abertura'
             },
       list: {
-        nameHeader: 'Nom', neighborhoodHeader: 'Quartier', variablePlace: 'lieu variable', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNameDesc: 'NOM par ordre décroissant Z-A', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z', orderNeighborhoodDesc: 'QUARTIER par ordre décroissant Z-A'
+        nameHeader: 'Nom', neighborhoodHeader: 'Quartier', variablePlace: 'lieu variable', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z'
       },
       filters: {
         title: 'Filtres',
@@ -486,7 +482,7 @@ const resources = {
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
       common: { back: 'Назад', details: 'подробнее', selectLanguage: 'Выберите язык', changeDistance: 'Изменить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
       whereIsToday: { title: 'Ну что, где сегодня?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Открываются сегодня'},
-      list: { nameHeader: 'Название', neighborhoodHeader: 'Район', variablePlace: 'изменяемое место', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNameDesc: 'ИМЯ по убыванию Z-A', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z', orderNeighborhoodDesc: 'РАЙОН по убыванию Z-A' },
+      list: { nameHeader: 'Название', neighborhoodHeader: 'Район', variablePlace: 'изменяемое место', typeHeader: 'Тип', orderNameAsc: 'ИМЯ по возрастанию A-Z', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z' },
       filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы ▼', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь указаны все филиалы этого места и их адреса. Вы также можете построить маршрут как вам удобнее: через Google Maps или заказав Uber :)', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
@@ -537,7 +533,7 @@ const resources = {
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '查看详情', selectLanguage: '选择语言', changeDistance: '更改距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       whereIsToday: { title: '那今天去哪儿?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: '今天开放' },
-      list: { nameHeader: '名称', neighborhoodHeader: '街区', variablePlace: '位置可变', typeHeader: '类型', orderNameAsc: '按名称升序 A-Z', orderNameDesc: '按名称降序 Z-A', orderNeighborhoodAsc: '按街区升序 A-Z', orderNeighborhoodDesc: '按街区降序 Z-A' },
+      list: { nameHeader: '名称', neighborhoodHeader: '街区', variablePlace: '位置可变', typeHeader: '类型', orderNameAsc: '按名称升序 A-Z', orderNeighborhoodAsc: '按街区升序 A-Z' },
       filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', visitModalTitle: '关于该地点', visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。', visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。', neverEmphasis: '', priceLabel: '价格:', environmentTypeLabel: '环境类型:', hoursTitle: '营业时间', viewHours: '查看时间 ▼', locationTitle: '位置', openNow: '正在营业', closedNow: '已打烊', locationDescription: '这里列出了这家店的所有门店与地址。你也可以按自己喜欢的方式规划路线：用 Google 地图，或叫一辆 Uber :)', streetPrefix: '街道：', googleMapsButton: '在 Google 地图中打开', instagramTitle: 'Instagram', instagramSubtitle: '关注官方账号：', follow: '关注', phoneTitle: '电话', phonesSubtitle: '这些是该地点的官方联系方式', menuTitle: '菜单', menuSubtitle: '查看店铺菜单', menuButton: '打开菜单', websiteTitle: '网站', websiteSubtitle: '访问该地点的网站并查看详细信息', websiteButton: '访问网站', notesTitle: '备注', reportProblem: '报告问题', visitModalEnding: '' },
       placeList: {
@@ -625,9 +621,7 @@ const resources = {
         neighborhoodHeader: 'Neighborhood',
         typeHeader: 'Type',
         orderNameAsc: 'NAME ascending A-Z',
-        orderNameDesc: 'NAME descending Z-A',
-        orderNeighborhoodAsc: 'NEIGHBORHOOD ascending A-Z',
-        orderNeighborhoodDesc: 'NEIGHBORHOOD descending Z-A'
+        orderNeighborhoodAsc: 'NEIGHBORHOOD ascending A-Z'
       },
       filters: {
         title: 'Filters',
@@ -798,7 +792,7 @@ const resources = {
         noPlaces: 'Keine Orte gefunden.',
         version: 'Version'
       },
-      list: { nameHeader: 'NAME', neighborhoodHeader: 'STADTTEIL', variablePlace: 'variabler Ort', typeHeader: 'Typ', orderNameAsc: 'NAME in aufsteigender Reihenfolge A-Z', orderNameDesc: 'NAME in absteigender Reihenfolge Z-A', orderNeighborhoodAsc: 'STADTTEIL in aufsteigender Reihenfolge A-Z', orderNeighborhoodDesc: 'STADTTEIL in absteigender Reihenfolge Z-A' },
+      list: { nameHeader: 'NAME', neighborhoodHeader: 'STADTTEIL', variablePlace: 'variabler Ort', typeHeader: 'Typ', orderNameAsc: 'NAME in aufsteigender Reihenfolge A-Z', orderNeighborhoodAsc: 'STADTTEIL in aufsteigender Reihenfolge A-Z' },
       footer: { home: 'Start', search: 'Suchen', about: 'Über' },
       placeDetail: {
         hoursTitle: 'Öffnungszeiten',
@@ -902,7 +896,7 @@ const resources = {
         noPlaces: '場所が見つかりません。',
         version: 'バージョン'
       },
-      list: { nameHeader: '名前', neighborhoodHeader: '地区', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNameDesc: '名前 降順 Z-A', orderNeighborhoodAsc: '地区 昇順 A-Z', orderNeighborhoodDesc: '地区 降順 Z-A' },
+      list: { nameHeader: '名前', neighborhoodHeader: '地区', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNeighborhoodAsc: '地区 昇順 A-Z' },
       footer: { home: 'ホーム', search: '検索', about: '概要' },
       placeDetail: {
         hoursTitle: '営業時間',
@@ -1036,7 +1030,7 @@ const resources = {
         openNowLabel: 'مفتوح الآن',
         button: 'الفلاتر'
       },
-      list: { nameHeader: 'الاسم', neighborhoodHeader: 'الحي', typeHeader: 'النوع', orderNameAsc: 'الاسم بترتيب تصاعدي A-Z', orderNameDesc: 'الاسم بترتيب تنازلي Z-A', orderNeighborhoodAsc: 'الحي بترتيب تصاعدي A-Z', orderNeighborhoodDesc: 'الحي بترتيب تنازلي Z-A' },
+      list: { nameHeader: 'الاسم', neighborhoodHeader: 'الحي', typeHeader: 'النوع', orderNameAsc: 'الاسم بترتيب تصاعدي A-Z', orderNeighborhoodAsc: 'الحي بترتيب تصاعدي A-Z' },
       footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
       placeDetail: {
         hoursTitle: 'ساعات العمل',
@@ -1139,7 +1133,7 @@ const resources = {
         noPlaces: 'Nessun luogo trovato.',
         version: 'Versione'
       },
-      list: { nameHeader: 'NOME', neighborhoodHeader: 'QUARTIERE', typeHeader: 'Tipo', orderNameAsc: 'NOME in ordine crescente A-Z', orderNameDesc: 'NOME in ordine decrescente Z-A', orderNeighborhoodAsc: 'QUARTIERE in ordine crescente A-Z', orderNeighborhoodDesc: 'QUARTIERE in ordine decrescente Z-A' },
+      list: { nameHeader: 'NOME', neighborhoodHeader: 'QUARTIERE', typeHeader: 'Tipo', orderNameAsc: 'NOME in ordine crescente A-Z', orderNeighborhoodAsc: 'QUARTIERE in ordine crescente A-Z' },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       placeDetail: {
         hoursTitle: 'Orari di apertura',
@@ -1237,7 +1231,7 @@ const resources = {
         noPlaces: 'Geen plaatsen gevonden.',
         version: 'Versie'
       },
-      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', typeHeader: 'Type', orderNameAsc: 'NAAM oplopend A-Z', orderNameDesc: 'NAAM aflopend Z-A', orderNeighborhoodAsc: 'BUURT oplopend A-Z', orderNeighborhoodDesc: 'BUURT aflopend Z-A' },
+      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', typeHeader: 'Type', orderNameAsc: 'NAAM oplopend A-Z', orderNeighborhoodAsc: 'BUURT oplopend A-Z' },
       footer: { home: 'Home', search: 'Zoeken', about: 'Over' },
       placeDetail: {
         hoursTitle: 'Openingstijden',
@@ -1325,7 +1319,7 @@ const resources = {
       common: {
         back: 'Geri', details: 'detayları gör', selectLanguage: 'Bir dil seçin', changeDistance: 'Mesafeyi değiştir', all: 'Hepsi', filter: 'Filtre:', close: 'Kapat', loading: 'Yükleniyor…', loadError: 'Veri yüklenirken hata oluştu.', noPlaces: 'Hiç yer bulunamadı.', version: 'Sürüm'
       },
-      list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNameDesc: 'İSİM azalan sırada Z-A', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z', orderNeighborhoodDesc: 'MAHALLE azalan sırada Z-A' },
+      list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
       placeDetail: {
         hoursTitle: 'Çalışma saatleri',
@@ -1412,7 +1406,7 @@ const resources = {
       common: {
         back: 'Wstecz', details: 'zobacz szczegóły', selectLanguage: 'Wybierz język', changeDistance: 'Zmień odległość', all: 'Wszystko', filter: 'Filtr:', close: 'Zamknij', loading: 'Ładowanie…', loadError: 'Błąd ładowania danych.', noPlaces: 'Nie znaleziono miejsc.', version: 'Wersja'
       },
-      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNameDesc: 'NAZWA malejąco Z-A', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z', orderNeighborhoodDesc: 'DZIELNICA malejąco Z-A' },
+      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z' },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
       placeDetail: {
         hoursTitle: 'Godziny otwarcia',

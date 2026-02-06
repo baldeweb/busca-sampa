@@ -109,9 +109,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const [isListFading, setIsListFading] = useState<boolean>(false);
   const ORDER_OPTIONS = [
     { value: 'name-asc' },
-    { value: 'name-desc' },
-    { value: 'type-asc' },
-    { value: 'type-desc' },
+    { value: 'neighborhood-asc' },
   ];
   const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
   // const [showFiltersModal, setShowFiltersModal] = useState(false);
@@ -204,14 +202,12 @@ export const NeighborhoodListPage: React.FC = () => {
       case 'name-asc':
         arr.sort((a, b) => a.name.localeCompare(b.name));
         break;
-      case 'name-desc':
-        arr.sort((a, b) => b.name.localeCompare(a.name));
-        break;
-      case 'type-asc':
-        arr.sort((a, b) => getPlaceTypeLabel(a.type).localeCompare(getPlaceTypeLabel(b.type)));
-        break;
-      case 'type-desc':
-        arr.sort((a, b) => getPlaceTypeLabel(b.type).localeCompare(getPlaceTypeLabel(a.type)));
+      case 'neighborhood-asc':
+        arr.sort((a, b) => {
+          const na = a.addresses?.[0]?.neighborhood || a.neighborhood || '';
+          const nb = b.addresses?.[0]?.neighborhood || b.neighborhood || '';
+          return na.localeCompare(nb);
+        });
         break;
     }
     return arr;
@@ -427,9 +423,7 @@ export const NeighborhoodListPage: React.FC = () => {
               {showSortingMenu && (
                 <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
                   <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'name-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('name-asc'); setShowSortingMenu(false); }}>{t('filters.sortNameAsc', { defaultValue: 'Nome (A-Z)' })}</button>
-                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'name-desc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('name-desc'); setShowSortingMenu(false); }}>{t('filters.sortNameDesc', { defaultValue: 'Nome (Z-A)' })}</button>
-                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'type-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('type-asc'); setShowSortingMenu(false); }}>{t('filters.sortTypeAsc', { defaultValue: 'Tipo (A-Z)' })}</button>
-                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'type-desc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('type-desc'); setShowSortingMenu(false); }}>{t('filters.sortTypeDesc', { defaultValue: 'Tipo (Z-A)' })}</button>
+                  <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'neighborhood-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('neighborhood-asc'); setShowSortingMenu(false); }}>{t('filters.sortNeighborhoodAsc', { defaultValue: 'Bairro (A-Z)' })}</button>
                 </div>
               )}
             </div>
