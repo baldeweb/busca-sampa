@@ -36,7 +36,6 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     description,
     type,
     priceRange,
-    icon,
     openingDays,
     isOpenNow,
     neighborhood,
