@@ -158,7 +158,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             {/* Main Content (match NeighborhoodList full-bleed + inner padding) */}
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#F5F5F5] text-black">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-2">
-                        <div className="border-b-2 border-bs-red px-0 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
+                        <div className="px-0 pt-6 sm:pt-10 pb-6 sm:pb-10 flex items-center">
                             {icon || <span className="text-4xl sm:text-5xl mr-4">☕</span>}
                             <div>
                                 <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black" />
@@ -180,30 +180,33 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     </div>
                                 )}
                             </div>
-                            <span className="ml-auto bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
+                            <div className="ml-auto flex flex-col items-end gap-1">
+                                {isOpenNow ? (
+                                    <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
+                                ) : (
+                                    <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                                )}
+                                <span className="bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
+                            </div>
                         </div>
 
                         {/* Horário de funcionamento */}
-                        <div className="px-0 pt-2 pb-8">
+                        <div className="px-0 pt-2 pb-8 mt-8">
                             <div className="flex items-center justify-between">
                                 <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
-                                <div className="flex flex-col items-end justify-center gap-1 mt-8">
-                                    {isOpenNow ? (
-                                        <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
-                                    ) : (
-                                        <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
-                                    )}
-                                    <span
-                                        className="text-sm sm:text-base text-black cursor-pointer pt-2"
+                                <div className="flex flex-col items-end justify-center gap-1">
+                                    <button
+                                        type="button"
+                                        className="px-3 py-1 text-[0.7rem] sm:text-[0.75rem] font-semibold"
                                         onClick={onShowOpeningHours}
                                     >
                                         {t('placeDetail.viewHours')}
-                                    </span>
+                                    </button>
                                 </div>
                             </div>
                             <div className="mt-2 space-y-2 mb-2">
                                 {openingPatternId === 'CHECK_AVAILABILITY_DAYTIME' ? (
-                                    <div className="text-sm text-gray-700">{t('openingHours.checkAvailabilityMessage')}</div>
+                                    <div className="text-sm text-gray-700 mr-32">{t('openingHours.checkAvailabilityMessage')}</div>
                                 ) : (
                                     openingDays.map((day, idx) => {
                                         const normalized = String(day).toLowerCase();
@@ -227,7 +230,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
                         {/* Localização: renderiza endereços quando disponíveis; caso contrário usa os props legados */}
                         {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
-                            <div className="border-t-2 border-bs-red px-0 py-8">
+                            <div className="px-0 py-8">
                                 <div className="flex items-center justify-between">
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 </div>
