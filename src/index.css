@@ -135,6 +135,13 @@ button.btn-plain {
   font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
+/* Category cards should not inherit the global button radius */
+.category-card {
+  border-radius: 8px !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
 /* Footer labels use ScienceGothic-Regular */
 .footer-label,
 .footer-label * {

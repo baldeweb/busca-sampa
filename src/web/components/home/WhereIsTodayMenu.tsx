@@ -1,4 +1,4 @@
-import { useRef, useState, type ReactElement } from "react";
+import { useState, type ReactElement } from "react";
 import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
@@ -33,7 +33,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
     // Map tag/title to project icons in `src/assets/imgs/icons`
     function resolveIcon(tags: string[]): ReactElement {
-        const cls = "w-10 h-10 sm:w-14 sm:h-14 object-contain";
+        const cls = "w-5 h-5 sm:w-7 sm:h-7 object-contain";
         // Todas as imagens do carrossel não podem ser arrastadas!
         const imgProps = { draggable: false, onDragStart: (e: React.DragEvent) => e.preventDefault() };
         const normalized = (tags || [])
@@ -53,48 +53,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         if (normalized.includes('STORES')) return <img src={icStores} className={cls} alt="" {...imgProps} />;
         return <img src={icFlagSP} className={cls} alt="" {...imgProps} />;
     }
-    // Drag-to-scroll (desktop):
-    const isDragging = useRef(false);
-    const startX = useRef(0);
-    const scrollLeft = useRef(0);
-
-    function handleMouseDown(e: React.MouseEvent<HTMLDivElement>) {
-        if (!listRef.current) return;
-        isDragging.current = true;
-        startX.current = e.pageX - listRef.current.offsetLeft;
-        scrollLeft.current = listRef.current.scrollLeft;
-        listRef.current.classList.add('cursor-grabbing');
-    }
-    function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-        if (!isDragging.current || !listRef.current) return;
-        e.preventDefault();
-        const x = e.pageX - listRef.current.offsetLeft;
-        const walk = (x - startX.current) * 1.2; // scroll speed
-        listRef.current.scrollLeft = scrollLeft.current - walk;
-    }
-    function handleMouseUp() {
-        isDragging.current = false;
-        if (listRef.current) listRef.current.classList.remove('cursor-grabbing');
-    }
-    function handleMouseLeave() {
-        isDragging.current = false;
-        if (listRef.current) listRef.current.classList.remove('cursor-grabbing');
-    }
-
-    const listRef = useRef<HTMLDivElement | null>(null);
-
-    function handleKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
-        if (!listRef.current) return;
-        const scrollAmount = 140; // approximate card width + gap
-        if (e.key === "ArrowRight") {
-            e.preventDefault();
-            listRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        } else if (e.key === "ArrowLeft") {
-            e.preventDefault();
-            listRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-        }
-    }
-
     const { t } = useTranslation();
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-6 sm:py-12">
@@ -108,35 +66,18 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             {!loading && !error && (
                 <div className="relative mt-4">
                     <div
-                        ref={listRef}
-                        className="flex flex-nowrap gap-2 overflow-x-auto py-3 pl-4 pr-0 sm:px-12 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] focus:outline-none scroll-smooth select-none cursor-grab"
+                        className="grid grid-cols-3 gap-3 py-3 pr-4 sm:pr-12 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]"
                         role="listbox"
                         aria-label="Categorias"
-                        tabIndex={0}
-                        onKeyDown={handleKeyDown}
-                        onMouseDown={handleMouseDown}
-                        onMouseMove={handleMouseMove}
-                        onMouseUp={handleMouseUp}
-                        onMouseLeave={handleMouseLeave}
-                        // Não permite seleção de texto durante drag
-                        style={{ userSelect: isDragging.current ? 'none' : undefined }}
                     >
-                        <style>{`.flex.flex-nowrap::-webkit-scrollbar{display:none}`}</style>
                         {/* Static option: 'Abrem hoje' (opens today) */}
                         {(() => {
                             const raw = t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' });
-                            const parts = (raw || '').trim().split(/\s+/);
-                            const labelNode = parts.length > 1 ? (
-                                <>
-                                    <span className="block whitespace-normal">{parts[0]}</span>
-                                    <span className="block whitespace-normal">{parts.slice(1).join(' ')}</span>
-                                </>
-                            ) : raw;
                             return (
                                 <CategoryCard
                                     key="opens-today"
-                                    label={labelNode}
-                                    icon={<img src={icOpenToday} className="w-10 h-10 sm:w-14 sm:h-14 object-contain" alt="" />}
+                                    label={raw}
+                                    icon={<img src={icOpenToday} className="w-5 h-5 sm:w-7 sm:h-7 object-contain" alt="" />}
                                     selected={selectedId === -999}
                                     onClick={() => {
                                         setSelectedId(-999);
@@ -174,7 +115,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
                             // titles we want to force-break into two lines
                             const forceBreakKeys = new Set([
-                                'vida noturna',
                                 'pontos turísticos',
                                 'pontos turisticos'
                             ]);
@@ -233,8 +173,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                         });
                     })()}
                     </div>
-                    {/* Right gradient overlay to indicate more items to scroll */}
-                    <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#48464C] to-transparent" />
                 </div>
             )}
             </div>
