@@ -291,7 +291,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                             <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-red">
                                                                 <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                             </a>
-                                                            <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
+                                                            <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-dark">
                                                                 <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                             </a>
                                                         </div>
@@ -310,7 +310,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-red">
                                                         <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                     </a>
-                                                    <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address || '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-[#0F0D13] text-white px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center">
+                                                    <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address || '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-dark">
                                                         <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                     </a>
                                                 </div>
@@ -350,6 +350,11 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     const phoneDisplay = formatPhoneForDisplay(raw);
                                                     return (
                                                         <div key={idx} className="flex items-center gap-2">
+                                                            {p.isWhatsApp && (
+                                                                <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label={`whatsapp-${idx}`} className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm btn-green">
+                                                                    <FaWhatsapp className="mr-2 text-base sm:text-lg" />WhatsApp
+                                                                </a>
+                                                            )}
                                                             <a href={telHref} aria-label={`call-${idx}`} className="inline-flex items-center bg-bs-red text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm btn-red">
                                                                 <FaPhone className="mr-2" />Ligar
                                                             </a>
@@ -357,11 +362,6 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                                 <span className="text-xs sm:text-sm text-gray-200 font-semibold">
                                                                     {phoneDisplay}
                                                                 </span>
-                                                            )}
-                                                            {p.isWhatsApp && (
-                                                                <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label={`whatsapp-${idx}`} className="inline-flex items-center bg-green-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded font-bold text-xs sm:text-sm">
-                                                                    <FaWhatsapp className="mr-2" />WhatsApp
-                                                                </a>
                                                             )}
                                                         </div>
                                                     );
