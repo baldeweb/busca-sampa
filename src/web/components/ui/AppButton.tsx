@@ -3,7 +3,7 @@ import { type ReactNode } from "react";
 interface AppButtonProps {
   children: ReactNode;
   onClick?: () => void;
-  variant?: "primary" | "outline" | "ghost";
+  variant?: "primary" | "outline" | "ghost" | "square";
   size?: "xxs" | "xs" | "sm" | "md";
   disabled?: boolean;
   className?: string;
@@ -30,6 +30,7 @@ export function AppButton({
     primary: "bg-bs-red text-white hover:bg-red-700",
     outline: "border border-white/25 text-white hover:border-bs-red",
     ghost: "text-gray-300 hover:text-white",
+    square: "border border-white/25 text-white hover:border-bs-red btn-square",
   };
   return (
     <button

@@ -383,7 +383,7 @@ export const NeighborhoodListPage: React.FC = () => {
                     setIsListFading(true);
                     setTimeout(() => { setSelectedType(null); setIsListFading(false); }, 220);
                   }}
-                  className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+                  className={`btn-square btn-red-outline w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                     selectedType === null ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
                   }`}
                 >
@@ -399,7 +399,7 @@ export const NeighborhoodListPage: React.FC = () => {
                       setIsListFading(true);
                       setTimeout(() => { setSelectedType(next); setIsListFading(false); }, 220);
                     }}
-                    className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+                    className={`btn-square btn-hover-red w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
                       selectedType === env.value ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
                     } ${idx >= 4 ? 'hidden sm:block' : ''}`}
                   >
@@ -412,7 +412,7 @@ export const NeighborhoodListPage: React.FC = () => {
                     type="button"
                     onClick={() => setShowEnvironmentModal(true)}
                     size="md"
-                    className={`w-full py-4 font-semibold text-base rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
+                    className={`btn-square-dark btn-hover-red w-full py-4 font-semibold text-xs rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
                   >
                     {t('home.viewMore')}
                   </ActionButton>
@@ -438,7 +438,7 @@ export const NeighborhoodListPage: React.FC = () => {
             <div className="relative">
               <button
                 type="button"
-                className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                 style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                 onClick={() => { setShowSortingMenu(v => !v); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
               >
@@ -457,7 +457,7 @@ export const NeighborhoodListPage: React.FC = () => {
             <div className="relative">
               <button
                 type="button"
-                className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                 style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                 onClick={() => { setShowHoursMenu(v => !v); setShowSortingMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
               >
@@ -476,7 +476,7 @@ export const NeighborhoodListPage: React.FC = () => {
             <div className="relative">
               <button
                 type="button"
-                className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                 style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                 onClick={() => { setShowScheduleMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
               >
@@ -497,7 +497,7 @@ export const NeighborhoodListPage: React.FC = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                  className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                   style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                   onClick={() => { setShowCityMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowPriceMenu(false); }}
                 >
@@ -520,7 +520,7 @@ export const NeighborhoodListPage: React.FC = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                  className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                   style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                   onClick={() => { setShowPriceMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
                 >
@@ -594,7 +594,7 @@ export const NeighborhoodListPage: React.FC = () => {
                           const cat = typeMap[place.type] || "restaurants";
                           navigate(`/${cat}/${slugify(place.name)}`);
                         }}
-                        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0"
+                        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 btn-hover-red"
                       >
                         {t('common.details')}
                       </AppButton>

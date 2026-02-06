@@ -602,7 +602,7 @@ export const PlaceListPage: React.FC = () => {
                                     onClick={() => {
                                         setSelectedEnv(null);
                                     }}
-                                    className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === null
+                                    className={`btn-square btn-red-outline w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === null
                                             ? 'bg-bs-red text-white border-bs-red'
                                             : 'bg-white text-black border-[#0F0D13]'
                                         }`}
@@ -618,7 +618,7 @@ export const PlaceListPage: React.FC = () => {
                                             const next = selectedEnv === env.value ? null : env.value;
                                             setSelectedEnv(next);
                                         }}
-                                        className={`w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === env.value
+                                        className={`btn-square btn-hover-red w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === env.value
                                                 ? 'bg-bs-red text-white border-bs-red'
                                                 : 'bg-white text-black border-[#0F0D13]'
                                             } ${idx >= 4 ? 'hidden sm:block' : ''}`}
@@ -632,7 +632,7 @@ export const PlaceListPage: React.FC = () => {
                                         type="button"
                                         onClick={() => setShowEnvironmentModal(true)}
                                         size="md"
-                                        className={`w-full py-4 font-semibold text-base rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
+                                        className={`btn-square-dark btn-hover-red w-full py-4 font-semibold text-xs rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
                                     >
                                         {t('home.viewMore')}
                                     </ActionButton>
@@ -657,7 +657,7 @@ export const PlaceListPage: React.FC = () => {
                             <div className="relative">
                                 <button
                                     type="button"
-                                    className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                     style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                                     onClick={() => { setShowSortingMenu((v) => !v); setShowHoursMenu(false); }}
                                 >
@@ -684,7 +684,7 @@ export const PlaceListPage: React.FC = () => {
                             <div className="relative">
                                 <button
                                     type="button"
-                                    className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                     style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                                     onClick={() => { setShowHoursMenu((v) => !v); setShowSortingMenu(false); }}
                                 >
@@ -714,7 +714,7 @@ export const PlaceListPage: React.FC = () => {
                             <div className="relative">
                                 <button
                                     type="button"
-                                    className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                     style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                                     onClick={() => { setShowScheduleMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
                                 >
@@ -734,7 +734,7 @@ export const PlaceListPage: React.FC = () => {
                                 <div className="relative">
                                     <button
                                         type="button"
-                                        className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                        className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                         style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                                         onClick={() => { setShowCityMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowPriceMenu(false); }}
                                     >
@@ -742,7 +742,7 @@ export const PlaceListPage: React.FC = () => {
                                         <img src={icArrowDown} alt="expand" className="w-3 h-3" />
                                     </button>
                                     {showCityMenu && (
-                                        <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
+                                        <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
                                             <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!cityFilter ? 'font-semibold' : ''}`} onClick={() => { setCityFilter(null); setShowCityMenu(false); }}>{t('filters.anyCity', { defaultValue: 'Qualquer cidade' })}</button>
                                             {cities.map(c => (
                                                 <button key={c} type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${cityFilter === c ? 'font-semibold' : ''}`} onClick={() => { setCityFilter(c); setShowCityMenu(false); }}>{c}</button>
@@ -756,7 +756,7 @@ export const PlaceListPage: React.FC = () => {
                                 <div className="relative">
                                     <button
                                         type="button"
-                                        className="px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
+                                        className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
                                         style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
                                         onClick={() => { /* toggle price menu */ setShowPriceMenu((v) => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
                                     >
@@ -835,7 +835,7 @@ export const PlaceListPage: React.FC = () => {
                                                     const slug = typeToSlug[placeTypeKey] || routeTypeLower;
                                                     navigate(`/${slug}/${slugify(place.name)}`);
                                                 }}
-                                                className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0"
+                                                className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 btn-hover-red"
                                             >
                                                 {t('common.details')}
                                             </AppButton>

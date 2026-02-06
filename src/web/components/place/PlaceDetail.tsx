@@ -135,7 +135,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                     <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
                         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
                             <SectionHeading title={t('placeDetail.visitModalTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
-                            <button onClick={() => setShowVisitModal(false)} className="text-white text-xl font-bold">×</button>
+                            <button onClick={() => setShowVisitModal(false)} className="btn-close-round text-xl font-bold">×</button>
                         </div>
                         <div className="p-5 text-center">
                             <p className="mb-2 text-sm text-gray-200">

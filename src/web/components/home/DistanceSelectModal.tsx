@@ -40,7 +40,7 @@ export function DistanceSelectModal({
                         <button
                             type="button"
                             onClick={onClose}
-                            className="text-lg font-bold leading-none hover:text-bs-red"
+                            className="btn-close-round text-lg font-bold hover:text-bs-red"
                         >
                             ×
                         </button>

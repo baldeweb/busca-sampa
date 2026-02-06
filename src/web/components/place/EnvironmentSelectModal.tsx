@@ -37,7 +37,7 @@ export function EnvironmentSelectModal({
                         <button
                             type="button"
                             onClick={onClose}
-                            className="text-lg font-bold leading-none hover:text-bs-red"
+                            className="btn-close-round text-lg font-bold hover:text-bs-red"
                         >
                             ×
                         </button>
@@ -52,7 +52,7 @@ export function EnvironmentSelectModal({
                         <button
                             type="button"
                             onClick={() => handleSelect(null)}
-                            className={`flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70 ${
+                            className={`btn-square flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70 ${
                                 selectedEnv === null ? 'bg-bs-red/50' : ''
                             }`}
                         >
@@ -65,7 +65,7 @@ export function EnvironmentSelectModal({
                             <button
                                 type="button"
                                 onClick={() => handleSelect(env)}
-                                className={`flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70 ${
+                                className={`btn-square flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70 ${
                                     selectedEnv === env.value ? 'bg-bs-red/50' : ''
                                 }`}
                             >

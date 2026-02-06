@@ -59,7 +59,7 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
       <div className="bg-bs-card rounded-app shadow-lg w-[90vw] max-w-md" onKeyDown={handleKeyDown}>
         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
           <SectionHeading id="opening-hours-heading" title={t('openingHours.title')} underline={false} sizeClass="text-lg" />
-          <button ref={closeBtnRef} onClick={onClose} className="text-white text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70 rounded" aria-label={t('common.close')}>×</button>
+          <button ref={closeBtnRef} onClick={onClose} className="btn-close-round text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70" aria-label={t('common.close')}>×</button>
         </div>
         {customMessage ? (
           <div className="p-5 text-center">
