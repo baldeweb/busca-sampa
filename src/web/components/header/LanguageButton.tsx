@@ -44,7 +44,7 @@ export function LanguageButton() {
         <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex flex-row items-center gap-2 whitespace-nowrap rounded-md border border-white/30 bg-bs-card px-2 py-1 text-[10px] font-medium uppercase transition-colors hover:border-bs-red"
+            className="inline-flex flex-row items-center gap-2 whitespace-nowrap rounded-md border border-white/30 bg-bs-card px-2 py-1 text-[10px] font-medium uppercase transition-colors hover:border-bs-red w-auto fixed top-[24px] right-4 z-50"
         >
             <img
                 src={currentFlag}

@@ -18,7 +18,7 @@ export function CategoryCard({ label, icon, selected, lightSelected = false, onC
       aria-selected={selected}
       tabIndex={index === 0 ? 0 : -1}
       className={[
-        "category-card btn-hover-red flex items-center gap-2 w-full border px-3 text-left",
+        "category-card btn-hover-red flex items-center gap-2 w-full border px-1 sm:px-2 text-left",
         selected
           ? (lightSelected ? "border-bs-red bg-[#F5F5F5] text-black shadow" : "border-bs-red bg-bs-card-light text-black shadow")
           : "border-[#0F0D13] bg-[#E5E5E5] text-black hover:border-bs-red",
@@ -26,7 +26,7 @@ export function CategoryCard({ label, icon, selected, lightSelected = false, onC
       ].join(" ")}
     >
       <div className="flex items-center py-1 justify-center ml-2" aria-hidden="true">{icon}</div>
-      <span className="category-card-label py-1 text-[0.65rem] sm:text-[0.80rem] font-semibold leading-[1.05] whitespace-normal">
+      <span className="category-card-label py-1 text-[0.70rem] sm:text-[0.85rem] font-semibold leading-[1.05] whitespace-normal">
         {label}
       </span>
     </button>

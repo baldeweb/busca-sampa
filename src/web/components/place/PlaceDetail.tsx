@@ -191,7 +191,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         </div>
 
                         {/* Horário de funcionamento */}
-                        <div className="px-0 pt-2 pb-8 mt-8">
+                        <div className="px-4 sm:px-4 pt-2 pb-8 mt-8">
                             <div className="flex items-center justify-between">
                                 <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 <div className="flex flex-col items-end justify-center gap-1">
@@ -230,7 +230,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
                         {/* Localização: renderiza endereços quando disponíveis; caso contrário usa os props legados */}
                         {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
-                            <div className="px-0 py-8">
+                            <div className="px-4 sm:px-4 py-8">
                                 <div className="flex items-center justify-between">
                                     <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
                                 </div>
@@ -326,6 +326,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 </div>
             </section>
 
+            { /* Midias Sociais */ }
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] mt-4">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-8 sm:py-10 h-full flex flex-col justify-between text-white">
                         <div>
