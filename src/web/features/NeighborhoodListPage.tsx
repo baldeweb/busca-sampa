@@ -8,13 +8,12 @@ import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useTranslation } from 'react-i18next';
 import { useOpeningPatterns } from '@/web/hooks/useOpeningPatterns';
 import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
-import { ActionButton } from '@/web/components/ui/ActionButton';
 import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
+import { FilterBar } from '@/web/components/ui/FilterBar';
 // import { FiltersModal } from '@/web/components/place/FiltersModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
-import icArrowDown from '@/assets/imgs/icons/ic_arrow_down.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
@@ -26,8 +25,6 @@ import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icPin from '@/assets/imgs/icons/ic_pin.png';
 import icClock from '@/assets/imgs/icons/ic_clock.png';
 import { AppButton } from '@/web/components/ui/AppButton';
-import { PriceFilterList } from '@/web/components/place/PriceFilterList';
-import icFilter from '@/assets/imgs/icons/ic_filter.png';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -392,128 +389,38 @@ export const NeighborhoodListPage: React.FC = () => {
         </section>
       )}
 
-      {/* Inline filters (same block used in places list) */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-        <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
-          <div className="flex flex-col justify-start gap-2">
-            {/* Heading: icon + label styled like in places */}
-            <div className="flex items-center">
-              <h3 className="font-bold text-lg text-black">{t('filters.title', { defaultValue: 'Filtros' })}</h3>
-            </div>
-            {/* Buttons below the title */}
-            <div className="flex items-start gap-2">
-              <img src={icFilter} alt="filter" className="w-5 h-5 mr-1 mt-1" />
-              <div className="flex flex-wrap items-center gap-2 w-full">
-                {/* Ordenação */}
-                <div className="relative">
-                  <button
-                    type="button"
-                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                    style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                    onClick={() => { setShowSortingMenu(v => !v); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
-                  >
-                    <span className="mr-2">{t('filters.sortingTitle', { defaultValue: 'Ordenação' })}</span>
-                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
-                  </button>
-                  {showSortingMenu && (
-                    <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'name-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('name-asc'); setShowSortingMenu(false); }}>{t('filters.sortNameAsc', { defaultValue: 'Nome (A-Z)' })}</button>
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === 'neighborhood-asc' ? 'font-semibold' : ''}`} onClick={() => { setOrder('neighborhood-asc'); setShowSortingMenu(false); }}>{t('filters.sortNeighborhoodAsc', { defaultValue: 'Bairro (A-Z)' })}</button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Horários */}
-                <div className="relative">
-                  <button
-                    type="button"
-                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                    style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                    onClick={() => { setShowHoursMenu(v => !v); setShowSortingMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
-                  >
-                    <span className="mr-2">{t('filters.hoursTitle', { defaultValue: 'Horários' })}</span>
-                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
-                  </button>
-                  {showHoursMenu && (
-                    <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!filterOpenNow ? 'font-semibold' : ''}`} onClick={() => { setFilterOpenNow(false); setShowHoursMenu(false); }}>{t('filters.anyHour', { defaultValue: 'Qualquer horário' })}</button>
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${filterOpenNow ? 'font-semibold' : ''}`} onClick={() => { setFilterOpenNow(true); setShowHoursMenu(false); }}>{t('filters.openNow', { defaultValue: 'Aberto agora' })}</button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Agendar */}
-                <div className="relative">
-                  <button
-                    type="button"
-                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                    style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                    onClick={() => { setShowScheduleMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowCityMenu(false); setShowPriceMenu(false); }}
-                  >
-                    <span className="mr-2">{t('filters.scheduleTitle', { defaultValue: 'Agendar' })}</span>
-                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
-                  </button>
-                  {showScheduleMenu && (
-                    <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'any' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('any'); setShowScheduleMenu(false); }}>{t('filters.anySchedule', { defaultValue: 'Qualquer' })}</button>
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'required' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('required'); setShowScheduleMenu(false); }}>{t('filters.scheduleRequired', { defaultValue: 'Necessário agendar' })}</button>
-                      <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === 'not-required' ? 'font-semibold' : ''}`} onClick={() => { setScheduleFilter('not-required'); setShowScheduleMenu(false); }}>{t('filters.scheduleNotRequired', { defaultValue: 'Não precisa agendar' })}</button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Cidade (se houver mais de uma) */}
-                {(cities.length > 1) && (
-                  <div className="relative">
-                    <button
-                      type="button"
-                      className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                      style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                      onClick={() => { setShowCityMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowPriceMenu(false); }}
-                    >
-                      <span className="mr-2">{t('filters.cityTitle', { defaultValue: 'Cidade' })}</span>
-                      <img src={icArrowDown} alt="expand" className="w-3 h-3" />
-                    </button>
-                    {showCityMenu && (
-                      <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                        <button type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === null ? 'font-semibold' : ''}`} onClick={() => { setSelectedCity(null); setShowCityMenu(false); }}>{t('filters.anyCity', { defaultValue: 'Qualquer cidade' })}</button>
-                        {cities.map(c => (
-                          <button key={c} type="button" className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === c ? 'font-semibold' : ''}`} onClick={() => { setSelectedCity(c); setShowCityMenu(false); }}>{c}</button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {/* Preço */}
-                {(priceOptions.length >= 1) && (
-                  <div className="relative">
-                    <button
-                      type="button"
-                      className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                      style={{ background: '#F5F5F5', borderColor: '#403E44', color: '#0F0D13' }}
-                      onClick={() => { setShowPriceMenu(v => !v); setShowSortingMenu(false); setShowHoursMenu(false); setShowScheduleMenu(false); setShowCityMenu(false); }}
-                    >
-                      <span className="mr-2">{t('filters.priceTitle', { defaultValue: 'Preço' })}</span>
-                      <img src={icArrowDown} alt="expand" className="w-3 h-3" />
-                    </button>
-                    {showPriceMenu && (
-                      <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                        <PriceFilterList
-                          options={priceOptions}
-                          selected={priceFilter}
-                          anyLabel={t('filters.anyPrice', { defaultValue: 'Qualquer preço' })}
-                          onSelect={(v) => { setPriceFilter(v); setShowPriceMenu(false); }}
-                        />
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <FilterBar
+        orderOptions={ORDER_OPTIONS}
+        order={order}
+        onOrderSelect={(value) => setOrder(value)}
+        filterOpenNow={filterOpenNow}
+        onSelectOpenNow={() => setFilterOpenNow(true)}
+        onSelectAnyHour={() => setFilterOpenNow(false)}
+        scheduleFilter={scheduleFilter}
+        onSelectSchedule={(value) => setScheduleFilter(value)}
+        cities={cities}
+        selectedCity={selectedCity}
+        onSelectCity={(value) => setSelectedCity(value)}
+        priceOptions={priceOptions}
+        priceFilter={priceFilter}
+        onSelectPrice={(value) => setPriceFilter(value)}
+        showSortingMenu={showSortingMenu}
+        setShowSortingMenu={setShowSortingMenu}
+        showHoursMenu={showHoursMenu}
+        setShowHoursMenu={setShowHoursMenu}
+        showScheduleMenu={showScheduleMenu}
+        setShowScheduleMenu={setShowScheduleMenu}
+        showCityMenu={showCityMenu}
+        setShowCityMenu={setShowCityMenu}
+        showPriceMenu={showPriceMenu}
+        setShowPriceMenu={setShowPriceMenu}
+        openNowLabelKey="filters.openNow"
+        openNowLabelDefault="Aberto agora"
+        anyHourLabelKey="filters.anyHour"
+        anyHourLabelDefault="Qualquer horário"
+        showCityFilter={cities.length > 1}
+        showPriceFilter={priceOptions.length >= 1}
+      />
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
       <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
