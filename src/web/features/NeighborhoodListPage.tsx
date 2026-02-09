@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { useOpeningPatterns } from '@/web/hooks/useOpeningPatterns';
 import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import { ActionButton } from '@/web/components/ui/ActionButton';
+import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
 // import { FiltersModal } from '@/web/components/place/FiltersModal';
@@ -375,52 +376,18 @@ export const NeighborhoodListPage: React.FC = () => {
       {environments.length > 0 && (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
-            <h3 className="font-bold text-base sm:text-lg mb-2 mt-4 px-4 sm:px-0">{t('placeList.environmentTitle') || 'Tipo de lugar:'}</h3>
-            <div className="bg-[#FFFFFF] text-black pb-4">
-              <div className="grid grid-cols-3 min-[790px]:grid-cols-5 gap-4 text-xs w-full px-4 min-[790px]:px-0">
-                {/* Botão "Todos" */}
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsListFading(true);
-                    setTimeout(() => { setSelectedType(null); setIsListFading(false); }, 220);
-                  }}
-                  className={`btn-square btn-red-outline w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
-                    selectedType === null ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
-                  }`}
-                >
-                  {t('common.all')}
-                </button>
-                {/* Primeiros 4 tipos em mobile, 8 em desktop */}
-                {environments.slice(0, 8).map((env, idx) => (
-                  <button
-                    key={env.value}
-                    type="button"
-                    onClick={() => {
-                      const next = selectedType === env.value ? null : env.value;
-                      setIsListFading(true);
-                      setTimeout(() => { setSelectedType(next); setIsListFading(false); }, 220);
-                    }}
-                    className={`btn-square btn-hover-red w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
-                      selectedType === env.value ? 'bg-bs-red text-white border-bs-red' : 'bg-white text-black border-[#0F0D13]'
-                    } ${idx >= 4 ? 'hidden sm:block' : ''}`}
-                  >
-                    {env.label}
-                  </button>
-                ))}
-                {/* Botão "Ver mais" */}
-                {environments.length > 4 && (
-                  <ActionButton
-                    type="button"
-                    onClick={() => setShowEnvironmentModal(true)}
-                    size="md"
-                    className={`btn-square-dark btn-hover-red w-full py-4 font-semibold text-xs rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
-                  >
-                    {t('home.viewMore')}
-                  </ActionButton>
-                )}
-              </div>
-            </div>
+            <EnvironmentGrid
+              environments={environments}
+              selectedEnv={selectedType}
+              onSelect={(value) => {
+                setIsListFading(true);
+                setTimeout(() => {
+                  setSelectedType(value);
+                  setIsListFading(false);
+                }, 220);
+              }}
+              onViewMore={() => setShowEnvironmentModal(true)}
+            />
           </div>
         </section>
       )}
@@ -620,7 +587,10 @@ export const NeighborhoodListPage: React.FC = () => {
           onSelect={(env) => {
             const next = env?.value || null;
             setIsListFading(true);
-            setTimeout(() => { setSelectedType(next); setIsListFading(false); }, 220);
+            setTimeout(() => {
+              setSelectedType(next);
+              setIsListFading(false);
+            }, 220);
           }}
         />
       )}

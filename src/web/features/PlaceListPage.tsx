@@ -30,6 +30,7 @@ import icPin from '@/assets/imgs/icons/ic_pin.png';
 import icClock from '@/assets/imgs/icons/ic_clock.png';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { AppButton } from '@/web/components/ui/AppButton';
+import EnvironmentGrid from "../components/ui/EnvironmentGrid";
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -593,52 +594,12 @@ export const PlaceListPage: React.FC = () => {
                     </div>
                     {/* Grid de tipos de ambiente */}
                     {environments.length > 0 && (
-                        <div className="bg-[#FFFFFF] text-black pb-4">
-                            <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
-                            <div className="grid grid-cols-3 min-[790px]:grid-cols-5 gap-2 text-xs w-full px-4 min-[790px]:px-0">
-                                {/* Botão "Todos" */}
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        setSelectedEnv(null);
-                                    }}
-                                    className={`btn-square btn-red-outline w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === null
-                                            ? 'bg-bs-red text-white border-bs-red'
-                                            : 'bg-white text-black border-[#0F0D13]'
-                                        }`}
-                                >
-                                    {t('common.all')}
-                                </button>
-                                {/* Primeiros 4 tipos em mobile, 8 em desktop */}
-                                {environments.slice(0, 8).map((env, idx) => (
-                                    <button
-                                        key={env.value}
-                                        type="button"
-                                        onClick={() => {
-                                            const next = selectedEnv === env.value ? null : env.value;
-                                            setSelectedEnv(next);
-                                        }}
-                                        className={`btn-square btn-hover-red w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${selectedEnv === env.value
-                                                ? 'bg-bs-red text-white border-bs-red'
-                                                : 'bg-white text-black border-[#0F0D13]'
-                                            } ${idx >= 4 ? 'hidden sm:block' : ''}`}
-                                    >
-                                        {env.label}
-                                    </button>
-                                ))}
-                                {/* Botão "Ver mais" se houver mais de 4 em mobile ou mais de 8 em desktop */}
-                                {environments.length > 4 && (
-                                    <ActionButton
-                                        type="button"
-                                        onClick={() => setShowEnvironmentModal(true)}
-                                        size="md"
-                                        className={`btn-square-dark btn-hover-red w-full py-4 font-semibold text-xs rounded-md ${environments.length > 8 ? '' : 'sm:hidden'}`}
-                                    >
-                                        {t('home.viewMore')}
-                                    </ActionButton>
-                                )}
-                            </div>
-                        </div>
+                        <EnvironmentGrid
+                            environments={environments}
+                            selectedEnv={selectedEnv}
+                            onSelect={(value) => setSelectedEnv(value)}
+                            onViewMore={() => setShowEnvironmentModal(true)}
+                        />
                     )}
                 </div>
             </section>
