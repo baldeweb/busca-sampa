@@ -25,8 +25,8 @@ export function CategoryCard({ label, icon, selected, lightSelected = false, onC
         "transition-colors focus:outline-none focus:ring-2 focus:ring-bs-red/70 focus:ring-offset-2 focus:ring-offset-transparent",
       ].join(" ")}
     >
-      <div className="flex items-center py-1 justify-center ml-2" aria-hidden="true">{icon}</div>
-      <span className="category-card-label py-1 text-[0.75rem] sm:text-[0.90rem] font-semibold leading-[1.05] whitespace-normal">
+      <div className="flex items-center py-[-1rem] justify-center ml-2" aria-hidden="true">{icon}</div>
+      <span className="category-card-label py-[-1rem] text-[0.70rem] sm:text-[0.85rem] font-semibold leading-[1.00] whitespace-normal">
         {label}
       </span>
     </button>
