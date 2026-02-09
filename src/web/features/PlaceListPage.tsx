@@ -23,9 +23,7 @@ import icForfun from '@/assets/imgs/icons/ic_forfun.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
-import icPin from '@/assets/imgs/icons/ic_pin.png';
-import icClock from '@/assets/imgs/icons/ic_clock.png';
-import { AppButton } from '@/web/components/ui/AppButton';
+import { PlaceListItem } from "@/web/components/place/PlaceListItem";
 import EnvironmentGrid from "../components/ui/EnvironmentGrid";
 import { FilterBar } from "@/web/components/ui/FilterBar";
 
@@ -656,48 +654,30 @@ export const PlaceListPage: React.FC = () => {
                                         ? t('openingHours.checkAvailabilityLabel')
                                         : getOpeningDisplayForToday(place);
                                     return (
-                                        <div
+                                        <PlaceListItem
                                             key={`${place.id}-${selectedEnv || 'all'}`}
-                                            className="grid grid-cols-[auto,1fr,auto] grid-rows-[auto,auto] items-start gap-x-4 gap-y-0 bg-white border border-[#403E44] rounded-[8px] px-4 py-3 text-[#403E44]"
-                                        >
-                                            <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
-                                                <img src={getPlaceIconSrc(place.type)} alt="" className="w-7 h-7 object-contain" />
-                                            </div>
-                                            <div className="category-card-label font-bold uppercase tracking-[0.03em] text-sm sm:text-base min-w-0 col-start-2 col-end-4 row-start-1 truncate">{place.name}</div>
-                                            <div className="flex flex-col gap-1 min-w-0 col-start-2 row-start-2">
-                                                <div className="flex items-center text-xs sm:text-sm text-[#403E44] min-w-0">
-                                                    <img src={icPin} alt="" className="w-4 h-4 mr-2 flex-shrink-0" />
-                                                    <span className="truncate">{neighborhood}</span>
-                                                </div>
-                                                <div className="flex items-center text-xs sm:text-sm text-[#403E44] min-w-0">
-                                                    <img src={icClock} alt="" className="w-4 h-4 mr-2 flex-shrink-0" />
-                                                    <span className="truncate">{openingText}</span>
-                                                </div>
-                                            </div>
-                                            <AppButton
-                                                variant="outline"
-                                                size="xxs"
-                                                onClick={() => {
-                                                    const typeToSlug: Record<string, string> = {
-                                                        RESTAURANTS: "restaurants",
-                                                        BARS: "bars",
-                                                        COFFEES: "coffees",
-                                                        NIGHTLIFE: "nightlife",
-                                                        NATURE: "nature",
-                                                        TOURIST_SPOT: "tourist-spot",
-                                                        FORFUN: "forfun",
-                                                        STORES: "stores",
-                                                        PLEASURE: "pleasure",
-                                                    };
-                                                    const placeTypeKey = place.type || mappedType;
-                                                    const slug = typeToSlug[placeTypeKey] || routeTypeLower;
-                                                    navigate(`/${slug}/${slugify(place.name)}`);
-                                                }}
-                                                className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 btn-hover-red"
-                                            >
-                                                {t('common.details')}
-                                            </AppButton>
-                                        </div>
+                                            name={place.name}
+                                            neighborhood={neighborhood}
+                                            openingText={openingText}
+                                            iconSrc={getPlaceIconSrc(place.type)}
+                                            detailsLabel={t('common.details')}
+                                            onDetails={() => {
+                                                const typeToSlug: Record<string, string> = {
+                                                    RESTAURANTS: "restaurants",
+                                                    BARS: "bars",
+                                                    COFFEES: "coffees",
+                                                    NIGHTLIFE: "nightlife",
+                                                    NATURE: "nature",
+                                                    TOURIST_SPOT: "tourist-spot",
+                                                    FORFUN: "forfun",
+                                                    STORES: "stores",
+                                                    PLEASURE: "pleasure",
+                                                };
+                                                const placeTypeKey = place.type || mappedType;
+                                                const slug = typeToSlug[placeTypeKey] || routeTypeLower;
+                                                navigate(`/${slug}/${slugify(place.name)}`);
+                                            }}
+                                        />
                                     );
                                 })}
                             </div>

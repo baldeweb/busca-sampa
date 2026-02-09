@@ -22,9 +22,7 @@ import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
-import icPin from '@/assets/imgs/icons/ic_pin.png';
-import icClock from '@/assets/imgs/icons/ic_clock.png';
-import { AppButton } from '@/web/components/ui/AppButton';
+import { PlaceListItem } from '@/web/components/place/PlaceListItem';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -437,46 +435,29 @@ export const NeighborhoodListPage: React.FC = () => {
                     ? t('openingHours.checkAvailabilityLabel')
                     : getOpeningDisplayForToday(place);
                   return (
-                    <div
+                    <PlaceListItem
                       key={`${String(place.type)}:${String(place.id)}`}
-                      className="category-card grid grid-cols-[auto,1fr,auto] grid-rows-[auto,auto] items-start gap-x-4 gap-y-0 border border-[#0F0D13] bg-[#F5F5F5] text-black px-3 text-left"
-                    >
-                      <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
-                        <img src={getPlaceIconSrc(place.type)} alt="" className="w-7 h-7 object-contain" />
-                      </div>
-                      <div className="category-card-label font-bold uppercase tracking-[0.03em] text-sm sm:text-base min-w-0 col-start-2 col-end-4 row-start-1 truncate">{place.name}</div>
-                      <div className="flex flex-col gap-1 min-w-0 col-start-2 row-start-2 mt-2">
-                        <div className="flex items-center text-xs sm:text-sm text-black min-w-0">
-                          <img src={icPin} alt="" className="w-5 h-5 mr-2 flex-shrink-0" />
-                          <span className="truncate">{neighborhood || t('list.variablePlace')}</span>
-                        </div>
-                        <div className="flex items-center text-xs sm:text-sm text-black min-w-0 mt-1">
-                          <img src={icClock} alt="" className="w-4 h-4 mr-2 ml-0.5 flex-shrink-0" />
-                          <span className="truncate">{openingText}</span>
-                        </div>
-                      </div>
-                      <AppButton
-                        variant="outline"
-                        size="xxs"
-                        onClick={() => {
-                          const typeMap: Record<string,string> = {
-                            RESTAURANTS: "restaurants",
-                            BARS: "bars",
-                            COFFEES: "coffees",
-                            NIGHTLIFE: "nightlife",
-                            NATURE: "nature",
-                            TOURIST_SPOT: "tourist-spot",
-                            FORFUN: "forfun",
-                            STORES: "stores",
-                          };
-                          const cat = typeMap[place.type] || "restaurants";
-                          navigate(`/${cat}/${slugify(place.name)}`);
-                        }}
-                        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 btn-hover-red"
-                      >
-                        {t('common.details')}
-                      </AppButton>
-                    </div>
+                      variant="neighborhood"
+                      name={place.name}
+                      neighborhood={neighborhood || t('list.variablePlace')}
+                      openingText={openingText}
+                      iconSrc={getPlaceIconSrc(place.type)}
+                      detailsLabel={t('common.details')}
+                      onDetails={() => {
+                        const typeMap: Record<string, string> = {
+                          RESTAURANTS: "restaurants",
+                          BARS: "bars",
+                          COFFEES: "coffees",
+                          NIGHTLIFE: "nightlife",
+                          NATURE: "nature",
+                          TOURIST_SPOT: "tourist-spot",
+                          FORFUN: "forfun",
+                          STORES: "stores",
+                        };
+                        const cat = typeMap[place.type] || "restaurants";
+                        navigate(`/${cat}/${slugify(place.name)}`);
+                      }}
+                    />
                   );
                 })}
               </div>
