@@ -313,7 +313,12 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-3 py-4 sm:px-4 sm:py-3 rounded font-bold text-sm sm:text-base text-center btn-red">
                                                         <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                     </a>
-                                                    <a href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(`${streetText}, ${neighborhoodText}, ${city}, ${postalCode}, ${number}`)}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 rounded font-bold text-sm sm:text-base text-center btn-dark">
+                                                    <a
+                                                        href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent([address, neighborhood].filter(Boolean).join(' - '))}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 rounded font-bold text-sm sm:text-base text-center btn-dark"
+                                                    >
                                                         <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
                                                     </a>
 
