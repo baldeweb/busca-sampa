@@ -14,13 +14,15 @@ export function Header() {
                         alt="Bandeira do estado de São Paulo"
                         className="h-[60px] w-[120px] sm:h-[68px] sm:w-[130px] me-4"
                     />
-                    <p className="max-w-xs text-sm sm:text-base text-gray-300">
-                        {t('header.tagline')}
-                    </p>
                 </div>
 
-                {/* Botão de idioma */}
-                <LanguageButton />
+                {/* Texto e botão de idioma */}
+                <div className="flex flex-col items-end">
+                    <p className="text-sm sm:text-base text-gray-300 mb-2 text-right">
+                        A melhor recomendação, <br/>com poucos cliques de distância
+                    </p>
+                    <LanguageButton />
+                </div>
             </div>
         </header>
     );

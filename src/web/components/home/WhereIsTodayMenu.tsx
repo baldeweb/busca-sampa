@@ -66,7 +66,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             {!loading && !error && (
                 <div className="relative mt-4">
                     <div
-                        className="grid grid-cols-3 gap-3 py-3 pr-4 sm:pr-12 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]"
+                        className="grid grid-cols-2 gap-2 py-3 pr-4 sm:pr-12 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]"
                         role="listbox"
                         aria-label="Categorias"
                     >

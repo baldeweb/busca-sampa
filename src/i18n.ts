@@ -61,7 +61,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'A melhor recomendação, com poucos cliques de distância'
+        tagline: 'A melhor recomendação, <br/>com poucos cliques de distância'
       },
       common: {
         back: 'Voltar',
@@ -259,7 +259,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'La mejor recomendación, a pocos clics de distancia'
+        tagline: 'La mejor recomendación, <br/>a pocos clics de distancia'
       },
       common: {
         back: 'Volver',
@@ -1231,7 +1231,7 @@ const resources = {
       placeList: {
         environmentTitle: 'Type omgeving:',
         hoursUnavailable: 'Openingstijden niet beschikbaar',
-        opensAtHeader: 'Opening',
+        opensAtHeader: 'Açılış saati',
         openNow: 'Nu open',
         opensTomorrowAt: 'Opent morgen om {{time}}',
         subtitleTemplate: 'Ontdek {{article}} {{noun}} van jouw type, dicht bij jou :)'

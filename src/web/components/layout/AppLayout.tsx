@@ -23,7 +23,7 @@ export default function AppLayout() {
     // SEO: set homepage title and description so search engines display the desired text
     useSeo({
         title: showHeader ? 'Rolê Paulista' : undefined,
-        description: showHeader ? 'A melhor recomendação, com 3 toques de distância' : undefined,
+        description: showHeader ? 'A melhor recomendação, com poucos cliques de distância' : undefined,
     });
 
     return (
