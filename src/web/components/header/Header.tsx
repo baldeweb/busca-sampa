@@ -18,7 +18,7 @@ export function Header() {
 
                 {/* Texto e botão de idioma */}
                 <div className="flex flex-col items-end">
-                    <p className="text-sm sm:text-base text-gray-300 mb-2 mr-8 text-right">
+                    <p className="text-sm sm:text-base text-gray-300 mb-2 mr-2 sm:mr-8 text-right">
                         {t('header.tagline')}
                     </p>
                     <LanguageButton />
