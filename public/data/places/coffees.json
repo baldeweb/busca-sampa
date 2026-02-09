@@ -13,7 +13,7 @@
             "patternId": "KOFICO_DAYTIME",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,

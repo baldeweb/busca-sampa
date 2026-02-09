@@ -1666,7 +1666,7 @@
                 { "days": ["SATURDAY", "SUNDAY"], "open": "12:00", "close": "23:00" }
             ]
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
