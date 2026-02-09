@@ -19,7 +19,7 @@ export function Header() {
                 {/* Texto e botão de idioma */}
                 <div className="flex flex-col items-end">
                     <p className="text-sm sm:text-base text-gray-300 mb-2 text-right">
-                        A melhor recomendação, <br/>com poucos cliques de distância
+                        {t('header.tagline')}
                     </p>
                     <LanguageButton />
                 </div>
