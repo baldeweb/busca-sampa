@@ -1605,48 +1605,6 @@
         "tags": ["HAMBURGUER"]
     },
     {
-        "id": 36,
-        "name": "Camarões Restaurante",
-        "type": "RESTAURANTS",
-        "phones": [
-            {
-                "number": "1135088080",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "CAMAROES_DAYTIME",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [
-            "🇧🇷 Culinária Brasileira",
-            "Especialidade em frutos do mar, com vastas opções de pratos com camarão."
-        ],
-        "priceRange": "MODERATE",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "Pres. Juscelino Kubitschek",
-                "number": "627",
-                "city": "São Paulo",
-                "neighborhood": "Vila Nova Conceição",
-                "postalCode": "04543-010",
-                "isMainUnity": true,
-                "latitude": -23.5887666,
-                "longitude": -46.6781708
-            }
-        ],
-        "linkMenu": "https://irp.cdn-website.com/60356b88/files/uploaded/Sa-o_Paulo_PDF.pdf",
-        "linkWebsite": "http://www.camaroes.com.br/",
-        "linkInstagram": "https://www.instagram.com/camaroes.sp/",
-        "tags": ["SEAFOOD", "BRAZILIAN"]
-    },
-    {
         "id": 37,
         "name": "Casa do Saulo",
         "type": "RESTAURANTS",
