@@ -61,7 +61,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'A melhor recomendação, <br/>com poucos cliques de distância'
+        tagline: 'A melhor recomendação, \na poucos cliques de distância'
       },
       common: {
         back: 'Voltar',
@@ -128,7 +128,7 @@ const resources = {
         closedNow: 'Fechado agora',
         locationDescription: 'Aqui tem as unidades deste estabelecimento, e todos os endereços. Você ainda pode traçar a rota pra lá, do jeito que preferir: se é indo com o Google Maps ou pedindo um Uber :)',
         streetPrefix: 'Rua:',
-        googleMapsButton: 'Google マップで開く',
+        googleMapsButton: 'Abrir no Maps',
         openUber: 'Abrir no Uber',
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Siga o perfil oficial do estabelecimento:',
@@ -259,7 +259,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'La mejor recomendación, <br/>a pocos clics de distancia'
+        tagline: 'La mejor recomendación, \na pocos clics de distancia'
       },
       common: {
         back: 'Volver',
@@ -1042,16 +1042,16 @@ const resources = {
       header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione, a pochi clic di distanza' },
       common: {
         back: 'Indietro',
-        details: 'Scopri di più',
-        selectLanguage: 'Seleziona una lingua',
-        changeDistance: 'Cambia distanza',
-        all: 'Tutto',
-        filter: 'Filtro:',
+        details: 'Meer info',
+        selectLanguage: 'Selecteer een taal',
+        changeDistance: 'Afstand wijzigen',
+        all: 'Alles',
+        filter: 'Filter:',
         close: 'Kapat',
         loading: 'Laden…',
         loadError: "Errore nel caricamento dei dati.",
         noPlaces: 'Nessun luogo trovato.',
-        version: 'Versione'
+        version: 'Versie'
       },
       filters: {
         title: 'Filtri',

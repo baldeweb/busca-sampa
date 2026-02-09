@@ -642,26 +642,6 @@
     ]
   },
   {
-    "id": "CASADOSAULO_DAYTIME",
-    "description": "Horários do Casa do Saulo",
-    "periods": [
-      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
-      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "23:00" }
-    ]
-  },
-  {
-    "id": "CAMAROES_DAYTIME",
-    "description": "Horários do Camarões Restaurante",
-    "periods": [
-      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
-      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "22:30" },
-      { "days": ["SATURDAY"], "open": "11:30", "close": "16:00" },
-      { "days": ["SATURDAY"], "open": "18:30", "close": "23:30" },
-      { "days": ["SUNDAY"], "open": "11:30", "close": "16:00" },
-      { "days": ["SUNDAY"], "open": "19:00", "close": "22:00" }
-    ]
-  },
-  {
     "id": "MACONDO_DAYTIME",
     "description": "Horários do Macondo Raizes Colombianas",
     "periods": [

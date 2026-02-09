@@ -1605,52 +1605,6 @@
         "tags": ["HAMBURGUER"]
     },
     {
-        "id": 37,
-        "name": "Casa do Saulo",
-        "type": "RESTAURANTS",
-        "phones": [
-            {
-                "number": "11916870039",
-                "isWhatsApp": true
-            }
-        ],
-        "openingHours": {
-            "patternId": "ALLDAY_PATTERN_2_DAYTIME",
-            "customOverrides": [
-                { "days": ["SATURDAY"], "open": "12:00", "close": "16:00" },
-                { "days": ["SATURDAY"], "open": "19:00", "close": "23:00" },
-                { "days": ["SUNDAY"], "open": "12:00", "close": "17:00" }
-            ]
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "notes": [
-            "Culinária Brasileira focada na região Norte do país",
-            "Ambiente aconchegante e agradável"
-        ],
-        "priceRange": "EXPENSIVE",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "R. Gomes de Carvalho",
-                "number": "1666",
-                "city": "São Paulo",
-                "neighborhood": "Vila Olímpia",
-                "postalCode": "04547-006",
-                "isMainUnity": true,
-                "latitude": -23.5952271,
-                "longitude": -46.6908807
-            }
-        ],
-        "linkMenu": "https://menu.getinapp.com.br/store/Z6RqVo1L/1",
-        "linkWebsite": "",
-        "linkInstagram": "https://www.instagram.com/casadosaulo/",
-        "tags": ["BRAZILIAN"]
-    },
-    {
         "id": 38,
         "name": "Sushi Ishii",
         "type": "RESTAURANTS",

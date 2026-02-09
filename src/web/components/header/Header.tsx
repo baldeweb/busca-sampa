@@ -8,7 +8,7 @@ export function Header() {
         <header className="bg-bs-bg-header text-white border-b-4 border-bs-red">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-4 py-6 sm:py-8">
                 {/* Logo + tagline (title removed). Mobile: stacked; Desktop: inline to the right */}
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 pe-4">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 pe-4 flex-shrink-0">
                     <img
                         src={flagSp}
                         alt="Bandeira do estado de São Paulo"
@@ -18,7 +18,7 @@ export function Header() {
 
                 {/* Texto e botão de idioma */}
                 <div className="flex flex-col items-end">
-                    <p className="text-sm sm:text-base text-gray-300 mb-2 text-right">
+                    <p className="text-sm sm:text-base text-gray-300 mb-2 mr-8 text-right">
                         {t('header.tagline')}
                     </p>
                     <LanguageButton />
