@@ -447,8 +447,8 @@
                 "neighborhood": "Chácara Santo Antônio",
                 "postalCode": "04719-050",
                 "isMainUnity": true,
-                "latitude": -23.632247,
-                "longitude": -46.709899
+                "latitude": -23.632254,
+                "longitude": -46.709892
             }
         ],
         "linkMenu": "",
@@ -460,7 +460,7 @@
     },
     {
         "id": 11,
-        "name": "Manish",
+        "name": "Manish Culinária Árabe",
         "type": "RESTAURANTS",
         "phones": [
             {
@@ -490,8 +490,8 @@
                 "neighborhood": "Itaim Bibi",
                 "postalCode": "04538-082",
                 "isMainUnity": true,
-                "latitude": -23.5881179,
-                "longitude": -46.685548
+                "latitude": -23.588026,
+                "longitude": -46.684033
             }
         ],
         "linkMenu": "https://a9afa647-436a-4f08-adf7-f711dedd44b8.filesusr.com/ugd/f568e5_84a975402bef421a8db10667bd39455c.pdf",
@@ -539,8 +539,8 @@
                 "neighborhood": "Paraíso",
                 "postalCode": "04002-020",
                 "isMainUnity": true,
-                "latitude": -23.5748908,
-                "longitude": -46.6498381
+                "latitude": -23.574942,
+                "longitude": -46.647413
             }
         ],
         "linkMenu": "https://www.tandoor.com.br/cardapio/",
@@ -580,8 +580,8 @@
                 "neighborhood": "Jardim Paulista",
                 "postalCode": "01414-001",
                 "isMainUnity": true,
-                "latitude": -23.5602493,
-                "longitude": -46.6664732
+                "latitude": -23.560141,
+                "longitude": -46.664035
             }
         ],
         "linkMenu": "",
@@ -609,7 +609,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇬🇷 Culinária Grega"
+            "Culinária Grega"
         ],
         "priceRange": "MODERATE",
         "addresses": [
@@ -621,8 +621,8 @@
                 "neighborhood": "Jardim Paulista",
                 "postalCode": "01409-002",
                 "isMainUnity": true,
-                "latitude": -23.5665128,
-                "longitude": -46.6656825
+                "latitude": -23.566619,
+                "longitude": -46.663035
             }
         ],
         "linkMenu": "https://ideaecia.wixsite.com/cardapiokouzina?fbclid=PAZXh0bgNhZW0CMTEAAad2PW9qGImG-dEDTOVWO80A46y5EFLDG1uPa7qpsuVuC1x6jljB1m_O3hb5pg_aem_48Zo-afbSKvwJ-pK42mA8Q",
@@ -652,7 +652,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇯🇵 Culinária Japonesa",
+            "Culinária Japonesa",
             "Temático Hello Kitty"
         ],
         "priceRange": "MODERATE",
@@ -665,8 +665,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01506-020",
                 "isMainUnity": true,
-                "latitude": -23.5576784,
-                "longitude": -46.6405665
+                "latitude": -23.557765,
+                "longitude": -46.635975
             }
         ],
         "linkMenu": "",
@@ -676,7 +676,7 @@
     },
     {
         "id": 16,
-        "name": "Eat Asia 2D",
+        "name": "Hello Kitty and Friends 2D",
         "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
@@ -691,7 +691,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🇯🇵 Culinária Japonesa",
+            "Culinária Japonesa",
             "Temático Hello Kitty"
         ],
         "priceRange": "MODERATE",
@@ -704,8 +704,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01506-010",
                 "isMainUnity": true,
-                "latitude": -23.5576784,
-                "longitude": -46.6405665
+                "latitude": -23.557140,
+                "longitude": -46.634586
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/18123493756379887/",
@@ -715,7 +715,7 @@
     },
     {
         "id": 17,
-        "name": "Filipinas Oriental",
+        "name": "Filipinas Restaurante Oriental",
         "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
@@ -743,8 +743,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01502-001",
                 "isMainUnity": true,
-                "latitude": -23.5582513,
-                "longitude": -46.6392504
+                "latitude": -23.558322,
+                "longitude": -46.636710
             }
         ],
         "linkMenu": "",
@@ -787,8 +787,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01502-001",
                 "isMainUnity": true,
-                "latitude": -23.5582051,
-                "longitude": -46.638668
+                "latitude": -23.558362,
+                "longitude": -46.636094
             }
         ],
         "linkMenu": "",
@@ -830,8 +830,8 @@
                 "neighborhood": "Mirandópolis",
                 "postalCode": "04050-000",
                 "isMainUnity": true,
-                "latitude": -23.6050701,
-                "longitude": -46.6470145
+                "latitude": -23.605128,
+                "longitude": -46.644381
             }
         ],
         "linkMenu": "https://www.amigodorei.com.br/jantarpersa.html",
@@ -871,8 +871,8 @@
                 "neighborhood": "Moema",
                 "postalCode": "04516-012",
                 "isMainUnity": true,
-                "latitude": -23.6050411,
-                "longitude": -46.6724019
+                "latitude": -23.605149,
+                "longitude": -46.669921
             },
             {
                 "id": 2,
@@ -882,8 +882,8 @@
                 "neighborhood": "Jardim do Mar",
                 "postalCode": "09726-253",
                 "isMainUnity": false,
-                "latitude": -23.6835165,
-                "longitude": -46.5599193
+                "latitude": -23.683519,
+                "longitude": -46.558047
             }
         ],
         "linkMenu": "https://reservation-widget.tagme.com.br/group/64c7c03ce5f5b30053b0964c?fbclid=PAZXh0bgNhZW0CMTEAAafs3RM0GsE3FpWb769dj93NFOl80iGjrmy8-Gi80viUhXiMP7atY5_u5WsmPQ_aem_FIEz98tK1xlwnvt7q_Klzg",
@@ -925,8 +925,8 @@
                 "neighborhood": "Moema",
                 "postalCode": "04083-002",
                 "isMainUnity": true,
-                "latitude": -23.6137157,
-                "longitude": -46.6638627
+                "latitude": -23.613571,
+                "longitude": -46.661233
             }
         ],
         "linkMenu": "https://o-burguer-1.goomer.app/menu#1564309",
@@ -967,8 +967,8 @@
                 "neighborhood": "Mooca",
                 "postalCode": "03110-010",
                 "isMainUnity": true,
-                "latitude": 0.0,
-                "longitude": 0.0
+                "latitude": -23.555336,
+                "longitude": -46.607565
             }
         ],
         "linkMenu": "https://drive.google.com/drive/folders/1RGLkBk6MEn7AfvUvuylo-AVwdsguCSsK",
@@ -1008,8 +1008,8 @@
                 "neighborhood": "Perdizes",
                 "postalCode": "05010-040",
                 "isMainUnity": true,
-                "latitude": -23.5295336,
-                "longitude": -46.6932904
+                "latitude": -23.529629,
+                "longitude": -46.688460
             },
             {
                 "id": 2,
@@ -1019,8 +1019,8 @@
                 "neighborhood": "Chácara Santo Antônio",
                 "postalCode": "04794-000",
                 "isMainUnity": false,
-                "latitude": -23.625698,
-                "longitude": -46.7084693
+                "latitude": -23.625075,
+                "longitude": -46.706539
             },
             {
                 "id": 3,
@@ -1030,8 +1030,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04036-100",
                 "isMainUnity": false,
-                "latitude": -23.5992463,
-                "longitude": -46.6602121
+                "latitude": -23.599393,
+                "longitude": -46.636766
             }
         ],
         "linkMenu": "https://www.dguests.com.br/cardapio/vassouraquebrada",
@@ -1076,8 +1076,19 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05422-000",
                 "isMainUnity": true,
-                "latitude": -23.5656587,
-                "longitude": -46.6858098
+                "latitude": -23.565724,
+                "longitude": -46.683180
+            },
+            {
+                "id": 2,
+                "street": "Praça Benedito Calixto",
+                "number": "189",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05406-040",
+                "isMainUnity": false,
+                "latitude": -23.557806,
+                "longitude": -46.681308
             }
         ],
         "linkMenu": "",
@@ -1117,8 +1128,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05417-012",
                 "isMainUnity": true,
-                "latitude": -23.5564053,
-                "longitude": -46.6952786
+                "latitude": -23.556411,
+                "longitude": -46.692624
             }
         ],
         "linkMenu": "https://escandinavo.com.br/confira-nosso-menu/",
@@ -1159,8 +1170,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05413-000",
                 "isMainUnity": true,
-                "latitude": -23.5609456,
-                "longitude": -46.6810926
+                "latitude": -23.561014,
+                "longitude": -46.678638
             }
         ],
         "linkMenu": "",
@@ -1209,8 +1220,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05422-001",
                 "isMainUnity": true,
-                "latitude": -23.5666418,
-                "longitude": -46.6885807
+                "latitude": -23.566861,
+                "longitude": -46.685878
             },
             {
                 "id": 2,
@@ -1220,8 +1231,8 @@
                 "neighborhood": "República",
                 "postalCode": "01210-000",
                 "isMainUnity": false,
-                "latitude": -23.5441254,
-                "longitude": -46.6455858
+                "latitude": -23.541839,
+                "longitude": -46.643660
             },
             {
                 "id": 3,
@@ -1231,8 +1242,8 @@
                 "neighborhood": "Tatuapé",
                 "postalCode": "03309-000",
                 "isMainUnity": false,
-                "latitude": -23.5452997,
-                "longitude": -46.5716981
+                "latitude": -23.545290,
+                "longitude": -46.569044
             }
         ],
         "linkMenu": "",
@@ -1272,8 +1283,8 @@
                 "neighborhood": "República",
                 "postalCode": "01220-010",
                 "isMainUnity": true,
-                "latitude": -23.5456593,
-                "longitude": -46.6493192
+                "latitude": -23.545665,
+                "longitude": -46.646674
             }
         ],
         "linkMenu": "https://biahoi.com.br/menu.php",
@@ -1317,8 +1328,8 @@
                 "neighborhood": "República",
                 "postalCode": "01202-001",
                 "isMainUnity": true,
-                "latitude": -23.5450099,
-                "longitude": -46.6663489
+                "latitude": -23.540146,
+                "longitude": -46.643006
             },
             {
                 "id": 2,
@@ -1328,8 +1339,8 @@
                 "neighborhood": "Consolação",
                 "postalCode": "01309-030",
                 "isMainUnity": false,
-                "latitude": -23.5544135,
-                "longitude": -46.660169
+                "latitude": -23.554291,
+                "longitude": -46.657403
             }
         ],
         "linkMenu": "https://www.biyouzrestauranteafricano.com.br/pratos-quentes",
@@ -1370,8 +1381,8 @@
                 "neighborhood": "Santana",
                 "postalCode": "02017-030",
                 "isMainUnity": true,
-                "latitude": -23.5025572,
-                "longitude": -46.6416551
+                "latitude": -23.502429,
+                "longitude": -46.639170
             }
         ],
         "linkMenu": "http://www.sushihiroshisp.com.br/cardapio-sushi-hiroshi.html",
