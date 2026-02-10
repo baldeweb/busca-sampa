@@ -1426,8 +1426,8 @@
                 "neighborhood": "Tatuapé",
                 "postalCode": "03319-000",
                 "isMainUnity": true,
-                "latitude": -23.5467994,
-                "longitude": -46.5742839
+                "latitude": -23.546704,
+                "longitude": -46.571749
             },
             {
                 "id": 2,
@@ -1437,8 +1437,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05417-001",
                 "isMainUnity": false,
-                "latitude": -23.5590351,
-                "longitude": -46.6931201
+                "latitude": -23.559057,
+                "longitude": -46.690714
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/17864408108059100/",
@@ -1479,8 +1479,8 @@
                 "neighborhood": "Tatuapé",
                 "postalCode": "03324-002",
                 "isMainUnity": true,
-                "latitude": -23.5512106,
-                "longitude": -46.5708013
+                "latitude": -23.551366,
+                "longitude": -46.568212
             }
         ],
         "linkMenu": "https://menu.getinapp.com.br/store/D1ZdNgkm/1/d1VM2nPv/",
@@ -1490,7 +1490,7 @@
     },
     {
         "id": 33,
-        "name": "Bao N Sando",
+        "name": "Bao n'Sando",
         "type": "RESTAURANTS",
         "phones": [
             {
@@ -1522,8 +1522,8 @@
                 "neighborhood": "Vila Madalena",
                 "postalCode": "05434-080",
                 "isMainUnity": true,
-                "latitude": -23.5561516,
-                "longitude": -46.6932038
+                "latitude": -23.556025,
+                "longitude": -46.690841
             }
         ],
         "linkMenu": "https://www.ifood.com.br/delivery/sao-paulo-sp/asiatico-bao-n-sando-vila-madalena-vila-madalena/f9ebf8ca-3d62-492a-b4ea-4816d49ab360?utm_medium=share&utm_source=ig&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndKJwZVNKVxJU56LmynY4CH3XBi54G_mvHDWO9OS-kpCiXAIfrfRrqiM3Apo_aem_n3vaId7n2zguqmAOuv3Aag",
@@ -1565,8 +1565,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04015-070",
                 "isMainUnity": true,
-                "latitude": -23.5866566,
-                "longitude": -46.6481073
+                "latitude": -23.586721,
+                "longitude": -46.645658
             }
         ],
         "linkMenu": "https://mapurestaurante.com.br/cardapio",
@@ -1606,8 +1606,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04023-001",
                 "isMainUnity": true,
-                "latitude": -23.5917118,
-                "longitude": -46.6462691
+                "latitude": -23.591757,
+                "longitude": -46.643710
             }
         ],
         "linkMenu": "https://www.tavernamedieval.com.br/cardapio/index.html",
@@ -1649,8 +1649,8 @@
                 "neighborhood": "Ipiranga",
                 "postalCode": "04203-052",
                 "isMainUnity": true,
-                "latitude": -23.5949181,
-                "longitude": -46.6088854
+                "latitude": -23.594915,
+                "longitude": -46.606531
             }
         ],
         "linkMenu": "",
@@ -1690,8 +1690,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05407-002",
                 "isMainUnity": true,
-                "latitude": -23.5597278,
-                "longitude": -46.6875312
+                "latitude": -23.559687,
+                "longitude": -46.685067
             }
         ],
         "linkMenu": "",
@@ -1732,8 +1732,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01035-000",
                 "isMainUnity": true,
-                "latitude": -23.5446757,
-                "longitude": -46.6383647
+                "latitude": -23.544934,
+                "longitude": -46.635377
             }
         ],
         "linkMenu": "https://www.menuart.com.br/pdfs/guanabara.pdf?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnF33cJE6rEJwj-3rtW0VfXhrSs-Hr9f57kApqZ8oRsd5XOte7GqUXHGjvRTQ_aem_Ou4oeoG75erl4CmNoqSV5Q",
@@ -1773,8 +1773,8 @@
                 "neighborhood": "Brás",
                 "postalCode": "03052-030",
                 "isMainUnity": true,
-                "latitude": -23.5412547,
-                "longitude": -46.6121469
+                "latitude": -23.541014,
+                "longitude": -46.608585
             }
         ],
         "linkMenu": "",
@@ -1814,8 +1814,8 @@
                 "neighborhood": "Jardim Anália Franco",
                 "postalCode": "03336-010",
                 "isMainUnity": true,
-                "latitude": -23.5534955,
-                "longitude": -46.566306
+                "latitude": -23.553423,
+                "longitude": -46.563899
             }
         ],
         "linkMenu": "https://livemenu.app/menu/6241de323b243900116e5adb?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZGIOX3CZNy9nkCPbdwkJkbGWIv9hJNIwZ-MlWYJjYkyInPPpfL7KVrN8Ztk_aem_VWfNKbx8rZhS382NeOIEEg&cross_session=done",
@@ -1856,8 +1856,8 @@
                 "neighborhood": "Jardim Anália Franco",
                 "postalCode": "03324-060",
                 "isMainUnity": true,
-                "latitude": -23.5502813,
-                "longitude": -46.5776657
+                "latitude": -23.552843,
+                "longitude": -46.566208
             }
         ],
         "linkMenu": "https://livemenu.app/menu/61fd682e1e9cd60012ad6b6b?cross_session=done",
@@ -1898,8 +1898,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01050-060",
                 "isMainUnity": true,
-                "latitude": -23.5486427,
-                "longitude": -46.6452315
+                "latitude": -23.548634,
+                "longitude": -46.642587
             }
         ],
         "linkMenu": "",
@@ -1939,8 +1939,8 @@
                 "neighborhood": "Jardim Anália Franco",
                 "postalCode": "03336-010",
                 "isMainUnity": true,
-                "latitude": -23.5534955,
-                "longitude": -46.566306
+                "latitude": -23.553423,
+                "longitude": -46.563899
             }
         ],
         "linkMenu": "https://livemenu.app/menu/6241fb73923ad30011604bc6?cross_session=done",
@@ -1981,8 +1981,8 @@
                 "neighborhood": "Bom Retiro",
                 "postalCode": "01121-000",
                 "isMainUnity": true,
-                "latitude": -23.528626,
-                "longitude": -46.6383055
+                "latitude": -23.528614,
+                "longitude": -46.635647
             }
         ],
         "linkMenu": "https://www.wabar.com.br/blank-1",
@@ -2022,8 +2022,8 @@
                 "neighborhood": "Paraíso",
                 "postalCode": "04007-001",
                 "isMainUnity": true,
-                "latitude": -23.5739155,
-                "longitude": -46.6538855
+                "latitude": -23.573782,
+                "longitude": -46.651193
             },
             {
                 "id": 2,
@@ -2033,8 +2033,8 @@
                 "neighborhood": "Indianópolis",
                 "postalCode": "04029-200",
                 "isMainUnity": false,
-                "latitude": -23.6045611,
-                "longitude": -46.6630425
+                "latitude": -23.604550,
+                "longitude": -46.662979
             },
             {
                 "id": 3,
@@ -2044,8 +2044,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01510-001",
                 "isMainUnity": false,
-                "latitude": -23.558835,
-                "longitude": -46.6341575
+                "latitude": -23.558803,
+                "longitude": -46.634009
             }
         ],
         "linkMenu": "",
