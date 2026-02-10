@@ -300,7 +300,7 @@ export function HomePage() {
 
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-12">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-8">
         <div className="mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
@@ -434,10 +434,10 @@ export function HomePage() {
 
       {/* Seção: Por bairro (grid 2x4 retangular) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-12">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-8">
         <div className="mx-auto max-w-5xl px-4 sm:px-4">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
-          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs w-full">
+          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
             {topNeighborhoods.map((n) => (
               <button
                 key={n.id}

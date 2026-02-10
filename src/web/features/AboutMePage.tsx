@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { useNavigate } from 'react-router-dom';
-import BackHeader from "../components/layout/BackHeader";
+import Toolbar from "../components/layout/Toolbar";
 
 export function AboutMePage() {
   const { t } = useTranslation();
@@ -11,7 +11,7 @@ export function AboutMePage() {
 
   return (
     <>
-      <BackHeader onBack={() => navigate(-1)} />
+      <Toolbar onBack={() => navigate(-1)} />
 
       <div className="mx-auto max-w-lg space-y-6 text-white">
 

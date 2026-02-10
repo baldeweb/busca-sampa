@@ -56,7 +56,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     const { t } = useTranslation();
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-6 sm:py-12">
-                <div className="mx-auto max-w-5xl pl-4 pr-0">
+                <div className="mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2">
                 <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
                 <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
@@ -113,12 +113,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                 translatedRaw = found ? getPlaceTypeLabel(found) : raw;
                             }
 
-                            // titles we want to force-break into two lines
-                            const forceBreakKeys = new Set([
-                                'pontos turísticos',
-                                'pontos turisticos'
-                            ]);
-
                             // convert to sentence case: first letter uppercase, rest lowercase
                             const sentence = (s: string) => {
                                 if (!s) return s;
@@ -130,34 +124,19 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             // Build label using the translated string but maintain forced breaks for known phrases
                             const translatedLower = (translatedRaw || '').toLowerCase();
                             const translatedSentence = sentence(translatedRaw || '');
-                            if (forceBreakKeys.has(lower) || forceBreakKeys.has(translatedLower)) {
-                                const firstSpace = translatedSentence.indexOf(' ');
-                                if (firstSpace > -1) {
-                                    const a = translatedSentence.slice(0, firstSpace);
-                                    const b = translatedSentence.slice(firstSpace + 1);
-                                    label = (
-                                        <>
-                                            <span className="block whitespace-normal">{a}</span>
-                                            <span className="block whitespace-normal">{b}</span>
-                                        </>
-                                    );
-                                } else {
-                                    label = translatedSentence;
-                                }
-                            } else {
-                                const parts = translatedSentence.split(/\s+/).filter(Boolean);
-                                label = (
-                                    <>
-                                        {parts.map((p, i) => (
-                                            <span key={i} className="whitespace-normal">
-                                                {p}
-                                                {i < parts.length - 1 && <wbr />}
-                                                {i < parts.length - 1 ? ' ' : ''}
-                                            </span>
-                                        ))}
-                                    </>
-                                );
-                            }
+                            
+                            const parts = translatedSentence.split(/\s+/).filter(Boolean);
+                            label = (
+                                <>
+                                    {parts.map((p, i) => (
+                                        <span key={i} className="whitespace-normal">
+                                            {p}
+                                            {i < parts.length - 1 && <wbr />}
+                                            {i < parts.length - 1 ? ' ' : ''}
+                                        </span>
+                                    ))}
+                                </>
+                            );
 
                             console.log('[PUDIM]: label > ', label)
                             return (

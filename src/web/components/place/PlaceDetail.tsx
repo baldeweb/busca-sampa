@@ -3,7 +3,7 @@ import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp, FaStar, FaCheck } from "react-icons/fa";
-import { BackHeader } from '@/web/components/layout/BackHeader';
+import { Toolbar } from '@/web/components/layout/Toolbar';
 import icUber from '@/assets/imgs/icons/ic_uber.png';
 import { useTranslation } from 'react-i18next';
 
@@ -126,8 +126,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
-            {/* Top Bar - BackHeader (consistent with Neighborhood list) */}
-            <BackHeader onBack={onBack} showVisitedButton={true} isAlreadyVisited={Boolean(isAlreadyVisited)} onVisitedClick={() => setShowVisitModal(true)} />
+            {/* Top Bar - Toolbar (consistent with Neighborhood list) */}
+            <Toolbar onBack={onBack} showVisitedButton={true} isAlreadyVisited={Boolean(isAlreadyVisited)} onVisitedClick={() => setShowVisitModal(true)} />
             {/* Modal explicativo */}
             {showVisitModal && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">

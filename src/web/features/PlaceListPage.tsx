@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import { useDocumentTitle } from "@/web/hooks/useDocumentTitle";
-import { BackHeader } from '@/web/components/layout/BackHeader';
+import { Toolbar } from '@/web/components/layout/Toolbar';
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { getPlaceTypeLabel } from "@/core/domain/enums/placeTypeLabel";
 import { useOpeningPatterns } from "@/web/hooks/useOpeningPatterns";
@@ -560,7 +560,7 @@ export const PlaceListPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-bs-bg text-white flex flex-col">
             {/* Top Bar */}
-            <BackHeader onBack={() => navigate(-1)} />
+            <Toolbar onBack={() => navigate(-1)} />
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-8 text-black">
                     {/* Título e descrição */}

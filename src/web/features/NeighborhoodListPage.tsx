@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
-import { BackHeader } from '@/web/components/layout/BackHeader';
+import { Toolbar } from '@/web/components/layout/Toolbar';
 import { useParams, useNavigate } from "react-router-dom";
 import { useRecommendationList } from "@/web/hooks/useRecommendationList";
 import { slugify } from "@/core/services/Slugify";
@@ -350,7 +350,7 @@ export const NeighborhoodListPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-bs-bg text-white flex flex-col">
-      <BackHeader onBack={() => navigate(-1)} />
+      <Toolbar onBack={() => navigate(-1)} />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
         <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12 text-black">
             <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[30px] px-4 py-8">
