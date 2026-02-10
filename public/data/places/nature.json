@@ -31,8 +31,8 @@
                 "neighborhood": "Água Branca",
                 "postalCode": "05001-900",
                 "isMainUnity": true,
-                "latitude": -23.5292762,
-                "longitude": -46.6711211
+                "latitude": -23.529831,
+                "longitude": -46.667644
             }
         ],
         "linkMenu": "",
@@ -67,8 +67,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05463-090",
                 "isMainUnity": true,
-                "latitude": -23.5540027,
-                "longitude": -46.7047719
+                "latitude": -23.553896,
+                "longitude": -46.701799
             }
         ],
         "linkMenu": "",
@@ -104,8 +104,8 @@
                 "neighborhood": "Consolação",
                 "postalCode": "01303-050",
                 "isMainUnity": true,
-                "latitude": -23.5497278,
-                "longitude": -46.6498923
+                "latitude": -23.550973,
+                "longitude": -46.649340
             }
         ],
         "linkMenu": "",
@@ -145,8 +145,8 @@
                 "neighborhood": "Interlagos",
                 "postalCode": "04772-001",
                 "isMainUnity": true,
-                "latitude": -23.6960711,
-                "longitude": -46.7190195
+                "latitude": -23.697237,
+                "longitude": -46.715106
             }
         ],
         "linkMenu": "",
@@ -188,8 +188,8 @@
                 "neighborhood": "Interlagos",
                 "postalCode": "04772-001",
                 "isMainUnity": true,
-                "latitude": -23.7000503,
-                "longitude": -46.7179442
+                "latitude": -23.699988,
+                "longitude": -46.715252
             }
         ],
         "linkMenu": "",
@@ -201,7 +201,7 @@
     },
     {
         "id": 6,
-        "name": "Jardim Botanico",
+        "name": "Jardim Botânico",
         "type": "NATURE",
         "phones": [
             {
@@ -229,8 +229,8 @@
                 "neighborhood": "Jabaquara",
                 "postalCode": "04301-905",
                 "isMainUnity": true,
-                "latitude": -23.6548571,
-                "longitude": -46.6480377
+                "latitude": -23.639252,
+                "longitude": -46.627427
             }
         ],
         "linkMenu": "",
@@ -273,8 +273,8 @@
                 "neighborhood": "Jabaquara",
                 "postalCode": "04301-905",
                 "isMainUnity": true,
-                "latitude": -23.6548571,
-                "longitude": -46.6480377
+                "latitude": -23.651005,
+                "longitude": -46.620555
             }
         ],
         "linkMenu": "https://ingressos.zoologico.com.br/?utm_source=google&utm_content=cid|21288890589|gid|165438531594|kwid|kwd-462107190130&gad_source=1&gclid=CjwKCAiAk8G9BhA0EiwAOQxmfpB3tJupD4Sm97b0OWRJyFnyAY6SJXmltDUFKe4Z-bvmF3hVe3EzGxoCHB4QAvD_BwE",
@@ -284,7 +284,7 @@
     },
     {
         "id": 8,
-        "name": "Pico/Parque do Jaraguá",
+        "name": "Parque do Jaraguá",
         "type": "NATURE",
         "phones": [
             {
@@ -315,8 +315,8 @@
                 "neighborhood": "Vila Jaraguá",
                 "postalCode": "02675-031",
                 "isMainUnity": true,
-                "latitude": -23.4583126,
-                "longitude": -46.7755777
+                "latitude": -23.458970,
+                "longitude": -46.755199
             }
         ],
         "linkMenu": "",
@@ -363,8 +363,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": -23.5859546,
-                "longitude": -46.6610095
+                "latitude": -23.585607,
+                "longitude": -46.655487
             }
         ],
         "linkMenu": "",
@@ -405,8 +405,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05317-020",
                 "isMainUnity": true,
-                "latitude": -23.5463039,
-                "longitude": -46.7279507
+                "latitude": -23.543305,
+                "longitude": -46.726216
             }
         ],
         "linkMenu": "",

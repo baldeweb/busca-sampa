@@ -33,8 +33,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01014-010",
                 "isMainUnity": true,
-                "latitude": -23.5458897,
-                "longitude": -46.6367792
+                "latitude": -23.545781,
+                "longitude": -46.634298
             }
         ],
         "linkMenu": "https://livemenu.app/menu/64513977e74a9f0055b72ef7?cross_session=done",
@@ -75,8 +75,8 @@
                 "neighborhood": "Vila Madalena",
                 "postalCode": "05443-010",
                 "isMainUnity": true,
-                "latitude": -23.5535829,
-                "longitude": -46.6969024
+                "latitude": -23.553627,
+                "longitude": -46.694257
             }
         ],
         "linkMenu": "https://menu.getinapp.com.br/store/r2Prqk8v/1",
@@ -116,8 +116,8 @@
                 "neighborhood": "Vila Madalena",
                 "postalCode": "05443-010",
                 "isMainUnity": true,
-                "latitude": -23.5540818,
-                "longitude": -46.6947435
+                "latitude": -23.554362,
+                "longitude": -46.693821
             }
         ],
         "linkMenu": "",
@@ -162,8 +162,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05427-100",
                 "isMainUnity": true,
-                "latitude": -23.5601764,
-                "longitude": -46.6992883
+                "latitude": -23.560181,
+                "longitude": -46.696598
             }
         ],
         "linkMenu": "",
@@ -203,8 +203,8 @@
                 "neighborhood": "Vila Olímpia",
                 "postalCode": "04552-020",
                 "isMainUnity": true,
-                "latitude": -23.5923993,
-                "longitude": -46.6864977
+                "latitude": -23.592438,
+                "longitude": -46.684159
             }
         ],
         "linkMenu": "",
@@ -250,8 +250,8 @@
                 "neighborhood": "Mandaqui",
                 "postalCode": "02405-001",
                 "isMainUnity": true,
-                "latitude": -23.4881534,
-                "longitude": -46.6689643
+                "latitude": -23.488195,
+                "longitude": -46.632986
             },
             {
                 "id": 2,
@@ -261,8 +261,8 @@
                 "neighborhood": "Lauzane Paulista",
                 "postalCode": "02413-100",
                 "isMainUnity": false,
-                "latitude": -23.4881534,
-                "longitude": -46.6689643
+                "latitude": -23.483914,
+                "longitude": -46.636636
             }
         ],
         "linkMenu": "",
@@ -305,8 +305,8 @@
                 "neighborhood": "República",
                 "postalCode": "01037-010",
                 "isMainUnity": true,
-                "latitude": -23.5452146,
-                "longitude": -46.6413184
+                "latitude": -23.545448,
+                "longitude": -46.638335
             }
         ],
         "linkMenu": "https://bardosarcos.com.br/cardapio-salao-dourado-almoco/",
@@ -344,8 +344,8 @@
                 "neighborhood": "Mooca",
                 "postalCode": "03112-100",
                 "isMainUnity": true,
-                "latitude": -23.5540926,
-                "longitude": -46.6073916
+                "latitude": -23.554023,
+                "longitude": -46.604815
             }
         ],
         "linkMenu": "http://javaripark.com.br/menu",
@@ -388,8 +388,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05432-010",
                 "isMainUnity": true,
-                "latitude": -23.5590771,
-                "longitude": -46.6877763
+                "latitude": -23.559051,
+                "longitude": -46.687799
             }
         ],
         "linkMenu": "https://curticabar.com.br/cardapio",

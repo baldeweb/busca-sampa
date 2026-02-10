@@ -34,8 +34,8 @@
                 "neighborhood": "Aclimação",
                 "postalCode": "01533-000",
                 "isMainUnity": true,
-                "latitude": -23.573513,
-                "longitude": -46.641636
+                "latitude": -23.573497,
+                "longitude": -46.639223
             }
         ],
         "linkMenu": "http://www.barskiydom.com.br/",
@@ -77,8 +77,8 @@
                 "neighborhood": "Centro",
                 "postalCode": "06453-035",
                 "isMainUnity": true,
-                "latitude": -23.4963814,
-                "longitude": -46.8524462
+                "latitude": -23.496920,
+                "longitude": -46.848771
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/18207619627198895/",
@@ -120,8 +120,8 @@
                 "neighborhood": "Barra Funda",
                 "postalCode": "01135-020",
                 "isMainUnity": true,
-                "latitude": -23.5266098,
-                "longitude": -46.6544387
+                "latitude": -23.526721,
+                "longitude": -46.651903
             }
         ],
         "linkMenu": "https://komahdelivery.com.br/",
@@ -159,8 +159,8 @@
                 "neighborhood": "Bela Vista",
                 "postalCode": "01311-200",
                 "isMainUnity": true,
-                "latitude": -23.5603666,
-                "longitude": -46.6606012
+                "latitude": -23.560286,
+                "longitude": -46.657942
             }
         ],
         "linkMenu": "https://www.mcdonalds.com.br/cardapio",
@@ -204,8 +204,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01510-001",
                 "isMainUnity": true,
-                "latitude": -23.5590511,
-                "longitude": -46.636289
+                "latitude": -23.559086,
+                "longitude": -46.633812
             },
             {
                 "id": 2,
@@ -215,8 +215,8 @@
                 "neighborhood": "Bom Retiro",
                 "postalCode": "01124-010",
                 "isMainUnity": false,
-                "latitude": -23.5275839,
-                "longitude": -46.6383209
+                "latitude": -23.527570,
+                "longitude": -46.635538
             },
             {
                 "id": 3,
@@ -226,8 +226,8 @@
                 "neighborhood": "Tatuapé",
                 "postalCode": "03336-000",
                 "isMainUnity": false,
-                "latitude": -23.5531632,
-                "longitude": -46.566681
+                "latitude": -23.553048,
+                "longitude": -46.564117
             }
         ],
         "linkMenu": "https://qrfy.io/p/MvlnlIJsDu",
@@ -270,8 +270,8 @@
                 "neighborhood": "Casa Verde",
                 "postalCode": "02512-060",
                 "isMainUnity": true,
-                "latitude": -23.5102988,
-                "longitude": -46.6673437
+                "latitude": -23.510332,
+                "longitude": -46.662643
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/18048424670168633/",
@@ -315,8 +315,8 @@
                 "neighborhood": "Consolação",
                 "postalCode": "01221-030",
                 "isMainUnity": true,
-                "latitude": -23.5461076,
-                "longitude": -46.6512114
+                "latitude":-23.546171,
+                "longitude": -46.648649
             }
         ],
         "linkMenu": "http://www.fornosp.com.br/menu_qr.pdf",
@@ -359,8 +359,8 @@
                 "neighborhood": "Santo Amaro",
                 "postalCode": "04717-002",
                 "isMainUnity": true,
-                "latitude": -23.6329906,
-                "longitude": -46.7050549
+                "latitude": -23.633049,
+                "longitude": -46.702544
             }
         ],
         "linkMenu": "https://shop.fastget.com.br/#/store/carmen-la-loca/4007c816-46a3-11ee-9cc5-029f9b6db48b",
@@ -403,8 +403,8 @@
                 "neighborhood": "Granja Julieta",
                 "postalCode": "04722-000",
                 "isMainUnity": true,
-                "latitude": -23.6434314,
-                "longitude": -46.7039282
+                "latitude": -23.643438,
+                "longitude": -46.701443
             }
         ],
         "linkMenu": "https://www.casaturca.com.br/menus",
@@ -447,8 +447,8 @@
                 "neighborhood": "Chácara Santo Antônio",
                 "postalCode": "04719-050",
                 "isMainUnity": true,
-                "latitude": -23.6321744,
-                "longitude": -46.7126204
+                "latitude": -23.632247,
+                "longitude": -46.709899
             }
         ],
         "linkMenu": "",

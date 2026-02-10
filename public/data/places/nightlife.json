@@ -33,8 +33,8 @@
                 "neighborhood": "Água Branca",
                 "postalCode": "05001-000",
                 "isMainUnity": true,
-                "latitude": -23.5276642,
-                "longitude": -46.6729802
+                "latitude": -23.528048,
+                "longitude": -46.670615
             }
         ],
         "linkMenu": "",
@@ -69,8 +69,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05424-001",
                 "isMainUnity": true,
-                "latitude": -23.5629788,
-                "longitude": -46.6958136
+                "latitude": -23.563024,
+                "longitude": -46.693339
             }
         ],
         "linkMenu": "",
@@ -106,8 +106,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05421-000",
                 "isMainUnity": true,
-                "latitude": -23.5618107,
-                "longitude": -46.6965818
+                "latitude": -23.561875,
+                "longitude": -46.694137
             }
         ],
         "linkMenu": "",
@@ -143,8 +143,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05421-001",
                 "isMainUnity": true,
-                "latitude": -23.5638,
-                "longitude": -46.6954934
+                "latitude": -23.563766,
+                "longitude": -46.692889
             }
         ],
         "linkMenu": "",
@@ -182,8 +182,8 @@
                 "neighborhood": "República",
                 "postalCode": "01222-000",
                 "isMainUnity": true,
-                "latitude": -23.5453951,
-                "longitude": -46.6476979
+                "latitude": -23.545506,
+                "longitude": -46.645158
             }
         ],
         "linkMenu": "",
@@ -221,8 +221,8 @@
                 "neighborhood": "Pompeia",
                 "postalCode": "05023-001",
                 "isMainUnity": true,
-                "latitude": -23.5382532,
-                "longitude": -46.6952783
+                "latitude": -23.538139,
+                "longitude": -46.690585
             }
         ],
         "linkMenu": "",
@@ -232,7 +232,7 @@
     },
     {
         "id": 7,
-        "name": "Nola Bar",
+        "name": "NOLA",
         "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
@@ -257,8 +257,8 @@
                 "neighborhood": "Vila Madalena",
                 "postalCode": "05417-002",
                 "isMainUnity": true,
-                "latitude": -23.5578849,
-                "longitude": -46.6940166
+                "latitude": -23.557898,
+                "longitude": -46.691494
             }
         ],
         "linkMenu": "",
@@ -291,8 +291,8 @@
                 "neighborhood": "Vila Olímpia",
                 "postalCode": "04547-003",
                 "isMainUnity": true,
-                "latitude": -23.5987215,
-                "longitude": -46.6839456
+                "latitude": -23.598850,
+                "longitude": -46.681415
             }
         ],
         "linkMenu": "",
@@ -327,8 +327,8 @@
                 "neighborhood": "República",
                 "postalCode": "01220-020",
                 "isMainUnity": true,
-                "latitude": -23.5444094,
-                "longitude": -46.6470946
+                "latitude": -23.544456,
+                "longitude": -46.644480
             }
         ],
         "linkMenu": "",
@@ -394,8 +394,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05426-200",
                 "isMainUnity": true,
-                "latitude": -23.5619315,
-                "longitude": -46.6974379
+                "latitude": -23.561918,
+                "longitude": -46.694701
             }
         ],
         "linkMenu": "",
@@ -439,8 +439,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05427-030",
                 "isMainUnity": true,
-                "latitude": -23.5659911,
-                "longitude": -46.698711
+                "latitude": -23.566156,
+                "longitude": -46.696126
             }
         ],
         "linkMenu": "",
@@ -453,7 +453,7 @@
     },
     {
         "id": 13,
-        "name": "Tarot Espace",
+        "name": "Tarot",
         "type": "NIGHTLIFE",
         "phones": [
             {
@@ -483,8 +483,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05432-010",
                 "isMainUnity": true,
-                "latitude": -23.5592721,
-                "longitude": -46.690552
+                "latitude": -23.559210,
+                "longitude": -46.688050
             }
         ],
         "linkMenu": "",
@@ -492,6 +492,49 @@
         "linkInstagram": "https://www.instagram.com/tarot.espace/",
         "tags": [
             "KARAOKE"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Praça do Meio Bar",
+        "type": "NIGHTLIFE",
+        "phones": [
+            {
+                "number": "11919343109",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "PRACADOMEIO_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Pagode ao ar livre"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cunha Gago",
+                "number": "599",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05421-001",
+                "isMainUnity": true,
+                "latitude": -23.563766,
+                "longitude": -46.692889
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/pracadomeio/",
+        "tags": [
+            "PAGODE"
         ]
     }
 ]

@@ -35,8 +35,8 @@
                 "neighborhood": "Moema",
                 "postalCode": "04090-004",
                 "isMainUnity": true,
-                "latitude": -23.6141937,
-                "longitude": -46.6690055
+                "latitude": -23.614308,
+                "longitude": -46.666260
             },
             {
                 "id": 1,
@@ -46,8 +46,8 @@
                 "neighborhood": "Mooca",
                 "postalCode": "03180-001",
                 "isMainUnity": false,
-                "latitude": -23.5564666,
-                "longitude": -46.6007529
+                "latitude": -23.557203,
+                "longitude": -46.585431
             }
         ],
         "linkMenu": "",
@@ -87,8 +87,8 @@
                 "neighborhood": "Vila Madalena",
                 "postalCode": "05433-002",
                 "isMainUnity": true,
-                "latitude": -23.5513816,
-                "longitude": -46.6947995
+                "latitude": -23.551335,
+                "longitude": -46.692132
             }
         ],
         "linkMenu": "",
@@ -129,8 +129,8 @@
                 "neighborhood": "Tatuapé",
                 "postalCode": "03321-000",
                 "isMainUnity": true,
-                "latitude": -23.5480604,
-                "longitude": -46.5690443
+                "latitude": -23.547828,
+                "longitude": -46.566524
             },
             {
                 "id": 2,
@@ -140,8 +140,8 @@
                 "neighborhood": "Santo Amaro",
                 "postalCode": "04627-006",
                 "isMainUnity": false,
-                "latitude": -23.6530698,
-                "longitude": -46.6908723
+                "latitude": -23.652906,
+                "longitude": -46.688448
             },
             {
                 "id": 3,
@@ -151,8 +151,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05426-010",
                 "isMainUnity": false,
-                "latitude": -23.5613536,
-                "longitude": -46.6964748
+                "latitude": -23.561218,
+                "longitude": -46.694000
             }
         ],
         "linkMenu": "https://www.dguests.com.br/cardapio/Bario_Bar",
@@ -187,8 +187,8 @@
                 "neighborhood": "Vila Leopoldina",
                 "postalCode": "05319-000",
                 "isMainUnity": true,
-                "latitude": -23.5464795,
-                "longitude": -46.7334527
+                "latitude": -23.543305,
+                "longitude": -46.726216
             }
         ],
         "linkMenu": "",
