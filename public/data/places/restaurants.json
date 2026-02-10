@@ -1316,7 +1316,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "🌍 Culinária Africana"
+            "Culinária Africana"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
@@ -1328,8 +1328,8 @@
                 "neighborhood": "República",
                 "postalCode": "01202-001",
                 "isMainUnity": true,
-                "latitude": -23.540146,
-                "longitude": -46.643006
+                "latitude": -23.540141,
+                "longitude": -46.643069
             },
             {
                 "id": 2,

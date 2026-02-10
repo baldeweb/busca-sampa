@@ -45,7 +45,7 @@
     },
     {
         "id": 2,
-        "name": "CTN (Centro de Tradições Nordestinas)",
+        "name": "CTN - Centro de Tradições Nordestinas",
         "type": "TOURIST_SPOT",
         "phones": [
             {
@@ -75,8 +75,8 @@
                 "neighborhood": "Limão",
                 "postalCode": "02712-070",
                 "isMainUnity": true,
-                "latitude": -23.510215,
-                "longitude": -46.681389
+                "latitude": -23.510291,
+                "longitude": -46.678872
             }
         ],
         "linkMenu": "",
@@ -118,8 +118,8 @@
                 "neighborhood": "Barra Funda",
                 "postalCode": "01156-001",
                 "isMainUnity": true,
-                "latitude": -23.5274042,
-                "longitude": -46.6682288
+                "latitude": -23.527036,
+                "longitude": -46.665525
             }
         ],
         "linkWebsite": "http://www.memorial.org.br/",
@@ -159,8 +159,8 @@
                 "neighborhood": "Bela Vista",
                 "postalCode": "01310-200",
                 "isMainUnity": true,
-                "latitude": -23.5614091,
-                "longitude": -46.6584568
+                "latitude": -23.561660,
+                "longitude": -46.656107
             }
         ],
         "linkMenu": "",
@@ -192,8 +192,8 @@
                 "neighborhood": "Campos Elíseos",
                 "postalCode": "01218-000",
                 "isMainUnity": true,
-                "latitude": -23.5305763,
-                "longitude": -46.645939
+                "latitude": -23.530696,
+                "longitude": -46.643265
             }
         ],
         "linkMenu": "",
@@ -231,8 +231,8 @@
                 "neighborhood": "Mooca",
                 "postalCode": "03164-300",
                 "isMainUnity": true,
-                "latitude": -23.5491477,
-                "longitude": -46.6155896
+                "latitude": -23.549100,
+                "longitude": -46.613061
             }
         ],
         "linkMenu": "",
@@ -275,8 +275,8 @@
                 "neighborhood": "Butantã",
                 "postalCode": "05503-900",
                 "isMainUnity": true,
-                "latitude": -23.5683641,
-                "longitude": -46.7198791
+                "latitude": -23.568436,
+                "longitude": -46.717372
             }
         ],
         "linkMenu": "",
@@ -314,8 +314,8 @@
                 "neighborhood": "Butantã",
                 "postalCode": "05503-900",
                 "isMainUnity": true,
-                "latitude": -23.564589,
-                "longitude": -46.721756
+                "latitude": -23.566506,
+                "longitude": -46.718521
             }
         ],
         "linkMenu": "",
@@ -325,7 +325,7 @@
     },
     {
         "id": 9,
-        "name": "Museu da Polícia Civil",
+        "name": "Museu da Polícia Civil de SP",
         "type": "TOURIST_SPOT",
         "phones": [
             {
@@ -355,8 +355,8 @@
                 "neighborhood": "Butantã",
                 "postalCode": "05508-100",
                 "isMainUnity": true,
-                "latitude": -23.566303,
-                "longitude": -46.7154282
+                "latitude": -23.566289,
+                "longitude": -46.712494
             }
         ],
         "linkMenu": "",
@@ -394,8 +394,8 @@
                 "neighborhood": "Butantã",
                 "postalCode": "05503-900",
                 "isMainUnity": true,
-                "latitude": -23.5645096,
-                "longitude": -46.7198953
+                "latitude": -23.564706,
+                "longitude": -46.719766
             }
         ],
         "linkMenu": "",
@@ -430,8 +430,8 @@
                 "neighborhood": "Butantã",
                 "postalCode": "05508-060",
                 "isMainUnity": true,
-                "latitude": -23.5597125,
-                "longitude": -46.726788
+                "latitude": -23.561606,
+                "longitude": -46.724706
             }
         ],
         "linkMenu": "",
@@ -458,8 +458,10 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "notes": [],
-        "priceRange": "MODERATE",
+        "notes": [
+            "A entrada para a Basílica, fica no portão no final da rua"
+        ],
+        "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
@@ -469,8 +471,8 @@
                 "neighborhood": "Santa Inês",
                 "postalCode": "07733-005",
                 "isMainUnity": true,
-                "latitude": -23.4095783,
-                "longitude": -46.6733394
+                "latitude": -23.409111,
+                "longitude": -46.670828
             }
         ],
         "linkMenu": "",
@@ -508,8 +510,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01016-040",
                 "isMainUnity": true,
-                "latitude": -23.5495057,
-                "longitude": -46.6341659
+                "latitude": -23.549436,
+                "longitude": -46.632827
             }
         ],
         "linkMenu": "",
@@ -553,8 +555,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01001-000",
                 "isMainUnity": true,
-                "latitude": -23.5512802,
-                "longitude": -46.6369123
+                "latitude": -23.551299,
+                "longitude": -46.634716
             }
         ],
         "linkMenu": "",
@@ -594,8 +596,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01012-000",
                 "isMainUnity": true,
-                "latitude": -23.5474747,
-                "longitude": -46.6347657
+                "latitude": -22.901056,
+                "longitude": -43.176589
             }
         ],
         "linkMenu": "",
@@ -617,7 +619,7 @@
             "patternId": "EDIFICIOCOPAN_DAYTIME",
             "customOverrides": []
         },
-        "isAlreadyVisited": false,
+        "isAlreadyVisited": true,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
@@ -636,8 +638,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01046-010",
                 "isMainUnity": true,
-                "latitude": -23.5466147,
-                "longitude": -46.6474209
+                "latitude": -23.546496,
+                "longitude": -46.645022
             }
         ],
         "linkMenu": "",
@@ -677,8 +679,8 @@
                 "neighborhood": "Luz",
                 "postalCode": "01102-000",
                 "isMainUnity": true,
-                "latitude": -23.5304958,
-                "longitude": -46.6340982
+                "latitude": -23.530453,
+                "longitude": -46.631778
             }
         ],
         "linkMenu": "",
@@ -718,8 +720,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01024-900",
                 "isMainUnity": true,
-                "latitude": -23.5420217,
-                "longitude": -46.631986
+                "latitude": -23.541711,
+                "longitude": -46.630001
             }
         ],
         "linkMenu": "",
