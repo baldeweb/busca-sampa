@@ -100,7 +100,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             return filtered.map((option, idx) => {
                             // normalize title (remove zero-width spaces)
                             const raw = (option.title || '').replace(/\u200B/g, '');
-                            const lower = raw.toLowerCase();
 
                             // translated label: prefer i18n keys (open now / placeType) when available
                             let translatedRaw: string;
@@ -122,7 +121,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
 
                             let label: React.ReactNode;
                             // Build label using the translated string but maintain forced breaks for known phrases
-                            const translatedLower = (translatedRaw || '').toLowerCase();
                             const translatedSentence = sentence(translatedRaw || '');
                             
                             const parts = translatedSentence.split(/\s+/).filter(Boolean);
