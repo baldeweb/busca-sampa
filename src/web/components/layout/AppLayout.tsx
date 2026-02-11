@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 import { Header } from "../header/Header";
-import { AppFooter } from "./AppFooter";
+import { NavigationBar } from "./NavigationBar";
 import { useSeo } from '@/web/hooks/useSeo';
 
 export default function AppLayout() {
@@ -35,7 +35,7 @@ export default function AppLayout() {
             >
                 <Outlet />
             </main>
-            <AppFooter />
+            <NavigationBar />
         </div>
     );
 }

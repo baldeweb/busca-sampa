@@ -3,21 +3,23 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import icHome from '../../../assets/imgs/icons/ic_home.png';
+import icWalkingTour from '../../../assets/imgs/icons/ic_walking_tour.png';
+import icSearch from '../../../assets/imgs/icons/ic_search.png';
 import icAbout from '../../../assets/imgs/icons/ic_about.png';
 
-export function AppFooter() {
-    // Aumenta texto (+4px aprox) e ícones um nível
+export function NavigationBar() {
+    // Texto e ícones: cor alinhada com seção "Perto de mim"
     const baseClasses =
-        "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide";
+        "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide text-[#2B2930]";
     const { t } = useTranslation();
     const [showSearchModal, setShowSearchModal] = React.useState(false);
 
     return (
         <footer
-            className="fixed bottom-0 left-0 right-0 bg-bs-bg-header border-t border-white/10 z-50"
+            className="fixed bottom-0 left-0 right-0 bg-[#F5F5F5] z-50 rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[0px] rounded-br-[0px]"
             style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)" }}
         >
-            <nav className="flex text-white pt-2 pb-2">
+            <nav className="flex text-[#2B2930] pt-2 pb-2">
 
                 <NavLink
                     to="/"
@@ -27,8 +29,28 @@ export function AppFooter() {
                     }
                     style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
-                    <img src={icHome} alt="Home" className="w-6 h-6 mb-0.5" />
+                    <img src={icHome} alt="Home" className="w-5 h-5" />
                     <span className="footer-label">{t('footer.home')}</span>
+                </NavLink>
+
+                <NavLink
+                    to="/walking-tour"
+                    className={({ isActive }) =>
+                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
+                    }
+                >
+                    <img src={icWalkingTour} alt="Tour a pé" className="w-5 h-5" />
+                    <span className="footer-label">Tour a pé</span>
+                </NavLink>
+
+                <NavLink
+                    to="/search"
+                    className={({ isActive }) =>
+                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
+                    }
+                >
+                    <img src={icSearch} alt="Buscar" className="w-5 h-5" />
+                    <span className="footer-label">{t('footer.search')}</span>
                 </NavLink>
 
                 <NavLink
@@ -38,7 +60,7 @@ export function AppFooter() {
                     }
                     style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
-                    <img src={icAbout} alt="Sobre" className="w-6 h-6 mb-0.5" />
+                    <img src={icAbout} alt="Sobre" className="w-5 h-5" />
                     <span className="footer-label">{t('footer.about')}</span>
                 </NavLink>
 
@@ -60,4 +82,3 @@ export function AppFooter() {
         </footer>
     );
 }
-
