@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
+import { TravelItineraryListItem } from '@/web/components/travel-itinerary/TravelItineraryListItem';
 import { useNavigate } from 'react-router-dom';
-import icWalkingTour from '@/assets/imgs/icons/ic_walking_tour.png';
+import icTravelItinerary from '@/assets/imgs/icons/ic_walking_tour.png';
+import icTourCity from '@/assets/imgs/icons/ic_tour_city.png';
 import icNumber1 from '@/assets/imgs/icons/ic_number1.png';
 import icNumber2 from '@/assets/imgs/icons/ic_number2.png';
 import icNumber3 from '@/assets/imgs/icons/ic_number3.png';
@@ -22,6 +24,18 @@ type OsrmRouteResponse = {
     routes?: Array<{ geometry?: GeoJsonObject }>;
 };
 
+type TourPlaceRef = {
+    id: number;
+    placeType: string;
+};
+
+type TourItem = {
+    id: number;
+    name: string;
+    description: string;
+    places: TourPlaceRef[];
+};
+
 function buildGoogleMapsDirectionsUrl(points: Array<{ lat: number; lng: number }>) {
     if (!points || points.length < 2) return null;
     const origin = `${points[0].lat},${points[0].lng}`;
@@ -32,7 +46,7 @@ function buildGoogleMapsDirectionsUrl(points: Array<{ lat: number; lng: number }
     return url;
 }
 
-export function WalkingTourPage() {
+export function TravelItineraryPage() {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const mapRef = useRef<HTMLDivElement | null>(null);
@@ -42,7 +56,7 @@ export function WalkingTourPage() {
 
     const themeKey = React.useMemo(() => {
         try {
-            return localStorage.getItem('walkingTourTheme') || 'pos';
+            return localStorage.getItem('travelItineraryTheme') || 'pos';
         } catch {
             return 'pos';
         }
@@ -50,20 +64,49 @@ export function WalkingTourPage() {
     const initialThemeKeyRef = useRef(themeKey);
 
     const [selectedRouteOption, setSelectedRouteOption] = useState<string | null>(null);
+    const [tourMode, setTourMode] = useState<'walking' | 'city'>('walking');
+    const [tourItems, setTourItems] = useState<TourItem[]>([]);
+    const [tourItemsLoading, setTourItemsLoading] = useState<boolean>(true);
 
     const routeOptions = React.useMemo(
         () => [
-            { value: 'free', label: t('walkingTour.routeOptions.free') },
-            { value: 'nightlife', label: t('walkingTour.routeOptions.nightlife') },
-            { value: 'bars', label: t('walkingTour.routeOptions.bars') },
-            { value: 'food', label: t('walkingTour.routeOptions.food') },
-            { value: 'history', label: t('walkingTour.routeOptions.history') },
-            { value: 'museums', label: t('walkingTour.routeOptions.museums') },
-            { value: 'more', label: t('walkingTour.routeOptions.more') }
+            { value: 'free', label: t('travelItinerary.routeOptions.free') },
+            { value: 'nightlife', label: t('travelItinerary.routeOptions.nightlife') },
+            { value: 'bars', label: t('travelItinerary.routeOptions.bars') },
+            { value: 'food', label: t('travelItinerary.routeOptions.food') },
+            { value: 'history', label: t('travelItinerary.routeOptions.history') },
+            { value: 'museums', label: t('travelItinerary.routeOptions.museums') },
+            { value: 'more', label: t('travelItinerary.routeOptions.more') }
         ],
         [t]
     );
-    
+
+    useEffect(() => {
+        let isMounted = true;
+        setTourItemsLoading(true);
+        const fileName = tourMode === 'city' ? 'citytour' : 'walkingtour';
+        fetch(`/data/places/${fileName}.json`)
+            .then((res) => {
+                if (!res.ok) throw new Error(`Failed to load ${fileName}.json`);
+                return res.json() as Promise<TourItem[]>;
+            })
+            .then((data) => {
+                if (!isMounted) return;
+                setTourItems(Array.isArray(data) ? data : []);
+            })
+            .catch(() => {
+                if (!isMounted) return;
+                setTourItems([]);
+            })
+            .finally(() => {
+                if (!isMounted) return;
+                setTourItemsLoading(false);
+            });
+
+        return () => {
+            isMounted = false;
+        };
+    }, [tourMode]);
 
     const { data: touristSpots, loading } = useRecommendationList('tourist-spot');
 
@@ -177,22 +220,93 @@ export function WalkingTourPage() {
                     <div className="w-full rounded-b-[30px] px-4 py-8">
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-4">
-                                <img src={icWalkingTour} alt="walking tour" className="w-12 h-12 object-contain" />
+                                <img src={icTravelItinerary} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
                                 <div>
-                                    <SectionHeading title={t('walkingTour.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
-                                    <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('walkingTour.placeholder')}</p>
+                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
+                                    <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
                                 </div>
                             </div>
 
                             <div className="mt-4">
+                                <div className="px-4 sm:px-0">
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div
+                                            role="button"
+                                            tabIndex={0}
+                                            onClick={() => setTourMode('walking')}
+                                            onKeyDown={(event) => {
+                                                if (event.key === 'Enter' || event.key === ' ') setTourMode('walking');
+                                            }}
+                                            className={`w-full cursor-pointer select-none px-2 pb-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
+                                                tourMode === 'walking' ? 'text-[#B3261E]' : 'text-[#6B6B6B]'
+                                            }`}
+                                        >
+                                            <span className="inline-flex items-center justify-center gap-2 w-full">
+                                                <img src={icTravelItinerary} alt="" className="w-4 h-4 object-contain" />
+                                                {t('travelItinerary.modes.walking')}
+                                            </span>
+                                            {tourMode === 'walking' && (
+                                                <span className="mt-2 block h-[2px] w-full bg-[#B3261E]" />
+                                            )}
+                                        </div>
+                                        <div
+                                            role="button"
+                                            tabIndex={0}
+                                            onClick={() => setTourMode('city')}
+                                            onKeyDown={(event) => {
+                                                if (event.key === 'Enter' || event.key === ' ') setTourMode('city');
+                                            }}
+                                            className={`w-full cursor-pointer select-none px-2 pb-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
+                                                tourMode === 'city' ? 'text-[#B3261E]' : 'text-[#6B6B6B]'
+                                            }`}
+                                        >
+                                            <span className="inline-flex items-center justify-center gap-2 w-full">
+                                                <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
+                                                {t('travelItinerary.modes.city')}
+                                            </span>
+                                            {tourMode === 'city' && (
+                                                <span className="mt-2 block h-[2px] w-full bg-[#B3261E]" />
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <EnvironmentGrid
-                                    title={t('walkingTour.routeOptionsTitle')}
+                                    title={t('travelItinerary.routeOptionsTitle')}
                                     environments={routeOptions}
                                     selectedEnv={selectedRouteOption}
                                     onSelect={setSelectedRouteOption}
                                     onViewMore={() => null}
                                     showViewMore={false}
                                 />
+
+                                <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">
+                                    {t('travelItinerary.listTitle')}
+                                </h3>
+                                {tourItemsLoading && (
+                                    <p className="text-sm text-gray-500 px-4 sm:px-0">
+                                        {t('common.loading')}
+                                    </p>
+                                )}
+                                {!tourItemsLoading && tourItems.length === 0 && (
+                                    <p className="text-sm text-gray-500 px-4 sm:px-0">
+                                        {t('common.noPlaces')}
+                                    </p>
+                                )}
+                                {!tourItemsLoading && tourItems.length > 0 && (
+                                    <div className="mt-4 space-y-3">
+                                        {tourItems.map((item, idx) => (
+                                            <TravelItineraryListItem
+                                                key={`${tourMode}-${item.id}-${idx}`}
+                                                name={item.name}
+                                                placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
+                                                iconSrc={tourMode === 'city' ? icTourCity : icTravelItinerary}
+                                                onDetails={() => null}
+                                                detailsLabel={t('common.details')}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
 
                                 {loading && <p className="text-sm text-gray-500">Carregando pontos...</p>}
                                 {!loading && orderedPoints.length === 0 && (
@@ -217,7 +331,7 @@ export function WalkingTourPage() {
             </section>
 
             <main className="flex-1">
-                {/* Main intentionally empty for walking tour */}
+                {/* Main intentionally empty for itineraries */}
             </main>
         </div>
     );

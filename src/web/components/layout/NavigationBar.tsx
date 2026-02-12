@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import icHome from '../../../assets/imgs/icons/ic_home.png';
-import icWalkingTour from '../../../assets/imgs/icons/ic_walking_tour.png';
+import icItinerary from '../../../assets/imgs/icons/ic_itinerary.png';
 import icSearch from '../../../assets/imgs/icons/ic_search.png';
 import icAbout from '../../../assets/imgs/icons/ic_about.png';
 
@@ -34,13 +34,13 @@ export function NavigationBar() {
                 </NavLink>
 
                 <NavLink
-                    to="/walking-tour"
+                    to="/travel-itinerary"
                     className={({ isActive }) =>
                         `${baseClasses} ${isActive ? "font-semibold" : ""}`
                     }
                 >
-                    <img src={icWalkingTour} alt={t('walkingTour.title')} className="w-6 h-6" />
-                    <span className="footer-label">{t('walkingTour.title')}</span>
+                    <img src={icItinerary} alt={t('travelItinerary.title')} className="w-6 h-6" />
+                    <span className="footer-label">{t('travelItinerary.title')}</span>
                 </NavLink>
 
                 <NavLink

@@ -10,7 +10,7 @@ import { HowToRecommendPage } from "../features/HowToRecommendPage";
 import { SupportPage } from "../features/SupportPage";
 // RestaurantsPage was removed from explicit routes to let the generic PlaceListPage handle '/restaurants'
 import { PlaceListPage } from "../features/PlaceListPage";
-import { WalkingTourPage } from "../features/WalkingTourPage";
+import { TravelItineraryPage } from "../features/TravelItineraryPage";
 
 export const router = createBrowserRouter([
     {
@@ -24,8 +24,8 @@ export const router = createBrowserRouter([
             { path: "/how-to-recommend", element: <HowToRecommendPage /> },
             { path: "/support", element: <SupportPage /> },
 
-            //  Walking tour (specific route must be before the generic "/:type")
-            { path: "/walking-tour", element: <WalkingTourPage /> },
+            //  Travel itineraries (specific route must be before the generic "/:type")
+            { path: "/travel-itinerary", element: <TravelItineraryPage /> },
             //  Listagens (friendly list route: /:type, ex: /restaurants, /bars)
             { path: "/:type", element: <PlaceListPage /> },
 
