@@ -75,8 +75,7 @@ export function TravelItineraryPage() {
             { value: 'bars', label: t('travelItinerary.routeOptions.bars') },
             { value: 'food', label: t('travelItinerary.routeOptions.food') },
             { value: 'history', label: t('travelItinerary.routeOptions.history') },
-            { value: 'museums', label: t('travelItinerary.routeOptions.museums') },
-            { value: 'more', label: t('travelItinerary.routeOptions.more') }
+            { value: 'museums', label: t('travelItinerary.routeOptions.museums') }
         ],
         [t]
     );
@@ -227,9 +226,9 @@ export function TravelItineraryPage() {
                                 </div>
                             </div>
 
-                            <div className="mt-4">
+                            <div className="mt-4 bg-[#F5F5F5]">
                                 <div className="px-4 sm:px-0">
-                                    <div className="grid grid-cols-2 gap-6">
+                                    <div className="relative grid grid-cols-2 gap-6">
                                         <div
                                             role="button"
                                             tabIndex={0}
@@ -245,9 +244,6 @@ export function TravelItineraryPage() {
                                                 <img src={icTravelItinerary} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.walking')}
                                             </span>
-                                            {tourMode === 'walking' && (
-                                                <span className="mt-2 block h-[2px] w-full bg-[#B3261E]" />
-                                            )}
                                         </div>
                                         <div
                                             role="button"
@@ -264,10 +260,12 @@ export function TravelItineraryPage() {
                                                 <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.city')}
                                             </span>
-                                            {tourMode === 'city' && (
-                                                <span className="mt-2 block h-[2px] w-full bg-[#B3261E]" />
-                                            )}
                                         </div>
+                                        <span
+                                            className={`absolute left-0 right-0 bottom-0 h-[2px] w-1/2 bg-[#B3261E] transition-transform duration-300 ease-out ${
+                                                tourMode === 'city' ? 'translate-x-full' : 'translate-x-0'
+                                            }`}
+                                        />
                                     </div>
                                 </div>
 
