@@ -5,7 +5,7 @@ import { Toolbar } from '@/web/components/layout/Toolbar';
 import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
 import { TravelItineraryListItem } from '@/web/components/travel-itinerary/TravelItineraryListItem';
 import { useNavigate } from 'react-router-dom';
-import icTravelItinerary from '@/assets/imgs/icons/ic_walking_tour.png';
+import icWalkingTour from '@/assets/imgs/icons/ic_walking_tour.png';
 import icTourCity from '@/assets/imgs/icons/ic_tour_city.png';
 import icNumber1 from '@/assets/imgs/icons/ic_number1.png';
 import icNumber2 from '@/assets/imgs/icons/ic_number2.png';
@@ -219,16 +219,16 @@ export function TravelItineraryPage() {
                     <div className="w-full rounded-b-[30px] px-4 py-8">
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-4">
-                                <img src={icTravelItinerary} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
+                                <img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
                                 <div>
                                     <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
                                     <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
                                 </div>
                             </div>
 
-                            <div className="mt-4 bg-[#F5F5F5]">
-                                <div className="px-4 sm:px-0">
-                                    <div className="relative grid grid-cols-2 gap-6">
+                            <div>
+                                <div className="px-4 sm:px-0 pt-4">
+                                    <div className="relative grid grid-cols-2 gap-0">
                                         <div
                                             role="button"
                                             tabIndex={0}
@@ -236,12 +236,14 @@ export function TravelItineraryPage() {
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Enter' || event.key === ' ') setTourMode('walking');
                                             }}
-                                            className={`w-full cursor-pointer select-none px-2 pb-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
-                                                tourMode === 'walking' ? 'text-[#B3261E]' : 'text-[#6B6B6B]'
+                                            className={`w-full cursor-pointer select-none px-0 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
+                                                tourMode === 'walking'
+                                                    ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#48464C] rounded-tl-[8px] rounded-tr-[8px]'
+                                                    : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
                                             <span className="inline-flex items-center justify-center gap-2 w-full">
-                                                <img src={icTravelItinerary} alt="" className="w-4 h-4 object-contain" />
+                                                <img src={icWalkingTour} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.walking')}
                                             </span>
                                         </div>
@@ -252,8 +254,10 @@ export function TravelItineraryPage() {
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Enter' || event.key === ' ') setTourMode('city');
                                             }}
-                                            className={`w-full cursor-pointer select-none px-2 pb-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
-                                                tourMode === 'city' ? 'text-[#B3261E]' : 'text-[#6B6B6B]'
+                                            className={`w-full cursor-pointer select-none px-0 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
+                                                tourMode === 'city'
+                                                    ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#48464C] rounded-tl-[8px] rounded-tr-[8px]'
+                                                    : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
                                             <span className="inline-flex items-center justify-center gap-2 w-full">
@@ -261,66 +265,71 @@ export function TravelItineraryPage() {
                                                 {t('travelItinerary.modes.city')}
                                             </span>
                                         </div>
-                                        <span
-                                            className={`absolute left-0 right-0 bottom-0 h-[2px] w-1/2 bg-[#B3261E] transition-transform duration-300 ease-out ${
-                                                tourMode === 'city' ? 'translate-x-full' : 'translate-x-0'
-                                            }`}
-                                        />
+                                        <div className="absolute left-0 right-0 bottom-0 w-full">
+                                            <div
+                                                className={`h-[2px] w-1/2 bg-[#B3261E] transition-transform duration-300 ease-out mt-4 ${
+                                                    tourMode === 'city' ? 'translate-x-full' : 'translate-x-0'
+                                                }`}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
 
-                                <EnvironmentGrid
-                                    title={t('travelItinerary.routeOptionsTitle')}
-                                    environments={routeOptions}
-                                    selectedEnv={selectedRouteOption}
-                                    onSelect={setSelectedRouteOption}
-                                    onViewMore={() => null}
-                                    showViewMore={false}
-                                />
+                                <div className="bg-[#F5F5F5] px-8">
+                                    <EnvironmentGrid
+                                        title={t('travelItinerary.routeOptionsTitle')}
+                                        environments={routeOptions}
+                                        selectedEnv={selectedRouteOption}
+                                        onSelect={setSelectedRouteOption}
+                                        onViewMore={() => null}
+                                        showViewMore={false}
+                                        containerClassName="bg-transparent text-black pb-4"
+                                    />
 
-                                <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">
-                                    {t('travelItinerary.listTitle')}
-                                </h3>
-                                {tourItemsLoading && (
-                                    <p className="text-sm text-gray-500 px-4 sm:px-0">
-                                        {t('common.loading')}
-                                    </p>
-                                )}
-                                {!tourItemsLoading && tourItems.length === 0 && (
-                                    <p className="text-sm text-gray-500 px-4 sm:px-0">
-                                        {t('common.noPlaces')}
-                                    </p>
-                                )}
-                                {!tourItemsLoading && tourItems.length > 0 && (
-                                    <div className="mt-4 space-y-3">
-                                        {tourItems.map((item, idx) => (
-                                            <TravelItineraryListItem
-                                                key={`${tourMode}-${item.id}-${idx}`}
-                                                name={item.name}
-                                                placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
-                                                iconSrc={tourMode === 'city' ? icTourCity : icTravelItinerary}
-                                                onDetails={() => null}
-                                                detailsLabel={t('common.details')}
-                                            />
-                                        ))}
+                                    <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-0">
+                                        {t('travelItinerary.listTitle')}
+                                    </h3>
+                                    {tourItemsLoading && (
+                                        <p className="text-sm text-gray-500 px-0">
+                                            {t('common.loading')}
+                                        </p>
+                                    )}
+                                    {!tourItemsLoading && tourItems.length === 0 && (
+                                        <p className="text-sm text-gray-500 px-0">
+                                            {t('common.noPlaces')}
+                                        </p>
+                                    )}
+                                    {!tourItemsLoading && tourItems.length > 0 && (
+                                        <div className="mt-4 grid grid-cols-2 gap-2">
+                                            {tourItems.map((item, idx) => (
+                                                <TravelItineraryListItem
+                                                    key={`${tourMode}-${item.id}-${idx}`}
+                                                    name={item.name}
+                                                    placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
+                                                    iconSrc={tourMode === 'city' ? icTourCity : icWalkingTour}
+                                                    onDetails={() => null}
+                                                    detailsLabel={t('common.details')}
+                                                />
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {loading && <p className="text-sm text-gray-500">Carregando pontos...</p>}
+                                    {!loading && orderedPoints.length === 0 && (
+                                        <p className="text-sm text-gray-500">Ainda não foi possível carregar os pontos do tour.</p>
+                                    )}
+
+                                    <div
+                                        ref={mapRef}
+                                        style={{ height: 320, border: '1px solid #48464C', borderRadius: 8, overflow: 'hidden' }}
+                                        className="w-full"
+                                    />
+
+                                    <div className="mt-4 flex gap-2">
+                                        <button onClick={onVerRota} className="btn-hover-red w-full max-w-xs bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded px-4 py-3">
+                                            Ver Rota
+                                        </button>
                                     </div>
-                                )}
-
-                                {loading && <p className="text-sm text-gray-500">Carregando pontos...</p>}
-                                {!loading && orderedPoints.length === 0 && (
-                                    <p className="text-sm text-gray-500">Ainda não foi possível carregar os pontos do tour.</p>
-                                )}
-
-                                <div
-                                    ref={mapRef}
-                                    style={{ height: 320, border: '1px solid #48464C', borderRadius: 8, overflow: 'hidden' }}
-                                    className="w-full"
-                                />
-
-                                <div className="mt-4 flex gap-2">
-                                    <button onClick={onVerRota} className="btn-hover-red w-full max-w-xs bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded px-4 py-3">
-                                        Ver Rota
-                                    </button>
                                 </div>
                             </div>
                         </div>

@@ -8,15 +8,20 @@ interface EnvironmentGridProps {
   onViewMore: () => void;
   title?: string;
   showViewMore?: boolean;
+  containerClassName?: string;
+  contentPaddingClassName?: string;
+  gridClassName?: string;
 }
 
-const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selectedEnv, onSelect, onViewMore, title, showViewMore = true }) => {
+const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selectedEnv, onSelect, onViewMore, title, showViewMore = true, containerClassName, contentPaddingClassName, gridClassName }) => {
   const { t } = useTranslation();
   const heading = title || t('placeList.environmentTitle') || 'Tipo de ambiente:';
+  const paddingClassName = contentPaddingClassName || "px-4 sm:px-0";
+  const gridClass = gridClassName || "grid grid-cols-3 min-[790px]:grid-cols-5 gap-2 text-xs w-full";
   return (
-    <div className="bg-[#FFFFFF] text-black pb-4">
-      <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">{heading}</h3>
-      <div className="grid grid-cols-3 min-[790px]:grid-cols-5 gap-2 text-xs w-full px-4 min-[790px]:px-0">
+    <div className={containerClassName || "bg-[#FFFFFF] text-black pb-4"}>
+      <h3 className={`font-bold text-lg mb-3 pt-8 mt-3 ${paddingClassName}`}>{heading}</h3>
+      <div className={`${gridClass} ${paddingClassName}`}>
         {/* Botão "Todos" */}
         <button
           type="button"
