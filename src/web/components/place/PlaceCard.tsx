@@ -26,7 +26,6 @@ export function PlaceCard({ place }: Props) {
             case "FORFUN": return "diversao";
             case "STORES": return "lojas";
             case "PLEASURE": return "prazer";
-            case "FREE": return "gratuito";
             default: return "restaurantes";
         }
     }
