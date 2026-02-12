@@ -39,8 +39,8 @@ export function NavigationBar() {
                         `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
                     }
                 >
-                    <img src={icWalkingTour} alt="Tour a pé" className="w-6 h-6" />
-                    <span className="footer-label">Tour a pé</span>
+                    <img src={icWalkingTour} alt={t('walkingTour.title')} className="w-6 h-6" />
+                    <span className="footer-label">{t('walkingTour.title')}</span>
                 </NavLink>
 
                 <NavLink

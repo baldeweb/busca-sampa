@@ -189,6 +189,10 @@ const resources = {
         socialHeading: 'Redes sociais',
         bio: 'Desenvolvedor Mobile há mais de 8 anos, especialista em Android e iOS. Apaixonado por tecnologia, viagens, restaurantes e por explorar cada canto novo de São Paulo.'
       },
+      walkingTour: {
+        title: 'Tour a Pé',
+        placeholder: 'Aqui você poderá montar o roteiro e ver os pontos no mapa. Clique em "Ver Rota" para abrir no Google Maps.'
+      },
       howToRecommend: {
         title: 'Como faço para recomendar um local?'
       },
