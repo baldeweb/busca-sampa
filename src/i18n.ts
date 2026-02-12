@@ -191,7 +191,17 @@ const resources = {
       },
       walkingTour: {
         title: 'Tour a Pé',
-        placeholder: 'Roteiros a pé, sugeridos para você conhecer vários lugares próximos, sem precisar gastar com locomoção'
+        placeholder: 'Roteiros a pé, sugeridos para você conhecer vários lugares próximos, sem precisar gastar com locomoção',
+        routeOptionsTitle: 'Opções de Roteiro:',
+        routeOptions: {
+          free: 'Gratuito',
+          nightlife: 'Balada',
+          bars: 'Bares',
+          food: 'Gastronômico',
+          history: 'História',
+          museums: 'Museus',
+          more: 'Mais Opções'
+        }
       },
       howToRecommend: {
         title: 'Como faço para recomendar um local?'
@@ -374,7 +384,17 @@ const resources = {
       },
       walkingTour: {
         title: 'Tour a Pie',
-        placeholder: 'Rutas a pie sugeridas para que conozcas varios lugares próximos sin necesidad de gastar en transporte.'
+        placeholder: 'Rutas a pie sugeridas para que conozcas varios lugares próximos sin necesidad de gastar en transporte.',
+        routeOptionsTitle: 'Opciones de Ruta:',
+        routeOptions: {
+          free: 'Gratis',
+          nightlife: 'Vida nocturna',
+          bars: 'Bares',
+          food: 'Gastronómico',
+          history: 'Historia',
+          museums: 'Museos',
+          more: 'Más opciones'
+        }
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
@@ -507,7 +527,17 @@ const resources = {
       aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
       walkingTour: {
         title: 'Tour à pied',
-        placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.'
+        placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.',
+        routeOptionsTitle: 'Options d\'itinéraire:',
+        routeOptions: {
+          free: 'Gratuit',
+          nightlife: 'Vie nocturne',
+          bars: 'Bars',
+          food: 'Gastronomique',
+          history: 'Histoire',
+          museums: 'Musées',
+          more: 'Plus d\'options'
+        }
       },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
       placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Naturaleza', TOURIST_SPOT: 'Sites\u200B touristiques', FORFUN: 'Divertissement', STORES: 'Magasins', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
@@ -534,7 +564,17 @@ const resources = {
       howToRecommend: { title: 'Как порекомендовать место?' },
       walkingTour: {
         title: 'Пеший тур',
-        placeholder: 'Пешие маршруты, предлагаемые, чтобы вы могли посетить несколько близлежащих мест, не тратя деньги на транспорт.'
+        placeholder: 'Пешие маршруты, предлагаемые, чтобы вы могли посетить несколько близлежащих мест, не тратя деньги на транспорт.',
+        routeOptionsTitle: 'Варианты маршрута:',
+        routeOptions: {
+          free: 'Бесплатно',
+          nightlife: 'Ночная жизнь',
+          bars: 'Бары',
+          food: 'Гастрономия',
+          history: 'История',
+          museums: 'Музеи',
+          more: 'Больше вариантов'
+        }
       },
       placeList: {
         environmentTitle: 'Тип окружения:',
@@ -591,7 +631,17 @@ const resources = {
       howToRecommend: { title: '如何推荐一个地点？' },
       walkingTour: {
         title: '徒步行程',
-        placeholder: '为您推荐的步行路线，让您可以探索多个附近的地点，无需支付交通费用。'
+        placeholder: '为您推荐的步行路线，让您可以探索多个附近的地点，无需支付交通费用。',
+        routeOptionsTitle: '行程选项：',
+        routeOptions: {
+          free: '免费',
+          nightlife: '夜生活',
+          bars: '酒吧',
+          food: '美食',
+          history: '历史',
+          museums: '博物馆',
+          more: '更多选项'
+        }
       },
       placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FORFUN: '娱乐', STORES: '商店', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
     }
@@ -702,7 +752,17 @@ const resources = {
       ,
       walkingTour: {
         title: 'Zu Fuß Tour',
-        placeholder: 'Vorgeschlagene Fußrouten, damit du mehrere nahegelegene Orte kennenlernen kannst, ohne für den Transport bezahlen zu müssen.'
+        placeholder: 'Vorgeschlagene Fußrouten, damit du mehrere nahegelegene Orte kennenlernen kannst, ohne für den Transport bezahlen zu müssen.',
+        routeOptionsTitle: 'Route Options:',
+        routeOptions: {
+          free: 'Free',
+          nightlife: 'Nightlife',
+          bars: 'Bars',
+          food: 'Food',
+          history: 'History',
+          museums: 'Museums',
+          more: 'More Options'
+        }
       },
     }
   }
@@ -810,6 +870,20 @@ const resources = {
         aboutHeading: 'Über mich',
         socialHeading: 'Soziale Netzwerke',
         bio: 'Mobile-Entwickler mit über 8 Jahren Erfahrung, Spezialist für Android & iOS. Begeistert von Technologie, Reisen, Restaurants und dem Erkunden von São Paulo.'
+      },
+      walkingTour: {
+        title: 'Zu Fuß Tour',
+        placeholder: 'Vorgeschlagene Fußrouten, damit du mehrere nahegelegene Orte kennenlernen kannst, ohne für den Transport bezahlen zu müssen.',
+        routeOptionsTitle: 'Routenoptionen:',
+        routeOptions: {
+          free: 'Kostenlos',
+          nightlife: 'Nachtleben',
+          bars: 'Bars',
+          food: 'Kulinarisch',
+          history: 'Geschichte',
+          museums: 'Museen',
+          more: 'Mehr Optionen'
+        }
       }
     }
   },
@@ -918,6 +992,20 @@ const resources = {
         aboutHeading: '私について',
         socialHeading: 'ソーシャルネットワーク',
         bio: 'モバイル開発者（8年以上）、Android と iOS の専門家。テクノロジー、旅行、レストラン、サンパウロのあらゆる場所を探索することに情熱を持っています。'
+      },
+      walkingTour: {
+        title: '徒歩ツアー',
+        placeholder: '交通費をかけずに複数の近くの場所を探索できる徒歩ルートの提案です。',
+        routeOptionsTitle: 'ルートオプション：',
+        routeOptions: {
+          free: '無料',
+          nightlife: 'ナイトライフ',
+          bars: 'バー',
+          food: 'グルメ',
+          history: '歴史',
+          museums: '博物館',
+          more: '他のオプション'
+        }
       }
     }
   }
@@ -1038,6 +1126,20 @@ const resources = {
         socialHeading: 'وسائل التواصل الاجتماعي',
         bio: 'مطور تطبيقات جوال لأكثر من 8 سنوات، متخصص في Android و iOS. شغوف بالتقنية والسفر والمطاعم واستكشاف كل زاوية في ساو باولو.'
       },
+      walkingTour: {
+        title: 'جولة سيراً على الأقدام',
+        placeholder: 'مسارات مشي مقترحة لتتمكن من استكشاف عدة أماكن قريبة دون إنفاق على المواصلات.',
+        routeOptionsTitle: 'خيارات المسار:',
+        routeOptions: {
+          free: 'مجاني',
+          nightlife: 'حياة ليلية',
+          bars: 'حانات',
+          food: 'مأكولات',
+          history: 'تاريخ',
+          museums: 'متاحف',
+          more: 'خيارات أكثر'
+        }
+      },
       nearbyMap: { title: 'خريطة القرب', noneInRadius: 'لا توجد نقاط ضمن النطاق الحالي.', pointsDisplayed: '{{count}} نقطة معروضة.', you: 'أنت' }
       ,
       neighborhoodList: {
@@ -1157,6 +1259,20 @@ const resources = {
         socialHeading: 'Sociale netwerken',
         bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
       },
+      walkingTour: {
+        title: 'Tour a piedi',
+        placeholder: 'Percorsi a piedi suggeriti per farti conoscere diversi luoghi vicini, senza spendere in trasporti.',
+        routeOptionsTitle: 'Opzioni di itinerario:',
+        routeOptions: {
+          free: 'Gratuito',
+          nightlife: 'Vita notturna',
+          bars: 'Bar',
+          food: 'Gastronomico',
+          history: 'Storia',
+          museums: 'Musei',
+          more: 'Altre opzioni'
+        }
+      },
       nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
     }
   },
@@ -1271,6 +1387,20 @@ const resources = {
         socialHeading: 'Sociale netwerken',
         bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
       },
+      walkingTour: {
+        title: 'Wandeltocht',
+        placeholder: 'Voorgestelde wandelroutes zodat je meerdere nabijgelegen plekken kunt ontdekken zonder te hoeven betalen voor vervoer.',
+        routeOptionsTitle: 'Route-opties:',
+        routeOptions: {
+          free: 'Gratis',
+          nightlife: 'Nachtleven',
+          bars: 'Bars',
+          food: 'Culinair',
+          history: 'Geschiedenis',
+          museums: 'Musea',
+          more: 'Meer opties'
+        }
+      },
       nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
     }
   }
@@ -1376,6 +1506,20 @@ const resources = {
         socialHeading: 'Sosyal ağlar',
         bio: '8 yılı aşkın süredir mobil geliştirici, Android ve iOS uzmanı. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
       },
+      walkingTour: {
+        title: 'Yürüyüş turu',
+        placeholder: 'Ulaşım için harcama yapmadan birden fazla yakın yeri keşfetmeniz için önerilen yürüyüş rotaları.',
+        routeOptionsTitle: 'Rota seçenekleri:',
+        routeOptions: {
+          free: 'Ücretsiz',
+          nightlife: 'Gece hayatı',
+          bars: 'Barlar',
+          food: 'Gastronomi',
+          history: 'Tarih',
+          museums: 'Müzeler',
+          more: 'Daha fazla seçenek'
+        }
+      },
       nearbyMap: { title: 'Yakındaki Harita', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }
   },
@@ -1469,6 +1613,20 @@ const resources = {
         openNow: 'Otwarte teraz',
         opensTomorrowAt: 'Otwiera się jutro o {{time}}',
         subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
+      },
+      walkingTour: {
+        title: 'Spacer',
+        placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
+        routeOptionsTitle: 'Opcje trasy:',
+        routeOptions: {
+          free: 'Za darmo',
+          nightlife: 'Życie nocne',
+          bars: 'Bary',
+          food: 'Gastronomia',
+          history: 'Historia',
+          museums: 'Muzea',
+          more: 'Więcej opcji'
+        }
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }

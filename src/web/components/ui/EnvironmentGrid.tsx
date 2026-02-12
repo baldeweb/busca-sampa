@@ -6,13 +6,16 @@ interface EnvironmentGridProps {
   selectedEnv: string | null;
   onSelect: (value: string | null) => void;
   onViewMore: () => void;
+  title?: string;
+  showViewMore?: boolean;
 }
 
-const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selectedEnv, onSelect, onViewMore }) => {
+const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selectedEnv, onSelect, onViewMore, title, showViewMore = true }) => {
   const { t } = useTranslation();
+  const heading = title || t('placeList.environmentTitle') || 'Tipo de ambiente:';
   return (
     <div className="bg-[#FFFFFF] text-black pb-4">
-      <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">{t('placeList.environmentTitle') || 'Tipo de ambiente:'}</h3>
+      <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-4 sm:px-0">{heading}</h3>
       <div className="grid grid-cols-3 min-[790px]:grid-cols-5 gap-2 text-xs w-full px-4 min-[790px]:px-0">
         {/* Botão "Todos" */}
         <button
@@ -42,7 +45,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
           </button>
         ))}
         {/* Botão "Ver mais" se houver mais de 4 em mobile ou mais de 8 em desktop */}
-        {environments.length > 4 && (
+        {showViewMore && environments.length > 4 && (
           <button
             type="button"
             onClick={onViewMore}
