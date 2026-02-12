@@ -13,6 +13,8 @@ export function NavigationBar() {
         "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide";
     const { t } = useTranslation();
     const [showSearchModal, setShowSearchModal] = React.useState(false);
+    const showRoteiros = false;
+    const showBuscar = false;
 
     return (
         <footer
@@ -33,25 +35,29 @@ export function NavigationBar() {
                     <span className="footer-label">{t('footer.home')}</span>
                 </NavLink>
 
-                <NavLink
-                    to="/roteiros"
-                    className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "font-semibold" : ""}`
-                    }
-                >
-                    <img src={icItinerary} alt={t('travelItinerary.title')} className="w-6 h-6" />
-                    <span className="footer-label">{t('travelItinerary.title')}</span>
-                </NavLink>
+                {showRoteiros && (
+                    <NavLink
+                        to="/roteiros"
+                        className={({ isActive }) =>
+                            `${baseClasses} ${isActive ? "font-semibold" : ""}`
+                        }
+                    >
+                        <img src={icItinerary} alt={t('travelItinerary.title')} className="w-6 h-6" />
+                        <span className="footer-label">{t('travelItinerary.title')}</span>
+                    </NavLink>
+                )}
 
-                <NavLink
-                    to="/search"
-                    className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "font-semibold" : ""}`
-                    }
-                >
-                    <img src={icSearch} alt="Buscar" className="w-5 h-5" />
-                    <span className="footer-label">{t('footer.search')}</span>
-                </NavLink>
+                {showBuscar && (
+                    <NavLink
+                        to="/search"
+                        className={({ isActive }) =>
+                            `${baseClasses} ${isActive ? "font-semibold" : ""}`
+                        }
+                    >
+                        <img src={icSearch} alt="Buscar" className="w-5 h-5" />
+                        <span className="footer-label">{t('footer.search')}</span>
+                    </NavLink>
+                )}
 
                 <NavLink
                     to="/about"

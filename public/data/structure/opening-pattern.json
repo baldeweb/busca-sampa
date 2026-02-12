@@ -973,13 +973,20 @@
       { "days": ["SATURDAY", "SUNDAY"], "open": "18:00", "close": "22:00" }
     ]
   },
-    {
+  {
     "id": "PRACADOMEIO_DAYTIME",
     "description": "Horários do Praça do Meio Bar",
     "periods": [
       { "days": ["THURSDAY", "FRIDAY"], "open": "17:00", "close": "04:00" },
       { "days": ["SATURDAY"], "open": "14:00", "close": "05:00" },
       { "days": ["SUNDAY"], "open": "14:00", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "MEMORIALDARESISTENCIA_DAYTIME",
+    "description": "Horários do Memorial da Resistência de São Paulo",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "10:00", "close": "18:00" }
     ]
   }
 ]

@@ -731,7 +731,7 @@
     },
     {
         "id": 21,
-        "name": "Mosteiro São Bento",
+        "name": "Mosteiro de São Bento",
         "type": "TOURIST_SPOT",
         "phones": [
             {
@@ -762,8 +762,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01029-010",
                 "isMainUnity": true,
-                "latitude": -23.5435437,
-                "longitude": -46.6365736
+                "latitude": -23.544258,
+                "longitude": -46.634329
             }
         ],
         "linkMenu": "",
@@ -803,8 +803,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "03003-060",
                 "isMainUnity": true,
-                "latitude": -23.5444029,
-                "longitude": -46.6299271
+                "latitude": -23.544330,
+                "longitude": -46.626895
             }
         ],
         "linkMenu": "",
@@ -844,8 +844,8 @@
                 "neighborhood": "Luz",
                 "postalCode": "01120-010",
                 "isMainUnity": true,
-                "latitude": -23.5349622,
-                "longitude": -46.637739
+                "latitude": -23.534787,
+                "longitude": -46.635039
             }
         ],
         "linkMenu": "",
@@ -883,8 +883,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01016-040",
                 "isMainUnity": true,
-                "latitude": -23.5484911,
-                "longitude": -46.635101
+                "latitude": -23.548651,
+                "longitude": -46.632443
             }
         ],
         "linkMenu": "",
@@ -924,8 +924,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01016-040",
                 "isMainUnity": true,
-                "latitude": -23.5479822,
-                "longitude": -46.6351942
+                "latitude": -23.548286,
+                "longitude": -46.632581
             }
         ],
         "linkMenu": "",
@@ -966,8 +966,8 @@
                 "neighborhood": "Luz",
                 "postalCode": "01120-010",
                 "isMainUnity": true,
-                "latitude": -23.5343563,
-                "longitude": -46.6362509
+                "latitude": -23.534439,
+                "longitude": -46.633543
             }
         ],
         "linkMenu": "",
@@ -1000,8 +1000,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "01001-000",
                 "isMainUnity": true,
-                "latitude": -23.550305,
-                "longitude": -46.6367758
+                "latitude": -23.550332,
+                "longitude": -46.634162
             }
         ],
         "linkMenu": "",
@@ -1036,8 +1036,8 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "",
                 "isMainUnity": true,
-                "latitude": -23.5436189,
-                "longitude": -46.6350948
+                "latitude": -23.543653,
+                "longitude": -46.632507
             }
         ],
         "linkMenu": "",
@@ -1077,8 +1077,8 @@
                 "neighborhood": "Campos Elíseos",
                 "postalCode": "01218-020",
                 "isMainUnity": true,
-                "latitude": -23.534199,
-                "longitude": -46.6423433
+                "latitude": -23.534944,
+                "longitude": -46.638914
             }
         ],
         "linkMenu": "",
@@ -1119,8 +1119,8 @@
                 "neighborhood": "República",
                 "postalCode": "01037-010",
                 "isMainUnity": true,
-                "latitude": -23.5452298,
-                "longitude": -46.6434859
+                "latitude": -23.545028,
+                "longitude": -46.638878
             }
         ],
         "linkMenu": "",
@@ -1154,14 +1154,14 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "Sen. Teotônio Vilela",
+                "street": "Senador Teotônio Vilela",
                 "number": "261",
                 "city": "São Paulo",
                 "neighborhood": "Interlagos",
                 "postalCode": "04801-000",
                 "isMainUnity": true,
-                "latitude": -23.7045881,
-                "longitude": -46.7042885
+                "latitude": -23.703365,
+                "longitude": -46.701040
             }
         ],
         "linkMenu": "",
@@ -1201,8 +1201,8 @@
                 "neighborhood": "Itaim Bibi",
                 "postalCode": "04543-011",
                 "isMainUnity": true,
-                "latitude": -23.592854,
-                "longitude": -46.6918039
+                "latitude":-23.590864,
+                "longitude": -46.689089
             }
         ],
         "linkMenu": "",
@@ -1243,8 +1243,8 @@
                 "neighborhood": "Itaquera",
                 "postalCode": "08295-005",
                 "isMainUnity": true,
-                "latitude": -23.5453085,
-                "longitude": -46.4768041
+                "latitude": -23.546801,
+                "longitude": -46.472917
             }
         ],
         "linkMenu": "",
@@ -1284,8 +1284,8 @@
                 "neighborhood": "Jardins",
                 "postalCode": "01449-000",
                 "isMainUnity": true,
-                "latitude": -23.5728853,
-                "longitude": -46.6786346
+                "latitude": -23.573108,
+                "longitude": -46.675902
             }
         ],
         "linkMenu": "",
@@ -1323,8 +1323,8 @@
                 "neighborhood": "Jardins",
                 "postalCode": "01438-060",
                 "isMainUnity": true,
-                "latitude": -23.5687565,
-                "longitude": -46.6754123
+                "latitude": -23.569367,
+                "longitude": -46.672411
             }
         ],
         "linkMenu": "",
@@ -1362,8 +1362,8 @@
                 "neighborhood": "Lapa",
                 "postalCode": "05072-030",
                 "isMainUnity": true,
-                "latitude": -23.519351,
-                "longitude": -46.7043011
+                "latitude": -23.519211,
+                "longitude": -46.701261
             }
         ],
         "linkMenu": "",
@@ -1401,8 +1401,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01508-900",
                 "isMainUnity": true,
-                "latitude": -23.5612483,
-                "longitude": -46.6377126
+                "latitude": -23.561336,
+                "longitude": -46.635114
             }
         ],
         "linkMenu": "",
@@ -1442,8 +1442,8 @@
                 "neighborhood": "Morumbi",
                 "postalCode": "05653-070",
                 "isMainUnity": true,
-                "latitude": -23.6010078,
-                "longitude": -46.7226197
+                "latitude": -23.598354,
+                "longitude": -46.719808
             }
         ],
         "linkMenu": "",
@@ -1479,8 +1479,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04001-070",
                 "isMainUnity": true,
-                "latitude": -23.5800191,
-                "longitude": -46.6632873
+                "latitude": -23.580800,
+                "longitude": -46.660185
             }
         ],
         "linkMenu": "",
@@ -1521,8 +1521,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": -23.5837837,
-                "longitude": -46.6617006
+                "latitude": -23.581859,
+                "longitude": -46.657964
             }
         ],
         "linkMenu": "",
@@ -1557,8 +1557,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": -23.5837837,
-                "longitude": -46.6617006
+                "latitude": -23.581859,
+                "longitude": -46.657964
             }
         ],
         "linkMenu": "",
@@ -1598,8 +1598,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05426-010",
                 "isMainUnity": true,
-                "latitude": -23.5611812,
-                "longitude": -46.6969418
+                "latitude": -23.561303,
+                "longitude": -46.694287
             }
         ],
         "linkMenu": "",
@@ -1640,8 +1640,8 @@
                 "neighborhood": "Consolação",
                 "postalCode": "01302-001",
                 "isMainUnity": true,
-                "latitude": -23.5511676,
-                "longitude": -46.6591912
+                "latitude": -23.551158,
+                "longitude": -46.656493
             }
         ],
         "linkMenu": "",
@@ -1681,8 +1681,8 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01504-000",
                 "isMainUnity": true,
-                "latitude": -23.5711135,
-                "longitude": -46.6427098
+                "latitude": -23.571217,
+                "longitude": -46.639859
             }
         ],
         "linkMenu": "",
@@ -1717,8 +1717,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05406-040",
                 "isMainUnity": true,
-                "latitude": -23.5582252,
-                "longitude": -46.680618
+                "latitude": -23.558217,
+                "longitude": -46.680614
             }
         ],
         "linkMenu": "",
@@ -1753,8 +1753,44 @@
                 "neighborhood": "Canindé",
                 "postalCode": "01109-010",
                 "isMainUnity": true,
-                "latitude": -23.5254687,
-                "longitude": -46.6220265
+                "latitude": -23.525407,
+                "longitude": -46.621544
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 54,
+        "name": "Memorial da Resistência de São Paulo",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "MEMORIALDARESISTENCIA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Museu em um edifício histórico com exposições sobre o passado político de repressão e resistência da cidade."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Mauá",
+                "number": "1",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01213-010",
+                "isMainUnity": true,
+                "latitude": -23.534958,
+                "longitude": -46.638916
             }
         ],
         "linkMenu": "",
