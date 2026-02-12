@@ -53,8 +53,45 @@ export function PlaceDetailPage() {
     ...stores,
   ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
 
+  function normalizeRouteType(key?: string) {
+    switch ((key || '').toLowerCase()) {
+      case 'restaurants':
+      case 'restaurantes':
+        return 'restaurants';
+      case 'bars':
+      case 'bares':
+        return 'bars';
+      case 'coffees':
+      case 'cafeterias':
+        return 'coffees';
+      case 'nightlife':
+      case 'vida-noturna':
+        return 'nightlife';
+      case 'nature':
+      case 'natureza':
+        return 'nature';
+      case 'tourist-spot':
+      case 'pontos-turisticos':
+        return 'tourist-spot';
+      case 'forfun':
+      case 'diversao':
+        return 'forfun';
+      case 'stores':
+      case 'lojas':
+        return 'stores';
+      case 'pleasure':
+      case 'prazer':
+        return 'pleasure';
+      case 'free':
+      case 'gratuito':
+        return 'free';
+      default:
+        return (key || '').toLowerCase();
+    }
+  }
+
   function selectDatasetArray(key?: string) {
-    switch (key) {
+    switch (normalizeRouteType(key)) {
       case "restaurants": return restaurants;
       case "bars": return bars;
       case "coffees": return coffees;

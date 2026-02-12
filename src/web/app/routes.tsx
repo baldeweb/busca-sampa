@@ -18,6 +18,7 @@ export const router = createBrowserRouter([
         element: <AppLayout />,
         children: [
             { path: "/", element: <HomePage /> },
+            { path: "/bairro/:slug", element: <NeighborhoodListPage /> },
             { path: "/neighborhood/:slug", element: <NeighborhoodListPage /> },
             
             { path: "/recommendations-origin", element: <RecommendationsOriginPage /> },
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
             { path: "/support", element: <SupportPage /> },
 
             //  Travel itineraries (specific route must be before the generic "/:type")
+            { path: "/roteiros", element: <TravelItineraryPage /> },
             { path: "/travel-itinerary", element: <TravelItineraryPage /> },
             //  Listagens (friendly list route: /:type, ex: /restaurants, /bars)
             { path: "/:type", element: <PlaceListPage /> },

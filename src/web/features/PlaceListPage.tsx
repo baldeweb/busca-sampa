@@ -70,15 +70,25 @@ export const PlaceListPage: React.FC = () => {
     // Mapeia slug para tipo utilizado nos dados
     const typeMap: Record<string, string> = {
         restaurants: "RESTAURANTS",
+        restaurantes: "RESTAURANTS",
         bars: "BARS",
+        bares: "BARS",
         coffees: "COFFEES",
+        cafeterias: "COFFEES",
         nightlife: "NIGHTLIFE",
+        "vida-noturna": "NIGHTLIFE",
         nature: "NATURE",
+        natureza: "NATURE",
         "tourist-spot": "TOURIST_SPOT",
+        "pontos-turisticos": "TOURIST_SPOT",
         "pleasure": "PLEASURE",
+        prazer: "PLEASURE",
         free: "FREE",
+        gratuito: "FREE",
         forfun: "FORFUN",
+        diversao: "FORFUN",
         stores: "STORES",
+        lojas: "STORES",
     };
     const mappedType = typeMap[routeTypeLower] || routeTypeLower.toUpperCase() || "RESTAURANT";
 
@@ -663,15 +673,16 @@ export const PlaceListPage: React.FC = () => {
                                             detailsLabel={t('common.details')}
                                             onDetails={() => {
                                                 const typeToSlug: Record<string, string> = {
-                                                    RESTAURANTS: "restaurants",
-                                                    BARS: "bars",
-                                                    COFFEES: "coffees",
-                                                    NIGHTLIFE: "nightlife",
-                                                    NATURE: "nature",
-                                                    TOURIST_SPOT: "tourist-spot",
-                                                    FORFUN: "forfun",
-                                                    STORES: "stores",
-                                                    PLEASURE: "pleasure",
+                                                    RESTAURANTS: "restaurantes",
+                                                    BARS: "bares",
+                                                    COFFEES: "cafeterias",
+                                                    NIGHTLIFE: "vida-noturna",
+                                                    NATURE: "natureza",
+                                                    TOURIST_SPOT: "pontos-turisticos",
+                                                    FORFUN: "diversao",
+                                                    STORES: "lojas",
+                                                    PLEASURE: "prazer",
+                                                    FREE: "gratuito",
                                                 };
                                                 const placeTypeKey = place.type || mappedType;
                                                 const slug = typeToSlug[placeTypeKey] || routeTypeLower;

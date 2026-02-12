@@ -17,15 +17,17 @@ export function PlaceCard({ place }: Props) {
 
     function resolveCategoryKey(): string {
         switch (place.type) {
-            case "RESTAURANTS": return "restaurants";
-            case "BARS": return "bars";
-            case "COFFEES": return "coffees";
-            case "NATURE": return "nature";
-            case "NIGHTLIFE": return "nightlife";
-            case "TOURIST_SPOT": return "tourist-spot";
-            case "FORFUN": return "forfun";
-            case "STORES": return "stores";
-            default: return "unknown";
+            case "RESTAURANTS": return "restaurantes";
+            case "BARS": return "bares";
+            case "COFFEES": return "cafeterias";
+            case "NATURE": return "natureza";
+            case "NIGHTLIFE": return "vida-noturna";
+            case "TOURIST_SPOT": return "pontos-turisticos";
+            case "FORFUN": return "diversao";
+            case "STORES": return "lojas";
+            case "PLEASURE": return "prazer";
+            case "FREE": return "gratuito";
+            default: return "restaurantes";
         }
     }
 

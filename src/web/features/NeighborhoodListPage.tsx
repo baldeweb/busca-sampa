@@ -445,16 +445,18 @@ export const NeighborhoodListPage: React.FC = () => {
                       detailsLabel={t('common.details')}
                       onDetails={() => {
                         const typeMap: Record<string, string> = {
-                          RESTAURANTS: "restaurants",
-                          BARS: "bars",
-                          COFFEES: "coffees",
-                          NIGHTLIFE: "nightlife",
-                          NATURE: "nature",
-                          TOURIST_SPOT: "tourist-spot",
-                          FORFUN: "forfun",
-                          STORES: "stores",
+                          RESTAURANTS: "restaurantes",
+                          BARS: "bares",
+                          COFFEES: "cafeterias",
+                          NIGHTLIFE: "vida-noturna",
+                          NATURE: "natureza",
+                          TOURIST_SPOT: "pontos-turisticos",
+                          FORFUN: "diversao",
+                          STORES: "lojas",
+                          PLEASURE: "prazer",
+                          FREE: "gratuito",
                         };
-                        const cat = typeMap[place.type] || "restaurants";
+                        const cat = typeMap[place.type] || "restaurantes";
                         navigate(`/${cat}/${slugify(place.name)}`);
                       }}
                     />

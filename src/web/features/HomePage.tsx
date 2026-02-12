@@ -82,9 +82,20 @@ export function HomePage() {
 
     const tagToRouteSlug = (tag: string): string => {
       const t = tag.replace(/-/g, '_').toUpperCase();
-      if (t === 'RESTAURANT' || t === 'RESTAURANTS') return 'restaurants';
-      // default: use kebab-case (TOURIST_SPOT -> tourist-spot)
-      return t.toLowerCase().replace(/_/g, '-');
+      const map: Record<string, string> = {
+        RESTAURANT: 'restaurantes',
+        RESTAURANTS: 'restaurantes',
+        BARS: 'bares',
+        COFFEES: 'cafeterias',
+        NIGHTLIFE: 'vida-noturna',
+        NATURE: 'natureza',
+        TOURIST_SPOT: 'pontos-turisticos',
+        FORFUN: 'diversao',
+        STORES: 'lojas',
+        PLEASURE: 'prazer',
+        FREE: 'gratuito'
+      };
+      return map[t] || t.toLowerCase().replace(/_/g, '-');
     };
 
     const firstTag = normalizedTags[0] || 'RESTAURANTS';
@@ -95,7 +106,7 @@ export function HomePage() {
   function handleNeighborhoodSelect(n: Neighborhood) {
     // Em vez de apenas selecionar, navegamos para a página dedicada do bairro
     const s = slugify(n.neighborhoodName);
-    navigate(`/neighborhood/${s}`);
+    navigate(`/bairro/${s}`);
   }
 
   function handleDistanceConfirm(n: number) {

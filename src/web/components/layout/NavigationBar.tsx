@@ -34,7 +34,7 @@ export function NavigationBar() {
                 </NavLink>
 
                 <NavLink
-                    to="/travel-itinerary"
+                    to="/roteiros"
                     className={({ isActive }) =>
                         `${baseClasses} ${isActive ? "font-semibold" : ""}`
                     }
