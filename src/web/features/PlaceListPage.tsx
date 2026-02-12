@@ -642,7 +642,7 @@ export const PlaceListPage: React.FC = () => {
             />
             {/* Modal antigo de filtros removido em favor dos menus inline */}
             {/* Lista de lugares */}
-            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg`}>
+            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] shadow-lg`}>
                 <div className="mx-auto max-w-5xl px-4 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}

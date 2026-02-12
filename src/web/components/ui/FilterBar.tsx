@@ -91,7 +91,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
   return (
     <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-      <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black mb-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
         <div className="flex flex-col justify-start gap-2">
           <div className="flex items-center">
             <h3 className="font-bold text-lg text-black">{t("filters.title", { defaultValue: "Filtros" })}</h3>

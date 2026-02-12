@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
@@ -12,7 +13,7 @@ import icNumber2 from '@/assets/imgs/icons/ic_number2.png';
 import icNumber3 from '@/assets/imgs/icons/ic_number3.png';
 import icNumber4 from '@/assets/imgs/icons/ic_number4.png';
 import icNumber5 from '@/assets/imgs/icons/ic_number5.png';
-import icWarning from '@/assets/imgs/icons/ic_warning.png';
+import { WarningTip } from '@/web/components/ui/WarningTip';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useRecommendationList } from '@/web/hooks/useRecommendationList';
@@ -49,6 +50,7 @@ function buildGoogleMapsDirectionsUrl(points: Array<{ lat: number; lng: number }
 
 export function TravelItineraryPage() {
     const { t } = useTranslation();
+    useDocumentTitle(t('travelItinerary.title'));
     const navigate = useNavigate();
     const mapRef = useRef<HTMLDivElement | null>(null);
     const mapInstanceRef = useRef<L.Map | null>(null);
@@ -247,7 +249,7 @@ export function TravelItineraryPage() {
             <Toolbar onBack={() => navigate(-1)} />
 
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-                <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12 text-black">
+                <div className="mx-auto max-w-5xl px-0 sm:px-4 pt-0 pb-6 sm:pb-12 text-black">
                     <div className="w-full rounded-b-[30px] px-4 lg:px-8 py-8">
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-4">
@@ -274,7 +276,7 @@ export function TravelItineraryPage() {
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
-                                            <span className="inline-flex items-center justify-center gap-2 w-full">
+                                            <span className="category-card-label inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icWalkingTour} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.walking')}
                                             </span>
@@ -292,7 +294,7 @@ export function TravelItineraryPage() {
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
-                                            <span className="inline-flex items-center justify-center gap-2 w-full">
+                                            <span className="category-card-label inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.city')}
                                             </span>
@@ -411,17 +413,11 @@ export function TravelItineraryPage() {
                             <p className="mt-2 text-sm text-gray-500">Ainda não foi possível carregar os lugares do roteiro.</p>
                         )}
 
-                        <div className="mt-4 mb-8 flex items-start gap-3 rounded-lg border border-[#E0E0E0] bg-[#FFE7C0] p-3">
-                            <img src={icWarning} alt="" className="w-6 h-6 mt-0.5 object-contain" />
-                            <div>
-                                <h4 className="text-sm font-bold uppercase tracking-[0.06em] text-gray-700">
-                                    {t('travelItinerary.tipTitle')}
-                                </h4>
-                                <p className="mt-1 text-sm text-gray-600 leading-relaxed">
-                                    {t('travelItinerary.tipDescription')}
-                                </p>
-                            </div>
-                        </div>
+                        <WarningTip
+                            title={t('travelItinerary.tipTitle')}
+                            description={t('travelItinerary.tipDescription')}
+                            className="mt-4 mb-8"
+                        />
 
                         <div className="mt-4">
                             <button
@@ -436,7 +432,7 @@ export function TravelItineraryPage() {
                 </div>
             )}
 
-            <main className="flex-1 bg-[#F5F5F5]">
+            <main className="flex-1">
                 {/* Main intentionally empty for itineraries */}
             </main>
         </div>

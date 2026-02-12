@@ -352,7 +352,7 @@ export const NeighborhoodListPage: React.FC = () => {
     <div className="min-h-screen bg-bs-bg text-white flex flex-col">
       <Toolbar onBack={() => navigate(-1)} />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-        <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12 text-black">
+        <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-2 text-black">
             <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[30px] px-4 py-8">
               <div className="flex items-start gap-4">
                 <img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />
@@ -370,7 +370,7 @@ export const NeighborhoodListPage: React.FC = () => {
       {/* Filtro por tipo (grid, igual à página de lugares) */}
       {environments.length > 0 && (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-          <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-8 text-black">
+          <div className="mx-auto max-w-5xl px-4 sm:px-12 pb-4 text-black">
             <EnvironmentGrid
               environments={environments}
               selectedEnv={selectedType}
