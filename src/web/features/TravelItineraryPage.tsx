@@ -216,7 +216,7 @@ export function TravelItineraryPage() {
 
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12 text-black">
-                    <div className="w-full rounded-b-[30px] px-4 py-8">
+                    <div className="w-full rounded-b-[30px] px-4 lg:px-8 py-8">
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-4">
                                 <img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
@@ -227,7 +227,7 @@ export function TravelItineraryPage() {
                             </div>
 
                             <div>
-                                <div className="px-4 sm:px-0 pt-4">
+                                <div className="pt-4">
                                     <div className="relative grid grid-cols-2 gap-0">
                                         <div
                                             role="button"
@@ -275,7 +275,7 @@ export function TravelItineraryPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-[#F5F5F5] px-8">
+                                <div className="bg-[#F5F5F5] px-4 lg:px-8">
                                     <EnvironmentGrid
                                         title={t('travelItinerary.routeOptionsTitle')}
                                         environments={routeOptions}
@@ -284,6 +284,7 @@ export function TravelItineraryPage() {
                                         onViewMore={() => null}
                                         showViewMore={false}
                                         containerClassName="bg-transparent text-black pb-4"
+                                        contentPaddingClassName="px-0"
                                     />
 
                                     <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-0">
@@ -300,7 +301,7 @@ export function TravelItineraryPage() {
                                         </p>
                                     )}
                                     {!tourItemsLoading && tourItems.length > 0 && (
-                                        <div className="mt-4 grid grid-cols-2 gap-2">
+                                        <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
                                             {tourItems.map((item, idx) => (
                                                 <TravelItineraryListItem
                                                     key={`${tourMode}-${item.id}-${idx}`}
@@ -308,7 +309,7 @@ export function TravelItineraryPage() {
                                                     placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
                                                     iconSrc={tourMode === 'city' ? icTourCity : icWalkingTour}
                                                     onDetails={() => null}
-                                                    detailsLabel={t('common.details')}
+                                                    detailsLabel="Ver roteiro"
                                                 />
                                             ))}
                                         </div>
@@ -322,7 +323,7 @@ export function TravelItineraryPage() {
                                     <div
                                         ref={mapRef}
                                         style={{ height: 320, border: '1px solid #48464C', borderRadius: 8, overflow: 'hidden' }}
-                                        className="w-full"
+                                        className="w-full mt-4"
                                     />
 
                                     <div className="mt-4 flex gap-2">
