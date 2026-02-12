@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import { useNavigate } from 'react-router-dom';
-import icWalkingTour from '@/assets/imgs/icons/ic_walking_tour.png';
 import icNumber1 from '@/assets/imgs/icons/ic_number1.png';
 import icNumber2 from '@/assets/imgs/icons/ic_number2.png';
 import icNumber3 from '@/assets/imgs/icons/ic_number3.png';
@@ -186,7 +185,6 @@ export function WalkingTourPage() {
                     <div className="w-full rounded-b-[30px] px-4 py-8">
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-4">
-                                <img src={icWalkingTour} alt="walking tour" className="w-12 h-12 object-contain" />
                                 <div>
                                     <SectionHeading title={t('walkingTour.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
                                     <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('walkingTour.placeholder')}</p>

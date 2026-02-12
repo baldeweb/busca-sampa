@@ -191,7 +191,7 @@ const resources = {
       },
       walkingTour: {
         title: 'Tour a Pé',
-        placeholder: 'Aqui você poderá montar o roteiro e ver os pontos no mapa. Clique em "Ver Rota" para abrir no Google Maps.'
+        placeholder: 'Roteiros a pé, sugeridos para você conhecer vários lugares próximos, sem precisar gastar com locomoção'
       },
       howToRecommend: {
         title: 'Como faço para recomendar um local?'
@@ -372,6 +372,10 @@ const resources = {
         socialHeading: 'Redes sociales',
         bio: 'Desarrollador móvil hace más de 8 años. Apasionado por tecnología, viajes y explorar São Paulo.'
       },
+      walkingTour: {
+        title: 'Tour a Pie',
+        placeholder: 'Rutas a pie sugeridas para que conozcas varios lugares próximos sin necesidad de gastar en transporte.'
+      },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
         RESTAURANT: 'Restaurantes', BARS: 'Bares', COFFEES: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FORFUN: 'Diversión', STORES: 'Tiendas', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
@@ -501,6 +505,10 @@ const resources = {
       support: { title: 'Soutenir le site' },
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
       aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
+      walkingTour: {
+        title: 'Tour à pied',
+        placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.'
+      },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
       placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Naturaleza', TOURIST_SPOT: 'Sites\u200B touristiques', FORFUN: 'Divertissement', STORES: 'Magasins', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
     }
@@ -524,6 +532,10 @@ const resources = {
       about: { title: 'Кто я?', paragraph: 'Страница о вас. Макет позже.' },
       aboutMe: { authorTag: 'Создатель Role Paulista', aboutHeading: 'Обо мне', socialHeading: 'Соцсети', bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.' },
       howToRecommend: { title: 'Как порекомендовать место?' },
+      walkingTour: {
+        title: 'Пеший тур',
+        placeholder: 'Пешие маршруты, предлагаемые, чтобы вы могли посетить несколько близлежащих мест, не тратя деньги на транспорт.'
+      },
       placeList: {
         environmentTitle: 'Тип окружения:',
         hoursUnavailable: 'Часы недоступны',
@@ -577,6 +589,10 @@ const resources = {
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
       aboutMe: { authorTag: 'Role Paulista 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
       howToRecommend: { title: '如何推荐一个地点？' },
+      walkingTour: {
+        title: '徒步行程',
+        placeholder: '为您推荐的步行路线，让您可以探索多个附近的地点，无需支付交通费用。'
+      },
       placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FORFUN: '娱乐', STORES: '商店', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
     }
   },
@@ -683,6 +699,11 @@ const resources = {
         socialHeading: 'Soziale Netzwerke',
         bio: 'Mobile-Entwickler mit über 8 Jahren Erfahrung, Spezialist für Android & iOS. Begeistert von Technologie, Reisen, Restaurants und dem Erkunden von São Paulo.'
       }
+      ,
+      walkingTour: {
+        title: 'Zu Fuß Tour',
+        placeholder: 'Vorgeschlagene Fußrouten, damit du mehrere nahegelegene Orte kennenlernen kannst, ohne für den Transport bezahlen zu müssen.'
+      },
     }
   }
   ,

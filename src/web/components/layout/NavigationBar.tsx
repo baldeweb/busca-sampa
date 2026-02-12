@@ -10,22 +10,22 @@ import icAbout from '../../../assets/imgs/icons/ic_about.png';
 export function NavigationBar() {
     // Texto e ícones: cor alinhada com seção "Perto de mim"
     const baseClasses =
-        "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide text-[#2B2930]";
+        "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide";
     const { t } = useTranslation();
     const [showSearchModal, setShowSearchModal] = React.useState(false);
 
     return (
         <footer
-            className="fixed bottom-0 left-0 right-0 bg-[#F5F5F5] z-50 rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[0px] rounded-br-[0px]"
-            style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)" }}
+            className="fixed bottom-0 left-0 right-0 bg-[#F5F5F5] z-50 rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[0px] rounded-br-[0px]"
+            style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)", borderTop: '1px solid #48464C' }}
         >
-            <nav className="flex text-[#2B2930] pt-2 pb-2">
+            <nav className="flex text-[#48464C] pt-2 pb-2">
 
                 <NavLink
                     to="/"
                     end
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : ""}`
                     }
                     style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
@@ -36,7 +36,7 @@ export function NavigationBar() {
                 <NavLink
                     to="/walking-tour"
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : ""}`
                     }
                 >
                     <img src={icWalkingTour} alt={t('walkingTour.title')} className="w-6 h-6" />
@@ -46,7 +46,7 @@ export function NavigationBar() {
                 <NavLink
                     to="/search"
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : ""}`
                     }
                 >
                     <img src={icSearch} alt="Buscar" className="w-5 h-5" />
@@ -56,7 +56,7 @@ export function NavigationBar() {
                 <NavLink
                     to="/about"
                     className={({ isActive }) =>
-                        `${baseClasses} ${isActive ? "font-semibold" : "text-gray-300"}`
+                        `${baseClasses} ${isActive ? "font-semibold" : ""}`
                     }
                     style={({ isActive }) => (isActive ? { color: '#F59D98' } : undefined)}
                 >
