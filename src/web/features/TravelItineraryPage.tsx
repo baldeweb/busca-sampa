@@ -12,6 +12,7 @@ import icNumber2 from '@/assets/imgs/icons/ic_number2.png';
 import icNumber3 from '@/assets/imgs/icons/ic_number3.png';
 import icNumber4 from '@/assets/imgs/icons/ic_number4.png';
 import icNumber5 from '@/assets/imgs/icons/ic_number5.png';
+import icWarning from '@/assets/imgs/icons/ic_warning.png';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useRecommendationList } from '@/web/hooks/useRecommendationList';
@@ -67,6 +68,9 @@ export function TravelItineraryPage() {
     const [tourMode, setTourMode] = useState<'walking' | 'city'>('walking');
     const [tourItems, setTourItems] = useState<TourItem[]>([]);
     const [tourItemsLoading, setTourItemsLoading] = useState<boolean>(true);
+    const [showRouteDetails, setShowRouteDetails] = useState(false);
+    const [isClosingRouteDetails, setIsClosingRouteDetails] = useState(false);
+    const closeRouteDetailsTimeoutRef = useRef<number | null>(null);
 
     const routeOptions = React.useMemo(
         () => [
@@ -128,6 +132,7 @@ export function TravelItineraryPage() {
     }, [touristSpots]);
 
     useEffect(() => {
+        if (!showRouteDetails) return;
         if (!mapRef.current) return;
         if (orderedPoints.length === 0) return;
 
@@ -202,7 +207,34 @@ export function TravelItineraryPage() {
                 tileLayerRef.current = null;
             }
         };
-    }, [orderedPoints]);
+    }, [orderedPoints, showRouteDetails]);
+
+    useEffect(() => {
+        return () => {
+            if (closeRouteDetailsTimeoutRef.current) {
+                window.clearTimeout(closeRouteDetailsTimeoutRef.current);
+            }
+        };
+    }, []);
+
+    const openRouteDetails = () => {
+        if (closeRouteDetailsTimeoutRef.current) {
+            window.clearTimeout(closeRouteDetailsTimeoutRef.current);
+            closeRouteDetailsTimeoutRef.current = null;
+        }
+        setIsClosingRouteDetails(false);
+        setShowRouteDetails(true);
+    };
+
+    const closeRouteDetails = () => {
+        if (isClosingRouteDetails) return;
+        setIsClosingRouteDetails(true);
+        closeRouteDetailsTimeoutRef.current = window.setTimeout(() => {
+            setShowRouteDetails(false);
+            setIsClosingRouteDetails(false);
+            closeRouteDetailsTimeoutRef.current = null;
+        }, 300);
+    };
 
     const onVerRota = () => {
         const pts = orderedPoints.map(p => ({ lat: p.lat, lng: p.lng }));
@@ -308,7 +340,7 @@ export function TravelItineraryPage() {
                                                     name={item.name}
                                                     placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
                                                     iconSrc={tourMode === 'city' ? icTourCity : icWalkingTour}
-                                                    onDetails={() => null}
+                                                    onDetails={openRouteDetails}
                                                     detailsLabel="Ver roteiro"
                                                 />
                                             ))}
@@ -320,17 +352,6 @@ export function TravelItineraryPage() {
                                         <p className="text-sm text-gray-500">Ainda não foi possível carregar os pontos do tour.</p>
                                     )}
 
-                                    <div
-                                        ref={mapRef}
-                                        style={{ height: 320, border: '1px solid #48464C', borderRadius: 8, overflow: 'hidden' }}
-                                        className="w-full mt-4"
-                                    />
-
-                                    <div className="mt-4 flex gap-2">
-                                        <button onClick={onVerRota} className="btn-hover-red w-full max-w-xs bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded px-4 py-3">
-                                            Ver Rota
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -338,7 +359,84 @@ export function TravelItineraryPage() {
                 </div>
             </section>
 
-            <main className="flex-1">
+            {showRouteDetails && (
+                <div
+                    className="fixed inset-0 z-50 flex items-end justify-center bg-black/60"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="route-details-title"
+                    onClick={closeRouteDetails}
+                >
+                    <div className="w-full max-w-4xl px-0 sm:px-12" onClick={(event) => event.stopPropagation()}>
+                        <div
+                            className={`w-full rounded-t-2xl bg-white text-black px-4 lg:px-8 pt-5 pb-[calc(5.5rem+env(safe-area-inset-bottom))] max-h-[85vh] overflow-y-auto ${
+                                isClosingRouteDetails ? 'bottomsheet-animate-out' : 'bottomsheet-animate'
+                            }`}
+                        >
+                        <div className="flex items-start justify-between gap-4">
+                            <div>
+                                <h3 id="route-details-title" className="text-lg font-bold">
+                                    Detalhes do Roteiro
+                                </h3>
+                                <p className="text-sm text-gray-600 mt-1">
+                                    Aqui estão as informações necessárias com as rotas para você realizar
+                                </p>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={closeRouteDetails}
+                                className="btn-close-round btn-close-round-dark text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70"
+                                aria-label={t('common.close')}
+                            >
+                                ×
+                            </button>
+                        </div>
+
+                        <div
+                            ref={mapRef}
+                            style={{ height: 320, border: '1px solid #48464C', borderRadius: 8, overflow: 'hidden' }}
+                            className="w-full mt-4"
+                        />
+
+                        <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.06em] text-gray-700">
+                            Lugares por onde você vai passar
+                        </h4>
+                        {orderedPoints.length > 0 ? (
+                            <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+                                {orderedPoints.map((point) => (
+                                    <li key={point.name}>{point.name}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="mt-2 text-sm text-gray-500">Ainda não foi possível carregar os lugares do roteiro.</p>
+                        )}
+
+                        <div className="mt-4 mb-8 flex items-start gap-3 rounded-lg border border-[#E0E0E0] bg-[#FFE7C0] p-3">
+                            <img src={icWarning} alt="" className="w-6 h-6 mt-0.5 object-contain" />
+                            <div>
+                                <h4 className="text-sm font-bold uppercase tracking-[0.06em] text-gray-700">
+                                    {t('travelItinerary.tipTitle')}
+                                </h4>
+                                <p className="mt-1 text-sm text-gray-600 leading-relaxed">
+                                    {t('travelItinerary.tipDescription')}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="mt-4">
+                            <button
+                                onClick={onVerRota}
+                                className="btn-hover-red w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded px-4 py-3"
+                            >
+                                Abrir no Google Maps
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            <main className="flex-1 bg-[#F5F5F5]">
                 {/* Main intentionally empty for itineraries */}
             </main>
         </div>

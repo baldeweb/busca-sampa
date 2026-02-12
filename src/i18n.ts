@@ -207,7 +207,9 @@ const resources = {
           museums: 'Museus',
           more: 'Mais Opções'
         },
-        placesCount: '{{count}} lugares'
+        placesCount: '{{count}} lugares',
+        tipTitle: 'Dica Importante',
+        tipDescription: 'Ao caminhar na rua, fique esperto com o celular: evite mexer muito e não peça ajuda pra desconhecidos. Reparou algo estranho? Entra em um lugar movimentado e ligue 190. Em SP, o básico é: atenção total ao redor e nada de dar bobeira'
       },
       howToRecommend: {
         title: 'Como faço para recomendar um local?'
@@ -406,7 +408,9 @@ const resources = {
           museums: 'Museos',
           more: 'Más opciones'
         },
-        placesCount: '{{count}} lugares'
+        placesCount: '{{count}} lugares',
+        tipTitle: 'Consejo importante',
+        tipDescription: 'Al caminar por la calle, mantente atento con el celular: evita usarlo mucho y no pidas ayuda a desconocidos. ¿Notaste algo raro? Entra en un lugar concurrido y llama al 190. En SP, lo básico es: atención total alrededor y nada de descuidarse'
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
@@ -555,7 +559,9 @@ const resources = {
           museums: 'Musées',
           more: 'Plus d\'options'
         },
-        placesCount: '{{count}} lieux'
+        placesCount: '{{count}} lieux',
+        tipTitle: 'Conseil important',
+        tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher'
       },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
       placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Naturaleza', TOURIST_SPOT: 'Sites\u200B touristiques', FORFUN: 'Divertissement', STORES: 'Magasins', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
@@ -598,7 +604,9 @@ const resources = {
           museums: 'Музеи',
           more: 'Больше вариантов'
         },
-        placesCount: '{{count}} мест'
+        placesCount: '{{count}} мест',
+        tipTitle: 'Важный совет',
+        tipDescription: 'Выйдя на улицу, будь внимателен с телефоном: старайся меньше им пользоваться и не проси помощи у незнакомцев. Заметил что-то странное? Зайди в людное место и позвони 190. В СП базовое правило: полная внимательность вокруг и никакой беспечности'
       },
       placeList: {
         environmentTitle: 'Тип окружения:',
@@ -671,7 +679,9 @@ const resources = {
           museums: '博物馆',
           more: '更多选项'
         },
-        placesCount: '{{count}} 个地点'
+        placesCount: '{{count}} 个地点',
+        tipTitle: '重要提示',
+        tipDescription: '走在街上时，注意手机：尽量少用，不要向陌生人求助。发现异常了吗？进入人多的地方并拨打190。在圣保罗，基本原则是：时刻注意周围，不要大意'
       },
       placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FORFUN: '娱乐', STORES: '商店', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
     }
@@ -798,7 +808,9 @@ const resources = {
           museums: 'Museums',
           more: 'More Options'
         },
-        placesCount: '{{count}} places'
+        placesCount: '{{count}} places',
+        tipTitle: 'Important Tip',
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the basic rule is: full attention to your surroundings and no letting your guard down'
       },
     }
   }
@@ -925,7 +937,9 @@ const resources = {
           museums: 'Museen',
           more: 'Mehr Optionen'
         },
-        placesCount: '{{count}} Orte'
+        placesCount: '{{count}} Orte',
+        tipTitle: 'Wichtiger Hinweis',
+        tipDescription: 'Wenn du auf der Straße unterwegs bist, sei aufmerksam mit deinem Handy: benutze es möglichst wenig und bitte keine Fremden um Hilfe. Fällt dir etwas Seltsames auf? Geh in einen belebten Ort und ruf 190 an. In SP gilt: volle Aufmerksamkeit für die Umgebung und keine Nachlässigkeit'
       }
     }
   },
@@ -1053,7 +1067,9 @@ const resources = {
           museums: '博物館',
           more: '他のオプション'
         },
-        placesCount: '{{count}} か所'
+        placesCount: '{{count}} か所',
+        tipTitle: '重要な注意',
+        tipDescription: '街を歩くときは、携帯には注意: 使い過ぎず、知らない人に助けを求めないでください。何かおかしいと感じたら、人が多い場所に入り、190に電話してください。SPでは基本は、周囲への注意を徹底し、油断しないことです'
       }
     }
   }
@@ -1192,7 +1208,9 @@ const resources = {
           museums: 'متاحف',
           more: 'خيارات أكثر'
         },
-        placesCount: '{{count}} أماكن'
+        placesCount: '{{count}} أماكن',
+        tipTitle: 'نصيحة مهمة',
+        tipDescription: 'أثناء المشي في الشارع، كن منتبها لهاتفك: تجنب استخدامه كثيرا ولا تطلب المساعدة من الغرباء. لاحظت شيئا غريبا؟ ادخل مكانا مزدحما واتصل بـ 190. في ساو باولو، القاعدة الاساسية: انتباه كامل لما حولك وعدم التهاون'
       },
       nearbyMap: { title: 'خريطة القرب', noneInRadius: 'لا توجد نقاط ضمن النطاق الحالي.', pointsDisplayed: '{{count}} نقطة معروضة.', you: 'أنت' }
       ,
@@ -1331,7 +1349,9 @@ const resources = {
           museums: 'Musei',
           more: 'Altre opzioni'
         },
-        placesCount: '{{count}} luoghi'
+        placesCount: '{{count}} luoghi',
+        tipTitle: 'Consiglio importante',
+        tipDescription: 'Camminando per strada, stai attento al cellulare: evita di usarlo troppo e non chiedere aiuto a sconosciuti. Hai notato qualcosa di strano? Entra in un posto affollato e chiama il 190. A SP, la regola base è: massima attenzione intorno e niente distrazioni'
       },
       nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
     }
@@ -1465,7 +1485,9 @@ const resources = {
           museums: 'Musea',
           more: 'Meer opties'
         },
-        placesCount: '{{count}} plekken'
+        placesCount: '{{count}} plekken',
+        tipTitle: 'Belangrijke tip',
+        tipDescription: 'Wanneer je op straat loopt, blijf alert met je telefoon: gebruik hem zo min mogelijk en vraag geen hulp aan onbekenden. Iets vreemds opgemerkt? Ga een drukke plek binnen en bel 190. In SP is de basis: volledige aandacht voor je omgeving en niet verslappen'
       },
       nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
     }
@@ -1590,7 +1612,9 @@ const resources = {
           museums: 'Müzeler',
           more: 'Daha fazla seçenek'
         },
-        placesCount: '{{count}} yer'
+        placesCount: '{{count}} yer',
+        tipTitle: 'Önemli ipucu',
+        tipDescription: 'Sokakta yürürken telefonuna dikkat et: çok fazla kullanma ve yabancılardan yardım isteme. Garip bir şey fark ettin mi? Kalabalık bir yere gir ve 190\'ı ara. SP\'de temel kural: çevreye tam dikkat ve asla gaflet'
       },
       nearbyMap: { title: 'Yakındaki Harita', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }
@@ -1704,7 +1728,9 @@ const resources = {
           museums: 'Muzea',
           more: 'Więcej opcji'
         },
-        placesCount: '{{count}} miejsc'
+        placesCount: '{{count}} miejsc',
+        tipTitle: 'Ważna wskazówka',
+        tipDescription: 'Spacerując po ulicy, uważaj na telefon: używaj go jak najmniej i nie proś o pomoc nieznajomych. Zauważyłeś coś dziwnego? Wejdź do zatłoczonego miejsca i zadzwoń pod 190. W SP podstawowa zasada to: pełna uwaga na otoczenie i żadnego rozkojarzenia'
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
     }

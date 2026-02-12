@@ -194,9 +194,42 @@ button.btn-plain {
   line-height: 1 !important;
 }
 
+.btn-close-round-dark {
+  color: #48464C !important;
+  border-color: #48464C !important;
+}
+
 /* Footer labels use ScienceGothic-Regular */
 .footer-label,
 .footer-label * {
   font-family: 'ScienceGothic-Regular', 'Science Gothic', 'ScienceGothic', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-weight: 400 !important;
+}
+
+@keyframes bottomsheet-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.bottomsheet-animate {
+  animation: bottomsheet-up 0.3s ease-out;
+}
+
+@keyframes bottomsheet-down {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.bottomsheet-animate-out {
+  animation: bottomsheet-down 0.3s ease-in;
 }
