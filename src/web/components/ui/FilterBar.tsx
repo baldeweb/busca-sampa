@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import icFilter from "@/assets/imgs/icons/ic_filter.png";
 import icArrowDown from "@/assets/imgs/icons/ic_arrow_down.png";
@@ -78,6 +78,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 }) => {
   const { t } = useTranslation();
 
+  const rootRef = useRef<HTMLDivElement | null>(null);
+
   const shouldShowCityFilter = typeof showCityFilter === "boolean" ? showCityFilter : cities.length > 1;
   const shouldShowPriceFilter = typeof showPriceFilter === "boolean" ? showPriceFilter : priceOptions.length > 1;
 
@@ -89,8 +91,25 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     setShowPriceMenu(false);
   };
 
+  useEffect(() => {
+    function handleDocumentClick(e: MouseEvent) {
+      const target = e.target as Node | null;
+      if (!rootRef.current) return;
+      if (target && !rootRef.current.contains(target)) {
+        closeAllMenus();
+      }
+    }
+
+    const anyOpen = showSortingMenu || showHoursMenu || showScheduleMenu || showCityMenu || showPriceMenu;
+    if (anyOpen) {
+      document.addEventListener('mousedown', handleDocumentClick);
+      return () => document.removeEventListener('mousedown', handleDocumentClick);
+    }
+    return () => {};
+  }, [showSortingMenu, showHoursMenu, showScheduleMenu, showCityMenu, showPriceMenu]);
+
   return (
-    <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
+    <div ref={rootRef} className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
       <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
         <div className="flex flex-col justify-start gap-2">
           <div className="flex items-center">

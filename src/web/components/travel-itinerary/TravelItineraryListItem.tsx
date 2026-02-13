@@ -1,5 +1,4 @@
 import React from "react";
-import icClock from "@/assets/imgs/icons/ic_clock.png";
 import { AppButton } from "@/web/components/ui/AppButton";
 
 interface TravelItineraryListItemProps {
@@ -27,7 +26,6 @@ export const TravelItineraryListItem: React.FC<TravelItineraryListItemProps> = (
       </div>
       <div className="flex flex-col gap-1 min-w-0 col-start-2 row-start-2">
         <div className="flex items-center text-xs sm:text-sm text-[#403E44] min-w-0">
-          <img src={icClock} alt="" className="w-4 h-4 mr-2 flex-shrink-0" />
           <span className="truncate">{placesCountText}</span>
         </div>
       </div>

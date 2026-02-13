@@ -98,6 +98,7 @@ const resources = {
         scheduleRequired: 'Necessário agendar',
         scheduleNotRequired: 'Não precisa agendar',
         anySchedule: 'Qualquer',
+        anyCity: 'Qualquer cidade',
         priceTitle: 'Preço',
         anyPrice: 'Qualquer preço',
         button: 'Filtros'
@@ -194,6 +195,7 @@ const resources = {
         placeholder: 'Roteiros a pé, sugeridos para você conhecer vários lugares próximos, sem precisar gastar com locomoção',
         routeOptionsTitle: 'Opções de Roteiro:',
         listTitle: 'Roteiros',
+        viewRoute: 'Ver roteiro',
         modes: {
           walking: 'Tour a Pé',
           city: 'Tour na Cidade'
@@ -318,6 +320,7 @@ const resources = {
         scheduleRequired: 'Es necesario reservar',
         scheduleNotRequired: 'No es necesario reservar',
         anySchedule: 'Cualquiera',
+        anyCity: 'Cualquier ciudad',
         priceTitle: 'Precio',
         anyPrice: 'Cualquier precio',
         button: 'Filtros'
@@ -395,6 +398,7 @@ const resources = {
         placeholder: 'Rutas a pie sugeridas para que conozcas varios lugares próximos sin necesidad de gastar en transporte.',
         routeOptionsTitle: 'Opciones de Ruta:',
         listTitle: 'Rutas',
+        viewRoute: 'Ver recorrido',
         modes: {
           walking: 'Tour a pie',
           city: 'Tour por la ciudad'
@@ -488,6 +492,7 @@ const resources = {
         scheduleRequired: 'Réservation requise',
         scheduleNotRequired: 'Réservation non requise',
         anySchedule: 'Peu importe',
+        anyCity: 'N’importe quelle ville',
         priceTitle: 'Prix',
         anyPrice: 'N’importe quel prix',
         button: 'Filtres'
@@ -546,6 +551,7 @@ const resources = {
         placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.',
         routeOptionsTitle: 'Options d\'itinéraire:',
         listTitle: 'Itinéraires',
+        viewRoute: 'Voir l’itinéraire',
         modes: {
           walking: 'Tour à pied',
           city: 'Tour en ville'
@@ -572,7 +578,9 @@ const resources = {
       home: { nearMeTitle: 'Рядом со мной', nearMeSubtitle: '(показаны места в радиусе {{km}} км рядом с вами)', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'Больше вариантов', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
       common: { back: 'Назад', details: 'Узнать больше', selectLanguage: 'Выберите язык', changeDistance: 'Увеличить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
-      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', openNow: 'Открыто сейчас', anyHourLabel: 'Любое время', anyHour: 'Любое время', scheduleTitle: 'Бронирование', scheduleRequired: 'Требуется бронирование', scheduleNotRequired: 'Бронирование не требуется', anySchedule: 'Любой', priceTitle: 'Цена', anyPrice: 'Любая цена', button: 'Фильтры' },
+      whereIsToday: { title: 'Итак, куда сегодня?', subtitle: 'Список мест, где я был, по категориям. Загляни ;)', opensToday: 'Открываются сегодня' },
+      list: { nameHeader: 'НАЗВАНИЕ', neighborhoodHeader: 'РАЙОН', typeHeader: 'Тип', orderNameAsc: 'НАЗВАНИЕ по возрастанию A-Z', orderNeighborhoodAsc: 'РАЙОН по возрастанию A-Z', seeDetails: 'посмотреть детали' },
+      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', openNow: 'Открыто сейчас', anyHourLabel: 'Любое время', anyHour: 'Любое время', scheduleTitle: 'Бронирование', scheduleRequired: 'Требуется бронирование', scheduleNotRequired: 'Бронирование не требуется', anySchedule: 'Любой', anyCity: 'Любой город', priceTitle: 'Цена', anyPrice: 'Любая цена', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь указаны все филиалы этого места и их адреса. Вы также можете построить маршрут как вам удобнее: через Google Maps или заказав Uber :)', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
@@ -591,6 +599,7 @@ const resources = {
         placeholder: 'Пешие маршруты, предлагаемые, чтобы вы могли посетить несколько близлежащих мест, не тратя деньги на транспорт.',
         routeOptionsTitle: 'Варианты маршрута:',
         listTitle: 'Маршруты',
+        viewRoute: 'Смотреть маршрут',
         modes: {
           walking: 'Пеший тур',
           city: 'Городской тур'
@@ -636,7 +645,9 @@ const resources = {
       home: { nearMeTitle: '附近', nearMeSubtitle: '（显示你附近 {{km}}km 半径内的地点）', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多选项', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '了解更多', selectLanguage: '选择语言', changeDistance: '增加距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
-      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
+      whereIsToday: { title: '那么，今天去哪儿？', subtitle: '我去过的地方按类别列出，来看看 ;)', opensToday: '今天营业' },
+      list: { nameHeader: '名称', neighborhoodHeader: '街区', typeHeader: '类型', orderNameAsc: '名称 升序 A-Z', orderNeighborhoodAsc: '街区 升序 A-Z', seeDetails: '查看详情' },
+      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', anyCity: '任意城市', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', viewHours: '查看营业时间',
         visitModalTitle: '关于该地点',
         visitModalParagraph: '此地点尚未亲访。页面信息来自已去过并推荐给我的人提供的建议。',
@@ -687,6 +698,7 @@ const resources = {
         placeholder: '为您推荐的步行路线，让您可以探索多个附近的地点，无需支付交通费用。',
         routeOptionsTitle: '行程选项：',
         listTitle: '路线',
+        viewRoute: '查看路线',
         modes: {
           walking: '徒步行程',
           city: '城市行程'
@@ -744,6 +756,8 @@ const resources = {
         noPlaces: 'No places found.',
         version: 'Version',
       },
+      whereIsToday: { title: 'So, where are we going today?', subtitle: 'List of places I’ve been, by category. Take a look ;)', opensToday: 'Open today' },
+      list: { nameHeader: 'Name', neighborhoodHeader: 'Neighborhood', typeHeader: 'Type', orderNameAsc: 'NAME in ascending order A-Z', orderNeighborhoodAsc: 'NEIGHBORHOOD in ascending order A-Z', seeDetails: 'see details' },
       filters: {
         title: 'Filters',
         subtitle: 'Adjust the filters below to refine results',
@@ -757,6 +771,7 @@ const resources = {
         scheduleRequired: 'Reservation required',
         scheduleNotRequired: 'No reservation needed',
         anySchedule: 'Any',
+        anyCity: 'Any city',
         priceTitle: 'Price',
         anyPrice: 'Any price',
         button: 'Filters'
@@ -827,6 +842,7 @@ const resources = {
         placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
         routeOptionsTitle: 'Route Options:',
         listTitle: 'Routes',
+        viewRoute: 'View route',
         modes: {
           walking: 'Walking Tour',
           city: 'City Tour'
@@ -897,10 +913,12 @@ const resources = {
         scheduleRequired: 'Reservierung erforderlich',
         scheduleNotRequired: 'Keine Reservierung erforderlich',
         anySchedule: 'Beliebig',
+        anyCity: 'Beliebige Stadt',
         priceTitle: 'Preis',
         anyPrice: 'Beliebiger Preis',
         button: 'Filter'
       },
+      whereIsToday: { title: 'Also, wohin geht es heute?', subtitle: 'Liste der Orte, an denen ich war, nach Kategorie. Schau mal ;)', opensToday: 'Öffnen heute' },
       list: { nameHeader: 'NAME', neighborhoodHeader: 'STADTTEIL', typeHeader: 'Typ', orderNameAsc: 'NAME in aufsteigender Reihenfolge A-Z', orderNeighborhoodAsc: 'STADTTEIL in aufsteigender Reihenfolge A-Z' },
       footer: { home: 'Start', search: 'Suchen', about: 'Über' },
       placeDetail: {
@@ -958,6 +976,7 @@ const resources = {
         placeholder: 'Vorgeschlagene Fußrouten, damit du mehrere nahegelegene Orte kennenlernen kannst, ohne für den Transport bezahlen zu müssen.',
         routeOptionsTitle: 'Routenoptionen:',
         listTitle: 'Routen',
+        viewRoute: 'Route ansehen',
         modes: {
           walking: 'Zu Fuß Tour',
           city: 'Stadttour'
@@ -1040,10 +1059,12 @@ const resources = {
         scheduleRequired: '予約が必要',
         scheduleNotRequired: '予約不要',
         anySchedule: '指定なし',
+        anyCity: 'どの都市でも',
         priceTitle: '価格',
         anyPrice: '任意の価格',
         button: 'フィルター'
       },
+      whereIsToday: { title: 'さて、今日はどこへ？', subtitle: 'これまで行った場所をカテゴリ別にリスト化。チェックしてね ;)', opensToday: '今日開いている' },
       list: { nameHeader: '名前', neighborhoodHeader: '地区', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNeighborhoodAsc: '地区 昇順 A-Z' },
       footer: { home: 'ホーム', search: '検索', about: '概要' },
       placeDetail: {
@@ -1103,6 +1124,7 @@ const resources = {
         placeholder: '交通費をかけずに複数の近くの場所を探索できる徒歩ルートの提案です。',
         routeOptionsTitle: 'ルートオプション：',
         listTitle: 'ルート',
+        viewRoute: 'ルートを見る',
         modes: {
           walking: '徒歩ツアー',
           city: 'シティツアー'
@@ -1174,6 +1196,7 @@ const resources = {
         scheduleRequired: 'الحجز مطلوب',
         scheduleNotRequired: 'لا يحتاج حجز',
         anySchedule: 'أي',
+        anyCity: 'أي مدينة',
         priceTitle: 'السعر',
         anyPrice: 'أي سعر',
         button: 'الفلاتر'
@@ -1246,6 +1269,7 @@ const resources = {
         placeholder: 'مسارات مشي مقترحة لتتمكن من استكشاف عدة أماكن قريبة دون إنفاق على المواصلات.',
         routeOptionsTitle: 'خيارات المسار:',
         listTitle: 'المسارات',
+        viewRoute: 'عرض المسار',
         modes: {
           walking: 'جولة سيراً على الأقدام',
           city: 'جولة في المدينة'
@@ -1318,6 +1342,7 @@ const resources = {
         scheduleRequired: 'Prenotazione richiesta',
         scheduleNotRequired: 'Non serve prenotare',
         anySchedule: 'Qualsiasi',
+        anyCity: 'Qualsiasi città',
         priceTitle: 'Prezzo',
         anyPrice: 'Qualsiasi prezzo',
         button: 'Filtri'
@@ -1389,6 +1414,7 @@ const resources = {
         placeholder: 'Percorsi a piedi suggeriti per farti conoscere diversi luoghi vicini, senza spendere in trasporti.',
         routeOptionsTitle: 'Opzioni di itinerario:',
         listTitle: 'Itinerari',
+        viewRoute: 'Vedi itinerario',
         modes: {
           walking: 'Tour a piedi',
           city: 'Tour in città'
@@ -1456,6 +1482,7 @@ const resources = {
         scheduleRequired: 'Reservering vereist',
         scheduleNotRequired: 'Geen reservering nodig',
         anySchedule: 'Elke',
+        anyCity: 'Elke stad',
         priceTitle: 'Prijs',
         anyPrice: 'Elke prijs',
         button: 'Filters'
@@ -1527,6 +1554,7 @@ const resources = {
         placeholder: 'Voorgestelde wandelroutes zodat je meerdere nabijgelegen plekken kunt ontdekken zonder te hoeven betalen voor vervoer.',
         routeOptionsTitle: 'Route-opties:',
         listTitle: 'Routes',
+        viewRoute: 'Route bekijken',
         modes: {
           walking: 'Wandeltocht',
           city: 'Stadstour'
@@ -1585,6 +1613,7 @@ const resources = {
         scheduleRequired: 'Rezervasyon gerekli',
         scheduleNotRequired: 'Rezervasyon gerekmez',
         anySchedule: 'Herhangi',
+        anyCity: 'Herhangi bir şehir',
         priceTitle: 'Fiyat',
         anyPrice: 'Herhangi bir fiyat',
         button: 'Filtreler'
@@ -1656,6 +1685,7 @@ const resources = {
         placeholder: 'Ulaşım için harcama yapmadan birden fazla yakın yeri keşfetmeniz için önerilen yürüyüş rotaları.',
         routeOptionsTitle: 'Rota seçenekleri:',
         listTitle: 'Rotalar',
+        viewRoute: 'Rotayı gör',
         modes: {
           walking: 'Yürüyüş turu',
           city: 'Şehir turu'
@@ -1713,6 +1743,7 @@ const resources = {
         scheduleRequired: 'Wymagana rezerwacja',
         scheduleNotRequired: 'Rezerwacja nie jest wymagana',
         anySchedule: 'Dowolne',
+        anyCity: 'Dowolne miasto',
         priceTitle: 'Cena',
         anyPrice: 'Dowolna cena',
         button: 'Filtry'
@@ -1774,6 +1805,7 @@ const resources = {
         placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
         routeOptionsTitle: 'Opcje trasy:',
         listTitle: 'Trasy',
+        viewRoute: 'Zobacz trasę',
         modes: {
           walking: 'Spacer',
           city: 'Wycieczka po mieście'

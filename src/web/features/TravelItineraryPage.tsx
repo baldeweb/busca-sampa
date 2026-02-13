@@ -343,7 +343,7 @@ export function TravelItineraryPage() {
                                                     placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
                                                     iconSrc={tourMode === 'city' ? icTourCity : icWalkingTour}
                                                     onDetails={openRouteDetails}
-                                                    detailsLabel="Ver roteiro"
+                                                    detailsLabel={t('travelItinerary.viewRoute')}
                                                 />
                                             ))}
                                         </div>

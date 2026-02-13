@@ -1,6 +1,5 @@
 import React from "react";
 import icPin from "@/assets/imgs/icons/ic_pin.png";
-import icClock from "@/assets/imgs/icons/ic_clock.png";
 import { AppButton } from "@/web/components/ui/AppButton";
 
 export type PlaceListItemVariant = "place" | "neighborhood";
@@ -38,9 +37,8 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
     ? "flex items-center text-xs sm:text-sm text-black min-w-0"
     : "flex items-center text-xs sm:text-sm text-[#403E44] min-w-0";
 
-  const pinIconClassName = isNeighborhood ? "w-5 h-5 mr-2 flex-shrink-0" : "w-4 h-4 mr-2 flex-shrink-0";
-  const clockIconClassName = isNeighborhood ? "w-4 h-4 mr-2 ml-0.5 flex-shrink-0" : "w-4 h-4 mr-2 flex-shrink-0";
-  const clockRowClassName = isNeighborhood ? `${rowTextClassName} mt-1` : rowTextClassName;
+  const pinIconClassName = isNeighborhood ? "w-3 h-3 mr-1 flex-shrink-0" : "w-3 h-3 mr-1 flex-shrink-0";
+  const openingTimeRowClassName = isNeighborhood ? `${rowTextClassName} mt-1` : rowTextClassName;
 
   return (
     <div className={containerClassName}>
@@ -55,8 +53,7 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
           <img src={icPin} alt="" className={pinIconClassName} />
           <span className="truncate">{neighborhood}</span>
         </div>
-        <div className={clockRowClassName}>
-          <img src={icClock} alt="" className={clockIconClassName} />
+        <div className={openingTimeRowClassName}>
           <span className="truncate">{openingText}</span>
         </div>
       </div>
