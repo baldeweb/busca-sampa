@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "SubAstor (Bar do Cofre)",
+        "name": "Bar do Cofre - SubAstor",
         "type": "BARS",
         "phones": [
             {
@@ -398,5 +398,83 @@
         "tags": [
             "KARAOKE"
         ]
+    },
+    {
+        "id": 11,
+        "name": "Salve Jorge",
+        "type": "BARS",
+        "phones": [
+            {
+                "number": "1131070123",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "SALVEJORGE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Praça Antônio Prado",
+                "number": "33",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "05159-360",
+                "isMainUnity": true,
+                "latitude": -23.545713,
+                "longitude": -46.634556
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://barsalvejorge.com.br/",
+        "linkInstagram": "",
+        "tags": []
+    },
+    {
+        "id": 12,
+        "name": "Balsa Bar",
+        "type": "BARS",
+        "phones": [
+            {
+                "number": "11941777477",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "BALSABAR_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Capitão Salomão",
+                "number": "26",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01034-040",
+                "isMainUnity": true,
+                "latitude": -23.542928,
+                "longitude": -46.636634
+            }
+        ],
+        "linkMenu": "https://www.abalsa.org/menus/",
+        "linkWebsite": "https://www.abalsa.org/",
+        "linkInstagram": "https://www.instagram.com/a_balsa/",
+        "tags": []
     }
 ]

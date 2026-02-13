@@ -1,47 +1,114 @@
 [
     {
         "id": 1,
-        "name": "Gratuito",
-        "description": "Rota criada para explorar os pontos turísticos, um perto do outro, e o melhor: gratuito!",
+        "name": "Centro Histórico 1",
+        "description": "Nesta parte 1, você passará por museu, o mercado municipal, e outros lugares, encerrando no Bar Cofre, onde há muitos anos atrás funcionava um dos cofres do Banco Santander.",
         "places": [
+            {
+                "id": 22,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 20,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 29,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 21,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 55,
+                "placeType": "TOURIST_SPOT"
+            },
             {
                 "id": 1,
                 "placeType": "BARS"
-            },
-            {
-                "id": 2,
-                "placeType": "RESTAURANTS"
             }
         ]
     },
     {
         "id": 2,
-        "name": "Balada em Pinheiros",
-        "description": "Rota criada para explorar baladas, uma perto da outra, para garantir sua noite!",
-        "places": []
+        "name": "Centro Histórico 2",
+        "description": "Nesta parte 2, você continuará visitando pontos importantes da cidade como a Pinacoteca, Galeria do Rock e muitos outros lugares.",
+        "places": [
+            {
+                "id": 28,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 16,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 56,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 31,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 57,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 58,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 27,
+                "placeType": "TOURIST_SPOT"
+            }
+        ]
     },
     {
         "id": 3,
-        "name": "Bares",
-        "description": "Rota criada para explorar bares, um perto do outro, para que você possa conhecer tudo a pé!",
-        "places": []
+        "name": "Só Museus",
+        "description": "Aqui separamos uma quantidade de museus para você visitar, um pertinho do outro, para você aproveitar o melhor da cultura e história de São Paulo.",
+        "places": [
+            {
+                "id": 27,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 23,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 25,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 22,
+                "placeType": "TOURIST_SPOT"
+            }
+        ]
     },
     {
         "id": 4,
-        "name": "Gastronômico",
-        "description": "Rota criada para explorar restaurantes, bares ou locais gastronômicos, um perto do outro, para que você possa conhecer tudo a pé!",
-        "places": []
-    },
-    {
-        "id": 5,
-        "name": "História",
-        "description": "Rota criada para explorar locais históricos, um perto do outro, para que você possa conhecer tudo a pé!",
-        "places": []
-    },
-    {
-        "id": 5,
-        "name": "Museus",
-        "description": "Rota criada para explorar museus, um perto do outro, para que você possa conhecer tudo a pé!",
-        "places": []
+        "name": "Tour de Bares no Centro",
+        "description": "Serão 4 bares, cada um com uma característica diferente, para você conhecer um pouco mais da vida noturna do centro de São Paulo.",
+        "places": [
+            {
+                "id": 11,
+                "placeType": "BARS"
+            },
+            {
+                "id": 40,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 8,
+                "placeType": "BARS"
+            },
+            {
+                "id": 12,
+                "placeType": "BARS"
+            }
+        ]
     }
 ]
