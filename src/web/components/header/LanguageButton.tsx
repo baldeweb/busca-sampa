@@ -39,19 +39,26 @@ export function LanguageButton() {
     const currentFlag = current.flag;
     const currentLanguage = current.label;
 
+    const [hover, setHover] = useState(false);
+
     return (
         <>
         <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex flex-row items-center gap-2 whitespace-nowrap rounded-md border border-white/30 bg-bs-card px-4 py-1 text-[10px] font-medium uppercase transition-colors hover:border-bs-red w-fit relative top-0 right-0 ml-auto mr-0 sm:mr-8"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            onFocus={() => setHover(true)}
+            onBlur={() => setHover(false)}
+            className={`inline-flex flex-row items-center gap-2 whitespace-nowrap rounded-md border ${hover ? 'border-bs-red bg-bs-red/10' : 'border-white/30 bg-bs-card'} px-4 py-1 text-[10px] font-medium uppercase transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-bs-red/30 w-fit relative top-0 right-0 ml-auto mr-0 sm:mr-8`}
+            style={hover ? { backgroundColor: 'rgba(179,59,50,0.08)', borderColor: '#b33b32' } : undefined}
         >
             <img
                 src={currentFlag}
                 alt={currentLanguage}
-                className="h-5 w-5 rounded-full border border-white/40"
+                className={`h-5 w-5 rounded-full border border-white/40 transition-transform duration-150 ${hover ? 'scale-105' : ''}`}
             />
-            <span>{currentLanguage}</span>
+            <span className={hover ? 'text-black' : ''} style={hover ? { color: '#000000' } : undefined}>{currentLanguage}</span>
         </button>
 
             {open && <LanguageSelectorModal onClose={() => setOpen(false)} />}

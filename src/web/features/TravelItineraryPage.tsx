@@ -348,7 +348,7 @@ export function TravelItineraryPage() {
                             <div className="flex items-start gap-4">
                                 <img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
                                 <div>
-                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-[#48464C]" />
+                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
                                     <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
                                 </div>
                             </div>
