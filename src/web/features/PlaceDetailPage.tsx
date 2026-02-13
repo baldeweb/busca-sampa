@@ -29,16 +29,16 @@ export function PlaceDetailPage() {
     const normalizedCategory = ((category || type) || "").toLowerCase();
   const navigate = useNavigate();
 
-  // Carrega todas as categorias
-  const { data: restaurants } = useRecommendationList("restaurants");
-  const { data: bars } = useRecommendationList("bars");
-  const { data: coffees } = useRecommendationList("coffees");
-  const { data: nightlife } = useRecommendationList("nightlife");
-  const { data: nature } = useRecommendationList("nature");
-  const { data: touristSpots } = useRecommendationList("tourist-spot");
-  const { data: forfun } = useRecommendationList("forfun");
-  const { data: stores } = useRecommendationList("stores");
-  const { data: pleasures } = useRecommendationList("pleasure");
+  // Carrega todas as categorias (agora também usando os flags de `loading`)
+  const { data: restaurants, loading: loadingRestaurants } = useRecommendationList("restaurants");
+  const { data: bars, loading: loadingBars } = useRecommendationList("bars");
+  const { data: coffees, loading: loadingCoffees } = useRecommendationList("coffees");
+  const { data: nightlife, loading: loadingNightlife } = useRecommendationList("nightlife");
+  const { data: nature, loading: loadingNature } = useRecommendationList("nature");
+  const { data: touristSpots, loading: loadingTouristSpots } = useRecommendationList("tourist-spot");
+  const { data: forfun, loading: loadingForfun } = useRecommendationList("forfun");
+  const { data: stores, loading: loadingStores } = useRecommendationList("stores");
+  const { data: pleasures, loading: loadingPleasures } = useRecommendationList("pleasure");
 
   // Junta todos os lugares
   const allPlaces = useMemo(() => [
@@ -109,7 +109,7 @@ export function PlaceDetailPage() {
   // Evita fallback precoce para restaurantes enquanto dados da categoria ainda carregam
   const categoryExplicita = Boolean(normalizedCategory);
   const datasetsLoading = (
-    restaurants.length === 0 || bars.length === 0 || coffees.length === 0 || nightlife.length === 0 || nature.length === 0 || pleasures.length === 0 || touristSpots.length === 0 || forfun.length === 0 || stores.length === 0
+    loadingRestaurants || loadingBars || loadingCoffees || loadingNightlife || loadingNature || loadingPleasures || loadingTouristSpots || loadingForfun || loadingStores
   );
 
   const [showModal, setShowModal] = useState(false);
@@ -133,7 +133,7 @@ export function PlaceDetailPage() {
       if (found) return found;
     }
     return undefined;
-  }, [sourceArray, id, slug, categoryExplicita, allPlaces]);
+  }, [sourceArray, id, slug, categoryExplicita, allPlaces, loadingRestaurants, loadingBars, loadingCoffees, loadingNightlife, loadingNature, loadingPleasures, loadingTouristSpots, loadingForfun, loadingStores]);
 
   const mostrandoLoading = categoryExplicita && !place && datasetsLoading;
 

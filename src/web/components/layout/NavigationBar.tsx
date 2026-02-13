@@ -13,8 +13,8 @@ export function NavigationBar() {
         "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide";
     const { t } = useTranslation();
     const [showSearchModal, setShowSearchModal] = React.useState(false);
-    const showRoteiros = true;
-    const showBuscar = true;
+    const showRoteiros = false;
+    const showBuscar = false;
 
     return (
         <footer
