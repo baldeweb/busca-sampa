@@ -13,6 +13,11 @@ import icNumber2 from '@/assets/imgs/icons/ic_number2.png';
 import icNumber3 from '@/assets/imgs/icons/ic_number3.png';
 import icNumber4 from '@/assets/imgs/icons/ic_number4.png';
 import icNumber5 from '@/assets/imgs/icons/ic_number5.png';
+import icNumber6 from '@/assets/imgs/icons/ic_number6.png';
+import icNumber7 from '@/assets/imgs/icons/ic_number7.png';
+import icNumber8 from '@/assets/imgs/icons/ic_number8.png';
+import icNumber9 from '@/assets/imgs/icons/ic_number9.png';
+import icNumber10 from '@/assets/imgs/icons/ic_number10.png';
 import { WarningTip } from '@/web/components/ui/WarningTip';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -21,8 +26,6 @@ import { useOpeningPatterns } from '@/web/hooks/useOpeningPatterns';
 import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import type { PlaceRecommendation } from '@/core/domain/models/PlaceRecommendation';
 import type { GeoJsonObject } from 'geojson';
-
-const TOUR_IDS = [31, 15, 26, 20];
 
 type OsrmRouteResponse = {
     routes?: Array<{ geometry?: GeoJsonObject }>;
@@ -72,6 +75,7 @@ export function TravelItineraryPage() {
     const [tourMode, setTourMode] = useState<'walking' | 'city'>('walking');
     const [tourItems, setTourItems] = useState<TourItem[]>([]);
     const [tourItemsLoading, setTourItemsLoading] = useState<boolean>(true);
+    const [selectedTourItemId, setSelectedTourItemId] = useState<number | null>(null);
     const [showRouteDetails, setShowRouteDetails] = useState(false);
     const [isClosingRouteDetails, setIsClosingRouteDetails] = useState(false);
     const closeRouteDetailsTimeoutRef = useRef<number | null>(null);
@@ -92,7 +96,13 @@ export function TravelItineraryPage() {
         let isMounted = true;
         setTourItemsLoading(true);
         const fileName = tourMode === 'city' ? 'citytour' : 'walkingtour';
-        fetch(`/data/places/${fileName}.json`)
+        const rawBase = import.meta.env.BASE_URL || '/';
+        const normalizedBase = rawBase.startsWith('http')
+            ? new URL(rawBase).pathname || '/'
+            : rawBase;
+        const basePath = ('/' + normalizedBase).replace(/\/+/g, '/').replace(/\/$/, '/');
+        const url = `${basePath}data/places/${fileName}.json`;
+        fetch(url)
             .then((res) => {
                 if (!res.ok) throw new Error(`Failed to load ${fileName}.json`);
                 return res.json() as Promise<TourItem[]>;
@@ -115,9 +125,28 @@ export function TravelItineraryPage() {
         };
     }, [tourMode]);
 
-    const { data: touristSpots, loading } = useRecommendationList('tourist-spot');
+    const { data: restaurants, loading: loadingRestaurants } = useRecommendationList('restaurants');
+    const { data: bars, loading: loadingBars } = useRecommendationList('bars');
+    const { data: coffees, loading: loadingCoffees } = useRecommendationList('coffees');
+    const { data: nightlife, loading: loadingNightlife } = useRecommendationList('nightlife');
+    const { data: nature, loading: loadingNature } = useRecommendationList('nature');
+    const { data: pleasures, loading: loadingPleasures } = useRecommendationList('pleasure');
+    const { data: touristSpots, loading: loadingTouristSpots } = useRecommendationList('tourist-spot');
+    const { data: forfun, loading: loadingForfun } = useRecommendationList('forfun');
+    const { data: stores, loading: loadingStores } = useRecommendationList('stores');
+    const loading = loadingRestaurants || loadingBars || loadingCoffees || loadingNightlife || loadingNature || loadingPleasures || loadingTouristSpots || loadingForfun || loadingStores;
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
+
+    useEffect(() => {
+        if (tourItemsLoading) return;
+        if (!tourItems || tourItems.length === 0) {
+            setSelectedTourItemId(null);
+            return;
+        }
+        const exists = tourItems.some((item) => item.id === selectedTourItemId);
+        if (!exists) setSelectedTourItemId(tourItems[0].id);
+    }, [tourItems, tourItemsLoading, selectedTourItemId]);
 
     // Helpers to compute opening periods and display text for a place
     function getPeriodsForDay(place: PlaceRecommendation, dayOffset = 0): any[] {
@@ -207,14 +236,34 @@ export function TravelItineraryPage() {
         }
     }
 
-    // Build ordered points from TOUR_IDS (include opening text)
+    function normalizePlaceType(type: string) {
+        return (type || '').replace(/-/g, '_').toUpperCase();
+    }
+
+    const placesByType = React.useMemo(() => ({
+        RESTAURANTS: restaurants,
+        BARS: bars,
+        COFFEES: coffees,
+        NIGHTLIFE: nightlife,
+        NATURE: nature,
+        PLEASURE: pleasures,
+        TOURIST_SPOT: touristSpots,
+        FORFUN: forfun,
+        STORES: stores,
+    }), [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
+
+    // Build ordered points from selected tour item places (include opening text)
     const orderedPoints = React.useMemo(() => {
-        if (!touristSpots || touristSpots.length === 0) return [] as Array<{ name: string; lat: number; lng: number; openingText?: string }>;
-        const byId = new Map<number, PlaceRecommendation>();
-        touristSpots.forEach((p) => byId.set(Number(p.id), p));
+        if (!selectedTourItemId) return [] as Array<{ name: string; lat: number; lng: number; openingText?: string }>;
+        const tourItem = tourItems.find((item) => item.id === selectedTourItemId);
+        if (!tourItem || !tourItem.places || tourItem.places.length === 0) {
+            return [] as Array<{ name: string; lat: number; lng: number; openingText?: string }>;
+        }
         const pts: Array<{ name: string; lat: number; lng: number; openingText?: string }> = [];
-        for (const id of TOUR_IDS) {
-            const place = byId.get(id);
+        for (const ref of tourItem.places) {
+            const typeKey = normalizePlaceType(ref.placeType);
+            const list = placesByType[typeKey as keyof typeof placesByType] || [];
+            const place = list.find((p) => Number(p.id) === Number(ref.id));
             if (!place) continue;
             const addr = place.addresses?.[0];
             const lat = addr?.latitude;
@@ -224,7 +273,7 @@ export function TravelItineraryPage() {
             pts.push({ name: place.name, lat, lng, openingText });
         }
         return pts;
-    }, [touristSpots, openingPatterns, t]);
+    }, [tourItems, selectedTourItemId, placesByType, openingPatterns, t]);
 
     useEffect(() => {
         if (!showRouteDetails) return;
@@ -255,7 +304,12 @@ export function TravelItineraryPage() {
             L.icon({ iconUrl: icNumber2, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
             L.icon({ iconUrl: icNumber3, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
             L.icon({ iconUrl: icNumber4, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
-            L.icon({ iconUrl: icNumber5, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] })
+            L.icon({ iconUrl: icNumber5, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
+            L.icon({ iconUrl: icNumber6, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
+            L.icon({ iconUrl: icNumber7, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
+            L.icon({ iconUrl: icNumber8, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
+            L.icon({ iconUrl: icNumber9, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] }),
+            L.icon({ iconUrl: icNumber10, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -36] })
         ];
 
         orderedPoints.forEach((p, idx) => {
@@ -312,7 +366,10 @@ export function TravelItineraryPage() {
         };
     }, []);
 
-    const openRouteDetails = () => {
+    const openRouteDetails = (itemId?: number) => {
+        if (typeof itemId === 'number') {
+            setSelectedTourItemId(itemId);
+        }
         if (closeRouteDetailsTimeoutRef.current) {
             window.clearTimeout(closeRouteDetailsTimeoutRef.current);
             closeRouteDetailsTimeoutRef.current = null;
@@ -402,7 +459,7 @@ export function TravelItineraryPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-[#F5F5F5] px-4 lg:px-8">
+                                <div className="bg-[#F5F5F5] pb-20 px-4 lg:px-4">
                                     <EnvironmentGrid
                                         title={t('travelItinerary.routeOptionsTitle')}
                                         environments={routeOptions}
@@ -435,7 +492,7 @@ export function TravelItineraryPage() {
                                                     name={item.name}
                                                     placesCountText={t('travelItinerary.placesCount', { count: item.places?.length || 0 })}
                                                     iconSrc={tourMode === 'city' ? icTourCity : icWalkingTour}
-                                                    onDetails={openRouteDetails}
+                                                    onDetails={() => openRouteDetails(item.id)}
                                                     detailsLabel={t('travelItinerary.viewRoute')}
                                                 />
                                             ))}
