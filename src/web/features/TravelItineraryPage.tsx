@@ -17,6 +17,8 @@ import { WarningTip } from '@/web/components/ui/WarningTip';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useRecommendationList } from '@/web/hooks/useRecommendationList';
+import { useOpeningPatterns } from '@/web/hooks/useOpeningPatterns';
+import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import type { PlaceRecommendation } from '@/core/domain/models/PlaceRecommendation';
 import type { GeoJsonObject } from 'geojson';
 
@@ -114,13 +116,103 @@ export function TravelItineraryPage() {
     }, [tourMode]);
 
     const { data: touristSpots, loading } = useRecommendationList('tourist-spot');
+    const { data: openingPatternsData } = useOpeningPatterns();
+    const openingPatterns = openingPatternsData || [];
 
-    // Build ordered points from TOUR_IDS
+    // Helpers to compute opening periods and display text for a place
+    function getPeriodsForDay(place: PlaceRecommendation, dayOffset = 0): any[] {
+        const periods: any[] = [];
+        const patternId = place.openingHours?.patternId;
+        if (patternId) {
+            const pat = (openingPatterns || []).find((p: any) => p.id === patternId);
+            if (pat?.periods) periods.push(...pat.periods);
+        }
+        if (place.openingHours?.customOverrides && Array.isArray(place.openingHours.customOverrides)) {
+            periods.push(...place.openingHours.customOverrides);
+        }
+        const now = new Date();
+        const dayNames = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+        const targetDay = dayNames[(now.getDay() + dayOffset) % 7];
+        return periods.filter((p: any) => p.open && (p.days?.includes(targetDay) || p.days?.includes('EVERYDAY')));
+    }
+
+    function getOpeningDisplayForPlace(place: PlaceRecommendation): string {
+        try {
+            // If there is no patternId and no custom overrides, show unavailable
+            if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
+                return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
+            }
+
+            const periodsToday = getPeriodsForDay(place, 0);
+            if (!periodsToday || periodsToday.length === 0) {
+                // scan next 7 days for first opening
+                for (let offset = 1; offset <= 7; offset++) {
+                    const future = getPeriodsForDay(place, offset);
+                    if (!future || future.length === 0) continue;
+                    // pick earliest open time
+                    let earliest: string | null = null;
+                    function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+                    for (const p of future) { if (!p.open) continue; if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open; }
+                    if (earliest) {
+                        if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+                        // fallback to simple day label
+                        const weekdaysPt = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+                        const now = new Date();
+                        const weekday = weekdaysPt[(now.getDay() + offset) % 7];
+                        return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
+                    }
+                }
+                return '-';
+            }
+
+            if (isOpenNow(periodsToday)) return t('placeList.openNow', { defaultValue: 'Aberto agora' });
+
+            // compute next opening time today
+            const now = new Date();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+            let nextOpenMinutes: number | null = null;
+            let nextOpenStr: string | null = null;
+            for (const p of periodsToday) {
+                if (!p.open) continue;
+                const om = parseTime(p.open);
+                if (om > currentMinutes && (nextOpenMinutes === null || om < nextOpenMinutes)) {
+                    nextOpenMinutes = om; nextOpenStr = p.open;
+                }
+            }
+            if (nextOpenMinutes !== null && nextOpenStr) {
+                const diff = nextOpenMinutes - currentMinutes;
+                if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
+                return nextOpenStr;
+            }
+
+            // fallback: try next days (reuse logic above to find first upcoming)
+            for (let offset = 1; offset <= 7; offset++) {
+                const future = getPeriodsForDay(place, offset);
+                if (!future || future.length === 0) continue;
+                let earliest: string | null = null;
+                function parseTime2(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
+                for (const p of future) { if (!p.open) continue; if (earliest === null || parseTime2(p.open) < parseTime2(earliest)) earliest = p.open; }
+                if (earliest) {
+                    if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+                    const weekdaysPt = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+                    const now2 = new Date();
+                    const weekday = weekdaysPt[(now2.getDay() + offset) % 7];
+                    return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
+                }
+            }
+            return '-';
+        } catch (e) {
+            return '-';
+        }
+    }
+
+    // Build ordered points from TOUR_IDS (include opening text)
     const orderedPoints = React.useMemo(() => {
-        if (!touristSpots || touristSpots.length === 0) return [] as Array<{ name: string; lat: number; lng: number }>;
+        if (!touristSpots || touristSpots.length === 0) return [] as Array<{ name: string; lat: number; lng: number; openingText?: string }>;
         const byId = new Map<number, PlaceRecommendation>();
         touristSpots.forEach((p) => byId.set(Number(p.id), p));
-        const pts: Array<{ name: string; lat: number; lng: number }> = [];
+        const pts: Array<{ name: string; lat: number; lng: number; openingText?: string }> = [];
         for (const id of TOUR_IDS) {
             const place = byId.get(id);
             if (!place) continue;
@@ -128,10 +220,11 @@ export function TravelItineraryPage() {
             const lat = addr?.latitude;
             const lng = addr?.longitude;
             if (typeof lat !== 'number' || typeof lng !== 'number') continue;
-            pts.push({ name: place.name, lat, lng });
+            const openingText = getOpeningDisplayForPlace(place);
+            pts.push({ name: place.name, lat, lng, openingText });
         }
         return pts;
-    }, [touristSpots]);
+    }, [touristSpots, openingPatterns, t]);
 
     useEffect(() => {
         if (!showRouteDetails) return;
@@ -255,7 +348,7 @@ export function TravelItineraryPage() {
                             <div className="flex items-start gap-4">
                                 <img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
                                 <div>
-                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
+                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-2xl sm:text-3xl text-[#48464C]" />
                                     <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
                                 </div>
                             </div>
@@ -406,7 +499,9 @@ export function TravelItineraryPage() {
                         {orderedPoints.length > 0 ? (
                             <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
                                 {orderedPoints.map((point) => (
-                                    <li key={point.name}>{point.name}</li>
+                                    <li key={point.name}>
+                                        {point.name}{point.openingText ? ` (${point.openingText})` : ''}
+                                    </li>
                                 ))}
                             </ul>
                         ) : (

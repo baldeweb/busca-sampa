@@ -357,7 +357,7 @@ export const NeighborhoodListPage: React.FC = () => {
               <div className="flex items-start gap-4">
                 <img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />
                 <div>
-                  <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-2xl sm:text-3xl text-black" />
+                  <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
                   <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('neighborhoodList.intro')}</p>
                 </div>
               </div>

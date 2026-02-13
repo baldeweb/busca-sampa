@@ -592,7 +592,7 @@ export const PlaceListPage: React.FC = () => {
                                 onTouchCancel={cancelHeaderLongPress}
                             />
                             <div>
-                                <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-black" />
+                                <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
                                 <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
                             </div>
                         </div>
