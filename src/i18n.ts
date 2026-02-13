@@ -224,7 +224,7 @@ const resources = {
         FORFUN: 'Diversão',
         STORES: 'Lojas',
         FREE: 'Gratuitos',
-        PLEASURE: "Casa de Prazeres"
+        PLEASURE: 'Casa de Prazeres'
       },
       
       placeList: {
@@ -264,7 +264,7 @@ const resources = {
       home: {
         nearMeTitle: 'Cerca de mí',
         nearMeSubtitle: '(mostrando lugares en un radio de {{km}}km cerca de ti)',
-        allowLocation: 'Ops, no encontramos tu ubicación...\n\nPara encontrar lugares cerca de ti, haz clic en el botón ci-dessous:',
+        allowLocation: 'Ops, no encontramos tu ubicación...\n\nPara encontrar lugares cerca de ti, haz clic en el botón a continuación:',
         allowLocationButton: 'Permitir ubicación',
         loadingCategories: 'Cargando categorías...',
         increaseRadius: 'Aumentar radio',
@@ -296,7 +296,7 @@ const resources = {
         noPlaces: 'No se encontraron lugares.',
         version: 'Versión'
       },
-      whereIsToday: { title: '¿Y entonces, dónde es hoy?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Abren hoy' },
+      whereIsToday: { title: '¿Y entonces, dónde es hoy?', subtitle: 'Lista de lugares a los que fui, por categoría. Échale un vistazo ;)', opensToday: 'Abren hoy' },
       list: {
         nameHeader: 'Nombre',
         neighborhoodHeader: 'Barrio',
@@ -379,7 +379,7 @@ const resources = {
         you: 'Tú'
       },
       neighborhoodList: {
-        intro: 'Descubre lugares increíbles en este barrio,\nselecciona una de las opciones ci-dessous :)'
+        intro: 'Descubre lugares increíbles en este barrio,\nselecciona una de las opciones a continuación :)'
       },
       recommendationsOrigin: { title: '¿De dónde vienen estas recomendaciones?' },
       support: { title: 'Apoya el sitio' },
@@ -414,7 +414,7 @@ const resources = {
       },
       howToRecommend: { title: '¿Cómo recomiendo un lugar?' },
       placeType: {
-        RESTAURANT: 'Restaurantes', BARS: 'Bares', COFFEES: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FORFUN: 'Diversión', STORES: 'Tiendas', FREE: 'Gratuitos', PLEASURE: 'Casa de Prazeres'
+        RESTAURANT: 'Restaurantes', BARS: 'Bares', COFFEES: 'Cafeterías', NIGHTLIFE: 'Vida\u200B nocturna', NATURE: 'Naturaleza', TOURIST_SPOT: 'Puntos\u200B turísticos', FORFUN: 'Diversión', STORES: 'Tiendas', FREE: 'Gratuitos', PLEASURE: 'Casa de placeres'
       }
       ,
       placeList: {
@@ -471,7 +471,7 @@ const resources = {
       common: {
         back: 'Retour', details: 'En savoir plus', selectLanguage: 'Choisir une langue', changeDistance: 'Augmenter la distance', all: 'Tout', filter: 'Filtre:', close: 'Fermer', loading: 'Chargement…', loadError: 'Erreur de chargement.', noPlaces: 'Aucun lieu trouvé.', version: 'Version'
       },
-      whereIsToday: { title: 'Alors, c’est où aujourd’hui?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)', opensToday: 'Ouvrent aujourd\'hui' },
+      whereIsToday: { title: 'Alors, c’est où aujourd’hui ?', subtitle: 'Liste des lieux où je suis allé, par catégorie. Jette un œil ;)', opensToday: 'Ouvrent aujourd\'hui' },
       list: {
         nameHeader: 'Nom', neighborhoodHeader: 'Quartier', variablePlace: 'lieu variable', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z'
       },
@@ -537,7 +537,7 @@ const resources = {
       neighborhoodList: {
         intro: 'Découvrez des lieux incroyables dans ce quartier,\nchoisissez l\'une des options ci‑dessous :)'
       },
-      recommendationsOrigin: { title: '¿De dónde vienen estas recomendaciones?' },
+      recommendationsOrigin: { title: 'D\'où viennent ces recommandations ?' },
       support: { title: 'Soutenir le site' },
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
       aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
@@ -564,7 +564,7 @@ const resources = {
         tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher'
       },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
-      placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Naturaleza', TOURIST_SPOT: 'Sites\u200B touristiques', FORFUN: 'Divertissement', STORES: 'Magasins', FREE: 'Gratuit', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: 'Restaurants', BARS: 'Bars', COFFEES: 'Cafés', NIGHTLIFE: 'Vie\u200B nocturne', NATURE: 'Nature', TOURIST_SPOT: 'Sites\u200B touristiques', FORFUN: 'Divertissement', STORES: 'Magasins', FREE: 'Gratuit', PLEASURE: 'Maison de plaisirs' }
     }
   },
   ru: {
@@ -608,6 +608,18 @@ const resources = {
         tipTitle: 'Важный совет',
         tipDescription: 'Выйдя на улицу, будь внимателен с телефоном: старайся меньше им пользоваться и не проси помощи у незнакомцев. Заметил что-то странное? Зайди в людное место и позвони 190. В СП базовое правило: полная внимательность вокруг и никакой беспечности'
       },
+      placeType: {
+        RESTAURANT: 'Рестораны',
+        BARS: 'Бары',
+        COFFEES: 'Кофейни',
+        NIGHTLIFE: 'Ночная жизнь',
+        NATURE: 'Природа',
+        TOURIST_SPOT: 'Туристические места',
+        FORFUN: 'Развлечения',
+        STORES: 'Магазины',
+        FREE: 'Бесплатно',
+        PLEASURE: 'Дом удовольствий'
+      },
       placeList: {
         environmentTitle: 'Тип окружения:',
         hoursUnavailable: 'Часы недоступны',
@@ -625,31 +637,40 @@ const resources = {
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '了解更多', selectLanguage: '选择语言', changeDistance: '增加距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
       filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
-      placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', viewHours: 'Öffnungszeiten anzeigen',
+      placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', viewHours: '查看营业时间',
         visitModalTitle: '关于该地点',
-        visitModalParagraph: '待访问地点。本页面的信息来自其他曾去过并推荐我去的人士的建议。',
-        visitedModalParagraph: '已访问地点。本页信息来自我访问时收集的内容、我点过或体验过的项目，以及场所负责人提供的信息。',
+        visitModalParagraph: '此地点尚未亲访。页面信息来自已去过并推荐给我的人提供的建议。',
+        visitedModalParagraph: '此地点已亲访。页面信息来自我拜访时记录的内容（点过的菜、体验过的项目）以及店家提供的资料。',
         neverEmphasis: '',
         openNow: '正在营业',
         closedNow: '已打烊',
-        locationDescription: '这里列出了这家店的所有门店与地址。你也可以按自己喜欢的方式规划路线：用 Google Maps 或叫一辆 Uber :)',
+        locationDescription: '这里列出了该场所的所有分店和地址。你可以选择用 Google Maps 导航，或直接叫一辆 Uber :)',
         websiteTitle: '网站',
-        websiteSubtitle: '访问该地点的网站并查看详细信息',
-        websiteButton: '访问网站',
-        openUber: 'In Uber öffnen',
+        websiteSubtitle: '访问此地点的网站查看详细信息',
+        websiteButton: '打开网站',
+        openUber: '打开 Uber',
         instagramTitle: 'Instagram',
         instagramSubtitle: '关注官方账号：',
         follow: '关注',
         phoneTitle: '电话',
-        phonesSubtitle: '这些是该地点的官方联系方式',
+        phonesSubtitle: '这些是此地点的官方联系方式',
         menuTitle: '菜单',
-        menuSubtitle: '查看店铺菜单',
+        menuSubtitle: '查看此地点的菜单',
         menuButton: '打开菜单',
         notesTitle: '备注',
         reportProblem: '报告问题',
-        visitModalEnding: 'Ich werde Orte empfehlen, die Sie nicht besuchen sollten :)'
+        visitModalEnding: ''
       },
-      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
+      openingHours: {
+        title: '营业时间',
+        closed: '休息',
+        range: '从 {{open}} 到 {{close}}',
+        notProvided: '未提供营业时间。',
+        followButton: '关注',
+        checkAvailabilityMessage: '营业时间可能会变化，请查看该场所官网或 Instagram 了解详情',
+        alwaysOpenMessage: '该地点全天 24 小时营业',
+        checkAvailabilityLabel: '查看营业情况'
+      },
       footer: { home: '首页', search: '搜索', about: '关于' },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
       nearbyMap: { title: '附近地图', noneInRadius: '当前半径内无点。', pointsDisplayed: '{{count}} 个点。', you: '你' },
@@ -683,7 +704,7 @@ const resources = {
         tipTitle: '重要提示',
         tipDescription: '走在街上时，注意手机：尽量少用，不要向陌生人求助。发现异常了吗？进入人多的地方并拨打190。在圣保罗，基本原则是：时刻注意周围，不要大意'
       },
-      placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FORFUN: '娱乐', STORES: '商店', FREE: '免费', PLEASURE: 'Casa de Prazeres' }
+      placeType: { RESTAURANT: '餐厅', BARS: '酒吧', COFFEES: '咖啡店', NIGHTLIFE: '夜生活', NATURE: '自然', TOURIST_SPOT: '旅游景点', FORFUN: '娱乐', STORES: '商店', FREE: '免费', PLEASURE: '成人娱乐场所' }
     }
   },
   en: {
@@ -702,7 +723,9 @@ const resources = {
         noNearbyResultsRadius: 'There\'s nothing near you...\n\nHow about changing the distance to\nlist nearby places?',
         locationNotSupported: 'Geolocation is not supported by this browser.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'You are outside the Greater São Paulo region. How about visiting the city soon? :)'
+        outsideGreaterSP: 'You are outside the Greater São Paulo region. How about visiting the city soon? :)',
+        viewPlace: 'see place',
+        viewPlaces: 'see places'
       },
       header: {
         title: 'Role Paulista',
@@ -744,33 +767,42 @@ const resources = {
         opensMonday: 'open on Mondays',
         opensSunday: 'open on Sundays',
         opensHoliday: 'open on holidays',
-        alreadyVisited: '✓ I have been and recommend',
+        alreadyVisited: '✓ I’ve been there and recommend it',
         notVisited: '⚠️ Not visited yet',
-        viewHours: 'Öffnungszeiten anzeigen',
-        visitModalTitle: 'Über diesen Ort',
-        visitModalParagraph: 'Ort noch zu besuchen. Die Informationen auf dieser Seite stammen aus Vorschlägen anderer Personen, die dort waren und mir empfohlen haben, es zu besuchen.',
-        visitedModalParagraph: 'Besuchter Ort. Die Informationen auf dieser Seite stammen aus meinen Aufzeichnungen bei meinem Besuch — Dinge, die ich bestellt oder erlebt habe — sowie aus Angaben der Verantwortlichen des Ortes.',
+        viewHours: 'see hours',
+        visitModalTitle: 'About this place',
+        visitModalParagraph: 'Place pending a visit. The info here comes from suggestions by people who have been there and told me to check it out.',
+        visitedModalParagraph: 'Visited place. The info here comes from what I noted during my visit — things I ordered or tried — plus details shared by the venue.',
         neverEmphasis: '',
-        openNow: 'Jetzt geöffnet',
-        closedNow: 'Geschlossen',
-        locationDescription: 'Hier findest du die Filialen dieses Ortes und alle Adressen. Du kannst die Route so planen, wie du möchtest: mit Google Maps oder indem du ein Uber bestellst :)',
-        websiteTitle: 'Website',
-        websiteSubtitle: 'Besuchen Sie die Website dieses Ortes und sehen Sie sich die detaillierten Informationen an',
-        websiteButton: 'Website öffnen',
-        openUber: 'In Uber öffnen',
+        openNow: 'Open now',
+        closedNow: 'Closed',
+        locationDescription: 'Here are the branches for this venue and their addresses. You can map the route however you like: with Google Maps or by calling an Uber :)',
+        websiteTitle: 'Place website',
+        websiteSubtitle: 'Visit the venue website for detailed information',
+        websiteButton: 'Open website',
+        openUber: 'Open in Uber',
         instagramTitle: 'Instagram',
-        instagramSubtitle: 'Follow the official profile:',
-        follow: 'Follow',
+        instagramSubtitle: 'Folge dem offiziellen Profil:',
+        follow: 'Folgen',
         phoneTitle: 'Phone',
-        phonesSubtitle: 'Dies sind die offiziellen Kontakte dieses Ortes',
+        phonesSubtitle: 'These are the official contacts for this place',
         menuTitle: 'Menu',
-        menuSubtitle: 'Speisekarte des Standorts anzeigen',
-        menuButton: 'Speisekarte öffnen',
-        notesTitle: 'Hinweise',
-        reportProblem: 'Ein Problem melden',
-        visitModalEnding: 'Ich werde Orte empfehlen, die Sie nicht besuchen sollten :)'
+        menuSubtitle: 'View the venue menu',
+        menuButton: 'Open menu',
+        notesTitle: 'Notes',
+        reportProblem: 'Report a problem',
+        visitModalEnding: 'I’ll also tell you which places not to visit :)'
       },
-      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
+      openingHours: {
+        title: 'Hours of operation',
+        closed: 'Closed',
+        range: 'from {{open}} to {{close}}',
+        notProvided: 'Hours not provided.',
+        followButton: 'Follow',
+        checkAvailabilityMessage: 'Hours may vary. Check the venue website or Instagram page for details.',
+        alwaysOpenMessage: 'This place is open 24/7',
+        checkAvailabilityLabel: 'Check availability'
+      },
       placeList: {
         environmentTitle: 'Environment type:',
         hoursUnavailable: 'Hours unavailable',
@@ -780,19 +812,19 @@ const resources = {
         subtitleTemplate: 'Discover {{article}} {{noun}} of your type closest to you :)'
       },
       about: {
-        title: 'Who bin ich?',
-        paragraph: 'Platzhalter für die „Über“-Seite. Das vollständige Layout folgt später.'
+        title: 'Who am I?',
+        paragraph: 'Placeholder for the About page. The full layout will arrive soon.'
       },
       aboutMe: {
-        authorTag: 'Ersteller von Role Paulista',
-        aboutHeading: 'Über mich',
-        socialHeading: 'Soziale Netzwerke',
-        bio: 'Mobile-Entwickler mit über 8 Jahren Erfahrung, Spezialist für Android & iOS. Begeistert von Technologie, Reisen, Restaurants und dem Erkunden von São Paulo.'
+        authorTag: 'Creator of Role Paulista',
+        aboutHeading: 'About me',
+        socialHeading: 'Social networks',
+        bio: 'Mobile developer for 8+ years, Android & iOS specialist. Passionate about tech, travel, food, and exploring every corner of São Paulo.'
       }
       ,
       travelItinerary: {
         title: 'Routes',
-        placeholder: 'Vorgeschlagene Fußrouten, damit du mehrere nahegelegene Orte kennenlernen kannst, ohne für den Transport bezahlen zu müssen.',
+        placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
         routeOptionsTitle: 'Route Options:',
         listTitle: 'Routes',
         modes: {
@@ -831,7 +863,9 @@ const resources = {
         noNearbyResultsRadius: 'In Ihrer Nähe gibt es nichts...\n\nWie wäre es, die Entfernung zu ändern, um\nnahegelegene Orte aufzulisten?',
         locationNotSupported: 'Geolokalisierung wird von diesem Browser nicht unterstützt.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'Sie befinden sich außerhalb der Metropolregion São Paulo. Wie wäre es, die Stadt bald zu besuchen? :)'
+        outsideGreaterSP: 'Sie befinden sich außerhalb der Metropolregion São Paulo. Wie wäre es, die Stadt bald zu besuchen? :)',
+        viewPlace: 'Ort ansehen',
+        viewPlaces: 'Orte ansehen'
       },
       header: {
         title: 'Role Paulista',
@@ -889,8 +923,8 @@ const resources = {
         websiteButton: 'Website öffnen',
         openUber: 'In Uber öffnen',
         instagramTitle: 'Instagram',
-        instagramSubtitle: 'Follow the official profile:',
-        follow: 'Follow',
+        instagramSubtitle: 'Folge dem offiziellen Profil:',
+        follow: 'Folgen',
         phoneTitle: 'Telefon',
         phonesSubtitle: 'Dies sind die offiziellen Kontakte dieses Ortes',
         menuTitle: 'Speisekarte',
@@ -940,6 +974,19 @@ const resources = {
         placesCount: '{{count}} Orte',
         tipTitle: 'Wichtiger Hinweis',
         tipDescription: 'Wenn du auf der Straße unterwegs bist, sei aufmerksam mit deinem Handy: benutze es möglichst wenig und bitte keine Fremden um Hilfe. Fällt dir etwas Seltsames auf? Geh in einen belebten Ort und ruf 190 an. In SP gilt: volle Aufmerksamkeit für die Umgebung und keine Nachlässigkeit'
+      },
+      howToRecommend: { title: 'Wie kann ich einen Ort empfehlen?' },
+      placeType: {
+        RESTAURANT: 'Restaurants',
+        BARS: 'Bars',
+        COFFEES: 'Cafés',
+        NIGHTLIFE: 'Nachtleben',
+        NATURE: 'Natur',
+        TOURIST_SPOT: 'Sehenswürdigkeiten',
+        FORFUN: 'Freizeit',
+        STORES: 'Geschäfte',
+        FREE: 'Kostenlos',
+        PLEASURE: 'Vergnügungshaus'
       }
     }
   },
@@ -959,7 +1006,9 @@ const resources = {
         noNearbyResultsRadius: '近くには何も見つかりませんでした...\n\n距離を変更して、\n近くの場所を表示しませんか？',
         locationNotSupported: 'このブラウザは位置情報をサポートしていません。',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'あなたはグランサンパウロ地域の外にいます。近いうちに街を訪れてみませんか？ :)'
+        outsideGreaterSP: 'あなたはグランサンパウロ地域の外にいます。近いうちに街を訪れてみませんか？ :)',
+        viewPlace: '場所を見る',
+        viewPlaces: '場所を見る'
       },
       header: {
         title: 'Role Paulista',
@@ -1090,7 +1139,9 @@ const resources = {
         noNearbyResultsRadius: 'لا يوجد شيء بالقرب منك...\n\nما رأيك بتغيير المسافة\nلعرض الأماكن القريبة؟',
         locationNotSupported: 'المتصفح لا يدعم تحديد الموقع الجغرافي.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'أنت خارج منطقة ساو باولو الكبرى. ماذا عن زيارة المدينة قريبًا؟ :)'
+        outsideGreaterSP: 'أنت خارج منطقة ساو باولو الكبرى. ماذا عن زيارة المدينة قريبًا؟ :)',
+        viewPlace: 'عرض المكان',
+        viewPlaces: 'عرض الأماكن'
       },
       header: {
         title: 'Role Paulista',
@@ -1159,7 +1210,7 @@ const resources = {
         notesTitle: 'ملاحظات'
       },
       openingHours: { checkAvailabilityMessage: 'تختلف أوقات العمل حسب التوفر. تحقق من موقع المكان وصفحة الإنستغرام لمعرفة التفاصيل', alwaysOpenMessage: 'هذا المكان مفتوح على مدار 24 ساعة', checkAvailabilityLabel: 'تحقق من التوفر' },
-      whereIsToday: { title: 'فأين نذهب اليوم؟', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
+      whereIsToday: { title: 'فأين نذهب اليوم؟', subtitle: 'قائمة بالأماكن التي زرتها، مرتبة حسب الفئة. ألقِ نظرة ;)', opensToday: 'تفتح اليوم' },
       placeType: {
         RESTAURANT: 'مطاعم',
         BARS: 'بارات',
@@ -1170,7 +1221,7 @@ const resources = {
         FORFUN: 'للترفيه',
         STORES: 'متاجر',
         FREE: 'مجاني',
-        PLEASURE: 'Casa de Prazeres'
+        PLEASURE: 'أماكن ترفيه للبالغين'
       },
       placeList: {
         environmentTitle: 'نوع البيئة:',
@@ -1232,104 +1283,106 @@ const resources = {
         neighborhoodsTitle: 'Per quartiere',
         neighborhoodsTagline: 'Sei in uno di questi quartieri? Ci sono bei posti nelle vicinanze!',
         viewMoreNeighborhoods: 'vedi altri quartieri',
-        viewMore: 'Meer opties',
+        viewMore: 'Più opzioni',
         noNearbyResultsRadius: 'Non c\'è nulla vicino a te...\n\nChe ne dici di modificare la distanza per\nelencare i luoghi vicini?',
         locationNotSupported: 'La geolocalizzazione non è supportata da questo browser.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'Sei al di fuori della regione della Grande San Paolo. Che ne dici di visitare la città presto? :)'
+        outsideGreaterSP: 'Sei al di fuori della regione della Grande San Paolo. Che ne dici di visitare la città presto? :)',
+        viewPlace: 'vedi luogo',
+        viewPlaces: 'vedi luoghi'
       },
       header: { title: 'Role Paulista', tagline: 'La migliore raccomandazione, a pochi clic di distanza' },
       common: {
         back: 'Indietro',
-        details: 'Meer info',
-        selectLanguage: 'Selecteer een taal',
-        changeDistance: 'Aumentare la distanza',
-        all: 'Alles',
-        filter: 'Filter:',
-        close: 'Kapat',
-        loading: 'Laden…',
-        loadError: "Errore nel caricamento dei dati.",
+        details: 'Dettagli',
+        selectLanguage: 'Seleziona una lingua',
+        changeDistance: 'Aumenta distanza',
+        all: 'Tutto',
+        filter: 'Filtro:',
+        close: 'Chiudi',
+        loading: 'Caricamento…',
+        loadError: 'Errore nel caricamento dei dati.',
         noPlaces: 'Nessun luogo trovato.',
-        version: 'Versie'
+        version: 'Versione'
       },
       filters: {
         title: 'Filtri',
-        subtitle: 'Regola i filtri sotto per affinare i risultati',
-        sortingTitle: 'Sorteren',
+        subtitle: 'Regola i filtri qui sotto per affinare i risultati',
+        sortingTitle: 'Ordinamento',
         hoursTitle: 'Orari',
-        openNowLabel: 'Nu aperto',
-        openNow: 'Nu aperto',
-        anyHourLabel: 'Elke tijd',
-        anyHour: 'Elke tijd',
+        openNowLabel: 'Aperto ora',
+        openNow: 'Aperto ora',
+        anyHourLabel: 'Qualsiasi orario',
+        anyHour: 'Qualsiasi orario',
         scheduleTitle: 'Prenotazione',
         scheduleRequired: 'Prenotazione richiesta',
-        scheduleNotRequired: 'Geen reservering nodig',
-        anySchedule: 'Elke',
+        scheduleNotRequired: 'Non serve prenotare',
+        anySchedule: 'Qualsiasi',
         priceTitle: 'Prezzo',
-        anyPrice: 'Elke prezzo',
+        anyPrice: 'Qualsiasi prezzo',
         button: 'Filtri'
       },
-      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', typeHeader: 'Tipo', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'BUURT artan sırada A-Z' },
-      footer: { home: 'Anasayfa', search: 'Zoeken', about: 'Info' },
+      list: { nameHeader: 'NOME', neighborhoodHeader: 'QUARTIERE', typeHeader: 'Tipo', orderNameAsc: 'NOME in ordine crescente A-Z', orderNeighborhoodAsc: 'QUARTIERE in ordine crescente A-Z' },
+      footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       placeDetail: {
         hoursTitle: 'Orari di apertura',
         opensMonday: 'apre il lunedì',
         opensSunday: 'apre la domenica',
         opensHoliday: 'apre nei giorni festivi',
-        alreadyVisited: '✓ Ik ben hier geweest en beveel het aan',
-        notVisited: '⚠️ Nog niet bezocht',
-        viewHours: 'bekijk tijden',
+        alreadyVisited: '✓ Ci sono stato e lo consiglio',
+        notVisited: '⚠️ Non ancora visitato',
+        viewHours: 'vedi orari',
         visitModalTitle: 'Informazioni sul luogo',
-        visitModalParagraph: 'Locatie wacht op bezoek. De informatie op deze pagina komt van suggesties van andere mensen die er zijn geweest en mij hebben aangeraden het te bezoeken.',
-        visitedModalParagraph: 'Bezocht plaats. De informatie op deze pagina komt uit wat ik verzamelde tijdens mijn bezoek — elementen die ik bestelde of meemaakte — en informatie verstrekt door de verantwoordelijken van de locatie.',
+        visitModalParagraph: 'Luogo ancora da visitare. Le informazioni qui provengono dai suggerimenti di chi è già andato e me lo ha consigliato.',
+        visitedModalParagraph: 'Luogo visitato. Le informazioni provengono da ciò che ho raccolto durante la visita — cose che ho ordinato o provato — e dai dettagli forniti dai responsabili.',
         neverEmphasis: '',
-        openNow: 'Nu open',
-        closedNow: 'Gesloten',
-        locationDescription: 'Hier vind je de vestigingen van deze plek en alle adressen. Je kunt de route nog steeds plannen zoals jij wilt: met Google Maps of door een Uber te bestellen :)',
-        websiteTitle: 'Website',
-        websiteSubtitle: 'Bezoek de website van deze plek en bekijk de gedetailleerde informatie',
-        websiteButton: 'Open website',
+        openNow: 'Aperto ora',
+        closedNow: 'Chiuso',
+        locationDescription: 'Qui trovi le sedi di questo luogo e tutti gli indirizzi. Puoi tracciare il percorso come preferisci: con Google Maps o chiamando un Uber :)',
+        websiteTitle: 'Sito del luogo',
+        websiteSubtitle: 'Visita il sito di questo luogo e consulta le informazioni dettagliate',
+        websiteButton: 'Apri sito',
         instagramTitle: 'Instagram',
-        instagramSubtitle: 'Volg het officiële profiel van de locatie:',
-        follow: 'Volgen',
-        phoneTitle: 'Telefon',
-        phonesSubtitle: 'Dit zijn de officiële contactgegevens van deze locatie',
+        instagramSubtitle: 'Segui il profilo ufficiale:',
+        follow: 'Segui',
+        phoneTitle: 'Telefono',
+        phonesSubtitle: 'Questi sono i contatti ufficiali del luogo',
         menuTitle: 'Menu',
-        menuSubtitle: 'Bekijk het menu van de locatie',
-        menuButton: 'Open menu',
-        notesTitle: 'Opmerkingen'
+        menuSubtitle: 'Guarda il menu del locale',
+        menuButton: 'Apri menu',
+        notesTitle: 'Note'
       },
-      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', checkAvailabilityLabel: 'Beschikbaarheid controleren' },
-      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
+      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', checkAvailabilityLabel: 'Verifica disponibilità' },
+      whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Dai un\'occhiata ;)' },
       placeType: {
         RESTAURANT: 'Ristoranti',
         BARS: 'Bar',
         COFFEES: 'Caffetterie',
-        NIGHTLIFE: 'Gece hayatı',
-        NATURE: 'Doğa',
-        TOURIST_SPOT: 'Toeristische bezienswaardigheden',
-        FORFUN: 'Eğlence için',
-        STORES: 'Mağazalar',
-        FREE: 'Ücretsiz',
-        PLEASURE: 'Casa de Prazeres'
+        NIGHTLIFE: 'Vita notturna',
+        NATURE: 'Natura',
+        TOURIST_SPOT: 'Punti\u200B turistici',
+        FORFUN: 'Divertimento',
+        STORES: 'Negozi',
+        FREE: 'Gratuiti',
+        PLEASURE: 'Case di piacere'
       },
       placeList: {
         environmentTitle: 'Tipo di ambiente:',
         hoursUnavailable: 'Orari non disponibili',
         opensAtHeader: 'Apertura',
-        openNow: 'Nu open',
-        opensTomorrowAt: 'Opent morgen om {{time}}',
-        subtitleTemplate: 'Ontdek {{article}} {{noun}} van jouw type, dicht bij jou :)'
+        openNow: 'Aperto ora',
+        opensTomorrowAt: 'Apre domani alle {{time}}',
+        subtitleTemplate: 'Scopri {{article}} {{noun}} del tuo tipo più vicino a te :)'
       },
       about: {
         title: 'Chi sono?',
         paragraph: 'Pagina "Chi sono". Il layout completo sarà aggiunto più tardi.'
       },
       aboutMe: {
-        authorTag: 'Maker van Role Paulista',
-        aboutHeading: 'Over mij',
-        socialHeading: 'Sociale netwerken',
-        bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+        authorTag: 'Creatore di Role Paulista',
+        aboutHeading: 'Su di me',
+        socialHeading: 'Social',
+        bio: 'Sviluppatore mobile da oltre 8 anni, specialista Android e iOS. Appassionato di tecnologia, viaggi, ristoranti ed esplorare ogni angolo di San Paolo.'
       },
       travelItinerary: {
         title: 'Itinerari',
@@ -1353,7 +1406,7 @@ const resources = {
         tipTitle: 'Consiglio importante',
         tipDescription: 'Camminando per strada, stai attento al cellulare: evita di usarlo troppo e non chiedere aiuto a sconosciuti. Hai notato qualcosa di strano? Entra in un posto affollato e chiama il 190. A SP, la regola base è: massima attenzione intorno e niente distrazioni'
       },
-      nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punten weergegeven.', you: 'Jij' }
+      nearbyMap: { title: 'Mappa vicina', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
     }
   },
   nl: {
@@ -1372,7 +1425,9 @@ const resources = {
         noNearbyResultsRadius: 'Er is niets bij jou in de buurt...\n\nWat dacht je ervan de afstand te wijzigen om\nplaatsen in de buurt te tonen?',
         locationNotSupported: 'Geolocatie wordt niet ondersteund door deze browser.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'Je bevindt je buiten de regio Groot-São Paulo. Wat dacht je ervan om de stad binnenkort te bezoeken? :)'
+        outsideGreaterSP: 'Je bevindt je buiten de regio Groot-São Paulo. Wat dacht je ervan om de stad binnenkort te bezoeken? :)',
+        viewPlace: 'bekijk plaats',
+        viewPlaces: 'bekijk plaatsen'
       },
       header: { title: 'Role Paulista', tagline: 'De beste aanbeveling, op een paar klikken afstand' },
       common: {
@@ -1436,23 +1491,23 @@ const resources = {
         notesTitle: 'Opmerkingen'
       },
       openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', checkAvailabilityLabel: 'Beschikbaarheid controleren' },
-      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
+      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'Lijst met plekken waar ik ben geweest, per categorie. Kijk maar ;)' },
       placeType: {
         RESTAURANT: 'Restaurants',
         BARS: 'Bars',
         COFFEES: 'Koffiebars',
-        NIGHTLIFE: 'Gece hayatı',
-        NATURE: 'Doğa',
+        NIGHTLIFE: 'Nachtleven',
+        NATURE: 'Natuur',
         TOURIST_SPOT: 'Toeristische bezienswaardigheden',
-        FORFUN: 'Eğlence için',
-        STORES: 'Mağazalar',
-        FREE: 'Ücretsiz',
-        PLEASURE: 'Casa de Prazeres'
+        FORFUN: 'Plezier',
+        STORES: 'Winkels',
+        FREE: 'Gratis',
+        PLEASURE: 'Plezierhuis'
       },
       placeList: {
         environmentTitle: 'Type omgeving:',
         hoursUnavailable: 'Openingstijden niet beschikbaar',
-        opensAtHeader: 'Açılış saati',
+        opensAtHeader: 'Opening',
         openNow: 'Nu open',
         opensTomorrowAt: 'Opent morgen om {{time}}',
         subtitleTemplate: 'Ontdek {{article}} {{noun}} van jouw type, dicht bij jou :)'
@@ -1509,7 +1564,9 @@ const resources = {
         noNearbyResultsRadius: 'Yakınında hiçbir şey yok...\n\nMesafeyi değiştirip\nyakın yerleri listelemeye ne dersin?',
         locationNotSupported: 'Tarayıcı bu konum belirleme özelliğini desteklemiyor.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'Büyük São Paulo bölgesi dışında bulunuyorsunuz. Yakında şehri ziyaret etmeye ne dersiniz? :)'
+        outsideGreaterSP: 'Büyük São Paulo bölgesi dışında bulunuyorsunuz. Yakında şehri ziyaret etmeye ne dersiniz? :)',
+        viewPlace: 'mekanı gör',
+        viewPlaces: 'mekanları gör'
       },
       header: { title: 'Role Paulista', tagline: 'Gittiğim yerlerin en iyi önerisi — birkaç tık uzağında' },
       common: {
@@ -1563,18 +1620,18 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
-      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
+      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'Kategoriye göre gittiğim yerlerin listesi, bir göz at ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
         BARS: 'Barlar',
         COFFEES: 'Kafeler',
         NIGHTLIFE: 'Gece hayatı',
         NATURE: 'Doğa',
-        TOURIST_SPOT: 'Toeristische bezienswaardigheden',
-        FORFUN: 'Eğlence için',
+        TOURIST_SPOT: 'Turistik noktalar',
+        FORFUN: 'Eğlence',
         STORES: 'Mağazalar',
         FREE: 'Ücretsiz',
-        PLEASURE: 'Casa de Prazeres'
+        PLEASURE: 'Eğlence evleri'
       },
       placeList: {
         environmentTitle: 'Mekan türü:',
@@ -1616,7 +1673,7 @@ const resources = {
         tipTitle: 'Önemli ipucu',
         tipDescription: 'Sokakta yürürken telefonuna dikkat et: çok fazla kullanma ve yabancılardan yardım isteme. Garip bir şey fark ettin mi? Kalabalık bir yere gir ve 190\'ı ara. SP\'de temel kural: çevreye tam dikkat ve asla gaflet'
       },
-      nearbyMap: { title: 'Yakındaki Harita', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
+      nearbyMap: { title: 'Yakındaki harita', noneInRadius: 'Mevcut yarıçapta nokta yok.', pointsDisplayed: '{{count}} nokta görüntülendi.', you: 'Sen' }
     }
   },
   pl: {
@@ -1635,7 +1692,9 @@ const resources = {
         noNearbyResultsRadius: 'W pobliżu nie ma nic...\n\nMoże zmienimy odległość, aby\nwyświetlić pobliskie miejsca?',
         locationNotSupported: 'Geolokalizacja nie jest obsługiwana przez tę przeglądarkę.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'Znajdujesz się poza regionem Wielkiego São Paulo. Może odwiedzisz miasto wkrótce? :)'
+        outsideGreaterSP: 'Znajdujesz się poza regionem Wielkiego São Paulo. Może odwiedzisz miasto wkrótce? :)',
+        viewPlace: 'zobacz miejsce',
+        viewPlaces: 'zobacz miejsca'
       },
       header: { title: 'Role Paulista', tagline: 'Najlepsza rekomendacja — o kilka kliknięć stąd' },
       common: {
@@ -1689,7 +1748,7 @@ const resources = {
         notesTitle: 'Notatki'
       },
       openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę', checkAvailabilityLabel: 'Sprawdź dostępność' },
-      whereIsToday: { title: 'A więc, gdzie dziś?', subtitle: 'lista de lugares onde fui, por categoria, dá uma olhada ;)' },
+      whereIsToday: { title: 'A więc, gdzie dziś?', subtitle: 'Lista miejsc, w których byłem, według kategorii. Rzuć okiem ;)' },
       placeType: {
         RESTAURANT: 'Restauracje',
         BARS: 'Bary',
@@ -1700,7 +1759,7 @@ const resources = {
         FORFUN: 'Dla zabawy',
         STORES: 'Sklepy',
         FREE: 'Darmowe',
-        PLEASURE: 'Casa de Prazeres'
+        PLEASURE: 'Dom rozkoszy'
       },
       placeList: {
         environmentTitle: 'Typ miejsca:',
