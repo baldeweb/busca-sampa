@@ -39,6 +39,7 @@ type TourPlaceRef = {
 type TourItem = {
     id: number;
     name: string;
+    tourType: string,
     description: string;
     places: TourPlaceRef[];
 };
@@ -252,6 +253,21 @@ export function TravelItineraryPage() {
         STORES: stores,
     }), [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
 
+    const displayedTourItems = React.useMemo(() => {
+        if (!selectedRouteOption) return tourItems;
+        const ROUTE_TO_TOUR_KEY: Record<string, string> = {
+            free: 'FREE',
+            nightlife: 'NIGHTLIFE',
+            bars: 'BARS',
+            food: 'GASTRONOMIC',
+            history: 'HISTORY',
+            museums: 'MUSEUMS'
+        };
+        const targetKey = ROUTE_TO_TOUR_KEY[selectedRouteOption] || selectedRouteOption;
+        const normalize = (v: any) => (String(v || '')).replace(/-/g, '_').toUpperCase();
+        return (tourItems || []).filter((item) => normalize(item.tourType) === normalize(targetKey));
+    }, [tourItems, selectedRouteOption]);
+
     // Build ordered points from selected tour item places (include opening text)
     const orderedPoints = React.useMemo(() => {
         if (!selectedTourItemId) return [] as Array<{ name: string; lat: number; lng: number; openingText?: string }>;
@@ -446,7 +462,7 @@ export function TravelItineraryPage() {
                                         >
                                             <span className="category-card-label inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
-                                                {t('travelItinerary.modes.city')}
+                                                {t('travelItinerary.modes.city')} (beta)
                                             </span>
                                         </div>
                                         <div className="absolute left-0 right-0 bottom-0 w-full">
@@ -479,14 +495,14 @@ export function TravelItineraryPage() {
                                             {t('common.loading')}
                                         </p>
                                     )}
-                                    {!tourItemsLoading && tourItems.length === 0 && (
+                                    {!tourItemsLoading && displayedTourItems.length === 0 && (
                                         <p className="text-sm text-gray-500 px-0">
                                             {t('common.noPlaces')}
                                         </p>
                                     )}
-                                    {!tourItemsLoading && tourItems.length > 0 && (
+                                    {!tourItemsLoading && displayedTourItems.length > 0 && (
                                         <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
-                                            {tourItems.map((item, idx) => (
+                                            {displayedTourItems.map((item, idx) => (
                                                 <TravelItineraryListItem
                                                     key={`${tourMode}-${item.id}-${idx}`}
                                                     name={item.name}

@@ -113,10 +113,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
         <div className="flex flex-col justify-start gap-2">
           <div className="flex items-center">
+            <img src={icFilter} alt="filter" className="w-4 h-4 mr-2" />
             <h3 className="font-bold text-lg text-black">{t("filters.title", { defaultValue: "Filtros" })}</h3>
           </div>
           <div className="flex items-start gap-2">
-            <img src={icFilter} alt="filter" className="w-5 h-5 mt-1" />
             <div className="flex flex-wrap items-center gap-2 w-full">
               {/* Ordenação */}
               <div className="relative">
