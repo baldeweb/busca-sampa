@@ -536,5 +536,91 @@
         "tags": [
             "PAGODE"
         ]
+    },
+    {
+        "id": 15,
+        "name": "Praça do Meio Bar",
+        "type": "NIGHTLIFE",
+        "phones": [
+            {
+                "number": "11919343109",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "PRACADOMEIO_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Pagode ao ar livre"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cunha Gago",
+                "number": "599",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05421-001",
+                "isMainUnity": true,
+                "latitude": -23.563766,
+                "longitude": -46.692889
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/pracadomeio/",
+        "tags": [
+            "PAGODE"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "O'Malley's Bar",
+        "type": "NIGHTLIFE",
+        "phones": [
+            {
+                "number": "1130812114",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "OMALLEYS_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Pub Irlandês com música ao vivo"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alameda Itu",
+                "number": "1529",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01421-001",
+                "isMainUnity": true,
+                "latitude": -23.558224,
+                "longitude": -46.665890
+            }
+        ],
+        "linkMenu": "http://www.omalleysbar.net/nosso-cardapio-2/",
+        "linkWebsite": "http://www.omalleysbar.net/",
+        "linkInstagram": "https://www.instagram.com/omalleysbar/",
+        "tags": [
+            "PUB_ROCK"
+        ]
     }
 ]

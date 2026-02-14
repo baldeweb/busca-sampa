@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Centro Histórico 1",
+        "tourType": "ALL",
         "description": "Nesta parte 1, você passará por museu, o mercado municipal, e outros lugares, encerrando no Bar Cofre, onde há muitos anos atrás funcionava um dos cofres do Banco Santander.",
         "places": [
             {
@@ -33,6 +34,7 @@
     {
         "id": 2,
         "name": "Centro Histórico 2",
+        "tourType": "ALL",
         "description": "Nesta parte 2, você continuará visitando pontos importantes da cidade como a Pinacoteca, Galeria do Rock e muitos outros lugares.",
         "places": [
             {
@@ -68,6 +70,7 @@
     {
         "id": 3,
         "name": "Só Museus",
+        "tourType": "MUSEUMS",
         "description": "Aqui separamos uma quantidade de museus para você visitar, um pertinho do outro, para você aproveitar o melhor da cultura e história de São Paulo.",
         "places": [
             {
@@ -91,6 +94,7 @@
     {
         "id": 4,
         "name": "Tour de Bares no Centro",
+        "tourType": "BARS",
         "description": "Serão 4 bares, cada um com uma característica diferente, para você conhecer um pouco mais da vida noturna do centro de São Paulo.",
         "places": [
             {
@@ -108,6 +112,146 @@
             {
                 "id": 12,
                 "placeType": "BARS"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Baladas em Pinheiros",
+        "tourType": "NIGHTLIFE",
+        "description": "Serão 4 baladas, 3 localizadas na mesma rua e uma a poucos minutos caminhando, comumente movimentadas de Sexta e Sábado.",
+        "places": [
+            {
+                "id": 4,
+                "placeType": "NIGHTLIFE"
+            },
+            {
+                "id": 2,
+                "placeType": "NIGHTLIFE"
+            },
+            {
+                "id": 3,
+                "placeType": "NIGHTLIFE"
+            },
+            {
+                "id": 12,
+                "placeType": "NIGHTLIFE"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Vida Noturna na Vila Madalena",
+        "tourType": "NIGHTLIFE",
+        "description": "Serão 3 baladas, com localização próxima, para você aproveitar a noite na Vila Madalena, um dos bairros mais boêmios de São Paulo.",
+        "places": [
+            {
+                "id": 10,
+                "placeType": "BARS"
+            },
+            {
+                "id": 13,
+                "placeType": "NIGHTLIFE"
+            },
+            {
+                "id": 7,
+                "placeType": "NIGHTLIFE"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Arte de Rua",
+        "tourType": "ARTISTIC",
+        "description": "Aqui separamos alguns dos pontos mais famosos de arte de rua, para você conhecer um pouco mais da arte urbana da capital.",
+        "places": [
+            {
+                "id": 59,
+                "placeType": "BARS"
+            },
+            {
+                "id": 60,
+                "placeType": "NIGHTLIFE"
+            },
+            {
+                "id": 61,
+                "placeType": "NIGHTLIFE"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Gastronomia na Liberdade",
+        "tourType": "GASTRONOMY",
+        "description": "Aqui separamos alguns dos pontos mais famosos de gastronomia na Liberdade, para você conhecer um pouco mais da culinária japonesa e oriental na capital.",
+        "places": [
+            {
+                "id": 62,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 4,
+                "placeType": "COFFEES"
+            },
+            {
+                "id": 18,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 15,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 16,
+                "placeType": "RESTAURANTS"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Passeio pela Av. Paulista",
+        "tourType": "ALL",
+        "description": "Alguns dos pontos mais conhecidos da Av. Paulista, para você conhecer um pouco mais da cultura, arte e gastronomia de um dos lugares mais famosos de São Paulo.",
+        "places": [
+            {
+                "id": 51,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 63,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 64,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 65,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 66,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 48,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 4,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 4,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 5,
+                "placeType": "COFFEES"
+            },
+            {
+                "id": 16,
+                "placeType": "NIGHTLIFE"
             }
         ]
     }

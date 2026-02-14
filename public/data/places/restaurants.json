@@ -2052,5 +2052,46 @@
         "linkWebsite": "http://ronghe.com.br/",
         "linkInstagram": "https://www.instagram.com/rongheoficial/",
         "tags": ["CHINESE"]
+    },
+    {
+        "id": 48,
+        "name": "La Peruana",
+        "type": "RESTAURANTS",
+        "phones": [
+            {
+                "number": "1159900623",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "LAPERUANA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Peruana"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alameda Campinas",
+                "number": "1357",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01404-003",
+                "isMainUnity": true,
+                "latitude": -23.573782,
+                "longitude": -46.651193
+            }
+        ],
+        "linkMenu": "https://menu.appget.in/5d6NOrkV/2",
+        "linkWebsite": "",
+        "linkInstagram": "http://instagram.com/laperuanabr",
+        "tags": ["PERUVIAN"]
     }
 ]

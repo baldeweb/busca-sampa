@@ -131,5 +131,84 @@
         "tags": [
             "HISTORIC_PLACE"
         ]
+    },
+    {
+        "id": 4,
+        "name": "Poop Coffee",
+        "type": "COFFEES",
+        "phones": [],
+        "openingHours": {
+            "patternId": "POOPCOFFEE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria temática"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "dos Estudantes",
+                "number": "86",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "01510-001",
+                "isMainUnity": true,
+                "latitude": -23.555529,
+                "longitude": -46.634402
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/poop.coffee?igsh=MWo1c3AzcTFuZGc2MA==",
+        "tags": [
+            "THEMED"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Padaria Bella Paulista",
+        "type": "COFFEES",
+        "phones": [
+            {
+                "number": "1132143347",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "PADARIA_BELLA_PAULISTA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Padaria tradicional localizada na Av. Paulista"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Haddock Lobo",
+                "number": "354",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01414-000",
+                "isMainUnity": true,
+                "latitude": -23.556306,
+                "longitude": -46.659978
+            }
+        ],
+        "linkMenu": "https://padariabellapaulista.com.br/wp-content/uploads/2022/02/cardapio-bella2002-delivery.pdf",
+        "linkWebsite": "https://padariabellapaulista.com.br/",
+        "linkInstagram": "https://www.instagram.com/padariabellapaulista/",
+        "tags": []
     }
 ]

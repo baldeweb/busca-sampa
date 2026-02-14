@@ -1947,5 +1947,308 @@
         "linkWebsite": "https://linktr.ee/sampa.sky?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnkI0rkwXU2YE57XgVbWy4Yu1Asamcox00JVeRK4wczzGxGKcO0XAH1ZeCUfY_aem_Po01hC09kS-qw0phX4DCmA",
         "linkInstagram": "https://www.instagram.com/sampasky/",
         "tags": ["HISTORIC_PLACE"]
+    },
+    {
+        "id": 59,
+        "name": "Escadaria das Bailarinas",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "EVERYDAY_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Escadaria com arte urbana"
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alves Guimarães",
+                "number": "754",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05407-001",
+                "isMainUnity": true,
+                "latitude": -23.556164,
+                "longitude": -46.677956
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 60,
+        "name": "Beco do Batman",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "EVERYDAY_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Beco famoso por suas artes de rua e grafites."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Medeiros de Albuquerque",
+                "number": "82",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05436-060",
+                "isMainUnity": true,
+                "latitude": -23.557182,
+                "longitude": -46.686582
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 61,
+        "name": "Beco do Aprendiz",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "EVERYDAY_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Beco famoso por suas artes de rua e grafites, localizado próximo ao Beco do Batman."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Belmiro Braga",
+                "number": "113",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05432-020",
+                "isMainUnity": true,
+                "latitude": -23.560010,
+                "longitude": -46.687953
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 62,
+        "name": "Feira da Liberdade",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "FEIRALIBERDADE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Feira famosa por sua culinária e cultura japonesa, localizada na Liberdade."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Praça da Liberdade",
+                "number": "289",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "01503-010",
+                "isMainUnity": true,
+                "latitude": -23.555474,
+                "longitude": -46.635493
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 63,
+        "name": "Casa das Rosas",
+        "type": "TOURIST_SPOT",
+        "phones": [
+            {
+                "number": "1132856986",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "CASADASROSAS_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Mansão histórica ideal para eventos elegantes com um café que serve frutos do mar e porções em um ambiente romântico."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Paulista",
+                "number": "37",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01311-000",
+                "isMainUnity": true,
+                "latitude": -23.570814,
+                "longitude": -46.645030
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.casadasrosas.org.br/",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 64,
+        "name": "Mirante - SESC Avenida Paulista",
+        "type": "TOURIST_SPOT",
+        "phones": [],
+        "openingHours": {
+            "patternId": "MIRANTESESC_AVENIDAPAULISTA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
+        "notes": [
+            "Mirante localizado no SESC Avenida Paulista, oferecendo uma vista panorâmica da cidade e um espaço para eventos culturais."
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Paulista",
+                "number": "119",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01311-000",
+                "isMainUnity": true,
+                "latitude": -23.570814,
+                "longitude": -46.645030
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.paulistacultural.com.br/content/agende-sua-visita-ao-mirante-do-sesc-avenida-paulista-saiba-mais-aqui-",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 65,
+        "name": "Japan House São Paulo",
+        "type": "TOURIST_SPOT",
+        "phones": [
+            {
+                "number": "1131495187",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "JAPANHOUSE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Japan House São Paulo oferece uma experiência cultural japonesa, incluindo exposições de arte, workshops e eventos especiais."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Paulista",
+                "number": "52",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01310-900",
+                "isMainUnity": true,
+                "latitude": -23.570730,
+                "longitude": -46.644844
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.japanhousesp.com.br/",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 66,
+        "name": "Japan House São Paulo",
+        "type": "TOURIST_SPOT",
+        "phones": [
+            {
+                "number": "1131495187",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "JAPANHOUSE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Japan House São Paulo oferece uma experiência cultural japonesa, incluindo exposições de arte, workshops e eventos especiais."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Paulista",
+                "number": "52",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01310-900",
+                "isMainUnity": true,
+                "latitude": -23.570730,
+                "longitude": -46.644844
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.japanhousesp.com.br/",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
     }
 ]
