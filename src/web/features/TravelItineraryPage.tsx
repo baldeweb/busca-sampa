@@ -80,6 +80,10 @@ export function TravelItineraryPage() {
     const [showRouteDetails, setShowRouteDetails] = useState(false);
     const [isClosingRouteDetails, setIsClosingRouteDetails] = useState(false);
     const closeRouteDetailsTimeoutRef = useRef<number | null>(null);
+    const [showCityComingSoonModal, setShowCityComingSoonModal] = useState(false);
+    const cityComingSoonMessage = t('travelItinerary.cityComingSoon', {
+        defaultValue: 'Opa, essa funcionalidade está quase pronta, em breve vai estar disponível pra você usar, fica ligado :)'
+    });
 
     const routeOptions = React.useMemo(
         () => [
@@ -450,9 +454,9 @@ export function TravelItineraryPage() {
                                         <div
                                             role="button"
                                             tabIndex={0}
-                                            onClick={() => setTourMode('city')}
+                                            onClick={() => setShowCityComingSoonModal(true)}
                                             onKeyDown={(event) => {
-                                                if (event.key === 'Enter' || event.key === ' ') setTourMode('city');
+                                                if (event.key === 'Enter' || event.key === ' ') setShowCityComingSoonModal(true);
                                             }}
                                             className={`w-full cursor-pointer select-none px-0 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
                                                 tourMode === 'city'
@@ -488,7 +492,7 @@ export function TravelItineraryPage() {
                                     />
 
                                     <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-0">
-                                        {t('travelItinerary.listTitle')}
+                                        Roteiros criados pra você :)
                                     </h3>
                                     {tourItemsLoading && (
                                         <p className="text-sm text-gray-500 px-0">
@@ -510,6 +514,7 @@ export function TravelItineraryPage() {
                                                     iconSrc={tourMode === 'city' ? icTourCity : icWalkingTour}
                                                     onDetails={() => openRouteDetails(item.id)}
                                                     detailsLabel={t('travelItinerary.viewRoute')}
+                                                    tourType={item.tourType}
                                                 />
                                             ))}
                                         </div>
@@ -595,6 +600,28 @@ export function TravelItineraryPage() {
                                 Abrir no Google Maps
                             </button>
                         </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {showCityComingSoonModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+                    <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
+                        <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
+                            <SectionHeading title={t('travelItinerary.modes.city')} underline={false} sizeClass="text-lg" className="flex-1" />
+                            <button
+                                onClick={() => setShowCityComingSoonModal(false)}
+                                className="btn-close-round text-xl font-bold"
+                                aria-label={t('common.close')}
+                            >
+                                ×
+                            </button>
+                        </div>
+                        <div className="p-5 text-center">
+                            <p className="mb-2 text-sm text-gray-200">
+                                {cityComingSoonMessage}
+                            </p>
                         </div>
                     </div>
                 </div>

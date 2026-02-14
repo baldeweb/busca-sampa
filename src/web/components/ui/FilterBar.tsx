@@ -92,7 +92,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   };
 
   useEffect(() => {
-    function handleDocumentClick(e: MouseEvent) {
+    function handleDocumentClick(e: Event) {
       const target = e.target as Node | null;
       if (!rootRef.current) return;
       if (target && !rootRef.current.contains(target)) {
@@ -100,13 +100,21 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       }
     }
 
-    const anyOpen = showSortingMenu || showHoursMenu || showScheduleMenu || showCityMenu || showPriceMenu;
-    if (anyOpen) {
-      document.addEventListener('mousedown', handleDocumentClick);
-      return () => document.removeEventListener('mousedown', handleDocumentClick);
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape' || e.key === 'Esc') closeAllMenus();
     }
-    return () => {};
-  }, [showSortingMenu, showHoursMenu, showScheduleMenu, showCityMenu, showPriceMenu]);
+
+    // Always listen for outside clicks/touches and Esc to reliably close menus
+    document.addEventListener('mousedown', handleDocumentClick);
+    document.addEventListener('touchstart', handleDocumentClick);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handleDocumentClick);
+      document.removeEventListener('touchstart', handleDocumentClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <div ref={rootRef} className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">

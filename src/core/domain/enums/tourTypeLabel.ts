@@ -16,6 +16,8 @@ const TOUR_MAP: Record<string, string> = {
   NIGHTLIFE: 'Balada',
   BARS: 'Bares',
   GASTRONOMIC: 'Gastronômico',
+  FOOD: 'Gastronômico',
+  GASTRONOMY: 'Gastronômico',
   HISTORY: 'História',
   MUSEUMS: 'Museus',
   OTHERS: 'Outros',

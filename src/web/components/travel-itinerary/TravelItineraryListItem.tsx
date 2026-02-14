@@ -1,5 +1,6 @@
 import React from "react";
 import { AppButton } from "@/web/components/ui/AppButton";
+import { getTourTypeLabel } from '@/core/domain/enums/tourTypeLabel';
 
 interface TravelItineraryListItemProps {
   name: string;
@@ -7,6 +8,7 @@ interface TravelItineraryListItemProps {
   iconSrc: string;
   onDetails: () => void;
   detailsLabel: string;
+  tourType?: string | null;
 }
 
 export const TravelItineraryListItem: React.FC<TravelItineraryListItemProps> = ({
@@ -15,7 +17,9 @@ export const TravelItineraryListItem: React.FC<TravelItineraryListItemProps> = (
   iconSrc,
   onDetails,
   detailsLabel,
+  tourType,
 }) => {
+  const typeLabel = tourType ? getTourTypeLabel(tourType) : null;
   return (
     <div className="grid grid-cols-[auto,1fr,auto] grid-rows-[auto,auto] items-start gap-x-4 gap-y-0 bg-white border border-[#403E44] rounded-[8px] px-4 py-3 text-[#403E44]">
       <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
@@ -28,6 +32,11 @@ export const TravelItineraryListItem: React.FC<TravelItineraryListItemProps> = (
         <div className="flex items-center text-xs sm:text-sm text-[#403E44] min-w-0">
           <span className="truncate">{placesCountText}</span>
         </div>
+        {typeLabel && (
+          <div className="text-xs text-[#6B6B6B]">
+            {typeLabel}
+          </div>
+        )}
       </div>
       <AppButton
         variant="outline"

@@ -28,8 +28,16 @@ export function EnvironmentSelectModal({
     const shownEnvironments = environments.filter(e => !excludedValues?.includes(e.value));
 
     return (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
-            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl">
+        <div
+            className="fixed inset-0 z-40 flex items-center justify-center bg-black/60"
+            role="dialog"
+            aria-modal="true"
+            onClick={onClose}
+        >
+            <div
+                className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl"
+                onClick={(e) => e.stopPropagation()}
+            >
                 {/* Cabeçalho */}
                 <div className="px-4 py-3">
                     <div className="mb-1 flex items-center justify-between">
