@@ -161,6 +161,11 @@ const resources = {
         search: 'Buscar',
         about: 'Sobre'
       },
+      searchPage: {
+        title: 'Busque um lugar',
+        subtitle: 'Sabe o nome do lugar de cabeça? Procure por nome que é mais rápido',
+        placeholder: 'Ex.: Padaria Pão Legal'
+      },
       distanceSelect: {
         title: 'Selecione a distância',
         searchButton: 'Buscar'
@@ -386,6 +391,11 @@ const resources = {
         checkAvailabilityLabel: 'Verificar disponibilidad'
       },
       footer: { home: 'Inicio', search: 'Buscar', about: 'Sobre' },
+      searchPage: {
+        title: 'Busca un lugar',
+        subtitle: '¿Sabes el nombre de memoria? Busca por nombre, es más rápido',
+        placeholder: 'Ej.: Panadería Pan Legal'
+      },
       distanceSelect: { title: 'Seleccione la distancia', searchButton: 'Buscar' },
       nearbyMap: {
         title: 'Mapa cercano',
@@ -560,6 +570,11 @@ const resources = {
       },
       openingHours: { title: 'Horaires', closed: 'Fermé', range: 'de {{open}} à {{close}}', notProvided: 'Horaires non fournis.', followButton: 'Suivre', checkAvailabilityMessage: 'Les horaires varient selon la disponibilité. Consultez le site et la page Instagram du lieu pour en savoir plus', alwaysOpenMessage: 'Cet endroit est ouvert 24h/24', checkAvailabilityLabel: 'Vérifier la disponibilité' },
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
+      searchPage: {
+        title: 'Cherchez un lieu',
+        subtitle: 'Vous connaissez le nom par cœur ? Cherchez par nom, c\'est plus rapide',
+        placeholder: 'Ex. : Boulangerie Pain Legal'
+      },
       distanceSelect: { title: 'Sélectionnez la distance', searchButton: 'Chercher' },
       nearbyMap: { title: 'Carte proximité', noneInRadius: 'Aucun point dans le rayon.', pointsDisplayed: '{{count}} point(s) affiché(s).', you: 'Vous' },
       neighborhoodList: {
@@ -618,6 +633,11 @@ const resources = {
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', visitModalTitle: 'О посещенных местах', visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.', visitedModalParagraph: 'Место посещено. Информация на этой странице основана на том, что я собрал во время посещения: на том, что я заказывал или пробовал, а также на данных, переданных ответственными за заведение.', neverEmphasis: '', priceLabel: 'Цена:', environmentTypeLabel: 'Тип атмосферы:', hoursTitle: 'Время работы', viewHours: 'смотреть часы', locationTitle: 'Локация', openNow: 'Открыто\u200B сейчас', closedNow: 'Закрыто сейчас', locationDescription: 'Здесь указаны все филиалы этого места и их адреса. Вы также можете построить маршрут как вам удобнее: через Google Maps или заказав Uber :)', streetPrefix: 'Улица:', googleMapsButton: 'Открыть в Google Maps', instagramTitle: 'Instagram', instagramSubtitle: 'Подписаться на официальный профиль:', follow: 'Подписаться', phoneTitle: 'Телефон', phonesSubtitle: 'Это официальные контакты этого места', menuTitle: 'Меню', menuSubtitle: 'Посмотреть меню', menuButton: 'Открыть меню', websiteTitle: 'Сайт заведения', websiteSubtitle: 'Перейдите на сайт этого места и ознакомьтесь с подробной информацией', websiteButton: 'Перейти на сайт', notesTitle: 'Заметки', reportProblem: 'Сообщить о проблеме', visitModalEnding: '' },
       openingHours: { title: 'Время работы', closed: 'Закрыто', range: 'с {{open}} до {{close}}', notProvided: 'Время не указано.', followButton: 'Подписаться', checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
+      searchPage: {
+        title: 'Найдите место',
+        subtitle: 'Помните название? Ищите по имени — так быстрее',
+        placeholder: 'Напр.: Пекарня Pao Legal'
+      },
       distanceSelect: { title: 'Выберите расстояние', searchButton: 'Искать' },
       nearbyMap: { title: 'Карта рядом', noneInRadius: 'Нет точек в текущем радиусе.', pointsDisplayed: '{{count}} точк(и).', you: 'Вы' },
       neighborhoodList: {
@@ -728,6 +748,11 @@ const resources = {
         checkAvailabilityLabel: '查看营业情况'
       },
       footer: { home: '首页', search: '搜索', about: '关于' },
+      searchPage: {
+        title: '搜索地点',
+        subtitle: '记得名字吗？按名称搜索更快',
+        placeholder: '例：Pao Legal 面包店'
+      },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
       nearbyMap: { title: '附近地图', noneInRadius: '当前半径内无点。', pointsDisplayed: '{{count}} 个点。', you: '你' },
       neighborhoodList: {
@@ -811,6 +836,11 @@ const resources = {
         loadError: 'Error loading data.',
         noPlaces: 'No places found.',
         version: 'Version',
+      },
+      searchPage: {
+        title: 'Search for a place',
+        subtitle: 'Know the name already? Search by name, it is faster',
+        placeholder: 'E.g.: Pao Legal Bakery'
       },
       whereIsToday: { title: 'So, where are we going today?', subtitle: 'List of places I’ve been, by category. Take a look ;)', opensToday: 'Open today' },
       list: { nameHeader: 'Name', neighborhoodHeader: 'Neighborhood', typeHeader: 'Type', orderNameAsc: 'NAME in ascending order A-Z', orderNeighborhoodAsc: 'NEIGHBORHOOD in ascending order A-Z', seeDetails: 'see details' },
@@ -989,6 +1019,11 @@ const resources = {
       whereIsToday: { title: 'Also, wohin geht es heute?', subtitle: 'Liste der Orte, an denen ich war, nach Kategorie. Schau mal ;)', opensToday: 'Öffnen heute' },
       list: { nameHeader: 'NAME', neighborhoodHeader: 'STADTTEIL', typeHeader: 'Typ', orderNameAsc: 'NAME in aufsteigender Reihenfolge A-Z', orderNeighborhoodAsc: 'STADTTEIL in aufsteigender Reihenfolge A-Z' },
       footer: { home: 'Start', search: 'Suchen', about: 'Über' },
+      searchPage: {
+        title: 'Suche nach einem Ort',
+        subtitle: 'Kennst du den Namen? Suche nach dem Namen, das ist schneller',
+        placeholder: 'z. B.: Bäckerei Pao Legal'
+      },
       placeDetail: {
         hoursTitle: 'Öffnungszeiten',
         opensMonday: 'öffnet montags',
@@ -1146,6 +1181,11 @@ const resources = {
       whereIsToday: { title: 'さて、今日はどこへ？', subtitle: 'これまで行った場所をカテゴリ別にリスト化。チェックしてね ;)', opensToday: '今日開いている' },
       list: { nameHeader: '名前', neighborhoodHeader: '地区', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNeighborhoodAsc: '地区 昇順 A-Z' },
       footer: { home: 'ホーム', search: '検索', about: '概要' },
+      searchPage: {
+        title: '場所を探す',
+        subtitle: '名前を覚えているなら、名前で探すほうが早いです',
+        placeholder: '例：パダリア パン・レガル'
+      },
       placeDetail: {
         hoursTitle: '営業時間',
         opensMonday: '月曜日に営業',
@@ -1294,6 +1334,11 @@ const resources = {
       },
       list: { nameHeader: 'الاسم', neighborhoodHeader: 'الحي', typeHeader: 'النوع', orderNameAsc: 'الاسم بترتيب تصاعدي A-Z', orderNeighborhoodAsc: 'الحي بترتيب تصاعدي A-Z' },
       footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
+      searchPage: {
+        title: 'ابحث عن مكان',
+        subtitle: 'هل تعرف الاسم؟ ابحث بالاسم فهو أسرع',
+        placeholder: 'مثال: مخبز باو ليغال'
+      },
       placeDetail: {
         hoursTitle: 'ساعات العمل',
         opensMonday: 'يفتح أيام الإثنين',
@@ -1451,6 +1496,11 @@ const resources = {
       },
       list: { nameHeader: 'NOME', neighborhoodHeader: 'QUARTIERE', typeHeader: 'Tipo', orderNameAsc: 'NOME in ordine crescente A-Z', orderNeighborhoodAsc: 'QUARTIERE in ordine crescente A-Z' },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
+      searchPage: {
+        title: 'Cerca un luogo',
+        subtitle: 'Sai già il nome? Cerca per nome, è più veloce',
+        placeholder: 'Es.: Panetteria Pao Legal'
+      },
       placeDetail: {
         hoursTitle: 'Orari di apertura',
         opensMonday: 'apre il lunedì',
@@ -1602,6 +1652,11 @@ const resources = {
       },
       list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', typeHeader: 'Type', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'BUURT artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Zoeken', about: 'Over' },
+      searchPage: {
+        title: 'Zoek een plek',
+        subtitle: 'Weet je de naam nog? Zoek op naam, dat is sneller',
+        placeholder: 'Bijv.: Bakkerij Pao Legal'
+      },
       placeDetail: {
         hoursTitle: 'Openingstijden',
         opensMonday: 'open op maandag',
@@ -1744,6 +1799,11 @@ const resources = {
       },
       list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
+      searchPage: {
+        title: 'Bir yer ara',
+        subtitle: 'Ismi aklında mı? İsme göre aramak daha hızlı',
+        placeholder: 'Örn.: Pao Legal Fırını'
+      },
       placeDetail: {
         hoursTitle: 'Çalışma saatleri',
         opensMonday: 'pazartesi günü açılır',
@@ -1885,6 +1945,11 @@ const resources = {
       },
       list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z' },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
+      searchPage: {
+        title: 'Wyszukaj miejsce',
+        subtitle: 'Znasz nazwę? Szukaj po nazwie, jest szybciej',
+        placeholder: 'Np.: Piekarnia Pao Legal'
+      },
       placeDetail: {
         hoursTitle: 'Godziny otwarcia',
         opensMonday: 'otwarte w poniedziałki',

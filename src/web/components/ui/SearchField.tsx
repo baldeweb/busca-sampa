@@ -10,7 +10,7 @@ interface SearchFieldProps {
 export function SearchField({ value, onChange, onSearch, placeholder }: SearchFieldProps) {
   const radiusClass = 'rounded-md';
   return (
-    <div className="flex items-center w-full gap-2">
+    <div className="flex items-center w-full gap-2 mt-12">
       <input
         type="text"
         value={value}
@@ -22,7 +22,7 @@ export function SearchField({ value, onChange, onSearch, placeholder }: SearchFi
       <button
         type="button"
         onClick={onSearch}
-        className={`${radiusClass} border bg-[#F5F5F5] px-3 py-2`}
+        className="bg-[#F5F5F5] px-3.5 py-3.5"
         style={{ borderColor: '#48464C' }}
         aria-label="Buscar"
       >

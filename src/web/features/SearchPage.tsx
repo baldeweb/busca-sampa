@@ -97,9 +97,9 @@ export function SearchPage() {
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 pt-0 pb-8 text-black">
           <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 py-8">
-            <SectionHeading title="Busque um lugar" underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
+            <SectionHeading title={t('searchPage.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
             <p className="text-sm text-[#48464C] max-w-2xl whitespace-pre-line leading-relaxed">
-              Digite o nome do lugar que você procura:
+              {t('searchPage.subtitle')}
             </p>
           </div>
           <div className="mt-6">
@@ -107,7 +107,7 @@ export function SearchPage() {
               value={query}
               onChange={setQuery}
               onSearch={handleSearch}
-              placeholder="Digite o nome do lugar"
+              placeholder={t('searchPage.placeholder')}
             />
           </div>
         </div>
