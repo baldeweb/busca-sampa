@@ -11,6 +11,7 @@ import { SupportPage } from "../features/SupportPage";
 // RestaurantsPage was removed from explicit routes to let the generic PlaceListPage handle '/restaurants'
 import { PlaceListPage } from "../features/PlaceListPage";
 import { TravelItineraryPage } from "../features/TravelItineraryPage";
+import { SearchPage } from "../features/SearchPage";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
             //  Travel itineraries (specific route must be before the generic "/:type")
             { path: "/roteiros", element: <TravelItineraryPage /> },
             { path: "/travel-itinerary", element: <TravelItineraryPage /> },
+            { path: "/search", element: <SearchPage /> },
             //  Listagens (friendly list route: /:type, ex: /restaurants, /bars)
             { path: "/:type", element: <PlaceListPage /> },
 

@@ -1,7 +1,5 @@
-import React from 'react';
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import icHome from '../../../assets/imgs/icons/ic_home.png';
 import icItinerary from '../../../assets/imgs/icons/ic_itinerary.png';
 import icSearch from '../../../assets/imgs/icons/ic_search.png';
@@ -12,9 +10,8 @@ export function NavigationBar() {
     const baseClasses =
         "flex flex-col items-center justify-center flex-1 text-[0.9rem] tracking-wide";
     const { t } = useTranslation();
-    const [showSearchModal, setShowSearchModal] = React.useState(false);
     const showRoteiros = true;
-    const showBuscar = false;
+    const showBuscar = true;
 
     return (
         <footer
@@ -71,20 +68,6 @@ export function NavigationBar() {
                 </NavLink>
 
             </nav>
-            {/* Modal de aviso: funcionalidade em desenvolvimento */}
-            {showSearchModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-                    <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
-                        <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
-                            <SectionHeading title={t('footer.search')} underline={false} sizeClass="text-lg" className="flex-1" />
-                            <button onClick={() => setShowSearchModal(false)} className="btn-close-round text-xl font-bold">×</button>
-                        </div>
-                        <div className="p-5 text-center">
-                            <p className="mb-2 text-sm text-gray-200">Esta funcionalidade esta em desenvolvimento :)</p>
-                        </div>
-                    </div>
-                </div>
-            )}
         </footer>
     );
 }
