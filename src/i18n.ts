@@ -191,8 +191,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Criador do Role Paulista',
+        photoAlt: 'Foto de Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'Sobre mim',
+        motto: 'Dê um peixe a um homem, e alimente-o por um dia. Ensine um homem a pescar, e alimente-o por toda a vida',
+        accordion: {
+          aboutLabel: 'Sobre mim',
+          whatIsLabel: 'O que é o Rolê Paulista?',
+          earnLabel: 'Quanto eu ganho com isso?'
+        },
+        aboutList: [
+          'Mobile Engineering há 10 anos (se minha memória ainda estiver boa)',
+          'Bateria, Guitarra e Vocal, fazendo tudo perfeitamente errado e desconexo com a realidade',
+          'Cozinhar ao nível de saber fazer um belíssimo panetone salgado',
+          'Viajante solo e mochileiro quando sobra uma graninha pra conhecer o mundo',
+          'Falo Português (BR), Inglês, Espanhol e Russo (esse aqui ainda sigo estudando... Привет мой друг)',
+          'Osasquense que ama São Paulo, e que também xinga a cidade na primeira oportunidade, mas sempre disposto a recomendar o melhor :)'
+        ],
+        whatIs: [
+          'A ideia nasceu de uma planilha, na qual eu registrava os melhores rolês da cidade.',
+          'Inicialmente eu preenchia apenas para mim, mas com o tempo, fui compartilhando com amigos e conhecidos, até que se tornou algo maior.',
+          'Então, assim nasceu o Rolê Paulista, um site com experiência de app, para facilitar o acesso às melhores experiências da cidade nos quais eu vou visitar',
+          'Independente se você é de São Paulo, ou de outro estado, ou de outro país, a experiência é para todos.'
+        ],
+        earn: [
+          'A resposta é bem simples: nada. O Rolê Paulista é um projeto pessoal, feito por paixão e amor pela cidade de São Paulo. Talvez futuramente eu ganhe com publicação ou adsense? Talvez, mas a ideia é que o site SEMPRE seja gratuito, tanto para quem acessa, quanto as postagens que eu faço dos locais.',
+          'Eu não vou aceitar receber dinheiro por isso, principalmente para falar bem de um lugar, quero manter a integridade e a autenticidade do conteúdo, indo aos lugares e passando a experiência real para vocês na qual eu tive.',
+          'Talvez leve um tempo até que eu suba as postagens no Instagram ou aqui no site, porque atualmente eu sou a equipe de infraestrutura, desenvolvimento, marketing, design e conteúdo, tudo ao mesmo tempo haha, por isso peço desculpas se demorar para atualizar alguma coisa :)'
+        ],
         socialHeading: 'Redes sociais',
+        socialDescription: 'Me encontre nas redes sociais abaixo :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-mail'
+        },
+        roleName: 'Role Paulista',
         bio: 'Desenvolvedor Mobile há mais de 8 anos, especialista em Android e iOS. Apaixonado por tecnologia, viagens, restaurantes e por explorar cada canto novo de São Paulo.'
       },
       travelItinerary: {
