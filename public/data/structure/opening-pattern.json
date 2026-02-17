@@ -1025,5 +1025,34 @@
       { "days": ["SATURDAY"], "open": "15:00", "close": "23:00" },
       { "days": ["SUNDAY"], "open": "15:00", "close": "21:00" }
     ]
-  }
+  },
+  {
+    "id": "POOPCOFFEE_DAYTIME",
+    "description": "Horários do Poop Coffee",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "11:00", "close": "17:30" }
+    ]
+  },
+  {
+    "id": "OMALLEYS_DAYTIME",
+    "description": "Horários do O'Malley's",
+    "periods": [
+      { "days": ["MONDAY","TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "02:30" },
+      { "days": ["FRIDAY"], "open": "18:00", "close": "04:00" },
+      { "days": ["SATURDAY"], "open": "14:00", "close": "04:00" },
+      { "days": ["SUNDAY"], "open": "14:00", "close": "02:30" }
+    ]
+  },
+  {
+    "id": "LAPERUANA_DAYTIME",
+    "description": "Horários da La Peruana",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "19:00", "close": "23:00" },
+      { "days": ["FRIDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["FRIDAY"], "open": "19:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "16:30" },
+      { "days": ["SATURDAY"], "open": "19:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "27:00" }
+    ]
+  },
 ]

@@ -181,7 +181,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "PADARIA_BELLA_PAULISTA_DAYTIME",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
