@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { useNavigate } from 'react-router-dom';
 import Toolbar from "../components/layout/Toolbar";
+import { Accordion, AccordionItem } from '../components/ui/Accordion';
 
 export function AboutMePage() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export function AboutMePage() {
     <>
       <Toolbar onBack={() => navigate(-1)} />
 
-      <div className="mx-auto max-w-lg space-y-6 text-white">
+      <div className="mx-auto max-w-4xl space-y-6 text-white">
 
         {/* FOTO + NOME */}
         <div className="flex flex-col items-center pt-4">
@@ -34,21 +35,25 @@ export function AboutMePage() {
         {/* LINHA VERMELHA */}
         <div className="mx-auto h-[3px] w-24 bg-bs-red" />
 
-        {/* SOBRE */}
-        <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-          <SectionHeading title={t('aboutMe.aboutHeading')} underline={false} sizeClass="text-sm" className="mb-2" />
-
-          <div className="text-sm leading-relaxed text-gray-200">
-            <ul className="list-inside list-disc pl-5 space-y-2">
-              <li>Mobile Engineering há uns 8 anos (se minha memória ainda tiver boa)</li>
-              <li>Bateria, Guitarra e Vocal, fazendo tudo perfeitamente errado e desconexo com a realidade</li>
-              <li>Cozinhar ao nível de saber fazer um belíssimo panetone salgado (porque choras Palmirinha?)</li>
-              <li>Viajante solo e mochileiro</li>
-              <li>Falo Português (BR), Inglês, Espanhol e Russo (esse aqui ainda sigo estudando... Привет мой друг)</li>
-              <li>Osasquense que ama São Paulo, e que também xinga a cidade na primeira oportunidade, mas sempre disposto a recomendar o melhor da cidade :)</li>
-            </ul>
-          </div>
-        </section>
+        {/* Accordion FAQ-style */}
+        <Accordion>
+          <AccordionItem label="Sobre mim" defaultOpen>
+            <SectionHeading title={t('aboutMe.aboutHeading')} underline={false} sizeClass="text-sm" className="mb-2" />
+            <div className="text-sm leading-relaxed text-gray-200">
+              <ul className="list-inside list-disc pl-5 space-y-2">
+                <li>Mobile Engineering há uns 8 anos (se minha memória ainda tiver boa)</li>
+                <li>Bateria, Guitarra e Vocal, fazendo tudo perfeitamente errado e desconexo com a realidade</li>
+                <li>Cozinhar ao nível de saber fazer um belíssimo panetone salgado (porque choras Palmirinha?)</li>
+                <li>Viajante solo e mochileiro</li>
+                <li>Falo Português (BR), Inglês, Espanhol e Russo (esse aqui ainda sigo estudando... Привет мой друг)</li>
+                <li>Osasquense que ama São Paulo, e que também xinga a cidade na primeira oportunidade, mas sempre disposto a recomendar o melhor da cidade :)</li>
+              </ul>
+            </div>
+          </AccordionItem>
+          <AccordionItem label="O que é o Rolê Paulista?">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Suspendisse potenti. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.</p>
+          </AccordionItem>
+        </Accordion>
 
         {/* REDES SOCIAIS */}
         <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
