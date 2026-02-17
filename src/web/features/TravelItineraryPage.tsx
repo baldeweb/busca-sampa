@@ -432,7 +432,7 @@ export function TravelItineraryPage() {
 
                             <div>
                                 <div className="pt-4">
-                                    <div className="relative grid grid-cols-2 gap-0">
+                                    <div className="relative flex flex-row w-full border-b border-[#48464C] overflow-x-auto no-scrollbar">
                                         <div
                                             role="button"
                                             tabIndex={0}
@@ -440,7 +440,7 @@ export function TravelItineraryPage() {
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Enter' || event.key === ' ') setTourMode('walking');
                                             }}
-                                            className={`w-full cursor-pointer select-none px-0 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
+                                            className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
                                                 tourMode === 'walking'
                                                     ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#48464C] rounded-tl-[8px] rounded-tr-[8px]'
                                                     : 'text-[#6B6B6B] bg-transparent'
@@ -458,7 +458,7 @@ export function TravelItineraryPage() {
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Enter' || event.key === ' ') setShowCityComingSoonModal(true);
                                             }}
-                                            className={`w-full cursor-pointer select-none px-0 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors ${
+                                            className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
                                                 tourMode === 'city'
                                                     ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#48464C] rounded-tl-[8px] rounded-tr-[8px]'
                                                     : 'text-[#6B6B6B] bg-transparent'
@@ -469,7 +469,7 @@ export function TravelItineraryPage() {
                                                 {t('travelItinerary.modes.city')} (beta)
                                             </span>
                                         </div>
-                                        <div className="absolute left-0 right-0 bottom-0 w-full">
+                                        <div className="absolute left-0 right-0 bottom-0 w-full pointer-events-none">
                                             <div
                                                 className={`h-[2px] w-1/2 bg-[#B3261E] transition-transform duration-300 ease-out mt-4 ${
                                                     tourMode === 'city' ? 'translate-x-full' : 'translate-x-0'
