@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import { SectionHeading } from './SectionHeading';
 
 interface AccordionItemProps {
   label: string;
@@ -9,17 +11,29 @@ interface AccordionItemProps {
 export function AccordionItem({ label, children, defaultOpen = false }: AccordionItemProps) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="border-b border-gray-200">
-      <button
-        className="w-full flex justify-between items-center py-4 text-left font-semibold text-lg focus:outline-none"
+    <div
+      className="border-b last:rounded-b-[8px] first:rounded-t-[8px] border-[#8492A6] bg-[#F5F5F5]"
+      style={{ color: '#48464C' }}
+    >
+      <div
+        className="w-full flex justify-between items-center py-2 px-4 cursor-pointer select-none"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
+        tabIndex={0}
+        role="button"
+        style={{ outline: 'none' }}
+        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setOpen(v => !v); }}
       >
-        <span>{label}</span>
-        <span className={`transition-transform duration-200 ${open ? 'rotate-90' : ''}`}>▶</span>
-      </button>
+        <SectionHeading
+          title={label}
+          underline={false}
+          sizeClass="text-base sm:text-lg"
+          className="flex-1 !mb-0 !mt-0"
+        />
+        <span className={`ml-2 transition-transform duration-200 text-lg ${open ? 'rotate-90' : ''}`}>▶</span>
+      </div>
       {open && (
-        <div className="pb-4 text-base text-gray-700 animate-fade-in">
+        <div className="pb-4 px-4 text-base animate-fade-in" style={{ color: '#48464C' }}>
           {children}
         </div>
       )}
@@ -28,5 +42,5 @@ export function AccordionItem({ label, children, defaultOpen = false }: Accordio
 }
 
 export function Accordion({ children }: { children: React.ReactNode }) {
-  return <div className="rounded-lg border border-gray-200 bg-white divide-y divide-gray-200 shadow-sm">{children}</div>;
+  return <div className="rounded-[8px] border border-[#8492A6] bg-[#F5F5F5] divide-y divide-[#8492A6] shadow-sm">{children}</div>;
 }
