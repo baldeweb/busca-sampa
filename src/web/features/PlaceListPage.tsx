@@ -167,6 +167,20 @@ export const PlaceListPage: React.FC = () => {
 
     // Chips de ambiente (tags únicos)
     const environments = useMemo(() => {
+        const useFixedTypes = routeTypeLower === 'abrem-hoje' || mappedType === 'FREE';
+        if (useFixedTypes) {
+            const fixedTypes = [
+                'RESTAURANTS',
+                'BARS',
+                'NIGHTLIFE',
+                'COFFEES',
+                'NATURE',
+                'TOURIST_SPOT',
+                'FORFUN',
+                'STORES',
+            ];
+            return fixedTypes.map((value) => ({ label: getPlaceTypeLabel(value), value }));
+        }
         const envSet = new Set<string>();
         baseList.forEach(p => {
             p.tags?.forEach((t: string) => envSet.add(t));
@@ -183,7 +197,7 @@ export const PlaceListPage: React.FC = () => {
         const typeArr = Array.from(typeSet).map(e => ({ label: getPlaceTypeLabel(e), value: e }));
         typeArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
         return typeArr;
-    }, [baseList]);
+    }, [baseList, mappedType, routeTypeLower]);
 
 
 

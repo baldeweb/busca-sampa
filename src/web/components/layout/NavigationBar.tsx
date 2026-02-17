@@ -8,7 +8,7 @@ import icAbout from '../../../assets/imgs/icons/ic_about.png';
 export function NavigationBar() {
     // Texto e ícones: cor alinhada com seção "Perto de mim"
     const baseClasses =
-        "pt-2 pb-2 flex flex-col items-center justify-center flex-1 basis-0 text-[0.9rem] tracking-wide transition-colors";
+        "py-2 px-2 flex flex-col items-center justify-center flex-1 basis-0 text-[0.9rem] tracking-wide transition-colors";
     const getNavItemClass = (isActive: boolean, disableActiveBg?: boolean, roundedClass?: string) => {
         const activeBg = isActive && !disableActiveBg ? "bg-[#D6D6D6]" : "";
         return `${baseClasses} ${isActive ? "font-semibold" : ""} ${activeBg} hover:bg-[#D6D6D6] ${roundedClass || ""}`;
@@ -22,7 +22,8 @@ export function NavigationBar() {
             className="fixed bottom-0 left-0 right-0 bg-[#F5F5F5] z-50 rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[0px] rounded-br-[0px]"
             style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)", borderTop: '1px solid #48464C' }}
         >
-            <nav className="flex text-[#48464C]">
+            <div className="mx-auto max-w-5xl px-4">
+                <nav className="flex text-[#48464C] justify-center">
 
                 <NavLink
                     to="/"
@@ -61,7 +62,8 @@ export function NavigationBar() {
                     <span className="footer-label">{t('footer.about')}</span>
                 </NavLink>
 
-            </nav>
+                </nav>
+            </div>
         </footer>
     );
 }
