@@ -26,6 +26,7 @@ import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { PlaceListItem } from "@/web/components/place/PlaceListItem";
 import EnvironmentGrid from "../components/ui/EnvironmentGrid";
 import { FilterBar } from "@/web/components/ui/FilterBar";
+import { FaExclamationTriangle } from 'react-icons/fa';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -724,6 +725,17 @@ export const PlaceListPage: React.FC = () => {
                     }}
                 />
             )}
+
+            {/* Footer */}
+            <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
+                <FaExclamationTriangle className="mr-2 text-white" />
+                <a
+                    href={`mailto:wallace.baldenebre@gmail.com?subject=${encodeURIComponent(`Reportar um problema da página de lista de lugares ${title}`)}`}
+                    className="text-white font-bold"
+                >
+                    {t('placeDetail.reportProblem')}
+                </a>
+            </div>
         </div>
     );
 };

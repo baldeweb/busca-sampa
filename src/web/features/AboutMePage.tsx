@@ -74,7 +74,7 @@ export function AboutMePage() {
                   href="https://www.instagram.com/balde_wb/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-bs-red transition-colors pt-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
                 >
                   <FaInstagram aria-hidden="true" className="text-lg" />
                   <span>{t('aboutMe.social.wallace')}</span>
@@ -83,7 +83,7 @@ export function AboutMePage() {
                   href="https://www.instagram.com/rolepaulistaoficial/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-bs-red transition-colors pt-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
                 >
                   <FaInstagram aria-hidden="true" className="text-lg" />
                   <span>{t('aboutMe.social.role')}</span>
@@ -95,14 +95,14 @@ export function AboutMePage() {
                   href="https://www.linkedin.com/in/wallace-baldenebre/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-bs-red transition-colors pt-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
                 >
                   <FaLinkedin aria-hidden="true" className="text-lg" />
                   <span>{t('aboutMe.social.linkedin')}</span>
                 </a>
                 <a
                   href="mailto:wallace.baldenebre@gmail.com?subject=Contato%20sobre%20o%20Rol%C3%AA%20Paulista"
-                  className="flex items-center gap-2 hover:text-bs-red transition-colors pt-4 pb-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4 pb-4"
                 >
                   <FaEnvelope aria-hidden="true" className="text-lg" />
                   <span>{t('aboutMe.social.email')}</span>

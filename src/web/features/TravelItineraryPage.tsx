@@ -26,6 +26,7 @@ import { useOpeningPatterns } from '@/web/hooks/useOpeningPatterns';
 import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import type { PlaceRecommendation } from '@/core/domain/models/PlaceRecommendation';
 import type { GeoJsonObject } from 'geojson';
+import { FaExclamationTriangle } from 'react-icons/fa';
 
 type OsrmRouteResponse = {
     routes?: Array<{ geometry?: GeoJsonObject }>;
@@ -630,6 +631,17 @@ export function TravelItineraryPage() {
             <main className="flex-1">
                 {/* Main intentionally empty for itineraries */}
             </main>
+
+            {/* Footer */}
+            <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
+                <FaExclamationTriangle className="mr-2 text-white" />
+                <a
+                    href={`mailto:wallace.baldenebre@gmail.com?subject=${encodeURIComponent('Reportar um problema da página de roteiros')}`}
+                    className="text-white font-bold"
+                >
+                    {t('placeDetail.reportProblem')}
+                </a>
+            </div>
         </div>
     );
 }
