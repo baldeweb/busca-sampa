@@ -446,8 +446,43 @@ const resources = {
       about: { title: '¿Quién soy?', paragraph: 'Página sobre ti. Diseño vendrá después.' },
       aboutMe: {
         authorTag: 'Creador de Role Paulista',
+        photoAlt: 'Foto de Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'Sobre mí',
+        motto: 'Dale un pez a un hombre y lo alimentarás por un día. Enséñale a pescar y lo alimentarás toda la vida',
+        accordion: {
+          aboutLabel: 'Sobre mí',
+          whatIsLabel: '¿Qué es Rolê Paulista?',
+          earnLabel: '¿Cuánto gano con esto?'
+        },
+        aboutList: [
+          'Ingeniero Mobile desde hace 10 años (si mi memoria aún es buena)',
+          'Batería, guitarra y voz, haciendo todo perfectamente mal y desconectado de la realidad',
+          'Cocino hasta el nivel de hacer un panettone salado increíble',
+          'Viajero solo y mochilero cuando hay dinero para conocer el mundo',
+          'Hablo portugués (BR), inglés, español y ruso (este último aún lo sigo estudiando... Привет мой друг)',
+          'De Osasco, amo São Paulo, y también la critico a la primera oportunidad, pero siempre dispuesto a recomendar lo mejor :)'
+        ],
+        whatIs: [
+          'La idea nació de una hoja de cálculo donde registraba los mejores lugares de la ciudad.',
+          'Al principio solo la llenaba para mí, pero con el tiempo la compartí con amigos y conocidos, hasta que se hizo algo más grande.',
+          'Así nació Rolê Paulista, un sitio con experiencia de app para facilitar el acceso a las mejores experiencias de la ciudad que voy a visitar.',
+          'No importa si eres de São Paulo, de otro estado o de otro país, la experiencia es para todos.'
+        ],
+        earn: [
+          'La respuesta es simple: nada. Rolê Paulista es un proyecto personal, hecho por pasión y amor por la ciudad de São Paulo. ¿Quizás en el futuro gane con publicaciones o adsense? Tal vez, pero la idea es que el sitio SIEMPRE sea gratuito, tanto para quienes acceden como para las publicaciones que hago de los lugares.',
+          'No aceptaré dinero por esto, especialmente para hablar bien de un lugar; quiero mantener la integridad y autenticidad del contenido, yendo a los lugares y transmitiendo la experiencia real que tuve.',
+          'Quizás tarde un poco en subir publicaciones a Instagram o al sitio, porque actualmente soy el equipo de infraestructura, desarrollo, marketing, diseño y contenido, todo al mismo tiempo jaja, así que disculpa si tardo en actualizar algo :)'
+        ],
         socialHeading: 'Redes sociales',
+        socialDescription: 'Encuéntrame en las redes sociales abajo :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'Correo electrónico'
+        },
+        roleName: 'Role Paulista',
         bio: 'Desarrollador móvil hace más de 8 años. Apasionado por tecnología, viajes y explorar São Paulo.'
       },
       travelItinerary: {
@@ -618,7 +653,47 @@ const resources = {
       recommendationsOrigin: { title: 'D\'où viennent ces recommandations ?' },
       support: { title: 'Soutenir le site' },
       about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. Maquette à venir.' },
-      aboutMe: { authorTag: 'Créateur de Role Paulista', aboutHeading: 'À propos de moi', socialHeading: 'Réseaux sociaux', bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.' },
+      aboutMe: {
+        authorTag: 'Créateur de Role Paulista',
+        photoAlt: 'Photo de Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
+        aboutHeading: 'À propos de moi',
+        motto: 'Donne un poisson à un homme et tu le nourriras un jour. Apprends-lui à pêcher et tu le nourriras toute sa vie',
+        accordion: {
+          aboutLabel: 'À propos de moi',
+          whatIsLabel: 'Qu’est-ce que Rolê Paulista ?',
+          earnLabel: 'Combien je gagne avec ça ?'
+        },
+        aboutList: [
+          'Ingénieur mobile depuis 10 ans (si ma mémoire est encore bonne)',
+          'Batterie, guitare et chant, en faisant tout parfaitement mal et déconnecté de la réalité',
+          'Cuisiner au point de savoir faire un excellent panettone salé',
+          'Voyageur solo et routard quand il y a un peu d’argent pour découvrir le monde',
+          'Je parle portugais (BR), anglais, espagnol et russe (celui-ci je continue à l’étudier... Привет мой друг)',
+          'D’Osasco, j’aime São Paulo, et je râle aussi sur la ville à la première occasion, mais toujours prêt à recommander le meilleur :)'
+        ],
+        whatIs: [
+          'L’idée est née d’un tableur où j’enregistrais les meilleurs endroits de la ville.',
+          'Au début, je le remplissais juste pour moi, mais avec le temps, je l’ai partagé avec des amis et des connaissances, jusqu’à ce que cela devienne quelque chose de plus grand.',
+          'C’est ainsi qu’est né Rolê Paulista, un site avec une expérience d’application, pour faciliter l’accès aux meilleures expériences de la ville que je vais visiter.',
+          'Peu importe si vous êtes de São Paulo, d’un autre État ou d’un autre pays, l’expérience est pour tous.'
+        ],
+        earn: [
+          'La réponse est simple : rien. Rolê Paulista est un projet personnel, fait par passion et amour pour la ville de São Paulo. Peut-être qu’à l’avenir je gagnerai avec des publications ou de l’adsense ? Peut-être, mais l’idée est que le site soit TOUJOURS gratuit, tant pour ceux qui y accèdent que pour les publications que je fais sur les lieux.',
+          'Je n’accepterai pas d’argent pour cela, surtout pour parler en bien d’un endroit ; je veux garder l’intégrité et l’authenticité du contenu, en allant sur place et en transmettant l’expérience réelle que j’ai eue.',
+          'Il se peut que je mette du temps à publier sur Instagram ou sur le site, car actuellement je suis l’équipe infrastructure, développement, marketing, design et contenu, tout en même temps haha, donc désolé si je tarde à mettre à jour quelque chose :)'
+        ],
+        socialHeading: 'Réseaux sociaux',
+        socialDescription: 'Retrouvez-moi sur les réseaux sociaux ci-dessous :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-mail'
+        },
+        roleName: 'Role Paulista',
+        bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.'
+      },
       travelItinerary: {
         title: 'Itinéraires',
         placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.',
@@ -681,7 +756,47 @@ const resources = {
       recommendationsOrigin: { title: 'Откуда эти рекомендации?' },
       support: { title: 'Поддержите сайт' },
       about: { title: 'Кто я?', paragraph: 'Страница о вас. Макет позже.' },
-      aboutMe: { authorTag: 'Создатель Role Paulista', aboutHeading: 'Обо мне', socialHeading: 'Соцсети', bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.' },
+      aboutMe: {
+        authorTag: 'Создатель Role Paulista',
+        photoAlt: 'Фото Уоллеса Балденебре',
+        name: 'Wallace Baldenebre',
+        aboutHeading: 'Обо мне',
+        motto: 'Дай человеку рыбу — и он будет сыт один день. Научи его ловить рыбу — и он будет сыт всю жизнь',
+        accordion: {
+          aboutLabel: 'Обо мне',
+          whatIsLabel: 'Что такое Rolê Paulista?',
+          earnLabel: 'Сколько я на этом зарабатываю?'
+        },
+        aboutList: [
+          'Мобильный инженер уже 10 лет (если память меня не подводит)',
+          'Барабаны, гитара и вокал — делаю всё идеально неправильно и совершенно не в такт реальности',
+          'Готовлю на уровне «умею делать отличный солёный панеттоне»',
+          'Путешественник-одиночка и бэкпекер, когда удаётся отложить немного денег на мир',
+          'Говорю на португальском (BR), английском, испанском и русском (этот всё ещё изучаю... Привет мой друг)',
+          'Я из Осаску, люблю Сан-Паулу, иногда ругаю город при первой возможности, но всегда готов рекомендовать лучшее :)'
+        ],
+        whatIs: [
+          'Идея родилась из таблицы, где я записывал лучшие места города.',
+          'Сначала я заполнял её только для себя, но со временем начал делиться с друзьями и знакомыми, и это выросло во что-то большее.',
+          'Так появился Rolê Paulista — сайт с опытом как у приложения, чтобы упростить доступ к лучшим городским впечатлениям, которые я посещаю.',
+          'Неважно, вы из Сан-Паулу, из другого штата или из другой страны — этот опыт для всех.'
+        ],
+        earn: [
+          'Ответ очень простой: ничего. Rolê Paulista — это личный проект, сделанный из любви к городу Сан-Паулу. Возможно, в будущем я что-то заработаю на публикациях или AdSense? Возможно, но идея в том, чтобы сайт ВСЕГДА оставался бесплатным — и для читателей, и для публикаций о местах.',
+          'Я не буду принимать деньги за это, особенно чтобы хвалить место за оплату; хочу сохранять честность и подлинность контента, посещая места и делясь реальным опытом.',
+          'Возможно, публикации в Instagram или на сайте выходят не так быстро, потому что сейчас я одновременно команда инфраструктуры, разработки, маркетинга, дизайна и контента, так что прошу прощения, если обновления занимают время :)'
+        ],
+        socialHeading: 'Соцсети',
+        socialDescription: 'Найдите меня в соцсетях ниже :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-mail'
+        },
+        roleName: 'Role Paulista',
+        bio: 'Мобильный разработчик 8+ лет. Люблю технологии, путешествия и исследовать Сан-Паулу.'
+      },
       howToRecommend: { title: 'Как порекомендовать место?' },
       travelItinerary: {
         title: 'Маршруты',
@@ -796,7 +911,47 @@ const resources = {
       recommendationsOrigin: { title: '这些推荐来自哪里？' },
       support: { title: '支持本网站' },
       about: { title: '我是谁？', paragraph: '关于页面。稍后提供设计。' },
-      aboutMe: { authorTag: 'Role Paulista 创作者', aboutHeading: '关于我', socialHeading: '社交网络', bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。' },
+      aboutMe: {
+        authorTag: 'Role Paulista 创作者',
+        photoAlt: 'Wallace Baldenebre 的照片',
+        name: 'Wallace Baldenebre',
+        aboutHeading: '关于我',
+        motto: '授人以鱼，只供一日；授人以渔，受用一生',
+        accordion: {
+          aboutLabel: '关于我',
+          whatIsLabel: '什么是 Rolê Paulista？',
+          earnLabel: '我靠这个赚多少钱？'
+        },
+        aboutList: [
+          '移动工程师 10 年（如果我的记忆还靠谱的话）',
+          '鼓、吉他、主唱，全都做得“完美错误”，和现实完全不同步',
+          '会做一个非常棒的咸味潘妮朵尼',
+          '有点闲钱时就独自旅行、背包看世界',
+          '我会葡萄牙语（巴西）、英语、西班牙语和俄语（俄语还在继续学习... Привет мой друг）',
+          '来自 Osasco，热爱圣保罗，也常常吐槽这座城市，但始终愿意推荐最好的地方 :)'
+        ],
+        whatIs: [
+          '这个想法起源于一张表格，我在里面记录城市里最好的去处。',
+          '一开始只是给自己用，后来慢慢分享给朋友和熟人，最后变成了更大的项目。',
+          '于是 Rolê Paulista 诞生了：一个拥有 App 体验的网站，方便大家快速找到我去过并推荐的城市体验。',
+          '无论你来自圣保罗、其他州还是其他国家，这个体验都适合你。'
+        ],
+        earn: [
+          '答案很简单：没有。Rolê Paulista 是我出于热爱圣保罗而做的个人项目。未来会不会靠发布内容或广告赚钱？也许会，但这个网站的核心是始终免费，无论是访问者还是我发布的地点内容。',
+          '我不会收钱来“夸”某个地方，尤其不会为了付费好评。我希望保持内容真实可信，亲自去体验后再分享真实感受。',
+          '我可能需要一些时间更新 Instagram 或网站内容，因为目前我一个人同时负责基础设施、开发、营销、设计和内容，哈哈，所以更新慢的话请见谅 :)'
+        ],
+        socialHeading: '社交网络',
+        socialDescription: '你可以在下面的社交平台找到我 :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: '电子邮件'
+        },
+        roleName: 'Role Paulista',
+        bio: '8+年移动开发，热爱技术、旅行、美食及探索圣保罗。'
+      },
       howToRecommend: { title: '如何推荐一个地点？' },
       travelItinerary: {
         title: '路线',
@@ -953,8 +1108,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Creator of Role Paulista',
+        photoAlt: 'Photo of Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'About me',
+        motto: 'Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime',
+        accordion: {
+          aboutLabel: 'About me',
+          whatIsLabel: 'What is Rolê Paulista?',
+          earnLabel: 'How much do I earn from this?'
+        },
+        aboutList: [
+          'Mobile Engineer for 10 years (if my memory still serves me right)',
+          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
+          'Cooking to the level of making an amazing savory panettone',
+          'Solo traveler and backpacker whenever there is some extra money to explore the world',
+          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
+          'Born in Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+        ],
+        whatIs: [
+          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
+          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
+          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
+          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+        ],
+        earn: [
+          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
+          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
+          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
         socialHeading: 'Social networks',
+        socialDescription: 'Find me on the social networks below :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'Email'
+        },
+        roleName: 'Role Paulista',
         bio: 'Mobile developer for 8+ years, Android & iOS specialist. Passionate about tech, travel, food, and exploring every corner of São Paulo.'
       }
       ,
@@ -1105,8 +1295,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Ersteller von Role Paulista',
+        photoAlt: 'Foto von Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'Über mich',
+        motto: 'Gib einem Mann einen Fisch, und du ernährst ihn für einen Tag. Lehre ihn zu fischen, und du ernährst ihn ein Leben lang',
+        accordion: {
+          aboutLabel: 'Über mich',
+          whatIsLabel: 'Was ist Rolê Paulista?',
+          earnLabel: 'Wie viel verdiene ich damit?'
+        },
+        aboutList: [
+          'Seit 10 Jahren Mobile Engineer (wenn mein Gedächtnis mich nicht täuscht)',
+          'Schlagzeug, Gitarre und Gesang — alles perfekt falsch und komplett losgelöst von der Realität',
+          'Ich koche bis zum Level, einen großartigen herzhaften Panettone zu machen',
+          'Alleinreisender und Backpacker, wenn etwas Geld übrig ist, um die Welt kennenzulernen',
+          'Ich spreche Portugiesisch (BR), Englisch, Spanisch und Russisch (das hier lerne ich noch... Привет мой друг)',
+          'Aus Osasco, ich liebe São Paulo, ich schimpfe auch bei jeder Gelegenheit über die Stadt, aber ich empfehle immer das Beste :)'
+        ],
+        whatIs: [
+          'Die Idee entstand aus einer Tabelle, in der ich die besten Spots der Stadt gesammelt habe.',
+          'Am Anfang habe ich sie nur für mich gepflegt, aber mit der Zeit teilte ich sie mit Freunden und Bekannten, bis daraus etwas Größeres wurde.',
+          'So entstand Rolê Paulista: eine Website mit App-Erlebnis, um den Zugang zu den besten Erlebnissen der Stadt, die ich besuche, zu erleichtern.',
+          'Egal ob du aus São Paulo, aus einem anderen Bundesstaat oder aus einem anderen Land kommst: Die Erfahrung ist für alle da.'
+        ],
+        earn: [
+          'Die Antwort ist ganz einfach: nichts. Rolê Paulista ist ein persönliches Projekt aus Leidenschaft und Liebe für São Paulo. Vielleicht verdiene ich in Zukunft mit Veröffentlichungen oder AdSense? Vielleicht, aber die Idee ist, dass die Seite IMMER kostenlos bleibt – sowohl für Besucher als auch für die Beiträge über Orte.',
+          'Ich werde dafür kein Geld annehmen, vor allem nicht, um über einen Ort positiv zu sprechen. Ich möchte die Integrität und Authentizität des Inhalts bewahren, indem ich Orte selbst besuche und die echte Erfahrung teile.',
+          'Vielleicht dauert es etwas, bis ich auf Instagram oder hier auf der Website neue Beiträge hochlade, weil ich aktuell Infrastruktur, Entwicklung, Marketing, Design und Content gleichzeitig mache haha — sorry, falls Updates mal dauern :)'
+        ],
         socialHeading: 'Soziale Netzwerke',
+        socialDescription: 'Finde mich in den sozialen Netzwerken unten :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-Mail'
+        },
+        roleName: 'Role Paulista',
         bio: 'Mobile-Entwickler mit über 8 Jahren Erfahrung, Spezialist für Android & iOS. Begeistert von Technologie, Reisen, Restaurants und dem Erkunden von São Paulo.'
       },
       travelItinerary: {
@@ -1269,8 +1494,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Role Paulista の作成者',
+        photoAlt: 'Wallace Baldenebre の写真',
+        name: 'Wallace Baldenebre',
         aboutHeading: '私について',
+        motto: '魚を与えれば一日食べられる。魚の釣り方を教えれば一生食べられる',
+        accordion: {
+          aboutLabel: '私について',
+          whatIsLabel: 'Rolê Paulista とは？',
+          earnLabel: 'これでいくら稼いでいるの？'
+        },
+        aboutList: [
+          'モバイルエンジニア歴10年（まだ記憶が正しければ）',
+          'ドラム、ギター、ボーカルを、現実とズレたまま完璧に下手にやっています',
+          'おいしい塩味パネットーネを作れるくらい料理が好きです',
+          '少しお金ができたら、一人旅やバックパッカーで世界を回ります',
+          'ポルトガル語（BR）、英語、スペイン語、ロシア語を話します（ロシア語は今も勉強中... Привет мой друг）',
+          'オザスコ出身でサンパウロが大好き。文句も言うけど、いつでも最高の場所をおすすめします :)'
+        ],
+        whatIs: [
+          'このアイデアは、街の最高のスポットを記録していた1つのスプレッドシートから始まりました。',
+          '最初は自分用でしたが、時間とともに友人や知人に共有し、より大きなものになっていきました。',
+          'こうして Rolê Paulista が誕生しました。アプリのような体験を持つサイトで、私が訪れた街の最高の体験にアクセスしやすくするためのものです。',
+          'サンパウロ出身でも、他州や他国からでも、この体験はみんなのためのものです。'
+        ],
+        earn: [
+          '答えはシンプルです：何も稼いでいません。Rolê Paulista はサンパウロへの情熱と愛で作った個人プロジェクトです。将来、広告や投稿で収益化するかもしれませんが、このサイトはアクセスする人にも掲載先にも常に無料であることが方針です。',
+          '特にお金をもらって場所を褒めることはしません。実際に訪れて体験したことを伝えることで、内容の誠実さと本物らしさを守りたいからです。',
+          'Instagram やサイトの更新に時間がかかることがあります。いまはインフラ、開発、マーケ、デザイン、コンテンツを全部一人でやっているので、更新が遅いときはごめんなさい :)'
+        ],
         socialHeading: 'ソーシャルネットワーク',
+        socialDescription: '以下のSNSで見つけてください :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'メール'
+        },
+        roleName: 'Role Paulista',
         bio: 'モバイル開発者（8年以上）、Android と iOS の専門家。テクノロジー、旅行、レストラン、サンパウロのあらゆる場所を探索することに情熱を持っています。'
       },
       travelItinerary: {
@@ -1431,8 +1691,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'مبتكر Role Paulista',
+        photoAlt: 'صورة والاس بالدنبر',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'نبذة عني',
+        motto: 'أعطِ رجلًا سمكة فتطعمه يومًا، وعلّمه الصيد فتطعمه مدى الحياة',
+        accordion: {
+          aboutLabel: 'نبذة عني',
+          whatIsLabel: 'ما هو Rolê Paulista؟',
+          earnLabel: 'كم أربح من هذا؟'
+        },
+        aboutList: [
+          'مهندس تطبيقات جوال منذ 10 سنوات (إذا كانت ذاكرتي ما زالت جيدة)',
+          'طبول وجيتار وغناء، أفعل كل شيء بشكل خاطئ تمامًا وبعيد عن الواقع',
+          'أطبخ لدرجة أنني أستطيع إعداد بانيتوني مالح رائع',
+          'مسافر فردي وحقائبي عندما يتوفر بعض المال لاكتشاف العالم',
+          'أتحدث البرتغالية (BR) والإنجليزية والإسبانية والروسية (وهذه ما زلت أتعلمها... Привет мой друг)',
+          'من أوساسكو، أحب ساو باولو، وأنتقد المدينة عند أول فرصة، لكنني دائمًا مستعد لترشيح الأفضل :)'
+        ],
+        whatIs: [
+          'بدأت الفكرة من جدول بيانات كنت أسجل فيه أفضل الجولات في المدينة.',
+          'في البداية كنت أملؤه لنفسي فقط، لكن مع الوقت بدأت أشاركه مع الأصدقاء والمعارف حتى أصبح شيئًا أكبر.',
+          'وهكذا وُلد Rolê Paulista، موقع بتجربة تشبه التطبيق لتسهيل الوصول إلى أفضل التجارب في المدينة التي أزورها.',
+          'سواء كنت من ساو باولو أو من ولاية أخرى أو من بلد آخر، فالتجربة للجميع.'
+        ],
+        earn: [
+          'الإجابة بسيطة جدًا: لا شيء. Rolê Paulista مشروع شخصي، صُنع بشغف وحب لمدينة ساو باولو. هل قد أربح مستقبلًا من النشر أو الإعلانات؟ ربما، لكن الفكرة أن يبقى الموقع مجانيًا دائمًا للجمهور وللأماكن التي أنشر عنها.',
+          'لن أقبل المال مقابل ذلك، خصوصًا للتحدث بشكل إيجابي عن مكان ما. أريد الحفاظ على نزاهة المحتوى وصدقه عبر زيارة الأماكن ومشاركة التجربة الحقيقية.',
+          'قد يستغرق الأمر بعض الوقت لرفع المنشورات على Instagram أو هنا في الموقع، لأنني حاليًا فريق البنية التحتية والتطوير والتسويق والتصميم والمحتوى في وقت واحد، لذا أعتذر إذا تأخر التحديث :)'
+        ],
         socialHeading: 'وسائل التواصل الاجتماعي',
+        socialDescription: 'اعثر عليّ في الشبكات الاجتماعية أدناه :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'البريد الإلكتروني'
+        },
+        roleName: 'Role Paulista',
         bio: 'مطور تطبيقات جوال لأكثر من 8 سنوات، متخصص في Android و iOS. شغوف بالتقنية والسفر والمطاعم واستكشاف كل زاوية في ساو باولو.'
       },
       travelItinerary: {
@@ -1592,8 +1887,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Creatore di Role Paulista',
+        photoAlt: 'Foto di Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'Su di me',
+        motto: 'Dai un pesce a un uomo e lo nutrirai per un giorno. Insegnagli a pescare e lo nutrirai per tutta la vita',
+        accordion: {
+          aboutLabel: 'Su di me',
+          whatIsLabel: 'Cos’è Rolê Paulista?',
+          earnLabel: 'Quanto guadagno con questo?'
+        },
+        aboutList: [
+          'Mobile Engineer da 10 anni (se la mia memoria è ancora buona)',
+          'Batteria, chitarra e voce, facendo tutto perfettamente male e fuori dalla realtà',
+          'Cucino al punto da saper fare un magnifico panettone salato',
+          'Viaggiatore solitario e backpacker quando riesco a mettere da parte qualche soldo per conoscere il mondo',
+          'Parlo portoghese (BR), inglese, spagnolo e russo (questo lo sto ancora studiando... Привет мой друг)',
+          'Di Osasco, amo São Paulo, e la critico anche alla prima occasione, ma sempre pronto a consigliare il meglio :)'
+        ],
+        whatIs: [
+          'L’idea è nata da un foglio di calcolo in cui registravo i migliori giri della città.',
+          'All’inizio lo compilavo solo per me, ma col tempo l’ho condiviso con amici e conoscenti, finché è diventato qualcosa di più grande.',
+          'Così è nato Rolê Paulista, un sito con esperienza da app per facilitare l’accesso alle migliori esperienze in città che visito.',
+          'Non importa se sei di São Paulo, di un altro stato o di un altro paese: l’esperienza è per tutti.'
+        ],
+        earn: [
+          'La risposta è semplice: nulla. Rolê Paulista è un progetto personale, fatto per passione e amore per la città di São Paulo. Forse in futuro guadagnerò con pubblicazioni o adsense? Forse, ma l’idea è che il sito sia SEMPRE gratuito, sia per chi accede sia per i post sui luoghi che pubblico.',
+          'Non accetterò denaro per questo, soprattutto per parlare bene di un luogo: voglio mantenere integrità e autenticità del contenuto, andando nei posti e condividendo l’esperienza reale che ho avuto.',
+          'Potrei impiegare un po’ a pubblicare su Instagram o qui sul sito, perché al momento sono contemporaneamente team di infrastruttura, sviluppo, marketing, design e contenuti, quindi scusa se ci metto un po’ ad aggiornare :)'
+        ],
         socialHeading: 'Social',
+        socialDescription: 'Trovarmi sui social qui sotto :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-mail'
+        },
+        roleName: 'Role Paulista',
         bio: 'Sviluppatore mobile da oltre 8 anni, specialista Android e iOS. Appassionato di tecnologia, viaggi, ristoranti ed esplorare ogni angolo di San Paolo.'
       },
       travelItinerary: {
@@ -1748,8 +2078,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Maker van Role Paulista',
+        photoAlt: 'Foto van Wallace Baldenebre',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'Over mij',
+        motto: 'Geef een man een vis en je voedt hem voor één dag. Leer hem vissen en je voedt hem voor het leven',
+        accordion: {
+          aboutLabel: 'Over mij',
+          whatIsLabel: 'Wat is Rolê Paulista?',
+          earnLabel: 'Hoeveel verdien ik hiermee?'
+        },
+        aboutList: [
+          'Mobile Engineer al 10 jaar (als mijn geheugen me niet in de steek laat)',
+          'Drums, gitaar en zang, alles perfect verkeerd en volledig los van de realiteit',
+          'Ik kook op het niveau van een geweldige hartige panettone maken',
+          'Solo reiziger en backpacker wanneer er wat geld over is om de wereld te ontdekken',
+          'Ik spreek Portugees (BR), Engels, Spaans en Russisch (die laatste leer ik nog... Привет мой друг)',
+          'Uit Osasco, ik hou van São Paulo en mopper ook op de stad bij de eerste kans, maar altijd klaar om het beste aan te raden :)'
+        ],
+        whatIs: [
+          'Het idee begon met een spreadsheet waarin ik de beste plekken van de stad noteerde.',
+          'In het begin vulde ik die alleen voor mezelf in, maar na verloop van tijd deelde ik het met vrienden en bekenden totdat het iets groters werd.',
+          'Zo is Rolê Paulista ontstaan: een website met app-ervaring om toegang tot de beste stadsbelevingen die ik bezoek makkelijker te maken.',
+          'Of je nu uit São Paulo komt, uit een andere staat of uit een ander land: de ervaring is voor iedereen.'
+        ],
+        earn: [
+          'Het antwoord is simpel: niets. Rolê Paulista is een persoonlijk project, gemaakt uit passie en liefde voor São Paulo. Verdien ik hier in de toekomst misschien aan via publicaties of advertenties? Misschien, maar het idee is dat de site ALTIJD gratis blijft, zowel voor bezoekers als voor de posts over plekken.',
+          'Ik ga hier geen geld voor aannemen, vooral niet om positief te praten over een plek. Ik wil de integriteit en authenticiteit van de inhoud behouden door plekken zelf te bezoeken en mijn echte ervaring te delen.',
+          'Het kan even duren voordat ik nieuwe posts op Instagram of op de site zet, omdat ik momenteel tegelijk infrastructuur, ontwikkeling, marketing, design en content doe haha, dus excuses als updates soms langer duren :)'
+        ],
         socialHeading: 'Sociale netwerken',
+        socialDescription: 'Vind me op de sociale netwerken hieronder :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-mail'
+        },
+        roleName: 'Role Paulista',
         bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
       },
       travelItinerary: {
@@ -1895,8 +2260,43 @@ const resources = {
       },
       aboutMe: {
         authorTag: 'Role Paulista Oluşturucusu',
+        photoAlt: 'Wallace Baldenebre fotoğrafı',
+        name: 'Wallace Baldenebre',
         aboutHeading: 'Hakkımda',
+        motto: 'Bir insana balık ver, bir gün doyar. Balık tutmayı öğret, ömür boyu doyar',
+        accordion: {
+          aboutLabel: 'Hakkımda',
+          whatIsLabel: 'Rolê Paulista nedir?',
+          earnLabel: 'Bundan ne kadar kazanıyorum?'
+        },
+        aboutList: [
+          '10 yıldır Mobile Engineer (hafızam hâlâ iyiyse)',
+          'Bateri, gitar ve vokal — her şeyi mükemmel şekilde yanlış ve gerçeklikten kopuk yapıyorum',
+          'Harika bir tuzlu panettone yapacak seviyede yemek yapıyorum',
+          'Dünyayı görmek için biraz para arttığında yalnız gezgin ve backpacker',
+          'Portekizce (BR), İngilizce, İspanyolca ve Rusça konuşuyorum (bu dili hâlâ çalışıyorum... Привет мой друг)',
+          'Osasco’luyum, São Paulo’yu seviyorum; fırsat bulunca şehre söyleniyorum ama her zaman en iyisini önermeye hazırım :)'
+        ],
+        whatIs: [
+          'Fikir, şehirdeki en iyi rotaları kaydettiğim bir e-tabloyla başladı.',
+          'Başta sadece kendim için dolduruyordum, ama zamanla arkadaşlarımla ve tanıdıklarımla paylaştım ve daha büyük bir şeye dönüştü.',
+          'İşte böylece Rolê Paulista doğdu: ziyaret ettiğim şehir deneyimlerine erişimi kolaylaştıran, uygulama hissi veren bir site.',
+          'São Paulo’dan, başka bir eyaletten ya da başka bir ülkeden olman fark etmez; deneyim herkes için.'
+        ],
+        earn: [
+          'Cevap çok basit: hiçbir şey. Rolê Paulista, São Paulo şehrine duyduğum tutku ve sevgiyle yaptığım kişisel bir proje. Gelecekte yayınlardan veya adsense’den gelir elde eder miyim? Belki, ama fikir şu: siteye erişim de, paylaştığım mekan içerikleri de HER ZAMAN ücretsiz olmalı.',
+          'Bunun için para kabul etmeyeceğim, özellikle de bir yer hakkında iyi konuşmam için. İçeriğin dürüstlüğünü ve özgünlüğünü korumak istiyorum; yerlere gidip gerçek deneyimimi paylaşarak.',
+          'Instagram’da veya burada sitede paylaşım yapmam biraz zaman alabilir; çünkü şu anda altyapı, geliştirme, pazarlama, tasarım ve içerik ekibi aynı anda benim haha. Geç güncelleme olursa kusura bakma :)'
+        ],
         socialHeading: 'Sosyal ağlar',
+        socialDescription: 'Beni aşağıdaki sosyal ağlarda bul :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-posta'
+        },
+        roleName: 'Role Paulista',
         bio: '8 yılı aşkın süredir mobil geliştirici, Android ve iOS uzmanı. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
       },
       travelItinerary: {
@@ -2034,6 +2434,47 @@ const resources = {
         openNow: 'Otwarte teraz',
         opensTomorrowAt: 'Otwiera się jutro o {{time}}',
         subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
+      },
+      aboutMe: {
+        authorTag: 'Twórca Role Paulista',
+        photoAlt: 'Zdjęcie Wallace’a Baldenebre',
+        name: 'Wallace Baldenebre',
+        aboutHeading: 'O mnie',
+        motto: 'Daj człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        accordion: {
+          aboutLabel: 'O mnie',
+          whatIsLabel: 'Czym jest Rolê Paulista?',
+          earnLabel: 'Ile na tym zarabiam?'
+        },
+        aboutList: [
+          'Mobile Engineer od 10 lat (jeśli pamięć mnie nie zawodzi)',
+          'Perkusja, gitara i wokal — wszystko robię perfekcyjnie źle i kompletnie poza rzeczywistością',
+          'Gotuję na poziomie robienia świetnego wytrawnego panettone',
+          'Podróżnik solo i backpacker, kiedy uda się odłożyć trochę pieniędzy na poznawanie świata',
+          'Mówię po portugalsku (BR), angielsku, hiszpańsku i rosyjsku (tego nadal się uczę... Привет мой друг)',
+          'Jestem z Osasco, kocham São Paulo i też narzekam na miasto przy pierwszej okazji, ale zawsze gotowy polecić to, co najlepsze :)'
+        ],
+        whatIs: [
+          'Pomysł narodził się z arkusza, w którym zapisywałem najlepsze miejsca w mieście.',
+          'Na początku uzupełniałem go tylko dla siebie, ale z czasem zacząłem dzielić się nim ze znajomymi i przyjaciółmi, aż stało się to czymś większym.',
+          'Tak powstało Rolê Paulista — strona z doświadczeniem jak w aplikacji, która ułatwia dostęp do najlepszych miejskich doświadczeń, które odwiedzam.',
+          'Nieważne, czy jesteś z São Paulo, z innego stanu czy z innego kraju — to doświadczenie jest dla wszystkich.'
+        ],
+        earn: [
+          'Odpowiedź jest prosta: nic. Rolê Paulista to projekt osobisty, zrobiony z pasji i miłości do São Paulo. Czy w przyszłości zarobię na publikacjach lub adsense? Może, ale idea jest taka, by strona ZAWSZE była darmowa — zarówno dla osób, które z niej korzystają, jak i dla publikacji o miejscach.',
+          'Nie będę przyjmować za to pieniędzy, szczególnie po to, żeby mówić dobrze o jakimś miejscu. Chcę zachować integralność i autentyczność treści, odwiedzając miejsca i przekazując realne doświadczenia.',
+          'Publikacje na Instagramie lub tutaj na stronie mogą czasem pojawić się z opóźnieniem, bo obecnie jestem jednocześnie zespołem od infrastruktury, developmentu, marketingu, designu i contentu haha, więc przepraszam, jeśli aktualizacje trwają dłużej :)'
+        ],
+        socialHeading: 'Sieci społecznościowe',
+        socialDescription: 'Znajdziesz mnie w sieciach społecznościowych poniżej :)',
+        social: {
+          wallace: 'Wallace Baldenebre',
+          role: 'Role Paulista',
+          linkedin: 'LinkedIn',
+          email: 'E-mail'
+        },
+        roleName: 'Role Paulista',
+        bio: 'Programista mobile z ponad 8-letnim doświadczeniem, specjalista Android i iOS. Pasjonat technologii, podróży, restauracji i odkrywania każdego zakątka São Paulo.'
       },
       travelItinerary: {
         title: 'Trasy',
