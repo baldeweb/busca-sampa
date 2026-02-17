@@ -2212,42 +2212,43 @@
     },
     {
         "id": 66,
-        "name": "Japan House São Paulo",
+        "name": "Itaú Cultural",
         "type": "TOURIST_SPOT",
         "phones": [
             {
-                "number": "1131495187",
+                "number": "1121681777",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "JAPANHOUSE_DAYTIME",
+            "patternId": "ITAU_CULTURAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
+        "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Japan House São Paulo oferece uma experiência cultural japonesa, incluindo exposições de arte, workshops e eventos especiais."
+            "Prédio de vidro com exposições sobre a história do Brasil e a natureza, além de programação teatral.",
+            "Tem a famosa escadaria com animais e plantas desenhados, localizada na entrada do prédio, que é um dos pontos mais fotografados do local."
         ],
         "priceRange": "FREE",
         "addresses": [
             {
                 "id": 1,
                 "street": "Paulista",
-                "number": "52",
+                "number": "149",
                 "city": "São Paulo",
                 "neighborhood": "Bela Vista",
-                "postalCode": "01310-900",
+                "postalCode": "01311-000",
                 "isMainUnity": true,
-                "latitude": -23.570730,
-                "longitude": -46.644844
+                "latitude": -23.570265,
+                "longitude": -46.645699
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "https://www.japanhousesp.com.br/",
+        "linkWebsite": "http://www.itaucultural.org.br/",
         "linkInstagram": "",
         "tags": ["ART_EXHIBITION", "CULTURE"]
     }

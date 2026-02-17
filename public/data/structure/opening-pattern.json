@@ -1055,4 +1055,42 @@
       { "days": ["SUNDAY"], "open": "12:00", "close": "27:00" }
     ]
   },
+  {
+    "id": "FAROLSANTANDER_DAYTIME",
+    "description": "Horários do Farol Santander",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "09:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "FEIRALIBERDADE_DAYTIME",
+    "description": "Horários da Feira da Liberdade",
+    "periods": [
+      { "days": ["SATURDAY", "SUNDAY"], "open": "09:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "CASADASROSAS_DAYTIME",
+    "description": "Horários da Casa das Rosas",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "10:00", "close": "17:30" }
+    ]
+  },
+  {
+    "id": "MIRANTESESC_AVENIDAPAULISTA_DAYTIME",
+    "description": "Horários do Mirante SESC Avenida Paulista",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "10:00", "close": "21:00" },
+      { "days": ["SATURDAY"], "open": "10:00", "close": "19:00" },
+      { "days": ["SUNDAY"], "open": "10:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "ITAU_CULTURAL_DAYTIME",
+    "description": "Horários do Itaú Cultural",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "11:00", "close": "20:00" },
+      { "days": ["SUNDAY"], "open": "11:00", "close": "19:00" }
+    ]
+  }
 ]
