@@ -1092,5 +1092,71 @@
       { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "11:00", "close": "20:00" },
       { "days": ["SUNDAY"], "open": "11:00", "close": "19:00" }
     ]
+  },
+  {
+    "id": "KRAPOOKKHAO_DAYTIME",
+    "description": "Horários do Krapook Khao",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "21:30" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "11:30", "close": "15:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "18:00", "close": "21:30" },
+      { "days": ["SUNDAY"], "open": "11:30", "close": "15:00" },
+      { "days": ["SUNDAY"], "open": "18:00", "close": "20:30" }
+    ]
+  },
+  {
+    "id": "KIICHI_DAYTIME",
+    "description": "Horários do Kiichi",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "16:00" },
+      { "days": ["SATURDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["SUNDAY"], "open": "19:00", "close": "23:30" }
+    ]
+  },
+  {
+    "id": "BIG_KAHUNA_DAYTIME",
+    "description": "Horários do Big Kahuna",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "23:00" },
+      { "days": ["FRIDAY"], "open": "12:00", "close": "23:45" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "BAKEHAUS_DAYTIME",
+    "description": "Horários do Bakehaus",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "08:30", "close": "18:00" },
+      { "days": ["SATURDAY"], "open": "08:30", "close": "16:30" }
+    ]
+  },
+  {
+    "id": "PIZZARIA_VERIDIANA_DAYTIME",
+    "description": "Horários da Pizzaria Veridiana",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "SUNDAY"], "open": "18:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "18:00", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "OMALLEYBAR_DAYTIME",
+    "description": "Horários da O'Malley Bar",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "02:30" },
+      { "days": ["FRIDAY"], "open": "18:00", "close": "04:00" },
+      { "days": ["SATURDAY"], "open": "14:00", "close": "04:00" },
+      { "days": ["SUNDAY"], "open": "14:00", "close": "02:30" }
+    ]
+  },
+  {
+    "id": "VITRINNI_DAYTIME",
+    "description": "Horários da Vitrinni Lounge",
+    "periods": [
+      { "days": ["TUESDAY", "FRIDAY", "SATURDAY"], "open": "21:00", "close": "05:30" }
+    ]
   }
 ]

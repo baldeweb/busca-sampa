@@ -622,5 +622,44 @@
         "tags": [
             "PUB_ROCK"
         ]
+    },
+    {
+        "id": 17,
+        "name": "Vitrinni Lounge Beer SP",
+        "type": "NIGHTLIFE",
+        "phones": [
+            {
+                "number": "1130812114",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "VITRINNI_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [],
+        "priceRange": "EXPENSIVE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Quatá",
+                "number": "1016",
+                "city": "São Paulo",
+                "neighborhood": "Vila Olímpia",
+                "postalCode": "04546-045",
+                "isMainUnity": true,
+                "latitude": -23.595936,
+                "longitude": -46.682862
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.vitrinnilounge.com/home.php?filial=sp",
+        "linkInstagram": "https://www.instagram.com/vitrinniloungesp/",
+        "tags": []
     }
 ]
