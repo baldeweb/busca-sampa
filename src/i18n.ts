@@ -98,6 +98,7 @@ const resources = {
         scheduleRequired: 'Necessário agendar',
         scheduleNotRequired: 'Não precisa agendar',
         anySchedule: 'Qualquer',
+        cityTitle: 'Cidade',
         anyCity: 'Qualquer cidade',
         priceTitle: 'Preço',
         anyPrice: 'Qualquer preço',
@@ -375,6 +376,7 @@ const resources = {
         scheduleRequired: 'Réservation requise',
         scheduleNotRequired: 'Réservation non requise',
         anySchedule: 'Peu importe',
+        cityTitle: 'Ciudad',
         anyCity: 'N’importe quelle ville',
         priceTitle: 'Prix',
         anyPrice: 'N’importe quel prix',
@@ -526,32 +528,32 @@ const resources = {
       placeList: {
         environmentTitle: 'Tipo de ambiente:',
         environmentTitlePlace: 'Tipo de lugar:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        openNow: 'Aberto agora',
-        opensSoon: 'Abre em instantes',
-        opensTomorrowAt: 'Abre amanhã às {{time}}',
-        opensOnAt: 'Abre {{day}} às {{time}}',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
+        hoursUnavailable: 'Horario no disponible',
+        opensAtHeader: 'Apertura',
+        openNow: 'Abierto ahora',
+        opensSoon: 'Abre en instantes',
+        opensTomorrowAt: 'Abre mañana a las {{time}}',
+        opensOnAt: 'Abre {{day}} a las {{time}}',
+        subtitleTemplate: 'Descubre {{article}} {{noun}} de tu tipo, más cerca de ti :)',
         article: {
-          RESTAURANT: 'o',
-          BARS: 'o',
-          COFFEES: 'a',
-          NIGHTLIFE: 'a',
-          NATURE: 'a',
-          TOURIST_SPOT: 'o',
-          FREE: 'o',
-          PLEASURE: 'a'
+          RESTAURANT: 'el',
+          BARS: 'el',
+          COFFEES: 'la',
+          NIGHTLIFE: 'la',
+          NATURE: 'la',
+          TOURIST_SPOT: 'el',
+          FREE: 'el',
+          PLEASURE: 'la'
         },
         noun: {
           RESTAURANT: 'restaurante',
           BARS: 'bar',
-          COFFEES: 'cafeteria',
-          NIGHTLIFE: 'vida noturna',
+          COFFEES: 'cafetería',
+          NIGHTLIFE: 'vida nocturna',
           NATURE: 'naturaleza',
           TOURIST_SPOT: 'lugar turístico',
           FREE: 'evento gratuito',
-          PLEASURE: 'casa de prazeres'
+          PLEASURE: 'casa de placeres'
         }
       }
     }
@@ -597,6 +599,7 @@ const resources = {
         scheduleRequired: 'Réservation requise',
         scheduleNotRequired: 'Réservation non requise',
         anySchedule: 'Peu importe',
+        cityTitle: 'Ville',
         anyCity: 'N’importe quelle ville',
         priceTitle: 'Prix',
         anyPrice: 'N’importe quel prix',
@@ -741,34 +744,34 @@ const resources = {
       }
       ,
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        environmentTitlePlace: 'Type de lieu:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        openNow: 'Aberto agora',
-        opensSoon: 'Abre em instantes',
-        opensTomorrowAt: 'Abre amanhã às {{time}}',
-        opensOnAt: 'Abre {{day}} às {{time}}',
-        subtitleTemplate: 'Descubra {{article}} {{noun}} com o seu tipo mais perto de você :)',
+        environmentTitle: 'Type d’ambiance :',
+        environmentTitlePlace: 'Type de lieu :',
+        hoursUnavailable: 'Horaires indisponibles',
+        opensAtHeader: 'Ouverture',
+        openNow: 'Ouvert maintenant',
+        opensSoon: 'Ouvre dans un instant',
+        opensTomorrowAt: 'Ouvre demain à {{time}}',
+        opensOnAt: 'Ouvre {{day}} à {{time}}',
+        subtitleTemplate: 'Découvrez {{article}} {{noun}} de votre type, au plus près de vous :)',
         article: {
-          RESTAURANT: 'o',
-          BARS: 'o',
-          COFFEES: 'a',
-          NIGHTLIFE: 'a',
-          NATURE: 'a',
-          TOURIST_SPOT: 'o',
-          FREE: 'o',
-          PLEASURE: 'a'
+          RESTAURANT: 'le',
+          BARS: 'le',
+          COFFEES: 'le',
+          NIGHTLIFE: 'la',
+          NATURE: 'la',
+          TOURIST_SPOT: 'le',
+          FREE: 'le',
+          PLEASURE: 'la'
         },
         noun: {
-          RESTAURANT: 'restaurante',
+          RESTAURANT: 'restaurant',
           BARS: 'bar',
-          COFFEES: 'cafeteria',
-          NIGHTLIFE: 'vida noturna',
-          NATURE: 'naturaleza',
-          TOURIST_SPOT: 'lugar turístico',
-          FREE: 'evento gratuito',
-          PLEASURE: 'casa de prazeres'
+          COFFEES: 'café',
+          NIGHTLIFE: 'vie nocturne',
+          NATURE: 'nature',
+          TOURIST_SPOT: 'lieu touristique',
+          FREE: 'événement gratuit',
+          PLEASURE: 'maison de plaisirs'
         }
       }
     }
@@ -778,7 +781,7 @@ const resources = {
       home: { nearMeTitle: 'Рядом со мной', nearMeSubtitle: '（показаны места в радиусе {{km}} км рядом с вами)', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'Больше вариантов', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
       common: { back: 'Назад', details: 'Узнать больше', selectLanguage: 'Выберите язык', changeDistance: 'Увеличить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
-      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', openNow: 'Открыто сейчас', anyHourLabel: 'Любое время', anyHour: 'Любое время', scheduleTitle: 'Бронирование', scheduleRequired: 'Требуется бронирование', scheduleNotRequired: 'Бронирование не требуется', anySchedule: 'Любой', anyCity: 'Любой город', priceTitle: 'Цена', anyPrice: 'Любая цена', button: 'Фильтры' },
+      filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', openNow: 'Открыто сейчас', anyHourLabel: 'Любое время', anyHour: 'Любое время', scheduleTitle: 'Бронирование', scheduleRequired: 'Требуется бронирование', scheduleNotRequired: 'Бронирование не требуется', anySchedule: 'Любой', cityTitle: 'Город', anyCity: 'Любой город', priceTitle: 'Цена', anyPrice: 'Любая цена', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', viewHours: 'смотреть часы',
         visitModalTitle: 'О посещенных местах',
         visitModalParagraph: 'Место, ожидающее посещения. Информация на этой странице основана на рекомендациях других людей, которые побывали там и посоветовали мне посетить.',
@@ -804,6 +807,18 @@ const resources = {
         visitModalEnding: ''
       },
       openingHours: { checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
+      whereIsToday: { title: 'Итак, куда сегодня?', subtitle: 'Список мест, где я был, по категориям. Взгляните ;)', opensToday: 'Открыто сегодня' },
+      placeList: {
+        environmentTitle: 'Тип заведения:',
+        environmentTitlePlace: 'Тип места:',
+        hoursUnavailable: 'Часы работы недоступны',
+        opensAtHeader: 'Открывается в',
+        openNow: 'Открыто сейчас',
+        opensSoon: 'Скоро откроется',
+        opensTomorrowAt: 'Откроется завтра в {{time}}',
+        opensOnAt: 'Откроется {{day}} в {{time}}',
+        subtitleTemplate: 'Откройте {{article}} {{noun}} вашего типа рядом с вами :)'
+      },
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
       searchPage: {
         title: 'Найдите место',
@@ -903,7 +918,7 @@ const resources = {
       home: { nearMeTitle: '附近', nearMeSubtitle: '（显示你附近 {{km}}km 半径内的地点）', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多选项', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '了解更多', selectLanguage: '选择语言', changeDistance: '增加距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
-      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', anyCity: '任意城市', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
+      filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', cityTitle: '城市', anyCity: '任意城市', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', viewHours: '查看营业时间',
         visitModalTitle: '关于该地点',
         visitModalParagraph: '此地点尚未亲访。页面信息来自已去过并推荐给我的人提供的建议。',
@@ -933,8 +948,10 @@ const resources = {
         visitModalEnding: 'I’ll also tell you which places not to visit :)'
       },
       openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', checkAvailabilityLabel: 'Check availability' },
+      whereIsToday: { title: '那么，今天去哪里？', subtitle: '按类别整理的我去过的地点列表。来看一看 ;)', opensToday: '今日营业' },
       placeList: {
         environmentTitle: '环境类型:',
+        environmentTitlePlace: '地点类型:',
         hoursUnavailable: '营业时间不可用',
         opensAtHeader: '开张时间',
         openNow: '正在营业',
@@ -1082,6 +1099,7 @@ const resources = {
         scheduleRequired: 'Reservation required',
         scheduleNotRequired: 'No reservation needed',
         anySchedule: 'Any',
+        cityTitle: 'City',
         anyCity: 'Any city',
         priceTitle: 'Price',
         anyPrice: 'Any price',
@@ -1124,10 +1142,13 @@ const resources = {
       openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', checkAvailabilityLabel: 'Check availability' },
       placeList: {
         environmentTitle: 'Environment type:',
+        environmentTitlePlace: 'Place type:',
         hoursUnavailable: 'Hours unavailable',
         opensAtHeader: 'Opens at',
         openNow: 'Open now',
+        opensSoon: 'Opens soon',
         opensTomorrowAt: 'Opens tomorrow at {{time}}',
+        opensOnAt: 'Opens {{day}} at {{time}}',
         subtitleTemplate: 'Discover {{article}} {{noun}} of your type, closest to you :)'
       },
       about: {
@@ -1263,6 +1284,7 @@ const resources = {
         scheduleRequired: 'Reservierung erforderlich',
         scheduleNotRequired: 'Keine Reservierung erforderlich',
         anySchedule: 'Beliebig',
+        cityTitle: 'Stadt',
         anyCity: 'Beliebige Stadt',
         priceTitle: 'Preis',
         anyPrice: 'Beliebiger Preis',
@@ -1311,8 +1333,10 @@ const resources = {
         notesTitle: 'Notizen'
       },
       openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
+      whereIsToday: { title: 'Und, wo geht’s heute hin?', subtitle: 'Liste der Orte, an denen ich war, nach Kategorien. Schau mal rein ;)', opensToday: 'Heute geöffnet' },
       placeList: {
         environmentTitle: 'Umgebungstyp:',
+        environmentTitlePlace: 'Ortstyp:',
         hoursUnavailable: 'Öffnungszeiten nicht verfügbar',
         opensAtHeader: 'Öffnet um',
         openNow: 'Jetzt geöffnet',
@@ -1451,6 +1475,7 @@ const resources = {
         scheduleRequired: '予約が必要',
         scheduleNotRequired: '予約不要',
         anySchedule: '任意',
+        cityTitle: '都市',
         anyCity: '任意の都市',
         priceTitle: '値下げ',
         anyPrice: '任意の値下げ',
@@ -1499,13 +1524,17 @@ const resources = {
         notesTitle: '備考'
       },
       openingHours: { checkAvailabilityMessage: '営業時間は都度変動します。詳細は施設のウェブサイトおよびInstagramページでご確認ください', alwaysOpenMessage: 'この場所は24時間営業です', checkAvailabilityLabel: '空き状況を確認' },
+      whereIsToday: { title: 'で、今日はどこに行く？', subtitle: '行ったことのある場所をカテゴリ別でまとめた一覧です。見てみてね ;)', opensToday: '本日営業' },
       placeList: {
         environmentTitle: '環境タイプ：',
+        environmentTitlePlace: '場所タイプ：',
         hoursUnavailable: '営業時間情報なし',
         opensAtHeader: '開店時間',
         openNow: '営業中',
+        opensSoon: 'まもなく開店',
         opensTomorrowAt: '明日 {{time}} に開店',
-        subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
+        opensOnAt: '{{day}} {{time}} に開店',
+        subtitleTemplate: 'あなたのタイプに合う{{article}} {{noun}}を、いちばん近くで見つけよう :)'
       },
       about: {
         title: '私は誰？',
@@ -1637,6 +1666,7 @@ const resources = {
         scheduleRequired: 'Prenotazione richiesta',
         scheduleNotRequired: 'Non serve prenotare',
         anySchedule: 'Qualsiasi',
+        cityTitle: 'Città',
         anyCity: 'Qualsiasi città',
         priceTitle: 'Prezzo',
         anyPrice: 'Qualsiasi prezzo',
@@ -1680,7 +1710,7 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', checkAvailabilityLabel: 'Verifica disponibilità' },
-      whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Kijk maar ;)' },
+      whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Dai un’occhiata ;)' },
       placeType: {
         RESTAURANT: 'Ristoranti',
         BARS: 'Bar',
@@ -1695,11 +1725,14 @@ const resources = {
       },
       placeList: {
         environmentTitle: 'Tipo di ambiente:',
+        environmentTitlePlace: 'Tipo di luogo:',
         hoursUnavailable: 'Orari non disponibili',
         opensAtHeader: 'Apertura',
-        openNow: 'Nu open',
-        opensTomorrowAt: 'Otwierze się jutro o {{time}}',
-        subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
+        openNow: 'Aperto ora',
+        opensSoon: 'Apre tra poco',
+        opensTomorrowAt: 'Apre domani alle {{time}}',
+        opensOnAt: 'Apre {{day}} alle {{time}}',
+        subtitleTemplate: 'Scopri {{article}} {{noun}} del tuo tipo più vicino a te :)'
       },
       about: {
         title: 'Chi sono?',
@@ -1830,6 +1863,7 @@ const resources = {
         scheduleRequired: 'Reservatie gerekte',
         scheduleNotRequired: 'Geen reservering nodig',
         anySchedule: 'Elke',
+        cityTitle: 'Stad',
         anyCity: 'Elke stad',
         priceTitle: 'Prijs',
         anyPrice: 'Elke prijs',
@@ -1873,7 +1907,7 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
-      whereIsToday: { title: 'Peki, waar is het vandaag?', subtitle: 'Liste de gittiğim yerler, kategoriye göre. Bir göz at ;)' },
+      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'Lijst met plekken waar ik ben geweest, per categorie. Kijk maar ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
         BARS: 'Barlar',
@@ -1887,14 +1921,15 @@ const resources = {
         PLEASURE: 'Eğlence evleri'
       },
       placeList: {
-        environmentTitle: 'Tipo de lugar:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        openNow: 'Aberto agora',
-        opensSoon: 'Abre em instantes',
-        opensTomorrowAt: 'Abre amanhã às {{time}}',
-        opensOnAt: 'Abre {{day}} às {{time}}',
-        subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
+        environmentTitle: 'Type omgeving:',
+        environmentTitlePlace: 'Type plek:',
+        hoursUnavailable: 'Openingstijden niet beschikbaar',
+        opensAtHeader: 'Opening',
+        openNow: 'Nu open',
+        opensSoon: 'Opent zo',
+        opensTomorrowAt: 'Opent morgen om {{time}}',
+        opensOnAt: 'Opent {{day}} om {{time}}',
+        subtitleTemplate: 'Ontdek {{article}} {{noun}} van jouw type, dicht bij jou :)'
       },
       about: {
         title: 'Ben kimim?',
@@ -2016,6 +2051,7 @@ const resources = {
         scheduleRequired: 'Rezervasyon gerekli',
         scheduleNotRequired: 'Geen reservering nodig',
         anySchedule: 'Herhangi',
+        cityTitle: 'Şehir',
         anyCity: 'Herhangi bir şehir',
         priceTitle: 'Fiyat',
         anyPrice: 'Herhangi bir fiyat',
@@ -2059,7 +2095,7 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
-      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'Liste de gittiğim yerler, kategoriye göre. Bir göz at ;)' },
+      whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'Gittiğim yerlerin kategoriye göre listesi. Bir göz at ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
         BARS: 'Barlar',
@@ -2073,14 +2109,15 @@ const resources = {
         PLEASURE: 'Eğlence evleri'
       },
       placeList: {
-        environmentTitle: 'Tipo de lugar:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        openNow: 'Aberto agora',
-        opensSoon: 'Abre em instantes',
-        opensTomorrowAt: 'Abre amanhã às {{time}}',
-        opensOnAt: 'Abre {{day}} às {{time}}',
-        subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
+        environmentTitle: 'Mekan türü:',
+        environmentTitlePlace: 'Yer türü:',
+        hoursUnavailable: 'Çalışma saatleri mevcut değil',
+        opensAtHeader: 'Açılış',
+        openNow: 'Şu an açık',
+        opensSoon: 'Yakında açılır',
+        opensTomorrowAt: 'Yarın {{time}} açılır',
+        opensOnAt: '{{day}} {{time}} açılır',
+        subtitleTemplate: 'Sana en yakın, türündeki {{noun}} yerini keşfet :)'
       },
       aboutMe: {
         authorTag: 'Role Paulista Oluşturucusu',
@@ -2197,6 +2234,7 @@ const resources = {
         scheduleRequired: 'Wymagana rezerwacja',
         scheduleNotRequired: 'Rezerwacja nie jest wymagana',
         anySchedule: 'Dowolne',
+        cityTitle: 'Miasto',
         anyCity: 'Dowolne miasto',
         priceTitle: 'Cena',
         anyPrice: 'Dowolna cena',
@@ -2240,7 +2278,7 @@ const resources = {
         notesTitle: 'Notatki'
       },
       openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę', checkAvailabilityLabel: 'Sprawdź dostępność' },
-      whereIsToday: { title: 'Peki, gdzie dziś?', subtitle: 'Lista miejsc, w których byłem, według kategorii. Rzuć okiem ;)' },
+      whereIsToday: { title: 'Więc, gdzie dziś?', subtitle: 'Lista miejsc, w których byłem, według kategorii. Rzuć okiem ;)' },
       placeType: {
         RESTAURANT: 'Restauracje',
         BARS: 'Bar',
@@ -2254,13 +2292,14 @@ const resources = {
         PLEASURE: 'Dom rozkoszy'
       },
       placeList: {
-        environmentTitle: 'Tipo de ambiente:',
-        hoursUnavailable: 'Horário indisponível',
-        opensAtHeader: 'Abertura',
-        openNow: 'Aberto agora',
-        opensSoon: 'Abre em instantes',
-        opensTomorrowAt: 'Abre amanhã às {{time}}',
-        opensOnAt: 'Abre {{day}} às {{time}}',
+        environmentTitle: 'Typ miejsca:',
+        environmentTitlePlace: 'Rodzaj miejsca:',
+        hoursUnavailable: 'Godziny niedostępne',
+        opensAtHeader: 'Otwarcie',
+        openNow: 'Otwarte teraz',
+        opensSoon: 'Wkrótce otwarte',
+        opensTomorrowAt: 'Otwiera się jutro o {{time}}',
+        opensOnAt: 'Otwiera się {{day}} o {{time}}',
         subtitleTemplate: 'Odkryj {{article}} {{noun}} w Twoim stylu, najbliżej Ciebie :)'
       },
       aboutMe: {
