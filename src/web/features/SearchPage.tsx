@@ -20,6 +20,8 @@ import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
+import icSearch from '@/assets/imgs/icons/ic_search.png';
+import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 
 export function SearchPage() {
   const { t } = useTranslation();
@@ -99,10 +101,19 @@ export function SearchPage() {
         <section className="relative shrink-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
           <div className="mx-auto max-w-5xl px-4 sm:px-12 pt-0 pb-8 text-black">
             <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 py-8">
-              <SectionHeading title={t('searchPage.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
-              <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
-                {t('searchPage.subtitle')}
-              </p>
+                <div className="flex items-start gap-4">
+                  <img src={icSearch} alt="Buscar" className="w-9 h-9 object-contain mt-2" />
+                  <div>
+                    <SectionHeading
+                      title={t('searchPage.title')}
+                      underline={false}
+                      sizeClass="text-lg sm:text-2xl text-[#212121]"
+                    />
+                    <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
+                      {t('searchPage.subtitle')}
+                    </p>
+                  </div>
+                </div>
             </div>
             <div className={`w-full transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
               <div className={`w-full transition-all duration-500 ease-out ${hasResults ? '-translate-y-1 opacity-100' : 'translate-y-0 opacity-100'}`}>
@@ -120,7 +131,7 @@ export function SearchPage() {
         {hasResults && (
           <section className="relative h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg transition-all duration-500 ease-out opacity-100 translate-y-0">
             <div className="mx-auto max-w-5xl px-4 sm:px-12 h-full min-h-full flex flex-col">
-              <h3 className="pt-6 text-lg font-bold text-[#F5F5F5]">{t('searchPage.resultsTitle')}</h3>
+              <h3 className="pt-6 text-lg font-bold text-[#F5F5F5]">{t('searchPage.resultsTitle')}: {results.length}</h3>
               <div className="rounded-t-lg overflow-hidden flex-1">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
                   {results.map((place) => {
@@ -159,6 +170,8 @@ export function SearchPage() {
           </section>
         )}
       </div>
+
+      <ReportProblemFooter subject="Reportar um problema da página de busca" />
     </div>
   );
 }

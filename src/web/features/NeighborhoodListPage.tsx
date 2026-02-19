@@ -23,7 +23,7 @@ import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import { PlaceListItem } from '@/web/components/place/PlaceListItem';
-import { FaExclamationTriangle } from 'react-icons/fa';
+import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -486,16 +486,7 @@ export const NeighborhoodListPage: React.FC = () => {
         />
       )}
 
-      {/* Footer */}
-      <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
-        <FaExclamationTriangle className="mr-2 text-white" />
-        <a
-          href={`mailto:wallace.baldenebre@gmail.com?subject=${encodeURIComponent(`Reportar um problema da página de bairro ${titleNeighborhood}`)}`}
-          className="text-white font-bold"
-        >
-          {t('placeDetail.reportProblem')}
-        </a>
-      </div>
+      <ReportProblemFooter subject={`Reportar um problema da página de bairro ${titleNeighborhood}`} />
     </div>
   );
 };
