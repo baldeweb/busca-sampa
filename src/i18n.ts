@@ -1619,6 +1619,28 @@ const resources = {
     }
   }
   ,
+  ar: {
+    translation: {
+      filters: {
+        title: 'فلاتر',
+        sortingTitle: 'الترتيب',
+        hoursTitle: 'المواعيد',
+        scheduleTitle: 'الحجز',
+        cityTitle: 'المدينة',
+        priceTitle: 'السعر'
+      },
+      whereIsToday: {
+        title: 'طيب، فين هنروح النهاردة؟',
+        subtitle: 'قائمة الأماكن اللي زرتها حسب الفئة، بص عليها ;)',
+        opensToday: 'مفتوح اليوم'
+      },
+      placeList: {
+        environmentTitle: 'نوع الأجواء:',
+        environmentTitlePlace: 'نوع المكان:',
+        subtitleTemplate: 'اكتشف {{article}} {{noun}} من نفس النوع الأقرب ليك :)'
+      }
+    }
+  },
   it: {
     translation: {
       home: {
