@@ -26,7 +26,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
         <button
           type="button"
           onClick={() => onSelect(null)}
-          className={`btn-square btn-red-outline w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+          className={`btn-square btn-red-outline btn-hover-red w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
             selectedEnv === null
               ? 'bg-bs-red text-white border-bs-red'
               : 'bg-white text-black border-[#0F0D13]'
@@ -40,7 +40,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
             key={env.value}
             type="button"
             onClick={() => onSelect(selectedEnv === env.value ? null : env.value)}
-            className={`btn-square btn-hover-red w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+            className={`btn-square btn-hover-gray w-full font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
               selectedEnv === env.value
                 ? 'bg-bs-red text-white border-bs-red'
                 : 'bg-white text-black border-[#0F0D13]'

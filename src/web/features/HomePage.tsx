@@ -466,7 +466,7 @@ export function HomePage() {
                 key={n.id}
                 type="button"
                 onClick={() => handleNeighborhoodSelect(n)}
-                className="btn-hover-gray w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[2px] px-4 py-4 leading-tight transition-colors"
+                className="btn-square btn-hover-gray w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[8px] px-4 py-4 leading-tight transition-colors"
               >
                 {n.neighborhoodName}
               </button>
@@ -475,7 +475,7 @@ export function HomePage() {
               type="button"
               onClick={() => setIsNeighborhoodModalOpen(true)}
               size="md"
-              className="w-full py-4 font-semibold rounded-[2px] btn-red"
+              className="btn-square w-full py-4 font-semibold rounded-[8px] btn-red"
             >
               {t('home.viewMoreNeighborhoods')}
             </ActionButton>
