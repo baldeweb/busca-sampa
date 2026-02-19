@@ -38,7 +38,6 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
     : "flex items-center text-xs sm:text-sm text-[#403E44] min-w-0";
 
   const pinIconClassName = isNeighborhood ? "w-3 h-3 mr-1 flex-shrink-0" : "w-3 h-3 mr-1 flex-shrink-0";
-  const openingTimeRowClassName = isNeighborhood ? `${rowTextClassName} mt-1` : rowTextClassName;
 
   return (
     <div className={containerClassName}>
@@ -53,7 +52,7 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
           <img src={icPin} alt="" className={pinIconClassName} />
           <span className="truncate">{neighborhood}</span>
         </div>
-        <div className={openingTimeRowClassName}>
+        <div className={rowTextClassName}>
           <span className="truncate">{openingText}</span>
         </div>
       </div>
