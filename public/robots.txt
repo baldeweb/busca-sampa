@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rolepaulista.com.br/sitemap.xml
