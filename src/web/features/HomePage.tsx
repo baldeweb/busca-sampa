@@ -18,6 +18,8 @@ import { fetchRecommendations } from "@/data/repositories/RecommendationReposito
 import { getPlaceTypeLabel, getPlaceTypeLabelSingular } from "@/core/domain/enums/placeTypeLabel";
 import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import { NearbyMapModal } from "@/web/components/home/NearbyMapModal";
+import imgMuseuIpiranga from "@/assets/imgs/background/img_museu_ipiranga.jpg";
+import imgPaulista from "@/assets/imgs/background/img_paulista.jpg";
 
 export function HomePage() {
   // 🔹 Carrega todas as categorias
@@ -311,8 +313,13 @@ export function HomePage() {
 
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2B2930] py-8">
-        <div className="mx-auto max-w-5xl px-4 sm:px-4">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-8 overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
+          style={{ backgroundImage: `url(${imgMuseuIpiranga})`, opacity: 0.2 }}
+        />
+        <div className="absolute inset-0 w-full h-full bg-[#2B2930] z-10" style={{ opacity: 0.65 }} />
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
               <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
@@ -445,8 +452,13 @@ export function HomePage() {
 
       {/* Seção: Por bairro (grid 2x4 retangular) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] py-8">
-        <div className="mx-auto max-w-5xl px-4 sm:px-4">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-8 overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
+          style={{ backgroundImage: `url(${imgPaulista})`, opacity: 0.2 }}
+        />
+        <div className="absolute inset-0 w-full h-full bg-[#48464C] z-10" style={{ opacity: 0.65 }} />
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
             {topNeighborhoods.map((n) => (
