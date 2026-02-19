@@ -619,6 +619,7 @@ export const PlaceListPage: React.FC = () => {
                             selectedEnv={selectedEnv}
                             onSelect={(value) => setSelectedEnv(value)}
                             onViewMore={() => setShowEnvironmentModal(true)}
+                            title={((routeType || '').toLowerCase() === 'abrem-hoje' || mappedType === 'FREE') ? t('placeList.environmentTitlePlace', { defaultValue: 'Tipo de lugar:' }) : undefined}
                         />
                     )}
                 </div>
