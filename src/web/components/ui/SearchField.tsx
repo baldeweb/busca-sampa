@@ -16,14 +16,14 @@ export function SearchField({ value, onChange, onSearch, placeholder }: SearchFi
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className={`flex-1 ${radiusClass} border bg-[#F5F5F5] px-4 py-3 text-[#48464C] placeholder:text-[#48464C]/70 focus:outline-none`}
-        style={{ borderColor: '#48464C' }}
+        className={`flex-1 ${radiusClass} border bg-[#F5F5F5] px-4 py-3 text-[#212121] placeholder:text-[#212121]/70 focus:outline-none`}
+        style={{ borderColor: '#212121' }}
       />
       <button
         type="button"
         onClick={onSearch}
         className="bg-[#F5F5F5] px-3.5 py-3.5"
-        style={{ borderColor: '#48464C' }}
+        style={{ borderColor: '#212121' }}
         aria-label="Buscar"
       >
         <img src={icSearch} alt="Buscar" className="w-5 h-5" />

@@ -318,7 +318,7 @@ export function HomePage() {
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{ backgroundImage: `url(${imgMuseuIpiranga})`, opacity: 0.2 }}
         />
-        <div className="absolute inset-0 w-full h-full bg-[#2B2930] z-10" style={{ opacity: 0.65 }} />
+        <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.55 }} />
         <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
@@ -330,7 +330,7 @@ export function HomePage() {
                 <button
                   type="button"
                   onClick={() => setIsDistanceModalOpen(true)}
-                  className="min-w-[140px] rounded-full bg-[#0F0D13] text-white px-3 py-1 text-sm sm:px-4 sm:py-2 border border-[#F5F5F5]"
+                  className="min-w-[140px] rounded-full bg-[#212121] text-white px-3 py-1 text-sm sm:px-4 sm:py-2 border border-[#F5F5F5]"
                 >
                   {t('common.changeDistance')}
                 </button>
@@ -417,7 +417,7 @@ export function HomePage() {
                             <button
                               type="button"
                               onClick={(e) => { e.stopPropagation(); setMapCategory(s.category); }}
-                              className="min-w-[120px] text-sm rounded-full bg-[#0F0D13] text-white px-3 py-1 border border-[#F5F5F5]"
+                              className="min-w-[120px] text-sm rounded-full bg-[#212121] text-white px-3 py-1 border border-[#F5F5F5]"
                             >
                               ver no mapa
                             </button>
@@ -457,7 +457,7 @@ export function HomePage() {
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{ backgroundImage: `url(${imgPaulista})`, opacity: 0.2 }}
         />
-        <div className="absolute inset-0 w-full h-full bg-[#48464C] z-10" style={{ opacity: 0.65 }} />
+        <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.55 }} />
         <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
@@ -466,7 +466,7 @@ export function HomePage() {
                 key={n.id}
                 type="button"
                 onClick={() => handleNeighborhoodSelect(n)}
-                className="btn-hover-red w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[2px] px-4 py-4 leading-tight transition-colors"
+                className="btn-hover-gray w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[2px] px-4 py-4 leading-tight transition-colors"
               >
                 {n.neighborhoodName}
               </button>

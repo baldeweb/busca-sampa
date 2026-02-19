@@ -426,14 +426,14 @@ export function TravelItineraryPage() {
                             <div className="flex items-start gap-4">
                                 <img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
                                 <div>
-                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
+                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
                                     <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
                                 </div>
                             </div>
 
                             <div>
                                 <div className="pt-4">
-                                    <div className="relative flex flex-row w-full border-b border-[#48464C] overflow-x-auto no-scrollbar">
+                                    <div className="relative flex flex-row w-full border-b border-[#212121] overflow-x-auto no-scrollbar">
                                         <div
                                             role="button"
                                             tabIndex={0}
@@ -443,7 +443,7 @@ export function TravelItineraryPage() {
                                             }}
                                             className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
                                                 tourMode === 'walking'
-                                                    ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#48464C] rounded-tl-[8px] rounded-tr-[8px]'
+                                                    ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#212121] rounded-tl-[8px] rounded-tr-[8px]'
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
@@ -461,7 +461,7 @@ export function TravelItineraryPage() {
                                             }}
                                             className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
                                                 tourMode === 'city'
-                                                    ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#48464C] rounded-tl-[8px] rounded-tr-[8px]'
+                                                    ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#212121] rounded-tl-[8px] rounded-tr-[8px]'
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
@@ -568,7 +568,7 @@ export function TravelItineraryPage() {
 
                         <div
                             ref={mapRef}
-                            style={{ height: 320, border: '1px solid #48464C', borderRadius: 8, overflow: 'hidden' }}
+                            style={{ height: 320, border: '1px solid #212121', borderRadius: 8, overflow: 'hidden' }}
                             className="w-full mt-4"
                         />
 

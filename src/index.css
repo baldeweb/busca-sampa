@@ -75,9 +75,9 @@ button {
   text-transform: uppercase !important;
   border-radius: 50px !important;
   background: #F5F5F5 !important;
-  border: 1px solid #48464C !important;
+  border: 1px solid #212121 !important;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
-  color: #48464C !important;
+  color: #212121 !important;
 }
 
 /* Plain button (opt-out of global style) */
@@ -105,7 +105,7 @@ button.btn-plain {
 /* Red outline button variant */
 .btn-red-outline {
   background: transparent !important;
-  color: #48464C !important;
+  color: #212121 !important;
   border: 1px solid #B3261E !important;
   border-radius: 50px !important;
   text-transform: uppercase !important;
@@ -126,7 +126,7 @@ button.btn-plain {
 
 /* Dark button variant */
 .btn-dark {
-  background: #48464C !important;
+  background: #212121 !important;
   color: #F5F5F5 !important;
   border: 1px solid #F5F5F5 !important;
   border-radius: 50px !important;
@@ -153,6 +153,13 @@ button.btn-plain {
   padding-bottom: 0.5rem !important;
 }
 
+.category-card:hover,
+.category-card:active {
+  background: #D6D6D6 !important;
+  color: #212121 !important;
+  border-color: #212121 !important;
+}
+
 .btn-square {
   border-radius: 8px !important;
   font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
@@ -161,7 +168,7 @@ button.btn-plain {
 .btn-square-dark {
   border-radius: 8px !important;
   font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-Regular', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  background: #48464C !important;
+  background: #212121 !important;
   color: #F5F5F5 !important;
   border: 1px solid #F5F5F5 !important;
 }
@@ -175,6 +182,18 @@ button.btn-plain {
   background: #B3261E !important;
   color: #F5F5F5 !important;
   border-color: #F5F5F5 !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-hover-gray {
+  transition: all 0.5s ease !important;
+}
+
+.btn-hover-gray:hover,
+.btn-hover-gray:active {
+  background: #D6D6D6 !important;
+  color: #212121 !important;
+  border-color: #212121 !important;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -195,8 +214,8 @@ button.btn-plain {
 }
 
 .btn-close-round-dark {
-  color: #48464C !important;
-  border-color: #48464C !important;
+  color: #212121 !important;
+  border-color: #212121 !important;
 }
 
 /* Footer labels use ScienceGothic-Regular */

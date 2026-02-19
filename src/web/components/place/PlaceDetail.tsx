@@ -202,7 +202,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     ) : (
                                         <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
                                     )}
-                                    <span className="bg-[#48464C] text-white text-xs px-2 py-1 rounded">{type}</span>
+                                    <span className="bg-[#212121] text-white text-xs px-2 py-1 rounded">{type}</span>
                                 </div>
                             </div>
                         </div>
@@ -373,7 +373,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             </section>
 
             { /* Midias Sociais */ }
-            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] mt-4">
+            <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] mt-4">
                 <div className="mx-auto max-w-5xl px-4 sm:px-12 py-8 sm:py-10 h-full flex flex-col justify-between text-white">
                         <div>
                             {instagramUrl && instagramUrl.trim().length > 0 && (

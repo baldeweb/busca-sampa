@@ -19,7 +19,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
 
   return (
     <>
-      <section className="fixed top-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-black border-b-2 border-bs-red z-50">
+      <section className="fixed top-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] border-b-2 border-bs-red z-50">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 flex items-center pt-8 sm:pt-12 pb-4">
           <button onClick={onBack} className="btn-plain text-white text-xl sm:text-2xl font-bold flex items-center">
             <FaArrowLeft className="mr-2" /> <span className="footer-label text-xl sm:text-2xl">{t('common.back')}</span>

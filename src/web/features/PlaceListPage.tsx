@@ -607,7 +607,7 @@ export const PlaceListPage: React.FC = () => {
                                 onTouchCancel={cancelHeaderLongPress}
                             />
                             <div>
-                                <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
+                                <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
                                 <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
                             </div>
                         </div>
@@ -667,7 +667,7 @@ export const PlaceListPage: React.FC = () => {
             />
             {/* Modal antigo de filtros removido em favor dos menus inline */}
             {/* Lista de lugares */}
-            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] shadow-lg`}>
+            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg`}>
                 <div className="mx-auto max-w-5xl px-4 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}

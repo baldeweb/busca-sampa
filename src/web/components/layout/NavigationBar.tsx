@@ -20,10 +20,10 @@ export function NavigationBar() {
     return (
         <footer
             className="fixed bottom-0 left-0 right-0 bg-[#F5F5F5] z-50 rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[0px] rounded-br-[0px]"
-            style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)", borderTop: '1px solid #48464C' }}
+            style={{ paddingBottom: "env(safe-area-inset-bottom)", WebkitPaddingEnd: "env(safe-area-inset-right)", borderTop: '1px solid #212121' }}
         >
             <div className="mx-auto max-w-5xl px-4">
-                <nav className="flex text-[#48464C] justify-center">
+                <nav className="flex text-[#212121] justify-center">
 
                 <NavLink
                     to="/"

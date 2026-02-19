@@ -41,7 +41,7 @@ export function AboutMePage() {
         {/* Accordion FAQ-style */}
         <Accordion>
           <AccordionItem label={t('aboutMe.accordion.aboutLabel')}>
-            <div className="text-base leading-relaxed #48464C">
+            <div className="text-base leading-relaxed #212121">
               <ul className="list-inside list-disc pl-5 space-y-2">
                 {aboutList.map((item) => (
                   <li key={item}>{item}</li>

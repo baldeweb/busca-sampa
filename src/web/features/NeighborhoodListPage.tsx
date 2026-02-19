@@ -358,7 +358,7 @@ export const NeighborhoodListPage: React.FC = () => {
               <div className="flex items-start gap-4">
                 <img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />
                 <div>
-                  <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-lg sm:text-2xl text-[#48464C]" />
+                  <SectionHeading title={titleNeighborhood} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
                   <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('neighborhoodList.intro')}</p>
                 </div>
               </div>
@@ -422,7 +422,7 @@ export const NeighborhoodListPage: React.FC = () => {
       />
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
-      <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#48464C] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
+      <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
         <div className="mx-auto max-w-5xl px-4 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             {sortedPlaces.length === 0 && (
