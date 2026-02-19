@@ -2016,14 +2016,14 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "Tutóia",
-                "number": "312",
+                "street": "da Glória",
+                "number": "622",
                 "city": "São Paulo",
-                "neighborhood": "Paraíso",
-                "postalCode": "04007-001",
+                "neighborhood": "Liberdade",
+                "postalCode": "01510-001",
                 "isMainUnity": true,
-                "latitude": -23.573782,
-                "longitude": -46.651193
+                "latitude": -23.558772,
+                "longitude": -46.634013
             },
             {
                 "id": 2,
@@ -2033,20 +2033,31 @@
                 "neighborhood": "Indianópolis",
                 "postalCode": "04029-200",
                 "isMainUnity": false,
-                "latitude": -23.604550,
-                "longitude": -46.662979
+                "latitude": -23.604563,
+                "longitude": -46.663019
             },
             {
                 "id": 3,
-                "street": "da Glória",
-                "number": "622",
+                "street": "Tutóia",
+                "number": "312",
                 "city": "São Paulo",
-                "neighborhood": "Liberdade",
-                "postalCode": "01510-001",
+                "neighborhood": "Paraíso",
+                "postalCode": "04007-001",
                 "isMainUnity": false,
-                "latitude": -23.558803,
-                "longitude": -46.634009
-            }
+                "latitude": -23.573768,
+                "longitude": -46.651222
+            },
+            {
+                "id": 4,
+                "street": "Eleonora Cintra",
+                "number": "1040",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Anália Franco",
+                "postalCode": "03337-000",
+                "isMainUnity": false,
+                "latitude": -23.559646,
+                "longitude": -46.557857
+            },
         ],
         "linkMenu": "",
         "linkWebsite": "http://ronghe.com.br/",
@@ -2093,5 +2104,204 @@
         "linkWebsite": "",
         "linkInstagram": "http://instagram.com/laperuanabr",
         "tags": ["PERUVIAN"]
+    },
+    {
+        "id": 49,
+        "name": "Krapook Khao",
+        "type": "RESTAURANTS",
+        "phones": [
+            {
+                "number": "11913672163",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "KRAPOOKKHAO_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Tailandêsa"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Mário Amaral",
+                "number": "212",
+                "city": "São Paulo",
+                "neighborhood": "Paraíso",
+                "postalCode": "04002-020",
+                "isMainUnity": true,
+                "latitude": -23.572491,
+                "longitude": -46.649532
+            }
+        ],
+        "linkMenu": "https://linktr.ee/krapookkhao?utm_source=linktree_profile_share&ltsid=a80167b6-a8c3-4c31-ab9a-e45710174e96",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/krapookkhao/",
+        "tags": ["THAI"]
+    },
+    {
+        "id": 50,
+        "name": "Kiichi",
+        "type": "RESTAURANTS",
+        "phones": [
+            {
+                "number": "1130513330",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "KIICHI_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Japonesa com opções de rodízio e de coração asiática",
+            "As unidades localizadas em: Shopping Center 3 e Shopping Morumbi, abrem todos os dias, das 12h às 22h"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alameda Lorena",
+                "number": "138",
+                "city": "São Paulo",
+                "neighborhood": "Jardins",
+                "postalCode": "01424-002",
+                "isMainUnity": true,
+                "latitude": -23.572893,
+                "longitude": -46.656396
+            },
+            {
+                "id": 2,
+                "street": "Paulista",
+                "number": "2064",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01310-928",
+                "isMainUnity": false,
+                "latitude": -23.558458,
+                "longitude": -46.659628
+            },
+            {
+                "id": 3,
+                "street": "Av. Giovanni Gronchi",
+                "number": "5930",
+                "city": "São Paulo",
+                "neighborhood": "Vila Andrade",
+                "postalCode": "05724-002",
+                "isMainUnity": false,
+                "latitude": -23.631789,
+                "longitude": -46.736688
+            }
+        ],
+        "linkMenu": "https://kiichi.com.br/cardapios/jardins.pdf",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/rongheoficial/",
+        "tags": ["JAPANESE", "ALLYOUCAN_EAT"]
+    },
+    {
+        "id": 51,
+        "name": "Big Kahuna",
+        "type": "RESTAURANTS",
+        "phones": [
+            {
+                "number": "1130513330",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "BIG_KAHUNA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburgueria informal temática do filme Pulp Fiction que serve hambúrguer, cachorro-quente e milk-shake."
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alameda Lorena",
+                "number": "53",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01424-001",
+                "isMainUnity": true,
+                "latitude": -23.573360,
+                "longitude": -46.655925
+            }
+        ],
+        "linkMenu": "https://www.bigkahunaburger.com.br/menu/",
+        "linkWebsite": "http://bigkahunaburger.com.br/",
+        "linkInstagram": "https://www.instagram.com/bigkahunaburgerr/",
+        "tags": ["HAMBURGUER", "THEMED"]
+    },
+    {
+        "id": 52,
+        "name": "Pizzaria Veridiana",
+        "type": "RESTAURANTS",
+        "phones": [
+            {
+                "number": "1138019000",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "PIZZARIA_VERIDIANA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Pizzaria tradicional com variedade de sabores e ambiente familiar.",
+            "Decoração inspirada na Toscana, com parede de tijolinhos."
+        ],
+        "priceRange": "EXPENSIVE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Dona Veridiana",
+                "number": "661",
+                "city": "São Paulo",
+                "neighborhood": "Higienópolis",
+                "postalCode": "01238-010",
+                "isMainUnity": true,
+                "latitude": -23.545140,
+                "longitude": -46.652066
+            },
+            {
+                "id": 2,
+                "street": "José Maria Lisboa",
+                "number": "493",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01423-001",
+                "isMainUnity": false,
+                "latitude": -23.568984,
+                "longitude": -46.656987
+            }
+        ],
+        "linkMenu": "https://www.veridiana.com.br/cardapio",
+        "linkWebsite": "https://www.veridiana.com.br/cardapio",
+        "linkInstagram": "https://www.instagram.com/veridianapizzaria/",
+        "tags": ["ITALIAN"]
     }
 ]

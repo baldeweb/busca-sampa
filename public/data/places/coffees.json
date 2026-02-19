@@ -210,5 +210,148 @@
         "linkWebsite": "https://padariabellapaulista.com.br/",
         "linkInstagram": "https://www.instagram.com/padariabellapaulista/",
         "tags": []
+    },
+    {
+        "id": 6,
+        "name": "Mug.sp",
+        "type": "COFFEES",
+        "phones": [
+            {
+                "number": "1130514252",
+                "isWhatsApp": false
+            },
+            
+            {
+                "number": "1132662885",
+                "isWhatsApp": false
+            },
+            {
+                "number": "1130514252",
+                "isWhatsApp": false
+            },
+            {
+                "number": "1123661567",
+                "isWhatsApp": false
+            },
+            {
+                "number": "1138147134",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "ALWAYS_OPEN",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria localizada nos Jardins"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Capitão Pinto Ferreira",
+                "number": "38",
+                "city": "São Paulo",
+                "neighborhood": "Jardins",
+                "postalCode": "01423-020",
+                "isMainUnity": true,
+                "latitude": -23.571537,
+                "longitude": -46.654676
+            },
+            {
+                "id": 2,
+                "street": "Pamplona",
+                "number": "145",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01405-100",
+                "isMainUnity": false,
+                "latitude": -23.559959,
+                "longitude": -46.651693
+            },
+            {
+                "id": 3,
+                "street": "Paulista",
+                "number": "1079",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01311-200",
+                "isMainUnity": false,
+                "latitude": -23.564731,
+                "longitude": -46.652668
+            },
+            {
+                "id": 4,
+                "street": "Barão de Tatuí",
+                "number": "361",
+                "city": "São Paulo",
+                "neighborhood": "Santa Cecília",
+                "postalCode": "01226-030",
+                "isMainUnity": false,
+                "latitude": -23.539154,
+                "longitude": -46.654198
+            },
+            {
+                "id": 5,
+                "street": "Teodoro Sampaio",
+                "number": "2700",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05426-100",
+                "isMainUnity": false,
+                "latitude": -23.566851,
+                "longitude": -46.693054
+            }
+        ],
+        "linkMenu": "https://www.dguests.com.br/cardapio/mugsp.jardins",
+        "linkWebsite": "https://linktr.ee/mugsp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnzx2K9Q9jq1qCYJeuLS8R-3YfD21CU-vPgxZU4FEg3i2j_2OueKxtY-oz0eY_aem_cmrzGuzy05yAMnaU11GD4w",
+        "linkInstagram": "https://www.instagram.com/mug.sp/",
+        "tags": ["COWORKING", "BISTRO"]
+    },    
+    {
+        "id": 7,
+        "name": "Bakehaus - Padaria Artesanal",
+        "type": "COFFEES",
+        "phones": [
+            {
+                "number": "11941806853",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "BAKEHAUS_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Pães de fermentação natural e folhados artesanais"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Saint Hilaire",
+                "number": "226",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01423-040",
+                "isMainUnity": true,
+                "latitude": -23.570354,
+                "longitude": -46.654783
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://linktr.ee/bakehaus.sp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnH9Bx2-tkpAQc_Jbew8hBGNQwOa1CN253HeDuT8tdJBeLId4-7aabUw2XuRM_aem_GSsxoGDF7lZlQ7Ye2yIfOw",
+        "linkInstagram": "https://www.instagram.com/bakehaus.sp",
+        "tags": []
     }
 ]

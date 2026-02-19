@@ -69,6 +69,7 @@ export function getEnvironmentLabel(tag: string): string {
     SINGLE_ACTIVITY: "Individual",
     FAMILY_ACTIVITY: "Família",
     GROUP_ACTIVITY: "Grupos",
+    COWORKING: "Coworking",
     OTHERS: "Outros",
   };
   return map[tag] || tag;

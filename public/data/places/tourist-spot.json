@@ -2251,5 +2251,47 @@
         "linkWebsite": "http://www.itaucultural.org.br/",
         "linkInstagram": "",
         "tags": ["ART_EXHIBITION", "CULTURE"]
+    },
+    {
+        "id": 67,
+        "name": "Casa Guilherme de Almeida",
+        "type": "TOURIST_SPOT",
+        "phones": [
+            {
+                "number": "1121681777",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "ITAU_CULTURAL_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Prédio de vidro com exposições sobre a história do Brasil e a natureza, além de programação teatral.",
+            "Tem a famosa escadaria com animais e plantas desenhados, localizada na entrada do prédio, que é um dos pontos mais fotografados do local."
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Paulista",
+                "number": "149",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01311-000",
+                "isMainUnity": true,
+                "latitude": -23.570265,
+                "longitude": -46.645699
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.itaucultural.org.br/",
+        "linkInstagram": "",
+        "tags": ["ART_EXHIBITION", "CULTURE"]
     }
 ]

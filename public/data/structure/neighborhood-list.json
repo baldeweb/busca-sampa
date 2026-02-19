@@ -194,5 +194,13 @@
     {
         "id": 49,
         "neighborhoodName": "Interlagos"
+    },
+    {
+        "id": 50,
+        "neighborhoodName": "Vila Andrade"
+    },
+    {
+        "id": 51,
+        "neighborhoodName": "Higienópolis"
     }
 ]
