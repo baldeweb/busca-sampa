@@ -163,7 +163,9 @@ const resources = {
       },
       searchPage: {
         title: 'Busque um lugar',
-        subtitle: 'Sabe o nome do lugar de cabeça? Procure por nome que é mais rápido',
+        subtitle: 'Lembra o nome do lugar de cabeça? Digite o nome dele abaixo que é mais rápido',
+        fieldLabel: 'Nome do local:',
+        resultsTitle: 'Resultados encontrados',
         placeholder: 'Ex.: Padaria Pão Legal'
       },
       distanceSelect: {
@@ -428,7 +430,9 @@ const resources = {
       footer: { home: 'Inicio', search: 'Buscar', about: 'Sobre' },
       searchPage: {
         title: 'Busca un lugar',
-        subtitle: '¿Sabes el nombre de memoria? Busca por nombre, es más rápido',
+        subtitle: '¿Recuerdas el nombre del lugar de memoria? Escribe su nombre abajo, que es más rápido',
+        fieldLabel: 'Nombre del lugar:',
+        resultsTitle: 'Resultados encontrados',
         placeholder: 'Ej.: Panadería Pan Legal'
       },
       distanceSelect: { title: 'Seleccione la distancia', searchButton: 'Buscar' },
@@ -642,7 +646,9 @@ const resources = {
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
       searchPage: {
         title: 'Cherchez un lieu',
-        subtitle: 'Vous connaissez le nom par cœur ? Cherchez par nom, c\'est plus rapide',
+        subtitle: 'Vous vous souvenez du nom du lieu ? Saisissez son nom ci-dessous, c\'est plus rapide',
+        fieldLabel: 'Nom du lieu :',
+        resultsTitle: 'Résultats trouvés',
         placeholder: 'Ex. : Boulangerie Pain Legal'
       },
       distanceSelect: { title: 'Sélectionnez la distance', searchButton: 'Chercher' },
@@ -745,7 +751,9 @@ const resources = {
       footer: { home: 'Главная', search: 'Поиск', about: 'О сайте' },
       searchPage: {
         title: 'Найдите место',
-        subtitle: 'Помните название? Ищите по имени — так быстрее',
+        subtitle: 'Помните название места? Введите его ниже — так быстрее',
+        fieldLabel: 'Название места:',
+        resultsTitle: 'Найденные результаты',
         placeholder: 'Напр.: Пекарня Pao Legal'
       },
       distanceSelect: { title: 'Выберите расстояние', searchButton: 'Искать' },
@@ -900,7 +908,9 @@ const resources = {
       footer: { home: '首页', search: '搜索', about: '关于' },
       searchPage: {
         title: '搜索地点',
-        subtitle: '记得名字吗？按名称搜索更快',
+        subtitle: '还记得这个地方的名字吗？在下方输入名称会更快',
+        fieldLabel: '地点名称：',
+        resultsTitle: '找到的结果',
         placeholder: '例：Pao Legal 面包店'
       },
       distanceSelect: { title: '选择距离', searchButton: '搜索' },
@@ -1029,7 +1039,9 @@ const resources = {
       },
       searchPage: {
         title: 'Search for a place',
-        subtitle: 'Know the name already? Search by name, it is faster',
+        subtitle: 'Remember the place name by heart? Type its name below, it is faster',
+        fieldLabel: 'Place name:',
+        resultsTitle: 'Results found',
         placeholder: 'E.g.: Pao Legal Bakery'
       },
       whereIsToday: { title: 'So, where are we going today?', subtitle: 'List of places I’ve been, by category. Take a look ;)', opensToday: 'Open today' },
@@ -1246,7 +1258,9 @@ const resources = {
       footer: { home: 'Start', search: 'Suchen', about: 'Über' },
       searchPage: {
         title: 'Suche nach einem Ort',
-        subtitle: 'Kennst du den Namen? Suche nach dem Namen, das ist schneller',
+        subtitle: 'Erinnerst du dich an den Namen des Ortes? Gib ihn unten ein, das geht schneller',
+        fieldLabel: 'Name des Ortes:',
+        resultsTitle: 'Gefundene Ergebnisse',
         placeholder: 'z. B.: Bäckerei Pao Legal'
       },
       placeDetail: {
@@ -1443,7 +1457,9 @@ const resources = {
       footer: { home: 'ホーム', search: '検索', about: '概要' },
       searchPage: {
         title: '場所を探す',
-        subtitle: '名前を覚えているなら、名前で探すほうが早いです',
+        subtitle: '場所の名前を覚えていますか？下に名前を入力すると早いです',
+        fieldLabel: '場所名：',
+        resultsTitle: '検索結果',
         placeholder: '例：パダリア パン・レガル'
       },
       placeDetail: {
@@ -1631,7 +1647,9 @@ const resources = {
       footer: { home: 'الرئيسية', search: 'بحث', about: 'حول' },
       searchPage: {
         title: 'ابحث عن مكان',
-        subtitle: 'هل تعرف الاسم؟ ابحث بالاسم فهو أسرع',
+        subtitle: 'هل تتذكر اسم المكان؟ اكتب اسمه أدناه فذلك أسرع',
+        fieldLabel: 'اسم المكان:',
+        resultsTitle: 'النتائج التي تم العثور عليها',
         placeholder: 'مثال: مخبز باو ليغال'
       },
       placeDetail: {
@@ -1828,7 +1846,9 @@ const resources = {
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       searchPage: {
         title: 'Cerca un luogo',
-        subtitle: 'Sai già il nome? Cerca per nome, è più veloce',
+        subtitle: 'Ricordi il nome del posto a memoria? Digita il nome qui sotto, è più veloce',
+        fieldLabel: 'Nome del luogo:',
+        resultsTitle: 'Risultati trovati',
         placeholder: 'Es.: Panetteria Pao Legal'
       },
       placeDetail: {
@@ -2019,7 +2039,9 @@ const resources = {
       footer: { home: 'Anasayfa', search: 'Zoeken', about: 'Over' },
       searchPage: {
         title: 'Zoek een plek',
-        subtitle: 'Weet je de naam nog? Zoek op naam, dat is sneller',
+        subtitle: 'Herinner je de naam van de plek nog? Typ de naam hieronder, dat is sneller',
+        fieldLabel: 'Naam van de plek:',
+        resultsTitle: 'Gevonden resultaten',
         placeholder: 'Bijv.: Bakkerij Pao Legal'
       },
       placeDetail: {
@@ -2201,7 +2223,9 @@ const resources = {
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
       searchPage: {
         title: 'Bir yer ara',
-        subtitle: 'Ismi aklında mı? İsme göre aramak daha hızlı',
+        subtitle: 'Mekânın adını aklında tutuyor musun? Aşağıya adını yazmak daha hızlı',
+        fieldLabel: 'Mekân adı:',
+        resultsTitle: 'Bulunan sonuçlar',
         placeholder: 'Örn.: Pao Legal Fırını'
       },
       placeDetail: {
@@ -2382,7 +2406,9 @@ const resources = {
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
       searchPage: {
         title: 'Wyszukaj miejsce',
-        subtitle: 'Znasz nazwę? Szukaj po nazwie, jest szybciej',
+        subtitle: 'Pamiętasz nazwę miejsca? Wpisz ją poniżej, tak będzie szybciej',
+        fieldLabel: 'Nazwa miejsca:',
+        resultsTitle: 'Znalezione wyniki',
         placeholder: 'Np.: Piekarnia Pao Legal'
       },
       placeDetail: {

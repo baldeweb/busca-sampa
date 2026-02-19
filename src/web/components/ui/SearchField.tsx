@@ -8,9 +8,9 @@ interface SearchFieldProps {
 }
 
 export function SearchField({ value, onChange, onSearch, placeholder }: SearchFieldProps) {
-  const radiusClass = 'rounded-md';
+  const radiusClass = 'rounded-full';
   return (
-    <div className="flex items-center w-full gap-2 mt-12">
+    <div className="flex items-center w-full gap-2">
       <input
         type="text"
         value={value}

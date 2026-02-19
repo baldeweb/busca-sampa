@@ -59,6 +59,7 @@ export function SearchPage() {
       return nameKey.includes(normalizedQueryKey);
     });
   }, [allPlaces, normalizedQueryKey]);
+  const hasResults = normalizedQuery.length > 0 && results.length > 0;
 
   const getPlaceIconSrc = (type?: string) => {
     switch (type) {
@@ -92,42 +93,35 @@ export function SearchPage() {
   }
 
   return (
-    <div className="min-h-screen bg-bs-bg text-white flex flex-col">
+    <div className="min-h-screen bg-[#FFFFFF] text-white flex flex-col">
       <Toolbar onBack={() => navigate(-1)} />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-        <div className="mx-auto max-w-5xl px-4 sm:px-12 pt-0 pb-8 text-black">
-          <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 py-8">
-            <SectionHeading title={t('searchPage.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
-            <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
-              {t('searchPage.subtitle')}
-            </p>
-          </div>
-          <div className="mt-6">
-            <SearchField
-              value={query}
-              onChange={setQuery}
-              onSearch={handleSearch}
-              placeholder={t('searchPage.placeholder')}
-            />
-          </div>
-        </div>
-      </section>
-      {normalizedQuery.length > 0 && (
-        <>
-          <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-            <div className="mx-auto max-w-5xl px-4 sm:px-12 text-black">
-              <h3 className="mt-6 text-lg font-bold text-[#212121]">Resultados encontrados</h3>
+      <div className="flex-1 grid" style={{ gridTemplateRows: hasResults ? 'auto 1fr' : 'auto' }}>
+        <section className="relative shrink-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
+          <div className="mx-auto max-w-5xl px-4 sm:px-12 pt-0 pb-8 text-black">
+            <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 py-8">
+              <SectionHeading title={t('searchPage.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
+              <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
+                {t('searchPage.subtitle')}
+              </p>
             </div>
-          </section>
-          <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg">
-            <div className="mx-auto max-w-5xl px-4 sm:px-12">
-            <div className="rounded-t-lg overflow-hidden">
-              {results.length === 0 && (
-                <div className="p-4 text-gray-400">
-                  {t('common.noPlaces', { defaultValue: 'Nenhum lugar encontrado.' })}
-                </div>
-              )}
-              {results.length > 0 && (
+            <div className={`w-full transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
+              <div className={`w-full transition-all duration-500 ease-out ${hasResults ? '-translate-y-1 opacity-100' : 'translate-y-0 opacity-100'}`}>
+                <p className="mb-2 text-base font-semibold text-[#212121]">{t('searchPage.fieldLabel')}</p>
+                <SearchField
+                  value={query}
+                  onChange={setQuery}
+                  onSearch={handleSearch}
+                  placeholder={t('searchPage.placeholder')}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        {hasResults && (
+          <section className="relative h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg transition-all duration-500 ease-out opacity-100 translate-y-0">
+            <div className="mx-auto max-w-5xl px-4 sm:px-12 h-full min-h-full flex flex-col">
+              <h3 className="pt-6 text-lg font-bold text-[#F5F5F5]">{t('searchPage.resultsTitle')}</h3>
+              <div className="rounded-t-lg overflow-hidden flex-1">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
                   {results.map((place) => {
                     const neighborhood = place.addresses?.[0]?.neighborhood || t('list.variablePlace');
@@ -160,12 +154,11 @@ export function SearchPage() {
                     );
                   })}
                 </div>
-              )}
+              </div>
             </div>
-          </div>
           </section>
-        </>
-      )}
+        )}
+      </div>
     </div>
   );
 }
