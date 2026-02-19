@@ -1676,6 +1676,17 @@ const resources = {
         subtitle: 'قائمة الأماكن اللي زرتها حسب الفئة، بص عليها ;)',
         opensToday: 'مفتوح اليوم'
       },
+      travelItinerary: {
+        title: 'المسارات',
+        placeholder: 'مسارات مشي مقترحة لتتعرف على عدة أماكن قريبة دون الحاجة للإنفاق على المواصلات',
+        routeOptionsTitle: 'خيارات المسار:',
+        listTitle: 'المسارات',
+        viewRoute: 'عرض المسار',
+        modes: {
+          walking: 'جولة مشي',
+          city: 'جولة في المدينة'
+        }
+      },
       placeList: {
         environmentTitle: 'نوع الأجواء:',
         environmentTitlePlace: 'نوع المكان:',
