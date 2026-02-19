@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Tour na Allianz Parque",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1148006680",
@@ -41,12 +40,14 @@
         "tags": [
             "TOUR",
             "STADIUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
         ]
     },
     {
         "id": 2,
         "name": "CTN - Centro de Tradições Nordestinas",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1134889400",
@@ -82,13 +83,16 @@
         "linkMenu": "",
         "linkInstagram": "https://www.instagram.com/ctnsp/",
         "tags": [
-            "LIVE_MUSIC", "CULTURE"
+            "LIVE_MUSIC",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
         ]
     },
     {
         "id": 3,
         "name": "Memorial da América Latina",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1138234600",
@@ -124,12 +128,16 @@
         ],
         "linkWebsite": "http://www.memorial.org.br/",
         "linkInstagram": "https://www.instagram.com/memorialdaamericalatina/",
-        "tags": ["CULTURE"]
+        "tags": [
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 4,
         "name": "MASP",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1131495959",
@@ -159,18 +167,24 @@
                 "neighborhood": "Bela Vista",
                 "postalCode": "01310-200",
                 "isMainUnity": true,
-                "latitude": -23.561660,
+                "latitude": -23.56166,
                 "longitude": -46.656107
             }
         ],
         "linkMenu": "",
         "linkInstagram": "https://www.instagram.com/masp/",
-        "tags": ["ART_EXHIBITION", "CULTURE", "MUSEUM"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE",
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 5,
         "name": "Museu da Energia",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "MUSEU_ENERGIA_DAYTIME",
@@ -199,12 +213,16 @@
         "linkMenu": "",
         "linkWebsite": "https://www.energiaesaneamento.org.br/",
         "linkInstagram": "https://www.instagram.com/museudaenergia/",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 6,
         "name": "Museu da Imigração de São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1126921866",
@@ -231,19 +249,23 @@
                 "neighborhood": "Mooca",
                 "postalCode": "03164-300",
                 "isMainUnity": true,
-                "latitude": -23.549100,
+                "latitude": -23.5491,
                 "longitude": -46.613061
             }
         ],
         "linkMenu": "",
         "linkWebsite": "http://museudaimigracao.org.br/",
         "linkInstagram": "https://www.instagram.com/museudaimigracao/",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 7,
         "name": "Parque da Ciência Butantan",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1126279300",
@@ -282,12 +304,14 @@
         "linkMenu": "",
         "linkWebsite": "https://parquedaciencia.butantan.gov.br/",
         "linkInstagram": "https://www.instagram.com/butantanoficial/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 8,
         "name": "Museu Biológico",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1126279452",
@@ -321,12 +345,16 @@
         "linkMenu": "",
         "linkWebsite": "https://butantan.gov.br/atracoes/museu-biologico",
         "linkInstagram": "",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 9,
         "name": "Museu da Polícia Civil de SP",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1134683360",
@@ -362,12 +390,16 @@
         "linkMenu": "",
         "linkWebsite": "https://www.policiacivil.sp.gov.br/portal/faces/pages_home/institucional/museuPoliciaCivil?_afrLoop=1903915162033890&_afrWindowMode=0&_afrWindowId=null#!%40%40%3F_afrWindowId%3Dnull%26_afrLoop%3D1903915162033890%26_afrWindowMode%3D0%26_adf.ctrl-state%3D1vv7ecbsd_4",
         "linkInstagram": "",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 11,
         "name": "Museu Histórico do Instituto Butantã",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1126279300",
@@ -401,12 +433,16 @@
         "linkMenu": "",
         "linkWebsite": "http://www.butantan.gov.br/cultura/museus/museuhistorico",
         "linkInstagram": "",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 12,
         "name": "Praça do Relógio da USP",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
@@ -437,12 +473,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["PARK", "OPEN_24_HOURS"]
+        "tags": [
+            "PARK",
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 13,
         "name": "Basílica de Nossa Senhora do Rosário (Arautos do Evangelho)",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "11966332598",
@@ -478,12 +519,16 @@
         "linkMenu": "",
         "linkWebsite": "https://basilicaarautos.com.br/",
         "linkInstagram": "",
-        "tags": ["RELIGIOUS_SITE"]
+        "tags": [
+            "RELIGIOUS_SITE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 15,
         "name": "Caixa Cultural",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133214400",
@@ -517,12 +562,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.caixacultural.gov.br/Paginas/SaoPaulo.aspx",
         "linkInstagram": "",
-        "tags": ["HISTORIC_PLACE", "MUSEUM"]
+        "tags": [
+            "HISTORIC_PLACE",
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 16,
         "name": "Catedral da Sé",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1131076832",
@@ -562,12 +612,17 @@
         "linkMenu": "",
         "linkWebsite": "https://catedraldasesp.com/",
         "linkInstagram": "",
-        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
+        "tags": [
+            "RELIGIOUS_SITE",
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 17,
         "name": "Centro Cultural Banco do Brasil (CCBB)",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1142970600",
@@ -603,12 +658,18 @@
         "linkMenu": "",
         "linkWebsite": "https://ccbb.com.br/sao-paulo/programacao/",
         "linkInstagram": "",
-        "tags": ["HISTORIC_PLACE", "ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "HISTORIC_PLACE",
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 18,
         "name": "Edifício Copan",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1132595917",
@@ -645,12 +706,16 @@
         "linkMenu": "",
         "linkWebsite": "http://www.copansp.com.br/",
         "linkInstagram": "",
-        "tags": ["HISTORIC_PLACE"]
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 19,
         "name": "MAS SP (Museu da Arte Sacra de SP)",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133265393",
@@ -686,12 +751,17 @@
         "linkMenu": "",
         "linkWebsite": "http://museuartesacra.org.br/",
         "linkInstagram": "https://www.instagram.com/museuartesacra/",
-        "tags": ["MUSEUM", "RELIGIOUS_SITE"]
+        "tags": [
+            "MUSEUM",
+            "RELIGIOUS_SITE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 20,
         "name": "Mercado Municipal de São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1145801390",
@@ -727,12 +797,17 @@
         "linkMenu": "",
         "linkWebsite": "https://linktr.ee/mercadaospoficial?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn6YHLAbYGaKfhQdtFm_SY9u8TtC-Oiy2pTrs8ZmCmYpCZO1RY9gugrq9Z-s0_aem_87DhFjJR_-jwExxTAlW0oA",
         "linkInstagram": "https://www.instagram.com/mercadaospoficial/",
-        "tags": ["SHOP_LOCATION", "HISTORIC_PLACE"]
+        "tags": [
+            "SHOP_LOCATION",
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 21,
         "name": "Mosteiro São Bento",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133288799",
@@ -769,12 +844,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.mosteirodesaobentosp.com.br/",
         "linkInstagram": "",
-        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
+        "tags": [
+            "RELIGIOUS_SITE",
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 22,
         "name": "Museu Catavento",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133150051",
@@ -803,19 +883,23 @@
                 "neighborhood": "Centro Histórico",
                 "postalCode": "03003-060",
                 "isMainUnity": true,
-                "latitude": -23.544330,
+                "latitude": -23.54433,
                 "longitude": -46.626895
             }
         ],
         "linkMenu": "",
         "linkWebsite": "http://www.museucatavento.org.br/",
         "linkInstagram": "",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 23,
         "name": "Museu da Lingua Portuguesa",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1144701515",
@@ -851,12 +935,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.museudalinguaportuguesa.org.br/",
         "linkInstagram": "",
-        "tags": ["MUSEUM", "CULTURE"]
+        "tags": [
+            "MUSEUM",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 25,
         "name": "Museu das Favelas",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1142403355",
@@ -890,12 +979,17 @@
         "linkMenu": "",
         "linkWebsite": "http://www.museudasfavelas.org.br/",
         "linkInstagram": "",
-        "tags": ["MUSEUM", "CULTURE"]
+        "tags": [
+            "MUSEUM",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 26,
         "name": "Pateo do Collegio",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "",
@@ -931,12 +1025,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.pateodocollegio.com.br/",
         "linkInstagram": "",
-        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
+        "tags": [
+            "RELIGIOUS_SITE",
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 27,
         "name": "Pinacoteca de São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133241000",
@@ -973,12 +1072,17 @@
         "linkMenu": "",
         "linkWebsite": "https://pinacoteca.org.br/",
         "linkInstagram": "",
-        "tags": ["CULTURE", "HISTORIC_PLACE"]
+        "tags": [
+            "CULTURE",
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 28,
         "name": "Praça da Sé",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
@@ -1007,12 +1111,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE", "OPEN_24_HOURS"]
+        "tags": [
+            "OPENED_SPACE",
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 29,
         "name": "Rua 25 de Março",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
@@ -1043,12 +1152,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE", "OPEN_24_HOURS"]
+        "tags": [
+            "OPENED_SPACE",
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 30,
         "name": "Sala São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133679500",
@@ -1084,12 +1198,18 @@
         "linkMenu": "",
         "linkWebsite": "http://www.salasaopaulo.art.br/",
         "linkInstagram": "",
-        "tags": ["LIVE_MUSIC", "HISTORIC_PLACE", "CULTURE"]
+        "tags": [
+            "LIVE_MUSIC",
+            "HISTORIC_PLACE",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 31,
         "name": "Theatro Municipal de São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133677200",
@@ -1126,12 +1246,19 @@
         "linkMenu": "",
         "linkWebsite": "https://www.theatromunicipal.org.br/",
         "linkInstagram": "https://www.instagram.com/theatromunicipal/",
-        "tags": ["THEATER", "LIVE_MUSIC", "HISTORIC_PLACE", "CULTURE"]
+        "tags": [
+            "THEATER",
+            "LIVE_MUSIC",
+            "HISTORIC_PLACE",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 32,
         "name": "Autódromo de Interlagos",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1156668822",
@@ -1161,18 +1288,22 @@
                 "postalCode": "04801-000",
                 "isMainUnity": true,
                 "latitude": -23.703365,
-                "longitude": -46.701040
+                "longitude": -46.70104
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://autodromodeinterlagos.prefeitura.sp.gov.br",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE"]
+        "tags": [
+            "OPENED_SPACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 33,
         "name": "Teatro Santander",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1148106868",
@@ -1201,19 +1332,24 @@
                 "neighborhood": "Itaim Bibi",
                 "postalCode": "04543-011",
                 "isMainUnity": true,
-                "latitude":-23.590864,
+                "latitude": -23.590864,
                 "longitude": -46.689089
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.teatrosantander.com.br/",
         "linkInstagram": "",
-        "tags": ["THEATER", "CULTURE"]
+        "tags": [
+            "THEATER",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 34,
         "name": "Neo Química Arena (Itaquerão)",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1131524001",
@@ -1250,12 +1386,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.neoquimicaarena.com.br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnMIOMquYXVfJPs9E-dUWfEX1KXiJ3CH0rN3fSaeyJWXLXusCcU69pwzveyxw_aem_BGawLRQB7eJGcOsJ50sM6Q",
         "linkInstagram": "https://www.instagram.com/neoquimicaarena/",
-        "tags": ["STADIUM", "TOUR"]
+        "tags": [
+            "STADIUM",
+            "TOUR"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 36,
         "name": "Museu da Imagem e do Som (MIS)",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1121174777",
@@ -1291,12 +1432,16 @@
         "linkMenu": "",
         "linkWebsite": "https://mis-sp.org.br/",
         "linkInstagram": "",
-        "tags": ["MUSEUM"]
+        "tags": [
+            "MUSEUM"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 37,
         "name": "Paróquia Nossa Senhora do Brasil",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1130829786",
@@ -1330,12 +1475,17 @@
         "linkMenu": "",
         "linkWebsite": "http://www.nossasenhoradobrasil.com.br/",
         "linkInstagram": "",
-        "tags": ["RELIGIOUS_SITE", "HISTORIC_PLACE"]
+        "tags": [
+            "RELIGIOUS_SITE",
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 39,
         "name": "Mercado Municipal da Lapa",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1136413946",
@@ -1369,12 +1519,16 @@
         "linkMenu": "",
         "linkWebsite": "http://mercadodalapa.com.br/",
         "linkInstagram": "",
-        "tags": ["SHOP_LOCATION"]
+        "tags": [
+            "SHOP_LOCATION"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 40,
         "name": "Museu Histórico da Imigração Japonesa",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1132095465",
@@ -1408,12 +1562,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.bunkyo.org.br/br/museu-historico/",
         "linkInstagram": "",
-        "tags": ["MUSEUM", "CULTURE"]
+        "tags": [
+            "MUSEUM",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 41,
         "name": "Estádio MorumBIS",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1137498000",
@@ -1449,12 +1608,17 @@
         "linkMenu": "",
         "linkWebsite": "https://passaportefc.com/produto/morumbis-tour/",
         "linkInstagram": "https://www.instagram.com/estadiodomorumbi/",
-        "tags": ["STADIUM", "TOUR"]
+        "tags": [
+            "STADIUM",
+            "TOUR"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 42,
         "name": "Monumento às Bandeiras",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
@@ -1479,19 +1643,25 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04001-070",
                 "isMainUnity": true,
-                "latitude": -23.580800,
+                "latitude": -23.5808,
                 "longitude": -46.660185
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE", "MONUMENT", "OPEN_24_HOURS"]
+        "tags": [
+            "OPENED_SPACE",
+            "MONUMENT",
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 43,
         "name": "Museu Afro Brasil",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133208900",
@@ -1528,12 +1698,17 @@
         "linkMenu": "",
         "linkWebsite": "http://www.museuafrobrasil.org.br/",
         "linkInstagram": "",
-        "tags": ["MUSEUM", "CULTURE"]
+        "tags": [
+            "MUSEUM",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 44,
         "name": "Obelisco do Ibirapuera",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "OBELISCOIBIRAPUERA_DAYTIME",
@@ -1564,12 +1739,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["OPENED_SPACE", "MONUMENT"]
+        "tags": [
+            "OPENED_SPACE",
+            "MONUMENT"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 46,
         "name": "Instituto Tomie Ohtake",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1122451900",
@@ -1605,12 +1785,17 @@
         "linkMenu": "",
         "linkWebsite": "http://www.institutotomieohtake.org.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 50,
         "name": "Cemitério da Consolação",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1151974889",
@@ -1647,12 +1832,17 @@
         "linkMenu": "",
         "linkWebsite": "https://cemiteriodaconsolacao.net/",
         "linkInstagram": "",
-        "tags": ["OTHERS", "OPEN_24_HOURS"]
+        "tags": [
+            "OTHERS",
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 51,
         "name": "Centro Cultural de São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1133974002",
@@ -1688,12 +1878,17 @@
         "linkMenu": "",
         "linkWebsite": "http://www.centrocultural.sp.gov.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 52,
         "name": "Feira de Antiguidades",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "FEIRAANTIGUIDADES_DAYTIME",
@@ -1724,12 +1919,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 53,
         "name": "Feira Boliviana Kantuta",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "FEIRABOLIVIANAKANTUTA_DAYTIME",
@@ -1760,12 +1960,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 54,
         "name": "Memorial da Resistência de São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "MEMORIALDARESISTENCIA_DAYTIME",
@@ -1796,12 +2001,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 55,
         "name": "Farol Santander",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1135535627",
@@ -1838,12 +2048,16 @@
         "linkMenu": "",
         "linkWebsite": "https://www.farolsantander.com.br/?utm_source=gbp&utm_medium=perfil",
         "linkInstagram": "",
-        "tags": ["HISTORIC_PLACE"]
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 56,
         "name": "Viaduto do Chá",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "EVERYDAY_DAYTIME",
@@ -1874,12 +2088,16 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["HISTORIC_PLACE"]
-    }, 
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
+    },
     {
         "id": 57,
         "name": "Galeria do Rock",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "GALERIADOROCK_DAYTIME",
@@ -1910,12 +2128,16 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/galeriadorockoficial",
-        "tags": ["HISTORIC_PLACE"]
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 58,
         "name": "Sampa Sky",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "SAMPASKY_DAYTIME",
@@ -1946,12 +2168,16 @@
         "linkMenu": "",
         "linkWebsite": "https://linktr.ee/sampa.sky?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnkI0rkwXU2YE57XgVbWy4Yu1Asamcox00JVeRK4wczzGxGKcO0XAH1ZeCUfY_aem_Po01hC09kS-qw0phX4DCmA",
         "linkInstagram": "https://www.instagram.com/sampasky/",
-        "tags": ["HISTORIC_PLACE"]
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 59,
         "name": "Escadaria das Bailarinas",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "EVERYDAY_DAYTIME",
@@ -1982,12 +2208,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 60,
         "name": "Beco do Batman",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "EVERYDAY_DAYTIME",
@@ -2018,12 +2249,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 61,
         "name": "Beco do Aprendiz",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "EVERYDAY_DAYTIME",
@@ -2047,19 +2283,24 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05432-020",
                 "isMainUnity": true,
-                "latitude": -23.560010,
+                "latitude": -23.56001,
                 "longitude": -46.687953
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 62,
         "name": "Feira da Liberdade",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "FEIRALIBERDADE_DAYTIME",
@@ -2090,12 +2331,17 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 63,
         "name": "Casa das Rosas",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1132856986",
@@ -2125,18 +2371,23 @@
                 "postalCode": "01311-000",
                 "isMainUnity": true,
                 "latitude": -23.570814,
-                "longitude": -46.645030
+                "longitude": -46.64503
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.casadasrosas.org.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 64,
         "name": "Mirante - SESC Avenida Paulista",
-        "type": "TOURIST_SPOT",
         "phones": [],
         "openingHours": {
             "patternId": "MIRANTESESC_AVENIDAPAULISTA_DAYTIME",
@@ -2161,18 +2412,23 @@
                 "postalCode": "01311-000",
                 "isMainUnity": true,
                 "latitude": -23.570814,
-                "longitude": -46.645030
+                "longitude": -46.64503
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.paulistacultural.com.br/content/agende-sua-visita-ao-mirante-do-sesc-avenida-paulista-saiba-mais-aqui-",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 65,
         "name": "Japan House São Paulo",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1131495187",
@@ -2201,19 +2457,24 @@
                 "neighborhood": "Bela Vista",
                 "postalCode": "01310-900",
                 "isMainUnity": true,
-                "latitude": -23.570730,
+                "latitude": -23.57073,
                 "longitude": -46.644844
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.japanhousesp.com.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 66,
         "name": "Itaú Cultural",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1121681777",
@@ -2250,12 +2511,17 @@
         "linkMenu": "",
         "linkWebsite": "http://www.itaucultural.org.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     },
     {
         "id": 67,
         "name": "Casa Guilherme de Almeida",
-        "type": "TOURIST_SPOT",
         "phones": [
             {
                 "number": "1121681777",
@@ -2292,6 +2558,12 @@
         "linkMenu": "",
         "linkWebsite": "http://www.itaucultural.org.br/",
         "linkInstagram": "",
-        "tags": ["ART_EXHIBITION", "CULTURE"]
+        "tags": [
+            "ART_EXHIBITION",
+            "CULTURE"
+        ],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ]
     }
 ]

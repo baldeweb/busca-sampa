@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Roller Jam",
-        "type": "FORFUN",
         "phones": [
             {
                 "number": "1139690931",
@@ -36,7 +35,7 @@
                 "postalCode": "04090-004",
                 "isMainUnity": true,
                 "latitude": -23.614308,
-                "longitude": -46.666260
+                "longitude": -46.66626
             },
             {
                 "id": 1,
@@ -53,12 +52,18 @@
         "linkMenu": "",
         "linkWebsite": "http://www.rollerjam.com.br/",
         "linkInstagram": "https://www.instagram.com/rollerjammoema/",
-        "tags": [ "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY" ]
+        "tags": [
+            "SINGLE_ACTIVITY",
+            "FAMILY_ACTIVITY",
+            "GROUP_ACTIVITY"
+        ],
+        "listTypes": [
+            "FORFUN"
+        ]
     },
     {
         "id": 2,
         "name": "Arena Pixel",
-        "type": "FORFUN",
         "phones": [
             {
                 "number": "1138194001",
@@ -94,12 +99,17 @@
         "linkMenu": "",
         "linkWebsite": "https://www.arenapixel.com.br/",
         "linkInstagram": "https://www.instagram.com/arenapixel/",
-        "tags": [ "FAMILY_ACTIVITY", "GROUP_ACTIVITY"]
+        "tags": [
+            "FAMILY_ACTIVITY",
+            "GROUP_ACTIVITY"
+        ],
+        "listTypes": [
+            "FORFUN"
+        ]
     },
     {
         "id": 3,
         "name": "Bario Bar",
-        "type": "FORFUN",
         "phones": [
             {
                 "number": "11915167135",
@@ -152,18 +162,25 @@
                 "postalCode": "05426-010",
                 "isMainUnity": false,
                 "latitude": -23.561218,
-                "longitude": -46.694000
+                "longitude": -46.694
             }
         ],
         "linkMenu": "https://www.dguests.com.br/cardapio/Bario_Bar",
         "linkWebsite": "https://www.bario.com.br/",
         "linkInstagram": "https://www.instagram.com/bario_bar",
-        "tags": [ "THEMED", "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY" ]
+        "tags": [
+            "THEMED",
+            "SINGLE_ACTIVITY",
+            "FAMILY_ACTIVITY",
+            "GROUP_ACTIVITY"
+        ],
+        "listTypes": [
+            "FORFUN"
+        ]
     },
     {
         "id": 4,
         "name": "Roda Gigante Roda Rico",
-        "type": "FORFUN",
         "phones": [],
         "openingHours": {
             "patternId": "RODARICO_DAYTIME",
@@ -194,6 +211,13 @@
         "linkMenu": "",
         "linkWebsite": "http://www.rodarico.com.br/",
         "linkInstagram": "https://www.instagram.com/rodarico/",
-        "tags": [ "SINGLE_ACTIVITY", "FAMILY_ACTIVITY", "GROUP_ACTIVITY"]
+        "tags": [
+            "SINGLE_ACTIVITY",
+            "FAMILY_ACTIVITY",
+            "GROUP_ACTIVITY"
+        ],
+        "listTypes": [
+            "FORFUN"
+        ]
     }
 ]

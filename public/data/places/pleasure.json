@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Casarão Augusta",
-        "type": "PLEASURE",
         "phones": [],
         "openingHours": {
             "patternId": "CASARAOAUGUSTA_DAYTIME",
@@ -28,19 +27,21 @@
                 "neighborhood": "Consolação",
                 "postalCode": "01305-1000",
                 "isMainUnity": true,
-                "latitude": -23.552490,
+                "latitude": -23.55249,
                 "longitude": -46.653452
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://casaraoaugusta.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "PLEASURE"
+        ]
     },
     {
         "id": 2,
         "name": "Bahamas Hotel Club",
-        "type": "PLEASURE",
         "phones": [
             {
                 "number": "1155422748",
@@ -79,12 +80,14 @@
         "linkMenu": "",
         "linkWebsite": "https://bahamashotelclub.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "PLEASURE"
+        ]
     },
     {
         "id": 3,
         "name": "Scandallo",
-        "type": "PLEASURE",
         "phones": [
             {
                 "number": "1155422748",
@@ -121,6 +124,9 @@
         "linkMenu": "",
         "linkWebsite": "http://www.scandallolounge.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "PLEASURE"
+        ]
     }
 ]

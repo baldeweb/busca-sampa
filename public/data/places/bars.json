@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Bar do Cofre - SubAstor",
-        "type": "BARS",
         "phones": [
             {
                 "number": "11943643170",
@@ -40,12 +39,14 @@
         "linkMenu": "https://livemenu.app/menu/64513977e74a9f0055b72ef7?cross_session=done",
         "linkWebsite": "https://subastor.com.br/",
         "linkInstagram": "https://www.instagram.com/obardocofre/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ]
     },
     {
         "id": 3,
         "name": "Olivio Bar",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1146802967",
@@ -82,12 +83,16 @@
         "linkMenu": "https://menu.getinapp.com.br/store/r2Prqk8v/1",
         "linkWebsite": "http://www.oliviobar.com.br/",
         "linkInstagram": "https://www.instagram.com/oliviobar/",
-        "tags": [ "THEMED" ]
+        "tags": [
+            "THEMED"
+        ],
+        "listTypes": [
+            "BARS"
+        ]
     },
     {
         "id": 4,
         "name": "Republic English Pub",
-        "type": "BARS",
         "phones": [
             {
                 "number": "11993141221",
@@ -124,13 +129,16 @@
         "linkWebsite": "https://englishpub.com.br/",
         "linkInstagram": "https://www.instagram.com/republicpub/",
         "tags": [
-            "THEMED", "ROCK_BAR"
+            "THEMED",
+            "ROCK_BAR"
+        ],
+        "listTypes": [
+            "BARS"
         ]
     },
     {
         "id": 5,
         "name": "Waska Restobar Latino",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1138149899",
@@ -140,8 +148,20 @@
         "openingHours": {
             "patternId": "WASKABAR_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY"], "open": "12:00", "close": "23:30" },
-                { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+                {
+                    "days": [
+                        "SATURDAY"
+                    ],
+                    "open": "12:00",
+                    "close": "23:30"
+                },
+                {
+                    "days": [
+                        "SUNDAY"
+                    ],
+                    "open": "12:00",
+                    "close": "18:00"
+                }
             ]
         },
         "isAlreadyVisited": true,
@@ -171,12 +191,14 @@
         "linkInstagram": "https://www.instagram.com/waska.barepetiscos/",
         "tags": [
             "CULTURE"
+        ],
+        "listTypes": [
+            "BARS"
         ]
     },
     {
         "id": 6,
         "name": "Manifesto Bar",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1125745256",
@@ -212,12 +234,14 @@
         "linkInstagram": "https://www.instagram.com/manifestobar/",
         "tags": [
             "ROCK_BAR"
+        ],
+        "listTypes": [
+            "BARS"
         ]
     },
     {
         "id": 7,
         "name": "Bar do Luiz Fernandes",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1129763556",
@@ -270,12 +294,14 @@
         "linkInstagram": "https://www.instagram.com/bardoluizf/",
         "tags": [
             "BOTECO"
+        ],
+        "listTypes": [
+            "BARS"
         ]
     },
     {
         "id": 8,
         "name": "Bar dos Arcos",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1151480056",
@@ -312,12 +338,14 @@
         "linkMenu": "https://bardosarcos.com.br/cardapio-salao-dourado-almoco/",
         "linkWebsite": "https://bardosarcos.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ]
     },
     {
         "id": 9,
         "name": "Javari StrEat Park",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1120811544",
@@ -353,12 +381,14 @@
         "linkInstagram": "https://www.instagram.com/javaripark/",
         "tags": [
             "LIVE_MUSIC"
+        ],
+        "listTypes": [
+            "BARS"
         ]
     },
     {
         "id": 10,
         "name": "Curtiça Bar",
-        "type": "BARS",
         "phones": [
             {
                 "number": "11979825400",
@@ -397,12 +427,14 @@
         "linkInstagram": "https://www.instagram.com/curticabar/",
         "tags": [
             "KARAOKE"
+        ],
+        "listTypes": [
+            "BARS"
         ]
     },
     {
         "id": 11,
         "name": "Salve Jorge",
-        "type": "BARS",
         "phones": [
             {
                 "number": "1131070123",
@@ -436,12 +468,14 @@
         "linkMenu": "",
         "linkWebsite": "http://barsalvejorge.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ]
     },
     {
         "id": 12,
         "name": "Balsa Bar",
-        "type": "BARS",
         "phones": [
             {
                 "number": "11941777477",
@@ -475,6 +509,9 @@
         "linkMenu": "https://www.abalsa.org/menus/",
         "linkWebsite": "https://www.abalsa.org/",
         "linkInstagram": "https://www.instagram.com/a_balsa/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "BARS", "NIGHTLIFE"
+        ]
     }
 ]

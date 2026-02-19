@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Kofi & Co",
-        "type": "COFFEES",
         "phones": [
             {
                 "number": "1136244838",
@@ -40,13 +39,16 @@
         "linkWebsite": "https://linktr.ee/kofi_and_co_est_2016?fbclid=PAZXh0bgNhZW0CMTEAAac8B0tIVcFIPS2B3DwcyY26qqx-OtwQJPlXVyhj7Bx4swQJSgFZGLujNRK6Hw_aem_IbLam0j7ciBrkvyCqaL4cw",
         "linkInstagram": "https://www.instagram.com/kofiandco/",
         "tags": [
-            "PET_FRIENDLY", "BISTRO"
+            "PET_FRIENDLY",
+            "BISTRO"
+        ],
+        "listTypes": [
+            "COFFEES"
         ]
     },
     {
         "id": 2,
         "name": "Griffinn Café e Afins",
-        "type": "COFFEES",
         "phones": [
             {
                 "number": "11913586058",
@@ -84,12 +86,14 @@
         "linkInstagram": "https://www.instagram.com/griffinncafeeafins/",
         "tags": [
             "THEMED"
+        ],
+        "listTypes": [
+            "COFFEES"
         ]
     },
     {
         "id": 3,
         "name": "Café Floresta",
-        "type": "COFFEES",
         "phones": [
             {
                 "number": "1132598416",
@@ -99,7 +103,14 @@
         "openingHours": {
             "patternId": "CAFE_FLORESTA_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY", "SUNDAY"], "open": "07:00", "close": "20:30" }
+                {
+                    "days": [
+                        "SATURDAY",
+                        "SUNDAY"
+                    ],
+                    "open": "07:00",
+                    "close": "20:30"
+                }
             ]
         },
         "isAlreadyVisited": true,
@@ -121,7 +132,7 @@
                 "neighborhood": "Centro",
                 "postalCode": "01046-010",
                 "isMainUnity": true,
-                "latitude": -23.546380,
+                "latitude": -23.54638,
                 "longitude": -46.644635
             }
         ],
@@ -130,12 +141,14 @@
         "linkInstagram": "https://www.instagram.com/cafeflorestacopan/",
         "tags": [
             "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "COFFEES"
         ]
     },
     {
         "id": 4,
         "name": "Poop Coffee",
-        "type": "COFFEES",
         "phones": [],
         "openingHours": {
             "patternId": "POOPCOFFEE_DAYTIME",
@@ -168,12 +181,14 @@
         "linkInstagram": "https://www.instagram.com/poop.coffee?igsh=MWo1c3AzcTFuZGc2MA==",
         "tags": [
             "THEMED"
+        ],
+        "listTypes": [
+            "COFFEES"
         ]
     },
     {
         "id": 5,
         "name": "Padaria Bella Paulista",
-        "type": "COFFEES",
         "phones": [
             {
                 "number": "1132143347",
@@ -209,18 +224,19 @@
         "linkMenu": "https://padariabellapaulista.com.br/wp-content/uploads/2022/02/cardapio-bella2002-delivery.pdf",
         "linkWebsite": "https://padariabellapaulista.com.br/",
         "linkInstagram": "https://www.instagram.com/padariabellapaulista/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
     },
     {
         "id": 6,
         "name": "Mug.sp",
-        "type": "COFFEES",
         "phones": [
             {
                 "number": "1130514252",
                 "isWhatsApp": false
             },
-            
             {
                 "number": "1132662885",
                 "isWhatsApp": false
@@ -311,12 +327,17 @@
         "linkMenu": "https://www.dguests.com.br/cardapio/mugsp.jardins",
         "linkWebsite": "https://linktr.ee/mugsp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnzx2K9Q9jq1qCYJeuLS8R-3YfD21CU-vPgxZU4FEg3i2j_2OueKxtY-oz0eY_aem_cmrzGuzy05yAMnaU11GD4w",
         "linkInstagram": "https://www.instagram.com/mug.sp/",
-        "tags": ["COWORKING", "BISTRO"]
-    },    
+        "tags": [
+            "COWORKING",
+            "BISTRO"
+        ],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
     {
         "id": 7,
         "name": "Bakehaus - Padaria Artesanal",
-        "type": "COFFEES",
         "phones": [
             {
                 "number": "11941806853",
@@ -352,6 +373,9 @@
         "linkMenu": "",
         "linkWebsite": "https://linktr.ee/bakehaus.sp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnH9Bx2-tkpAQc_Jbew8hBGNQwOa1CN253HeDuT8tdJBeLId4-7aabUw2XuRM_aem_GSsxoGDF7lZlQ7Ye2yIfOw",
         "linkInstagram": "https://www.instagram.com/bakehaus.sp",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
     }
 ]

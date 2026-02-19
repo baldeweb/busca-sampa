@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Barskiy Dom",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11942409445",
@@ -43,12 +42,14 @@
         "linkInstagram": "https://www.instagram.com/restauranterusso/",
         "tags": [
             "RUSSIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 2,
         "name": "Sabores de Mi Tierra",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11955898944",
@@ -77,7 +78,7 @@
                 "neighborhood": "Centro",
                 "postalCode": "06453-035",
                 "isMainUnity": true,
-                "latitude": -23.496920,
+                "latitude": -23.49692,
                 "longitude": -46.848771
             }
         ],
@@ -86,12 +87,14 @@
         "linkInstagram": "https://www.instagram.com/saboresdemitierra_22/",
         "tags": [
             "BOLIVIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 3,
         "name": "Komah Restaurante",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11933386182",
@@ -129,12 +132,14 @@
         "linkInstagram": "https://www.instagram.com/komahrestaurante/",
         "tags": [
             "KOREAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 4,
         "name": "McDonald's - Méqui 1000",
-        "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
@@ -169,12 +174,14 @@
         "tags": [
             "FASTFOOD",
             "AMERICAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 5,
         "name": "Cho Sun Gal Bi",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126733337",
@@ -215,7 +222,7 @@
                 "neighborhood": "Bom Retiro",
                 "postalCode": "01124-010",
                 "isMainUnity": false,
-                "latitude": -23.527570,
+                "latitude": -23.52757,
                 "longitude": -46.635538
             },
             {
@@ -235,12 +242,14 @@
         "linkInstagram": "https://www.instagram.com/chosuntatuape/",
         "tags": [
             "KOREAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 6,
         "name": "Quintal Paraense",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11986181944",
@@ -279,12 +288,14 @@
         "linkInstagram": "https://www.instagram.com/quintalparaense/",
         "tags": [
             "BRAZILIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 7,
         "name": "Fôrno",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11981957207",
@@ -315,7 +326,7 @@
                 "neighborhood": "Consolação",
                 "postalCode": "01221-030",
                 "isMainUnity": true,
-                "latitude":-23.546171,
+                "latitude": -23.546171,
                 "longitude": -46.648649
             }
         ],
@@ -324,12 +335,14 @@
         "linkInstagram": "https://www.instagram.com/forno_sp/",
         "tags": [
             "ITALIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 8,
         "name": "Carmen La Loca",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135399724",
@@ -368,12 +381,14 @@
         "linkInstagram": "https://www.instagram.com/restaurantecarmenlaloca/",
         "tags": [
             "SPANISH"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 9,
         "name": "Casa Turca",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11998431775",
@@ -412,12 +427,14 @@
         "linkInstagram": "https://www.instagram.com/casaturcasp/",
         "tags": [
             "TURKISH"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 10,
         "name": "Jui Restaurante",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1121931086",
@@ -456,12 +473,14 @@
         "linkInstagram": "https://www.instagram.com/juirestaurante/",
         "tags": [
             "ASIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     },
     {
         "id": 11,
         "name": "Manish Culinária Árabe",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130851658",
@@ -497,12 +516,16 @@
         "linkMenu": "https://a9afa647-436a-4f08-adf7-f711dedd44b8.filesusr.com/ugd/f568e5_84a975402bef421a8db10667bd39455c.pdf",
         "linkWebsite": "https://palomafaizi.wixsite.com/manish",
         "linkInstagram": "https://www.instagram.com/manishrestaurante?igsh=ODU1OXZ1aThscHFv",
-        "tags": ["LEBANESE"]
+        "tags": [
+            "LEBANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 12,
         "name": "Tandoor",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1138859470",
@@ -546,12 +569,16 @@
         "linkMenu": "https://www.tandoor.com.br/cardapio/",
         "linkWebsite": "https://www.tandoor.com.br/",
         "linkInstagram": "https://www.instagram.com/tandoorsp/",
-        "tags": ["INDIAN"]
+        "tags": [
+            "INDIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 13,
         "name": "Thaithai Brasil",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1123072503",
@@ -587,12 +614,16 @@
         "linkMenu": "",
         "linkWebsite": "https://www.thaitaibrasil.com.br/",
         "linkInstagram": "https://www.instagram.com/thaitaibrasil/",
-        "tags": ["THAI"]
+        "tags": [
+            "THAI"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 14,
         "name": "Kouzina",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1129350888",
@@ -628,12 +659,16 @@
         "linkMenu": "https://ideaecia.wixsite.com/cardapiokouzina?fbclid=PAZXh0bgNhZW0CMTEAAad2PW9qGImG-dEDTOVWO80A46y5EFLDG1uPa7qpsuVuC1x6jljB1m_O3hb5pg_aem_48Zo-afbSKvwJ-pK42mA8Q",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/kouzinamyk/",
-        "tags": ["GREEK"]
+        "tags": [
+            "GREEK"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 15,
         "name": "Eat Asia Thomaz Gonzaga",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11943243830",
@@ -643,7 +678,13 @@
         "openingHours": {
             "patternId": "EAT_ASIA_HELLOKITTY_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY"], "open": "11:00", "close": "20:00" }
+                {
+                    "days": [
+                        "SATURDAY"
+                    ],
+                    "open": "11:00",
+                    "close": "20:00"
+                }
             ]
         },
         "isAlreadyVisited": false,
@@ -672,17 +713,28 @@
         "linkMenu": "",
         "linkWebsite": "https://eatasia.com.br/",
         "linkInstagram": "https://www.instagram.com/eatasiabr/",
-        "tags": ["JAPANESE"]
+        "tags": [
+            "JAPANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 16,
         "name": "Hello Kitty and Friends 2D",
-        "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
             "patternId": "EAT_ASIA_2D_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY", "SUNDAY"], "open": "08:00", "close": "20:00" }
+                {
+                    "days": [
+                        "SATURDAY",
+                        "SUNDAY"
+                    ],
+                    "open": "08:00",
+                    "close": "20:00"
+                }
             ]
         },
         "isAlreadyVisited": false,
@@ -704,24 +756,35 @@
                 "neighborhood": "Liberdade",
                 "postalCode": "01506-010",
                 "isMainUnity": true,
-                "latitude": -23.557140,
+                "latitude": -23.55714,
                 "longitude": -46.634586
             }
         ],
         "linkMenu": "https://www.instagram.com/stories/highlights/18123493756379887/",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/eatasia2d/",
-        "tags": ["JAPANESE"]
+        "tags": [
+            "JAPANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 17,
         "name": "Filipinas Restaurante Oriental",
-        "type": "RESTAURANTS",
         "phones": [],
         "openingHours": {
             "patternId": "FILIPINAS_ORIENTAL_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY", "SUNDAY"], "open": "11:00", "close": "22:00" }
+                {
+                    "days": [
+                        "SATURDAY",
+                        "SUNDAY"
+                    ],
+                    "open": "11:00",
+                    "close": "22:00"
+                }
             ]
         },
         "isAlreadyVisited": true,
@@ -744,18 +807,23 @@
                 "postalCode": "01502-001",
                 "isMainUnity": true,
                 "latitude": -23.558322,
-                "longitude": -46.636710
+                "longitude": -46.63671
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/filipinasoriental/",
-        "tags": ["FILIPINO", "MALAYSIAN"]
+        "tags": [
+            "FILIPINO",
+            "MALAYSIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 18,
         "name": "Izakaya Issa",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132088819.",
@@ -794,12 +862,16 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/izakayaissa",
-        "tags": ["JAPANESE"]
+        "tags": [
+            "JAPANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 19,
         "name": "Amigo do Rei (Iraniano/Persa)",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11981948190",
@@ -837,12 +909,16 @@
         "linkMenu": "https://www.amigodorei.com.br/jantarpersa.html",
         "linkWebsite": "http://www.amigodorei.com.br/",
         "linkInstagram": "https://www.instagram.com/amigo_do_rei/",
-        "tags": ["IRANIAN"]
+        "tags": [
+            "IRANIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 20,
         "name": "Beco Hexagonal",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126672397",
@@ -889,12 +965,16 @@
         "linkMenu": "https://reservation-widget.tagme.com.br/group/64c7c03ce5f5b30053b0964c?fbclid=PAZXh0bgNhZW0CMTEAAafs3RM0GsE3FpWb769dj93NFOl80iGjrmy8-Gi80viUhXiMP7atY5_u5WsmPQ_aem_FIEz98tK1xlwnvt7q_Klzg",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/becohexagonal/",
-        "tags": ["HAMBURGUER"]
+        "tags": [
+            "HAMBURGUER"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 21,
         "name": "'O' Burguer",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11964896612",
@@ -932,12 +1012,18 @@
         "linkMenu": "https://o-burguer-1.goomer.app/menu#1564309",
         "linkWebsite": "http://www.oburguer.com.br/",
         "linkInstagram": "https://www.instagram.com/oburguer/",
-        "tags": ["HAMBURGUER", "THEMED", "MOLECULAR_GASTRONOMY"]
+        "tags": [
+            "HAMBURGUER",
+            "THEMED",
+            "MOLECULAR_GASTRONOMY"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 22,
         "name": "Cadillac BBQ",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1123090484",
@@ -974,12 +1060,16 @@
         "linkMenu": "https://drive.google.com/drive/folders/1RGLkBk6MEn7AfvUvuylo-AVwdsguCSsK",
         "linkWebsite": "https://bio.site/cadillacbbqoficial?fbclid=PAZXh0bgNhZW0CMTEAAad2ntQGavKZcr98qEbAsS8se6wmZXgYwe-xC-pcu-8r2l8r4dGnlbO9uvjdlg_aem_y2K_VX92yiwYOHOovmC-VA",
         "linkInstagram": "https://www.instagram.com/cadillacbbq",
-        "tags": ["AMERICAN"]
+        "tags": [
+            "AMERICAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 23,
         "name": "Vassoura Quebrada",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11990276568",
@@ -1009,7 +1099,7 @@
                 "postalCode": "05010-040",
                 "isMainUnity": true,
                 "latitude": -23.529629,
-                "longitude": -46.688460
+                "longitude": -46.68846
             },
             {
                 "id": 2,
@@ -1037,12 +1127,16 @@
         "linkMenu": "https://www.dguests.com.br/cardapio/vassouraquebrada",
         "linkWebsite": "https://www.vassouraquebrada.com.br/",
         "linkInstagram": "https://www.instagram.com/vassouraquebrada/",
-        "tags": ["HAMBURGUER"]
+        "tags": [
+            "HAMBURGUER"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 24,
         "name": "Consulado da Bahia",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130853873",
@@ -1077,7 +1171,7 @@
                 "postalCode": "05422-000",
                 "isMainUnity": true,
                 "latitude": -23.565724,
-                "longitude": -46.683180
+                "longitude": -46.68318
             },
             {
                 "id": 2,
@@ -1094,12 +1188,16 @@
         "linkMenu": "",
         "linkWebsite": "http://www.consuladodabahia.com.br/",
         "linkInstagram": "https://www.instagram.com/consuladodabahia/",
-        "tags": ["BRAZILIAN"]
+        "tags": [
+            "BRAZILIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 25,
         "name": "Escandinavo",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11951444486",
@@ -1135,12 +1233,16 @@
         "linkMenu": "https://escandinavo.com.br/confira-nosso-menu/",
         "linkWebsite": "https://escandinavo.com.br/",
         "linkInstagram": "https://www.instagram.com/o.escandinavo/",
-        "tags": ["NORDIC"]
+        "tags": [
+            "NORDIC"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 26,
         "name": "Grindhouse Braserito",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11948846626",
@@ -1177,12 +1279,16 @@
         "linkMenu": "",
         "linkWebsite": "https://taplink.cc/grindhouse_braserito?fbclid=PAZXh0bgNhZW0CMTEAAac-0uTD8H5jJSoAu-uk2LimVYm454g5drKIOvNzuJJKb_Kqq8PVDJ0JB7LJ_Q_aem_z20kLUd9naK46yw159V3Lg",
         "linkInstagram": "https://www.instagram.com/grindhouse_braserito/",
-        "tags": ["ARGENTINE"]
+        "tags": [
+            "ARGENTINE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 27,
         "name": "Rinconcito Peruano",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130620093",
@@ -1232,7 +1338,7 @@
                 "postalCode": "01210-000",
                 "isMainUnity": false,
                 "latitude": -23.541839,
-                "longitude": -46.643660
+                "longitude": -46.64366
             },
             {
                 "id": 3,
@@ -1242,19 +1348,23 @@
                 "neighborhood": "Tatuapé",
                 "postalCode": "03309-000",
                 "isMainUnity": false,
-                "latitude": -23.545290,
+                "latitude": -23.54529,
                 "longitude": -46.569044
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.rinconcitoperuano.com.br/",
         "linkInstagram": "https://www.instagram.com/rinconcitoperuano/",
-        "tags": ["PERUVIAN"]
+        "tags": [
+            "PERUVIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 28,
         "name": "Bia Hoi SP",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1131594897",
@@ -1290,12 +1400,16 @@
         "linkMenu": "https://biahoi.com.br/menu.php",
         "linkWebsite": "https://biahoi.com.br/",
         "linkInstagram": "https://www.instagram.com/biahoisp/",
-        "tags": ["VIETNAMESE"]
+        "tags": [
+            "VIETNAMESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 29,
         "name": "Biyou'Z",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132216806",
@@ -1346,12 +1460,16 @@
         "linkMenu": "https://www.biyouzrestauranteafricano.com.br/pratos-quentes",
         "linkWebsite": "https://biyouzgastronomiafricana.com.br/",
         "linkInstagram": "https://www.instagram.com/biyouzgastronomiaafricana/",
-        "tags": ["AFRICAN"]
+        "tags": [
+            "AFRICAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 30,
         "name": "Sushi Hiroshi",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1129787128",
@@ -1382,18 +1500,22 @@
                 "postalCode": "02017-030",
                 "isMainUnity": true,
                 "latitude": -23.502429,
-                "longitude": -46.639170
+                "longitude": -46.63917
             }
         ],
         "linkMenu": "http://www.sushihiroshisp.com.br/cardapio-sushi-hiroshi.html",
         "linkWebsite": "http://www.sushihiroshisp.com.br/index.html",
         "linkInstagram": "https://www.instagram.com/sushihiroshioficial/",
-        "tags": ["JAPANESE"]
+        "tags": [
+            "JAPANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 31,
         "name": "Mama Africa La Bonne Bouffe",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135827438",
@@ -1444,12 +1566,16 @@
         "linkMenu": "https://www.instagram.com/stories/highlights/17864408108059100/",
         "linkWebsite": "http://www.mamaafricalabonnebouffe.com.br/",
         "linkInstagram": "https://www.instagram.com/mamaafrica_labonnebouffe/",
-        "tags": ["AFRICAN"]
+        "tags": [
+            "AFRICAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 32,
         "name": "The Circus Bar e Kitchen",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132134826",
@@ -1486,12 +1612,17 @@
         "linkMenu": "https://menu.getinapp.com.br/store/D1ZdNgkm/1/d1VM2nPv/",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/thecircusbarekitchen/",
-        "tags": ["HAMBURGUER", "MILKSHAKE"]
+        "tags": [
+            "HAMBURGUER",
+            "MILKSHAKE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 33,
         "name": "Bao n'Sando",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11998217777",
@@ -1529,12 +1660,16 @@
         "linkMenu": "https://www.ifood.com.br/delivery/sao-paulo-sp/asiatico-bao-n-sando-vila-madalena-vila-madalena/f9ebf8ca-3d62-492a-b4ea-4816d49ab360?utm_medium=share&utm_source=ig&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndKJwZVNKVxJU56LmynY4CH3XBi54G_mvHDWO9OS-kpCiXAIfrfRrqiM3Apo_aem_n3vaId7n2zguqmAOuv3Aag",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/bao_n_sando/",
-        "tags": ["TAIWANESE"]
+        "tags": [
+            "TAIWANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 34,
         "name": "Mapu Baos e comidinhas",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1133848535",
@@ -1572,12 +1707,16 @@
         "linkMenu": "https://mapurestaurante.com.br/cardapio",
         "linkWebsite": "https://mapurestaurante.com.br/",
         "linkInstagram": "https://www.instagram.com/mapubaos/",
-        "tags": ["TAIWANESE"]
+        "tags": [
+            "TAIWANESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 35,
         "name": "Taverna Medieval",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1141142816",
@@ -1607,18 +1746,22 @@
                 "postalCode": "04023-001",
                 "isMainUnity": true,
                 "latitude": -23.591757,
-                "longitude": -46.643710
+                "longitude": -46.64371
             }
         ],
         "linkMenu": "https://www.tavernamedieval.com.br/cardapio/index.html",
         "linkWebsite": "https://www.tavernamedieval.com.br",
         "linkInstagram": "https://www.instagram.com/taverna_medieval/",
-        "tags": ["HAMBURGUER"]
+        "tags": [
+            "HAMBURGUER"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 38,
         "name": "Sushi Ishii",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1122731760",
@@ -1628,7 +1771,14 @@
         "openingHours": {
             "patternId": "ALLDAY_PATTERN_2_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY", "SUNDAY"], "open": "12:00", "close": "23:00" }
+                {
+                    "days": [
+                        "SATURDAY",
+                        "SUNDAY"
+                    ],
+                    "open": "12:00",
+                    "close": "23:00"
+                }
             ]
         },
         "isAlreadyVisited": true,
@@ -1656,12 +1806,17 @@
         "linkMenu": "",
         "linkWebsite": "https://linklist.bio/sushishii?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnSclxq8e0MweeBxmzyiyDA-jZfoejHldE1m_fJrgeHm5Ql2PnLpGBIiD-N7k_aem_48eeBE_pP7NJlmceHaGonQ",
         "linkInstagram": "https://www.instagram.com/ishii_sushi/",
-        "tags": ["JAPANESE", "ALLYOUCAN_EAT"]
+        "tags": [
+            "JAPANESE",
+            "ALLYOUCAN_EAT"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 39,
         "name": "Macondo Raízes Colombianas",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11986164184",
@@ -1697,12 +1852,16 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/macondo_raizes_colombianas/",
-        "tags": ["COLOMBIAN"]
+        "tags": [
+            "COLOMBIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 40,
         "name": "Bar Guanabara",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132287400",
@@ -1739,12 +1898,16 @@
         "linkMenu": "https://www.menuart.com.br/pdfs/guanabara.pdf?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnF33cJE6rEJwj-3rtW0VfXhrSs-Hr9f57kApqZ8oRsd5XOte7GqUXHGjvRTQ_aem_Ou4oeoG75erl4CmNoqSV5Q",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/barguanabara1910/",
-        "tags": ["HISTORIC_PLACE"]
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 41,
         "name": "Restaurante Illimani",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11917068727",
@@ -1780,12 +1943,16 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/restaurante.illimani/",
-        "tags": ["BOLIVIAN"]
+        "tags": [
+            "BOLIVIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 42,
         "name": "Mii Rooftop",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126740843",
@@ -1821,12 +1988,16 @@
         "linkMenu": "https://livemenu.app/menu/6241de323b243900116e5adb?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZGIOX3CZNy9nkCPbdwkJkbGWIv9hJNIwZ-MlWYJjYkyInPPpfL7KVrN8Ztk_aem_VWfNKbx8rZhS382NeOIEEg&cross_session=done",
         "linkWebsite": "https://vilaanalia.com.br/",
         "linkInstagram": "https://www.instagram.com/miirooftop/",
-        "tags": ["GREEK"]
+        "tags": [
+            "GREEK"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 43,
         "name": "URU Mar y Parrilla",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1123089499",
@@ -1863,12 +2034,17 @@
         "linkMenu": "https://livemenu.app/menu/61fd682e1e9cd60012ad6b6b?cross_session=done",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/urumaryparrilla/",
-        "tags": ["URUGUAYAN", "SEAFOOD"]
+        "tags": [
+            "URUGUAYAN",
+            "SEAFOOD"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 44,
         "name": "Bar e Lanches Estadão",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1132577121",
@@ -1905,12 +2081,16 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/barelanchesestadao/",
-        "tags": ["OPEN_24_HOURS"]
+        "tags": [
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 45,
         "name": "Arais do Carlinhos",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1126740843",
@@ -1946,12 +2126,16 @@
         "linkMenu": "https://livemenu.app/menu/6241fb73923ad30011604bc6?cross_session=done",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/araisdocarlinhostatuape/",
-        "tags": ["ARMENIAN"]
+        "tags": [
+            "ARMENIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 46,
         "name": "Wa Bar",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11996114331",
@@ -1988,12 +2172,17 @@
         "linkMenu": "https://www.wabar.com.br/blank-1",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/wabar_brasil/",
-        "tags": ["KOREAN", "KARAOKE"]
+        "tags": [
+            "KOREAN",
+            "KARAOKE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 47,
         "name": "Rong He",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1135599996",
@@ -2062,12 +2251,16 @@
         "linkMenu": "",
         "linkWebsite": "http://ronghe.com.br/",
         "linkInstagram": "https://www.instagram.com/rongheoficial/",
-        "tags": ["CHINESE"]
+        "tags": [
+            "CHINESE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 48,
         "name": "La Peruana",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1159900623",
@@ -2103,12 +2296,16 @@
         "linkMenu": "https://menu.appget.in/5d6NOrkV/2",
         "linkWebsite": "",
         "linkInstagram": "http://instagram.com/laperuanabr",
-        "tags": ["PERUVIAN"]
+        "tags": [
+            "PERUVIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 49,
         "name": "Krapook Khao",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "11913672163",
@@ -2144,12 +2341,16 @@
         "linkMenu": "https://linktr.ee/krapookkhao?utm_source=linktree_profile_share&ltsid=a80167b6-a8c3-4c31-ab9a-e45710174e96",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/krapookkhao/",
-        "tags": ["THAI"]
+        "tags": [
+            "THAI"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 50,
         "name": "Kiichi",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130513330",
@@ -2208,12 +2409,17 @@
         "linkMenu": "https://kiichi.com.br/cardapios/jardins.pdf",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/rongheoficial/",
-        "tags": ["JAPANESE", "ALLYOUCAN_EAT"]
+        "tags": [
+            "JAPANESE",
+            "ALLYOUCAN_EAT"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 51,
         "name": "Big Kahuna",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1130513330",
@@ -2242,19 +2448,24 @@
                 "neighborhood": "Jardim Paulista",
                 "postalCode": "01424-001",
                 "isMainUnity": true,
-                "latitude": -23.573360,
+                "latitude": -23.57336,
                 "longitude": -46.655925
             }
         ],
         "linkMenu": "https://www.bigkahunaburger.com.br/menu/",
         "linkWebsite": "http://bigkahunaburger.com.br/",
         "linkInstagram": "https://www.instagram.com/bigkahunaburgerr/",
-        "tags": ["HAMBURGUER", "THEMED"]
+        "tags": [
+            "HAMBURGUER",
+            "THEMED"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     },
     {
         "id": 52,
         "name": "Pizzaria Veridiana",
-        "type": "RESTAURANTS",
         "phones": [
             {
                 "number": "1138019000",
@@ -2284,7 +2495,7 @@
                 "neighborhood": "Higienópolis",
                 "postalCode": "01238-010",
                 "isMainUnity": true,
-                "latitude": -23.545140,
+                "latitude": -23.54514,
                 "longitude": -46.652066
             },
             {
@@ -2302,6 +2513,11 @@
         "linkMenu": "https://www.veridiana.com.br/cardapio",
         "linkWebsite": "https://www.veridiana.com.br/cardapio",
         "linkInstagram": "https://www.instagram.com/veridianapizzaria/",
-        "tags": ["ITALIAN"]
+        "tags": [
+            "ITALIAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
     }
 ]

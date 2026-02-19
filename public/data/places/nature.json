@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Parque da Água Branca",
-        "type": "NATURE",
         "phones": [],
         "openingHours": {
             "patternId": "PARQUE_AGUA_BRANCA_DAYTIME",
@@ -38,12 +37,14 @@
         "linkMenu": "",
         "linkWebsite": "https://parqueaguabranca.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ]
     },
     {
         "id": 2,
         "name": "Praça Pôr do Sol",
-        "type": "NATURE",
         "phones": [],
         "openingHours": {
             "patternId": "PRACA_PORDOSOL_DAYTIME",
@@ -76,13 +77,14 @@
         "linkInstagram": "",
         "tags": [
             "PET_FRIENDLY"
+        ],
+        "listTypes": [
+            "NATURE"
         ]
-        
     },
     {
         "id": 3,
         "name": "Parque Augusta",
-        "type": "NATURE",
         "phones": [],
         "openingHours": {
             "patternId": "PARQUE_AUGUSTA_DAYTIME",
@@ -105,7 +107,7 @@
                 "postalCode": "01303-050",
                 "isMainUnity": true,
                 "latitude": -23.550973,
-                "longitude": -46.649340
+                "longitude": -46.64934
             }
         ],
         "linkMenu": "",
@@ -113,12 +115,14 @@
         "linkInstagram": "",
         "tags": [
             "PET_FRIENDLY"
+        ],
+        "listTypes": [
+            "NATURE"
         ]
     },
     {
         "id": 4,
         "name": "Parque Praia do Sol",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "1156662919",
@@ -154,12 +158,14 @@
         "linkInstagram": "",
         "tags": [
             "PET_FRIENDLY"
+        ],
+        "listTypes": [
+            "NATURE"
         ]
     },
     {
         "id": 5,
         "name": "Kite Point Guarapiranga",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "11973214904",
@@ -197,12 +203,14 @@
         "linkInstagram": "https://www.instagram.com/kite.point_guarapiranga/",
         "tags": [
             "TOUR"
+        ],
+        "listTypes": [
+            "NATURE"
         ]
     },
     {
         "id": 6,
         "name": "Jardim Botânico",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "1149346804",
@@ -236,12 +244,14 @@
         "linkMenu": "",
         "linkWebsite": "https://jardimbotanico.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ]
     },
     {
         "id": 7,
         "name": "Zoológico de São Paulo",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "1149346804",
@@ -251,7 +261,14 @@
         "openingHours": {
             "patternId": "JARDIMBOTANICO_ZOO_DAYTIME",
             "customOverrides": [
-                { "days": ["SATURDAY", "SUNDAY"], "open": "09:00", "close": "18:00" }
+                {
+                    "days": [
+                        "SATURDAY",
+                        "SUNDAY"
+                    ],
+                    "open": "09:00",
+                    "close": "18:00"
+                }
             ]
         },
         "isAlreadyVisited": true,
@@ -280,12 +297,14 @@
         "linkMenu": "https://ingressos.zoologico.com.br/?utm_source=google&utm_content=cid|21288890589|gid|165438531594|kwid|kwd-462107190130&gad_source=1&gclid=CjwKCAiAk8G9BhA0EiwAOQxmfpB3tJupD4Sm97b0OWRJyFnyAY6SJXmltDUFKe4Z-bvmF3hVe3EzGxoCHB4QAvD_BwE",
         "linkWebsite": "http://www.zoologico.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ]
     },
     {
         "id": 8,
         "name": "Parque do Jaraguá",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "1139454532",
@@ -315,19 +334,21 @@
                 "neighborhood": "Vila Jaraguá",
                 "postalCode": "02675-031",
                 "isMainUnity": true,
-                "latitude": -23.458970,
+                "latitude": -23.45897,
                 "longitude": -46.755199
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://www.picodojaragua.com.br/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ]
     },
     {
         "id": 9,
         "name": "Parque Ibirapuera",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "1138893000",
@@ -370,12 +391,14 @@
         "linkMenu": "",
         "linkWebsite": "https://www.parquedoibirapuera.org/",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ]
     },
     {
         "id": 10,
         "name": "Parque Villa-Lobos",
-        "type": "NATURE",
         "phones": [
             {
                 "number": "11983481921",
@@ -412,6 +435,9 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ]
     }
 ]

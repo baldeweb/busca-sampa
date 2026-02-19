@@ -22,6 +22,7 @@ import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icSearch from '@/assets/imgs/icons/ic_search.png';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
+import { getPrimaryPlaceType } from '@/core/domain/models/PlaceRecommendation';
 
 export function SearchPage() {
   const { t } = useTranslation();
@@ -129,21 +130,22 @@ export function SearchPage() {
           </div>
         </section>
         {hasResults && (
-          <section className="relative h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg transition-all duration-500 ease-out opacity-100 translate-y-0">
+          <section className="relative h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg transition-all duration-500 ease-out opacity-100 translate-y-0 pb-24">
             <div className="mx-auto max-w-5xl px-4 sm:px-12 h-full min-h-full flex flex-col">
               <h3 className="pt-6 text-lg font-bold text-[#F5F5F5]">{t('searchPage.resultsTitle')}: {results.length}</h3>
               <div className="rounded-t-lg overflow-hidden flex-1">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
                   {results.map((place) => {
+                    const primaryType = getPrimaryPlaceType(place);
                     const neighborhood = place.addresses?.[0]?.neighborhood || t('list.variablePlace');
                     const openingText = getOpeningText(place.openingHours?.patternId);
                     return (
                       <PlaceListItem
-                        key={`${String(place.type)}:${String(place.id)}`}
+                        key={`${String(primaryType || 'UNSET')}:${String(place.id)}`}
                         name={place.name}
                         neighborhood={neighborhood}
                         openingText={openingText}
-                        iconSrc={getPlaceIconSrc(place.type)}
+                        iconSrc={getPlaceIconSrc(primaryType)}
                         detailsLabel={t('common.details')}
                         onDetails={() => {
                           const typeMap: Record<string, string> = {
@@ -158,7 +160,7 @@ export function SearchPage() {
                             PLEASURE: 'prazer',
                             FREE: 'gratuito',
                           };
-                          const cat = typeMap[place.type] || 'restaurantes';
+                          const cat = typeMap[primaryType || ''] || 'restaurantes';
                           navigate(`/${cat}/${slugify(place.name)}`);
                         }}
                       />

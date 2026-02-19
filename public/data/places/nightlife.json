@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Villa Country",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "11987240123",
@@ -40,12 +39,14 @@
         "linkMenu": "",
         "linkWebsite": "https://villacountry.com.br/",
         "linkInstagram": "https://www.instagram.com/villacountry/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 2,
         "name": "Meow Maison",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "MEOW_DAYTIME",
@@ -76,12 +77,14 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/meow.maison/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 3,
         "name": "AMATA SP",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "AMATA_DAYTIME",
@@ -113,12 +116,14 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/amata.sp/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 4,
         "name": "Coffeeshop Club",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "COFFEESHOP_CLUB_DAYTIME",
@@ -150,12 +155,14 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/coffeeshop.club/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 5,
         "name": "Tokyo 東京",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "TOKYO_DAYTIME",
@@ -191,12 +198,14 @@
         "linkInstagram": "https://www.instagram.com/tokyo.sp/",
         "tags": [
             "KARAOKE"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 6,
         "name": "Milo Garage",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "MILO_GARAGE_DAYTIME",
@@ -228,12 +237,14 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/milo_garage/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 7,
         "name": "NOLA",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "NOLA_BAR_DAYTIME",
@@ -264,12 +275,14 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/_nolabar/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 8,
         "name": "The History",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "THEHISTORY_DAYTIME",
@@ -291,19 +304,21 @@
                 "neighborhood": "Vila Olímpia",
                 "postalCode": "04547-003",
                 "isMainUnity": true,
-                "latitude": -23.598850,
+                "latitude": -23.59885,
                 "longitude": -46.681415
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/thehistoryoficial/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 9,
         "name": "Cineclube Cortina",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "CHECK_AVAILABILITY_DAYTIME",
@@ -328,18 +343,20 @@
                 "postalCode": "01220-020",
                 "isMainUnity": true,
                 "latitude": -23.544456,
-                "longitude": -46.644480
+                "longitude": -46.64448
             }
         ],
         "linkMenu": "",
         "linkWebsite": "https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcineclubecortina%3Ffbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn_IkP83kwc1Y3fBB_rfn6NWbFGdidJ3njtUTMx2z0LEl5MitEib1uHcXnpc4_aem_4mIc4gqm8aJyJLOkoYcM_Q&e=AT3W23BijcQ5IMEaq05IZCCnbIqo-l9auIpYJU9c_C4J8ABRFXph-s3JyyPrOxt39l-oGU86_vMMWTAnXovqKKRO15IFEoKI18aLCioQxKiI4imcnw9w9Isb3A",
         "linkInstagram": "https://www.instagram.com/cineclubecortina/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     },
     {
         "id": 10,
         "name": "Samba da Rosa",
-        "type": "NIGHTLIFE",
         "phones": [],
         "openingHours": {
             "patternId": "CHECK_AVAILABILITY_DAYTIME",
@@ -360,12 +377,14 @@
         "linkInstagram": "https://www.instagram.com/sambadarosazn/",
         "tags": [
             "SAMBA"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 11,
         "name": "Canto da Ema",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "1138134708",
@@ -403,12 +422,14 @@
         "linkInstagram": "https://www.instagram.com/cantodaema/",
         "tags": [
             "FORRO"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 12,
         "name": "Baixo Pinheiros Bar",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "11989723242",
@@ -449,12 +470,14 @@
         "tags": [
             "KARAOKE",
             "PAGODE"
+        ],
+        "listTypes": [
+            "NIGHTLIFE", "BARS"
         ]
     },
     {
         "id": 13,
         "name": "Tarot",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "11950821854",
@@ -483,8 +506,8 @@
                 "neighborhood": "Pinheiros",
                 "postalCode": "05432-010",
                 "isMainUnity": true,
-                "latitude": -23.559210,
-                "longitude": -46.688050
+                "latitude": -23.55921,
+                "longitude": -46.68805
             }
         ],
         "linkMenu": "",
@@ -492,12 +515,14 @@
         "linkInstagram": "https://www.instagram.com/tarot.espace/",
         "tags": [
             "KARAOKE"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 14,
         "name": "Praça do Meio Bar",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "11919343109",
@@ -535,12 +560,14 @@
         "linkInstagram": "https://www.instagram.com/pracadomeio/",
         "tags": [
             "PAGODE"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 15,
         "name": "Praça do Meio Bar",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "11919343109",
@@ -578,12 +605,14 @@
         "linkInstagram": "https://www.instagram.com/pracadomeio/",
         "tags": [
             "PAGODE"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 16,
         "name": "O'Malley's Bar",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "1130812114",
@@ -613,7 +642,7 @@
                 "postalCode": "01421-001",
                 "isMainUnity": true,
                 "latitude": -23.558224,
-                "longitude": -46.665890
+                "longitude": -46.66589
             }
         ],
         "linkMenu": "http://www.omalleysbar.net/nosso-cardapio-2/",
@@ -621,12 +650,14 @@
         "linkInstagram": "https://www.instagram.com/omalleysbar/",
         "tags": [
             "PUB_ROCK"
+        ],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     },
     {
         "id": 17,
         "name": "Vitrinni Lounge Beer SP",
-        "type": "NIGHTLIFE",
         "phones": [
             {
                 "number": "1130812114",
@@ -660,6 +691,9 @@
         "linkMenu": "",
         "linkWebsite": "https://www.vitrinnilounge.com/home.php?filial=sp",
         "linkInstagram": "https://www.instagram.com/vitrinniloungesp/",
-        "tags": []
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
     }
 ]

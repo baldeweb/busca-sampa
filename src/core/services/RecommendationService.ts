@@ -1,8 +1,8 @@
-import type { PlaceRecommendation } from "../domain/models/PlaceRecommendation";
+import { placeHasType, type PlaceRecommendation } from "../domain/models/PlaceRecommendation";
 
 export const RecommendationService = {
     filterByType(list: PlaceRecommendation[], type: string) {
-        return list.filter((item) => item.type === type);
+        return list.filter((item) => placeHasType(item, type));
     },
 
     filterByNeighborhood(list: PlaceRecommendation[], neighborhood: string) {

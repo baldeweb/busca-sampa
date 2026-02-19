@@ -1,4 +1,4 @@
-import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
+import { getPrimaryPlaceType, type PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { useNavigate } from "react-router-dom";
 import { slugify } from '@/core/services/Slugify';
@@ -16,7 +16,8 @@ export function PlaceCard({ place }: Props) {
     const navigate = useNavigate();
 
     function resolveCategoryKey(): string {
-        switch (place.type) {
+        const primaryType = getPrimaryPlaceType(place);
+        switch (primaryType) {
             case "RESTAURANTS": return "restaurantes";
             case "BARS": return "bares";
             case "COFFEES": return "cafeterias";

@@ -19,6 +19,7 @@ import { OpeningHoursModal } from "@/web/components/place/OpeningHoursModal";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useTranslation } from 'react-i18next';
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
+import { getPlaceListTypes, getPrimaryPlaceType } from '@/core/domain/models/PlaceRecommendation';
 
 export function PlaceDetailPage() {
       const { t } = useTranslation();
@@ -162,7 +163,7 @@ export function PlaceDetailPage() {
   const abertoAgora = openingPattern ? isOpenNow(openingPattern.periods) : false;
   // choose icon based on place.type
   const iconNode = (() => {
-    const typeKey = place?.type || '';
+    const typeKey = getPrimaryPlaceType(place) || '';
     switch ((typeKey || '').toUpperCase()) {
       case 'BARS':
         return <img src={icBars} alt="bar" className="w-10 h-10 object-contain mr-4" />;
@@ -192,7 +193,7 @@ export function PlaceDetailPage() {
       <PlaceDetail
         name={place.name}
         description={""}
-        type={getPlaceTypeLabel(place.type)}
+        type={getPlaceListTypes(place).map((typeKey) => getPlaceTypeLabel(typeKey)).join(' • ')}
         icon={iconNode}
         priceRange={place.priceRange}
         openingDays={openingDays}

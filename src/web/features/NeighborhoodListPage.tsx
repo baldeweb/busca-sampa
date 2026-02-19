@@ -24,6 +24,7 @@ import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import { PlaceListItem } from '@/web/components/place/PlaceListItem';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
+import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -91,7 +92,7 @@ export const NeighborhoodListPage: React.FC = () => {
     // Deduplicação defensiva por tipo+id, evitando entradas repetidas
     const byKey = new Map<string, any>();
     for (const p of matches) {
-      const key = `${String(p.type)}:${String(p.id)}`;
+      const key = `${String(getPrimaryPlaceType(p) || 'UNSET')}:${String(p.id)}`;
       if (!byKey.has(key)) byKey.set(key, p);
     }
     return Array.from(byKey.values());
@@ -101,7 +102,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const placeTypes = useMemo(() => {
     const set = new Set<string>();
     neighborhoodPlaces.forEach((p) => {
-      if (p.type) set.add(p.type);
+      getPlaceListTypes(p).forEach((placeType) => set.add(placeType));
     });
     return Array.from(set);
   }, [neighborhoodPlaces]);
@@ -169,7 +170,7 @@ export const NeighborhoodListPage: React.FC = () => {
       // Filtro de tipo (case-insensitive, também considera tags)
       if (selectedType) {
         const sel = norm(selectedType);
-        const typeMatches = norm(p.type) === sel;
+        const typeMatches = placeHasType(p, sel);
         const tagMatches = Array.isArray(p.tags) && p.tags.some((tg: any) => norm(tg) === sel);
         if (!typeMatches && !tagMatches) return false;
       }
@@ -422,7 +423,7 @@ export const NeighborhoodListPage: React.FC = () => {
       />
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
-      <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'}`}>
+      <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'} pb-24`}>
         <div className="mx-auto max-w-5xl px-4 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             {sortedPlaces.length === 0 && (
@@ -431,18 +432,19 @@ export const NeighborhoodListPage: React.FC = () => {
             {sortedPlaces.length > 0 && (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
                 {sortedPlaces.map((place) => {
+                  const primaryType = getPrimaryPlaceType(place);
                   const neighborhood = place.addresses?.[0]?.neighborhood || place.neighborhood || '';
                   const openingText = ['CHECK_AVAILABILITY_DAYTIME'].includes(place.openingHours?.patternId)
                     ? t('openingHours.checkAvailabilityLabel')
                     : getOpeningDisplayForToday(place);
                   return (
                     <PlaceListItem
-                      key={`${String(place.type)}:${String(place.id)}`}
+                      key={`${String(primaryType || 'UNSET')}:${String(place.id)}`}
                       variant="neighborhood"
                       name={place.name}
                       neighborhood={neighborhood || t('list.variablePlace')}
                       openingText={openingText}
-                      iconSrc={getPlaceIconSrc(place.type)}
+                      iconSrc={getPlaceIconSrc(primaryType)}
                       detailsLabel={t('common.details')}
                       onDetails={() => {
                         const typeMap: Record<string, string> = {
@@ -457,7 +459,7 @@ export const NeighborhoodListPage: React.FC = () => {
                           PLEASURE: "prazer",
                           FREE: "gratuito",
                         };
-                        const cat = typeMap[place.type] || "restaurantes";
+                        const cat = typeMap[primaryType || ''] || "restaurantes";
                         navigate(`/${cat}/${slugify(place.name)}`);
                       }}
                     />

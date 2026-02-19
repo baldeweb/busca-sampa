@@ -1,4 +1,4 @@
-import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
+import { placeHasType, type PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 
 export class MenuWhereIsTodayFilterService {
@@ -38,28 +38,28 @@ export class MenuWhereIsTodayFilterService {
     ): PlaceRecommendation[] {
         switch (tag) {
             case "RESTAURANTS":
-                return list.filter((item) => item.type === "RESTAURANTS");
+                return list.filter((item) => placeHasType(item, "RESTAURANTS"));
 
             case "BARS":
-                return list.filter((item) => item.type === "BARS");
+                return list.filter((item) => placeHasType(item, "BARS"));
 
             case "COFFEES":
-                return list.filter((item) => item.type === "COFFEES");
+                return list.filter((item) => placeHasType(item, "COFFEES"));
 
             case "NIGHTLIFE":
-                return list.filter((item) => item.type === "NIGHTLIFE");
+                return list.filter((item) => placeHasType(item, "NIGHTLIFE"));
 
             case "NATURE":
-                return list.filter((item) => item.type === "NATURE");
+                return list.filter((item) => placeHasType(item, "NATURE"));
 
             case "TOURIST_SPOT":
-                return list.filter((item) => item.type === "TOURIST_SPOT");
+                return list.filter((item) => placeHasType(item, "TOURIST_SPOT"));
 
             case "FORFUN":
-                return list.filter((item) => item.type === "FORFUN");
+                return list.filter((item) => placeHasType(item, "FORFUN"));
 
             case "STORES":
-                return list.filter((item) => item.type === "STORES");
+                return list.filter((item) => placeHasType(item, "STORES"));
 
             case "FREE":
                 return list.filter((item) => item.priceRange === "FREE");

@@ -27,6 +27,7 @@ import { PlaceListItem } from "@/web/components/place/PlaceListItem";
 import EnvironmentGrid from "../components/ui/EnvironmentGrid";
 import { FilterBar } from "@/web/components/ui/FilterBar";
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
+import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -122,7 +123,7 @@ export const PlaceListPage: React.FC = () => {
             function parseTime(str: string) { const [h, m] = (str || '0:0').split(':').map(Number); return h * 60 + (m || 0); }
             return allPlaces.filter(place => {
                 // Oculta itens de Casa de Prazeres nesta listagem
-                if ((place.type || '').toUpperCase() === 'PLEASURE') return false;
+                if (placeHasType(place, 'PLEASURE')) return false;
                 const periods = getPeriodsForToday(place);
                 if (!periods || periods.length === 0) return false;
                 // if currently open by existing helper, include
@@ -157,7 +158,7 @@ export const PlaceListPage: React.FC = () => {
                 return false;
             });
         }
-        return allPlaces.filter(p => p.type === mappedType);
+        return allPlaces.filter(p => placeHasType(p, mappedType));
     }, [allPlaces, mappedType, routeType, restaurants, openingPatterns]);
 
     // Intersect with IDs passed via navigation state, if any
@@ -194,7 +195,9 @@ export const PlaceListPage: React.FC = () => {
 
         // Fallback: se não houver tags, use os tipos de lugar presentes (ex: TOURIST_SPOT, RESTAURANT)
         const typeSet = new Set<string>();
-        baseList.forEach(p => { if (p.type) typeSet.add(p.type); });
+        baseList.forEach(p => {
+            getPlaceListTypes(p).forEach((placeType) => typeSet.add(placeType));
+        });
         const typeArr = Array.from(typeSet).map(e => ({ label: getPlaceTypeLabel(e), value: e }));
         typeArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
         return typeArr;
@@ -318,7 +321,7 @@ export const PlaceListPage: React.FC = () => {
         return baseList.filter(p => {
             // environment/type filter
             if (sel) {
-                if (normalize(p.type) === sel) {
+                if (placeHasType(p, sel)) {
                     // ok
                 } else if (Array.isArray(p.tags) && p.tags.some((tg: any) => normalize(tg) === sel)) {
                     // ok
@@ -366,7 +369,7 @@ export const PlaceListPage: React.FC = () => {
         try {
             console.log('[PlaceListPage] environments=', environments.map(e => ({ label: e.label, value: e.value })));
             const sample = baseList.slice(0, 5);
-            console.log('[PlaceListPage] filteredByType sample (5):', sample.map(p => ({ id: p.id, name: p.name, type: p.type, tags: p.tags })));
+            console.log('[PlaceListPage] filteredByType sample (5):', sample.map(p => ({ id: p.id, name: p.name, listTypes: p.listTypes, tags: p.tags })));
         } catch (_) { }
     }, [environments, baseList]);
 
@@ -377,7 +380,7 @@ export const PlaceListPage: React.FC = () => {
             const normalize = (s: any) => String(s || '').trim().toLowerCase();
             const sel = normalize(selectedEnv);
             const matches = baseList.filter(p => {
-                if (normalize(p.type) === sel) return true;
+                if (placeHasType(p, sel)) return true;
                 if (Array.isArray(p.tags)) {
                     for (const tg of p.tags) if (normalize(tg) === sel) return true;
                 }
@@ -668,7 +671,7 @@ export const PlaceListPage: React.FC = () => {
             />
             {/* Modal antigo de filtros removido em favor dos menus inline */}
             {/* Lista de lugares */}
-            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg`}>
+            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg pb-24`}>
                 <div className="mx-auto max-w-5xl px-4 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
@@ -685,7 +688,7 @@ export const PlaceListPage: React.FC = () => {
                                             name={place.name}
                                             neighborhood={neighborhood}
                                             openingText={openingText}
-                                            iconSrc={getPlaceIconSrc(place.type)}
+                                            iconSrc={getPlaceIconSrc(getPrimaryPlaceType(place))}
                                             detailsLabel={t('common.details')}
                                             onDetails={() => {
                                                 const typeToSlug: Record<string, string> = {
@@ -700,7 +703,7 @@ export const PlaceListPage: React.FC = () => {
                                                     PLEASURE: "prazer",
                                                     FREE: "gratuito",
                                                 };
-                                                const placeTypeKey = place.type || mappedType;
+                                                const placeTypeKey = getPrimaryPlaceType(place) || mappedType;
                                                 const slug = typeToSlug[placeTypeKey] || routeTypeLower;
                                                 navigate(`/${slug}/${slugify(place.name)}`);
                                             }}
