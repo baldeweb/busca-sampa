@@ -409,17 +409,17 @@ export const PlaceListPage: React.FC = () => {
     }, [filteredPlacesWithOpenNow, order, orderVersion]);
 
 
-    // Título dinâmico: prefira um rótulo passado via navigation state (vindo do HomePage),
-    // caso contrário use a tradução baseada no tipo.
-    const location = useLocation();
-    const navLabel = (location.state as any)?.label as string | undefined;
+    // Título dinâmico: sempre traduzido conforme o idioma ativo.
     const placeTypeForTitle = mappedType;
-    const title = navLabel || t(`placeType.${placeTypeForTitle}`);
+    const isOpensTodayRoute = routeTypeLower === 'abrem-hoje' || placeTypeForTitle === 'OPEN_TODAY';
+    const title = isOpensTodayRoute
+        ? t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' })
+        : getPlaceTypeLabel(placeTypeForTitle);
     useDocumentTitle(title);
 
     // Subtítulo dinâmico usando chaves de tradução e textos por tipo
     const article = t(`placeList.article.${placeTypeForTitle}`, { defaultValue: '' });
-    const nounTranslated = t(`placeList.noun.${placeTypeForTitle}`, { defaultValue: (navLabel || title).toLowerCase() });
+    const nounTranslated = t(`placeList.noun.${placeTypeForTitle}`, { defaultValue: title.toLowerCase() });
     const subtitle = t('placeList.subtitleTemplate', { article, noun: nounTranslated });
 
     // DEBUG LOGS (diagnóstico)

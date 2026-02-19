@@ -1,5 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { placeTypeLabels } from '@/i18n/extra/placeType';
+import { environmentLabels } from '@/i18n/extra/environment';
+import { routeOptionLabels } from '@/i18n/extra/routeOptions';
+import { reportProblemLabels } from '@/i18n/extra/reportProblem';
 
 // Load persisted language or detect from device/browser (no geolocation)
 const SUPPORTED_LANGS = ['pt', 'es', 'fr', 'ru', 'zh', 'en', 'de', 'ja', 'ar', 'it', 'nl', 'tr', 'pl'];
@@ -37,6 +41,30 @@ function detectPreferredLang(): string {
 }
 
 const savedLang = detectPreferredLang();
+
+type ResourceMap = Record<string, { translation: Record<string, any> }>;
+
+function mergeDeep(target: Record<string, any>, source: Record<string, any>) {
+  const output = { ...target };
+  Object.keys(source || {}).forEach((key) => {
+    const srcValue = source[key];
+    const tgtValue = output[key];
+    if (srcValue && typeof srcValue === 'object' && !Array.isArray(srcValue)) {
+      output[key] = mergeDeep(tgtValue && typeof tgtValue === 'object' ? tgtValue : {}, srcValue);
+    } else {
+      output[key] = srcValue;
+    }
+  });
+  return output;
+}
+
+function mergeResourceSets(base: ResourceMap, extras: ResourceMap[]) {
+  let merged: ResourceMap = mergeDeep({}, base) as ResourceMap;
+  extras.forEach((extra) => {
+    merged = mergeDeep(merged, extra) as ResourceMap;
+  });
+  return merged;
+}
 
 const resources = {
   pt: {
@@ -1621,6 +1649,17 @@ const resources = {
   ,
   ar: {
     translation: {
+      header: {
+        title: 'Role Paulista',
+        tagline: 'افضل توصية، على بعد نقرات قليلة'
+      },
+      home: {
+        nearMeTitle: 'بالقرب مني',
+        nearMeSubtitle: '(عرض أماكن ضمن نطاق {{km}} كم بالقرب منك)',
+        noNearbyResultsRadius: 'لا يوجد شيء قريب منك...\n\nما رأيك أن نغير المسافة لكي\nنعرض الأماكن القريبة؟',
+        neighborhoodsTitle: 'حسب الحي',
+        neighborhoodsTagline: 'أنت في أحد هذه الأحياء؟ هناك أشياء جميلة بالقرب منك!'
+      },
       filters: {
         title: 'فلاتر',
         sortingTitle: 'الترتيب',
@@ -1732,7 +1771,7 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', checkAvailabilityLabel: 'Verifica disponibilità' },
-      whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Dai un’occhiata ;)' },
+      whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Dai un’occhiata ;)', opensToday: 'Aperti oggi' },
       placeType: {
         RESTAURANT: 'Ristoranti',
         BARS: 'Bar',
@@ -1929,18 +1968,19 @@ const resources = {
         notesTitle: 'Notlar'
       },
       openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
-      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'Lijst met plekken waar ik ben geweest, per categorie. Kijk maar ;)' },
+      whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'Lijst met plekken waar ik ben geweest, per categorie. Kijk maar ;)', opensToday: 'Vandaag geopend' },
       placeType: {
-        RESTAURANT: 'Restoranlar',
-        BARS: 'Barlar',
-        COFFEES: 'Koffiebars',
-        NIGHTLIFE: 'Gece hayatı',
-        NATURE: 'Doğa',
-        TOURIST_SPOT: 'Turistik noktalar',
-        FORFUN: 'Eğlence',
-        STORES: 'Mağazalar',
-        FREE: 'Ücretsiz',
-        PLEASURE: 'Eğlence evleri'
+        RESTAURANT: 'Restaurants',
+        RESTAURANTS: 'Restaurants',
+        BARS: 'Bars',
+        COFFEES: 'Cafes',
+        NIGHTLIFE: 'Nachtleven',
+        NATURE: 'Natuur',
+        TOURIST_SPOT: 'Toeristische plekken',
+        FORFUN: 'Plezier',
+        STORES: 'Winkels',
+        FREE: 'Gratis',
+        PLEASURE: 'Plezierhuis'
       },
       placeList: {
         environmentTitle: 'Type omgeving:',
@@ -2404,10 +2444,12 @@ const resources = {
   }
 };
 
+const mergedResources = mergeResourceSets(resources, [placeTypeLabels, environmentLabels, routeOptionLabels, reportProblemLabels]);
+
 i18n
   .use(initReactI18next)
   .init({
-    resources,
+    resources: mergedResources,
     lng: savedLang,
     fallbackLng: 'pt',
     interpolation: { escapeValue: false }
