@@ -408,7 +408,7 @@ export function HomePage() {
                             </span>
                             {s.nearestKm !== null && (
                               <span className="text-sm text-gray-400">
-                                Mais próximo: {formatDistanceKm(s.nearestKm)}
+                                {t('home.nearestLabel')}: {formatDistanceKm(s.nearestKm)}
                                 {s.nearestName ? ` - ${s.nearestName}` : ""}
                               </span>
                             )}
@@ -419,7 +419,7 @@ export function HomePage() {
                               onClick={(e) => { e.stopPropagation(); setMapCategory(s.category); }}
                               className="min-w-[120px] text-sm rounded-full bg-[#212121] text-white px-3 py-1 border border-[#F5F5F5]"
                             >
-                              ver no mapa
+                              {t('home.viewOnMap')}
                             </button>
                                 <button
                               type="button"

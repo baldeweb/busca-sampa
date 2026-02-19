@@ -4,6 +4,9 @@ import { placeTypeLabels } from '@/i18n/extra/placeType';
 import { environmentLabels } from '@/i18n/extra/environment';
 import { routeOptionLabels } from '@/i18n/extra/routeOptions';
 import { reportProblemLabels } from '@/i18n/extra/reportProblem';
+import { homeNearMeLabels } from '@/i18n/extra/homeNearMe';
+import { priceRangeLabels } from '@/i18n/extra/priceRange';
+import { footerLabels } from '@/i18n/extra/footer';
 
 // Load persisted language or detect from device/browser (no geolocation)
 const SUPPORTED_LANGS = ['pt', 'es', 'fr', 'ru', 'zh', 'en', 'de', 'ja', 'ar', 'it', 'nl', 'tr', 'pl'];
@@ -2444,7 +2447,7 @@ const resources = {
   }
 };
 
-const mergedResources = mergeResourceSets(resources, [placeTypeLabels, environmentLabels, routeOptionLabels, reportProblemLabels]);
+const mergedResources = mergeResourceSets(resources, [placeTypeLabels, environmentLabels, routeOptionLabels, reportProblemLabels, homeNearMeLabels, priceRangeLabels, footerLabels]);
 
 i18n
   .use(initReactI18next)
