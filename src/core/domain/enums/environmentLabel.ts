@@ -1,5 +1,11 @@
-export function getEnvironmentLabel(tag: string): string {
-  const map: Record<string, string> = {
+import i18n from '@/i18n';
+
+function normalizeTag(tag: string) {
+  if (!tag) return tag;
+  return tag.replace(/-/g, '_').toUpperCase();
+}
+
+const FALLBACK_MAP: Record<string, string> = {
     PET_FRIENDLY: "Permite animais",
     BISTRO: "Bistrô",
     THEMED: "Temático",
@@ -71,6 +77,13 @@ export function getEnvironmentLabel(tag: string): string {
     GROUP_ACTIVITY: "Grupos",
     COWORKING: "Coworking",
     OTHERS: "Outros",
-  };
-  return map[tag] || tag;
+};
+
+export function getEnvironmentLabel(tag: string): string {
+  const key = normalizeTag(tag);
+  const path = `environment.${key}`;
+  try {
+    if (i18n && i18n.exists(path)) return i18n.t(path);
+  } catch (_) {}
+  return FALLBACK_MAP[key] || tag;
 }

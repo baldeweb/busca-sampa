@@ -1,4 +1,5 @@
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { useTranslation } from 'react-i18next';
 
 interface EnvironmentOption {
     label: string;
@@ -20,6 +21,8 @@ export function EnvironmentSelectModal({
     selectedEnv,
     excludedValues,
 }: Props) {
+    const { t } = useTranslation();
+    const heading = t('placeList.environmentTitle', { defaultValue: 'Tipos de ambiente' });
     function handleSelect(env: EnvironmentOption | null) {
         onSelect(env);
         onClose();
@@ -41,7 +44,7 @@ export function EnvironmentSelectModal({
                 {/* Cabeçalho */}
                 <div className="px-4 py-3">
                     <div className="mb-1 flex items-center justify-between">
-                        <SectionHeading title={"Tipos de ambiente"} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" />
+                        <SectionHeading title={heading} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" />
                         <button
                             type="button"
                             onClick={onClose}
@@ -64,7 +67,7 @@ export function EnvironmentSelectModal({
                                 selectedEnv === null ? 'bg-bs-red/50' : ''
                             }`}
                         >
-                            <span className="category-card-label">Todos</span>
+                            <span className="category-card-label">{t('common.all')}</span>
                             <span className="text-sm opacity-70">{">"}</span>
                         </button>
                     </li>

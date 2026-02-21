@@ -61,7 +61,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                 className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
                 style={{ backgroundImage: `url(${imgTheatro})`, opacity: 0.2 }}
             />
-            <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.55 }} />
+            <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
             <div className="relative z-20 mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2">
                 <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
                 <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
@@ -118,18 +118,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                 translatedRaw = found ? getPlaceTypeLabel(found) : raw;
                             }
 
-                            // convert to sentence case: first letter uppercase, rest lowercase
-                            const sentence = (s: string) => {
-                                if (!s) return s;
-                                const trimmed = s.trim();
-                                return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
-                            };
-
                             let label: React.ReactNode;
                             // Build label using the translated string but maintain forced breaks for known phrases
-                            const translatedSentence = sentence(translatedRaw || '');
-                            
-                            const parts = translatedSentence.split(/\s+/).filter(Boolean);
+                            const translatedLabel = (translatedRaw || '').trim();
+                            const parts = translatedLabel.split(/\s+/).filter(Boolean);
                             label = (
                                 <>
                                     {parts.map((p, i) => (
