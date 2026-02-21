@@ -28,6 +28,7 @@ import EnvironmentGrid from "../components/ui/EnvironmentGrid";
 import { FilterBar } from "@/web/components/ui/FilterBar";
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
+import { useEnvironmentVisibleCount } from '@/web/hooks/useEnvironmentVisibleCount';
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -55,6 +56,7 @@ export const PlaceListPage: React.FC = () => {
     const { data: stores } = useRecommendationList("stores");
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
+    const visibleEnvironmentCount = useEnvironmentVisibleCount();
 
     // Junta todos os lugares em um único array para filtros especiais
     const allPlaces = useMemo(() => [
@@ -720,7 +722,7 @@ export const PlaceListPage: React.FC = () => {
             {showEnvironmentModal && (
                 <EnvironmentSelectModal
                     environments={environments}
-                    excludedValues={environments.slice(0, 8).map(e => e.value)}
+                    excludedValues={environments.slice(0, visibleEnvironmentCount).map((e) => e.value)}
                     selectedEnv={selectedEnv}
                     onClose={() => setShowEnvironmentModal(false)}
                     onSelect={(env) => {

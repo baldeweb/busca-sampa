@@ -25,6 +25,7 @@ import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import { PlaceListItem } from '@/web/components/place/PlaceListItem';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
+import { useEnvironmentVisibleCount } from '@/web/hooks/useEnvironmentVisibleCount';
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -45,6 +46,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const { data: pleasures } = useRecommendationList("pleasure");
   const { data: openingPatternsData } = useOpeningPatterns();
   const openingPatterns = openingPatternsData || [];
+  const visibleEnvironmentCount = useEnvironmentVisibleCount();
 
   const allPlaces = useMemo(
     () => [
@@ -474,7 +476,7 @@ export const NeighborhoodListPage: React.FC = () => {
       {showEnvironmentModal && (
         <EnvironmentSelectModal
           environments={environments}
-          excludedValues={environments.slice(0, 8).map(e => e.value)}
+          excludedValues={environments.slice(0, visibleEnvironmentCount).map((e) => e.value)}
           selectedEnv={selectedType}
           onClose={() => setShowEnvironmentModal(false)}
           onSelect={(env) => {
