@@ -13,7 +13,7 @@ export function Header() {
                         <img
                             src={flagSp}
                             alt="Bandeira do estado de São Paulo"
-                            className="h-[60px] w-[120px] sm:h-[68px] sm:w-[130px] me-4"
+                            className="h-[64px] w-[128px] sm:h-[68px] sm:w-[130px] me-4"
                         />
                     </div>
 

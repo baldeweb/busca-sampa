@@ -100,25 +100,25 @@ export function SearchPage() {
       <Toolbar onBack={() => navigate(-1)} />
       <div className="flex-1 grid" style={{ gridTemplateRows: hasResults ? 'auto 1fr' : 'auto' }}>
         <section className="relative shrink-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-          <div className="mx-auto max-w-5xl px-4 sm:px-12 pt-0 pb-8 text-black">
-            <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 py-8">
-                <div className="flex items-start gap-4">
-                  <img src={icSearch} alt="Buscar" className="w-9 h-9 object-contain mt-2" />
-                  <div>
-                    <SectionHeading
-                      title={t('searchPage.title')}
-                      underline={false}
-                      sizeClass="text-lg sm:text-2xl text-[#212121]"
-                    />
-                    <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
-                      {t('searchPage.subtitle')}
-                    </p>
-                  </div>
+          <div className="mx-auto max-w-5xl pt-0 pb-2 text-black">
+            <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 pt-6 pb-4">
+              <div className="flex items-start gap-4">
+                <img src={icSearch} alt="Buscar" className="w-9 h-9 object-contain mt-2" />
+                <div>
+                  <SectionHeading
+                    title={t('searchPage.title')}
+                    underline={false}
+                    sizeClass="text-lg sm:text-2xl text-[#212121]"
+                  />
+                  <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
+                    {t('searchPage.subtitle')}
+                  </p>
                 </div>
+              </div>
             </div>
-            <div className={`w-full transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
+            <div className={`w-full px-4 sm:px-12 transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
               <div className={`w-full transition-all duration-500 ease-out ${hasResults ? '-translate-y-1 opacity-100' : 'translate-y-0 opacity-100'}`}>
-                <p className="mb-2 text-base font-semibold text-[#212121]">{t('searchPage.fieldLabel')}</p>
+                <p className="mb-2 text-base font-semibold text-[#212121] pt-4">{t('searchPage.fieldLabel')}</p>
                 <SearchField
                   value={query}
                   onChange={setQuery}

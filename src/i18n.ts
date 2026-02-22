@@ -232,7 +232,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Sobre mim',
           whatIsLabel: 'O que é o Rolê Paulista?',
-          earnLabel: 'Quanto eu ganho com isso?'
+          earnLabel: 'Quanto eu ganho com isso?',
+          howToHelpLabel: 'Eu posso contribuir de alguma forma?'
         },
         aboutList: [
           'Mobile Engineering há 10 anos (se minha memória ainda estiver boa)',
@@ -252,6 +253,10 @@ const resources = {
           'A resposta é bem simples: nada. O Rolê Paulista é um projeto pessoal, feito por paixão e amor pela cidade de São Paulo. Talvez futuramente eu ganhe com publicação ou adsense? Talvez, mas a ideia é que o site SEMPRE seja gratuito, tanto para quem acessa, quanto as postagens que eu faço dos locais.',
           'Eu não vou aceitar receber dinheiro por isso, principalmente para falar bem de um lugar, quero manter a integridade e a autenticidade do conteúdo, indo aos lugares e passando a experiência real para vocês na qual eu tive.',
           'Talvez leve um tempo até que eu suba as postagens no Instagram ou aqui no site, porque atualmente eu sou a equipe de infraestrutura, desenvolvimento, marketing, design e conteúdo, tudo ao mesmo tempo haha, por isso peço desculpas se demorar para atualizar alguma coisa :)'
+        ],
+        howToHelp: [
+          'Se você quer indicar um lugar, me envia uma mensagem no Instagram ou e-mail com as informações do lugar, que eu farei o possível para conhecer e assim, poder ajudar os outros que usam este site!',
+          'Se você quiser ajudar contribuindo na continuidade deste projeto, para deixarmos seus rolês em SP cada vez mais leves e práticos, é só apontar a câmera para o QRCode abaixo :)'
         ],
         socialHeading: 'Redes sociais',
         socialDescription: 'Me encontre nas redes sociais abaixo :)',

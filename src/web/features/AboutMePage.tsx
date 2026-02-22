@@ -5,6 +5,7 @@ import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { useNavigate } from 'react-router-dom';
 import Toolbar from "../components/layout/Toolbar";
 import { Accordion, AccordionItem } from '../components/ui/Accordion';
+import icQrCodeDonation from '../../assets/imgs/etc/img_qrcode_donation.jpeg';
 
 export function AboutMePage() {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ export function AboutMePage() {
   const aboutList = t('aboutMe.aboutList', { returnObjects: true }) as string[];
   const whatIsList = t('aboutMe.whatIs', { returnObjects: true }) as string[];
   const earnList = t('aboutMe.earn', { returnObjects: true }) as string[];
+  const howToHelp = t('aboutMe.howToHelp', { returnObjects: true }) as string[];
 
   return (
     <>
@@ -58,6 +60,12 @@ export function AboutMePage() {
             {earnList.map((item) => (
               <p key={item}>{item}</p>
             ))}
+          </AccordionItem>
+          <AccordionItem label={t('aboutMe.accordion.howToHelpLabel')}>
+            {howToHelp.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
+            <img src={icQrCodeDonation} alt="QRCode para ajudar" className="w-40 h-40 mt-4" />
           </AccordionItem>
         </Accordion>
 

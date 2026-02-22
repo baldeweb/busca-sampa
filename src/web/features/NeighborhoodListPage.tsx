@@ -357,7 +357,7 @@ export const NeighborhoodListPage: React.FC = () => {
       <Toolbar onBack={() => navigate(-1)} />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
         <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-2 text-black">
-            <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 py-8">
+            <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 pt-6 pb-4">
               <div className="flex items-start gap-4">
                 <img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />
                 <div>
