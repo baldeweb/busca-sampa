@@ -218,7 +218,7 @@ export function TravelItineraryPage() {
             if (nextOpenMinutes !== null && nextOpenStr) {
                 const diff = nextOpenMinutes - currentMinutes;
                 if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
-                return nextOpenStr;
+                return t('placeList.opensAt', { time: nextOpenStr, defaultValue: `Abre às ${nextOpenStr}` });
             }
 
             // fallback: try next days (reuse logic above to find first upcoming)

@@ -58,7 +58,7 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
       </div>
       <AppButton
         variant="outline"
-        size="xxs"
+        size="sm"
         onClick={onDetails}
         className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 btn-hover-red"
       >

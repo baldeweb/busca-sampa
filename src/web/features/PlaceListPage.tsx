@@ -511,7 +511,7 @@ export const PlaceListPage: React.FC = () => {
         if (nextOpenMinutes !== null && nextOpenStr) {
             const diff = nextOpenMinutes - currentMinutes;
             if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
-            return nextOpenStr;
+            return t('placeList.opensAt', { time: nextOpenStr, defaultValue: `Abre às ${nextOpenStr}` });
         }
 
         // No more openings today — attempt a robust next-opening search across the next 7 days.

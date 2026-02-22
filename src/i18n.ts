@@ -325,6 +325,7 @@ const resources = {
         environmentTitlePlace: 'Tipo de lugar:',
         hoursUnavailable: 'Horário indisponível',
         opensAtHeader: 'Abertura',
+        opensAt: 'Abre às {{time}}',
         openNow: 'Aberto agora',
         opensSoon: 'Abre em instantes',
         opensTomorrowAt: 'Abre amanhã às {{time}}',
@@ -481,7 +482,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Sobre mí',
           whatIsLabel: '¿Qué es Rolê Paulista?',
-          earnLabel: '¿Cuánto gano con esto?'
+          earnLabel: '¿Cuánto gano con esto?',
+          howToHelpLabel: '¿Puedo contribuir de alguna manera?'
         },
         aboutList: [
           'Ingenieur Mobile depuis 10 ans (si ma mémoire est encore bonne)',
@@ -501,6 +503,10 @@ const resources = {
           'La réponse est simple : rien. Rolê Paulista est un projet personnel, fait par passion et amour pour la ville de São Paulo. Peut-être qu’à l’avenir je gagne avec des publications ou de l’adsense ? Peut-être, mais l’idée est que le site soit TOUJOURS gratuit, tant pour ceux qui y accèdent que pour les publications que je fais sur les lieux.',
           'Je n’accepterai pas d’argent pour cela, surtout pour parler en bien d’un endroit ; je veux garder l’intégrité et l’authenticité du contenu, en allant sur place et en transmettant l’expérience réelle que j’ai eue.',
           'Il se peut que je mette du temps à publier sur Instagram ou sur le site, car actuellement je suis l’équipe infrastructure, développement, marketing, design et contenu, tout en même temps haha, donc désolé si je tarde à mettre à jour quelque chose :)'
+        ],
+        howToHelp: [
+          'Si quieres recomendar un lugar, envíame un mensaje por Instagram o por correo electrónico con la información del sitio; haré lo posible por visitarlo y así ayudar a otras personas que usan este sitio.',
+          'Si quieres ayudar a mantener este proyecto para que tus planes en SP sean cada vez más ligeros y prácticos, solo apunta la cámara al código QR de abajo :)'
         ],
         socialHeading: 'Réseaux sociaux',
         socialDescription: 'Retrouvez-moi sur les réseaux sociaux ci-dessous :)',
@@ -566,6 +572,7 @@ const resources = {
         environmentTitlePlace: 'Tipo de lugar:',
         hoursUnavailable: 'Horario no disponible',
         opensAtHeader: 'Apertura',
+        opensAt: 'Abre a las {{time}}',
         openNow: 'Abierto ahora',
         opensSoon: 'Abre en instantes',
         opensTomorrowAt: 'Abre mañana a las {{time}}',
@@ -699,7 +706,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Sobre mí',
           whatIsLabel: '¿Qué es Rolê Paulista?',
-          earnLabel: '¿Cuánto gano con esto?'
+          earnLabel: '¿Cuánto gano con esto?',
+          howToHelpLabel: '¿Puedo contribuir de alguna manera?'
         },
         aboutList: [
           'Ingenieur Mobile depuis 10 ans (si ma mémoire est encore bonne)',
@@ -719,6 +727,10 @@ const resources = {
           'La réponse est simple : rien. Rolê Paulista est un projet personnel, fait par passion et amour pour la ville de São Paulo. Peut-être qu’à l’avenir je gagne avec des publications ou de l’adsense ? Peut-être, mais l’idée est que le site soit TOUJOURS gratuit, tant pour ceux qui y accèdent que pour les publications que je fais sur les lieux.',
           'Je n’accepterai pas d’argent pour cela, surtout pour parler en bien d’un endroit ; je veux garder l’intégrité et l’authenticité du contenu, en allant sur place et en transmettant l’expérience réelle que j’ai eue.',
           'Il se peut que je mette du temps à publier sur Instagram ou sur le site, car actuellement je suis l’équipe infrastructure, développement, marketing, design et contenu, tout en même temps haha, donc désolé si je tarde à mettre à jour quelque chose :)'
+        ],
+        howToHelp: [
+          'Si quieres recomendar un lugar, envíame un mensaje por Instagram o por correo electrónico con la información del sitio; haré lo posible por visitarlo y así ayudar a otras personas que usan este sitio.',
+          'Si quieres ayudar a mantener este proyecto para que tus planes en SP sean cada vez más ligeros y prácticos, solo apunta la cámara al código QR de abajo :)'
         ],
         socialHeading: 'Réseaux sociaux',
         socialDescription: 'Retrouvez-moi sur les réseaux sociaux ci-dessous :)',
@@ -784,6 +796,7 @@ const resources = {
         environmentTitlePlace: 'Type de lieu :',
         hoursUnavailable: 'Horaires indisponibles',
         opensAtHeader: 'Ouverture',
+        opensAt: 'Ouvre à {{time}}',
         openNow: 'Ouvert maintenant',
         opensSoon: 'Ouvre dans un instant',
         opensTomorrowAt: 'Ouvre demain à {{time}}',
@@ -849,6 +862,7 @@ const resources = {
         environmentTitlePlace: 'Тип места:',
         hoursUnavailable: 'Часы работы недоступны',
         opensAtHeader: 'Открывается в',
+        opensAt: 'Открывается в {{time}}',
         openNow: 'Открыто сейчас',
         opensSoon: 'Скоро откроется',
         opensTomorrowAt: 'Откроется завтра в {{time}}',
@@ -880,7 +894,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Обо мне',
           whatIsLabel: 'Что такое Rolê Paulista?',
-          earnLabel: 'Сколько я на этом зарабатываю?'
+          earnLabel: 'Сколько я на этом зарабатываю?',
+          howToHelpLabel: 'Могу ли я как-то помочь?'
         },
         aboutList: [
           'Мобильный инженер уже 10 лет (если память меня не подводит)',
@@ -900,6 +915,10 @@ const resources = {
           'Ответ очень простой: ничего. Rolê Paulista — это личный проект, сделанный из любви к городу Сан-Паулу. Возможно, в будущем я что-то заработаю на публикациях или AdSense? Возможно, но идея в том, чтобы сайт ВСЕГДА оставался бесплатным — и для читателей, и для публикаций о местах.',
           'Я не буду принимать деньги за это, особенно чтобы хвалить место за оплату; хочу сохранять честность и подлинность контента, посещая места и делясь реальной опытом.',
           'Возможно, публикации в Instagram или на сайте выходят не так быстро, потому что сейчас я одновременно команда инфраструктуры, разработки, маркетинга, дизайна и контента, так что прошу прощения, если обновления занимают время :)'
+        ],
+        howToHelp: [
+          'Если хочешь порекомендовать место, напиши мне в Instagram или на e-mail с информацией о заведении — я постараюсь посетить его и тем самым помочь другим, кто пользуется этим сайтом!',
+          'Если хочешь поддержать проект, чтобы наши прогулки по СП становились ещё проще и удобнее, просто наведи камеру на QR‑код ниже :)'
         ],
         socialHeading: 'Соцсети',
         socialDescription: 'Найдите меня в соцсетях ниже :)',
@@ -990,6 +1009,7 @@ const resources = {
         environmentTitlePlace: '地点类型:',
         hoursUnavailable: '营业时间不可用',
         opensAtHeader: '开张时间',
+        opensAt: '于 {{time}} 开门',
         openNow: '正在营业',
         opensTomorrowAt: '明天 {{time}} 开张',
         subtitleTemplate: '发现 {{article}} {{noun}} 与您类型相符，最近的地点 :)'
@@ -1007,7 +1027,8 @@ const resources = {
         accordion: {
           aboutLabel: '关于我',
           whatIsLabel: '什么是 Rolê Paulista?',
-          earnLabel: '我靠这个赚多少钱？'
+          earnLabel: '我靠这个赚多少钱？',
+          howToHelpLabel: '我可以用某种方式帮忙吗？'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -1027,6 +1048,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          '如果你想推荐一个地方，请在 Instagram 或通过电子邮件把地点信息发给我；我会尽力去亲自体验，并把它分享给使用这个网站的其他人！',
+          '如果你想支持这个项目持续运营，让你在圣保罗的出行更轻松更方便，只要把相机对准下面的二维码即可 :)'
         ],
         socialHeading: '社交网络',
         socialDescription: '你可以在下面的社交平台找到我 :)',
@@ -1181,6 +1206,7 @@ const resources = {
         environmentTitlePlace: 'Place type:',
         hoursUnavailable: 'Hours unavailable',
         opensAtHeader: 'Opens at',
+        opensAt: 'Opens at {{time}}',
         openNow: 'Open now',
         opensSoon: 'Opens soon',
         opensTomorrowAt: 'Opens tomorrow at {{time}}',
@@ -1200,7 +1226,8 @@ const resources = {
         accordion: {
           aboutLabel: 'About me',
           whatIsLabel: 'What is Rolê Paulista?',
-          earnLabel: 'How much do I earn from this?'
+          earnLabel: 'How much do I earn from this?',
+          howToHelpLabel: 'Can I contribute in any way?'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -1220,6 +1247,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'If you want to recommend a place, send me a message on Instagram or by email with the place details — I’ll do my best to visit it and help other people who use this site!',
+          'If you’d like to support the continuity of this project so your hangouts in SP become even lighter and more practical, just point your camera at the QR code below :)'
         ],
         socialHeading: 'Social networks',
         socialDescription: 'Find me on the social networks below :)',
@@ -1375,6 +1406,7 @@ const resources = {
         environmentTitlePlace: 'Ortstyp:',
         hoursUnavailable: 'Öffnungszeiten nicht verfügbar',
         opensAtHeader: 'Öffnet um',
+        opensAt: 'Öffnet um {{time}}',
         openNow: 'Jetzt geöffnet',
         opensTomorrowAt: 'Öffnet morgen um {{time}}',
         subtitleTemplate: 'Entdecke {{article}} {{noun}} in Ihrer Nähe, passend zu Ihrem Stil :)'
@@ -1392,7 +1424,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Über mich',
           whatIsLabel: 'Was ist Rolê Paulista?',
-          earnLabel: 'Wie viel verdiene ich damit?'
+          earnLabel: 'Wie viel verdiene ich damit?',
+          howToHelpLabel: 'Kann ich irgendwie beitragen?'
         },
         aboutList: [
           'Mobile Engineer al 10 jaar (als mijn geheugen me niet in de steek laat)',
@@ -1412,6 +1445,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'Wenn du einen Ort empfehlen möchtest, schreib mir auf Instagram oder per E‑Mail mit den Infos zum Ort — ich werde mein Bestes tun, ihn zu besuchen und damit anderen zu helfen, die diese Seite nutzen!',
+          'Wenn du helfen möchtest, dieses Projekt am Laufen zu halten, damit deine Unternehmungen in SP immer leichter und praktischer werden, halte einfach die Kamera auf den QR‑Code unten :)'
         ],
         socialHeading: 'Sociale netwerken',
         socialDescription: 'Vind me op de sociale netwerken hieronder :)',
@@ -1566,6 +1603,7 @@ const resources = {
         environmentTitlePlace: '場所タイプ：',
         hoursUnavailable: '営業時間情報なし',
         opensAtHeader: '開店時間',
+        opensAt: '{{time}} に開店',
         openNow: '営業中',
         opensSoon: 'まもなく開店',
         opensTomorrowAt: '明日 {{time}} に開店',
@@ -1585,7 +1623,8 @@ const resources = {
         accordion: {
           aboutLabel: '私について',
           whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?'
+          earnLabel: 'Quanto guadagno con questo?',
+          howToHelpLabel: '何か協力できますか？'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -1605,6 +1644,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'おすすめの場所があれば、Instagram かメールでお店の情報を送ってください。できる限り実際に行ってみて、このサイトを使う他の人の役に立てるようにします！',
+          'このプロジェクトを継続して、SPでの外出をもっと気軽で便利にするために支援したい場合は、下のQRコードにカメラを向けるだけです :)'
         ],
         socialHeading: 'ソーシャルネットワーク',
         socialDescription: 'あなたは以下のSNSで見つけることができます :)',
@@ -1696,6 +1739,15 @@ const resources = {
         environmentTitle: 'نوع الأجواء:',
         environmentTitlePlace: 'نوع المكان:',
         subtitleTemplate: 'اكتشف {{article}} {{noun}} من نفس النوع الأقرب ليك :)'
+      },
+      aboutMe: {
+        accordion: {
+          howToHelpLabel: 'هل يمكنني المساعدة بأي شكل؟'
+        },
+        howToHelp: [
+          'إذا كنت تريد ترشيح مكان، أرسل لي رسالة على إنستغرام أو عبر البريد الإلكتروني مع معلومات المكان — سأبذل جهدي لزيارته ومساعدة الآخرين الذين يستخدمون هذا الموقع!',
+          'وإذا أردت دعم استمرار هذا المشروع لجعل خروجاتك في ساو باولو أسهل وأكثر عملية، فقط وجّه الكاميرا إلى رمز QR بالأسفل :)'
+        ]
       }
     }
   },
@@ -1808,6 +1860,7 @@ const resources = {
         environmentTitlePlace: 'Tipo di luogo:',
         hoursUnavailable: 'Orari non disponibili',
         opensAtHeader: 'Apertura',
+        opensAt: 'Apre alle {{time}}',
         openNow: 'Aperto ora',
         opensSoon: 'Apre tra poco',
         opensTomorrowAt: 'Apre domani alle {{time}}',
@@ -1827,7 +1880,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Su di me',
           whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?'
+          earnLabel: 'Quanto guadagno con questo?',
+          howToHelpLabel: 'Posso contribuire in qualche modo?'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -1847,6 +1901,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'Se vuoi consigliare un posto, mandami un messaggio su Instagram o via e‑mail con le informazioni del luogo — farò del mio meglio per visitarlo e aiutare altre persone che usano questo sito!',
+          'Se vuoi aiutare a mantenere vivo questo progetto, per rendere i tuoi giri a SP sempre più leggeri e pratici, basta puntare la fotocamera sul QR code qui sotto :)'
         ],
         socialHeading: 'Sociale netwerken',
         socialDescription: 'Vind me op de sociale netwerken hieronder :)',
@@ -2006,6 +2064,7 @@ const resources = {
         environmentTitlePlace: 'Type plek:',
         hoursUnavailable: 'Openingstijden niet beschikbaar',
         opensAtHeader: 'Opening',
+        opensAt: 'Opent om {{time}}',
         openNow: 'Nu open',
         opensSoon: 'Opent zo',
         opensTomorrowAt: 'Opent morgen om {{time}}',
@@ -2025,7 +2084,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Hakkımda',
           whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?'
+          earnLabel: 'Quanto guadagno con questo?',
+          howToHelpLabel: 'Bir şekilde katkıda bulunabilir miyim?'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -2045,6 +2105,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'Bir yer önermek istersen, Instagram’dan ya da e‑posta ile bana mekanın bilgilerini gönder — mümkün olduğunca gidip deneyimleyerek bu siteyi kullanan diğer insanlara yardımcı olacağım!',
+          'Bu projenin devamlılığına katkıda bulunup SP’deki gezilerini daha hafif ve pratik hale getirmek istersen, kameranı aşağıdaki QR koda tutman yeterli :)'
         ],
         socialHeading: 'Sociale netwerki',
         socialDescription: 'Znajdziesz mnie w sieciach społecznych poniżej :)',
@@ -2194,6 +2258,7 @@ const resources = {
         environmentTitlePlace: 'Yer türü:',
         hoursUnavailable: 'Çalışma saatleri mevcut değil',
         opensAtHeader: 'Açılış',
+        opensAt: '{{time}} açılır',
         openNow: 'Şu an açık',
         opensSoon: 'Yakında açılır',
         opensTomorrowAt: 'Yarın {{time}} açılır',
@@ -2209,7 +2274,8 @@ const resources = {
         accordion: {
           aboutLabel: 'Hakkımda',
           whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?'
+          earnLabel: 'Quanto guadagno con questo?',
+          howToHelpLabel: 'Bir şekilde katkıda bulunabilir miyim?'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -2229,6 +2295,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'Bir yer önermek istersen, Instagram’dan ya da e‑posta ile bana mekanın bilgilerini gönder — mümkün olduğunca gidip deneyimleyerek bu siteyi kullanan diğer insanlara yardımcı olacağım!',
+          'Bu projenin devamlılığına katkıda bulunup SP’deki gezilerini daha hafif ve pratik hale getirmek istersen, kameranı aşağıdaki QR koda tutman yeterli :)'
         ],
         socialHeading: 'Sociale netwerki',
         socialDescription: 'Znajdziesz mnie w sieciach społecznych poniżej :)',
@@ -2377,6 +2447,7 @@ const resources = {
         environmentTitlePlace: 'Rodzaj miejsca:',
         hoursUnavailable: 'Godziny niedostępne',
         opensAtHeader: 'Otwarcie',
+        opensAt: 'Otwiera o {{time}}',
         openNow: 'Otwarte teraz',
         opensSoon: 'Wkrótce otwarte',
         opensTomorrowAt: 'Otwiera się jutro o {{time}}',
@@ -2392,7 +2463,8 @@ const resources = {
         accordion: {
           aboutLabel: 'O mnie',
           whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?'
+          earnLabel: 'Quanto guadagno con questo?',
+          howToHelpLabel: 'Czy mogę w jakiś sposób pomóc?'
         },
         aboutList: [
           'Mobile Engineer for 10 years (if my memory still serves me right)',
@@ -2412,6 +2484,10 @@ const resources = {
           'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
           'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
           'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+        ],
+        howToHelp: [
+          'Jeśli chcesz polecić jakieś miejsce, wyślij mi wiadomość na Instagramie lub e‑mail z informacjami o lokalu — postaram się je odwiedzić i w ten sposób pomóc innym, którzy korzystają z tej strony!',
+          'Jeśli chcesz wesprzeć kontynuację tego projektu, aby Twoje wypady w SP były coraz łatwiejsze i wygodniejsze, wystarczy skierować aparat na kod QR poniżej :)'
         ],
         socialHeading: 'Sociale netwerki',
         socialDescription: 'Znajdziesz mnie w sieciach społecznych poniżej :)',
