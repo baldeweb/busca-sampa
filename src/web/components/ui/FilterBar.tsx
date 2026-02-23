@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { useTranslation } from "react-i18next";
 import icFilter from "@/assets/imgs/icons/ic_filter.png";
 import icArrowDown from "@/assets/imgs/icons/ic_arrow_down.png";
@@ -116,6 +117,37 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     };
   }, []);
 
+  // Funções para mostrar o texto selecionado
+  // Funções para mostrar o título padrão, mudando só se diferente do padrão
+  const getSortingTitle = () => {
+    const selected = orderOptions.find(opt => opt.value === order);
+    if (!selected || selected.value === "name-asc") {
+      return t("filters.sortingTitle");
+    }
+    if (selected.value === "neighborhood-asc") return t("list.orderNeighborhoodAsc");
+    return selected.value;
+  };
+  const getHoursTitle = () => {
+    if (filterOpenNow) {
+      return t(openNowLabelKey, { defaultValue: openNowLabelDefault });
+    }
+    return t("filters.hoursTitle", { defaultValue: "Horários" });
+  };
+  const getScheduleTitle = () => {
+    if (scheduleFilter === "any") return t("filters.scheduleTitle", { defaultValue: "Agendar" });
+    if (scheduleFilter === "required") return t("filters.scheduleRequired", { defaultValue: "Necessário agendar" });
+    if (scheduleFilter === "not-required") return t("filters.scheduleNotRequired", { defaultValue: "Não precisa agendar" });
+    return t("filters.scheduleTitle", { defaultValue: "Agendar" });
+  };
+  const getCityTitle = () => {
+    if (selectedCity === null) return t("filters.cityTitle", { defaultValue: "Cidade" });
+    return selectedCity;
+  };
+  const getPriceTitle = () => {
+    if (!priceFilter) return t("filters.priceTitle", { defaultValue: "Preço" });
+    return getPriceRangeLabel(priceFilter as any);
+  };
+
   return (
     <div ref={rootRef} className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
       <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
@@ -138,16 +170,16 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     setShowSortingMenu(next);
                   }}
                 >
-                  <span className="mr-2">{t("filters.sortingTitle")}</span>
+                  <span className="mr-2">{getSortingTitle()}</span>
                   <img src={icArrowDown} alt="expand" className="w-3 h-3" />
                 </button>
                 {showSortingMenu && (
                   <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg z-10">
                     {orderOptions.map((opt) => (
-                      <button
+                      <div
                         key={opt.value}
-                        type="button"
-                        className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${order === opt.value ? "font-semibold" : ""}`}
+                        className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${order === opt.value ? "font-semibold" : ""}`}
+                        style={{ border: 0, background: 'none', textAlign: 'left' }}
                         onClick={() => {
                           onOrderSelect(opt.value);
                           setShowSortingMenu(false);
@@ -155,7 +187,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                       >
                         {opt.value === "name-asc" && t("list.orderNameAsc")}
                         {opt.value === "neighborhood-asc" && t("list.orderNeighborhoodAsc")}
-                      </button>
+                      </div>
                     ))}
                   </div>
                 )}
@@ -173,31 +205,31 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     setShowHoursMenu(next);
                   }}
                 >
-                  <span className="mr-2">{t("filters.hoursTitle", { defaultValue: "Horários" })}</span>
+                  <span className="mr-2">{getHoursTitle()}</span>
                   <img src={icArrowDown} alt="expand" className="w-3 h-3" />
                 </button>
                 {showHoursMenu && (
                   <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10">
-                    <button
-                      type="button"
-                      className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${filterOpenNow ? "font-semibold" : ""}`}
+                    <div
+                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${filterOpenNow ? "font-semibold" : ""}`}
+                      style={{ border: 0, background: 'none', textAlign: 'left' }}
                       onClick={() => {
                         onSelectOpenNow();
                         setShowHoursMenu(false);
                       }}
                     >
                       {t(openNowLabelKey, { defaultValue: openNowLabelDefault })}
-                    </button>
-                    <button
-                      type="button"
-                      className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${!filterOpenNow ? "font-semibold" : ""}`}
+                    </div>
+                    <div
+                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${!filterOpenNow ? "font-semibold" : ""}`}
+                      style={{ border: 0, background: 'none', textAlign: 'left' }}
                       onClick={() => {
                         onSelectAnyHour();
                         setShowHoursMenu(false);
                       }}
                     >
                       {t(anyHourLabelKey, { defaultValue: anyHourLabelDefault })}
-                    </button>
+                    </div>
                   </div>
                 )}
               </div>
@@ -214,41 +246,41 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     setShowScheduleMenu(next);
                   }}
                 >
-                  <span className="mr-2">{t("filters.scheduleTitle", { defaultValue: "Agendar" })}</span>
+                  <span className="mr-2">{getScheduleTitle()}</span>
                   <img src={icArrowDown} alt="expand" className="w-3 h-3" />
                 </button>
                 {showScheduleMenu && (
                   <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10">
-                    <button
-                      type="button"
-                      className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "required" ? "font-semibold" : ""}`}
+                    <div
+                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "required" ? "font-semibold" : ""}`}
+                      style={{ border: 0, background: 'none', textAlign: 'left' }}
                       onClick={() => {
                         onSelectSchedule("required");
                         setShowScheduleMenu(false);
                       }}
                     >
                       {t("filters.scheduleRequired", { defaultValue: "Necessário agendar" })}
-                    </button>
-                    <button
-                      type="button"
-                      className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "not-required" ? "font-semibold" : ""}`}
+                    </div>
+                    <div
+                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "not-required" ? "font-semibold" : ""}`}
+                      style={{ border: 0, background: 'none', textAlign: 'left' }}
                       onClick={() => {
                         onSelectSchedule("not-required");
                         setShowScheduleMenu(false);
                       }}
                     >
                       {t("filters.scheduleNotRequired", { defaultValue: "Não precisa agendar" })}
-                    </button>
-                    <button
-                      type="button"
-                      className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "any" ? "font-semibold" : ""}`}
+                    </div>
+                    <div
+                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "any" ? "font-semibold" : ""}`}
+                      style={{ border: 0, background: 'none', textAlign: 'left' }}
                       onClick={() => {
                         onSelectSchedule("any");
                         setShowScheduleMenu(false);
                       }}
                     >
                       {t("filters.anySchedule", { defaultValue: "Qualquer" })}
-                    </button>
+                    </div>
                   </div>
                 )}
               </div>
@@ -266,33 +298,33 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                       setShowCityMenu(next);
                     }}
                   >
-                    <span className="mr-2">{t("filters.cityTitle", { defaultValue: "Cidade" })}</span>
+                    <span className="mr-2">{getCityTitle()}</span>
                     <img src={icArrowDown} alt="expand" className="w-3 h-3" />
                   </button>
                   {showCityMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                      <button
-                        type="button"
-                        className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === null ? "font-semibold" : ""}`}
+                      <div
+                        className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === null ? "font-semibold" : ""}`}
+                        style={{ border: 0, background: 'none', textAlign: 'left' }}
                         onClick={() => {
                           onSelectCity(null);
                           setShowCityMenu(false);
                         }}
                       >
                         {t("filters.anyCity", { defaultValue: "Qualquer cidade" })}
-                      </button>
+                      </div>
                       {cities.map((c) => (
-                        <button
+                        <div
                           key={c}
-                          type="button"
-                          className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === c ? "font-semibold" : ""}`}
+                          className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === c ? "font-semibold" : ""}`}
+                          style={{ border: 0, background: 'none', textAlign: 'left' }}
                           onClick={() => {
                             onSelectCity(c);
                             setShowCityMenu(false);
                           }}
                         >
                           {c}
-                        </button>
+                        </div>
                       ))}
                     </div>
                   )}
@@ -312,20 +344,24 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                       setShowPriceMenu(next);
                     }}
                   >
-                    <span className="mr-2">{t("filters.priceTitle", { defaultValue: "Preço" })}</span>
+                    <span className="mr-2">{getPriceTitle()}</span>
                     <img src={icArrowDown} alt="expand" className="w-3 h-3" />
                   </button>
                   {showPriceMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                      <PriceFilterList
-                        options={priceOptions}
-                        selected={priceFilter}
-                        anyLabel={t("filters.anyPrice", { defaultValue: "Qualquer preço" })}
-                        onSelect={(v) => {
-                          onSelectPrice(v);
-                          setShowPriceMenu(false);
-                        }}
-                      />
+                      {[{ value: null, label: t("filters.anyPrice", { defaultValue: "Qualquer preço" }) }, ...priceOptions.map(p => ({ value: p, label: getPriceRangeLabel(p as any) }))].map(opt => (
+                        <div
+                          key={opt.value ?? 'any'}
+                          className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === opt.value ? "font-semibold" : ""}`}
+                          style={{ border: 0, background: 'none', textAlign: 'left' }}
+                          onClick={() => {
+                            onSelectPrice(opt.value);
+                            setShowPriceMenu(false);
+                          }}
+                        >
+                          {opt.label}
+                        </div>
+                      ))}
                     </div>
                   )}
                 </div>
