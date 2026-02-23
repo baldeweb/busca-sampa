@@ -23,7 +23,7 @@ import imgPaulista from "@/assets/imgs/background/img_paulista.jpg";
 
 export function HomePage() {
   // 🔹 Carrega todas as categorias
-  const DEFAULT_RADIUS_DISTANCE = 5
+  const DEFAULT_RADIUS_DISTANCE = 8
   const { data: neighborhoods } = useNeighborhoodList();
 
   // 🔹 Controles de UI
