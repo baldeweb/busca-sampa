@@ -202,5 +202,13 @@
     {
         "id": 51,
         "neighborhoodName": "Higienópolis"
+    },
+    {
+        "id": 52,
+        "neighborhoodName": "Pompéia"
+    },
+    {
+        "id": 53,
+        "neighborhoodName": "Sumaré"
     }
 ]
