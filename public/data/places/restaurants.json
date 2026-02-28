@@ -892,7 +892,7 @@
             "Cozinha familiar",
             "Necessário agendar, a casa possui apenas 8 lugares"
         ],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
@@ -1489,7 +1489,7 @@
             "🇯🇵 Culinária Japonesa",
             "Experiência gastronômica"
         ],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
@@ -2085,7 +2085,7 @@
             "OPEN_24_HOURS"
         ],
         "listTypes": [
-            "RESTAURANTS"
+            "RESTAURANTS", "BARS"
         ]
     },
     {
@@ -2485,7 +2485,7 @@
             "Pizzaria tradicional com variedade de sabores e ambiente familiar.",
             "Decoração inspirada na Toscana, com parede de tijolinhos."
         ],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
@@ -2518,6 +2518,53 @@
         ],
         "listTypes": [
             "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Bankaa Izakaya",
+        "phones": [
+            {
+                "number": "11975200936",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "BANKAA_IZAKAYA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Izakaya com ambiente descontraído e cardápio variado de petiscos japoneses, além de opções de sakes e drinks autorais",
+            "Os drinks da casa também são vendidos em garrafas para levar para casa",
+            "O cardápio possui pratos quentes, opções vegetarianas e sobremesas."
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Inácio Pereira da Rocha",
+                "number": "23",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05432-010",
+                "isMainUnity": true,
+                "latitude": -23.54514,
+                "longitude": -46.652066
+            }
+        ],
+        "linkMenu": "https://pedidon.web.app/menu/bankaa?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu0LT7inXonWFXUrzpxiYdYj1uCxtnuhKruvv4yQvHaN-WlBpVbzwYlTLIbk_aem_xi0znn51_HkzpqKAivttxg",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/izakaya.bankaa/",
+        "tags": [
+            "IZAKAYA", "ASIAN", "JAPANESE" 
+        ],
+        "listTypes": [
+            "RESTAURANTS", "BARS"
         ]
     }
 ]

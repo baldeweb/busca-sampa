@@ -302,7 +302,7 @@ export const PlaceListPage: React.FC = () => {
         const s = new Set<string>();
         baseList.forEach(p => { if (p.priceRange) s.add(String(p.priceRange)); });
         const arr = Array.from(s);
-        const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "EXPENSIVE"]; // requested sequence (FREE first)
+        const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "ABOVEAVERAGE"]; // requested sequence (FREE first)
         return arr.sort((a, b) => {
             const ia = ORDER.indexOf(a);
             const ib = ORDER.indexOf(b);

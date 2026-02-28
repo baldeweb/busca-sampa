@@ -151,7 +151,7 @@ export const NeighborhoodListPage: React.FC = () => {
       }
     });
     const arr = Array.from(s);
-    const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "EXPENSIVE"]; // requested sequence (FREE first)
+    const ORDER: string[] = ["FREE", "ECONOMIC", "MODERATE", "ABOVEAVERAGE"]; // requested sequence (FREE first)
     return arr.sort((a, b) => {
       const ia = ORDER.indexOf(a);
       const ib = ORDER.indexOf(b);

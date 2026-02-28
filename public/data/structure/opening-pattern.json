@@ -1158,5 +1158,38 @@
     "periods": [
       { "days": ["TUESDAY", "FRIDAY", "SATURDAY"], "open": "21:00", "close": "05:30" }
     ]
+  },
+  {
+    "id": "ATLANTA_SNOOKERBAR_DAYTIME",
+    "description": "Horários da Atlanta Snooker Bar",
+    "periods": [
+      { "days": ["MONDAY"], "open": "16:00", "close": "02:30" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "16:00", "close": "03:30" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "16:00", "close": "04:00" },
+      { "days": ["SUNDAY"], "open": "17:00", "close": "02:30" }
+    ]
+  },
+  {
+    "id": "ROLLER_DANCE_DAYTIME",
+    "description": "Horários da Roller Dance",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "14:00", "close": "22:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "14:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "15:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "BANKAA_IZAKAYA_DAYTIME",
+    "description": "Horários da Bankaa Izakaya",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:30", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "VELHOPIETRO_DAYTIME",
+    "description": "Horários do Velho Pietro",
+    "periods": [
+      { "days": ["SATURDAY"], "open": "22:00", "close": "05:00" }
+    ]
   }
 ]

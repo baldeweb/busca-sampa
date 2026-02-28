@@ -1,3 +1,90 @@
 [
-    
+    {
+        "id": 1,
+        "name": "Noite Latina",
+        "tourType": "ALL",
+        "description": "Aqui você vai começar por um restaurante peruano, seguido de um bar peruano, e finalizar em um clube latino.",
+        "places": [
+            {
+                "id": 48,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 5,
+                "placeType": "BARS"
+            },
+            {
+                "id": 29,
+                "placeType": "NIGHTLIFE"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Rolê Noturno na República",
+        "tourType": "ALL",
+        "description": "Na região da República, você pode encontrar uma variedade de bares e casas noturnas. Este tour inclui um restaurante, seguido de uma balada e encerrar no Cineclube Cortina para algum evento que estiver ocorrendo no dia (verificar disponibilidade no site ou no Instagram)",
+        "places": [
+            {
+                "id": 44,
+                "placeType": "RESTAURANTS"
+            },
+            {
+                "id": 5,
+                "placeType": "NIGHTLIFE"
+            },
+            {
+                "id": 9,
+                "placeType": "NIGHTLIFE"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Parques & Praças",
+        "tourType": "NATURE",
+        "description": "Explore os principais parques e praças da cidade, ideais para caminhadas, piqueniques e atividades ao ar livre.",
+        "places": [
+            {
+                "id": 9,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 10,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 1,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 2,
+                "placeType": "NATURE"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "ForFun & Games",
+        "tourType": "FORFUN",
+        "description": "Se você está procurando diversão e entretenimento, este tour é para você! Aqui incluí um bar temático, uma casa de jogos e um espaço de patinação.",
+        "places": [
+            {
+                "id": 3,
+                "placeType": "FORFUN"
+            },
+            {
+                "id": 5,
+                "placeType": "FORFUN"
+            },
+            {
+                "id": 6,
+                "placeType": "FORFUN"
+            },
+            {
+                "id": 1,
+                "placeType": "FORFUN"
+            }
+        ]
+    }
 ]

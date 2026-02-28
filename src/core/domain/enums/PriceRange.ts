@@ -2,5 +2,5 @@ export type PriceRange =
     | "FREE"
     | "ECONOMIC"
     | "MODERATE"
-    | "EXPENSIVE"
-    | "VERY-EXPENSIVE";
+    | "ABOVEAVERAGE"
+    | "FULLEXPERIENCE";

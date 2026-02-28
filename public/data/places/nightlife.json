@@ -674,7 +674,7 @@
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [],
-        "priceRange": "EXPENSIVE",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
@@ -694,6 +694,50 @@
         "tags": [],
         "listTypes": [
             "NIGHTLIFE"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Velho Pietro | Centro Latino",
+        "phones": [
+            {
+                "number": "11970906658",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "VELHOPIETRO_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Centro Latino com música ao vivo e ambiente para dançar",
+            "Abre SOMENTE aos sábados a partir das 22h"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Treze de Maio",
+                "number": "192",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01327-000",
+                "isMainUnity": true,
+                "latitude": -23.554787,
+                "longitude": -46.646804
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://www.velhopietro.com/",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE", "BARS"
         ]
     }
 ]

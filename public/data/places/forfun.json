@@ -219,5 +219,97 @@
         "listTypes": [
             "FORFUN"
         ]
+    },
+    {
+        "id": 5,
+        "name": "Atlanta Snooker Bar",
+        "phones": [],
+        "openingHours": {
+            "patternId": "ATLANTA_SNOOKERBAR_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar de sinuca",
+            "Possui cardápio com opções de petiscos e bebidas"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Brigadeiro Galvão",
+                "number": "893",
+                "city": "São Paulo",
+                "neighborhood": "Barra Funda",
+                "postalCode": "01151-000",
+                "isMainUnity": true,
+                "latitude": -23.528677,
+                "longitude": -46.659312
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://atlantasnookerbar.com.br/",
+        "linkInstagram": "https://www.instagram.com/atlantasnookerbar/",
+        "tags": [
+            "SINGLE_ACTIVITY",
+            "FAMILY_ACTIVITY",
+            "GROUP_ACTIVITY",
+            "SNOOKER"
+        ],
+        "listTypes": [
+            "FORFUN", "BARS"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Roller Dance Liberdade",
+        "phones": [
+            {
+                "number": "1132778867",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "ROLLER_DANCE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Andar 3 - Galeria Imperial"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Galvão Bueno",
+                "number": "351",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "01506-000",
+                "isMainUnity": true,
+                "latitude": -23.558848,
+                "longitude": -46.635020
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/roller_dance_liberdade/",
+        "tags": [
+            "SINGLE_ACTIVITY",
+            "FAMILY_ACTIVITY",
+            "GROUP_ACTIVITY",
+            "SKATING_RINK"
+        ],
+        "listTypes": [
+            "FORFUN"
+        ]
     }
 ]
