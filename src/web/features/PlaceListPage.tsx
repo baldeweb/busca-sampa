@@ -56,7 +56,6 @@ export const PlaceListPage: React.FC = () => {
     const { data: stores } = useRecommendationList("stores");
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
-    const visibleEnvironmentCount = useEnvironmentVisibleCount();
 
     // Junta todos os lugares em um único array para filtros especiais
     const allPlaces = useMemo(() => [
@@ -204,6 +203,7 @@ export const PlaceListPage: React.FC = () => {
         typeArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
         return typeArr;
     }, [baseList, mappedType, routeTypeLower]);
+    const visibleEnvironmentCount = useEnvironmentVisibleCount(environments.length);
 
 
 

@@ -210,5 +210,17 @@
     {
         "id": 53,
         "neighborhoodName": "Sumaré"
+    },
+    {
+        "id": 54,
+        "neighborhoodName": "Jurubatuba"
+    },
+    {
+        "id": 55,
+        "neighborhoodName": "Vila Formosa"
+    },
+    {
+        "id": 56,
+        "neighborhoodName": "Capão Redondo"
     }
 ]

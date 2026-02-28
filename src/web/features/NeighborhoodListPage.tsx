@@ -46,7 +46,6 @@ export const NeighborhoodListPage: React.FC = () => {
   const { data: pleasures } = useRecommendationList("pleasure");
   const { data: openingPatternsData } = useOpeningPatterns();
   const openingPatterns = openingPatternsData || [];
-  const visibleEnvironmentCount = useEnvironmentVisibleCount();
 
   const allPlaces = useMemo(
     () => [
@@ -113,6 +112,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const environments = useMemo(() => {
     return placeTypes.map(pt => ({ label: getPlaceTypeLabel(pt), value: pt }));
   }, [placeTypes]);
+  const visibleEnvironmentCount = useEnvironmentVisibleCount(environments.length);
 
   const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
 

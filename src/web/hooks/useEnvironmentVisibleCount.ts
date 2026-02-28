@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useEnvironmentVisibleCount(): number {
+export function useEnvironmentVisibleCount(totalEnvironments: number, showViewMore = true): number {
   const getIsSmUp = () => {
     if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return true;
     return window.matchMedia('(min-width: 640px)').matches;
@@ -25,5 +25,8 @@ export function useEnvironmentVisibleCount(): number {
     return () => media.removeListener(update);
   }, []);
 
-  return isSmUp ? 8 : 4;
+  const maxItems = isSmUp ? 17 : 7;
+  const baseSlots = maxItems - 1;
+  const hasViewMore = showViewMore && totalEnvironments > baseSlots;
+  return Math.max(baseSlots - (hasViewMore ? 1 : 0), 0);
 }
