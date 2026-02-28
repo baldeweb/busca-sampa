@@ -3,7 +3,6 @@ import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { useTranslation } from "react-i18next";
 import icFilter from "@/assets/imgs/icons/ic_filter.png";
 import icArrowDown from "@/assets/imgs/icons/ic_arrow_down.png";
-import { PriceFilterList } from "@/web/components/place/PriceFilterList";
 
 export interface FilterBarProps {
   orderOptions: Array<{ value: string }>;
