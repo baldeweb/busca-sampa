@@ -275,7 +275,6 @@ const resources = {
         routeOptionsTitle: 'Opções de Roteiro:',
         listTitle: 'Roteiros',
         viewRoute: 'Ver roteiro',
-        cityComingSoon: 'Opa, essa funcionalidade está quase pronta, em breve vai estar disponível pra você usar, fica ligado :)',
         modes: {
           walking: 'Tour a Pé',
           city: 'Tour na Cidade'
@@ -287,6 +286,8 @@ const resources = {
           food: 'Gastronômico',
           history: 'História',
           museums: 'Museus',
+          nature: 'Natureza',
+          forfun: 'Diversão',
           more: 'Mais Opções'
         },
         placesCount: '{{count}} lugares',
@@ -302,6 +303,8 @@ const resources = {
         HISTORY: 'História',
         MUSEUMS: 'Museus',
         ARTISTIC: 'Artístico',
+        NATURE: 'Natureza',
+        FORFUN: 'Diversão',
         OTHERS: 'Outros'
       },
       howToRecommend: {
@@ -536,6 +539,8 @@ const resources = {
           food: 'Gastronomique',
           history: 'Histoire',
           museums: 'Musées',
+          nature: 'Naturaleza',
+          forfun: 'Diversión',
           more: 'Plus d\'options'
         },
         placesCount: '{{count}} lieux',
@@ -551,6 +556,8 @@ const resources = {
         HISTORY: 'Histoire',
         MUSEUMS: 'Musées',
         ARTISTIC: 'Artistique',
+        NATURE: 'Naturaleza',
+        FORFUN: 'Diversión',
         OTHERS: 'Autres'
       },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
@@ -760,6 +767,8 @@ const resources = {
           food: 'Gastronomique',
           history: 'Histoire',
           museums: 'Musées',
+          nature: 'Nature',
+          forfun: 'Divertissement',
           more: 'Plus d\'options'
         },
         placesCount: '{{count}} lieux',
@@ -775,6 +784,8 @@ const resources = {
         HISTORY: 'Histoire',
         MUSEUMS: 'Musées',
         ARTISTIC: 'Artistique',
+        NATURE: 'Nature',
+        FORFUN: 'Divertissement',
         OTHERS: 'Autres'
       },
       howToRecommend: { title: 'Comment recommander un lieu ?' },
@@ -949,6 +960,8 @@ const resources = {
           food: 'Гастрономия',
           history: 'История',
           museums: 'Музеи',
+          nature: 'Природа',
+          forfun: 'Развлечения',
           more: 'Больше вариантов'
         },
         placesCount: '{{count}} мест',
@@ -964,6 +977,8 @@ const resources = {
         HISTORY: 'История',
         MUSEUMS: 'Музеи',
         ARTISTIC: 'Культурный',
+        NATURE: 'Природа',
+        FORFUN: 'Развлечения',
         OTHERS: 'Другое'
       },
     }
@@ -1081,6 +1096,8 @@ const resources = {
           food: 'Food',
           history: 'History',
           museums: 'Museums',
+          nature: '自然',
+          forfun: '娱乐',
           more: 'More Options'
         },
         placesCount: '{{count}} places',
@@ -1096,6 +1113,8 @@ const resources = {
         HISTORY: 'Histoire',
         MUSEUMS: 'Musées',
         ARTISTIC: 'Artistique',
+        NATURE: '自然',
+        FORFUN: '娱乐',
         OTHERS: 'Autres'
       },
       nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
@@ -1280,6 +1299,8 @@ const resources = {
           food: 'Food',
           history: 'History',
           museums: 'Museums',
+          nature: 'Nature',
+          forfun: 'Fun',
           more: 'More Options'
         },
         placesCount: '{{count}} places',
@@ -1295,6 +1316,8 @@ const resources = {
         HISTORY: 'Histoire',
         MUSEUMS: 'Musées',
         ARTISTIC: 'Artistique',
+        NATURE: 'Nature',
+        FORFUN: 'Fun',
         OTHERS: 'Autres'
       },
       nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
@@ -1478,6 +1501,8 @@ const resources = {
           food: 'Food',
           history: 'History',
           museums: 'Museums',
+          nature: 'Natur',
+          forfun: 'Spaß',
           more: 'More Options'
         },
         placesCount: '{{count}} places',
@@ -1493,6 +1518,8 @@ const resources = {
         HISTORY: 'Histoire',
         MUSEUMS: 'Musées',
         ARTISTIC: 'Artistique',
+        NATURE: 'Natur',
+        FORFUN: 'Spaß',
         OTHERS: 'Autres'
       },
       nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
@@ -1677,6 +1704,8 @@ const resources = {
           food: 'グルメ',
           history: '歴史',
           museums: '博物館',
+          nature: '自然',
+          forfun: 'エンタメ',
           more: '他のオプション'
         },
         placesCount: '{{count}} か所',
@@ -1692,6 +1721,8 @@ const resources = {
         HISTORY: '歴史',
         MUSEUMS: '博物館',
         ARTISTIC: '芸術',
+        NATURE: '自然',
+        FORFUN: 'エンタメ',
         OTHERS: 'その他'
       },
       nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
@@ -1934,6 +1965,8 @@ const resources = {
           food: 'Food',
           history: 'History',
           museums: 'Museums',
+          nature: 'Natura',
+          forfun: 'Divertimento',
           more: 'More Options'
         },
         placesCount: '{{count}} places',
@@ -1949,6 +1982,8 @@ const resources = {
         HISTORY: 'Histoire',
         MUSEUMS: 'Musées',
         ARTISTIC: 'Artistique',
+        NATURE: 'Natura',
+        FORFUN: 'Divertimento',
         OTHERS: 'Autres'
       },
       nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
@@ -2138,6 +2173,8 @@ const resources = {
           food: 'Gastronomia',
           history: 'Storia',
           museums: 'Musea',
+          nature: 'Natuur',
+          forfun: 'Plezier',
           more: 'Więcej opcji'
         },
         placesCount: '{{count}} miejsc',
@@ -2153,6 +2190,8 @@ const resources = {
         HISTORY: 'Storia',
         MUSEUMS: 'Musea',
         ARTISTIC: 'Artystyczne',
+        NATURE: 'Natuur',
+        FORFUN: 'Plezier',
         OTHERS: 'Inne'
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
@@ -2328,6 +2367,8 @@ const resources = {
           food: 'Food',
           history: 'History',
           museums: 'Musea',
+          nature: 'Doğa',
+          forfun: 'Eğlence',
           more: 'Więcej opcji'
         },
         placesCount: '{{count}} miejsc',
@@ -2343,6 +2384,8 @@ const resources = {
         HISTORY: 'Storia',
         MUSEUMS: 'Musea',
         ARTISTIC: 'Artystyczne',
+        NATURE: 'Doğa',
+        FORFUN: 'Eğlence',
         OTHERS: 'Inne'
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
@@ -2517,6 +2560,8 @@ const resources = {
           food: 'Food',
           history: 'History',
           museums: 'Musea',
+          nature: 'Natura',
+          forfun: 'Rozrywka',
           more: 'Więcej opcji'
         },
         placesCount: '{{count}} miejsc',
@@ -2532,6 +2577,8 @@ const resources = {
         HISTORY: 'Storia',
         MUSEUMS: 'Musea',
         ARTISTIC: 'Artystyczne',
+        NATURE: 'Natura',
+        FORFUN: 'Rozrywka',
         OTHERS: 'Inne'
       },
       nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }

@@ -55,6 +55,21 @@ function buildGoogleMapsDirectionsUrl(points: Array<{ lat: number; lng: number }
     return url;
 }
 
+const ROUTE_TO_TOUR_KEY: Record<string, string> = {
+    free: 'FREE',
+    nightlife: 'NIGHTLIFE',
+    bars: 'BARS',
+    food: 'GASTRONOMIC',
+    history: 'HISTORY',
+    museums: 'MUSEUMS',
+    nature: 'NATURE',
+    forfun: 'FORFUN'
+};
+
+function normalizeTourType(value: any) {
+    return String(value || '').replace(/-/g, '_').toUpperCase();
+}
+
 export function TravelItineraryPage() {
     const { t } = useTranslation();
     useDocumentTitle(t('travelItinerary.title'));
@@ -81,10 +96,6 @@ export function TravelItineraryPage() {
     const [showRouteDetails, setShowRouteDetails] = useState(false);
     const [isClosingRouteDetails, setIsClosingRouteDetails] = useState(false);
     const closeRouteDetailsTimeoutRef = useRef<number | null>(null);
-    const [showCityComingSoonModal, setShowCityComingSoonModal] = useState(false);
-    const cityComingSoonMessage = t('travelItinerary.cityComingSoon', {
-        defaultValue: 'Opa, essa funcionalidade está quase pronta, em breve vai estar disponível pra você usar, fica ligado :)'
-    });
 
     const routeOptions = React.useMemo(
         () => [
@@ -93,10 +104,26 @@ export function TravelItineraryPage() {
             { value: 'bars', label: t('travelItinerary.routeOptions.bars') },
             { value: 'food', label: t('travelItinerary.routeOptions.food') },
             { value: 'history', label: t('travelItinerary.routeOptions.history') },
-            { value: 'museums', label: t('travelItinerary.routeOptions.museums') }
+            { value: 'museums', label: t('travelItinerary.routeOptions.museums') },
+            { value: 'nature', label: t('travelItinerary.routeOptions.nature') },
+            { value: 'forfun', label: t('travelItinerary.routeOptions.forfun') }
         ],
         [t]
     );
+
+    const visibleRouteOptions = React.useMemo(() => {
+        const availableTourTypes = new Set((tourItems || []).map((item) => normalizeTourType(item.tourType)));
+        return routeOptions.filter((option) => {
+            const mappedType = ROUTE_TO_TOUR_KEY[option.value] || option.value;
+            return availableTourTypes.has(normalizeTourType(mappedType));
+        });
+    }, [routeOptions, tourItems]);
+
+    useEffect(() => {
+        if (!selectedRouteOption) return;
+        const isStillVisible = visibleRouteOptions.some((option) => option.value === selectedRouteOption);
+        if (!isStillVisible) setSelectedRouteOption(null);
+    }, [selectedRouteOption, visibleRouteOptions]);
 
     useEffect(() => {
         let isMounted = true;
@@ -260,17 +287,8 @@ export function TravelItineraryPage() {
 
     const displayedTourItems = React.useMemo(() => {
         if (!selectedRouteOption) return tourItems;
-        const ROUTE_TO_TOUR_KEY: Record<string, string> = {
-            free: 'FREE',
-            nightlife: 'NIGHTLIFE',
-            bars: 'BARS',
-            food: 'GASTRONOMIC',
-            history: 'HISTORY',
-            museums: 'MUSEUMS'
-        };
         const targetKey = ROUTE_TO_TOUR_KEY[selectedRouteOption] || selectedRouteOption;
-        const normalize = (v: any) => (String(v || '')).replace(/-/g, '_').toUpperCase();
-        return (tourItems || []).filter((item) => normalize(item.tourType) === normalize(targetKey));
+        return (tourItems || []).filter((item) => normalizeTourType(item.tourType) === normalizeTourType(targetKey));
     }, [tourItems, selectedRouteOption]);
 
     // Build ordered points from selected tour item places (include opening text)
@@ -455,9 +473,9 @@ export function TravelItineraryPage() {
                                         <div
                                             role="button"
                                             tabIndex={0}
-                                            onClick={() => setShowCityComingSoonModal(true)}
+                                            onClick={() => setTourMode('city')}
                                             onKeyDown={(event) => {
-                                                if (event.key === 'Enter' || event.key === ' ') setShowCityComingSoonModal(true);
+                                                if (event.key === 'Enter' || event.key === ' ') setTourMode('city');
                                             }}
                                             className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
                                                 tourMode === 'city'
@@ -467,7 +485,7 @@ export function TravelItineraryPage() {
                                         >
                                             <span className="category-card-label inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
-                                                {t('travelItinerary.modes.city')} (beta)
+                                                {t('travelItinerary.modes.city')}
                                             </span>
                                         </div>
                                         <div className="absolute left-0 right-0 bottom-0 w-full pointer-events-none">
@@ -483,7 +501,7 @@ export function TravelItineraryPage() {
                                 <div className="bg-[#F5F5F5] pb-20 px-4 lg:px-4">
                                     <EnvironmentGrid
                                         title={t('travelItinerary.routeOptionsTitle')}
-                                        environments={routeOptions}
+                                        environments={visibleRouteOptions}
                                         selectedEnv={selectedRouteOption}
                                         onSelect={setSelectedRouteOption}
                                         onViewMore={() => null}
@@ -601,28 +619,6 @@ export function TravelItineraryPage() {
                                 Abrir no Google Maps
                             </button>
                         </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {showCityComingSoonModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-                    <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
-                        <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
-                            <SectionHeading title={t('travelItinerary.modes.city')} underline={false} sizeClass="text-lg" className="flex-1" />
-                            <button
-                                onClick={() => setShowCityComingSoonModal(false)}
-                                className="btn-close-round text-xl font-bold"
-                                aria-label={t('common.close')}
-                            >
-                                ×
-                            </button>
-                        </div>
-                        <div className="p-5 text-center">
-                            <p className="mb-2 text-sm text-gray-200">
-                                {cityComingSoonMessage}
-                            </p>
                         </div>
                     </div>
                 </div>

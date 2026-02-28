@@ -20,6 +20,8 @@ const TOUR_MAP: Record<string, string> = {
   GASTRONOMY: 'Gastronômico',
   HISTORY: 'História',
   MUSEUMS: 'Museus',
+  NATURE: 'Natureza',
+  FORFUN: 'Diversão',
   OTHERS: 'Outros',
 };
 
