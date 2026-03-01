@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { WhereIsTodayMenu } from "@/web/components/home/WhereIsTodayMenu";
 import type { MenuWhereIsTodayOption } from '@/core/domain/models/MenuWhereIsTodayOption';
 import { useTranslation } from 'react-i18next';
@@ -17,9 +17,12 @@ import { distanceInKm, formatDistanceKm } from "@/core/services/Distance";
 import { fetchRecommendations } from "@/data/repositories/RecommendationRepository";
 import { getPlaceTypeLabel, getPlaceTypeLabelSingular } from "@/core/domain/enums/placeTypeLabel";
 import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
-import { NearbyMapModal } from "@/web/components/home/NearbyMapModal";
-import imgMuseuIpiranga from "@/assets/imgs/background/img_museu_ipiranga.webp";
-import imgPaulista from "@/assets/imgs/background/img_paulista.webp";
+import imgMuseuIpiranga640 from "@/assets/imgs/background/img_museu_ipiranga_640.webp";
+import imgMuseuIpiranga1280 from "@/assets/imgs/background/img_museu_ipiranga_1280.webp";
+import imgPaulista640 from "@/assets/imgs/background/img_paulista_640.webp";
+import imgPaulista1280 from "@/assets/imgs/background/img_paulista_1280.webp";
+
+const NearbyMapModal = lazy(() => import("@/web/components/home/NearbyMapModal").then((m) => ({ default: m.NearbyMapModal })));
 
 export function HomePage() {
   // 🔹 Carrega todas as categorias
@@ -331,12 +334,18 @@ export function HomePage() {
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-          style={{ backgroundImage: `url(${imgMuseuIpiranga})`, opacity: 0.2 }}
+        <img
+          src={imgMuseuIpiranga1280}
+          srcSet={`${imgMuseuIpiranga640} 640w, ${imgMuseuIpiranga1280} 1280w`}
+          sizes="100vw"
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-20"
         />
         <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
-        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4 min-h-[420px]">
           <div className="flex items-start justify-between">
             <div>
               <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
@@ -470,12 +479,18 @@ export function HomePage() {
       {/* Seção: Por bairro (grid 2x4 retangular) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-          style={{ backgroundImage: `url(${imgPaulista})`, opacity: 0.2 }}
+        <img
+          src={imgPaulista1280}
+          srcSet={`${imgPaulista640} 640w, ${imgPaulista1280} 1280w`}
+          sizes="100vw"
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-20"
         />
         <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
-        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4 min-h-[360px]">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
             {topNeighborhoods.map((n) => (
@@ -517,12 +532,14 @@ export function HomePage() {
         />
       )}
       {mapCategory && userLocation && (
-        <NearbyMapModal
-          onClose={() => setMapCategory(null)}
-          userLocation={userLocation}
-          places={nearbyStats.find((s) => s.category === mapCategory)?.withinRadius || []}
-          title={getPlaceTypeLabel(mapCategory.toUpperCase().replace(/-/g, "_") as any)}
-        />
+        <Suspense fallback={null}>
+          <NearbyMapModal
+            onClose={() => setMapCategory(null)}
+            userLocation={userLocation}
+            places={nearbyStats.find((s) => s.category === mapCategory)?.withinRadius || []}
+            title={getPlaceTypeLabel(mapCategory.toUpperCase().replace(/-/g, "_") as any)}
+          />
+        </Suspense>
       )}
     </div>
   );

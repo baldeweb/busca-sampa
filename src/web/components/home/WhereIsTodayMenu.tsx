@@ -14,7 +14,8 @@ import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icFlagSP from '@/assets/imgs/etc/logo-role-paulista.png';
-import imgTheatro from '@/assets/imgs/background/img_theatro.webp';
+import imgTheatro640 from '@/assets/imgs/background/img_theatro_640.webp';
+import imgTheatro1280 from '@/assets/imgs/background/img_theatro_1280.webp';
 import { useTranslation } from 'react-i18next';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
@@ -57,12 +58,19 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     const { t } = useTranslation();
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
-            <div
-                className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-                style={{ backgroundImage: `url(${imgTheatro})`, opacity: 0.2 }}
+            <img
+                src={imgTheatro1280}
+                srcSet={`${imgTheatro640} 640w, ${imgTheatro1280} 1280w`}
+                sizes="100vw"
+                alt=""
+                aria-hidden="true"
+                decoding="async"
+                loading="eager"
+                fetchPriority="high"
+                className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-20"
             />
             <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
-            <div className="relative z-20 mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2">
+            <div className="relative z-20 mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2 min-h-[420px]">
                 <SectionHeading title={t('whereIsToday.title')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
                 <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
