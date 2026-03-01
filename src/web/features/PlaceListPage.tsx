@@ -44,31 +44,59 @@ export const PlaceListPage: React.FC = () => {
     const listLocation = useLocation();
     const allowedIdsFromState = (listLocation.state as any)?.ids as Array<string | number> | undefined;
     const allowedIdsSet = useMemo(() => new Set((allowedIdsFromState || []).map(v => String(v))), [allowedIdsFromState]);
-    // Carrega todas as categorias
-    const { data: restaurants } = useRecommendationList("restaurants");
-    const { data: bars } = useRecommendationList("bars");
-    const { data: coffees } = useRecommendationList("coffees");
-    const { data: nightlife } = useRecommendationList("nightlife");
-    const { data: nature } = useRecommendationList("nature");
-    const { data: pleasures } = useRecommendationList("pleasure");
-    const { data: touristSpots } = useRecommendationList("tourist-spot");
-    const { data: forfun } = useRecommendationList("forfun");
-    const { data: stores } = useRecommendationList("stores");
+    const needsAllPlaces = routeTypeLower === "gratuito" || routeTypeLower === "free" || routeTypeLower === "abrem-hoje";
+
+    const dataCategoryMap: Record<string, string | undefined> = {
+        restaurants: "restaurants",
+        restaurantes: "restaurants",
+        bars: "bars",
+        bares: "bars",
+        coffees: "coffees",
+        cafeterias: "coffees",
+        nightlife: "nightlife",
+        "vida-noturna": "nightlife",
+        nature: "nature",
+        natureza: "nature",
+        pleasure: "pleasure",
+        prazer: "pleasure",
+        "tourist-spot": "tourist-spot",
+        "pontos-turisticos": "tourist-spot",
+        forfun: "forfun",
+        diversao: "forfun",
+        stores: "stores",
+        lojas: "stores",
+    };
+    const dataCategory = dataCategoryMap[routeTypeLower];
+
+    // Fetch only what we need for this route.
+    // For special routes (FREE / abrem-hoje), fetch all categories for filtering.
+    const { data: restaurants } = useRecommendationList(needsAllPlaces || dataCategory === "restaurants" ? "restaurants" : "");
+    const { data: bars } = useRecommendationList(needsAllPlaces || dataCategory === "bars" ? "bars" : "");
+    const { data: coffees } = useRecommendationList(needsAllPlaces || dataCategory === "coffees" ? "coffees" : "");
+    const { data: nightlife } = useRecommendationList(needsAllPlaces || dataCategory === "nightlife" ? "nightlife" : "");
+    const { data: nature } = useRecommendationList(needsAllPlaces || dataCategory === "nature" ? "nature" : "");
+    const { data: pleasures } = useRecommendationList(needsAllPlaces || dataCategory === "pleasure" ? "pleasure" : "");
+    const { data: touristSpots } = useRecommendationList(needsAllPlaces || dataCategory === "tourist-spot" ? "tourist-spot" : "");
+    const { data: forfun } = useRecommendationList(needsAllPlaces || dataCategory === "forfun" ? "forfun" : "");
+    const { data: stores } = useRecommendationList(needsAllPlaces || dataCategory === "stores" ? "stores" : "");
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
 
-    // Junta todos os lugares em um único array para filtros especiais
-    const allPlaces = useMemo(() => [
-        ...restaurants,
-        ...bars,
-        ...coffees,
-        ...nightlife,
-        ...nature,
-        ...pleasures,
-        ...touristSpots,
-        ...forfun,
-        ...stores,
-    ], [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
+    // Junta todos os lugares em um único array apenas quando a rota exige filtro multi-categoria
+    const allPlaces = useMemo(() => {
+        if (!needsAllPlaces) return [];
+        return [
+            ...restaurants,
+            ...bars,
+            ...coffees,
+            ...nightlife,
+            ...nature,
+            ...pleasures,
+            ...touristSpots,
+            ...forfun,
+            ...stores,
+        ];
+    }, [needsAllPlaces, restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
 
     // Mapeia slug para tipo utilizado nos dados
     const typeMap: Record<string, string> = {
@@ -108,14 +136,21 @@ export const PlaceListPage: React.FC = () => {
 
     // Filtra pelo tipo da URL
     const filteredByType = useMemo(() => {
-        if ((routeType || "").toLowerCase() === "restaurants") {
-            return restaurants;
-        }
-        if ((routeType || "").toLowerCase() === "gratuito" || mappedType === "FREE") {
+        if (routeTypeLower === "restaurants" || routeTypeLower === "restaurantes") return restaurants;
+        if (routeTypeLower === "bars" || routeTypeLower === "bares") return bars;
+        if (routeTypeLower === "coffees" || routeTypeLower === "cafeterias") return coffees;
+        if (routeTypeLower === "nightlife" || routeTypeLower === "vida-noturna") return nightlife;
+        if (routeTypeLower === "nature" || routeTypeLower === "natureza") return nature;
+        if (routeTypeLower === "tourist-spot" || routeTypeLower === "pontos-turisticos") return touristSpots;
+        if (routeTypeLower === "forfun" || routeTypeLower === "diversao") return forfun;
+        if (routeTypeLower === "stores" || routeTypeLower === "lojas") return stores;
+        if (routeTypeLower === "pleasure" || routeTypeLower === "prazer") return pleasures;
+
+        if (routeTypeLower === "gratuito" || mappedType === "FREE") {
             return allPlaces.filter(p => p.priceRange === "FREE");
         }
         // NOTE: removed 'aberto-agora' special route — handled via other flows.
-        if ((routeType || "").toLowerCase() === "abrem-hoje") {
+        if (routeTypeLower === "abrem-hoje") {
             // places that have opening times for today AND are either open now
             // or have a future opening later today. Exclude places that only
             // had past openings earlier today but are currently closed.
@@ -159,8 +194,8 @@ export const PlaceListPage: React.FC = () => {
                 return false;
             });
         }
-        return allPlaces.filter(p => placeHasType(p, mappedType));
-    }, [allPlaces, mappedType, routeType, restaurants, openingPatterns]);
+        return restaurants;
+    }, [routeTypeLower, mappedType, allPlaces, restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores, openingPatterns]);
 
     // Intersect with IDs passed via navigation state, if any
     const baseList = useMemo(() => {

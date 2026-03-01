@@ -1,4 +1,4 @@
-import imgMe from "@/assets/imgs/etc/img_me.jpg";
+import imgMe from "@/assets/imgs/etc/img_me.webp";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
@@ -26,6 +26,9 @@ export function AboutMePage() {
           <img
             src={imgMe}
             alt={t('aboutMe.photoAlt')}
+            width={192}
+            height={192}
+            decoding="async"
             className="h-44 w-44 sm:h-48 sm:w-48 rounded-full border-2 border-bs-red shadow-md object-cover"
           />
 
@@ -65,7 +68,7 @@ export function AboutMePage() {
             {howToHelp.map((item) => (
               <p key={item}>{item}</p>
             ))}
-            <img src={icQrCodeDonation} alt="QRCode para ajudar" className="w-40 h-40 mt-4" />
+            <img src={icQrCodeDonation} alt="QRCode para ajudar" width={160} height={160} decoding="async" className="w-40 h-40 mt-4" />
           </AccordionItem>
         </Accordion>
 

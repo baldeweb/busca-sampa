@@ -71,6 +71,9 @@ export function LanguageSelectorModal({ onClose }: Props) {
                                     <img
                                         src={lang.flag}
                                         alt={lang.name}
+                                        width={24}
+                                        height={24}
+                                        decoding="async"
                                         className="h-6 w-6 rounded-full border border-white/40"
                                     />
                                     <span className="text-sm">{lang.name}</span>

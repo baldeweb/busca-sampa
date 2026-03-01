@@ -56,6 +56,9 @@ export function LanguageButton() {
             <img
                 src={currentFlag}
                 alt={currentLanguage}
+                width={20}
+                height={20}
+                decoding="async"
                 className={`h-5 w-5 rounded-full border border-white/40 transition-transform duration-150 ${hover ? 'scale-105' : ''}`}
             />
             <span className={hover ? 'text-black' : ''} style={hover ? { color: '#000000' } : undefined}>{currentLanguage}</span>

@@ -14,7 +14,7 @@ import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
 import icFlagSP from '@/assets/imgs/etc/logo-role-paulista.png';
-import imgTheatro from '@/assets/imgs/background/img_theatro.jpg';
+import imgTheatro from '@/assets/imgs/background/img_theatro.webp';
 import { useTranslation } from 'react-i18next';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
@@ -35,13 +35,13 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     // Map tag/title to project icons in `src/assets/imgs/icons`
     function resolveIcon(tags: string[]): ReactElement {
         const cls = "w-5 h-5 sm:w-7 sm:h-7 object-contain";
+        const size = 28;
         // Todas as imagens do carrossel não podem ser arrastadas!
-        const imgProps = { draggable: false, onDragStart: (e: React.DragEvent) => e.preventDefault() };
+        const imgProps = { draggable: false, onDragStart: (e: React.DragEvent) => e.preventDefault(), width: size, height: size, decoding: 'async' as const };
         const normalized = (tags || [])
             .map((t) => String(t || '').trim())
             .filter(Boolean)
             .map((t) => t.replace(/-/g, '_').toUpperCase());
-        console.log('[PUDIM]: normalized > ', normalized);
         if (normalized.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('RESTAURANTS') || normalized.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
@@ -83,7 +83,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                 <CategoryCard
                                     key="opens-today"
                                     label={raw}
-                                    icon={<img src={icOpenToday} className="w-5 h-5 sm:w-7 sm:h-7 object-contain" alt="" />}
+                                    icon={<img src={icOpenToday} className="w-5 h-5 sm:w-7 sm:h-7 object-contain" alt="" width={28} height={28} decoding="async" />}
                                     selected={selectedId === -999}
                                     onClick={() => {
                                         setSelectedId(-999);
@@ -133,8 +133,6 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                     ))}
                                 </>
                             );
-
-                            console.log('[PUDIM]: label > ', label)
                             return (
                                 <CategoryCard
                                     key={option.id}

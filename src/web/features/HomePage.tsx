@@ -18,8 +18,8 @@ import { fetchRecommendations } from "@/data/repositories/RecommendationReposito
 import { getPlaceTypeLabel, getPlaceTypeLabelSingular } from "@/core/domain/enums/placeTypeLabel";
 import type { PlaceRecommendation } from "@/core/domain/models/PlaceRecommendation";
 import { NearbyMapModal } from "@/web/components/home/NearbyMapModal";
-import imgMuseuIpiranga from "@/assets/imgs/background/img_museu_ipiranga.jpg";
-import imgPaulista from "@/assets/imgs/background/img_paulista.jpg";
+import imgMuseuIpiranga from "@/assets/imgs/background/img_museu_ipiranga.webp";
+import imgPaulista from "@/assets/imgs/background/img_paulista.webp";
 
 export function HomePage() {
   // 🔹 Carrega todas as categorias
@@ -124,27 +124,44 @@ export function HomePage() {
     if (!userLocation) return;
     let isMounted = true;
     setLoadingNearby(true);
-    Promise.all(
-      CATEGORY_CODES.map(async (c) => {
-        const data = await fetchRecommendations(c);
-        return { c, data };
-      })
-    )
-      .then((results) => {
-        if (!isMounted) return;
-        const map: Record<string, PlaceRecommendation[]> = {};
-        results.forEach((r) => (map[r.c] = r.data));
-        setAllCategoryData(map);
-      })
-      .catch((e) => {
-        console.error("Erro ao carregar categorias para proximidade", e);
-      })
-      .finally(() => {
-        if (!isMounted) return;
-        setLoadingNearby(false);
-      });
+
+    const startFetch = () => {
+      Promise.all(
+        CATEGORY_CODES.map(async (c) => {
+          const data = await fetchRecommendations(c);
+          return { c, data };
+        })
+      )
+        .then((results) => {
+          if (!isMounted) return;
+          const map: Record<string, PlaceRecommendation[]> = {};
+          results.forEach((r) => (map[r.c] = r.data));
+          setAllCategoryData(map);
+        })
+        .catch((e) => {
+          console.error("Erro ao carregar categorias para proximidade", e);
+        })
+        .finally(() => {
+          if (!isMounted) return;
+          setLoadingNearby(false);
+        });
+    };
+
+    // Avoid competing with initial render/LCP when permission is already granted.
+    const w = window as any;
+    const idleId = typeof w.requestIdleCallback === 'function'
+      ? w.requestIdleCallback(startFetch, { timeout: 1500 })
+      : null;
+    const timeoutId = idleId === null ? window.setTimeout(startFetch, 0) : null;
+
     return () => {
       isMounted = false;
+      if (idleId !== null && typeof w.cancelIdleCallback === 'function') {
+        w.cancelIdleCallback(idleId);
+      }
+      if (timeoutId !== null) {
+        window.clearTimeout(timeoutId);
+      }
     };
   }, [userLocation]);
 
