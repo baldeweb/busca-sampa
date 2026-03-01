@@ -330,7 +330,7 @@ export function HomePage() {
 
       {/* Seção: Perto de mim */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-8 overflow-hidden">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{ backgroundImage: `url(${imgMuseuIpiranga})`, opacity: 0.2 }}
@@ -469,7 +469,7 @@ export function HomePage() {
 
       {/* Seção: Por bairro (grid 2x4 retangular) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[3px] bg-[#B3261E]" />
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-8 overflow-hidden">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
           style={{ backgroundImage: `url(${imgPaulista})`, opacity: 0.2 }}

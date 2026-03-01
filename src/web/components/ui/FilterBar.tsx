@@ -152,7 +152,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       <div className="mx-auto max-w-5xl px-4 sm:px-12 py-4 text-black">
         <div className="flex flex-col justify-start gap-2">
           <div className="flex items-center">
-            <img src={icFilter} alt="filter" className="w-4 h-4 mr-2" />
+            <img src={icFilter} alt="filter" width={16} height={16} decoding="async" className="w-4 h-4 mr-2" />
             <h3 className="font-bold text-lg text-black">{t("filters.title", { defaultValue: "Filtros" })}</h3>
           </div>
           <div className="flex items-start gap-2">
@@ -170,7 +170,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   }}
                 >
                   <span className="mr-2">{getSortingTitle()}</span>
-                  <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                  <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
                 </button>
                 {showSortingMenu && (
                   <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg z-10">
@@ -205,7 +205,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   }}
                 >
                   <span className="mr-2">{getHoursTitle()}</span>
-                  <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                  <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
                 </button>
                 {showHoursMenu && (
                   <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10">
@@ -246,7 +246,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   }}
                 >
                   <span className="mr-2">{getScheduleTitle()}</span>
-                  <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                  <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
                 </button>
                 {showScheduleMenu && (
                   <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10">
@@ -298,7 +298,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     }}
                   >
                     <span className="mr-2">{getCityTitle()}</span>
-                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                    <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
                   </button>
                   {showCityMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
@@ -344,7 +344,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                     }}
                   >
                     <span className="mr-2">{getPriceTitle()}</span>
-                    <img src={icArrowDown} alt="expand" className="w-3 h-3" />
+                    <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
                   </button>
                   {showPriceMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">

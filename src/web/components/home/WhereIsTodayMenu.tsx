@@ -56,7 +56,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     }
     const { t } = useTranslation();
     return (
-        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-6 sm:py-12 overflow-hidden">
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
             <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
                 style={{ backgroundImage: `url(${imgTheatro})`, opacity: 0.2 }}
