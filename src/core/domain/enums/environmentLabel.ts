@@ -78,6 +78,7 @@ const FALLBACK_MAP: Record<string, string> = {
     COWORKING: "Coworking",
     IZAKAYA: "Izakaya",
     SKATING_RINK: "Pista de Patinação",
+    PUB_ROCK: "Pub Rock",
     OTHERS: "Outros",
 };
 

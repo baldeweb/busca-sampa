@@ -345,7 +345,7 @@ export function HomePage() {
           className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-20"
         />
         <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
-        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4 min-h-[420px]">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
               <SectionHeading title={t('home.nearMeTitle')} underline={false} sizeClass="text-xl sm:text-2xl" className="mb-1" />
@@ -490,7 +490,7 @@ export function HomePage() {
           className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-20"
         />
         <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
-        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4 min-h-[360px]">
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} sizeClass="text-xl sm:text-2xl" className="mb-6" underline={false} />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
             {topNeighborhoods.map((n) => (
