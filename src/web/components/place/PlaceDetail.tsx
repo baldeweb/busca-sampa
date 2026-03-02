@@ -150,7 +150,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
                     <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
                         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
-                            <SectionHeading title={t('placeDetail.visitModalTitle')} underline={false} sizeClass="text-lg" className="flex-1" />
+                            <SectionHeading title={t('placeDetail.visitModalTitle')} underline={false} sizeClass="text-lg" className="flex-1" card={false} />
                             <button onClick={() => setShowVisitModal(false)} className="btn-close-round text-xl font-bold">×</button>
                         </div>
                         <div className="p-5 text-center">
@@ -174,28 +174,11 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             {/* Main Content (match NeighborhoodList full-bleed + inner padding) */}
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF] text-black">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12">
-                        <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 pt-6 pb-4">
-                            <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                                <div className="flex-1 min-w-0">
-                                    <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black break-words mr-6" />
-                                    <p className="text-xs sm:text-sm text-gray-700">{description}</p>
-                                    {priceRange && (
-                                        <p className="text-xs mt-1 text-gray-700">
-                                            <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
-                                        </p>
-                                    )}
-                                    {/* Tipo de ambiente */}
-                                    {ambienteList.length > 0 && (
-                                        <div className="mt-2">
-                                            <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
-                                            <ul className="flex flex-wrap gap-2 mt-1">
-                                                {ambienteList.map((amb: string, idx: number) => (
-                                                    <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div>
+                        <SectionHeading
+                            title={name}
+                            underline={false}
+                            layout="stackOnMobile"
+                            trailing={(
                                 <div className="sm:ml-auto flex flex-row sm:flex-col items-start sm:items-end gap-2 sm:gap-1 shrink-0">
                                     {isOpenNow ? (
                                         <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
@@ -204,13 +187,31 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     )}
                                     <span className="bg-[#212121] text-white text-xs px-2 py-1 rounded">{type}</span>
                                 </div>
-                            </div>
-                        </div>
+                            )}
+                        >
+                            <p className="text-xs sm:text-sm text-gray-700">{description}</p>
+                            {priceRange && (
+                                <p className="text-xs mt-1 text-gray-700">
+                                    <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
+                                </p>
+                            )}
+                            {/* Tipo de ambiente */}
+                            {ambienteList.length > 0 && (
+                                <div className="mt-2">
+                                    <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
+                                    <ul className="flex flex-wrap gap-2 mt-1">
+                                        {ambienteList.map((amb: string, idx: number) => (
+                                            <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </SectionHeading>
 
                         {/* Horário de funcionamento */}
                         <div className="px-4 sm:px-4 pt-2 pb-8 mt-8">
                             <div className="flex items-center justify-between">
-                                <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
+                                <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" card={false} />
                                 <div className="flex flex-col items-end justify-center gap-1">
                                     <button
                                         type="button"
@@ -249,7 +250,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
                             <div className="px-4 sm:px-4 py-8">
                                 <div className="flex items-center justify-between">
-                                    <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" />
+                                    <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" card={false} />
                                 </div>
                                 <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
                                 <div className="mt-8 mb-4 space-y-6">

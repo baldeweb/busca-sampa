@@ -438,16 +438,15 @@ export function TravelItineraryPage() {
             <Toolbar onBack={() => navigate(-1)} />
 
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
-                <div className="mx-auto max-w-5xl px-0 sm:px-4 pt-0 pb-6 sm:pb-12 text-black">
-                    <div className="w-full rounded-b-[30px] px-4 lg:px-8 py-8">
-                        <div className="flex flex-col gap-4">
-                            <div className="flex items-start gap-4">
-                                <img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />
-                                <div>
-                                    <SectionHeading title={t('travelItinerary.title')} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
-                                    <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
-                                </div>
-                            </div>
+                <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12 text-black">
+                    <div className="flex flex-col gap-4">
+                            <SectionHeading
+                                title={t('travelItinerary.title')}
+                                underline={false}
+                                leadingIcon={<img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />}
+                            >
+                                <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
+                            </SectionHeading>
 
                             <div>
                                 <div className="pt-4">
@@ -510,9 +509,12 @@ export function TravelItineraryPage() {
                                         contentPaddingClassName="px-0"
                                     />
 
-                                    <h3 className="font-bold text-lg mb-3 pt-8 mt-3 px-0">
-                                        Roteiros criados pra você :)
-                                    </h3>
+                                    <SectionHeading
+                                        title="Roteiros criados pra você :)"
+                                        underline={false}
+                                        card={false}
+                                        className="mb-3 pt-8 mt-3 px-0"
+                                    />
                                     {tourItemsLoading && (
                                         <p className="text-sm text-gray-500 px-0">
                                             {t('common.loading')}
@@ -546,7 +548,6 @@ export function TravelItineraryPage() {
 
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </section>

@@ -23,7 +23,7 @@ export function NeighborhoodSelectModal({
                 {/* Cabeçalho */}
                 <div className="px-4 py-3">
                     <div className="mb-1 flex items-center justify-between">
-                            <SectionHeading title={"Selecione um bairro"} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" />
+                            <SectionHeading title={"Selecione um bairro"} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" card={false} />
                             <button
                                 type="button"
                                 onClick={onClose}

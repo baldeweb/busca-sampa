@@ -32,7 +32,7 @@ export function AboutMePage() {
             className="h-44 w-44 sm:h-48 sm:w-48 rounded-full border-2 border-bs-red shadow-md object-cover"
           />
 
-          <SectionHeading title={t('aboutMe.name')} underline={false} sizeClass="text-xl" className="mt-4 aboutme-name" />
+          <SectionHeading title={t('aboutMe.name')} underline={false} sizeClass="text-xl" className="mt-4 aboutme-name" card={false} />
           <style>{`.aboutme-name h2{ font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-SemiBold', Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important; font-weight: 600 !important; }`}</style>
 
           <p className="text-sm text-gray-300 text-center">
@@ -74,7 +74,7 @@ export function AboutMePage() {
 
         {/* REDES SOCIAIS */}
         <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-          <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-base sm:text-lg" className="mb-1" />
+          <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-base sm:text-lg" className="mb-1" card={false} />
           <p className="text-sm text-gray-300 mb-3">{t('aboutMe.socialDescription')}</p>
 
           <div className="w-full">

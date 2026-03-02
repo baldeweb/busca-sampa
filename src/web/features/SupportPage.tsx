@@ -5,7 +5,7 @@ export function SupportPage() {
     const { t } = useTranslation();
     return (
         <main>
-            <SectionHeading title={t('support.title')} underline={false} sizeClass="text-2xl" />
+            <SectionHeading title={t('support.title')} underline={false} card={false} />
         </main>
     );
 }

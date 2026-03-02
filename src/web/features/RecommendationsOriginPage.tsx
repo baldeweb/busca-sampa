@@ -5,7 +5,7 @@ export function RecommendationsOriginPage() {
     const { t } = useTranslation();
     return (
         <main>
-            <SectionHeading title={t('recommendationsOrigin.title')} underline={false} sizeClass="text-2xl" />
+            <SectionHeading title={t('recommendationsOrigin.title')} underline={false} card={false} />
         </main>
     );
 }

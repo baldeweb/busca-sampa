@@ -629,8 +629,10 @@ export const PlaceListPage: React.FC = () => {
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-8 text-black">
                     {/* Título e descrição */}
-                    <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 pt-6 pb-4">
-                        <div className="flex items-start gap-4">
+                    <SectionHeading
+                        title={title}
+                        underline={false}
+                        leadingIcon={(
                             <img
                                 src={headerIcon}
                                 alt="flag"
@@ -646,12 +648,10 @@ export const PlaceListPage: React.FC = () => {
                                 onTouchEnd={cancelHeaderLongPress}
                                 onTouchCancel={cancelHeaderLongPress}
                             />
-                            <div>
-                                <SectionHeading title={title} underline={false} sizeClass="text-lg sm:text-2xl text-[#212121]" />
-                                <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
-                            </div>
-                        </div>
-                    </div>
+                        )}
+                    >
+                        <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
+                    </SectionHeading>
                     {/* Grid de tipos de ambiente */}
                     {environments.length > 0 && (
                         <EnvironmentGrid

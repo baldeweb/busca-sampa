@@ -5,7 +5,7 @@ export function HowToRecommendPage() {
     const { t } = useTranslation();
     return (
         <main>
-            <SectionHeading title={t('howToRecommend.title')} underline={false} sizeClass="text-2xl" />
+            <SectionHeading title={t('howToRecommend.title')} underline={false} card={false} />
         </main>
     );
 }
