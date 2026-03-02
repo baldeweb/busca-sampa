@@ -1,0 +1,3 @@
+# SPA fallback for static hosts (Netlify/Cloudflare Pages-compatible)
+# Ensures refresh (including mobile pull-to-refresh) on nested routes works.
+/*    /index.html   200
