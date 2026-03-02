@@ -8,7 +8,6 @@ const NeighborhoodListPage = lazy(() => import("../features/NeighborhoodListPage
 const RecommendationsOriginPage = lazy(() => import("../features/RecommendationsOriginPage").then((m) => ({ default: m.RecommendationsOriginPage })));
 const HowToRecommendPage = lazy(() => import("../features/HowToRecommendPage").then((m) => ({ default: m.HowToRecommendPage })));
 const SupportPage = lazy(() => import("../features/SupportPage").then((m) => ({ default: m.SupportPage })));
-// RestaurantsPage was removed from explicit routes to let the generic PlaceListPage handle '/restaurants'
 const PlaceListPage = lazy(() => import("../features/PlaceListPage").then((m) => ({ default: m.PlaceListPage })));
 const PlaceDetailPage = lazy(() => import("../features/PlaceDetailPage").then((m) => ({ default: m.PlaceDetailPage })));
 const AboutMePage = lazy(() => import("../features/AboutMePage").then((m) => ({ default: m.AboutMePage })));

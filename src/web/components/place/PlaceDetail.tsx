@@ -174,7 +174,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
             {/* Main Content (match NeighborhoodList full-bleed + inner padding) */}
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF] text-black">
                 <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-6 sm:pb-12">
-                        <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[30px] px-4 py-8">
+                        <div className="w-full bg-[#F5F5F5] border border-[#8492A6] rounded-b-[8px] px-4 pt-6 pb-4">
                             <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                                 <div className="flex-1 min-w-0">
                                     <SectionHeading title={name} underline={false} sizeClass="text-xl sm:text-2xl text-black break-words mr-6" />
