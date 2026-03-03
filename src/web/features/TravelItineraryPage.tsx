@@ -28,6 +28,7 @@ import type { PlaceRecommendation } from '@/core/domain/models/PlaceRecommendati
 import type { GeoJsonObject } from 'geojson';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { AppText } from '../components/ui/AppText';
+import { AppButton } from '../components/ui/AppButton';
 
 type OsrmRouteResponse = {
     routes?: Array<{ geometry?: GeoJsonObject }>;
@@ -458,16 +459,16 @@ export function TravelItineraryPage() {
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Enter' || event.key === ' ') setTourMode('walking');
                                             }}
-                                            className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
+                                            className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 transition-colors text-center ${
                                                 tourMode === 'walking'
                                                     ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#212121] rounded-tl-[8px] rounded-tr-[8px]'
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
-                                            <span className="category-card-label inline-flex items-center justify-center gap-2 w-full">
+                                            <AppText variant="subtitle-light" className="category-card-label inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icWalkingTour} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.walking')}
-                                            </span>
+                                            </AppText>
                                         </div>
                                         <div
                                             role="button"
@@ -476,16 +477,16 @@ export function TravelItineraryPage() {
                                             onKeyDown={(event) => {
                                                 if (event.key === 'Enter' || event.key === ' ') setTourMode('city');
                                             }}
-                                            className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] transition-colors text-center ${
+                                            className={`flex-1 min-w-[160px] cursor-pointer select-none px-2 pt-4 pb-4 transition-colors text-center ${
                                                 tourMode === 'city'
                                                     ? 'text-[#B3261E] bg-[#F5F5F5] border-l border-t border-r border-[#212121] rounded-tl-[8px] rounded-tr-[8px]'
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
-                                            <span className="category-card-label inline-flex items-center justify-center gap-2 w-full">
+                                            <AppText variant="subtitle-light" className="category-card-label inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.city')}
-                                            </span>
+                                            </AppText>
                                         </div>
                                         <div className="absolute left-0 right-0 bottom-0 w-full pointer-events-none">
                                             <div
@@ -511,14 +512,10 @@ export function TravelItineraryPage() {
 
                                     <SectionHeading title={'Roteiros criados pra você :)'} className='mb-3 pt-8' underline={false} card={false} tone='light' />
                                     {tourItemsLoading && (
-                                        <p className="text-sm text-gray-500 px-0">
-                                            {t('common.loading')}
-                                        </p>
+                                        <AppText variant="body-light">{t('common.loading')}</AppText>
                                     )}
                                     {!tourItemsLoading && displayedTourItems.length === 0 && (
-                                        <p className="text-sm text-gray-500 px-0">
-                                            {t('common.noPlaces')}
-                                        </p>
+                                        <AppText variant="body-light">{t('common.noPlaces')}</AppText>
                                     )}
                                     {!tourItemsLoading && displayedTourItems.length > 0 && (
                                         <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -536,9 +533,11 @@ export function TravelItineraryPage() {
                                         </div>
                                     )}
 
-                                    {loading && <p className="text-sm text-gray-500">Carregando pontos...</p>}
+                                    {loading && 
+                                        <AppText variant="body-light">Carregando pontos...</AppText>
+                                    }
                                     {!loading && orderedPoints.length === 0 && (
-                                        <p className="text-sm text-gray-500">Ainda não foi possível carregar os pontos do tour.</p>
+                                        <AppText variant="body-light" className="mt-8">Ainda não foi possível carregar os pontos do tour.</AppText>
                                     )}
 
                                 </div>
@@ -586,19 +585,15 @@ export function TravelItineraryPage() {
                             className="w-full mt-4"
                         />
 
-                        <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.06em] text-gray-700">
-                            Lugares por onde você vai passar
-                        </h4>
+                        <AppText variant="title-light" className="mt-8">Lugares por onde você vai passar</AppText>
                         {orderedPoints.length > 0 ? (
-                            <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+                            <ul className="mt-2">
                                 {orderedPoints.map((point) => (
-                                    <li key={point.name}>
-                                        {point.name}{point.openingText ? ` (${point.openingText})` : ''}
-                                    </li>
+                                    <AppText variant="body-light" className="mt-2" key={point.name}>• {point.name}{point.openingText ? ` (${point.openingText})` : ''}</AppText>
                                 ))}
                             </ul>
                         ) : (
-                            <p className="mt-2 text-sm text-gray-500">Ainda não foi possível carregar os lugares do roteiro.</p>
+                            <AppText variant="subtitle-light" className="mt-2">Ainda não foi possível carregar os lugares do roteiro.</AppText>
                         )}
 
                         <WarningTip
@@ -608,12 +603,14 @@ export function TravelItineraryPage() {
                         />
 
                         <div className="mt-4">
-                            <button
+                            <AppButton
+                                variant="outline"
+                                size="md"
                                 onClick={onVerRota}
-                                className="btn-hover-red w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded px-4 py-3"
+                                className="w-full px-4 py-3"
                             >
                                 Abrir no Google Maps
-                            </button>
+                            </AppButton>
                         </div>
                         </div>
                     </div>

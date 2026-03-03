@@ -22,6 +22,7 @@ import imgMuseuIpiranga640 from "@/assets/imgs/background/img_museu_ipiranga_640
 import imgMuseuIpiranga1280 from "@/assets/imgs/background/img_museu_ipiranga_1280.webp";
 import imgPaulista640 from "@/assets/imgs/background/img_paulista_640.webp";
 import imgPaulista1280 from "@/assets/imgs/background/img_paulista_1280.webp";
+import { AppButton } from "../components/ui/AppButton";
 
 const NearbyMapModal = lazy(() => import("@/web/components/home/NearbyMapModal").then((m) => ({ default: m.NearbyMapModal })));
 
@@ -352,14 +353,15 @@ export function HomePage() {
               <SectionHeading title={t('home.nearMeTitle')} subtitle={t('home.nearMeSubtitle', { km: selectedDistance })} className="mt-1 mb-1" underline={false} card={false} tone="dark" />
             </div>
             {userLocation && !noNearbyResults && !isOutsideGreaterRegion && (
-                <div className="ml-4">
-                <button
-                  type="button"
+              <div className="ml-4">
+                <AppButton
+                  variant="outline"
+                  size="sm"
                   onClick={() => setIsDistanceModalOpen(true)}
-                  className="min-w-[140px] rounded-full bg-[#212121] text-white px-3 py-1 text-sm sm:px-4 sm:py-2 border border-[#F5F5F5]"
+                  className="min-w-[140px] px-3 py-1 sm:px-4 sm:py-2"
                 >
                   {t('common.changeDistance')}
-                </button>
+                </AppButton>
               </div>
             )}
           </div>
@@ -384,14 +386,14 @@ export function HomePage() {
           {userLocation && (
             <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
               <div className="mt-3 space-y-2">
-                        {loadingNearby && (
-                          <AppText variant="subtitle-dark">{t('home.loadingCategories')}</AppText>
-                        )}
-                        {!loadingNearby && noNearbyResults && (
-                          <div className="text-center flex flex-col items-center gap-5 py-6">
-                            <AppText variant="subtitle-dark" className="whitespace-pre-line">
-                              {isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}
-                            </AppText>
+                {loadingNearby && (
+                  <AppText variant="subtitle-dark">{t('home.loadingCategories')}</AppText>
+                )}
+                {!loadingNearby && noNearbyResults && (
+                  <div className="text-center flex flex-col items-center gap-5 py-6">
+                    <AppText variant="subtitle-dark" className="whitespace-pre-line">
+                      {isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}
+                    </AppText>
                     {!isOutsideGreaterRegion && (
                       <ActionButton
                         type="button"
@@ -440,16 +442,19 @@ export function HomePage() {
                             )}
                           </div>
                           <div className="flex flex-col items-end">
-                            <button
-                              type="button"
+                            <AppButton
+                              variant="outline"
+                              size="sm"
                               onClick={(e) => { e.stopPropagation(); setMapCategory(s.category); }}
-                              className="min-w-[120px] text-sm rounded-full bg-[#212121] text-white px-3 py-1 border border-[#F5F5F5]"
+                              className="min-w-[120px] px-3 py-1"
                             >
                               {t('home.viewOnMap')}
-                            </button>
-                                <button
-                              type="button"
-                              onClick={(e) => { e.stopPropagation();
+                            </AppButton>
+                            <AppButton
+                              variant="action"
+                              size="sm"
+                              onClick={(e) => { 
+                                e.stopPropagation();
                                 if (s.count === 1) {
                                   const only = s.withinRadius[0];
                                   if (only) {
@@ -462,10 +467,10 @@ export function HomePage() {
                                   navigate(`/${s.category}`, { state: { ids } });
                                 }
                               }}
-                              className="min-w-[120px] mt-3 text-sm rounded-full bg-bs-red text-white px-3 py-1 btn-red"
+                              className="min-w-[120px] mt-3 px-3 py-1"
                             >
                               {s.count === 1 ? t('home.viewPlace') : t('home.viewPlaces')}
-                            </button>
+                            </AppButton>
                           </div>
                         </div>
                       );

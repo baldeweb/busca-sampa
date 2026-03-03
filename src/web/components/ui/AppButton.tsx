@@ -2,8 +2,8 @@ import { type ReactNode } from "react";
 
 interface AppButtonProps {
   children: ReactNode;
-  onClick?: () => void;
-  variant?: "primary" | "outline" | "ghost" | "square" | "action" | "whatsapp" | "uber";
+  onClick?: (x?: any) => void;
+  variant?: "primary" | "outline" | "ghost" | "square" | "action" | "whatsapp" | "uber" | "close";
   size?: "xxs" | "xs" | "sm" | "md";
   disabled?: boolean;
   className?: string;
@@ -34,6 +34,7 @@ export function AppButton({
     action: "border border-white/25 text-white hover:border-bs-red btn-square bg-bs-red hover:bg-red-700",
     whatsapp: "border border-white/25 text-white hover:border-bs-red btn-square bg-green-500 hover:bg-green-600",
     uber: "border border-white/25 text-white hover:border-bs-red btn-square bg-green-500 hover:bg-green-600",
+    close: "",
   };
   return (
     <button

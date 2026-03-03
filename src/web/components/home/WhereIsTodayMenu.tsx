@@ -19,6 +19,7 @@ import imgTheatro1280 from '@/assets/imgs/background/img_theatro_1280.webp';
 import { useTranslation } from 'react-i18next';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
+import { AppText } from "../ui/AppText";
 
 interface Props {
     onOptionSelect?: (option: MenuWhereIsTodayOption) => void;
@@ -72,10 +73,8 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
             <div className="relative z-20 mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2">
                 <SectionHeading title={t('whereIsToday.title')} subtitle={t('whereIsToday.subtitle')} className="mt-1 mb-1 max-w-2xl" underline={false} card={false} tone="dark" />
-            {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
-            {error && (
-                <p className="text-base text-red-400">{t('common.loadError')}</p>
-            )}
+            {loading && <AppText variant="subtitle-dark">{t('common.loading')}</AppText>}
+            {error && (<AppText variant="subtitle-dark">{t('common.loadError')}</AppText>)}
             {!loading && !error && (
                 <div className="relative mt-4">
                     <div

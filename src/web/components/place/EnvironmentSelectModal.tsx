@@ -1,5 +1,7 @@
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { useTranslation } from 'react-i18next';
+import { AppButton } from '../ui/AppButton';
+import { AppText } from '../ui/AppText';
 
 interface EnvironmentOption {
     label: string;
@@ -60,29 +62,24 @@ export function EnvironmentSelectModal({
                 <ul className="max-h-[60vh] overflow-y-auto py-2">
                     {/* Opção "Todos" */}
                     <li>
-                        <button
-                            type="button"
+                        <AppButton
+                            variant="square"
                             onClick={() => handleSelect(null)}
-                            className={`btn-square flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70 ${
-                                selectedEnv === null ? 'bg-bs-red/50' : ''
-                            }`}
+                            className={`flex w-full items-center justify-between px-4 py-2`}
                         >
-                            <span className="category-card-label">{t('common.all')}</span>
-                            <span className="text-sm opacity-70">{">"}</span>
-                        </button>
+                            <AppText variant="subtitle-light" className="category-card-label">{t('common.all')}</AppText>
+                            <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
+                        </AppButton>
                     </li>
                     {shownEnvironments.map((env) => (
                         <li key={env.value}>
-                            <button
-                                type="button"
+                            <AppButton
+                                variant="square"
                                 onClick={() => handleSelect(env)}
-                                className={`btn-square flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70 ${
-                                    selectedEnv === env.value ? 'bg-bs-red/50' : ''
-                                }`}
-                            >
-                                <span className="category-card-label">{env.label}</span>
-                                <span className="text-sm opacity-70">{">"}</span>
-                            </button>
+                                className={`flex w-full items-center justify-between px-4 py-2`}>
+                                <AppText variant="subtitle-light" className="category-card-label">{env.label}</AppText>
+                                <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
+                            </AppButton>
                         </li>
                     ))}
                 </ul>

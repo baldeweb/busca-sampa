@@ -1,5 +1,7 @@
 import type { Neighborhood } from "@/core/domain/models/Neighborhood";
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppButton } from "../ui/AppButton";
+import { AppText } from "../ui/AppText";
 
 interface Props {
     neighborhoods: Neighborhood[];
@@ -39,14 +41,14 @@ export function NeighborhoodSelectModal({
                 <ul className="max-h-[60vh] overflow-y-auto py-2">
                     {neighborhoods.map((n) => (
                         <li key={n.id}>
-                            <button
-                                type="button"
+                            <AppButton
+                                variant="square"
                                 onClick={() => handleSelect(n)}
-                                className="flex w-full items-center justify-between px-4 py-2 text-base hover:bg-bs-red/70"
+                                className={`flex w-full items-center justify-between px-4 py-2`}
                             >
-                                <span className="category-card-label">{n.neighborhoodName}</span>
-                                <span className="text-xs opacity-70">{">"}</span>
-                            </button>
+                                <AppText variant="subtitle-light" className="category-card-label">{n.neighborhoodName}</AppText>
+                                <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
+                            </AppButton>
                         </li>
                     ))}
                 </ul>
