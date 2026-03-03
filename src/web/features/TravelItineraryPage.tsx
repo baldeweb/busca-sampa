@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
-import { AppText } from '@/web/components/ui/AppText';
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
 import { TravelItineraryListItem } from '@/web/components/travel-itinerary/TravelItineraryListItem';

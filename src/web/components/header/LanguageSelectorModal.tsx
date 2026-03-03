@@ -13,7 +13,6 @@ import turkiyeFlag from "@/assets/imgs/flags/img_flag_turkiye.png";
 import arabicFlag from "@/assets/imgs/flags/img_flag_arabic.png";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
-import { AppText } from "../ui/AppText";
 
 const LANGUAGES = [
     { code: "pt", name: "Português (BR)", flag: brazilFlag },

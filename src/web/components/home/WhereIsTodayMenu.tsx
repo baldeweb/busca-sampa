@@ -2,7 +2,6 @@ import { useState, type ReactElement } from "react";
 import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
-import { AppText } from "@/web/components/ui/AppText";
 import { CategoryCard } from "@/web/components/ui/CategoryCard";
 // icons replaced by project image assets
 import icBars from '@/assets/imgs/icons/ic_bars.png';
