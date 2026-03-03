@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
-import { SectionHeading } from './SectionHeading';
+import { AppText } from './AppText';
 
 interface AccordionItemProps {
-  label: string;
+  label: React.ReactNode;
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
@@ -24,14 +23,15 @@ export function AccordionItem({ label, children, defaultOpen = false }: Accordio
         style={{ outline: 'none' }}
         onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setOpen(v => !v); }}
       >
-        <SectionHeading
-          title={label}
-          underline={false}
-          sizeClass="text-base sm:text-lg"
-          className="flex-1 !mb-0 !mt-0"
-          card={false}
-          tone="light"
-        />
+        <div className="flex-1">
+          {typeof label === 'string' ? (
+            <AppText as="span" variant="subtitle-dark">
+              {label}
+            </AppText>
+          ) : (
+            label
+          )}
+        </div>
         <span className={`ml-2 transition-transform duration-200 text-lg ${open ? 'rotate-90' : ''}`}>▶</span>
       </div>
       {open && (

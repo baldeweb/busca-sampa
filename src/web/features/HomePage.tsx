@@ -3,6 +3,7 @@ import { WhereIsTodayMenu } from "@/web/components/home/WhereIsTodayMenu";
 import type { MenuWhereIsTodayOption } from '@/core/domain/models/MenuWhereIsTodayOption';
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from '@/web/components/ui/AppText';
 import { ActionButton } from '@/web/components/ui/ActionButton';
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { NeighborhoodSelectModal } from "@/web/components/home/NeighborhoodSelectModal";
@@ -348,8 +349,10 @@ export function HomePage() {
         <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
-              <SectionHeading title={t('home.nearMeTitle')} underline={false} className="mb-1" card={false} />
-              <p className="mt-1 text-sm text-gray-300">{t('home.nearMeSubtitle', { km: selectedDistance })}</p>
+              <SectionHeading title={t('home.nearMeTitle')} underline={false} className="mb-1" card={false} tone="dark" />
+              <AppText as="p" variant="subtitle-dark" className="mt-1">
+                {t('home.nearMeSubtitle', { km: selectedDistance })}
+              </AppText>
             </div>
             {userLocation && !noNearbyResults && !isOutsideGreaterRegion && (
                 <div className="ml-4">
@@ -491,7 +494,7 @@ export function HomePage() {
         />
         <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
         <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
-          <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} className="mb-6" underline={false} card={false} />
+          <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} className="mb-6" underline={false} card={false} tone="dark" />
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
             {topNeighborhoods.map((n) => (
               <button

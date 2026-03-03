@@ -2,6 +2,7 @@ import { useState, type ReactElement } from "react";
 import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
+import { AppText } from "@/web/components/ui/AppText";
 import { CategoryCard } from "@/web/components/ui/CategoryCard";
 // icons replaced by project image assets
 import icBars from '@/assets/imgs/icons/ic_bars.png';
@@ -71,8 +72,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             />
             <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
             <div className="relative z-20 mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2">
-                <SectionHeading title={t('whereIsToday.title')} underline={false} className="mb-1" card={false} />
-                <p className="mt-1 text-sm text-gray-300 max-w-2xl leading-relaxed">{t('whereIsToday.subtitle')}</p>
+                <SectionHeading title={t('whereIsToday.title')} underline={false} className="mb-1" card={false} tone="dark" />
+                <AppText as="p" variant="subtitle-dark" className="mt-1 max-w-2xl">
+                    {t('whereIsToday.subtitle')}
+                </AppText>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}
             {error && (
                 <p className="text-base text-red-400">{t('common.loadError')}</p>

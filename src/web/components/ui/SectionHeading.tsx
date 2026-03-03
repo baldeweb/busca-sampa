@@ -34,7 +34,7 @@ export function SectionHeading({
   // Titles should be uppercase by design
   const upper = title ? title.toUpperCase() : title;
 
-  const resolvedTone: 'light' | 'dark' = tone || (card ? 'light' : 'dark');
+  const resolvedTone: 'light' | 'dark' = tone || 'light';
   const titleVariant = `title-${resolvedTone}` as AppTextVariant;
   const subtitleVariant = `subtitle-${resolvedTone}` as AppTextVariant;
 

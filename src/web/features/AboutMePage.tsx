@@ -2,6 +2,7 @@ import imgMe from "@/assets/imgs/etc/img_me.webp";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from '@/web/components/ui/AppText';
 import { useNavigate } from 'react-router-dom';
 import Toolbar from "../components/layout/Toolbar";
 import { Accordion, AccordionItem } from '../components/ui/Accordion';
@@ -35,9 +36,9 @@ export function AboutMePage() {
           <SectionHeading title={t('aboutMe.name')} underline={false} sizeClass="text-xl" className="mt-4 aboutme-name" card={false} />
           <style>{`.aboutme-name h2{ font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-SemiBold', Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important; font-weight: 600 !important; }`}</style>
 
-          <p className="text-sm text-gray-300 text-center">
+          <AppText as="p" variant="subtitle-dark" className="text-center">
             {t('aboutMe.motto')}
-          </p>
+          </AppText>
         </div>
 
         {/* LINHA VERMELHA */}
@@ -45,7 +46,7 @@ export function AboutMePage() {
 
         {/* Accordion FAQ-style */}
         <Accordion>
-          <AccordionItem label={t('aboutMe.accordion.aboutLabel')}>
+          <AccordionItem label={<AppText as="span" variant="subtitle-light">{t('aboutMe.accordion.aboutLabel')}</AppText>}>
             <div className="text-base leading-relaxed #212121">
               <ul className="list-inside list-disc pl-5 space-y-2">
                 {aboutList.map((item) => (
@@ -54,17 +55,17 @@ export function AboutMePage() {
               </ul>
             </div>
           </AccordionItem>
-          <AccordionItem label={t('aboutMe.accordion.whatIsLabel')}>
+          <AccordionItem label={<AppText as="span" variant="subtitle-light">{t('aboutMe.accordion.whatIsLabel')}</AppText>}>
             {whatIsList.map((item) => (
               <p key={item}>{item}</p>
             ))}
           </AccordionItem>
-          <AccordionItem label={t('aboutMe.accordion.earnLabel')}>
+          <AccordionItem label={<AppText as="span" variant="subtitle-light">{t('aboutMe.accordion.earnLabel')}</AppText>}>
             {earnList.map((item) => (
               <p key={item}>{item}</p>
             ))}
           </AccordionItem>
-          <AccordionItem label={t('aboutMe.accordion.howToHelpLabel')}>
+          <AccordionItem label={<AppText as="span" variant="subtitle-light">{t('aboutMe.accordion.howToHelpLabel')}</AppText>}>
             {howToHelp.map((item) => (
               <p key={item}>{item}</p>
             ))}
@@ -75,7 +76,9 @@ export function AboutMePage() {
         {/* REDES SOCIAIS */}
         <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
           <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-base sm:text-lg" className="mb-1" card={false} />
-          <p className="text-sm text-gray-300 mb-3">{t('aboutMe.socialDescription')}</p>
+          <AppText as="p" variant="subtitle-dark" className="mb-3">
+            {t('aboutMe.socialDescription')}
+          </AppText>
 
           <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
