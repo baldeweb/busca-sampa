@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from '@/web/components/ui/AppText';
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
 import { TravelItineraryListItem } from '@/web/components/travel-itinerary/TravelItineraryListItem';
@@ -442,11 +443,10 @@ export function TravelItineraryPage() {
                     <div className="flex flex-col gap-4">
                             <SectionHeading
                                 title={t('travelItinerary.title')}
+                                subtitle={t('travelItinerary.placeholder')}
                                 underline={false}
                                 leadingIcon={<img src={icWalkingTour} alt={t('travelItinerary.title')} className="w-12 h-12 object-contain" />}
-                            >
-                                <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('travelItinerary.placeholder')}</p>
-                            </SectionHeading>
+                            />
 
                             <div>
                                 <div className="pt-4">
@@ -509,13 +509,9 @@ export function TravelItineraryPage() {
                                         contentPaddingClassName="px-0"
                                     />
 
-                                    <SectionHeading
-                                        title="Roteiros criados pra você :)"
-                                        underline={false}
-                                        card={false}
-                                        tone="light"
-                                        className="mb-3 pt-8 mt-3 px-0"
-                                    />
+                                    <AppText variant="subtitle-filter-light" className="mb-3 pt-8 mt-3 px-0">
+                                        Roteiros criados pra você :)
+                                    </AppText>
                                     {tourItemsLoading && (
                                         <p className="text-sm text-gray-500 px-0">
                                             {t('common.loading')}

@@ -1,5 +1,6 @@
 import React from "react";
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from '@/web/components/ui/AppText';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
 import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp, FaStar, FaCheck } from "react-icons/fa";
@@ -198,7 +199,9 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             {/* Tipo de ambiente */}
                             {ambienteList.length > 0 && (
                                 <div className="mt-2">
-                                    <span className="font-semibold text-xs">{t('placeDetail.environmentTypeLabel')}</span>
+                                    <AppText variant="subtitle-filter-light">
+                                        {t('placeDetail.environmentTypeLabel')}
+                                    </AppText>
                                     <ul className="flex flex-wrap gap-2 mt-1">
                                         {ambienteList.map((amb: string, idx: number) => (
                                             <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>

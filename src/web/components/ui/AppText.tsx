@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 
 type Tone = 'light' | 'dark';
 
-type AppTextBaseVariant = 'title' | 'subtitle' | 'body' | 'btn-sm' | 'btn-md' | 'btn-lg';
+type AppTextBaseVariant = 'title' | 'subtitle' | 'subtitle-filter' | 'body' | 'btn-sm' | 'btn-md' | 'btn-lg';
 export type AppTextVariant = `${AppTextBaseVariant}-${Tone}`;
 
 export interface AppTextProps {
@@ -17,11 +17,14 @@ const VARIANT_CLASSES: Record<AppTextVariant, string> = {
   'title-light': 'font-gothic font-bold uppercase leading-tight text-[1.3rem] sm:text-[1.6rem] text-[#212121]',
   'title-dark': 'font-gothic font-bold uppercase leading-tight text-[1.3rem] sm:text-[1.6rem] text-[#F5F5F5]',
 
-  'subtitle-light': 'font-montserrat font-regular leading-snug text-[0.9rem] sm:text-[1.1rem] text-[#212121]',
-  'subtitle-dark': 'font-montserrat font-regular leading-snug text-[0.9rem] sm:text-[1.1rem] text-[#F5F5F5]',
+  'subtitle-light': 'font-montserrat font-semibold leading-snug text-[0.9rem] sm:text-[1.2rem] text-[#212121]',
+  'subtitle-dark': 'font-montserrat font-semibold leading-snug text-[0.9rem] sm:text-[1.2rem] text-[#F5F5F5]',
 
-  'body-light': 'font-montserrat leading-relaxed text-[0.6rem] text-[#212121]',
-  'body-dark': 'font-montserrat leading-relaxed text-[0.6rem] text-gray-300',
+  'subtitle-filter-light': 'font-gothic font-semibold leading-snug text-[1.10rem] sm:text-[1.2rem] text-[#212121]',
+  'subtitle-filter-dark': 'font-gothic font-semibold leading-snug text-[1.10rem] sm:text-[1.2rem] text-[#F5F5F5]',
+
+  'body-light': 'font-montserrat leading-relaxed text-[0.9rem] text-[#212121]',
+  'body-dark': 'font-montserrat leading-relaxed text-[0.9rem] text-[#F5F5F5]',
 
   'btn-sm-light': 'font-gothic font-semibold text-[0.1rem] tracking-[0.12em] text-[#212121]',
   'btn-sm-dark': 'font-gothic font-semibold text-[0.1rem] tracking-[0.12em] text-[#F5F5F5]',

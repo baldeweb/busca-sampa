@@ -73,7 +73,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
             <div className="relative z-20 mx-auto max-w-5xl pl-4 pr-0 pt-6 sm:pt-2">
                 <SectionHeading title={t('whereIsToday.title')} underline={false} className="mb-1" card={false} tone="dark" />
-                <AppText as="p" variant="subtitle-dark" className="mt-1 max-w-2xl">
+                <AppText variant="subtitle-dark" className="mt-1 max-w-2xl">
                     {t('whereIsToday.subtitle')}
                 </AppText>
             {loading && <p className="text-base text-gray-300">{t('common.loading')}</p>}

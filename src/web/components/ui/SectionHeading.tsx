@@ -43,7 +43,7 @@ export function SectionHeading({
   const headingClass = headingClassParts.filter(Boolean).join(' ');
 
   const subtitleNode = subtitle ? (
-    <AppText as="p" variant={subtitleVariant} className="mt-2 max-w-2xl whitespace-pre-line">
+    <AppText variant={subtitleVariant} className="mt-2 max-w-2xl whitespace-pre-line">
       {subtitle}
     </AppText>
   ) : null;
@@ -51,7 +51,7 @@ export function SectionHeading({
   if (!card) {
     return (
       <div className={className}>
-        <AppText id={id} as="h2" variant={titleVariant} className={headingClass}>
+        <AppText id={id} variant={titleVariant} className={headingClass}>
           <span className="inline-flex items-center gap-2">
             {leadingIcon}
             <span>{upper}</span>
@@ -73,7 +73,7 @@ export function SectionHeading({
       <div className={innerLayoutClass}>
         {leadingIcon ? <div className="shrink-0">{leadingIcon}</div> : null}
         <div className="flex-1 min-w-0">
-          <AppText id={id} as="h2" variant={titleVariant} className={headingClass}>
+          <AppText id={id} variant={titleVariant} className={headingClass}>
             <span className="inline-flex items-center gap-2">
               <span>{upper}</span>
             </span>

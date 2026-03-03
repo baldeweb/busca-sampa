@@ -350,7 +350,7 @@ export function HomePage() {
           <div className="flex items-start justify-between">
             <div>
               <SectionHeading title={t('home.nearMeTitle')} underline={false} className="mb-1" card={false} tone="dark" />
-              <AppText as="p" variant="subtitle-dark" className="mt-1">
+              <AppText variant="subtitle-dark" className="mt-1">
                 {t('home.nearMeSubtitle', { km: selectedDistance })}
               </AppText>
             </div>
@@ -432,14 +432,14 @@ export function HomePage() {
                           className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs cursor-pointer"
                         >
                           <div className="flex flex-col me-6">
-                            <span className="font-bold uppercase text-md">
+                            <AppText variant="subtitle-dark">
                               {s.count} {displayLabel}
-                            </span>
+                            </AppText>
                             {s.nearestKm !== null && (
-                              <span className="text-sm text-gray-400">
+                              <AppText variant="body-dark">
                                 {t('home.nearestLabel')}: {formatDistanceKm(s.nearestKm)}
                                 {s.nearestName ? ` - ${s.nearestName}` : ""}
-                              </span>
+                              </AppText>
                             )}
                           </div>
                           <div className="flex flex-col items-end">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { AppText } from './AppText';
 
 interface EnvironmentGridProps {
   environments: Array<{ value: string; label: string }>;
@@ -29,7 +30,9 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
   const showViewMoreButton = showViewMoreOnMobile || showViewMoreOnDesktop;
   return (
     <div className={containerClassName || "bg-[#FFFFFF] text-black pb-4"}>
-      <h3 className={`font-bold text-lg mb-3 pt-8 mt-3 ${paddingClassName}`}>{heading}</h3>
+      <AppText variant="subtitle-filter-light" className={`mb-3 pt-8 mt-3 ${paddingClassName}`}>
+        {heading}
+      </AppText>
       <div className={`${gridClass} ${paddingClassName} flex flex-wrap items-start gap-2`}>
         {/* Botão "Todos" */}
         <button
