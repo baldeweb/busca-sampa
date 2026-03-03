@@ -34,8 +34,6 @@ export function AboutMePage() {
           />
 
           <SectionHeading title={t('aboutMe.name')} underline={false} sizeClass="text-xl" className="mt-4 aboutme-name" card={false} tone="dark" />
-          <style>{`.aboutme-name h2{ font-family: 'Science Gothic', 'ScienceGothic', 'ScienceGothic-SemiBold', Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important; font-weight: 600 !important; }`}</style>
-
           <AppText variant="subtitle-dark" className="text-center">
             {t('aboutMe.motto')}
           </AppText>

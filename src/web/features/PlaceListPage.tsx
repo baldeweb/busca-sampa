@@ -631,6 +631,7 @@ export const PlaceListPage: React.FC = () => {
                     {/* Título e descrição */}
                     <SectionHeading
                         title={title}
+                        subtitle={subtitle}
                         underline={false}
                         leadingIcon={(
                             <img
@@ -649,9 +650,7 @@ export const PlaceListPage: React.FC = () => {
                                 onTouchCancel={cancelHeaderLongPress}
                             />
                         )}
-                    >
-                        <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{subtitle}</p>
-                    </SectionHeading>
+                    />
                     {/* Grid de tipos de ambiente */}
                     {environments.length > 0 && (
                         <EnvironmentGrid

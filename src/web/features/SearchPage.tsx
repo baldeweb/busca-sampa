@@ -23,6 +23,7 @@ import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icSearch from '@/assets/imgs/icons/ic_search.png';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { getPrimaryPlaceType } from '@/core/domain/models/PlaceRecommendation';
+import { AppText } from "@/web/components/ui/AppText";
 
 export function SearchPage() {
   const { t } = useTranslation();
@@ -103,16 +104,16 @@ export function SearchPage() {
           <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-2 text-black">
             <SectionHeading
               title={t('searchPage.title')}
+              subtitle={t('searchPage.subtitle')}
               underline={false}
               leadingIcon={<img src={icSearch} alt="Buscar" className="w-9 h-9 object-contain mt-2" />}
             >
-              <p className="text-sm text-[#212121] max-w-2xl whitespace-pre-line leading-relaxed">
-                {t('searchPage.subtitle')}
-              </p>
             </SectionHeading>
             <div className={`w-full px-4 sm:px-0 transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
               <div className={`w-full transition-all duration-500 ease-out ${hasResults ? '-translate-y-1 opacity-100' : 'translate-y-0 opacity-100'}`}>
-                <p className="mb-2 text-base font-semibold text-[#212121] pt-4">{t('searchPage.fieldLabel')}</p>
+                <AppText variant="subtitle-filter-light" className="mb-2 pt-4">
+                  {t('searchPage.fieldLabel')}
+                </AppText>
                 <SearchField
                   value={query}
                   onChange={setQuery}

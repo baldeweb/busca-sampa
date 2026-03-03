@@ -253,9 +253,15 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         {((addresses && Array.isArray(addresses) && addresses.length > 0) || (address && address.trim().length > 0)) && (
                             <div className="px-4 sm:px-4 py-8">
                                 <div className="flex items-center justify-between">
-                                    <SectionHeading title={t('placeDetail.locationTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" card={false} tone="light" />
+                                    <SectionHeading 
+                                        title={t('placeDetail.locationTitle')}
+                                        subtitle={t('placeDetail.locationDescription')}
+                                        underline={false} sizeClass="text-sm sm:text-lg" 
+                                        className="flex-1" 
+                                        card={false} 
+                                        tone="light" 
+                                    />
                                 </div>
-                                <p className="text-sm text-gray-700 mb-2">{t('placeDetail.locationDescription')}</p>
                                 <div className="mt-8 mb-4 space-y-6">
                                         {addresses && Array.isArray(addresses) && addresses.length > 0 ? (
                                         addresses.map((addr: any, idx: number) => {

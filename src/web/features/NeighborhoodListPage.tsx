@@ -359,11 +359,10 @@ export const NeighborhoodListPage: React.FC = () => {
         <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-2 text-black">
             <SectionHeading
               title={titleNeighborhood}
+              subtitle={t('neighborhoodList.intro')}
               underline={false}
               leadingIcon={<img src={icNeighborhood} alt="neighborhood" className="w-12 h-12 object-contain" />}
-            >
-              <p className="text-sm text-gray-600 max-w-2xl whitespace-pre-line leading-relaxed">{t('neighborhoodList.intro')}</p>
-            </SectionHeading>
+            />
         </div>
       </section>
 
