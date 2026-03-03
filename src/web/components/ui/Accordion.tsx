@@ -30,6 +30,7 @@ export function AccordionItem({ label, children, defaultOpen = false }: Accordio
           sizeClass="text-base sm:text-lg"
           className="flex-1 !mb-0 !mt-0"
           card={false}
+          tone="light"
         />
         <span className={`ml-2 transition-transform duration-200 text-lg ${open ? 'rotate-90' : ''}`}>▶</span>
       </div>

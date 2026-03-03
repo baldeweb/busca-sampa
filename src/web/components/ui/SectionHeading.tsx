@@ -11,9 +11,10 @@ interface SectionHeadingProps {
   children?: React.ReactNode;
   card?: boolean;
   layout?: 'row' | 'stackOnMobile';
+  tone?: 'light' | 'dark';
 }
 
-import { Text } from './Text';
+import { AppText, type AppTextVariant } from './AppText';
 
 export function SectionHeading({
   title,
@@ -28,31 +29,34 @@ export function SectionHeading({
   children,
   card = true,
   layout = 'row',
+  tone,
 }: SectionHeadingProps) {
   // Titles should be uppercase by design
   const upper = title ? title.toUpperCase() : title;
 
-  const defaultSizeClass = 'text-lg sm:text-2xl';
-  const effectiveSizeClass = sizeClass || defaultSizeClass;
-  const headingClassParts = [effectiveSizeClass, 'break-words'];
+  const resolvedTone: 'light' | 'dark' = tone || (card ? 'light' : 'dark');
+  const titleVariant = `title-${resolvedTone}` as AppTextVariant;
+  const subtitleVariant = `subtitle-${resolvedTone}` as AppTextVariant;
+
+  const headingClassParts = [sizeClass, 'break-words'];
   if (trackingClass) headingClassParts.push(trackingClass);
-  const headingClass = headingClassParts.join(' ');
+  const headingClass = headingClassParts.filter(Boolean).join(' ');
 
   const subtitleNode = subtitle ? (
-    <Text as="p" variant="body" size="sm" className="mt-2 max-w-2xl whitespace-pre-line">
+    <AppText as="p" variant={subtitleVariant} className="mt-2 max-w-2xl whitespace-pre-line">
       {subtitle}
-    </Text>
+    </AppText>
   ) : null;
 
   if (!card) {
     return (
       <div className={className}>
-        <Text id={id} as="h2" variant="sectionTitle" size={(effectiveSizeClass.includes('2xl')) ? 'xl' : 'lg'} className={headingClass}>
+        <AppText id={id} as="h2" variant={titleVariant} className={headingClass}>
           <span className="inline-flex items-center gap-2">
             {leadingIcon}
             <span>{upper}</span>
           </span>
-        </Text>
+        </AppText>
         {underline && <div className="mt-1 h-[3px] w-24 bg-bs-red" />}
         {subtitleNode}
         {children}
@@ -69,11 +73,11 @@ export function SectionHeading({
       <div className={innerLayoutClass}>
         {leadingIcon ? <div className="shrink-0">{leadingIcon}</div> : null}
         <div className="flex-1 min-w-0">
-          <Text id={id} as="h2" variant="sectionTitle" size={(effectiveSizeClass.includes('2xl')) ? 'xl' : 'lg'} className={headingClass}>
+          <AppText id={id} as="h2" variant={titleVariant} className={headingClass}>
             <span className="inline-flex items-center gap-2">
               <span>{upper}</span>
             </span>
-          </Text>
+          </AppText>
           {underline && <div className="mt-1 h-[3px] w-24 bg-bs-red" />}
           {subtitleNode}
           {children}

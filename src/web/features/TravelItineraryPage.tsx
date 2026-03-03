@@ -513,6 +513,7 @@ export function TravelItineraryPage() {
                                         title="Roteiros criados pra você :)"
                                         underline={false}
                                         card={false}
+                                        tone="light"
                                         className="mb-3 pt-8 mt-3 px-0"
                                     />
                                     {tourItemsLoading && (
