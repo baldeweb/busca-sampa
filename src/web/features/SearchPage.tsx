@@ -111,7 +111,7 @@ export function SearchPage() {
             </SectionHeading>
             <div className={`w-full px-4 sm:px-0 transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
               <div className={`w-full transition-all duration-500 ease-out ${hasResults ? '-translate-y-1 opacity-100' : 'translate-y-0 opacity-100'}`}>
-                <AppText variant="subtitle-light" className="mb-2 pt-4">
+                <AppText variant="title-light" className="mb-2 pt-4">
                   {t('searchPage.fieldLabel')}
                 </AppText>
                 <SearchField
@@ -127,7 +127,9 @@ export function SearchPage() {
         {hasResults && (
           <section className="relative h-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg transition-all duration-500 ease-out opacity-100 translate-y-0 pb-24">
             <div className="mx-auto max-w-5xl px-4 sm:px-12 h-full min-h-full flex flex-col">
-              <h3 className="pt-6 text-lg font-bold text-[#F5F5F5]">{t('searchPage.resultsTitle')}: {results.length}</h3>
+              <AppText variant="subtitle-dark" className="pt-6">
+                  {t('searchPage.resultsTitle')}: {results.length}
+              </AppText>
               <div className="rounded-t-lg overflow-hidden flex-1">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
                   {results.map((place) => {

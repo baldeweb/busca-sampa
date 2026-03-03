@@ -33,12 +33,12 @@ export function AboutMePage() {
             className="h-44 w-44 sm:h-48 sm:w-48 rounded-full border-2 border-bs-red shadow-md object-cover"
           />
 
-          <SectionHeading 
+          <SectionHeading
             title={t('aboutMe.name')}
             subtitle={t('aboutMe.motto')}
-            underline={false} 
-            className="mt-4 aboutme-name text-center" 
-            card={false} 
+            underline={false}
+            className="mt-4 aboutme-name text-center"
+            card={false}
             tone="dark"
           />
         </div>
@@ -49,41 +49,43 @@ export function AboutMePage() {
         {/* Accordion FAQ-style */}
         <Accordion>
           <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.aboutLabel')}</AppText>}>
-            <div className="text-base leading-relaxed #212121">
-              <ul className="list-inside list-disc pl-5 space-y-2">
+            <div className="leading-relaxed">
+              <ul className="list-inside pl-5 space-y-2">
                 {aboutList.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>
+                    <AppText variant="subtitle-light">- {item}</AppText>
+                  </li>
                 ))}
               </ul>
             </div>
           </AccordionItem>
           <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.whatIsLabel')}</AppText>}>
             {whatIsList.map((item) => (
-              <p key={item}>{item}</p>
+              <AppText variant="subtitle-light" key={item}>{item}</AppText>
             ))}
           </AccordionItem>
           <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.earnLabel')}</AppText>}>
             {earnList.map((item) => (
-              <p key={item}>{item}</p>
+              <AppText variant="subtitle-light" key={item}>{item}</AppText>
             ))}
           </AccordionItem>
           <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.howToHelpLabel')}</AppText>}>
             {howToHelp.map((item) => (
-              <p key={item}>{item}</p>
+              <AppText variant="subtitle-light" key={item}>{item}</AppText>
             ))}
-            <img src={icQrCodeDonation} alt="QRCode para ajudar" width={160} height={160} decoding="async" className="w-40 h-40 mt-4" />
+            <img src={icQrCodeDonation} alt="QRCode para ajudar" width={160} height={160} decoding="async" className="w-40 h-40 mt-4 mx-auto" />
           </AccordionItem>
         </Accordion>
 
         {/* REDES SOCIAIS */}
         <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-          <SectionHeading 
+          <SectionHeading
             title={t('aboutMe.socialHeading')}
             subtitle={t('aboutMe.socialDescription')}
-            underline={false} 
-            className="mb-12" 
-            card={false} 
-            tone="dark" 
+            underline={false}
+            className="mb-12"
+            card={false}
+            tone="dark"
           />
 
           <div className="w-full">
@@ -96,8 +98,8 @@ export function AboutMePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
                 >
-                  <FaInstagram aria-hidden="true" className="text-lg" />
-                  <span>{t('aboutMe.social.wallace')}</span>
+                  <FaInstagram aria-hidden="true" />
+                  <AppText variant="subtitle-dark">{t('aboutMe.social.wallace')}</AppText>
                 </a>
                 <a
                   href="https://www.instagram.com/rolepaulistaoficial/"
@@ -105,8 +107,8 @@ export function AboutMePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
                 >
-                  <FaInstagram aria-hidden="true" className="text-lg" />
-                  <span>{t('aboutMe.social.role')}</span>
+                  <FaInstagram aria-hidden="true" />
+                  <AppText variant="subtitle-dark">{t('aboutMe.social.role')}</AppText>
                 </a>
               </div>
               {/* Coluna direita: LinkedIn e Email */}
@@ -117,15 +119,15 @@ export function AboutMePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
                 >
-                  <FaLinkedin aria-hidden="true" className="text-lg" />
-                  <span>{t('aboutMe.social.linkedin')}</span>
+                  <FaLinkedin aria-hidden="true" />
+                  <AppText variant="subtitle-dark">{t('aboutMe.social.linkedin')}</AppText>
                 </a>
                 <a
                   href="mailto:wallace.baldenebre@gmail.com?subject=Contato%20sobre%20o%20Rol%C3%AA%20Paulista"
                   className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4 pb-4"
                 >
-                  <FaEnvelope aria-hidden="true" className="text-lg" />
-                  <span>{t('aboutMe.social.email')}</span>
+                  <FaEnvelope aria-hidden="true" />
+                  <AppText variant="subtitle-dark">{t('aboutMe.social.email')}</AppText>
                 </a>
               </div>
             </div>

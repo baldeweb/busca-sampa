@@ -176,7 +176,9 @@ const resources = {
         websiteButton: 'Acessar site',
         notesTitle: 'Observação',
         reportProblem: 'Reportar um problema',
-        visitModalEnding: ''
+        visitModalEnding: '',
+        whatsappButton: 'WhatsApp',
+        onCall: 'Ligar'
       },
       openingHours: {
         title: 'Horários de funcionamento',

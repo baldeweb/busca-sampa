@@ -27,6 +27,7 @@ import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
 import type { PlaceRecommendation } from '@/core/domain/models/PlaceRecommendation';
 import type { GeoJsonObject } from 'geojson';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
+import { AppText } from '../components/ui/AppText';
 
 type OsrmRouteResponse = {
     routes?: Array<{ geometry?: GeoJsonObject }>;
@@ -562,12 +563,12 @@ export function TravelItineraryPage() {
                         >
                         <div className="flex items-start justify-between gap-4">
                             <div>
-                                <h3 id="route-details-title" className="text-lg font-bold">
+                                <AppText id="route-details-title" variant="title-light">
                                     Detalhes do Roteiro
-                                </h3>
-                                <p className="text-sm text-gray-600 mt-1">
+                                </AppText>
+                                <AppText variant="subtitle-light">
                                     Aqui estão as informações necessárias com as rotas para você realizar
-                                </p>
+                                </AppText>
                             </div>
                             <button
                                 type="button"

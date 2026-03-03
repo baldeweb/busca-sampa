@@ -1,6 +1,7 @@
 import React from "react";
 import icPin from "@/assets/imgs/icons/ic_pin.png";
 import { AppButton } from "@/web/components/ui/AppButton";
+import { AppText } from "../ui/AppText";
 
 export type PlaceListItemVariant = "place" | "neighborhood";
 
@@ -44,23 +45,19 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
       <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
         <img src={iconSrc} alt="" className="w-7 h-7 object-contain" />
       </div>
-      <div className="category-card-label font-bold uppercase tracking-[0.03em] text-sm sm:text-base min-w-0 col-start-2 col-end-4 row-start-1 truncate">
-        {name}
-      </div>
+      <AppText variant="subtitle-light" className="category-card-label min-w-0 col-start-2 col-end-4 row-start-1 truncate">{name}</AppText>
       <div className={infoWrapperClassName}>
         <div className={rowTextClassName}>
           <img src={icPin} alt="" className={pinIconClassName} />
-          <span className="truncate">{neighborhood}</span>
+          <AppText variant="body-light" className="truncate">{neighborhood}</AppText>
         </div>
-        <div className={rowTextClassName}>
-          <span className="truncate">{openingText}</span>
-        </div>
+        <AppText variant="body-light" className="flex items-center truncate">{openingText}</AppText>
       </div>
       <AppButton
         variant="outline"
         size="sm"
         onClick={onDetails}
-        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 btn-hover-red"
+        className="flex-shrink-0 min-w-[96px] self-center btn-hover-red"
       >
         {detailsLabel}
       </AppButton>

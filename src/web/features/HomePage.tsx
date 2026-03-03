@@ -366,9 +366,7 @@ export function HomePage() {
           {/* Placeholder quando não há localização */}
           {!userLocation && (
             <div className="mt-6 flex flex-col items-center text-center text-xs">
-              <p className="max-w-xs text-lg text-gray-300 leading-relaxed mb-4 whitespace-pre-line">
-                {t('home.allowLocation')}
-              </p>
+              <AppText variant="subtitle-dark" className="max-w-xs leading-relaxed mb-4 whitespace-pre-line">{t('home.allowLocation')}</AppText>
               <button
                 type="button"
                 onClick={() => requestUserLocation()}
@@ -387,11 +385,13 @@ export function HomePage() {
             <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
               <div className="mt-3 space-y-2">
                         {loadingNearby && (
-                          <p className="text-lg text-gray-300">{t('home.loadingCategories')}</p>
+                          <AppText variant="subtitle-dark">{t('home.loadingCategories')}</AppText>
                         )}
                         {!loadingNearby && noNearbyResults && (
-                          <div className="text-center text-base text-gray-300 flex flex-col items-center gap-5 py-6">
-                            <p className="whitespace-pre-line">{isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}</p>
+                          <div className="text-center flex flex-col items-center gap-5 py-6">
+                            <AppText variant="subtitle-dark" className="whitespace-pre-line">
+                              {isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}
+                            </AppText>
                     {!isOutsideGreaterRegion && (
                       <ActionButton
                         type="button"

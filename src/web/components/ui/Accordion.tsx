@@ -32,11 +32,11 @@ export function AccordionItem({ label, children, defaultOpen = false }: Accordio
             label
           )}
         </div>
-        <span className={`ml-2 transition-transform duration-200 text-lg ${open ? 'rotate-90' : ''}`}>▶</span>
+        <span className={`ml-2 transition-transform duration-200 ${open ? 'rotate-90' : ''}`}>▶</span>
       </div>
       {open && (
-        <div className="pb-4 px-4 text-base animate-fade-in" style={{ color: '#212121' }}>
-          {children}
+        <div className="pb-4 px-4 animate-fade-in">
+          <AppText variant="body-dark">{children}</AppText>
         </div>
       )}
     </div>

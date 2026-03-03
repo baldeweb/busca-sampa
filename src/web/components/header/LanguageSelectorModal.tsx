@@ -52,7 +52,7 @@ export function LanguageSelectorModal({ onClose }: Props) {
                     <button
                         type="button"
                         onClick={onClose}
-                        className="btn-close-round text-lg font-bold hover:text-bs-red"
+                        className="btn-close-round"
                     >
                         ×
                     </button>
