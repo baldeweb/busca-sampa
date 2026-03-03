@@ -151,7 +151,9 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
                     <div className="bg-bs-card rounded-lg shadow-lg w-[90vw] max-w-md border border-white">
                         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
-                            <SectionHeading title={t('placeDetail.visitModalTitle')} underline={false} sizeClass="text-lg" className="flex-1" card={false} />
+                            <AppText variant="title-dark" className="flex-1 text-center">
+                                {t('placeDetail.visitModalTitle')}
+                            </AppText>
                             <button onClick={() => setShowVisitModal(false)} className="btn-close-round text-xl font-bold">×</button>
                         </div>
                         <div className="p-5 text-center">
@@ -199,7 +201,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             {/* Tipo de ambiente */}
                             {ambienteList.length > 0 && (
                                 <div className="mt-2">
-                                    <AppText variant="subtitle-filter-light">
+                                    <AppText variant="subtitle-light">
                                         {t('placeDetail.environmentTypeLabel')}
                                     </AppText>
                                     <ul className="flex flex-wrap gap-2 mt-1">
@@ -214,7 +216,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         {/* Horário de funcionamento */}
                         <div className="px-4 sm:px-4 pt-2 pb-8 mt-8">
                             <div className="flex items-center justify-between">
-                                <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} sizeClass="text-sm sm:text-lg" className="flex-1" card={false} tone="light" />
+                                <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} className="flex-1" card={false} tone="light" />
                                 <div className="flex flex-col items-end justify-center gap-1">
                                     <button
                                         type="button"
@@ -256,7 +258,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     <SectionHeading 
                                         title={t('placeDetail.locationTitle')}
                                         subtitle={t('placeDetail.locationDescription')}
-                                        underline={false} sizeClass="text-sm sm:text-lg" 
+                                        underline={false}
                                         className="flex-1" 
                                         card={false} 
                                         tone="light" 

@@ -505,13 +505,11 @@ export function TravelItineraryPage() {
                                         onSelect={setSelectedRouteOption}
                                         onViewMore={() => null}
                                         showViewMore={false}
-                                        containerClassName="bg-transparent text-black pb-4"
+                                        containerClassName="pb-4"
                                         contentPaddingClassName="px-0"
                                     />
 
-                                    <AppText variant="subtitle-filter-light" className="mb-3 pt-8 mt-3 px-0">
-                                        Roteiros criados pra você :)
-                                    </AppText>
+                                    <SectionHeading title={'Roteiros criados pra você :)'} className='mb-3 pt-8' underline={false} card={false} tone='light' />
                                     {tourItemsLoading && (
                                         <p className="text-sm text-gray-500 px-0">
                                             {t('common.loading')}

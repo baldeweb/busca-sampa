@@ -33,10 +33,14 @@ export function AboutMePage() {
             className="h-44 w-44 sm:h-48 sm:w-48 rounded-full border-2 border-bs-red shadow-md object-cover"
           />
 
-          <SectionHeading title={t('aboutMe.name')} underline={false} sizeClass="text-xl" className="mt-4 aboutme-name" card={false} tone="dark" />
-          <AppText variant="subtitle-dark" className="text-center">
-            {t('aboutMe.motto')}
-          </AppText>
+          <SectionHeading 
+            title={t('aboutMe.name')}
+            subtitle={t('aboutMe.motto')}
+            underline={false} 
+            className="mt-4 aboutme-name text-center" 
+            card={false} 
+            tone="dark"
+          />
         </div>
 
         {/* LINHA VERMELHA */}
@@ -44,7 +48,7 @@ export function AboutMePage() {
 
         {/* Accordion FAQ-style */}
         <Accordion>
-          <AccordionItem label={<AppText variant="subtitle-light">{t('aboutMe.accordion.aboutLabel')}</AppText>}>
+          <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.aboutLabel')}</AppText>}>
             <div className="text-base leading-relaxed #212121">
               <ul className="list-inside list-disc pl-5 space-y-2">
                 {aboutList.map((item) => (
@@ -53,17 +57,17 @@ export function AboutMePage() {
               </ul>
             </div>
           </AccordionItem>
-          <AccordionItem label={<AppText variant="subtitle-light">{t('aboutMe.accordion.whatIsLabel')}</AppText>}>
+          <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.whatIsLabel')}</AppText>}>
             {whatIsList.map((item) => (
               <p key={item}>{item}</p>
             ))}
           </AccordionItem>
-          <AccordionItem label={<AppText variant="subtitle-light">{t('aboutMe.accordion.earnLabel')}</AppText>}>
+          <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.earnLabel')}</AppText>}>
             {earnList.map((item) => (
               <p key={item}>{item}</p>
             ))}
           </AccordionItem>
-          <AccordionItem label={<AppText variant="subtitle-light">{t('aboutMe.accordion.howToHelpLabel')}</AppText>}>
+          <AccordionItem label={<AppText variant="title-light">{t('aboutMe.accordion.howToHelpLabel')}</AppText>}>
             {howToHelp.map((item) => (
               <p key={item}>{item}</p>
             ))}
@@ -73,10 +77,14 @@ export function AboutMePage() {
 
         {/* REDES SOCIAIS */}
         <section className="rounded-md bg-bs-card p-4 border border-white/10 shadow">
-          <SectionHeading title={t('aboutMe.socialHeading')} underline={false} sizeClass="text-base sm:text-lg" className="mb-1" card={false} tone="dark" />
-          <AppText variant="subtitle-dark" className="mb-3">
-            {t('aboutMe.socialDescription')}
-          </AppText>
+          <SectionHeading 
+            title={t('aboutMe.socialHeading')}
+            subtitle={t('aboutMe.socialDescription')}
+            underline={false} 
+            className="mb-12" 
+            card={false} 
+            tone="dark" 
+          />
 
           <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

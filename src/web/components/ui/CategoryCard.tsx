@@ -26,7 +26,7 @@ export function CategoryCard({ label, icon, selected, lightSelected = false, onC
       ].join(" ")}
     >
       <div className="flex items-center py-[-1rem] justify-center ml-2" aria-hidden="true">{icon}</div>
-      <span className="category-card-label py-[-1rem] text-[0.70rem] sm:text-[0.85rem] font-semibold leading-[1.00] whitespace-normal">
+      <span className="category-card-label py-[-1rem] text-[0.80rem] sm:text-[0.85rem] font-semibold leading-[1.00] whitespace-normal">
         {label}
       </span>
     </button>

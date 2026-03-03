@@ -13,6 +13,7 @@ import turkiyeFlag from "@/assets/imgs/flags/img_flag_turkiye.png";
 import arabicFlag from "@/assets/imgs/flags/img_flag_arabic.png";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from "../ui/AppText";
 
 const LANGUAGES = [
     { code: "pt", name: "Português (BR)", flag: brazilFlag },
@@ -48,7 +49,7 @@ export function LanguageSelectorModal({ onClose }: Props) {
             <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl">
                 {/* Cabeçalho */}
                 <div className="flex items-center justify-between border-b border-bs-red px-4 py-3">
-                    <SectionHeading title={t('common.selectLanguage')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" card={false} />
+                    <SectionHeading title={t('common.selectLanguage')} underline={false} className="flex-1 text-center" card={false} tone='dark' />
                     <button
                         type="button"
                         onClick={onClose}

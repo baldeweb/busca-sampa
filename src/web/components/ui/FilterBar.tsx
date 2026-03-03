@@ -3,7 +3,7 @@ import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { useTranslation } from "react-i18next";
 import icFilter from "@/assets/imgs/icons/ic_filter.png";
 import icArrowDown from "@/assets/imgs/icons/ic_arrow_down.png";
-import { AppText } from "@/web/components/ui/AppText";
+import { SectionHeading } from '../ui/SectionHeading';
 
 export interface FilterBarProps {
   orderOptions: Array<{ value: string }>;
@@ -154,9 +154,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <div className="flex flex-col justify-start gap-2">
           <div className="flex items-center">
             <img src={icFilter} alt="filter" width={16} height={16} decoding="async" className="w-4 h-4 mr-2" />
-            <AppText variant="subtitle-filter-light">
-              {t("filters.title", { defaultValue: "Filtros" })}
-            </AppText>
+            <SectionHeading title={t("filters.title", { defaultValue: "Filtros" })} underline={false} card={false} tone='light' />
           </div>
           <div className="flex items-start gap-2">
             <div className="flex flex-wrap items-center gap-2 w-full">

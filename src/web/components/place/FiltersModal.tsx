@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
-import { AppText } from '@/web/components/ui/AppText';
+import { SectionHeading } from '../ui/SectionHeading';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 
 interface Props {
@@ -43,9 +43,7 @@ export const FiltersModal: React.FC<Props> = ({ isOpen, onClose, order, setOrder
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60" role="dialog" aria-modal="true" aria-labelledby="filters-heading">
       <div className="bg-bs-card rounded-app shadow-lg w-[90vw] max-w-md" onKeyDown={handleKeyDown}>
         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
-          <AppText id="filters-heading" variant="subtitle-filter-light">
-            {t('filters.title')}
-          </AppText>
+          <SectionHeading id="filters-heading" title={t('filters.title')} underline={false} card={false} tone='light' />
           <button ref={closeBtnRef} onClick={onClose} className="btn-close-round text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70" aria-label={t('common.close')}>×</button>
         </div>
         <div className="p-4">

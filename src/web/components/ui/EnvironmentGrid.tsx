@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { AppText } from './AppText';
+import { SectionHeading } from './SectionHeading';
 
 interface EnvironmentGridProps {
   environments: Array<{ value: string; label: string }>;
@@ -30,9 +30,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
   const showViewMoreButton = showViewMoreOnMobile || showViewMoreOnDesktop;
   return (
     <div className={containerClassName || "bg-[#FFFFFF] text-black pb-4"}>
-      <AppText variant="subtitle-filter-light" className={`mb-3 pt-8 mt-3 ${paddingClassName}`}>
-        {heading}
-      </AppText>
+      <SectionHeading title={heading} className={`mb-3 pt-8 mt-3 ${paddingClassName}`} underline={false} card={false} tone='light' />
       <div className={`${gridClass} ${paddingClassName} flex flex-wrap items-start gap-2`}>
         {/* Botão "Todos" */}
         <button

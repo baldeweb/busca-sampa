@@ -25,7 +25,7 @@ export function AccordionItem({ label, children, defaultOpen = false }: Accordio
       >
         <div className="flex-1">
           {typeof label === 'string' ? (
-            <AppText as="span" variant="subtitle-dark">
+            <AppText as="span" variant="title-dark">
               {label}
             </AppText>
           ) : (

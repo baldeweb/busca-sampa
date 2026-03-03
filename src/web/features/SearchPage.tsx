@@ -111,7 +111,7 @@ export function SearchPage() {
             </SectionHeading>
             <div className={`w-full px-4 sm:px-0 transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
               <div className={`w-full transition-all duration-500 ease-out ${hasResults ? '-translate-y-1 opacity-100' : 'translate-y-0 opacity-100'}`}>
-                <AppText variant="subtitle-filter-light" className="mb-2 pt-4">
+                <AppText variant="subtitle-light" className="mb-2 pt-4">
                   {t('searchPage.fieldLabel')}
                 </AppText>
                 <SearchField

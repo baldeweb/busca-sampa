@@ -349,10 +349,7 @@ export function HomePage() {
         <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <div className="flex items-start justify-between">
             <div>
-              <SectionHeading title={t('home.nearMeTitle')} underline={false} className="mb-1" card={false} tone="dark" />
-              <AppText variant="subtitle-dark" className="mt-1">
-                {t('home.nearMeSubtitle', { km: selectedDistance })}
-              </AppText>
+              <SectionHeading title={t('home.nearMeTitle')} subtitle={t('home.nearMeSubtitle', { km: selectedDistance })} className="mt-1 mb-1" underline={false} card={false} tone="dark" />
             </div>
             {userLocation && !noNearbyResults && !isOutsideGreaterRegion && (
                 <div className="ml-4">

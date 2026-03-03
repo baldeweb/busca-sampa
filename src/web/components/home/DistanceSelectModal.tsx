@@ -35,7 +35,7 @@ export function DistanceSelectModal({
                 {/* HEADER */}
                 <div className="px-4 py-3">
                     <div className="mb-2 flex items-center justify-between">
-                        <SectionHeading title={t('distanceSelect.title')} underline={false} sizeClass="text-sm" trackingClass="tracking-[0.18em]" className="flex-1" card={false} />
+                        <SectionHeading title={t('distanceSelect.title')} underline={false} className="flex-1" card={false} tone="dark" />
 
                         <button
                             type="button"
