@@ -2,6 +2,7 @@ import { getPrimaryPlaceType, type PlaceRecommendation } from "@/core/domain/mod
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { useNavigate } from "react-router-dom";
 import { slugify } from '@/core/services/Slugify';
+import { AppText } from "../ui/AppText";
 
 interface Props {
     place: PlaceRecommendation;
@@ -38,18 +39,6 @@ export function PlaceCard({ place }: Props) {
         >
             {/* Conteúdo */}
             <div className="p-2 sm:p-3 space-y-1 sm:space-y-2">
-                {/* Nome + selo “já visitei” */}
-                <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-sm sm:text-base">{place.name}</h3>
-                    {isVisited && (
-                        <span className="text-[0.6rem] px-2 py-[2px] rounded bg-bs-red text-white uppercase tracking-wider">
-                            já fui
-                        </span>
-                    )}
-                </div>
-                {/* Bairro */}
-                <p className="text-xs text-gray-300">{neighborhood}</p>
-                {/* Linha divisória */}
                 <div className="h-[2px] w-14 bg-bs-red rounded" />
                 {/* Faixa de preço */}
                 <p className="text-xs">

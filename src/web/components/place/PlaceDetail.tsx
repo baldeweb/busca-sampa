@@ -311,25 +311,34 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                             <div className="mb-1">
                                                                 <div className="flex items-center">
                                                                     {addr?.isMainUnity && <FaStar className="mr-2 text-yellow-400" />}
-                                                                    <span className="font-bold uppercase text-black">Unidade {neighborhoodText}</span>
+                                                                    <AppText variant="subtitle-dark" className="text-xs text-gray-600">•Unidade {neighborhoodText}</AppText>
                                                                 </div>
                                                             </div>
                                                         ) : (
-                                                            <div>
-                                                                <span className="font-bold uppercase text-black">{neighborhoodText}</span>
-                                                            </div>
+                                                            <AppText variant="subtitle-dark" className="text-xs text-gray-600">• {neighborhoodText}</AppText>
                                                         )}
                                                     </div>
                                                     <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
                                                     <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
                                                         {isMobileOrTablet ? (
                                                             <>
-                                                                <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-2 py-2 sm:px-3 sm:py-4 rounded font-bold text-xs sm:text-sm text-center btn-red">
+                                                                <AppButton
+                                                                    variant="square"
+                                                                    size="md"
+                                                                    onClick={() => window.open(mapsHref, '_blank', 'noopener noreferrer')}
+                                                                    className="inline-flex flex-1 items-center justify-center px-2 py-2 sm:px-3 sm:py-4"
+                                                                >
                                                                     <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                                                                </a>
-                                                                <a href={uberHref} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center px-2 py-2 sm:px-3 sm:py-2 rounded font-bold text-xs sm:text-sm text-center btn-dark">
+                                                                </AppButton>
+
+                                                                <AppButton
+                                                                    variant="uber"
+                                                                    size="md"
+                                                                    onClick={() => window.open(uberHref, '_blank', 'noopener noreferrer')}
+                                                                    className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 3"
+                                                                >
                                                                     <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
-                                                                </a>
+                                                                </AppButton>
                                                             </>
                                                         ) : (
                                                             <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center bg-bs-red text-white px-2 py-3 sm:px-3 sm:py-4 rounded font-bold text-xs sm:text-sm text-center btn-red">
@@ -351,31 +360,25 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                             <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
                                                 {isMobileOrTablet ? (
                                                     <>
-                                                        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center bg-bs-red text-white px-3 py-4 sm:px-4 sm:py-3 rounded font-bold text-sm sm:text-base text-center btn-red">
-                                                            <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                                                        </a>
-                                                        <a
-                                                            href={`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent([address, neighborhood].filter(Boolean).join(' - '))}`}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 rounded font-bold text-sm sm:text-base text-center btn-dark"
+                                                        <AppButton
+                                                            variant="uber"
+                                                            size="md"
+                                                            onClick={() => window.open(`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent([address, neighborhood].filter(Boolean).join(' - '))}`, '_blank', 'noopener noreferrer')}
+                                                            className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 3"
                                                         >
                                                             <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
-                                                        </a>
+                                                        </AppButton>
                                                     </>
                                                 ) : (
-                                                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center bg-bs-red text-white px-3 py-4 sm:px-4 sm:py-3 rounded font-bold text-sm sm:text-base text-center btn-red">
-                                                        <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                                                    </a>
+                                                    <AppButton
+                                                        variant="square"
+                                                        size="md"
+                                                        onClick={() => window.open(googleMapsUrl, '_blank', 'noopener noreferrer')}
+                                                        className="inline-flex w-full items-center justify-center px-3 py-4 sm:px-4 sm:py-3"
+                                                    >
+                                                        {t('placeDetail.googleMapsButton')}
+                                                    </AppButton>
                                                 )}
-
-                                                <a href={menuUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-3 rounded font-bold text-sm sm:text-base mt-3 btn-red">
-                                                    {t('placeDetail.menuButton')}
-                                                </a>
-
-                                                <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-bs-red text-white px-4 py-3 rounded font-bold text-sm sm:text-base mt-3 btn-red">
-                                                    {t('placeDetail.websiteButton')}
-                                                </a>
                                             </div>
                                         </div>
                                     </div>
