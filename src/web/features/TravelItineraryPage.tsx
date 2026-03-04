@@ -572,7 +572,7 @@ export function TravelItineraryPage() {
                             <AppButton
                                 variant='close'
                                 onClick={closeRouteDetails}
-                                className="btn-close-round btn-close-round-dark focus:outline-none focus:ring-2 focus:ring-bs-red/70"
+                                className="border-[#212121] text-[#212121] focus:outline-none focus:ring-2 focus:ring-bs-red/70"
                                 aria-label={t('common.close')}
                             >
                                 ×

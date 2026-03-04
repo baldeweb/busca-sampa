@@ -93,7 +93,7 @@ export function NearbyMapModal({ onClose, userLocation, places, title }: NearbyM
             {title || t('nearbyMap.title')}
           </AppText>
           <AppButton
-            variant="primary"
+            variant="square"
             size="xs"
             onClick={onClose}
             className="leading-none rounded-full border border-white/25 px-2 py-1 sm:px-3 sm:py-2 hover:border-bs-red font-bold"

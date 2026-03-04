@@ -22,30 +22,30 @@ export const Toolbar: React.FC<ToolbarProps> = ({
   return (
     <>
       <section className="fixed top-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] border-b-2 border-bs-red z-50">
-        <div className="mx-auto max-w-5xl px-4 sm:px-12 flex items-center pt-8 sm:pt-12 pb-4">
+        <div className="mx-auto max-w-5xl px-1 sm:px-9 flex items-center pt-8 sm:pt-12 pb-4">
           <AppButton
             variant="ghost"
             onClick={onBack}
             className="flex items-center"
           >
-            <FaArrowLeft className="mr-2" /> <AppText variant="body-light">{t('common.back')}</AppText>
+            <FaArrowLeft size="18" className="mr-2" /> <AppText variant="title-dark">{t('common.back')}</AppText>
           </AppButton>
 
           <div className="ml-auto flex gap-2">
             {showVisitedButton && (
               isAlreadyVisited ? (
                 <AppButton
-                  variant="primary"
+                  variant="outline"
                   onClick={onVisitedClick}
-                  className="px-3 py-1.5"
+                  className="px-3 py-1.5 mr-1 sm:mr-3"
                 >
                   {t('placeDetail.alreadyVisited')}
                 </AppButton>
               ) : (
                 <AppButton
-                  variant="primary"
+                  variant="outline"
                   onClick={onVisitedClick}
-                  className="px-3 py-1.5"
+                  className="px-3 py-1.5 mr-1 sm:mr-3"
                 >
                   {t('placeDetail.notVisited')}
                 </AppButton>

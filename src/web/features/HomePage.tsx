@@ -368,14 +368,15 @@ export function HomePage() {
           {!userLocation && (
             <div className="mt-6 flex flex-col items-center text-center">
               <AppText variant="subtitle-dark" className="max-w-xs leading-relaxed mb-4 whitespace-pre-line">{t('home.allowLocation')}</AppText>
-              <button
-                type="button"
+              <AppButton
+                variant="action"
+                size="md"
                 onClick={() => requestUserLocation()}
                 disabled={isRequestingLocation}
-                className="w-72 max-w-full rounded-md bg-bs-red px-4 py-3 text-[0.75rem] font-bold uppercase tracking-[0.12em] disabled:opacity-50 btn-red"
+                className="w-72 max-w-full px-4 py-3 text-[0.75rem]"
               >
                 {t('home.allowLocationButton')}
-              </button>
+              </AppButton>
               {geoError && !geoError.includes("User denied Geolocation") && (
                 <p className="mt-3 text-[0.65rem] text-red-400">{geoError}</p>
               )}
@@ -395,9 +396,9 @@ export function HomePage() {
                     </AppText>
                     {!isOutsideGreaterRegion && (
                       <AppButton
-                        variant="primary"
+                        variant="action"
                         onClick={() => setIsDistanceModalOpen(true)}
-                        className="px-4 btn-red"
+                        className="px-4"
                       >
                         {t('common.changeDistance')}
                       </AppButton>
@@ -508,9 +509,10 @@ export function HomePage() {
               </AppButton>
             ))}
             <AppButton
-              variant="primary"
+              variant="action"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              className="btn-square w-full py-4 font-semibold rounded-[8px] btn-red"
+              size="md"
+              className="w-full py-4 rounded-[8px]"
             >
               {t('home.viewMoreNeighborhoods')}
             </AppButton>

@@ -22,7 +22,7 @@ export function SearchField({ value, onChange, onSearch, placeholder }: SearchFi
       <button
         type="button"
         onClick={onSearch}
-        className="bg-[#F5F5F5] px-3.5 py-3.5"
+        className={`bg-[#F5F5F5] px-3.5 py-3.5 ${radiusClass} border`}
         style={{ borderColor: '#212121' }}
         aria-label="Buscar"
       >

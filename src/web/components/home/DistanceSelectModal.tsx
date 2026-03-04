@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { AppText } from "../ui/AppText";
+import { AppButton } from "../ui/AppButton";
 
 interface Props {
     initialKm?: number;
@@ -38,13 +39,13 @@ export function DistanceSelectModal({
                     <div className="mb-2 flex items-center justify-between">
                         <SectionHeading title={t('distanceSelect.title')} underline={false} className="flex-1" card={false} tone="dark" />
 
-                        <button
-                            type="button"
+                        <AppButton
+                            variant="close"
                             onClick={onClose}
-                            className="btn-close-round"
+                            aria-label={t('common.close', { defaultValue: 'Fechar' })}
                         >
                             ×
-                        </button>
+                        </AppButton>
                     </div>
 
                     <div className="h-[3px] w-full bg-bs-red" />
@@ -71,13 +72,15 @@ export function DistanceSelectModal({
 
                 {/* BOTÃO CONFIRMAR */}
                 <div className="px-4 pb-4">
-                    <button
+                    <AppButton
+                        variant="action"
+                        size="md"
                         type="button"
                         onClick={confirm}
-                        className="w-full rounded-md bg-bs-red px-4 py-2 text-center font-bold uppercase tracking-[0.18em] hover:bg-bs-red/80 btn-red"
+                        className="w-full px-4 py-2 text-center tracking-[0.18em]"
                     >
                         {t('distanceSelect.searchButton')}
-                    </button>
+                    </AppButton>
                 </div>
             </div>
         </div>

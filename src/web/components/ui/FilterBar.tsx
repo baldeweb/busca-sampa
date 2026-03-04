@@ -334,7 +334,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 <div className="relative">
                   <AppButton
                     variant="square"
-                    className="btn-square px-3 py-2 rounded border flex items-center justify-between"
+                    className="px-3 py-2 rounded border flex items-center justify-between"
                     onClick={() => {
                       const next = !showPriceMenu;
                       closeAllMenus();

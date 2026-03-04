@@ -57,7 +57,7 @@ export class GlobalErrorBoundary extends React.Component<React.PropsWithChildren
               Tivemos um erro ao carregar esta página. Tente voltar para a tela inicial.
             </AppText>
             <AppButton
-              variant="primary"
+              variant="square"
               onClick={handleGoHome}
               className="px-4 py-2"
             >

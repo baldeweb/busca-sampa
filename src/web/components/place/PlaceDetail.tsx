@@ -158,8 +158,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             </AppText>
                             <AppButton 
                                 variant="close"
-                                onClick={() => setShowVisitModal(false)} 
-                                className="btn-close-round">
+                                onClick={() => setShowVisitModal(false)}
+                                aria-label={t('common.close', { defaultValue: 'Fechar' })}>
                                 ×
                             </AppButton>
                         </div>
@@ -228,13 +228,13 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         <div className="flex items-center justify-between">
                             <SectionHeading title={t('placeDetail.hoursTitle')} underline={false} className="flex-1" card={false} tone="light" />
                             <div className="flex flex-col items-end justify-center gap-1">
-                                <button
-                                    type="button"
+                                <AppButton
+                                    variant="outline"
                                     className="px-3 py-1 text-[0.7rem] sm:text-[0.75rem] font-semibold"
                                     onClick={onShowOpeningHours}
                                 >
                                     {t('placeDetail.viewHours')}
-                                </button>
+                                </AppButton>
                             </div>
                         </div>
                         <div className="mt-2 space-y-2 mb-2">
@@ -409,7 +409,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 <AppText variant="title-dark" className="mt-2 break-all">{t('placeDetail.instagramTitle')}</AppText>
                                 <AppText variant="subtitle-dark">{t('placeDetail.instagramSubtitle')}</AppText>
                                 <AppButton
-                                    variant="square"
+                                    variant="action"
                                     size="md"
                                     onClick={() => window.open(instagramUrl, '_blank', 'noopener noreferrer')}
                                     className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3 mt-3"

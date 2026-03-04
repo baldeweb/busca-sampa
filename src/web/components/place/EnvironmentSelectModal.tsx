@@ -45,13 +45,14 @@ export function EnvironmentSelectModal({
                 <div className="px-4 py-3">
                     <div className="mb-1 flex items-center justify-between">
                         <SectionHeading title={heading} underline={false} className="flex-1" card={false} tone='dark' />
-                        <button
+                        <AppButton
+                            variant="close"
                             type="button"
                             onClick={onClose}
-                            className="btn-close-round"
+                            aria-label={t('common.close', { defaultValue: 'Fechar' })}
                         >
                             ×
-                        </button>
+                        </AppButton>
                     </div>
                     <div className="h-[3px] w-24 bg-bs-red" />
                 </div>

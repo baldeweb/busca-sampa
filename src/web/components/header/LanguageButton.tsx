@@ -14,6 +14,8 @@ import turkiyeFlag from "@/assets/imgs/flags/img_flag_turkiye.png";
 import arabicFlag from "@/assets/imgs/flags/img_flag_arabic.png";
 import { LanguageSelectorModal } from "./LanguageSelectorModal";
 import { useTranslation } from 'react-i18next';
+import { AppButton } from "../ui/AppButton";
+import { AppText } from "../ui/AppText";
 
 export function LanguageButton() {
     const [open, setOpen] = useState(false);
@@ -43,15 +45,15 @@ export function LanguageButton() {
 
     return (
         <>
-        <button
-            type="button"
+        <AppButton
+            variant="outline"
+            size="xxs"
             onClick={() => setOpen(true)}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onFocus={() => setHover(true)}
             onBlur={() => setHover(false)}
-            className={`inline-flex flex-row items-center gap-2 whitespace-nowrap rounded-md border ${hover ? 'border-bs-red bg-bs-red/10' : 'border-white/30 bg-bs-card'} px-4 py-1 text-[10px] font-medium uppercase transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-bs-red/30 w-fit relative top-0 right-0 ml-auto mr-0 sm:mr-8`}
-            style={hover ? { backgroundColor: 'rgba(179,59,50,0.08)', borderColor: '#b33b32' } : undefined}
+            className={`inline-flex flex-row items-center gap-2 whitespace-nowrap px-4 py-1 w-fit relative top-0 right-0 ml-auto mr-0 sm:mr-8`}
         >
             <img
                 src={currentFlag}
@@ -61,8 +63,8 @@ export function LanguageButton() {
                 decoding="async"
                 className={`h-5 w-5 rounded-full border border-white/40 transition-transform duration-150 ${hover ? 'scale-105' : ''}`}
             />
-            <span className={hover ? 'text-black' : ''} style={hover ? { color: '#000000' } : undefined}>{currentLanguage}</span>
-        </button>
+            <AppText variant="body-light">{currentLanguage}</AppText>
+        </AppButton>
 
             {open && <LanguageSelectorModal onClose={() => setOpen(false)} />}
         </>

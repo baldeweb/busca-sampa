@@ -34,7 +34,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
       <div className={`${gridClassName} ${paddingClassName} flex flex-wrap items-start gap-2`}>
         {/* Botão "Todos" */}
         <AppButton
-          variant="square"
+          variant="all"
           onClick={() => onSelect(null)}
           className={`inline-flex items-center justify-center align-top px-4 py-4 leading-tight transition-colors border shadow-sm`}
         >
@@ -46,7 +46,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
             key={env.value}
             variant="square"
             onClick={() => onSelect(selectedEnv === env.value ? null : env.value)}
-            className={`btn-square btn-hover-gray inline-flex items-center justify-center align-top font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
+            className={`inline-flex items-center justify-center align-top font-semibold uppercase rounded-md px-4 py-4 leading-tight border shadow-sm transition-all duration-500 hover:bg-[#D6D6D6] hover:text-[#212121] hover:border-[#212121] hover:shadow-[0_3px_8px_rgba(0,0,0,0.15)] ${
               selectedEnv === env.value
                 ? 'bg-bs-red text-white border-bs-red'
                 : 'bg-white text-black border-[#0F0D13]'
@@ -73,7 +73,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
         {/* Botão "Ver mais" quando houver itens além do limite */}
         {showViewMoreButton && (
           <AppButton
-            variant="square"
+            variant="seemore"
             onClick={onViewMore}
             className={`inline-flex items-center justify-center align-top py-4 px-4 ${showViewMoreOnDesktop ? 'sm:inline-flex' : 'sm:hidden'}`}
           >

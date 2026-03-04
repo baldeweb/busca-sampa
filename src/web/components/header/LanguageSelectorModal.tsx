@@ -14,6 +14,7 @@ import arabicFlag from "@/assets/imgs/flags/img_flag_arabic.png";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { AppText } from "../ui/AppText";
+import { AppButton } from "../ui/AppButton";
 
 const LANGUAGES = [
     { code: "pt", name: "Português (BR)", flag: brazilFlag },
@@ -50,23 +51,24 @@ export function LanguageSelectorModal({ onClose }: Props) {
                 {/* Cabeçalho */}
                 <div className="flex items-center justify-between border-b border-bs-red px-4 py-3">
                     <SectionHeading title={t('common.selectLanguage')} underline={false} className="flex-1 text-center" card={false} tone='dark' />
-                    <button
+                    <AppButton
+                        variant="close"
                         type="button"
                         onClick={onClose}
-                        className="btn-close-round"
+                        aria-label={t('common.close', { defaultValue: 'Fechar' })}
                     >
                         ×
-                    </button>
+                    </AppButton>
                 </div>
 
                 {/* Lista de idiomas */}
                 <ul className="max-h-[60vh] overflow-y-auto py-2">
                     {LANGUAGES.map((lang) => (
                         <li key={lang.code}>
-                            <button
-                                type="button"
+                            <AppButton
+                                variant="square"
                                 onClick={() => handleSelect(lang.code)}
-                                className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${current === lang.code ? 'bg-bs-red/40' : ''}`}
+                                className={`flex w-full items-center justify-between px-4 py-2`}
                             >
                                 <AppText variant="selected-light" className="flex items-center gap-3">
                                     <img
@@ -80,7 +82,7 @@ export function LanguageSelectorModal({ onClose }: Props) {
                                     {lang.name}
                                 </AppText>
                                 {current === lang.code && <AppText variant="selected-light">✓</AppText>}
-                            </button>
+                            </AppButton>
                         </li>
                     ))}
                 </ul>

@@ -59,7 +59,8 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
           <AppButton 
             variant="close"
             onClick={onClose} 
-            className="btn-close-round focus:outline-none focus:ring-2 focus:ring-bs-red/70" aria-label={t('common.close')}>
+            className="focus:outline-none focus:ring-2 focus:ring-bs-red/70"
+            aria-label={t('common.close')}>
                 ×
           </AppButton>
         </div>
