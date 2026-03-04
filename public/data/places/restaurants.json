@@ -2536,7 +2536,7 @@
         "isAlreadyVisited": true,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Izakaya com ambiente descontraído e cardápio variado de petiscos japoneses, além de opções de sakes e drinks autorais",

@@ -2060,7 +2060,7 @@
         "name": "Viaduto do Chá",
         "phones": [],
         "openingHours": {
-            "patternId": "EVERYDAY_DAYTIME",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -2180,7 +2180,7 @@
         "name": "Escadaria das Bailarinas",
         "phones": [],
         "openingHours": {
-            "patternId": "EVERYDAY_DAYTIME",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -2221,7 +2221,7 @@
         "name": "Beco do Batman",
         "phones": [],
         "openingHours": {
-            "patternId": "EVERYDAY_DAYTIME",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": true,
@@ -2262,7 +2262,7 @@
         "name": "Beco do Aprendiz",
         "phones": [],
         "openingHours": {
-            "patternId": "EVERYDAY_DAYTIME",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,

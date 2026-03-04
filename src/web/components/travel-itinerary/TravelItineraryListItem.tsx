@@ -35,9 +35,9 @@ export const TravelItineraryListItem: React.FC<TravelItineraryListItemProps> = (
       </div>
       <AppButton
         variant="outline"
-        size="xxs"
+        size="sm"
         onClick={onDetails}
-        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0 transition-all duration-500 hover:bg-[#B3261E] hover:text-[#F5F5F5] hover:border-[#F5F5F5] hover:shadow-[0_3px_8px_rgba(0,0,0,0.15)]"
+        className="flex-shrink-0 min-w-[96px] col-start-3 row-start-2 self-center mb-0"
       >
         {detailsLabel}
       </AppButton>

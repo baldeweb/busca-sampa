@@ -14,7 +14,7 @@ export function CategoryCard({ label, icon, selected, onClick, index }: Category
     return (
     <AppButton
       variant="square"
-      size="lg"
+      size="md"
       onClick={onClick}
       aria-selected={selected}
       tabIndex={index === 0 ? 0 : -1}
