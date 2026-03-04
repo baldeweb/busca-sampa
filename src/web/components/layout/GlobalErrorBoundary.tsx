@@ -51,7 +51,7 @@ export class GlobalErrorBoundary extends React.Component<React.PropsWithChildren
         };
 
         return (
-          <div className="min-h-screen flex flex-col items-center justify-center bg-bs-bg text-white p-4 text-center">
+          <div className="min-h-screen flex flex-col items-center justify-center bg-bs-bg p-4 text-center">
             <AppText variant="subtitle-dark" className="mb-4">Algo deu errado :(</AppText>
             <AppText variant="subtitle-dark" className="mb-6 max-w-md">
               Tivemos um erro ao carregar esta página. Tente voltar para a tela inicial.

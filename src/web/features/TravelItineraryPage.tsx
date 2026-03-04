@@ -436,7 +436,7 @@ export function TravelItineraryPage() {
     };
 
     return (
-        <div className="min-h-screen bg-bs-bg text-white flex flex-col">
+        <div className="min-h-screen bg-bs-bg flex flex-col">
             <Toolbar onBack={() => navigate(-1)} />
 
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
@@ -465,7 +465,7 @@ export function TravelItineraryPage() {
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
-                                            <AppText variant="subtitle-light" className="category-card-label inline-flex items-center justify-center gap-2 w-full">
+                                            <AppText variant="subtitle-light" className="inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icWalkingTour} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.walking')}
                                             </AppText>
@@ -483,7 +483,7 @@ export function TravelItineraryPage() {
                                                     : 'text-[#6B6B6B] bg-transparent'
                                             }`}
                                         >
-                                            <AppText variant="subtitle-light" className="category-card-label inline-flex items-center justify-center gap-2 w-full">
+                                            <AppText variant="subtitle-light" className="inline-flex items-center justify-center gap-2 w-full">
                                                 <img src={icTourCity} alt="" className="w-4 h-4 object-contain" />
                                                 {t('travelItinerary.modes.city')}
                                             </AppText>

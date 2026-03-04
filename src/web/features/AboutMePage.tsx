@@ -20,7 +20,7 @@ export function AboutMePage() {
     <>
       <Toolbar onBack={() => navigate(-1)} />
 
-      <div className="mx-auto max-w-4xl space-y-6 text-white">
+      <div className="mx-auto max-w-4xl space-y-6">
 
         {/* FOTO + NOME */}
         <div className="flex flex-col items-center pt-16">

@@ -25,6 +25,7 @@ import { PlaceListItem } from '@/web/components/place/PlaceListItem';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
 import { useEnvironmentVisibleCount } from '@/web/hooks/useEnvironmentVisibleCount';
+import { AppText } from "../components/ui/AppText";
 
 // Página que lista todos os lugares de um bairro específico,
 // permitindo filtrar por "tipo" (RESTAURANT, NIGHTLIFE, etc)
@@ -351,7 +352,7 @@ export const NeighborhoodListPage: React.FC = () => {
   useDocumentTitle(titleNeighborhood);
 
   return (
-    <div className="min-h-screen bg-bs-bg text-white flex flex-col">
+    <div className="min-h-screen bg-bs-bg flex flex-col">
       <Toolbar onBack={() => navigate(-1)} />
       <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
         <div className="mx-auto max-w-5xl px-0 sm:px-12 pt-0 pb-2 text-black">
@@ -422,7 +423,7 @@ export const NeighborhoodListPage: React.FC = () => {
         <div className="mx-auto max-w-5xl px-4 sm:px-12">
           <div className="rounded-t-lg overflow-hidden">
             {sortedPlaces.length === 0 && (
-              <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>
+              <AppText variant="subtitle-dark">{t('common.noPlaces')}</AppText>
             )}
             {sortedPlaces.length > 0 && (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
@@ -435,7 +436,6 @@ export const NeighborhoodListPage: React.FC = () => {
                   return (
                     <PlaceListItem
                       key={`${String(primaryType || 'UNSET')}:${String(place.id)}`}
-                      variant="neighborhood"
                       name={place.name}
                       neighborhood={neighborhood || t('list.variablePlace')}
                       openingText={openingText}

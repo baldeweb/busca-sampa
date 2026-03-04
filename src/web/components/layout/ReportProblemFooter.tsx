@@ -10,7 +10,7 @@ export function ReportProblemFooter({ subject }: ReportProblemFooterProps) {
 
   return (
     <div className="bg-black border-t-2 border-bs-red py-3 px-4 flex items-center justify-center">
-      <FaExclamationTriangle className="mr-2 text-white" />
+      <FaExclamationTriangle className="mr-2" />
       <a
         href={`mailto:wallace.baldenebre@gmail.com?subject=${encodeURIComponent(subject)}`}
         className="text-white font-bold"

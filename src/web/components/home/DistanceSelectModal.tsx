@@ -33,7 +33,7 @@ export function DistanceSelectModal({
 
     return (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
-            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl">
+            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card shadow-xl">
                 {/* HEADER */}
                 <div className="px-4 py-3">
                     <div className="mb-2 flex items-center justify-between">
@@ -77,7 +77,7 @@ export function DistanceSelectModal({
                         size="md"
                         type="button"
                         onClick={confirm}
-                        className="w-full px-4 py-2 text-center tracking-[0.18em]"
+                        className="w-full px-4 py-2"
                     >
                         {t('distanceSelect.searchButton')}
                     </AppButton>

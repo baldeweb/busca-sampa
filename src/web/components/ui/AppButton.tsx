@@ -32,18 +32,20 @@ export function AppButton({
 
   const base = [
     "inline-flex",
-    "font-gothic font-regular",
+    "font-montserrat font-semibold",
     "transition-all",
     "duration-300",
     "disabled:opacity-50",
     "select-none",
+    "whitespace-nowrap",
+    "capitalize"
   ].join(" ");
 
   const sizeMap: Record<AppButtonSize, string> = {
     xxs: "text-[0.6rem] px-1",
     xs: "text-[0.7rem] px-2 py-1",
     sm: "text-[0.8rem] px-3 py-1",
-    md: "text-[1rem] px-4 py-2",
+    md: "text-[0.95rem] px-4 py-2.5",
   };
 
   const variantMap: Record<AppButtonVariant, string> = {

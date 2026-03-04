@@ -29,6 +29,7 @@ import { FilterBar } from "@/web/components/ui/FilterBar";
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
 import { useEnvironmentVisibleCount } from '@/web/hooks/useEnvironmentVisibleCount';
+import { AppText } from "../components/ui/AppText";
 
 const ORDER_OPTIONS = [
     { value: "name-asc" },
@@ -577,7 +578,6 @@ export const PlaceListPage: React.FC = () => {
         }
 
         return '-';
-        return '-';
     }
 
     // Helper: pick a neighborhood string for a place (prefer main unity)
@@ -623,7 +623,7 @@ export const PlaceListPage: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-bs-bg text-white flex flex-col">
+        <div className="min-h-screen bg-bs-bg flex flex-col">
             {/* Top Bar */}
             <Toolbar onBack={() => navigate(-1)} />
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">
@@ -705,12 +705,11 @@ export const PlaceListPage: React.FC = () => {
                 showCityFilter={cities.length > 1}
                 showPriceFilter={priceOptions.length > 1}
             />
-            {/* Modal antigo de filtros removido em favor dos menus inline */}
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg pb-24`}>
                 <div className="mx-auto max-w-5xl px-4 sm:px-12">
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
-                        {sortedPlaces.length === 0 && <div className="p-4 text-gray-400">{t('common.noPlaces')}</div>}
+                        {sortedPlaces.length === 0 && <AppText variant="subtitle-dark">{t('common.noPlaces')}</AppText>}
                         {sortedPlaces.length > 0 && (
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
                                 {sortedPlaces.map((place) => {

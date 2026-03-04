@@ -164,7 +164,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               <div className="relative">
                 <AppButton
                   variant="square"
-                  size="md"
+                  size="sm"
                   className="px-3 py-2 rounded border font-bold flex items-center justify-between"
                   onClick={() => {
                     const next = !showSortingMenu;
@@ -199,7 +199,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               <div className="relative">
                 <AppButton
                   variant="square"
-                  size="md"
+                  size="sm"
                   className="px-3 py-2 rounded border flex items-center justify-between"
                   onClick={() => {
                     const next = !showHoursMenu;
@@ -240,7 +240,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               <div className="relative">
                 <AppButton
                   variant="square"
-                  size="md"
+                  size="sm"
                   className="px-3 py-2 rounded border flex items-center justify-between"
                   onClick={() => {
                     const next = !showScheduleMenu;
@@ -292,7 +292,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 <div className="relative">
                   <AppButton
                     variant="square"
-                    size="md"
+                    size="sm"
                     className="px-3 py-2 rounded border flex items-center justify-between"
                     onClick={() => {
                       const next = !showCityMenu;
@@ -338,7 +338,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 <div className="relative">
                   <AppButton
                     variant="square"
-                    size="md"
+                    size="sm"
                     className="px-3 py-2 rounded border flex items-center justify-between"
                     onClick={() => {
                       const next = !showPriceMenu;

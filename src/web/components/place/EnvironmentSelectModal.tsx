@@ -38,7 +38,7 @@ export function EnvironmentSelectModal({
             onClick={onClose}
         >
             <div
-                className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl"
+                className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card shadow-xl"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Cabeçalho */}
@@ -66,7 +66,7 @@ export function EnvironmentSelectModal({
                             onClick={() => handleSelect(null)}
                             className={`flex w-full items-center justify-between px-4 py-2`}
                         >
-                            <AppText variant="subtitle-light" className="category-card-label">{t('common.all')}</AppText>
+                            <AppText variant="subtitle-light">{t('common.all')}</AppText>
                             <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
                         </AppButton>
                     </li>
@@ -76,7 +76,7 @@ export function EnvironmentSelectModal({
                                 variant="square"
                                 onClick={() => handleSelect(env)}
                                 className={`flex w-full items-center justify-between px-4 py-2`}>
-                                <AppText variant="subtitle-light" className="category-card-label">{env.label}</AppText>
+                                <AppText variant="subtitle-light">{env.label}</AppText>
                                 <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
                             </AppButton>
                         </li>

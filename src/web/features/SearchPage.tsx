@@ -97,7 +97,7 @@ export function SearchPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] text-white flex flex-col">
+    <div className="min-h-screen bg-[#FFFFFF] flex flex-col">
       <Toolbar onBack={() => navigate(-1)} />
       <div className="flex-1 grid" style={{ gridTemplateRows: hasResults ? 'auto 1fr' : 'auto' }}>
         <section className="relative shrink-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#FFFFFF]">

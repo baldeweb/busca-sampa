@@ -53,7 +53,7 @@ export function LanguageButton() {
             onMouseLeave={() => setHover(false)}
             onFocus={() => setHover(true)}
             onBlur={() => setHover(false)}
-            className={`inline-flex flex-row items-center gap-2 whitespace-nowrap px-4 py-1 w-fit relative top-0 right-0 ml-auto mr-0 sm:mr-8`}
+            className={`inline-flex flex-row items-center gap-2 whitespace-nowrap px-4 py-1 w-fit relative top-0 right-0 ml-auto`}
         >
             <img
                 src={currentFlag}

@@ -2031,7 +2031,7 @@
             "Necessário comprar ingresso antecipadamente",
             "A visitação é permitida ate às 20h"
         ],
-        "priceRange": "MEDIUM",
+        "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,

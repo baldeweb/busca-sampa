@@ -47,7 +47,7 @@ export function LanguageSelectorModal({ onClose }: Props) {
 
     return (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
-            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl">
+            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card shadow-xl">
                 {/* Cabeçalho */}
                 <div className="flex items-center justify-between border-b border-bs-red px-4 py-3">
                     <SectionHeading title={t('common.selectLanguage')} underline={false} className="flex-1 text-center" card={false} tone='dark' />

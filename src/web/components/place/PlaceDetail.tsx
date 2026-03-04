@@ -145,7 +145,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
     const ambienteList: string[] = tags || [];
 
     return (
-        <div className="min-h-screen bg-bs-bg text-white flex flex-col">
+        <div className="min-h-screen bg-bs-bg flex flex-col">
             {/* Top Bar - Toolbar (consistent with Neighborhood list) */}
             <Toolbar onBack={onBack} showVisitedButton={true} isAlreadyVisited={Boolean(isAlreadyVisited)} onVisitedClick={() => setShowVisitModal(true)} />
             {/* Modal explicativo */}
@@ -251,7 +251,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 aria-hidden="true"
                                                 className={`inline-flex items-center justify-center rounded-sm bg-green-600 mr-2 flex-shrink-0 ${boxSizeClass}`}
                                             >
-                                                <FaCheck className="text-white text-[10px]" />
+                                                <FaCheck className="text-[10px]" />
                                             </span>
                                             <AppText variant="body-light">{day}</AppText>
                                         </div>
@@ -402,7 +402,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
 
             { /* Midias Sociais */}
             <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] mt-4">
-                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-8 sm:py-10 h-full flex flex-col justify-between text-white">
+                <div className="mx-auto max-w-5xl px-4 sm:px-12 py-8 sm:py-10 h-full flex flex-col justify-between">
                     <div>
                         {instagramUrl && instagramUrl.trim().length > 0 && (
                             <div className="mt-4">

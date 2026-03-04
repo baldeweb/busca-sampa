@@ -21,7 +21,7 @@ export function NeighborhoodSelectModal({
 
     return (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
-            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card text-white shadow-xl">
+            <div className="w-[90%] max-w-sm rounded-md border border-white/15 bg-bs-card shadow-xl">
                 {/* Cabeçalho */}
                 <div className="px-4 py-3">
                     <div className="mb-1 flex items-center justify-between">
@@ -47,7 +47,7 @@ export function NeighborhoodSelectModal({
                                 onClick={() => handleSelect(n)}
                                 className={`flex w-full items-center justify-between px-4 py-2`}
                             >
-                                <AppText variant="subtitle-light" className="category-card-label">{n.neighborhoodName}</AppText>
+                                <AppText variant="subtitle-light">{n.neighborhoodName}</AppText>
                                 <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
                             </AppButton>
                         </li>
