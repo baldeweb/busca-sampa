@@ -3,7 +3,7 @@ import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { AppText } from '@/web/components/ui/AppText';
 import { getPriceRangeLabel } from "@/core/domain/enums/priceRangeLabel";
 import { getEnvironmentLabel } from "@/core/domain/enums/environmentLabel";
-import { FaInstagram, FaMapMarkerAlt, FaExclamationTriangle, FaPhone, FaWhatsapp, FaStar, FaCheck } from "react-icons/fa";
+import { FaInstagram, FaMapMarkerAlt, FaLink, FaPhone, FaWhatsapp, FaStar, FaCheck } from "react-icons/fa";
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import icUber from '@/assets/imgs/icons/ic_uber.png';
 import { useTranslation } from 'react-i18next';
@@ -156,7 +156,12 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             <AppText variant="title-dark" className="flex-1 text-center">
                                 {t('placeDetail.visitModalTitle')}
                             </AppText>
-                            <button onClick={() => setShowVisitModal(false)} className="btn-close-round text-xl font-bold">×</button>
+                            <AppButton 
+                                variant="close"
+                                onClick={() => setShowVisitModal(false)} 
+                                className="btn-close-round">
+                                ×
+                            </AppButton>
                         </div>
                         <AppText variant="body-dark" className="p-5 text-center">
                             {isAlreadyVisited ? (
@@ -182,19 +187,20 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         trailing={(
                             <div className="sm:ml-auto flex flex-row sm:flex-col items-start sm:items-end gap-2 sm:gap-1 shrink-0">
                                 {isOpenNow ? (
-                                    <span className="bg-green-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.openNow')}</span>
+                                    <AppText variant="body-dark" className="bg-green-600 px-4 py-2 rounded">{t('placeDetail.openNow')}</AppText>
                                 ) : (
-                                    <span className="bg-red-600 text-white text-xs px-4 py-1 rounded">{t('placeDetail.closedNow')}</span>
+                                    <AppText variant="body-dark" className="bg-red-600 px-4 py-1 rounded">{t('placeDetail.closedNow')}</AppText>
                                 )}
-                                <span className="bg-[#212121] text-white text-xs px-2 py-1 rounded">{type}</span>
+                                <AppText variant="body-dark" className="bg-[#212121] px-2 py-1 rounded">{type}</AppText>
                             </div>
                         )}
                     >
                         <AppText variant="subtitle-light">{description}</AppText>
                         {priceRange && (
-                            <p className="text-xs mt-1 text-gray-700">
-                                <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
-                            </p>
+                            <AppText 
+                                variant="subtitle-light">
+                                {t('placeDetail.priceLabel')} {getPriceRangeLabel(priceRange as any)}
+                            </AppText>
                         )}
                         {/* Tipo de ambiente */}
                         {ambienteList.length > 0 && (
@@ -204,7 +210,13 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 </AppText>
                                 <ul className="flex flex-wrap gap-2 mt-1">
                                     {ambienteList.map((amb: string, idx: number) => (
-                                        <li key={idx} className="bg-gray-700 px-1 py-1 rounded text-xs">{getEnvironmentLabel(amb)}</li>
+                                        <AppText
+                                            key={idx}
+                                            variant="selected-light"
+                                            className="px-1 py-1 rounded"
+                                        >
+                                            {getEnvironmentLabel(amb)}
+                                        </AppText>
                                     ))}
                                 </ul>
                             </div>
@@ -239,7 +251,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 aria-hidden="true"
                                                 className={`inline-flex items-center justify-center rounded-sm bg-green-600 mr-2 flex-shrink-0 ${boxSizeClass}`}
                                             >
-                                                <FaCheck className="text-white text-[10px] sm:text-xs" />
+                                                <FaCheck className="text-white text-[10px]" />
                                             </span>
                                             <AppText variant="body-light">{day}</AppText>
                                         </div>
@@ -354,8 +366,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 ) : (
                                     <div className="flex items-start w-full">
                                         <div className="w-full">
-                                            <AppText variant="subtitle-light" className="text-xs text-gray-600">{neighborhood}</AppText>
-                                            <AppText variant="body-light" className="text-xs text-gray-600">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</AppText>
+                                            <AppText variant="subtitle-light">{neighborhood}</AppText>
+                                            <AppText variant="body-light">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</AppText>
                                             <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
                                                 {isMobileOrTablet ? (
                                                     <>
@@ -402,7 +414,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     onClick={() => window.open(instagramUrl, '_blank', 'noopener noreferrer')}
                                     className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3 mt-3"
                                 >
-                                    {t('placeDetail.follow')}
+                                    <FaInstagram className="mr-2" /> {t('placeDetail.follow')}
                                 </AppButton>
                             </div>
                         )}
@@ -428,7 +440,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                         onClick={() => window.open(waHref, '_blank', 'noopener noreferrer')}
                                                         className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3n"
                                                     >
-                                                        {t('placeDetail.whatsappButton')}
+                                                        <FaWhatsapp className="mr-2" /> {t('placeDetail.whatsappButton')}
                                                     </AppButton>
                                                 )}
                                                 <AppButton
@@ -437,7 +449,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     onClick={() => window.open(telHref, '_blank', 'noopener noreferrer')}
                                                     className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3"
                                                 >
-                                                    {t('placeDetail.onCall')}
+                                                    <FaPhone className="mr-2" /> {t('placeDetail.onCall')}
                                                 </AppButton>
                                                 {phoneDisplay && (
                                                     <AppText variant="selected-dark">
@@ -461,7 +473,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     onClick={() => window.open(websiteUrl, '_blank', 'noopener noreferrer')}
                                     className="inline-flex items-center px-4 py-3 mt-3"
                                 >
-                                    {t('placeDetail.menuButton')}
+                                    <FaLink className="mr-2" />{t('placeDetail.menuButton')}
                                 </AppButton>
                             </div>
                         )}
@@ -476,7 +488,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                     onClick={() => window.open(websiteUrl, '_blank', 'noopener noreferrer')}
                                     className="inline-flex items-center px-4 py-3 mt-3"
                                 >
-                                    {t('placeDetail.websiteButton')}
+                                    <FaLink className="mr-2" /> {t('placeDetail.websiteButton')}
                                 </AppButton>
                             </div>
                         )}

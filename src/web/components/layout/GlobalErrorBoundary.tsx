@@ -1,4 +1,6 @@
 import React from "react";
+import { AppText } from "../ui/AppText";
+import { AppButton } from "../ui/AppButton";
 
 type GlobalErrorBoundaryState = {
   hasError: boolean;
@@ -50,17 +52,17 @@ export class GlobalErrorBoundary extends React.Component<React.PropsWithChildren
 
         return (
           <div className="min-h-screen flex flex-col items-center justify-center bg-bs-bg text-white p-4 text-center">
-            <h1 className="text-2xl font-bold mb-4">Algo deu errado :(</h1>
-            <p className="mb-6 max-w-md">
+            <AppText variant="subtitle-dark" className="mb-4">Algo deu errado :(</AppText>
+            <AppText variant="subtitle-dark" className="mb-6 max-w-md">
               Tivemos um erro ao carregar esta página. Tente voltar para a tela inicial.
-            </p>
-            <button
-              type="button"
+            </AppText>
+            <AppButton
+              variant="primary"
               onClick={handleGoHome}
-              className="px-4 py-2 rounded-md bg-bs-red text-white font-semibold"
+              className="px-4 py-2"
             >
               Ir para a home
-            </button>
+            </AppButton>
           </div>
         );
       }

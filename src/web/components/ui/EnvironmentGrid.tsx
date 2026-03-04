@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from './SectionHeading';
+import { AppButton } from './AppButton';
 
 interface EnvironmentGridProps {
   environments: Array<{ value: string; label: string }>;
@@ -18,7 +19,6 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
   const { t } = useTranslation();
   const heading = title || t('placeList.environmentTitle') || 'Tipo de ambiente:';
   const paddingClassName = contentPaddingClassName || "px-4 sm:px-0";
-  const gridClass = gridClassName || "text-xs";
   const maxItemsMobile = 7;
   const maxItemsDesktop = 17;
   const baseSlotsMobile = maxItemsMobile - 1;
@@ -31,24 +31,20 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
   return (
     <div className={containerClassName || "bg-[#FFFFFF] text-black pb-4"}>
       <SectionHeading title={heading} className={`mb-3 pt-8 mt-3 ${paddingClassName}`} underline={false} card={false} tone='light' />
-      <div className={`${gridClass} ${paddingClassName} flex flex-wrap items-start gap-2`}>
+      <div className={`${gridClassName} ${paddingClassName} flex flex-wrap items-start gap-2`}>
         {/* Botão "Todos" */}
-        <button
-          type="button"
+        <AppButton
+          variant="square"
           onClick={() => onSelect(null)}
-          className={`btn-square btn-red-outline btn-hover-red inline-flex items-center justify-center align-top font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
-            selectedEnv === null
-              ? 'bg-bs-red text-white border-bs-red'
-              : 'bg-white text-black border-[#0F0D13]'
-          }`}
+          className={`inline-flex items-center justify-center align-top px-4 py-4 leading-tight transition-colors border shadow-sm`}
         >
           {t('common.all')}
-        </button>
+        </AppButton>
         {/* Tipos visíveis: até 7 itens no mobile e 17 no desktop (contando Tudo/Mais Opções) */}
         {environments.map((env, idx) => (
-          <button
+          <AppButton
             key={env.value}
-            type="button"
+            variant="square"
             onClick={() => onSelect(selectedEnv === env.value ? null : env.value)}
             className={`btn-square btn-hover-gray inline-flex items-center justify-center align-top font-semibold uppercase rounded-md px-4 py-4 leading-tight transition-colors border shadow-sm ${
               selectedEnv === env.value
@@ -72,19 +68,17 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
             >
               {env.label}
             </span>
-          </button>
+          </AppButton>
         ))}
         {/* Botão "Ver mais" quando houver itens além do limite */}
         {showViewMoreButton && (
-          <button
-            type="button"
+          <AppButton
+            variant="square"
             onClick={onViewMore}
-            className={`btn-square-dark btn-hover-red inline-flex items-center justify-center align-top py-4 font-semibold text-xs rounded-md px-4 ${
-              showViewMoreOnDesktop ? 'sm:inline-flex' : 'sm:hidden'
-            }`}
+            className={`inline-flex items-center justify-center align-top py-4 px-4 ${showViewMoreOnDesktop ? 'sm:inline-flex' : 'sm:hidden'}`}
           >
             {t('home.viewMore')}
-          </button>
+          </AppButton>
         )}
       </div>
     </div>

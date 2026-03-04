@@ -4,7 +4,6 @@ import type { MenuWhereIsTodayOption } from '@/core/domain/models/MenuWhereIsTod
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { AppText } from '@/web/components/ui/AppText';
-import { ActionButton } from '@/web/components/ui/ActionButton';
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { NeighborhoodSelectModal } from "@/web/components/home/NeighborhoodSelectModal";
 import { DistanceSelectModal } from "@/web/components/home/DistanceSelectModal";
@@ -367,7 +366,7 @@ export function HomePage() {
           </div>
           {/* Placeholder quando não há localização */}
           {!userLocation && (
-            <div className="mt-6 flex flex-col items-center text-center text-xs">
+            <div className="mt-6 flex flex-col items-center text-center">
               <AppText variant="subtitle-dark" className="max-w-xs leading-relaxed mb-4 whitespace-pre-line">{t('home.allowLocation')}</AppText>
               <button
                 type="button"
@@ -384,7 +383,7 @@ export function HomePage() {
           )}
           {/* Controles e resultados quando há localização */}
           {userLocation && (
-            <div className="mt-2 flex flex-col gap-2 text-xs text-gray-300">
+            <div className="mt-2 flex flex-col gap-2 text-gray-300">
               <div className="mt-3 space-y-2">
                 {loadingNearby && (
                   <AppText variant="subtitle-dark">{t('home.loadingCategories')}</AppText>
@@ -395,14 +394,13 @@ export function HomePage() {
                       {isOutsideGreaterRegion ? t('home.outsideGreaterSP') : t('home.noNearbyResultsRadius')}
                     </AppText>
                     {!isOutsideGreaterRegion && (
-                      <ActionButton
-                        type="button"
+                      <AppButton
+                        variant="primary"
                         onClick={() => setIsDistanceModalOpen(true)}
-                        size="md"
                         className="px-4 btn-red"
                       >
                         {t('common.changeDistance')}
-                      </ActionButton>
+                      </AppButton>
                     )}
                   </div>
                 )}
@@ -428,7 +426,7 @@ export function HomePage() {
                               navigate(`/${s.category}`, { state: { ids } });
                             }
                           }}
-                          className="border-b border-white/10 py-4 flex items-center justify-between gap-2 text-xs cursor-pointer"
+                          className="border-b border-white/10 py-4 flex items-center justify-between gap-2 cursor-pointer"
                         >
                           <div className="flex flex-col me-6">
                             <AppText variant="subtitle-dark">
@@ -497,25 +495,25 @@ export function HomePage() {
         <div className="absolute inset-0 w-full h-full bg-[#212121] z-10" style={{ opacity: 0.65 }} />
         <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-4">
           <SectionHeading title={t('home.neighborhoodsTitle')} subtitle={t('home.neighborhoodsTagline')} className="mb-6" underline={false} card={false} tone="dark" />
-          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs w-full">
+          <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
             {topNeighborhoods.map((n) => (
-              <button
+              <AppButton
                 key={n.id}
-                type="button"
+                variant="square"
                 onClick={() => handleNeighborhoodSelect(n)}
-                className="btn-square btn-hover-gray w-full bg-[#F5F5F5] text-black font-semibold uppercase tracking-[0.04em] rounded-[8px] px-4 py-4 leading-tight transition-colors"
+                size="md"
+                className="w-full px-4 py-4 leading-tight transition-color"
               >
                 {n.neighborhoodName}
-              </button>
+              </AppButton>
             ))}
-            <ActionButton
-              type="button"
+            <AppButton
+              variant="primary"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              size="md"
               className="btn-square w-full py-4 font-semibold rounded-[8px] btn-red"
             >
               {t('home.viewMoreNeighborhoods')}
-            </ActionButton>
+            </AppButton>
           </div>
         </div>{/* /wrapper Por bairro */}
       </section>

@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { AppText } from "../ui/AppText";
+import { AppButton } from "../ui/AppButton";
 
 export interface Period {
   days: string[];
@@ -42,11 +43,6 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
 
   const now = new Date();
   const currentDay = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][now.getDay()];
-  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
-
-  useEffect(() => {
-    closeBtnRef.current?.focus();
-  }, []);
 
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === "Escape") {
@@ -60,7 +56,12 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
       <div className="bg-bs-card rounded-app shadow-lg w-[90vw] max-w-md" onKeyDown={handleKeyDown}>
         <div className="flex items-center justify-between px-4 py-3 border-b-2 border-bs-red">
           <SectionHeading id="opening-hours-heading" title={t('openingHours.title')} underline={false} card={false} tone="dark" />
-          <button ref={closeBtnRef} onClick={onClose} className="btn-close-round text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70" aria-label={t('common.close')}>×</button>
+          <AppButton 
+            variant="close"
+            onClick={onClose} 
+            className="btn-close-round focus:outline-none focus:ring-2 focus:ring-bs-red/70" aria-label={t('common.close')}>
+                ×
+          </AppButton>
         </div>
         {customMessage ? (
           <AppText variant="body-dark" className="p-5 mb-4 text-center">{customMessage}</AppText>
@@ -78,16 +79,16 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
                         <span className={`font-bold uppercase w-24 ${isToday ? "text-green-500" : "text-white"}`}>{dayLabels[day][i18n.language as 'pt'|'en']}</span>
                         <div className="flex flex-col items-end min-w-[120px]">
                           {periods.length === 0 ? (
-                            <span className="text-xs text-red-400">{t('openingHours.closed')}</span>
+                            <AppText variant="body-dark" className="text-red-400">{t('openingHours.closed')}</AppText>
                           ) : (
                             <>
                               {periods.map((p, pidx) => (
                                 p.open && p.close ? (
-                                  <span key={pidx} className="block text-xs text-right">{t('openingHours.range', { open: p.open, close: p.close })}</span>
+                                  <AppText variant="body-dark" key={pidx} className="block text-right">{t('openingHours.range', { open: p.open, close: p.close })}</AppText>
                                 ) : null
                               ))}
                               {isToday && (
-                                <span className={`mt-1 text-xs font-bold ${aberto ? "text-green-500" : "text-red-500"}`}>{aberto ? t('placeDetail.openNow') : t('placeDetail.closedNow')}</span>
+                                <AppText variant="body-dark" className={`mt-1 font-bold ${aberto ? "text-green-500" : "text-red-500"}`}>{aberto ? t('placeDetail.openNow') : t('placeDetail.closedNow')}</AppText>
                               )}
                             </>
                           )}

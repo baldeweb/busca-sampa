@@ -5,6 +5,7 @@ import icFilter from "@/assets/imgs/icons/ic_filter.png";
 import icArrowDown from "@/assets/imgs/icons/ic_arrow_down.png";
 import { SectionHeading } from '../ui/SectionHeading';
 import { AppText } from "./AppText";
+import { AppButton } from "./AppButton";
 
 export interface FilterBarProps {
   orderOptions: Array<{ value: string }>;
@@ -161,10 +162,9 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             <div className="flex flex-wrap items-center gap-2 w-full">
               {/* Ordenação */}
               <div className="relative">
-                <button
-                  type="button"
-                  className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                  style={{ background: "#F5F5F5", borderColor: "#403E44", color: "#0F0D13" }}
+                <AppButton
+                  variant="square"
+                  className="px-3 py-2 rounded border font-bold flex items-center justify-between"
                   onClick={() => {
                     const next = !showSortingMenu;
                     closeAllMenus();
@@ -173,7 +173,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 >
                   <span className="mr-2">{getSortingTitle()}</span>
                   <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
-                </button>
+                </AppButton>
                 {showSortingMenu && (
                   <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg z-10">
                     {orderOptions.map((opt) => (
@@ -196,10 +196,9 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
               {/* Horários */}
               <div className="relative">
-                <button
-                  type="button"
-                  className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                  style={{ background: "#F5F5F5", borderColor: "#403E44", color: "#0F0D13" }}
+                <AppButton
+                  variant="square"
+                  className="px-3 py-2 rounded border flex items-center justify-between"
                   onClick={() => {
                     const next = !showHoursMenu;
                     closeAllMenus();
@@ -208,7 +207,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 >
                   <span className="mr-2">{getHoursTitle()}</span>
                   <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
-                </button>
+                </AppButton>
                 {showHoursMenu && (
                   <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10">
                     <AppText
@@ -237,10 +236,9 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
               {/* Agendar */}
               <div className="relative">
-                <button
-                  type="button"
-                  className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                  style={{ background: "#F5F5F5", borderColor: "#403E44", color: "#0F0D13" }}
+                <AppButton
+                  variant="square"
+                  className="px-3 py-2 rounded border flex items-center justify-between"
                   onClick={() => {
                     const next = !showScheduleMenu;
                     closeAllMenus();
@@ -249,7 +247,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 >
                   <span className="mr-2">{getScheduleTitle()}</span>
                   <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
-                </button>
+                </AppButton>
                 {showScheduleMenu && (
                   <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10">
                     <AppText
@@ -289,10 +287,9 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               {/* Cidade */}
               {shouldShowCityFilter && (
                 <div className="relative">
-                  <button
-                    type="button"
-                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                    style={{ background: "#F5F5F5", borderColor: "#403E44", color: "#0F0D13" }}
+                  <AppButton
+                    variant="square"
+                    className="px-3 py-2 rounded border flex items-center justify-between"
                     onClick={() => {
                       const next = !showCityMenu;
                       closeAllMenus();
@@ -301,7 +298,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   >
                     <span className="mr-2">{getCityTitle()}</span>
                     <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
-                  </button>
+                  </AppButton>
                   {showCityMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
                       <AppText
@@ -335,10 +332,9 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               {/* Preço */}
               {shouldShowPriceFilter && (
                 <div className="relative">
-                  <button
-                    type="button"
-                    className="btn-square px-3 py-2 rounded border font-bold text-xs flex items-center justify-between"
-                    style={{ background: "#F5F5F5", borderColor: "#403E44", color: "#0F0D13" }}
+                  <AppButton
+                    variant="square"
+                    className="btn-square px-3 py-2 rounded border flex items-center justify-between"
                     onClick={() => {
                       const next = !showPriceMenu;
                       closeAllMenus();
@@ -347,7 +343,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   >
                     <span className="mr-2">{getPriceTitle()}</span>
                     <img src={icArrowDown} alt="expand" width={12} height={12} decoding="async" className="w-3 h-3" />
-                  </button>
+                  </AppButton>
                   {showPriceMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
                       {[{ value: null, label: t("filters.anyPrice", { defaultValue: "Qualquer preço" }) }, ...priceOptions.map(p => ({ value: p, label: getPriceRangeLabel(p as any) }))].map(opt => (

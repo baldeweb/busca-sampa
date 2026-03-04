@@ -569,14 +569,14 @@ export function TravelItineraryPage() {
                                     Aqui estão as informações necessárias com as rotas para você realizar
                                 </AppText>
                             </div>
-                            <button
-                                type="button"
+                            <AppButton
+                                variant='close'
                                 onClick={closeRouteDetails}
-                                className="btn-close-round btn-close-round-dark text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70"
+                                className="btn-close-round btn-close-round-dark focus:outline-none focus:ring-2 focus:ring-bs-red/70"
                                 aria-label={t('common.close')}
                             >
                                 ×
-                            </button>
+                            </AppButton>
                         </div>
 
                         <div

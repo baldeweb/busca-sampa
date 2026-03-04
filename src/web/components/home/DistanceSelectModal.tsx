@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from "../ui/AppText";
 
 interface Props {
     initialKm?: number;
@@ -58,7 +59,7 @@ export function DistanceSelectModal({
                         -
                     </button>
 
-                    <div className="text-2xl sm:text-3xl font-bold">{km}</div>
+                    <AppText variant="title-dark">{km}</AppText>
 
                     <button
                         onClick={increment}
