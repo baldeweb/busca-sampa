@@ -1,6 +1,7 @@
 import flagSp from "@/assets/imgs/etc/logo-role-paulista.png";
 import { LanguageButton } from "./LanguageButton";
 import { useTranslation } from 'react-i18next';
+import { AppText } from "../ui/AppText";
 
 export function Header() {
     const { t } = useTranslation();
@@ -24,9 +25,11 @@ export function Header() {
                     {/* Texto e botão de idioma */}
                     <div className="flex flex-col items-end">
                         <LanguageButton />
-                        <p className="text-xs sm:text-sm text-gray-300 sm:mt-4 mt-2 mr-2 sm:mr-8 text-right">
+                        <AppText
+                            variant="body-dark"
+                            className="mt-2 mr-2 sm:mr-8 text-right">
                             {t('header.tagline')}
-                        </p>
+                        </AppText>
                     </div>
                 </div>
             </header>

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import icFilter from "@/assets/imgs/icons/ic_filter.png";
 import icArrowDown from "@/assets/imgs/icons/ic_arrow_down.png";
 import { SectionHeading } from '../ui/SectionHeading';
+import { AppText } from "./AppText";
 
 export interface FilterBarProps {
   orderOptions: Array<{ value: string }>;
@@ -176,10 +177,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 {showSortingMenu && (
                   <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg z-10">
                     {orderOptions.map((opt) => (
-                      <div
+                      <AppText
                         key={opt.value}
-                        className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${order === opt.value ? "font-semibold" : ""}`}
-                        style={{ border: 0, background: 'none', textAlign: 'left' }}
+                        variant={`${order === opt.value ? "selected-light" : "body-light"}`}
+                        className="cursor-pointer px-3 py-2"
                         onClick={() => {
                           onOrderSelect(opt.value);
                           setShowSortingMenu(false);
@@ -187,7 +188,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                       >
                         {opt.value === "name-asc" && t("list.orderNameAsc")}
                         {opt.value === "neighborhood-asc" && t("list.orderNeighborhoodAsc")}
-                      </div>
+                      </AppText>
                     ))}
                   </div>
                 )}
@@ -210,26 +211,26 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 </button>
                 {showHoursMenu && (
                   <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-300 rounded shadow-lg z-10">
-                    <div
-                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${filterOpenNow ? "font-semibold" : ""}`}
-                      style={{ border: 0, background: 'none', textAlign: 'left' }}
+                    <AppText
+                      variant={`${filterOpenNow ? "selected-light" : "body-light"}`}
+                      className="cursor-pointer px-3 py-2"
                       onClick={() => {
                         onSelectOpenNow();
                         setShowHoursMenu(false);
                       }}
                     >
                       {t(openNowLabelKey, { defaultValue: openNowLabelDefault })}
-                    </div>
-                    <div
-                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${!filterOpenNow ? "font-semibold" : ""}`}
-                      style={{ border: 0, background: 'none', textAlign: 'left' }}
+                    </AppText>
+                    <AppText
+                      variant={`${!filterOpenNow ? "selected-light" : "body-light"}`}
+                      className="cursor-pointer px-3 py-2"
                       onClick={() => {
                         onSelectAnyHour();
                         setShowHoursMenu(false);
                       }}
                     >
                       {t(anyHourLabelKey, { defaultValue: anyHourLabelDefault })}
-                    </div>
+                    </AppText>
                   </div>
                 )}
               </div>
@@ -251,36 +252,36 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 </button>
                 {showScheduleMenu && (
                   <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10">
-                    <div
-                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "required" ? "font-semibold" : ""}`}
-                      style={{ border: 0, background: 'none', textAlign: 'left' }}
+                    <AppText
+                      variant={`${scheduleFilter === "required" ? "selected-light" : "body-light"}`}
+                      className="cursor-pointer px-3 py-2"
                       onClick={() => {
                         onSelectSchedule("required");
                         setShowScheduleMenu(false);
                       }}
                     >
                       {t("filters.scheduleRequired", { defaultValue: "Necessário agendar" })}
-                    </div>
-                    <div
-                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "not-required" ? "font-semibold" : ""}`}
-                      style={{ border: 0, background: 'none', textAlign: 'left' }}
+                    </AppText>
+                    <AppText
+                      variant={`${scheduleFilter === "not-required" ? "selected-light" : "body-light"}`}
+                      className="cursor-pointer px-3 py-2"
                       onClick={() => {
                         onSelectSchedule("not-required");
                         setShowScheduleMenu(false);
                       }}
                     >
                       {t("filters.scheduleNotRequired", { defaultValue: "Não precisa agendar" })}
-                    </div>
-                    <div
-                      className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${scheduleFilter === "any" ? "font-semibold" : ""}`}
-                      style={{ border: 0, background: 'none', textAlign: 'left' }}
+                    </AppText>
+                    <AppText
+                      variant={`${scheduleFilter === "any" ? "selected-light" : "body-light"}`}
+                      className="cursor-pointer px-3 py-2"
                       onClick={() => {
                         onSelectSchedule("any");
                         setShowScheduleMenu(false);
                       }}
                     >
                       {t("filters.anySchedule", { defaultValue: "Qualquer" })}
-                    </div>
+                    </AppText>
                   </div>
                 )}
               </div>
@@ -303,28 +304,28 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   </button>
                   {showCityMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
-                      <div
-                        className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === null ? "font-semibold" : ""}`}
-                        style={{ border: 0, background: 'none', textAlign: 'left' }}
+                      <AppText
+                        variant={`${selectedCity === null ? "selected-light" : "body-light"}`}
+                        className="cursor-pointer px-3 py-2"
                         onClick={() => {
                           onSelectCity(null);
                           setShowCityMenu(false);
                         }}
                       >
                         {t("filters.anyCity", { defaultValue: "Qualquer cidade" })}
-                      </div>
+                      </AppText>
                       {cities.map((c) => (
-                        <div
+                        <AppText
                           key={c}
-                          className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${selectedCity === c ? "font-semibold" : ""}`}
-                          style={{ border: 0, background: 'none', textAlign: 'left' }}
+                          variant={`${selectedCity === c ? "selected-light" : "body-light"}`}
+                          className="cursor-pointer px-3 py-2"
                           onClick={() => {
                             onSelectCity(c);
                             setShowCityMenu(false);
                           }}
                         >
                           {c}
-                        </div>
+                        </AppText>
                       ))}
                     </div>
                   )}
@@ -350,17 +351,17 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                   {showPriceMenu && (
                     <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-300 rounded shadow-lg z-10 max-h-60 overflow-auto">
                       {[{ value: null, label: t("filters.anyPrice", { defaultValue: "Qualquer preço" }) }, ...priceOptions.map(p => ({ value: p, label: getPriceRangeLabel(p as any) }))].map(opt => (
-                        <div
+                        <AppText
                           key={opt.value ?? 'any'}
-                          className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-100 ${priceFilter === opt.value ? "font-semibold" : ""}`}
-                          style={{ border: 0, background: 'none', textAlign: 'left' }}
+                          variant={`${priceFilter === opt.value ? "selected-light" : "body-light"}`}
+                          className="cursor-pointer px-3 py-2"
                           onClick={() => {
                             onSelectPrice(opt.value);
                             setShowPriceMenu(false);
                           }}
                         >
                           {opt.label}
-                        </div>
+                        </AppText>
                       ))}
                     </div>
                   )}

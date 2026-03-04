@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { isOpenNow } from "@/core/domain/enums/openingHoursUtils";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from "../ui/AppText";
 
 export interface Period {
   days: string[];
@@ -62,9 +63,7 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
           <button ref={closeBtnRef} onClick={onClose} className="btn-close-round text-xl font-bold focus:outline-none focus:ring-2 focus:ring-bs-red/70" aria-label={t('common.close')}>×</button>
         </div>
         {customMessage ? (
-          <div className="p-5 text-center">
-            <p className="mb-4 text-sm text-gray-200">{customMessage}</p>
-          </div>
+          <AppText variant="body-dark" className="p-5 mb-4 text-center">{customMessage}</AppText>
         ) : (
           <div className="p-4">
             {pattern?.periods?.length ? (
@@ -100,7 +99,7 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
                 })}
               </ul>
             ) : (
-              <div className="text-center text-sm text-gray-300">{t('openingHours.notProvided')}</div>
+              <AppText variant="body-dark" className="flex-1 text-center">{t('openingHours.notProvided')}</AppText>
             )}
           </div>
         )}

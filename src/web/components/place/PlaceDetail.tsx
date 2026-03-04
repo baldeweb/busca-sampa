@@ -158,20 +158,16 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             </AppText>
                             <button onClick={() => setShowVisitModal(false)} className="btn-close-round text-xl font-bold">×</button>
                         </div>
-                        <div className="p-5 text-center">
-                            <p className="mb-2 text-sm text-gray-200">
-                                {isAlreadyVisited ? (
-                                    // text for places already visited
-                                    t('placeDetail.visitedModalParagraph')
-                                ) : (
-                                    // text for places pending visit (existing behavior)
-                                    <>
-                                        {t('placeDetail.visitModalParagraph')}<br /><br />
-                                        <span className="font-bold text-red-400">{t('placeDetail.neverEmphasis')}</span> {t('placeDetail.visitModalEnding')}
-                                    </>
-                                )}
-                            </p>
-                        </div>
+                        <AppText variant="body-dark" className="p-5 text-center">
+                            {isAlreadyVisited ? (
+                                t('placeDetail.visitedModalParagraph')
+                            ) : (
+                                <>
+                                    {t('placeDetail.visitModalParagraph')}<br /><br />
+                                    <span>{t('placeDetail.neverEmphasis')}</span> {t('placeDetail.visitModalEnding')}
+                                </>
+                            )}
+                        </AppText>
                     </div>
                 </div>
             )}
@@ -194,7 +190,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                             </div>
                         )}
                     >
-                        <p className="text-xs sm:text-sm text-gray-700">{description}</p>
+                        <AppText variant="subtitle-light">{description}</AppText>
                         {priceRange && (
                             <p className="text-xs mt-1 text-gray-700">
                                 <span className="font-semibold">{t('placeDetail.priceLabel')}</span> {getPriceRangeLabel(priceRange as any)}
@@ -231,7 +227,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         </div>
                         <div className="mt-2 space-y-2 mb-2">
                             {openingPatternId === 'CHECK_AVAILABILITY_DAYTIME' ? (
-                                <div className="text-sm text-gray-700 mr-32">{t('openingHours.checkAvailabilityMessage')}</div>
+                                <AppText variant="body-light">{t('openingHours.checkAvailabilityMessage')}</AppText>
                             ) : (
                                 openingDays.map((day, idx) => {
                                     const normalized = String(day).toLowerCase();
@@ -245,7 +241,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                             >
                                                 <FaCheck className="text-white text-[10px] sm:text-xs" />
                                             </span>
-                                            <span className="text-sm text-gray-800">{day}</span>
+                                            <AppText variant="body-light">{day}</AppText>
                                         </div>
                                     );
                                 })
@@ -311,14 +307,14 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                             <div className="mb-1">
                                                                 <div className="flex items-center">
                                                                     {addr?.isMainUnity && <FaStar className="mr-2 text-yellow-400" />}
-                                                                    <AppText variant="subtitle-dark" className="text-xs text-gray-600">•Unidade {neighborhoodText}</AppText>
+                                                                    <AppText variant="subtitle-light">•Unidade {neighborhoodText}</AppText>
                                                                 </div>
                                                             </div>
                                                         ) : (
-                                                            <AppText variant="subtitle-dark" className="text-xs text-gray-600">• {neighborhoodText}</AppText>
+                                                            <AppText variant="subtitle-light">{neighborhoodText}</AppText>
                                                         )}
                                                     </div>
-                                                    <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {streetText}</div>
+                                                    <AppText variant="subtitle-light">{t('placeDetail.streetPrefix')} {streetText}</AppText>
                                                     <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
                                                         {isMobileOrTablet ? (
                                                             <>
@@ -341,9 +337,14 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                                 </AppButton>
                                                             </>
                                                         ) : (
-                                                            <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center bg-bs-red text-white px-2 py-3 sm:px-3 sm:py-4 rounded font-bold text-xs sm:text-sm text-center btn-red">
+                                                            <AppButton
+                                                                variant="action"
+                                                                size="md"
+                                                                onClick={() => window.open(mapsHref, '_blank', 'noopener noreferrer')}
+                                                                className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 3"
+                                                            >
                                                                 <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
-                                                            </a>
+                                                            </AppButton>
                                                         )}
                                                     </div>
                                                 </div>
@@ -353,10 +354,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 ) : (
                                     <div className="flex items-start w-full">
                                         <div className="w-full">
-                                            <div>
-                                                <span className="font-bold uppercase text-black">{neighborhood}</span>
-                                            </div>
-                                            <div className="text-sm sm:text-sm text-gray-800">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</div>
+                                            <AppText variant="subtitle-light" className="text-xs text-gray-600">{neighborhood}</AppText>
+                                            <AppText variant="body-light" className="text-xs text-gray-600">{t('placeDetail.streetPrefix')} {String(address || '').replace(/\bs\/n\b/ig, 'sem número')}</AppText>
                                             <div className="mt-3 flex flex-row flex-nowrap items-stretch gap-2 w-full">
                                                 {isMobileOrTablet ? (
                                                     <>
@@ -441,7 +440,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     {t('placeDetail.onCall')}
                                                 </AppButton>
                                                 {phoneDisplay && (
-                                                    <AppText variant="subtitle-dark" className="text-xs sm:text-sm text-gray-200 font-semibold">
+                                                    <AppText variant="selected-dark">
                                                         {phoneDisplay}
                                                     </AppText>
                                                 )}

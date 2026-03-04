@@ -3,7 +3,6 @@ interface SectionHeadingProps {
   subtitle?: string;
   className?: string;
   underline?: boolean;
-  sizeClass?: string;
   trackingClass?: string; // novo: controlar espaçamento entre letras
   id?: string;
   leadingIcon?: React.ReactNode;
@@ -21,7 +20,6 @@ export function SectionHeading({
   subtitle,
   className,
   underline = true,
-  sizeClass,
   trackingClass,
   id,
   leadingIcon,
@@ -38,7 +36,7 @@ export function SectionHeading({
   const titleVariant = `title-${resolvedTone}` as AppTextVariant;
   const subtitleVariant = `subtitle-${resolvedTone}` as AppTextVariant;
 
-  const headingClassParts = [sizeClass, 'break-words'];
+  const headingClassParts = ['break-words'];
   if (trackingClass) headingClassParts.push(trackingClass);
   const headingClass = headingClassParts.filter(Boolean).join(' ');
 

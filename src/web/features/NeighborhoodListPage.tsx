@@ -12,7 +12,6 @@ import EnvironmentGrid from '@/web/components/ui/EnvironmentGrid';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { EnvironmentSelectModal } from '@/web/components/place/EnvironmentSelectModal';
 import { FilterBar } from '@/web/components/ui/FilterBar';
-// import { FiltersModal } from '@/web/components/place/FiltersModal';
 import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
@@ -123,7 +122,6 @@ export const NeighborhoodListPage: React.FC = () => {
     { value: 'neighborhood-asc' },
   ];
   const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
-  // const [showFiltersModal, setShowFiltersModal] = useState(false);
   const [filterOpenNow, setFilterOpenNow] = useState(false);
   const [scheduleFilter, setScheduleFilter] = useState<'any'|'required'|'not-required'>('any');
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
@@ -365,8 +363,6 @@ export const NeighborhoodListPage: React.FC = () => {
             />
         </div>
       </section>
-
-        {/* Inline filters replace the old FiltersModal */}
 
       {/* Filtro por tipo (grid, igual à página de lugares) */}
       {environments.length > 0 && (

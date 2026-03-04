@@ -13,6 +13,7 @@ import turkiyeFlag from "@/assets/imgs/flags/img_flag_turkiye.png";
 import arabicFlag from "@/assets/imgs/flags/img_flag_arabic.png";
 import { useTranslation } from 'react-i18next';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
+import { AppText } from "../ui/AppText";
 
 const LANGUAGES = [
     { code: "pt", name: "Português (BR)", flag: brazilFlag },
@@ -67,7 +68,7 @@ export function LanguageSelectorModal({ onClose }: Props) {
                                 onClick={() => handleSelect(lang.code)}
                                 className={`flex w-full items-center justify-between px-4 py-2 hover:bg-bs-red/70 ${current === lang.code ? 'bg-bs-red/40' : ''}`}
                             >
-                                <div className="flex items-center gap-3">
+                                <AppText variant="selected-light" className="flex items-center gap-3">
                                     <img
                                         src={lang.flag}
                                         alt={lang.name}
@@ -76,9 +77,9 @@ export function LanguageSelectorModal({ onClose }: Props) {
                                         decoding="async"
                                         className="h-6 w-6 rounded-full border border-white/40"
                                     />
-                                    <span className="text-sm">{lang.name}</span>
-                                </div>
-                                {current === lang.code && <span className="text-xs font-bold">✓</span>}
+                                    {lang.name}
+                                </AppText>
+                                {current === lang.code && <AppText variant="selected-light">✓</AppText>}
                             </button>
                         </li>
                     ))}

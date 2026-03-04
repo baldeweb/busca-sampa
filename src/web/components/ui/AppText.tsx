@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 
 type Tone = 'light' | 'dark';
 
-type AppTextBaseVariant = 'header' | 'title' | 'subtitle' | 'body' | 'btn-sm' | 'btn-md' | 'btn-lg';
+type AppTextBaseVariant = 'header' | 'title' | 'subtitle' | 'body' | 'selected' | 'btn-sm' | 'btn-md' | 'btn-lg';
 export type AppTextVariant = `${AppTextBaseVariant}-${Tone}`;
 
 export interface AppTextProps {
@@ -11,6 +11,7 @@ export interface AppTextProps {
   variant?: AppTextVariant;
   className?: string;
   id?: string;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 const VARIANT_CLASSES: Record<AppTextVariant, string> = {
@@ -26,6 +27,9 @@ const VARIANT_CLASSES: Record<AppTextVariant, string> = {
   'body-light': 'font-montserrat font-regular leading-relaxed text-[0.9rem] text-[#212121]',
   'body-dark': 'font-montserrat font-regular leading-relaxed text-[0.9rem] text-[#F5F5F5]',
 
+  'selected-light': 'font-montserrat font-bold leading-relaxed text-[0.9rem] text-[#212121]',
+  'selected-dark': 'font-montserrat font-bold leading-relaxed text-[0.9rem] text-[#F5F5F5]',
+
   'btn-sm-light': 'font-gothic font-semibold text-[0.1rem] tracking-[0.12em] text-[#212121]',
   'btn-sm-dark': 'font-gothic font-semibold text-[0.1rem] tracking-[0.12em] text-[#F5F5F5]',
 
@@ -36,13 +40,13 @@ const VARIANT_CLASSES: Record<AppTextVariant, string> = {
   'btn-lg-dark': 'font-gothic font-semibold text-[0.8rem] tracking-[0.12em] text-[#F5F5F5]',
 };
 
-export function AppText({ children, as = 'p', variant = 'body-dark', className = '', id }: AppTextProps) {
+export function AppText({ children, as = 'p', variant = 'body-dark', className = '', id, onClick }: AppTextProps) {
   // eslint-disable-next-line react/jsx-pascal-case
   const Component: any = as;
 
   const classes = [VARIANT_CLASSES[variant], className].filter(Boolean).join(' ').trim();
   return (
-    <Component id={id} className={classes}>
+    <Component id={id} className={classes} onClick={onClick}>
       {children}
     </Component>
   );

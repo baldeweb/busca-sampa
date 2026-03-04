@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { AppButton } from '../ui/AppButton';
+import { AppText } from '../ui/AppText';
 
 interface ToolbarProps {
   onBack: () => void;
@@ -21,26 +23,32 @@ export const Toolbar: React.FC<ToolbarProps> = ({
     <>
       <section className="fixed top-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] border-b-2 border-bs-red z-50">
         <div className="mx-auto max-w-5xl px-4 sm:px-12 flex items-center pt-8 sm:pt-12 pb-4">
-          <button onClick={onBack} className="btn-plain text-white text-xl sm:text-2xl font-bold flex items-center">
-            <FaArrowLeft className="mr-2" /> <span className="footer-label text-xl sm:text-2xl">{t('common.back')}</span>
-          </button>
+          <AppButton
+            variant="ghost"
+            onClick={onBack}
+            className="flex items-center"
+          >
+            <FaArrowLeft className="mr-2" /> <AppText variant="body-light">{t('common.back')}</AppText>
+          </AppButton>
 
           <div className="ml-auto flex gap-2">
             {showVisitedButton && (
               isAlreadyVisited ? (
-                <button
-                  className="bg-green-600 text-white text-sm font-bold px-3 py-1.5 rounded shadow flex items-center"
+                <AppButton
+                  variant="primary"
                   onClick={onVisitedClick}
+                  className="px-3 py-1.5"
                 >
                   {t('placeDetail.alreadyVisited')}
-                </button>
+                </AppButton>
               ) : (
-                <button
-                  className="bg-yellow-400 text-black text-sm font-bold px-3 py-1.5 rounded shadow flex items-center border border-yellow-600"
+                <AppButton
+                  variant="primary"
                   onClick={onVisitedClick}
+                  className="px-3 py-1.5"
                 >
                   {t('placeDetail.notVisited')}
-                </button>
+                </AppButton>
               )
             )}
           </div>

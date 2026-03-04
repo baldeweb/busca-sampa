@@ -92,7 +92,7 @@ export function NearbyMapModal({ onClose, userLocation, places, title }: NearbyM
           <button
             type="button"
             onClick={onClose}
-            className="text-sm leading-none rounded-full border border-white/25 px-2 py-1 sm:px-3 sm:py-2 hover:border-bs-red font-bold"
+            className="leading-none rounded-full border border-white/25 px-2 py-1 sm:px-3 sm:py-2 hover:border-bs-red font-bold"
           >
             {t('common.close')}
           </button>
