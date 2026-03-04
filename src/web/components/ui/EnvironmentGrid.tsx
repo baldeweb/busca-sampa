@@ -36,7 +36,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
         <AppButton
           variant="all"
           onClick={() => onSelect(null)}
-          className={`inline-flex items-center justify-center align-top px-4 py-4 leading-tight transition-colors border shadow-sm`}
+          className={`inline-flex align-top px-4 py-4 leading-tight`}
         >
           {t('common.all')}
         </AppButton>

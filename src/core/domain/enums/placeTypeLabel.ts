@@ -11,7 +11,7 @@ const PLURAL_MAP: Record<string, string> = {
   NIGHTLIFE: 'Vida Noturna',
   COFFEES: 'Cafeterias',
   NATURE: 'Natureza',
-  TOURIST_SPOT: 'Pontos Turísticos',
+  TOURIST_SPOT: 'Turísticos',
   FORFUN: 'Diversão',
   STORES: 'Lojas',
 };
@@ -22,7 +22,7 @@ const SINGULAR_MAP: Record<string, string> = {
   NIGHTLIFE: 'Vida Noturna',
   COFFEES: 'Cafeteria',
   NATURE: 'Natureza',
-  TOURIST_SPOT: 'Ponto Turístico',
+  TOURIST_SPOT: 'Turístico',
   FORFUN: 'Diversão',
   STORES: 'Loja',
 };

@@ -76,7 +76,6 @@ export function SectionHeading({
               <span>{upper}</span>
             </span>
           </AppText>
-          {underline && <div className="mt-1 h-[3px] w-24 bg-bs-red" />}
           {subtitleNode}
           {children}
         </div>

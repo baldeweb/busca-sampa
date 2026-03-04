@@ -94,7 +94,7 @@ export default function AppLayout() {
                 { '@type': 'ListItem', position: 5, name: 'Vida Noturna', url: `${origin}/vida-noturna` },
                 { '@type': 'ListItem', position: 6, name: 'Cafeterias', url: `${origin}/cafeterias` },
                 { '@type': 'ListItem', position: 7, name: 'Natureza', url: `${origin}/natureza` },
-                { '@type': 'ListItem', position: 8, name: 'Pontos Turísticos', url: `${origin}/pontos-turisticos` },
+                { '@type': 'ListItem', position: 8, name: 'Turísticos', url: `${origin}/pontos-turisticos` },
                 { '@type': 'ListItem', position: 9, name: 'Diversão', url: `${origin}/diversao` },
                 { '@type': 'ListItem', position: 10, name: 'Lojas', url: `${origin}/lojas` },
             ],
