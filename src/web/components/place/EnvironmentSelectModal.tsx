@@ -12,7 +12,6 @@ interface Props {
     environments: EnvironmentOption[];
     onClose: () => void;
     onSelect: (environment: EnvironmentOption | null) => void;
-    selectedEnv: string | null;
     excludedValues?: string[];
 }
 
@@ -20,7 +19,6 @@ export function EnvironmentSelectModal({
     environments,
     onClose,
     onSelect,
-    selectedEnv,
     excludedValues,
 }: Props) {
     const { t } = useTranslation();

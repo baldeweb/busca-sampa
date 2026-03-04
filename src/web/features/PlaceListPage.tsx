@@ -757,7 +757,6 @@ export const PlaceListPage: React.FC = () => {
                 <EnvironmentSelectModal
                     environments={environments}
                     excludedValues={environments.slice(0, visibleEnvironmentCount).map((e) => e.value)}
-                    selectedEnv={selectedEnv}
                     onClose={() => setShowEnvironmentModal(false)}
                     onSelect={(env) => {
                         const next = env?.value || null;

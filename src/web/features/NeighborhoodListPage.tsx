@@ -470,7 +470,6 @@ export const NeighborhoodListPage: React.FC = () => {
         <EnvironmentSelectModal
           environments={environments}
           excludedValues={environments.slice(0, visibleEnvironmentCount).map((e) => e.value)}
-          selectedEnv={selectedType}
           onClose={() => setShowEnvironmentModal(false)}
           onSelect={(env) => {
             const next = env?.value || null;
