@@ -1,5 +1,6 @@
 import { type ReactNode } from "react";
 import { AppButton } from "./AppButton";
+import { AppText } from "./AppText";
 
 interface CategoryCardProps {
   label: ReactNode;
@@ -10,18 +11,20 @@ interface CategoryCardProps {
   index?: number;
 }
 
-export function CategoryCard({ label, icon, selected, lightSelected = false, onClick, index }: CategoryCardProps) {
+export function CategoryCard({ label, icon, selected, onClick, index }: CategoryCardProps) {
     return (
     <AppButton
       variant="square"
       size="lg"
       onClick={onClick}
-      role="option"
       aria-selected={selected}
       tabIndex={index === 0 ? 0 : -1}
       className={"flex gap-2 w-full px-2 sm:px-4"}
     >
-      {icon} {label}
+      <span className="w-6 h-6 flex shrink-0" aria-hidden="true">
+        {icon}
+      </span>
+      {label}
     </AppButton>
   );
 }
