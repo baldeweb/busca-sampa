@@ -509,7 +509,7 @@ export function HomePage() {
                 variant="square"
                 onClick={() => handleNeighborhoodSelect(n)}
                 size="md"
-                className="w-full px-4 py-4 leading-tight transition-color"
+                className="w-full px-4 py-4 leading-tight transition-color justify-center"
               >
                 {n.neighborhoodName}
               </AppButton>

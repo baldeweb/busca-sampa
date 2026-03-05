@@ -92,7 +92,7 @@ const resources = {
       },
       header: {
         title: 'Role Paulista',
-        tagline: 'A melhor recomendação, \na poucos cliques de distância'
+        tagline: 'A melhor recomendação, a poucos cliques de distância'
       },
       common: {
         back: 'Voltar',
