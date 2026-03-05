@@ -8,8 +8,66 @@
  */
 export function resolveBaseUrl(): URL {
   const rawBase = import.meta.env.BASE_URL || "/";
-  // Ensure the base is absolute so URL resolution works in both dev and prod.
-  return new URL(rawBase, window.location.href);
+
+  // Absolute base URL (rare, but valid)
+  if (/^https?:\/\//i.test(rawBase)) {
+    return new URL(rawBase);
+  }
+
+  // If the base is an absolute path, prefer it directly.
+  // Example: '/busca-sampa/' -> always resolve under that prefix.
+  if (rawBase.startsWith("/") && rawBase !== "./") {
+    return new URL(rawBase, window.location.origin);
+  }
+
+  // For relative base ('./'), do NOT resolve against window.location.href.
+  // On deep routes like '/restaurantes/slug', resolving './' against the current
+  // URL yields '/restaurantes/' and breaks fetches to public data assets.
+  //
+  // Instead, infer the app "mount" path:
+  // - If the first segment looks like a known route, assume app root '/'
+  // - Otherwise, treat the first segment as a deployment subpath (e.g. '/busca-sampa/')
+  const pathname = window.location.pathname || "/";
+  const firstSegment = pathname.split("/").filter(Boolean)[0] || "";
+  const knownFirstSegments = new Set([
+    "restaurantes",
+    "restaurants",
+    "bares",
+    "bars",
+    "cafeterias",
+    "coffees",
+    "vida-noturna",
+    "nightlife",
+    "natureza",
+    "nature",
+    "pontos-turisticos",
+    "tourist-spot",
+    "diversao",
+    "forfun",
+    "lojas",
+    "stores",
+    "prazer",
+    "pleasure",
+    "free",
+    "gratuito",
+    "abrem-hoje",
+    "bairro",
+    "neighborhood",
+    "place",
+    "roteiros",
+    "travel-itinerary",
+    "search",
+    "about",
+    "support",
+    "recommendations-origin",
+    "how-to-recommend",
+  ]);
+
+  const mountPath = firstSegment && !knownFirstSegments.has(firstSegment)
+    ? `/${firstSegment}/`
+    : "/";
+
+  return new URL(mountPath, window.location.origin);
 }
 
 export function resolvePublicUrl(relativePath: string): string {
