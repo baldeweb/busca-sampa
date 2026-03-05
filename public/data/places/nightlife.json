@@ -472,7 +472,8 @@
             "PAGODE"
         ],
         "listTypes": [
-            "NIGHTLIFE", "BARS"
+            "NIGHTLIFE",
+            "BARS"
         ]
     },
     {
@@ -737,7 +738,195 @@
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
-            "NIGHTLIFE", "BARS"
+            "NIGHTLIFE",
+            "BARS"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Bogota.sp",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Evento latino, sem local fixo"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "A verificar",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Súbete",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Evento latino, sem local fixo"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "A verificar",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Mambo Pink",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Danceteria latina, sem local fixo"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Lapa",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Ephigenia",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Ô de Casa Hostel e Bar",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Hostel, Bar e encontro de estrangeiros"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
         ]
     }
 ]

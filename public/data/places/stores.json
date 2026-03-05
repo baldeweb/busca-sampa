@@ -1,1 +1,230 @@
-[]
+[    
+    {
+        "id": 1,
+        "name": "Casa Godinho",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Local centenário"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "STORES"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Combu Produtos da Amazonia",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "loja de produtos amazonicos"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "STORES"
+        ]
+    },
+  {
+    "id": 3,
+    "name": "Rafih Empório e Doceria",
+    "phones": [],
+    "openingHours": {
+      "patternId": "",
+      "customOverrides": []
+    },
+    "isAlreadyVisited": false,
+    "isOpenOnSundays": true,
+    "isOpenOnMonday": false,
+    "isOpenOnHolidays": false,
+    "shouldSchedule": false,
+    "notes": [
+      "Doceria Árabe"
+    ],
+    "priceRange": "ECONOMIC",
+    "addresses": [
+      {
+        "id": 1,
+        "street": "",
+        "number": "",
+        "city": "São Paulo",
+        "neighborhood": "Moema",
+        "postalCode": "",
+        "isMainUnity": true,
+        "latitude": null,
+        "longitude": null
+      }
+    ],
+    "linkMenu": "",
+    "linkWebsite": "",
+    "linkInstagram": "",
+    "tags": [],
+    "listTypes": [
+      "STORES"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Empório Belmiro",
+    "phones": [],
+    "openingHours": {
+      "patternId": "",
+      "customOverrides": []
+    },
+    "isAlreadyVisited": false,
+    "isOpenOnSundays": true,
+    "isOpenOnMonday": false,
+    "isOpenOnHolidays": false,
+    "shouldSchedule": false,
+    "notes": [
+      "Cafeteria Mineira"
+    ],
+    "priceRange": "ECONOMIC",
+    "addresses": [
+      {
+        "id": 1,
+        "street": "",
+        "number": "",
+        "city": "São Paulo",
+        "neighborhood": "Vila Madalena",
+        "postalCode": "",
+        "isMainUnity": true,
+        "latitude": null,
+        "longitude": null
+      }
+    ],
+    "linkMenu": "",
+    "linkWebsite": "",
+    "linkInstagram": "",
+    "tags": [],
+    "listTypes": [
+      "STORES"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Empório Pata Negra",
+    "phones": [],
+    "openingHours": {
+      "patternId": "",
+      "customOverrides": []
+    },
+    "isAlreadyVisited": false,
+    "isOpenOnSundays": true,
+    "isOpenOnMonday": false,
+    "isOpenOnHolidays": false,
+    "shouldSchedule": false,
+    "notes": [
+      "Empório Espanhol"
+    ],
+    "priceRange": "ECONOMIC",
+    "addresses": [
+      {
+        "id": 1,
+        "street": "",
+        "number": "",
+        "city": "São Paulo",
+        "neighborhood": "Ipiranga",
+        "postalCode": "",
+        "isMainUnity": true,
+        "latitude": null,
+        "longitude": null
+      }
+    ],
+    "linkMenu": "",
+    "linkWebsite": "",
+    "linkInstagram": "",
+    "tags": [],
+    "listTypes": [
+      "STORES"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Empório Sant Ângela",
+    "phones": [],
+    "openingHours": {
+      "patternId": "",
+      "customOverrides": []
+    },
+    "isAlreadyVisited": false,
+    "isOpenOnSundays": true,
+    "isOpenOnMonday": false,
+    "isOpenOnHolidays": false,
+    "shouldSchedule": false,
+    "notes": [
+      "Opções diversas de queijo"
+    ],
+    "priceRange": "ECONOMIC",
+    "addresses": [
+      {
+        "id": 1,
+        "street": "",
+        "number": "",
+        "city": "São Paulo",
+        "neighborhood": "Pompeia",
+        "postalCode": "",
+        "isMainUnity": true,
+        "latitude": null,
+        "longitude": null
+      }
+    ],
+    "linkMenu": "",
+    "linkWebsite": "",
+    "linkInstagram": "",
+    "tags": [],
+    "listTypes": [
+      "STORES"
+    ]
+  }
+]

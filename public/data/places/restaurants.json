@@ -2085,7 +2085,8 @@
             "OPEN_24_HOURS"
         ],
         "listTypes": [
-            "RESTAURANTS", "BARS"
+            "RESTAURANTS",
+            "BARS"
         ]
     },
     {
@@ -2561,10 +2562,3293 @@
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/izakaya.bankaa/",
         "tags": [
-            "IZAKAYA", "ASIAN", "JAPANESE" 
+            "IZAKAYA",
+            "ASIAN",
+            "JAPANESE"
         ],
         "listTypes": [
-            "RESTAURANTS", "BARS"
+            "RESTAURANTS",
+            "BARS"
+        ]
+    },
+    {
+        "id": 54,
+        "name": "La Peruana Cevicheria",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Myk",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Grego"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardins",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Petros",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Grego"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Patties",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburgueria Take Away"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Z Deli Sandwich Shop",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburgueria/Sanduicheria"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Bob Esponja Burguer & Restaurante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Temático Bob Esponja"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Terraço Itália",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Nino Cucina",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Poop Coffee",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Dentro da Galeria Legal"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Rendez-Vous",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurantes Francês; tem beef wellington"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Frida & Mina Sorveteria",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Sorveteria"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Chévere Cozinha e Bar",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante latino"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Barra Funda",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Parrilinha Ipiranga",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Argentino"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Ipiranga",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Master Curry Japanese Kitchen",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Japones"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila da Saúde",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Ogamé Sao Paulo",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Churrasco Coreano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Liberdade Side Street",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Galeria de restaurantes"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Carlino Ristorante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Mais antigo de SP, existe desde 1881"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "The Oriental Sushiya",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Omakase barato"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Mirandopolis",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Izakabar Aoyama",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Izakaya Bar com Karaoke"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Moema",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS",
+            "BARS"
+        ]
+    },
+    {
+        "id": 73,
+        "name": "On Board Bus",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Onibus restaurante, 2h de trajeto"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "A verificar",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Doca Steak",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Steak House"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Travessa do Bruxo",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburgueria temática de bruxo"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Mazbut Culinária Árabe",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "DCK Burguer",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Ja foi eleita uma das melhores hamburguerias"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Costela e Cia",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cortes diferentes da costela"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "SBC",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Hot Dog do seu Angelo",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "famoso HotDog do Seu Angelo"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Lapa",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Atithi - Restaurante Indiano",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Indiano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Beit Jede - Restaurante Libanês",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Libanes"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Canindé",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Rac-Coon Smoke House",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Americano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Olimpia",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Lellis Tratoria",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Italiano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Cozinha dos Ferrari",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Italiano familiar"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Mooca",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Rei do Filet",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Mata Città",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Italiano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Jardim Dourado",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Chinês / Temático"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Reet Namastê",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Indiano e com rodízio"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Barakah Cozinha Árabe",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Árabe"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Churrasqueto",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Yume Mart",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Chegar cedo porque o local é pequeno"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Joya Boulangerie",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Doces finos"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Restaurante Sushi Isao",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Comida japonesa por kg"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Vicino - Cucina & Vino",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Italiano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Guarulhos",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Suzuki Ie",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Fazem combinados com peixes frescos do dia"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Gioconda Helenika",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Pizzaria Grega"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Windhuk",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Resturante Alemão"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Moema",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Mercado Kinjo Yamato",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Local com restaurantes chineses e árabes"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Fuego Celeste",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Uruguaio"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Indianópolis",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 100,
+        "name": "Cusco Cozinha Peruana",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Santo Amaro",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Três Pescadores",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Frutos do Mar e rodizio de peixes"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Butantã",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Malakut Árabe",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante e venda de itens árabes"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Restaurante Manden Baoba",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Africano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "13 da Yakuza",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Guarulhos",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "La Perla",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Venezuelano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pompeia",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 106,
+        "name": "Chalezinho Morumbi",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Italiano e Fondues"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Morumbi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 107,
+        "name": "ARZ do Libano",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Libanês"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 108,
+        "name": "KuroMoon 黒문",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Izakaya"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Paraíso",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "Beyti Restaurante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Culinária Árabe e Turca; Self-service ou prato"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Olimpia",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "Machado Mooca Restaurante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Comida Brasileira Nordestina"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Mooca",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 111,
+        "name": "Restaurante Tordesilhas",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Releitura de comida brasileira"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardins",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Aboud Siria",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Sírio"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "Boteco Nancy",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Famoso pastel de camarão; dentro do mercadão"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Ian Restaurante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Armênio"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Brooklin",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "Tucupi do Centro",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Pratos da região Norte do país"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "Kebab Point",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Turco; foco em Kebab"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Barcha Food",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Tunisiano"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jurubatuba",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Magia & Bruxaria",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Temático Harry Potter"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jurubatuba",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 119,
+        "name": "Xêro de Cuscuz",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Comida Brasileira; nordestina"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Capão Redondo",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Casa 1001 Noites",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Pratos árabes/libaneses e tem aulas de dança"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 121,
+        "name": "Merenda da Cidade",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Prato feito bom, bonito e barato"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 122,
+        "name": "Pizzaria Castelões",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Aberta desde 1924, a mais antiga da cidade"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Brás",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 123,
+        "name": "Kidoairaku Japanese Cuisine",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Japonês clássico"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 124,
+        "name": "Prego Unico",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Lanchonete italiana com cardápio clássico"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Olimpia",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Restaurante Iramar Peixes",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Rodízio de Frutos do Mar"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 126,
+        "name": "O Gato que Ri",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cantina Italiana; aberta desde 1951"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 127,
+        "name": "Ristorante Carlino",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "O mais antigo de SP; aberto desde 1881"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 128,
+        "name": "Mugui",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Japonês clássico"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 129,
+        "name": "Chico Grill",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburguer e espetinho"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 130,
+        "name": "O Bacalhau do Porto",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Português"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Ipiranga",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 131,
+        "name": "Niigata Sushi",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Rodizio Japonês"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Leopoldina",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 132,
+        "name": "Sukiyaki House",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Japonês clássico"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 133,
+        "name": "Cantina Piolin",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cantina Italiana"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Consolação",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 134,
+        "name": "Lobozó Restaurante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Brasileiro"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 135,
+        "name": "Restaurante Gui Gui",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Churrasco coreano barato"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 136,
+        "name": "Dabok Korean Food",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Coreano barato"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 137,
+        "name": "Nikkey Restaurante",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante Japones por kg"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 138,
+        "name": "Kobe Burguer",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburgueria Wagyu Ceritified"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "S.A. Yakiniku Jardim Analia",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Rodizio japones e churrasco japones"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
+        ]
+    },
+    {
+        "id": 140,
+        "name": "Sujinho",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Consolação",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "RESTAURANTS"
         ]
     }
 ]

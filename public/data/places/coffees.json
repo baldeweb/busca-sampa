@@ -377,5 +377,452 @@
         "listTypes": [
             "COFFEES"
         ]
+    },
+    {
+        "id": 8,
+        "name": "Botanikafé",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Mi&Mo Gato Café",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria que te deixa interagir com gatos"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Paraiso",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Padaria Bella Paulista",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "1908 Coffee Station",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria Japonesa"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Paraíso",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Padaria Santa Tereza",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Mais antiga de SP, existe de 1872"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Sé",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Bake Sale",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Confeitaria/doceria"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Jardins",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Fresh Cake Factory",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria Coreana"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "London Coffee Station",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Santú Padaria Artesanal",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Fermentação natural"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Perdizes",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Caral Gastrobar & Coffee",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria com influência peruana"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Café Colombiano",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cafeteria Colombiana"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Barra Funda",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Café Girondino",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Aberto desde 1875"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "COFFEES"
+        ]
     }
 ]
