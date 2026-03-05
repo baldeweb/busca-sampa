@@ -1259,5 +1259,12 @@
       { "days": ["SATURDAY"], "open": "19:00", "close": "04:00" },
       { "days": ["SUNDAY"], "open": "17:00", "close": "01:00" }
     ]
+  },
+  {
+    "id": "MUGSP_DAYTIME",
+    "description": "Horários do Mug.sp",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "08:00", "close": "20:00" }
+    ]
   }
 ]

@@ -260,7 +260,7 @@
             }
         ],
         "openingHours": {
-            "patternId": "ALWAYS_OPEN",
+            "patternId": "MUGSP_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,

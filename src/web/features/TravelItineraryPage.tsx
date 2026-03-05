@@ -437,7 +437,7 @@ export function TravelItineraryPage() {
     const onVerRota = () => {
         const pts = orderedPoints.map(p => ({ lat: p.lat, lng: p.lng }));
         const url = buildGoogleMapsDirectionsUrl(pts);
-        if (url) window.open(url, '_blank');
+        if (url) window.open(url);
     };
 
     return (
@@ -585,7 +585,7 @@ export function TravelItineraryPage() {
 
                         <div
                             ref={mapRef}
-                            style={{ height: 320, border: '1px solid #212121', borderRadius: 8, overflow: 'hidden' }}
+                            style={{ height: 280, border: '1px solid #212121', borderRadius: 8, overflow: 'hidden' }}
                             className="w-full mt-4"
                         />
 
