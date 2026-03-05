@@ -17,7 +17,8 @@
                 "id": 29,
                 "placeType": "NIGHTLIFE"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 2,
@@ -37,7 +38,8 @@
                 "id": 9,
                 "placeType": "NIGHTLIFE"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 3,
@@ -61,7 +63,8 @@
                 "id": 2,
                 "placeType": "NATURE"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 4,
@@ -85,6 +88,7 @@
                 "id": 1,
                 "placeType": "FORFUN"
             }
-        ]
+        ],
+        "isEnabled": true
     }
 ]

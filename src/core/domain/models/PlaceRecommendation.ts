@@ -7,6 +7,7 @@ import type { RecommendationType } from "../enums/RecommendationType";
 export interface PlaceRecommendation {
     id: number;
     name: string;
+    isEnabled?: boolean;
     listTypes: RecommendationType[];
     phones: Phone[];
     openingHours: OpeningHours;

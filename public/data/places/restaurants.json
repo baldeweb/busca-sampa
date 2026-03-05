@@ -45,7 +45,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 2,
@@ -90,7 +91,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 3,
@@ -135,7 +137,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 4,
@@ -177,7 +180,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 5,
@@ -245,7 +249,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 6,
@@ -291,7 +296,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 7,
@@ -338,7 +344,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 8,
@@ -384,7 +391,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 9,
@@ -430,7 +438,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 10,
@@ -476,7 +485,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 11,
@@ -521,7 +531,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 12,
@@ -574,7 +585,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 13,
@@ -619,7 +631,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 14,
@@ -664,7 +677,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 15,
@@ -718,7 +732,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 16,
@@ -768,7 +783,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 17,
@@ -819,7 +835,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 18,
@@ -867,7 +884,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 19,
@@ -914,7 +932,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 20,
@@ -970,7 +989,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 21,
@@ -1019,7 +1039,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 22,
@@ -1065,7 +1086,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 23,
@@ -1132,7 +1154,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 24,
@@ -1193,7 +1216,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 25,
@@ -1238,7 +1262,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 26,
@@ -1284,7 +1309,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 27,
@@ -1360,7 +1386,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 28,
@@ -1405,7 +1432,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 29,
@@ -1465,7 +1493,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 30,
@@ -1511,7 +1540,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 31,
@@ -1571,7 +1601,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 32,
@@ -1618,7 +1649,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 33,
@@ -1665,7 +1697,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 34,
@@ -1712,7 +1745,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 35,
@@ -1757,7 +1791,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 38,
@@ -1812,7 +1847,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 39,
@@ -1857,7 +1893,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 40,
@@ -1903,7 +1940,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 41,
@@ -1948,7 +1986,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 42,
@@ -1993,7 +2032,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 43,
@@ -2040,7 +2080,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 44,
@@ -2087,7 +2128,8 @@
         "listTypes": [
             "RESTAURANTS",
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 45,
@@ -2132,7 +2174,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 46,
@@ -2179,7 +2222,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 47,
@@ -2257,7 +2301,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 48,
@@ -2302,7 +2347,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 49,
@@ -2347,7 +2393,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 50,
@@ -2416,7 +2463,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 51,
@@ -2462,7 +2510,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 52,
@@ -2519,7 +2568,8 @@
         ],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 53,
@@ -2569,7 +2619,8 @@
         "listTypes": [
             "RESTAURANTS",
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 54,
@@ -2604,7 +2655,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 55,
@@ -2642,7 +2694,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 56,
@@ -2680,7 +2733,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 57,
@@ -2718,7 +2772,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 58,
@@ -2756,7 +2811,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 59,
@@ -2794,7 +2850,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 60,
@@ -2829,7 +2886,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 61,
@@ -2864,7 +2922,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 62,
@@ -2902,7 +2961,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 63,
@@ -2940,7 +3000,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 64,
@@ -2978,7 +3039,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 65,
@@ -3016,7 +3078,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 66,
@@ -3054,7 +3117,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 67,
@@ -3092,7 +3156,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 68,
@@ -3130,7 +3195,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 69,
@@ -3168,7 +3234,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 70,
@@ -3206,7 +3273,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 71,
@@ -3244,7 +3312,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 72,
@@ -3283,7 +3352,8 @@
         "listTypes": [
             "RESTAURANTS",
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 73,
@@ -3321,7 +3391,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 74,
@@ -3359,7 +3430,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 75,
@@ -3397,7 +3469,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 76,
@@ -3432,7 +3505,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 77,
@@ -3470,7 +3544,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 78,
@@ -3508,7 +3583,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 79,
@@ -3546,7 +3622,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 80,
@@ -3584,7 +3661,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 81,
@@ -3622,7 +3700,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 82,
@@ -3660,7 +3739,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 83,
@@ -3698,7 +3778,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 84,
@@ -3736,7 +3817,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 85,
@@ -3771,7 +3853,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 86,
@@ -3809,7 +3892,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 87,
@@ -3847,7 +3931,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 88,
@@ -3885,7 +3970,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 89,
@@ -3923,7 +4009,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 90,
@@ -3958,7 +4045,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 91,
@@ -3996,7 +4084,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 92,
@@ -4034,7 +4123,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 93,
@@ -4072,7 +4162,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 94,
@@ -4110,7 +4201,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 95,
@@ -4148,7 +4240,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 96,
@@ -4186,7 +4279,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 97,
@@ -4224,7 +4318,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 98,
@@ -4262,7 +4357,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 99,
@@ -4300,7 +4396,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 100,
@@ -4335,7 +4432,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 101,
@@ -4373,7 +4471,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 102,
@@ -4411,7 +4510,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 103,
@@ -4449,7 +4549,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 104,
@@ -4484,7 +4585,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 105,
@@ -4522,7 +4624,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 106,
@@ -4560,7 +4663,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 107,
@@ -4598,7 +4702,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 108,
@@ -4636,7 +4741,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 109,
@@ -4674,7 +4780,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 110,
@@ -4712,7 +4819,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 111,
@@ -4750,7 +4858,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 112,
@@ -4788,7 +4897,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 113,
@@ -4826,7 +4936,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 114,
@@ -4864,7 +4975,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 115,
@@ -4902,7 +5014,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 116,
@@ -4940,7 +5053,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 117,
@@ -4978,7 +5092,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 118,
@@ -5016,7 +5131,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 119,
@@ -5054,7 +5170,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 120,
@@ -5092,7 +5209,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 121,
@@ -5130,7 +5248,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 122,
@@ -5168,7 +5287,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 123,
@@ -5206,7 +5326,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 124,
@@ -5244,7 +5365,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 125,
@@ -5282,7 +5404,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 126,
@@ -5320,7 +5443,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 127,
@@ -5358,7 +5482,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 128,
@@ -5396,7 +5521,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 129,
@@ -5434,7 +5560,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 130,
@@ -5472,7 +5599,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 131,
@@ -5510,7 +5638,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 132,
@@ -5548,7 +5677,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 133,
@@ -5586,7 +5716,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 134,
@@ -5624,7 +5755,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 135,
@@ -5662,7 +5794,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 136,
@@ -5700,7 +5833,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 137,
@@ -5738,7 +5872,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 138,
@@ -5776,7 +5911,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 139,
@@ -5814,7 +5950,8 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 140,
@@ -5849,6 +5986,7 @@
         "tags": [],
         "listTypes": [
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     }
 ]

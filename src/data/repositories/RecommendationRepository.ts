@@ -11,6 +11,8 @@ export async function fetchRecommendations(
         throw new Error(`Erro ao carregar ${category}.json`);
     }
 
-    return res.json();
+    const data = (await res.json()) as PlaceRecommendation[];
+    const safeArray = Array.isArray(data) ? data : [];
+    return safeArray.filter((item) => item.isEnabled !== false);
 }
 

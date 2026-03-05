@@ -42,6 +42,7 @@ type TourPlaceRef = {
 type TourItem = {
     id: number;
     name: string;
+    isEnabled?: boolean;
     tourType: string,
     description: string;
     places: TourPlaceRef[];
@@ -144,7 +145,8 @@ export function TravelItineraryPage() {
             })
             .then((data) => {
                 if (!isMounted) return;
-                setTourItems(Array.isArray(data) ? data : []);
+                const safeArray = Array.isArray(data) ? data : [];
+                setTourItems(safeArray.filter((item) => item.isEnabled !== false));
             })
             .catch(() => {
                 if (!isMounted) return;

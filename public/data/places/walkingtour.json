@@ -29,7 +29,8 @@
                 "id": 1,
                 "placeType": "BARS"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 2,
@@ -65,7 +66,8 @@
                 "id": 27,
                 "placeType": "TOURIST_SPOT"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 3,
@@ -89,7 +91,8 @@
                 "id": 22,
                 "placeType": "TOURIST_SPOT"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 4,
@@ -113,7 +116,8 @@
                 "id": 12,
                 "placeType": "BARS"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 5,
@@ -137,7 +141,8 @@
                 "id": 12,
                 "placeType": "NIGHTLIFE"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 5,
@@ -157,7 +162,8 @@
                 "id": 7,
                 "placeType": "NIGHTLIFE"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 6,
@@ -177,7 +183,8 @@
                 "id": 61,
                 "placeType": "NIGHTLIFE"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 7,
@@ -205,7 +212,8 @@
                 "id": 16,
                 "placeType": "RESTAURANTS"
             }
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 8,
@@ -253,6 +261,7 @@
                 "id": 16,
                 "placeType": "NIGHTLIFE"
             }
-        ]
+        ],
+        "isEnabled": true
     }
 ]

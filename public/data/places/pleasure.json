@@ -37,7 +37,8 @@
         "tags": [],
         "listTypes": [
             "PLEASURE"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 2,
@@ -83,7 +84,8 @@
         "tags": [],
         "listTypes": [
             "PLEASURE"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 3,
@@ -127,6 +129,7 @@
         "tags": [],
         "listTypes": [
             "PLEASURE"
-        ]
+        ],
+        "isEnabled": true
     }
 ]

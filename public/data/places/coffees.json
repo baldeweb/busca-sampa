@@ -44,7 +44,8 @@
         ],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 2,
@@ -89,7 +90,8 @@
         ],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 3,
@@ -144,7 +146,8 @@
         ],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 4,
@@ -184,7 +187,8 @@
         ],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 5,
@@ -227,7 +231,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 6,
@@ -333,7 +338,8 @@
         ],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 7,
@@ -376,7 +382,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 8,
@@ -411,7 +418,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 9,
@@ -449,7 +457,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 10,
@@ -484,7 +493,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 11,
@@ -522,7 +532,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 12,
@@ -560,7 +571,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 13,
@@ -598,7 +610,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 14,
@@ -636,7 +649,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 15,
@@ -671,7 +685,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 16,
@@ -709,7 +724,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 17,
@@ -747,7 +763,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 18,
@@ -785,7 +802,8 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 19,
@@ -823,6 +841,7 @@
         "tags": [],
         "listTypes": [
             "COFFEES"
-        ]
+        ],
+        "isEnabled": true
     }
 ]

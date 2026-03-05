@@ -42,7 +42,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 3,
@@ -88,7 +89,8 @@
         ],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 4,
@@ -134,7 +136,8 @@
         ],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 5,
@@ -195,7 +198,8 @@
         "listTypes": [
             "BARS",
             "RESTAURANTS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 6,
@@ -238,7 +242,8 @@
         ],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 7,
@@ -298,7 +303,8 @@
         ],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 8,
@@ -342,7 +348,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 9,
@@ -385,7 +392,8 @@
         ],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 10,
@@ -431,7 +439,8 @@
         ],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 11,
@@ -472,7 +481,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 12,
@@ -514,7 +524,8 @@
         "listTypes": [
             "BARS",
             "NIGHTLIFE"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 13,
@@ -552,7 +563,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 14,
@@ -590,7 +602,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 15,
@@ -625,7 +638,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 16,
@@ -661,7 +675,8 @@
         "listTypes": [
             "BARS",
             "FORFUN"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 17,
@@ -696,7 +711,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 18,
@@ -735,7 +751,8 @@
         "listTypes": [
             "BARS",
             "FORFUN"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 19,
@@ -773,7 +790,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 20,
@@ -808,7 +826,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 21,
@@ -846,7 +865,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 22,
@@ -884,7 +904,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 23,
@@ -922,7 +943,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 24,
@@ -960,7 +982,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 25,
@@ -998,7 +1021,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 26,
@@ -1036,7 +1060,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 27,
@@ -1074,7 +1099,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 28,
@@ -1112,7 +1138,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 29,
@@ -1147,7 +1174,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 30,
@@ -1185,7 +1213,8 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
     {
         "id": 31,
@@ -1223,349 +1252,359 @@
         "tags": [],
         "listTypes": [
             "BARS"
-        ]
+        ],
+        "isEnabled": true
     },
-  {
-    "id": 32,
-    "name": "Buchette del Vino",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 32,
+        "name": "Buchette del Vino",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Pede uma taça de vinho em uma janelinha"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Pede uma taça de vinho em uma janelinha"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Bela Vista",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 33,
-    "name": "Iccarus",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 33,
+        "name": "Iccarus",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar com vista panorâmica do Centro de SP"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Bar com vista panorâmica do Centro de SP"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Centro Histórico",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 34,
-    "name": "Azucar Club Latino",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 34,
+        "name": "Azucar Club Latino",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Ambiente com musica latina"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS",
+            "NIGHTLIFE"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Ambiente com musica latina"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Vila Madalena",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS",
-      "NIGHTLIFE"
-    ]
-  },
-  {
-    "id": 35,
-    "name": "Lola Bar",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 35,
+        "name": "Lola Bar",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Karaoke"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Barra Funda",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Karaoke"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Barra Funda",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 36,
-    "name": "Casa Lúpulo",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 36,
+        "name": "Casa Lúpulo",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cervejaria Artesanal"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Cervejaria Artesanal"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "República",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 37,
-    "name": "Los Perros",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 37,
+        "name": "Los Perros",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar de Vinhos"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Bar de Vinhos"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Bela Vista",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 38,
-    "name": "Bocca Nera",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 38,
+        "name": "Bocca Nera",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Rodízio de Vinhos"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Rodízio de Vinhos"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Pinheiros",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 39,
-    "name": "Formosa Hi-Fi",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
+    {
+        "id": 39,
+        "name": "Formosa Hi-Fi",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar subterrâneo no Viaduto do Chá"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Bar subterrâneo no Viaduto do Chá"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Centro Histórico",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  },
-  {
-    "id": 40,
-    "name": "Partisans Pub",
-    "phones": [],
-    "openingHours": {
-      "patternId": "",
-      "customOverrides": []
-    },
-    "isAlreadyVisited": false,
-    "isOpenOnSundays": true,
-    "isOpenOnMonday": false,
-    "isOpenOnHolidays": false,
-    "shouldSchedule": false,
-    "notes": [
-      "Pub Irlandês"
-    ],
-    "priceRange": "ECONOMIC",
-    "addresses": [
-      {
-        "id": 1,
-        "street": "",
-        "number": "",
-        "city": "São Paulo",
-        "neighborhood": "Pinheiros",
-        "postalCode": "",
-        "isMainUnity": true,
-        "latitude": null,
-        "longitude": null
-      }
-    ],
-    "linkMenu": "",
-    "linkWebsite": "",
-    "linkInstagram": "",
-    "tags": [],
-    "listTypes": [
-      "BARS"
-    ]
-  }
+    {
+        "id": 40,
+        "name": "Partisans Pub",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Pub Irlandês"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
+    }
 ]
