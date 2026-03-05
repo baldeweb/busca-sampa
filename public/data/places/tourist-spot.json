@@ -2658,7 +2658,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 69,
@@ -2694,7 +2694,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 70,
@@ -2730,7 +2730,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 71,
@@ -2766,7 +2766,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 72,
@@ -2805,7 +2805,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 73,
@@ -2841,7 +2841,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 74,
@@ -2877,7 +2877,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 75,
@@ -2913,7 +2913,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 76,
@@ -2949,7 +2949,7 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 77,
@@ -2985,6 +2985,6 @@
         "listTypes": [
             "TOURIST_SPOT"
         ],
-        "isEnabled": true
+        "isEnabled": false
     }
 ]

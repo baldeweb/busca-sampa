@@ -482,7 +482,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 12,
@@ -525,7 +525,7 @@
             "BARS",
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 13,
@@ -564,7 +564,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 14,
@@ -603,7 +603,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 15,
@@ -639,7 +639,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 16,
@@ -676,7 +676,7 @@
             "BARS",
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 17,
@@ -712,7 +712,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 18,
@@ -752,7 +752,7 @@
             "BARS",
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 19,
@@ -791,7 +791,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 20,
@@ -827,7 +827,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 21,
@@ -866,7 +866,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 22,
@@ -905,7 +905,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 23,
@@ -944,7 +944,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 24,
@@ -983,7 +983,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 25,
@@ -1022,7 +1022,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 26,
@@ -1061,7 +1061,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 27,
@@ -1100,7 +1100,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 28,
@@ -1139,7 +1139,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 29,
@@ -1175,7 +1175,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 30,
@@ -1214,7 +1214,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 31,
@@ -1253,7 +1253,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 32,
@@ -1292,7 +1292,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 33,
@@ -1331,7 +1331,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 34,
@@ -1371,7 +1371,7 @@
             "BARS",
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 35,
@@ -1410,7 +1410,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 36,
@@ -1449,7 +1449,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 37,
@@ -1488,7 +1488,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 38,
@@ -1527,7 +1527,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 39,
@@ -1566,7 +1566,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 40,
@@ -1605,6 +1605,6 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": true
+        "isEnabled": false
     }
 ]

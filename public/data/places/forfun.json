@@ -356,7 +356,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 8,
@@ -395,7 +395,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 9,
@@ -434,7 +434,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 10,
@@ -473,7 +473,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 11,
@@ -512,7 +512,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 12,
@@ -551,7 +551,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 13,
@@ -590,7 +590,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 14,
@@ -629,7 +629,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 15,
@@ -665,7 +665,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 16,
@@ -704,7 +704,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 17,
@@ -744,7 +744,7 @@
             "FORFUN",
             "COFFEES"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 18,
@@ -780,7 +780,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 19,
@@ -819,7 +819,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 20,
@@ -855,7 +855,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 21,
@@ -894,7 +894,7 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 22,
@@ -933,6 +933,6 @@
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": true
+        "isEnabled": false
     }
 ]

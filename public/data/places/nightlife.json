@@ -797,7 +797,7 @@
         "listTypes": [
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 20,
@@ -836,7 +836,7 @@
         "listTypes": [
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 21,
@@ -875,7 +875,7 @@
         "listTypes": [
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 22,
@@ -911,7 +911,7 @@
         "listTypes": [
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     },
     {
         "id": 23,
@@ -950,6 +950,6 @@
         "listTypes": [
             "NIGHTLIFE"
         ],
-        "isEnabled": true
+        "isEnabled": false
     }
 ]
