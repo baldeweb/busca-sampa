@@ -492,6 +492,9 @@ export const PlaceListPage: React.FC = () => {
 
     // Helper: compute display value for the opening column per user's request
     function getOpeningDisplayForToday(place: any): string {
+        if (place?.openingHours?.patternId === 'ALWAYS_OPEN') {
+            return t('openingHours.alwaysOpenLabel', { defaultValue: 'Sempre aberto' });
+        }
         const periods = getPeriodsForToday(place);
         // If there is no patternId and no custom overrides, explicitly show 'hours unavailable'
         if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {

@@ -331,10 +331,10 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                         {isMobileOrTablet ? (
                                                             <>
                                                                 <AppButton
-                                                                    variant="square"
+                                                                    variant="action"
                                                                     size="md"
-                                                                    onClick={() => window.open(mapsHref, '_blank', 'noopener noreferrer')}
-                                                                    className="inline-flex flex-1 items-center justify-center px-2 py-2 sm:px-3 sm:py-4"
+                                                                    onClick={() => window.open(mapsHref, 'noopener noreferrer')}
+                                                                    className="inline-flex flex-1 px-2 py-2 sm:px-3 sm:py-4"
                                                                 >
                                                                     <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                                 </AppButton>
@@ -342,7 +342,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                                 <AppButton
                                                                     variant="uber"
                                                                     size="md"
-                                                                    onClick={() => window.open(uberHref, '_blank', 'noopener noreferrer')}
+                                                                    onClick={() => window.open(uberHref, 'noopener noreferrer')}
                                                                     className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 3"
                                                                 >
                                                                     <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
@@ -352,8 +352,8 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                             <AppButton
                                                                 variant="action"
                                                                 size="md"
-                                                                onClick={() => window.open(mapsHref, '_blank', 'noopener noreferrer')}
-                                                                className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 3"
+                                                                onClick={() => window.open(mapsHref, 'noopener noreferrer')}
+                                                                className="inline-flex flex-1 px-3 py-3 sm:px-4 sm:py-3 3"
                                                             >
                                                                 <FaMapMarkerAlt className="mr-2" /> {t('placeDetail.googleMapsButton')}
                                                             </AppButton>
@@ -374,7 +374,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                         <AppButton
                                                             variant="uber"
                                                             size="md"
-                                                            onClick={() => window.open(`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent([address, neighborhood].filter(Boolean).join(' - '))}`, '_blank', 'noopener noreferrer')}
+                                                            onClick={() => window.open(`https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent([address, neighborhood].filter(Boolean).join(' - '))}`, 'noopener noreferrer')}
                                                             className="inline-flex flex-1 items-center justify-center px-3 py-3 sm:px-4 sm:py-3 3"
                                                         >
                                                             <img src={icUber} alt="uber" className="w-4 h-4 mr-2" /> {openUberLabel}
@@ -382,9 +382,9 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                     </>
                                                 ) : (
                                                     <AppButton
-                                                        variant="square"
+                                                        variant="action"
                                                         size="md"
-                                                        onClick={() => window.open(googleMapsUrl, '_blank', 'noopener noreferrer')}
+                                                        onClick={() => window.open(googleMapsUrl, 'noopener noreferrer')}
                                                         className="inline-flex w-full items-center justify-center px-3 py-4 sm:px-4 sm:py-3"
                                                     >
                                                         {t('placeDetail.googleMapsButton')}

@@ -57,7 +57,7 @@ export function AppButton({
     whatsapp: `rounded-[8px] bg-[#13AC57] text-[#F5F5F5] border border-[#F5F5F5] items-center justify-center ${shadow}`,
     seemore: `rounded-[8px] bg-[#212121] text-[#F5F5F5] border border-[#F5F5F5] items-center justify-center uppercase ${shadow} hover:bg-[#000000]`,
     square: `rounded-[8px] bg-[#F5F5F5] text-[#212121] border border-[#212121] items-center ${shadow} hover:bg-[#D6D6D6]`,
-    uber: `rounded-full bg-[#13AC57] text-[#F5F5F5] border border-[#F5F5F5] ${shadow}`,
+    uber: `rounded-full bg-[#000000] text-[#F5F5F5] border border-[#F5F5F5] ${shadow}`,
     close: "w-8 h-8 p-0 rounded-full inline-flex items-center justify-center bg-transparent border border-[#F5F5F5] text-[#F5F5F5] shadow-none normal-case hover:bg-[#D6D6D6] hover:text-[#212121]",
     closedark: "w-8 h-8 p-0 rounded-full inline-flex items-center justify-center bg-transparent border border-[#212121] text-[#212121] shadow-none normal-case hover:bg-[#D6D6D6]",
   };

@@ -204,6 +204,9 @@ export function TravelItineraryPage() {
 
     function getOpeningDisplayForPlace(place: PlaceRecommendation): string {
         try {
+            if (place?.openingHours?.patternId === 'ALWAYS_OPEN') {
+                return t('openingHours.alwaysOpenLabel', { defaultValue: 'Sempre aberto' });
+            }
             // If there is no patternId and no custom overrides, show unavailable
             if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
                 return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
@@ -535,11 +538,11 @@ export function TravelItineraryPage() {
                                         </div>
                                     )}
 
-                                    {loading && 
-                                        <AppText variant="body-light">Carregando pontos...</AppText>
-                                    }
+                                    {loading && (
+                                        <AppText variant="body-light">{t('travelItinerary.loadingPoints')}</AppText>
+                                    )}
                                     {!loading && orderedPoints.length === 0 && (
-                                        <AppText variant="body-light" className="mt-8">Ainda não foi possível carregar os pontos do tour.</AppText>
+                                        <AppText variant="body-light" className="mt-8">{t('travelItinerary.tourPointsLoadError')}</AppText>
                                     )}
 
                                 </div>
@@ -565,10 +568,10 @@ export function TravelItineraryPage() {
                         <div className="flex items-start justify-between gap-4">
                             <div>
                                 <AppText id="route-details-title" variant="title-light">
-                                    Detalhes do Roteiro
+                                    {t('travelItinerary.routeDetailsTitle')}
                                 </AppText>
                                 <AppText variant="subtitle-light">
-                                    Aqui estão as informações necessárias com as rotas para você realizar
+                                    {t('travelItinerary.routeDetailsSubtitle')}
                                 </AppText>
                             </div>
                             <AppButton
@@ -586,7 +589,7 @@ export function TravelItineraryPage() {
                             className="w-full mt-4"
                         />
 
-                        <AppText variant="title-light" className="mt-8">Lugares por onde você vai passar</AppText>
+                        <AppText variant="title-light" className="mt-8">{t('travelItinerary.placesYouWillPass')}</AppText>
                         {orderedPoints.length > 0 ? (
                             <ul className="mt-2">
                                 {orderedPoints.map((point) => (
@@ -594,25 +597,29 @@ export function TravelItineraryPage() {
                                 ))}
                             </ul>
                         ) : (
-                            <AppText variant="subtitle-light" className="mt-2">Ainda não foi possível carregar os lugares do roteiro.</AppText>
+                            <AppText variant="subtitle-light" className="mt-2">{t('travelItinerary.routePlacesLoadError')}</AppText>
                         )}
 
-                        <WarningTip
-                            title={t('travelItinerary.tipTitle')}
-                            description={t('travelItinerary.tipDescription')}
-                            className="mt-4 mb-8"
-                        />
+                        {orderedPoints.length > 0 && (
+                            <>
+                                <WarningTip
+                                    title={t('travelItinerary.tipTitle')}
+                                    description={t('travelItinerary.tipDescription')}
+                                    className="mt-4 mb-8"
+                                />
 
-                        <div className="mt-4">
-                            <AppButton
-                                variant="action"
-                                size="md"
-                                onClick={onVerRota}
-                                className="w-full px-4 py-3"
-                            >
-                                Abrir no Google Maps
-                            </AppButton>
-                        </div>
+                                <div className="mt-4">
+                                    <AppButton
+                                        variant="action"
+                                        size="md"
+                                        onClick={onVerRota}
+                                        className="w-full px-4 py-3"
+                                    >
+                                        {t('travelItinerary.openInGoogleMaps')}
+                                    </AppButton>
+                                </div>
+                            </>
+                        )}
                         </div>
                     </div>
                 </div>

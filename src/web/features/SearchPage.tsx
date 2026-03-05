@@ -86,6 +86,9 @@ export function SearchPage() {
     if (patternId === 'CHECK_AVAILABILITY_DAYTIME') {
       return t('openingHours.checkAvailabilityLabel');
     }
+    if (patternId === 'ALWAYS_OPEN') {
+      return t('openingHours.alwaysOpenLabel', { defaultValue: 'Sempre aberto' });
+    }
     const pattern = openingPatterns.find((item) => item.id === patternId);
     return pattern?.description || t('openingHours.notProvided');
   };

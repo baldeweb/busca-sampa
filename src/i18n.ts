@@ -188,6 +188,7 @@ const resources = {
         followButton: 'Seguir',
         checkAvailabilityMessage: 'Os horários variam de acordo com a disponibilidade. Verifique no site e na página do Instagram do local para entender como funciona',
         alwaysOpenMessage: 'Este local fica aberto 24h',
+        alwaysOpenLabel: 'Sempre aberto',
         checkAvailabilityLabel: 'Verificar disponibilidade'
       },
       footer: {
@@ -294,7 +295,14 @@ const resources = {
         },
         placesCount: '{{count}} lugares',
         tipTitle: 'Dica Importante',
-        tipDescription: 'Ao caminhar na rua, fique esperto com o celular: evite mexer muito e não peça ajuda pra desconhecidos. Reparou algo estranho? Entra em um lugar movimentado e ligue 190. Em SP, o básico é: atenção total ao redor e nada de dar bobeira'
+        tipDescription: 'Ao caminhar na rua, fique esperto com o celular: evite mexer muito e não peça ajuda pra desconhecidos. Reparou algo estranho? Entra em um lugar movimentado e ligue 190. Em SP, o básico é: atenção total ao redor e nada de dar bobeira',
+        loadingPoints: 'Carregando pontos...',
+        tourPointsLoadError: 'Ainda não foi possível carregar os pontos do tour.',
+        routeDetailsTitle: 'Detalhes do Roteiro',
+        routeDetailsSubtitle: 'Aqui estão as informações necessárias para aproveitar o máximo e se preparar para este roteiro.',
+        placesYouWillPass: 'Lugares por onde você vai passar',
+        routePlacesLoadError: 'Ainda não foi possível carregar os lugares do roteiro.',
+        openInGoogleMaps: 'Abrir no Google Maps'
       },
       tourType: {
         ALL: 'Tudo',
@@ -456,7 +464,7 @@ const resources = {
         reportProblem: 'Signaler un problème',
         visitModalEnding: ''
       },
-      openingHours: { checkAvailabilityMessage: 'Los horarios varían según la disponibilidad. Consulte el sitio web y la página de Instagram del lugar para entender cómo funciona', alwaysOpenMessage: 'Este lugar está abierto las 24 horas', checkAvailabilityLabel: 'Verificar disponibilidad' },
+      openingHours: { checkAvailabilityMessage: 'Los horarios varían según la disponibilidad. Consulte el sitio web y la página de Instagram del lugar para entender cómo funciona', alwaysOpenMessage: 'Este lugar está abierto las 24 horas', alwaysOpenLabel: 'Siempre abierto', checkAvailabilityLabel: 'Verificar disponibilidad' },
       footer: { home: 'Inicio', search: 'Chercher', about: 'Sobre' },
       searchPage: {
         title: 'Busca un lugar',
@@ -547,7 +555,14 @@ const resources = {
         },
         placesCount: '{{count}} lieux',
         tipTitle: 'Conseil important',
-        tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher'
+        tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher',
+        loadingPoints: 'Cargando puntos...',
+        tourPointsLoadError: 'Todavía no fue posible cargar los puntos del tour.',
+        routeDetailsTitle: 'Detalles del recorrido',
+        routeDetailsSubtitle: 'Aquí tienes la información necesaria para aprovechar al máximo y prepararte para este recorrido.',
+        placesYouWillPass: 'Lugares por los que vas a pasar',
+        routePlacesLoadError: 'Todavía no fue posible cargar los lugares del recorrido.',
+        openInGoogleMaps: 'Abrir en Google Maps'
       },
       tourType: {
         ALL: 'Tout',
@@ -689,7 +704,7 @@ const resources = {
         reportProblem: 'Signaler un problème',
         visitModalEnding: ''
       },
-      openingHours: { checkAvailabilityMessage: 'Les horaires varient selon la disponibilité. Consultez le site et la page Instagram du lieu pour en savoir plus', alwaysOpenMessage: 'Cet endroit est ouvert 24h/24', checkAvailabilityLabel: 'Vérifier la disponibilité' },
+      openingHours: { checkAvailabilityMessage: 'Les horaires varient selon la disponibilité. Consultez le site et la page Instagram du lieu pour en savoir plus', alwaysOpenMessage: 'Cet endroit est ouvert 24h/24', alwaysOpenLabel: 'Toujours ouvert', checkAvailabilityLabel: 'Vérifier la disponibilité' },
       footer: { home: 'Accueil', search: 'Chercher', about: 'À propos' },
       searchPage: {
         title: 'Cherchez un lieu',
@@ -775,7 +790,14 @@ const resources = {
         },
         placesCount: '{{count}} lieux',
         tipTitle: 'Conseil important',
-        tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher'
+        tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher',
+        loadingPoints: 'Chargement des points...',
+        tourPointsLoadError: 'Il n\'a pas encore été possible de charger les points du tour.',
+        routeDetailsTitle: 'Détails de l\'itinéraire',
+        routeDetailsSubtitle: 'Voici les informations nécessaires pour profiter au maximum et te préparer pour cet itinéraire.',
+        placesYouWillPass: 'Lieux par lesquels tu vas passer',
+        routePlacesLoadError: 'Il n\'a pas encore été possible de charger les lieux de l\'itinéraire.',
+        openInGoogleMaps: 'Ouvrir dans Google Maps'
       },
       tourType: {
         ALL: 'Tout',
@@ -868,7 +890,7 @@ const resources = {
         reportProblem: 'Сообщить о проблеме',
         visitModalEnding: ''
       },
-      openingHours: { checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', checkAvailabilityLabel: 'Проверить доступность' },
+      openingHours: { checkAvailabilityMessage: 'Часы работы зависят от наличия. Проверьте сайт и страницу в Instagram заведения, чтобы узнать подробности', alwaysOpenMessage: 'Это место открыто круглосуточно', alwaysOpenLabel: 'Всегда открыто', checkAvailabilityLabel: 'Проверить доступность' },
       whereIsToday: { title: 'Итак, куда сегодня?', subtitle: 'Список мест, где я был, по категориям. Взгляните ;)', opensToday: 'Открыто сегодня' },
       placeList: {
         environmentTitle: 'Тип заведения:',
@@ -968,7 +990,14 @@ const resources = {
         },
         placesCount: '{{count}} мест',
         tipTitle: 'Важный совет',
-        tipDescription: 'Выйдя на улицу, будь внимателен с телефоном: старайся меньше им пользоваться и не проси помощи у незнакомцев. Заметил что-то странное? Зайди в людное место и позвони 190. В СП базовое правило: полная внимательность вокруг и никакой беспечности'
+        tipDescription: 'Выйдя на улицу, будь внимателен с телефоном: старайся меньше им пользоваться и не проси помощи у незнакомцев. Заметил что-то странное? Зайди в людное место и позвони 190. В СП базовое правило: полная внимательность вокруг и никакой беспечности',
+        loadingPoints: 'Загрузка точек...',
+        tourPointsLoadError: 'Пока не удалось загрузить точки тура.',
+        routeDetailsTitle: 'Детали маршрута',
+        routeDetailsSubtitle: 'Вот информация, которая поможет лучше подготовиться и получить максимум от этого маршрута.',
+        placesYouWillPass: 'Места, через которые вы пройдёте',
+        routePlacesLoadError: 'Пока не удалось загрузить места маршрута.',
+        openInGoogleMaps: 'Открыть в Google Maps'
       },
       tourType: {
         ALL: 'Все',
@@ -1019,7 +1048,7 @@ const resources = {
         reportProblem: '报告问题',
         visitModalEnding: 'I’ll also tell you which places not to visit :)'
       },
-      openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', checkAvailabilityLabel: 'Check availability' },
+      openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', alwaysOpenLabel: '全天开放', checkAvailabilityLabel: 'Check availability' },
       whereIsToday: { title: '那么，今天去哪里？', subtitle: '按类别整理的我去过的地点列表。来看一看 ;)', opensToday: '今日营业' },
       placeList: {
         environmentTitle: '环境类型:',
@@ -1104,7 +1133,14 @@ const resources = {
         },
         placesCount: '{{count}} places',
         tipTitle: 'Important Tip',
-        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down'
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
+        loadingPoints: '正在加载点位...',
+        tourPointsLoadError: '暂时无法加载行程点位。',
+        routeDetailsTitle: '行程详情',
+        routeDetailsSubtitle: '这里是你需要的信息，帮助你充分体验并为本次行程做好准备。',
+        placesYouWillPass: '你将经过的地点',
+        routePlacesLoadError: '暂时无法加载行程地点。',
+        openInGoogleMaps: '在 Google 地图中打开'
       },
       tourType: {
         ALL: 'Tout',
@@ -1221,7 +1257,7 @@ const resources = {
         menuButton: 'Open menu',
         notesTitle: 'Notes'
       },
-      openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', checkAvailabilityLabel: 'Check availability' },
+      openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', alwaysOpenLabel: 'Always open', checkAvailabilityLabel: 'Check availability' },
       placeList: {
         environmentTitle: 'Environment type:',
         environmentTitlePlace: 'Place type:',
@@ -1307,7 +1343,14 @@ const resources = {
         },
         placesCount: '{{count}} places',
         tipTitle: 'Important Tip',
-        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down'
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
+        loadingPoints: 'Loading points...',
+        tourPointsLoadError: 'It was not possible to load the tour points yet.',
+        routeDetailsTitle: 'Route Details',
+        routeDetailsSubtitle: 'Here is the information you need to enjoy the most and prepare for this itinerary.',
+        placesYouWillPass: 'Places you\'ll pass by',
+        routePlacesLoadError: 'It was not possible to load the itinerary places yet.',
+        openInGoogleMaps: 'Open in Google Maps'
       },
       tourType: {
         ALL: 'Tout',
@@ -1424,7 +1467,7 @@ const resources = {
         menuButton: 'Open menu',
         notesTitle: 'Notizen'
       },
-      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
+      openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', alwaysOpenLabel: 'Immer geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
       whereIsToday: { title: 'Und, wo geht’s heute hin?', subtitle: 'Liste der Orte, an denen ich war, nach Kategorien. Schau mal rein ;)', opensToday: 'Heute geöffnet' },
       placeList: {
         environmentTitle: 'Umgebungstyp:',
@@ -1509,7 +1552,14 @@ const resources = {
         },
         placesCount: '{{count}} places',
         tipTitle: 'Important Tip',
-        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down'
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
+        loadingPoints: 'Punkte werden geladen...',
+        tourPointsLoadError: 'Die Punkte der Tour konnten noch nicht geladen werden.',
+        routeDetailsTitle: 'Routendetails',
+        routeDetailsSubtitle: 'Hier sind die Informationen, die du brauchst, um das Beste daraus zu machen und dich auf diese Route vorzubereiten.',
+        placesYouWillPass: 'Orte, an denen du vorbeikommst',
+        routePlacesLoadError: 'Die Orte der Route konnten noch nicht geladen werden.',
+        openInGoogleMaps: 'In Google Maps öffnen'
       },
       tourType: {
         ALL: 'Tout',
@@ -1625,7 +1675,7 @@ const resources = {
         menuButton: '開く',
         notesTitle: '備考'
       },
-      openingHours: { checkAvailabilityMessage: '営業時間は都度変動します。詳細は施設のウェブサイトおよびInstagramページでご確認ください', alwaysOpenMessage: 'この場所は24時間営業です', checkAvailabilityLabel: '空き状況を確認' },
+      openingHours: { checkAvailabilityMessage: '営業時間は都度変動します。詳細は施設のウェブサイトおよびInstagramページでご確認ください', alwaysOpenMessage: 'この場所は24時間営業です', alwaysOpenLabel: '常時営業', checkAvailabilityLabel: '空き状況を確認' },
       whereIsToday: { title: 'で、今日はどこに行く？', subtitle: '行ったことのある場所をカテゴリ別でまとめた一覧です。見てみてね ;)', opensToday: '本日営業' },
       placeList: {
         environmentTitle: '環境タイプ：',
@@ -1712,7 +1762,14 @@ const resources = {
         },
         placesCount: '{{count}} か所',
         tipTitle: '重要提示',
-        tipDescription: '街を歩くときは、携帯には注意: 使い過ぎず、知らない人に助けを求めないでください。何かおかしいと感じたら、人が多い場所に入り、190に電話してください。在SPでは基本は、周囲への注意を徹底し、油断しないことです'
+        tipDescription: '街を歩くときは、携帯には注意: 使い過ぎず、知らない人に助けを求めないでください。何かおかしいと感じたら、人が多い場所に入り、190に電話してください。在SPでは基本は、周囲への注意を徹底し、油断しないことです',
+        loadingPoints: 'ポイントを読み込み中...',
+        tourPointsLoadError: 'ツアーのポイントをまだ読み込めませんでした。',
+        routeDetailsTitle: 'ルートの詳細',
+        routeDetailsSubtitle: 'このルートを最大限楽しみ、準備するために必要な情報です。',
+        placesYouWillPass: '通る場所',
+        routePlacesLoadError: 'ルート上の場所をまだ読み込めませんでした。',
+        openInGoogleMaps: 'Google マップで開く'
       },
       tourType: {
         ALL: '全部',
@@ -1766,7 +1823,25 @@ const resources = {
         modes: {
           walking: 'جولة مشي',
           city: 'جولة في المدينة'
-        }
+        },
+        loadingPoints: 'جارٍ تحميل النقاط...',
+        tourPointsLoadError: 'لم نتمكن بعد من تحميل نقاط الجولة.',
+        routeDetailsTitle: 'تفاصيل المسار',
+        routeDetailsSubtitle: 'إليك المعلومات اللازمة للاستمتاع بأقصى قدر والاستعداد لهذا المسار.',
+        placesYouWillPass: 'الأماكن التي ستمر بها',
+        routePlacesLoadError: 'لم نتمكن بعد من تحميل أماكن المسار.',
+        openInGoogleMaps: 'فتح في خرائط Google'
+      },
+      openingHours: {
+        title: 'ساعات العمل',
+        closed: 'مغلق',
+        range: 'من {{open}} إلى {{close}}',
+        notProvided: 'ساعات العمل غير متوفرة.',
+        followButton: 'متابعة',
+        checkAvailabilityMessage: 'قد تختلف الساعات حسب التوفر. تحقق من موقع المكان أو صفحة Instagram لمعرفة التفاصيل.',
+        alwaysOpenMessage: 'هذا المكان مفتوح على مدار الساعة',
+        alwaysOpenLabel: 'مفتوح دائمًا',
+        checkAvailabilityLabel: 'تحقق من التوفر'
       },
       placeList: {
         environmentTitle: 'نوع الأجواء:',
@@ -1874,7 +1949,7 @@ const resources = {
         menuButton: 'Menüyü aç',
         notesTitle: 'Notlar'
       },
-      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', checkAvailabilityLabel: 'Verifica disponibilità' },
+      openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', alwaysOpenLabel: 'Sempre aperto', checkAvailabilityLabel: 'Verifica disponibilità' },
       whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Dai un’occhiata ;)', opensToday: 'Aperti oggi' },
       placeType: {
         RESTAURANT: 'Ristoranti',
@@ -1973,7 +2048,14 @@ const resources = {
         },
         placesCount: '{{count}} places',
         tipTitle: 'Important Tip',
-        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down'
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
+        loadingPoints: 'Caricamento dei punti...',
+        tourPointsLoadError: 'Non è stato ancora possibile caricare i punti del tour.',
+        routeDetailsTitle: 'Dettagli del percorso',
+        routeDetailsSubtitle: 'Ecco le informazioni necessarie per goderti al massimo e prepararti per questo percorso.',
+        placesYouWillPass: 'Luoghi che attraverserai',
+        routePlacesLoadError: 'Non è stato ancora possibile caricare i luoghi del percorso.',
+        openInGoogleMaps: 'Apri in Google Maps'
       },
       tourType: {
         ALL: 'Tout',
@@ -2081,7 +2163,7 @@ const resources = {
         menuButton: 'Menüyü aç',
         notesTitle: 'Notlar'
       },
-      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
+      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', alwaysOpenLabel: 'Altijd open', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
       whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'Lijst met plekken waar ik ben geweest, per categorie. Kijk maar ;)', opensToday: 'Vandaag geopend' },
       placeType: {
         RESTAURANT: 'Restaurants',
@@ -2181,7 +2263,14 @@ const resources = {
         },
         placesCount: '{{count}} miejsc',
         tipTitle: 'Ważna wskazówka',
-        tipDescription: 'Spacerując po ulicy, stawaj na telefon: używaj go jak najmniej i nie proś o pomoc nieznajomych. Zauważyłeś coś dziwnego? Wejdź do zatłoczonego miejsca i zadzwoń pod 190. W SP podstawowa zasada to: pełna uwaga na otoczenie i żadnego rozkojarzenia'
+        tipDescription: 'Spacerując po ulicy, stawaj na telefon: używaj go jak najmniej i nie proś o pomoc nieznajomych. Zauważyłeś coś dziwnego? Wejdź do zatłoczonego miejsca i zadzwoń pod 190. W SP podstawowa zasada to: pełna uwaga na otoczenie i żadnego rozkojarzenia',
+        loadingPoints: 'Punten worden geladen...',
+        tourPointsLoadError: 'Het was nog niet mogelijk om de tourpunten te laden.',
+        routeDetailsTitle: 'Routedetails',
+        routeDetailsSubtitle: 'Hier is de informatie die je nodig hebt om er het meeste uit te halen en je voor te bereiden op deze route.',
+        placesYouWillPass: 'Plekken waar je langs komt',
+        routePlacesLoadError: 'Het was nog niet mogelijk om de plekken van de route te laden.',
+        openInGoogleMaps: 'Openen in Google Maps'
       },
       tourType: {
         ALL: 'Wszystko',
@@ -2280,7 +2369,7 @@ const resources = {
         menuButton: 'Menüyü aç',
         notesTitle: 'Notlar'
       },
-      openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
+      openingHours: { checkAvailabilityMessage: 'Çalışma saatleri kullanılabilirliğe göre değişir. Nasıl işlediğini anlamak için mekanın web sitesini ve Instagram sayfasını kontrol edin', alwaysOpenMessage: 'Bu mekan 24 saat açıktır', alwaysOpenLabel: 'Her zaman açık', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
       whereIsToday: { title: 'Peki, bugün nereye gidiyoruz?', subtitle: 'Gittiğim yerlerin kategoriye göre listesi. Bir göz at ;)' },
       placeType: {
         RESTAURANT: 'Restoranlar',
@@ -2375,7 +2464,14 @@ const resources = {
         },
         placesCount: '{{count}} miejsc',
         tipTitle: 'Ważna wskazówka',
-        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down'
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
+        loadingPoints: 'Noktalar yükleniyor...',
+        tourPointsLoadError: 'Tur noktaları henüz yüklenemedi.',
+        routeDetailsTitle: 'Rota Detayları',
+        routeDetailsSubtitle: 'Bu rotadan en iyi şekilde yararlanmak ve hazırlanmak için gerekli bilgiler burada.',
+        placesYouWillPass: 'Geçeceğin yerler',
+        routePlacesLoadError: 'Rota yerleri henüz yüklenemedi.',
+        openInGoogleMaps: 'Google Haritalar’da aç'
       },
       tourType: {
         ALL: 'Wszystko',
@@ -2473,7 +2569,7 @@ const resources = {
         menuButton: 'Otwórz menu',
         notesTitle: 'Notatki'
       },
-      openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę', checkAvailabilityLabel: 'Sprawdź dostępność' },
+      openingHours: { checkAvailabilityMessage: 'Godziny otwarcia mogą się różnić w zależności od dostępności. Sprawdź stronę i profil na Instagramie, aby dowiedzieć się więcej', alwaysOpenMessage: 'To miejsce jest otwarte 24 godziny na dobę', alwaysOpenLabel: 'Zawsze otwarte', checkAvailabilityLabel: 'Sprawdź dostępność' },
       whereIsToday: { title: 'Więc, gdzie dziś?', subtitle: 'Lista miejsc, w których byłem, według kategorii. Rzuć okiem ;)' },
       placeType: {
         RESTAURANT: 'Restauracje',
@@ -2568,7 +2664,14 @@ const resources = {
         },
         placesCount: '{{count}} miejsc',
         tipTitle: 'Ważna wskazówka',
-        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down'
+        tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
+        loadingPoints: 'Ładowanie punktów...',
+        tourPointsLoadError: 'Nie udało się jeszcze załadować punktów wycieczki.',
+        routeDetailsTitle: 'Szczegóły trasy',
+        routeDetailsSubtitle: 'Oto informacje potrzebne, aby w pełni skorzystać i przygotować się do tej trasy.',
+        placesYouWillPass: 'Miejsca, przez które przejdziesz',
+        routePlacesLoadError: 'Nie udało się jeszcze załadować miejsc na trasie.',
+        openInGoogleMaps: 'Otwórz w Google Maps'
       },
       tourType: {
         ALL: 'Wszystko',

@@ -173,15 +173,15 @@
         "places": [
             {
                 "id": 59,
-                "placeType": "BARS"
+                "placeType": "TOURIST_SPOT"
             },
             {
                 "id": 60,
-                "placeType": "NIGHTLIFE"
+                "placeType": "TOURIST_SPOT"
             },
             {
                 "id": 61,
-                "placeType": "NIGHTLIFE"
+                "placeType": "TOURIST_SPOT"
             }
         ],
         "isEnabled": true
