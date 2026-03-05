@@ -25,7 +25,7 @@ export function Header() {
                         <LanguageButton />
                         <AppText
                             variant="body-dark"
-                            className="mt-2 text-right">
+                            className="mt-2 text-right text-xs sm:text-base">
                             {t('header.tagline')}
                         </AppText>
                     </div>

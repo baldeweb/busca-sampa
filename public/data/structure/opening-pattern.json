@@ -1191,5 +1191,13 @@
     "periods": [
       { "days": ["SATURDAY"], "open": "22:00", "close": "05:00" }
     ]
+  },
+  {
+    "id": "MORRISON_ROCKBAR_DAYTIME",
+    "description": "Horários do Morrison Rock Bar",
+    "periods": [
+      { "days": ["THURSDAY"], "open": "20:00", "close": "02:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "20:00", "close": "04:00" }
+    ]
   }
 ]

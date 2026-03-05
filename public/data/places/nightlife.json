@@ -951,5 +951,51 @@
             "NIGHTLIFE"
         ],
         "isEnabled": false
+    },
+    {
+        "id": 24,
+        "name": "Morrison Rock Bar",
+        "phones": [
+            {
+                "number": "1138141022",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "MORRISON_ROCKBAR_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Rock bar, música ao vivo",
+            "Bandas covers e autorais"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Fidalga",
+                "number": "531",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05432-070",
+                "isMainUnity": true,
+                "latitude": -23.555117,
+                "longitude": -46.690821
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.morrison.com.br/",
+        "linkInstagram": "",
+        "tags": [ "PUB_ROCK"],
+        "listTypes": [
+            "NIGHTLIFE",
+            "BARS"
+        ],
+        "isEnabled": true
     }
 ]
