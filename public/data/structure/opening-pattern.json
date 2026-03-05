@@ -1052,7 +1052,7 @@
       { "days": ["FRIDAY"], "open": "19:00", "close": "23:00" },
       { "days": ["SATURDAY"], "open": "12:00", "close": "16:30" },
       { "days": ["SATURDAY"], "open": "19:00", "close": "23:00" },
-      { "days": ["SUNDAY"], "open": "12:00", "close": "27:00" }
+      { "days": ["SUNDAY"], "open": "12:00", "close": "17:00" }
     ]
   },
   {
@@ -1198,6 +1198,66 @@
     "periods": [
       { "days": ["THURSDAY"], "open": "20:00", "close": "02:00" },
       { "days": ["FRIDAY", "SATURDAY"], "open": "20:00", "close": "04:00" }
+    ]
+  },
+  {
+    "id": "CERVEJARIA_NACIONAL_DAYTIME",
+    "description": "Horários da Cervejaria Nacional",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "17:00", "close": "00:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "CERVEJARIA_NACIONAL_DAYTIME",
+    "description": "Horários da Cervejaria Nacional",
+    "periods": [
+      { "days": ["WEDNESDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["THURSDAY"], "open": "19:00", "close": "01:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "19:00", "close": "02:00" }
+    ]
+  },
+  {
+    "id": "BARBRAHMA_DAYTIME",
+    "description": "Horários do Bar Brahma",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "11:00", "close": "01:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "02:00" },
+      { "days": ["SUNDAY"], "open": "11:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "FIFTY_FIFTY_DAYTIME",
+    "description": "Horários do Fifty Fifty Bar",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "19:00", "close": "02:00" }
+    ]
+  },
+  {
+    "id": "LETZ_LOUNGE_CLUB_DAYTIME",
+    "description": "Horários do Letz Lounge Club",
+    "periods": [
+      { "days": ["THURSDAY", "SUNDAY"], "open": "16:00", "close": "01:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "16:00", "close": "04:00" }
+    ]
+  },
+  {
+    "id": "KBAR_DAYTIME",
+    "description": "Horários do K-Bar Karaokê",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "01:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "17:00", "close": "02:00" }
+    ]
+  },
+  {
+    "id": "BKARAOKE_DAYTIME",
+    "description": "Horários do BKaraoke",
+    "periods": [
+      { "days": ["THURSDAY"], "open": "17:00", "close": "01:00" },
+      { "days": ["FRIDAY"], "open": "17:00", "close": "04:00" },
+      { "days": ["SATURDAY"], "open": "19:00", "close": "04:00" },
+      { "days": ["SUNDAY"], "open": "17:00", "close": "01:00" }
     ]
   }
 ]

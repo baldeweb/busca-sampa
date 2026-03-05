@@ -530,125 +530,106 @@
     {
         "id": 13,
         "name": "Cervejaria Nacional",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11939537577",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CERVEJARIA_NACIONAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Cerveja Artesanal"
+            "Pub rústico que oferece degustação de cerveja artesanal no bar, um cardápio variado e decoração eclética.",
+            "Fabricação de cervejas artesanais próprias, com opções de degustação e um cardápio que inclui petiscos e pratos para acompanhar as bebidas."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pedroso de Morais",
+                "number": "604",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05420-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.564734,
+                "longitude": -46.690693
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://www.cervejarianacional.com.br/__clientes/cervejaria/assets/cardapio/cardapio-07-03-2024.pdf?_gl=1*1rzdf2o*_gcl_au*MTY1MzYyMTE1Ny4xNzEzMjc0ODc1",
+        "linkWebsite": "http://www.cervejarianacional.com.br/",
+        "linkInstagram": "https://www.instagram.com/cervejarianacional/",
+        "tags": [
+            "PUB_ROCK", "LIVE_MUSIC"
+        ],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 14,
         "name": "Infini Bar",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CERVEJARIA_NACIONAL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
+        "isOpenOnSundays": false,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
+        "shouldSchedule": true,
         "notes": [
-            "Bar espelhado"
+            "Bar com decoração espelhada",
+            "Necessário agendar, mas é possível conseguir mesa sem reserva dependendo do dia e horário"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Largo do Arouche",
+                "number": "346",
                 "city": "São Paulo",
                 "neighborhood": "República",
-                "postalCode": "",
+                "postalCode": "01219-010",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.541177,
+                "longitude": -46.645632
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://www.getin.app/sao-paulo/infini-bar?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn5TK6rRqSLoHRZcHCB1tA5n970MvJK6hcxa6zDj8qPAnZ1FofbQz69D_KAk0_aem_seVfVa0zpwqmZVsf81xjOg",
+        "linkInstagram": "http://www.instagram.com/infini.bar",
         "tags": [],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 15,
         "name": "Bar Brahma",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
-        "addresses": [
+        "phones": [
             {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "República",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "number": "11947462664",
+                "isWhatsApp": true
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "BARS"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 16,
-        "name": "Balsa Bar",
-        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BARBRAHMA_DAYTIME",
             "customOverrides": []
         },
+        "notes": [
+            "Famoso Bar da cerveja Brahma, localizado na República"
+        ],
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": true,
@@ -658,32 +639,38 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Avenida São João",
+                "number": "677",
                 "city": "São Paulo",
-                "neighborhood": "Centro Histórico",
-                "postalCode": "",
+                "neighborhood": "República",
+                "postalCode": "01036-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.542177,
+                "longitude": -46.640599
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "BARS",
-            "FORFUN"
+        "linkMenu": "https://barbrahmacentro.namesa.online/home",
+        "linkWebsite": "https://www.barbrahmasaopaulo.com.br/",
+        "linkInstagram": "https://www.instagram.com/barbrahma/",
+        "tags": [
+            "LIVE_MUSIC"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": true
     },
     {
         "id": 17,
-        "name": "Fifty Fifty Cocktail Bar",
-        "phones": [],
+        "name": "Fifty Fifty Bar",
+        "phones": [
+            {
+                "number": "1123677239",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "FIFTY_FIFTY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -691,112 +678,139 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
+        "priceRange": "ABOVEAVERAGE",
+        "notes": [
+            "Bar sofisticado com drinks autorais e cardápio exclusivo"
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Deputado Lacerda Franco",
+                "number": "596",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05418-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.560097,
+                "longitude": -46.692730
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://linktr.ee/fiftyfifty.cocktailbar#545708379",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/fiftyfifty.bar/",
         "tags": [],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 18,
         "name": "Letz Lounge Club",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11952161800",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "LETZ_LOUNGE_CLUB_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Bar com karaokê", 
+            "Após determinado horário, vira uma balada",
+            "Possui mesas de sinuca"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Inácio Pereira da Rocha",
+                "number": "351",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05432-010",
+                "isMainUnity": true,
+                "latitude": -23.560400,
+                "longitude": -46.690128
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/letzloungeclub/",
+        "tags": [
+            "KARAOKE", "SNOOKER"
+        ],
+        "listTypes": [
+            "BARS",
+            "LIVE_MUSIC",
+            "NIGHTLIFE"
+        ],
+        "isEnabled": true
+    },
+    {
+        "id": 19,
+        "name": "K-Bar Karaokê",
+        "phones": [
+            {
+                "number": "1123597665",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "KBAR_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": false,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
         "notes": [
-            "Tem karaoke"
+            "Karaokê Coreano",
+            "Necessário agendar as salas de karaokê"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Pinheiros",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "BARS",
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 19,
-        "name": "K-Bar Karaokê",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Karaokê"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Fernando de Albuquerque",
+                "number": "292",
                 "city": "São Paulo",
                 "neighborhood": "Consolação",
-                "postalCode": "",
+                "postalCode": "01309-030",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.553041,
+                "longitude": -46.658813
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "BARS"
+        "linkWebsite": "http://www.k-bar.com.br/",
+        "linkInstagram": "https://www.instagram.com/kbar.karaoke/",
+        "tags": [
+            "KARAOKE"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "BARS",
+            "NIGHTLIFE"
+        ],
+        "isEnabled": true
     },
     {
         "id": 20,
         "name": "Salve Jorge",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1131070123",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -807,34 +821,53 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "priceRange": "ECONOMIC",
+        "notes": [
+            "Bar famoso por seu happy hour (unidade Centro Histórico)"
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Antônio Prado",
+                "number": "33",
                 "city": "São Paulo",
                 "neighborhood": "Centro Histórico",
-                "postalCode": "",
+                "postalCode": "05159-360",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.545881,
+                "longitude": -46.634427
+            },
+            {
+                "id": 2,
+                "street": "Aspicuelta",
+                "number": "544",
+                "city": "São Paulo",
+                "neighborhood": "Vila Madalena",
+                "postalCode": "05433-020",
+                "isMainUnity": false,
+                "latitude": -23.558159,
+                "longitude": -46.690448
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "linkMenu": "https://www.barsalvejorge.com.br/cardapio-centro-historico",
+        "linkWebsite": "http://barsalvejorge.com.br/",
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 21,
         "name": "BKaraoke",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11948299109",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BKARAOKE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -849,24 +882,27 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Coelho Lisboa",
+                "number": "425",
                 "city": "São Paulo",
                 "neighborhood": "Tatuapé",
-                "postalCode": "",
+                "postalCode": "03323-040",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.548036,
+                "longitude": -46.572073
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "KARAOKE",
+            "FAMILY_ACTIVITY"
+        ],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 22,
@@ -1601,7 +1637,50 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "PUB_ROCK", "LIVE_MUSIC"
+        ],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": false
+    },
+    {
+        "id": 40,
+        "name": "Presley Pub",
+        "phones": [],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Pub Irlandês"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [
+            "PUB_ROCK", "LIVE_MUSIC"
+        ],
         "listTypes": [
             "BARS"
         ],
