@@ -515,7 +515,13 @@ export function TravelItineraryPage() {
                                         contentPaddingClassName="px-0"
                                     />
 
-                                    <SectionHeading title={'Roteiros criados pra você :)'} className='mb-3 pt-8' underline={false} card={false} tone='light' />
+                                    <SectionHeading
+                                        title={t('travelItinerary.createdForYouTitle', { defaultValue: 'Roteiros criados pra você :)' })}
+                                        className='mb-3 pt-8'
+                                        underline={false}
+                                        card={false}
+                                        tone='light'
+                                    />
                                     {tourItemsLoading && (
                                         <AppText variant="body-light">{t('common.loading')}</AppText>
                                     )}

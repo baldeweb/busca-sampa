@@ -276,6 +276,7 @@ const resources = {
         title: 'Roteiros',
         placeholder: 'Roteiros a pé, sugeridos para você conhecer vários lugares próximos, sem precisar gastar com locomoção',
         routeOptionsTitle: 'Opções de Roteiro:',
+        createdForYouTitle: 'Roteiros criados pra você :)',
         listTitle: 'Roteiros',
         viewRoute: 'Ver roteiro',
         modes: {
@@ -536,6 +537,7 @@ const resources = {
         title: 'Itinéraires',
         placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.',
         routeOptionsTitle: 'Options d\'itinéraire:',
+        createdForYouTitle: 'Itinerarios creados para ti :)',
         listTitle: 'Itinéraires',
         viewRoute: 'Voir l’itinéraire',
         modes: {
@@ -771,6 +773,7 @@ const resources = {
         title: 'Itinéraires',
         placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.',
         routeOptionsTitle: 'Options d\'itinéraire:',
+        createdForYouTitle: 'Itinéraires créés pour toi :)',
         listTitle: 'Itinéraires',
         viewRoute: 'Voir l’itinéraire',
         modes: {
@@ -971,6 +974,7 @@ const resources = {
         title: 'Маршруты',
         placeholder: 'Пешие маршруты, предлагаемые, чтобы вы могли посетить несколько близлежащих мест, без траты на транспорт.',
         routeOptionsTitle: 'Опции маршрута:',
+        createdForYouTitle: 'Маршруты для тебя :)',
         listTitle: 'Маршруты',
         viewRoute: 'Видеть маршрут',
         modes: {
@@ -1114,6 +1118,7 @@ const resources = {
         title: 'Routen',
         placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
         routeOptionsTitle: 'Route options:',
+        createdForYouTitle: '为你创建的路线 :)',
         listTitle: 'Routes',
         viewRoute: 'Voir l’itinéraire',
         modes: {
@@ -1324,6 +1329,7 @@ const resources = {
         title: 'Routes',
         placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
         routeOptionsTitle: 'Route options:',
+        createdForYouTitle: 'Routes made for you :)',
         listTitle: 'Routes',
         viewRoute: 'View route',
         modes: {
@@ -1533,6 +1539,7 @@ const resources = {
         title: 'Routes',
         placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
         routeOptionsTitle: 'Route options:',
+        createdForYouTitle: 'Routen für dich :)',
         listTitle: 'Routes',
         viewRoute: 'View route',
         modes: {
@@ -1743,6 +1750,7 @@ const resources = {
         title: 'ルート',
         placeholder: 'ペーストロート、複数の近くの場所を探索できる徒歩ルートの提案です。',
         routeOptionsTitle: 'ルートオプション：',
+        createdForYouTitle: 'あなたのために作成したルート :)',
         listTitle: 'ルート',
         viewRoute: 'ルートを見る',
         modes: {
@@ -1818,6 +1826,7 @@ const resources = {
         title: 'المسارات',
         placeholder: 'مسارات مشي مقترحة لتتعرف على عدة أماكن قريبة دون الحاجة للإنفاق على المواصلات',
         routeOptionsTitle: 'خيارات المسار:',
+        createdForYouTitle: 'مسارات أعددناها لك :)',
         listTitle: 'المسارات',
         viewRoute: 'عرض المسار',
         modes: {
@@ -2031,6 +2040,7 @@ const resources = {
         title: 'Routes',
         placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
         routeOptionsTitle: 'Route options:',
+        createdForYouTitle: 'Itinerari creati per te :)',
         listTitle: 'Routes',
         viewRoute: 'View route',
         modes: {
@@ -2246,6 +2256,7 @@ const resources = {
         title: 'Trasy',
         placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
         routeOptionsTitle: 'Opcje trasy:',
+        createdForYouTitle: 'Routes speciaal voor jou :)',
         listTitle: 'Trasy',
         viewRoute: 'Zobacz trasę',
         modes: {
@@ -2447,6 +2458,7 @@ const resources = {
         title: 'Trasy',
         placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
         routeOptionsTitle: 'Opcje trasy:',
+        createdForYouTitle: 'Senin için oluşturulan rotalar :)',
         listTitle: 'Trasy',
         viewRoute: 'Zobacz trasę',
         modes: {
@@ -2647,6 +2659,7 @@ const resources = {
         title: 'Trasy',
         placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
         routeOptionsTitle: 'Opcje trasy:',
+        createdForYouTitle: 'Trasy stworzone dla Ciebie :)',
         listTitle: 'Trasy',
         viewRoute: 'Zobacz trasę',
         modes: {
