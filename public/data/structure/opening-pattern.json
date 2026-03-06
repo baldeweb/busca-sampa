@@ -1304,6 +1304,135 @@
       { "days": ["FRIDAY", "SATURDAY"], "open": "19:00", "close": "05:00" },
       { "days": ["SUNDAY"], "open": "16:00", "close": "22:00" }
     ]
+  },
+  {
+    "id": "BELELEU_DAYTIME",
+    "description": "Horários do Beleléu",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "17:00", "close": "01:00" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "13:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "SURURUBAR_DAYTIME",
+    "description": "Horários do Sururu Bar e Restaurante",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "16:00", "close": "00:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "12:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "OBI_DAYTIME",
+    "description": "Horários do Obi",
+    "periods": [
+      { "days": ["TUESDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:00", "close": "23:30" },
+      { "days": ["SATURDAY"], "open": "14:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "13:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "FRANGOBAR_DAYTIME",
+    "description": "Horários do Frangó",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY"], "open": "11:00", "close": "23:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "11:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "11:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "MIRAFLORESBOTECO_DAYTIME",
+    "description": "Horários do Miraflores Boteco",
+    "periods": [
+      { "days": ["TUESDAY"], "open": "17:00", "close": "23:00" },
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "MIAUBAR_DAYTIME",
+    "description": "Horários do Miau.bar",
+    "periods": [
+      { "days": ["FRIDAY", "SATURDAY"], "open": "17:00", "close": "23:30" }
+    ]
+  },
+  {
+    "id": "BUCHETTEDELVINO_DAYTIME",
+    "description": "Horários do Buchette del Vino",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "15:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "ICCARUS_DAYTIME",
+    "description": "Horários do Iccarus",
+    "periods": [
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "19:00", "close": "02:00" }
+    ]
+  },
+  {
+    "id": "AZUCAR_DAYTIME",
+    "description": "Horários do Azúcar Club Latino",
+    "periods": [
+      { "days": ["FRIDAY", "SATURDAY"], "open": "19:00", "close": "03:00" }
+    ]
+  },
+  {
+    "id": "LOLABAR_DAYTIME",
+    "description": "Horários do Lola Bar",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "17:00", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "CASALUPULO_DAYTIME",
+    "description": "Horários do Casa Lúpulo",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "23:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "18:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "LOSPERROS_DAYTIME",
+    "description": "Horários do Los Perros",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "23:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "17:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "BOCCANERA_DAYTIME",
+    "description": "Horários do Bocca Nera",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:30", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "FORMOSAHIFI_DAYTIME",
+    "description": "Horários do Formosa Hi-Fi",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:30", "close": "01:00" }
+    ]
+  },
+  {
+    "id": "PARTISANSPUB_DAYTIME",
+    "description": "Horários do Partisans Pub",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "01:00" },
+      { "days": ["FRIDAY"], "open": "17:00", "close": "03:00" },
+      { "days": ["SATURDAY"], "open": "16:00", "close": "03:00" }
+    ]
+  },
+  {
+    "id": "PRESLEYPUB_DAYTIME",
+    "description": "Horários do Presley Pub",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "17:00", "close": "22:00" }
+    ]
   }
 
 ]
