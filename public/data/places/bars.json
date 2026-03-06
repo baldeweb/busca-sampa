@@ -907,15 +907,20 @@
     {
         "id": 22,
         "name": "Moocaires Restobar Argentino",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1126042337",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MOOCAIRES_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Restobar Argentino"
@@ -924,31 +929,38 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "da Mooca",
+                "number": "3593",
                 "city": "São Paulo",
                 "neighborhood": "Mooca",
-                "postalCode": "",
+                "postalCode": "03165-003",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.558284,
+                "longitude": -46.590774
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "https://www.moocaires.com.br/",
+        "linkInstagram": "https://www.instagram.com/moocaires/",
+        "tags": [
+            "THEMED", "ARGENTINE"
+        ],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 23,
         "name": "Boteco de Manu",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11988673379",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BOTECODEMANU_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -963,31 +975,33 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Lavradio",
+                "number": "235",
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "postalCode": "01154-020",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.530378,
+                "longitude": -46.661185
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/botecodemanu/",
+        "tags": [
+            "BRAZILIAN"
+        ],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 24,
         "name": "Bar Cambará",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BARCAMBARA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1002,31 +1016,39 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Camaragibe",
+                "number": "131",
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "postalCode": "01154-050",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.530269,
+                "longitude": -46.659156
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "BARS"
+        "linkInstagram": "https://www.instagram.com/bar.cambara/",
+        "tags": [
+            "BRAZILIAN"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "BARS",
+            "RESTAURANTS"
+        ],
+        "isEnabled": true
     },
     {
         "id": 25,
         "name": "Caracol",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11989915811",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CARACOL_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1035,35 +1057,40 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Boteco"
+            "Diversas opções de coquetéis criativos, além de petiscos, em espacinho moderno e descolado com DJs e quintal."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Boracéa",
+                "number": "160",
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "postalCode": "01135-010",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.526416,
+                "longitude": -46.651645
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/caracolbar",
         "tags": [],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 26,
-        "name": "Beleléu - Um Cantinho do Céu",
-        "phones": [],
+        "name": "Beleléu",
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1080,14 +1107,14 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Barra Funda",
+                "number": "528",
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "postalCode": "01152-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.529816,
+                "longitude": -46.656061
             }
         ],
         "linkMenu": "",
@@ -1097,12 +1124,17 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 27,
         "name": "Sururu Bar e Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1141,7 +1173,12 @@
     {
         "id": 28,
         "name": "Obi",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1180,7 +1217,12 @@
     {
         "id": 29,
         "name": "Frangó",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1216,7 +1258,12 @@
     {
         "id": 30,
         "name": "Miraflores Boteco",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1255,7 +1302,12 @@
     {
         "id": 31,
         "name": "Miau.bar",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1294,7 +1346,12 @@
     {
         "id": 32,
         "name": "Buchette del Vino",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1333,7 +1390,12 @@
     {
         "id": 33,
         "name": "Iccarus",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1372,7 +1434,12 @@
     {
         "id": 34,
         "name": "Azucar Club Latino",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1412,7 +1479,12 @@
     {
         "id": 35,
         "name": "Lola Bar",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1451,7 +1523,12 @@
     {
         "id": 36,
         "name": "Casa Lúpulo",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1490,7 +1567,12 @@
     {
         "id": 37,
         "name": "Los Perros",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1529,7 +1611,12 @@
     {
         "id": 38,
         "name": "Bocca Nera",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1568,7 +1655,12 @@
     {
         "id": 39,
         "name": "Formosa Hi-Fi",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1607,7 +1699,12 @@
     {
         "id": 40,
         "name": "Partisans Pub",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1648,7 +1745,12 @@
     {
         "id": 40,
         "name": "Presley Pub",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -1681,6 +1783,50 @@
         "tags": [
             "PUB_ROCK", "LIVE_MUSIC"
         ],
+        "listTypes": [
+            "BARS"
+        ],
+        "isEnabled": false
+    },
+    {
+        "id": 41,
+        "name": "Hocus Pocus",
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cervejaria Artesanal"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
         "listTypes": [
             "BARS"
         ],

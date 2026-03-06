@@ -1266,5 +1266,44 @@
     "periods": [
       { "days": ["EVERYDAY"], "open": "08:00", "close": "20:00" }
     ]
+  },
+  {
+    "id": "MOOCAIRES_DAYTIME",
+    "description": "Horários do Moocaires",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "08:00", "close": "20:00" },
+      { "days": ["FRIDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["FRIDAY"], "open": "18:00", "close": "23:30" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "23:30" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "BOTECODEMANU_DAYTIME",
+    "description": "Horários do Boteco de Manu",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:00", "close": "00:00" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "BARCAMBARA_DAYTIME",
+    "description": "Horários do Bar Cambará",
+    "periods": [
+      { "days": ["THURSDAY", "FRIDAY"], "open": "17:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "13:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "CARACOL_DAYTIME",
+    "description": "Horários do Caracol",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "19:00", "close": "01:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "19:00", "close": "05:00" },
+      { "days": ["SUNDAY"], "open": "16:00", "close": "22:00" }
+    ]
   }
+
 ]
