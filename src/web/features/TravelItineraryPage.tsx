@@ -522,6 +522,9 @@ export function TravelItineraryPage() {
                                     {!tourItemsLoading && displayedTourItems.length === 0 && (
                                         <AppText variant="body-light">{t('common.noPlaces')}</AppText>
                                     )}
+                                    <AppText variant="subtitle-light" className="pt-2">
+                                        {t('searchPage.resultsTitle')}: {displayedTourItems.length}
+                                    </AppText>
                                     {!tourItemsLoading && displayedTourItems.length > 0 && (
                                         <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
                                             {displayedTourItems.map((item, idx) => (

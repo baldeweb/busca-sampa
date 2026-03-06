@@ -711,6 +711,9 @@ export const PlaceListPage: React.FC = () => {
             {/* Lista de lugares */}
             <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg pb-24`}>
                 <div className="mx-auto max-w-5xl px-4 sm:px-12">
+                    <AppText variant="subtitle-dark" className="pt-6">
+                        {t('searchPage.resultsTitle')}: {sortedPlaces.length}
+                    </AppText>
                     <div className="rounded-t-lg overflow-hidden" key={`list-${selectedEnv || 'all'}-${order}-${orderVersion}`}>
                         {sortedPlaces.length === 0 && <AppText variant="subtitle-dark">{t('common.noPlaces')}</AppText>}
                         {sortedPlaces.length > 0 && (

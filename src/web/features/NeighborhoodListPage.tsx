@@ -424,6 +424,9 @@ export const NeighborhoodListPage: React.FC = () => {
       {/* Lista de lugares (estilo igual ao de categorias) */}
       <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'} pb-24`}>
         <div className="mx-auto max-w-5xl px-4 sm:px-12">
+          <AppText variant="subtitle-dark" className="pt-6">
+              {t('searchPage.resultsTitle')}: {sortedPlaces.length}
+          </AppText>
           <div className="rounded-t-lg overflow-hidden">
             {sortedPlaces.length === 0 && (
               <AppText variant="subtitle-dark">{t('common.noPlaces')}</AppText>
