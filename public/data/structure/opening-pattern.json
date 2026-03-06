@@ -1433,6 +1433,23 @@
       { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "18:00", "close": "00:00" },
       { "days": ["SUNDAY"], "open": "17:00", "close": "22:00" }
     ]
+  },
+  {
+    "id": "HOCUSPOCUS_DAYTIME",
+    "description": "Horários do Hocus Pocus",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "17:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "13:00", "close": "00:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "BEERISLAND_DAYTIME",
+    "description": "Horários do Beer Island Tap House",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "17:00", "close": "01:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "01:00" }
+    ]
   }
-
 ]

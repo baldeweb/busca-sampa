@@ -187,7 +187,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                         trailing={(
                             <div className="sm:ml-auto flex flex-row sm:flex-col items-start sm:items-end gap-2 sm:gap-1 shrink-0">
                                 {isOpenNow ? (
-                                    <AppText variant="body-dark" className="bg-green-600 px-4 py-2 rounded">{t('placeDetail.openNow')}</AppText>
+                                    <AppText variant="selected-dark" className="bg-green-600 px-4 py-1 rounded">{t('placeDetail.openNow')}</AppText>
                                 ) : (
                                     <AppText variant="body-dark" className="bg-red-600 px-4 py-1 rounded">{t('placeDetail.closedNow')}</AppText>
                                 )}
@@ -251,9 +251,9 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                                 aria-hidden="true"
                                                 className={`inline-flex items-center justify-center rounded-sm bg-green-600 mr-2 flex-shrink-0 ${boxSizeClass}`}
                                             >
-                                                <FaCheck className="text-[10px]" />
+                                                <FaCheck className="text-[10px] text-white" />
                                             </span>
-                                            <AppText variant="body-light">{day}</AppText>
+                                            <AppText variant="selected-light">{day}</AppText>
                                         </div>
                                     );
                                 })

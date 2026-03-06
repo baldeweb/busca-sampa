@@ -1790,14 +1790,9 @@
     {
         "id": 41,
         "name": "Hocus Pocus",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-        ],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "HOCUSPOCUS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -1812,23 +1807,67 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Fernão Dias",
+                "number": "690",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05427-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.567109,
+                "longitude": -46.695590
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/hocuspocussp/",
+        "tags": [],
+        "listTypes": [
+            "BARS", "PET_FRIENDLY"
+        ],
+        "isEnabled": true
+    },
+    {
+        "id": 42,
+        "name": "Beer Island Tap House",
+        "phones": [
+            {
+                "number": "1131677774",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "BEERISLAND_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Cervejaria Artesanal da Goose Island"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Baltazar Carrasco",
+                "number": "187",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05426-060",
+                "isMainUnity": true,
+                "latitude": -23.565135,
+                "longitude": -46.694109
+            }
+        ],
+        "linkMenu": "https://www.dguests.com/cardapio/beerisland",
+        "linkWebsite": "https://www.beerisland.com.br/",
+        "linkInstagram": "https://www.instagram.com/hocuspocussp/",
         "tags": [],
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     }
 ]
