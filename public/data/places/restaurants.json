@@ -292,7 +292,8 @@
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/quintalparaense/",
         "tags": [
-            "BRAZILIAN"
+            "BRAZILIAN",
+            "BRAZILIAN_REGION_NORTH"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -1212,7 +1213,9 @@
         "linkWebsite": "http://www.consuladodabahia.com.br/",
         "linkInstagram": "https://www.instagram.com/consuladodabahia/",
         "tags": [
-            "BRAZILIAN"
+            "BRAZILIAN",
+            "BRAZILIAN_REGION_NORTHEAST",
+            "BRAZILIAN_REGION_SOUTH"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -1740,7 +1743,8 @@
         "linkWebsite": "https://mapurestaurante.com.br/",
         "linkInstagram": "https://www.instagram.com/mapubaos/",
         "tags": [
-            "TAIWANESE"
+            "TAIWANESE",
+            "VEGAN"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -2220,7 +2224,8 @@
             "KARAOKE"
         ],
         "listTypes": [
-            "RESTAURANTS", "FORFUN"
+            "RESTAURANTS",
+            "FORFUN"
         ],
         "isEnabled": true
     },
@@ -2334,7 +2339,7 @@
                 "neighborhood": "Jardim Paulista",
                 "postalCode": "01404-003",
                 "isMainUnity": true,
-                "latitude": -23.571700,
+                "latitude": -23.5717,
                 "longitude": -46.658867
             }
         ],
@@ -2613,7 +2618,8 @@
         "tags": [
             "IZAKAYA",
             "ASIAN",
-            "JAPANESE"
+            "JAPANESE",
+            "DOCERIA"
         ],
         "listTypes": [
             "RESTAURANTS",
@@ -2999,7 +3005,9 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "SORVETERIA"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
@@ -4083,7 +4091,9 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "DOCERIA"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],

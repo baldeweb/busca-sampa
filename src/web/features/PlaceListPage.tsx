@@ -168,6 +168,7 @@ function matchesRestaurantCategory(place: PlaceRecommendation, category: string)
     }
 
     if (normalizedCategory.startsWith('BRAZILIAN_REGION_')) {
+        if (placeHasTag(place, normalizedCategory)) return true;
         if (!placeHasTag(place, 'BRAZILIAN')) return false;
         const searchText = getRestaurantSearchText(place);
         const keywords = RESTAURANT_BRAZILIAN_REGION_KEYWORDS[normalizedCategory] || [];
@@ -184,6 +185,7 @@ function matchesRestaurantCategory(place: PlaceRecommendation, category: string)
     }
 
     if (normalizedCategory === 'DOCERIA') {
+        if (placeHasTag(place, 'DOCERIA')) return true;
         const searchText = getRestaurantSearchText(place);
         return ['doceria', 'confeitaria', 'sobremesa', 'doce', 'brigadeiro', 'bolo'].some((keyword) =>
             searchText.includes(keyword),
@@ -191,6 +193,7 @@ function matchesRestaurantCategory(place: PlaceRecommendation, category: string)
     }
 
     if (normalizedCategory === 'SORVETERIA') {
+        if (placeHasTag(place, 'SORVETERIA')) return true;
         const searchText = getRestaurantSearchText(place);
         return ['sorveteria', 'sorvete', 'gelato', 'ice cream'].some((keyword) =>
             searchText.includes(keyword),
