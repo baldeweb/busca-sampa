@@ -5961,5 +5961,51 @@
             "RESTAURANTS"
         ],
         "isEnabled": false
+    },
+    {
+        "id": 141,
+        "name": "Maripili",
+        "phones": [
+            {
+                "number": "11915108662",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "MARIPILI_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "priceRange": "MODERATE",
+        "notes":[
+            "Restaurante espanhol, com opções diversas de pratos, tapas e vinhos"
+        ],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Pavão",
+                "number": "764",
+                "city": "São Paulo",
+                "neighborhood": "Moema",
+                "postalCode": "04516-010",
+                "isMainUnity": true,
+                "latitude": -23.606231,
+                "longitude": -46.668634
+            }
+        ],
+        "linkMenu": "https://shop.fastget.com.br/#/store/el-maripilli-/8e1f0ae2-98bd-11ef-9734-029e72b0772d?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn__IXbzVcxqvSn_KaC0EVoucoQkc7wWVZL7FQatslaTABjW_BXrBTL3nVu30_aem_RPKKCh7bZu_b5hOkE6ZJWg",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/restaurantemaripili/",
+        "tags": [
+            "SPANISH"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ],
+        "isEnabled": true
     }
 ]

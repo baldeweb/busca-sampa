@@ -1451,5 +1451,12 @@
       { "days": ["FRIDAY"], "open": "17:00", "close": "01:00" },
       { "days": ["SATURDAY"], "open": "12:00", "close": "01:00" }
     ]
+  },
+  {
+    "id": "MARIPILI_DAYTIME",
+    "description": "Horários do Maripili",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
+    ]
   }
 ]
