@@ -5,7 +5,6 @@ import AppLayout from "../components/layout/AppLayout";
 
 const HomePage = lazy(() => import("../features/HomePage").then((m) => ({ default: m.HomePage })));
 const NeighborhoodListPage = lazy(() => import("../features/NeighborhoodListPage").then((m) => ({ default: m.NeighborhoodListPage })));
-const RecommendationsOriginPage = lazy(() => import("../features/RecommendationsOriginPage").then((m) => ({ default: m.RecommendationsOriginPage })));
 const HowToRecommendPage = lazy(() => import("../features/HowToRecommendPage").then((m) => ({ default: m.HowToRecommendPage })));
 const SupportPage = lazy(() => import("../features/SupportPage").then((m) => ({ default: m.SupportPage })));
 const PlaceListPage = lazy(() => import("../features/PlaceListPage").then((m) => ({ default: m.PlaceListPage })));
@@ -27,7 +26,6 @@ export const router = createBrowserRouter([
             { path: "/bairro/:slug", element: withSuspense(<NeighborhoodListPage />) },
             { path: "/neighborhood/:slug", element: withSuspense(<NeighborhoodListPage />) },
             
-            { path: "/recommendations-origin", element: withSuspense(<RecommendationsOriginPage />) },
             { path: "/how-to-recommend", element: withSuspense(<HowToRecommendPage />) },
             { path: "/support", element: withSuspense(<SupportPage />) },
 

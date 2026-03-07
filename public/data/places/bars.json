@@ -482,7 +482,7 @@
         "listTypes": [
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 12,
@@ -525,7 +525,7 @@
             "BARS",
             "NIGHTLIFE"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 13,

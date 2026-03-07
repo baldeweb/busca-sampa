@@ -1644,8 +1644,7 @@
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/thecircusbarekitchen/",
         "tags": [
-            "HAMBURGUER",
-            "MILKSHAKE"
+            "HAMBURGUER"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -2197,7 +2196,7 @@
         "shouldSchedule": false,
         "notes": [
             "Culinária Sul-Coreana",
-            "Tem karaoke (necessário verificar a disponibilidade das salas)"
+            "Salas de Karaoke (necessário verificar a disponibilidade das salas)"
         ],
         "priceRange": "MODERATE",
         "addresses": [
@@ -2221,7 +2220,7 @@
             "KARAOKE"
         ],
         "listTypes": [
-            "RESTAURANTS"
+            "RESTAURANTS", "FORFUN"
         ],
         "isEnabled": true
     },

@@ -61,7 +61,6 @@ const FALLBACK_MAP: Record<string, string> = {
     OPEN_24_HOURS: "24 Horas",
     ARMENIAN: "Armênio",
     COLOMBIAN: "Colombiano",
-    MILKSHAKE: "Milkshake",
     CULTURE: "Cultural",
     ART_EXHIBITION: "Exposições",
     MUSEUM: "Museu",
