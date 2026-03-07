@@ -27,7 +27,7 @@ import { PlaceListItem } from "@/web/components/place/PlaceListItem";
 import EnvironmentGrid from "../components/ui/EnvironmentGrid";
 import { FilterBar } from "@/web/components/ui/FilterBar";
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
-import { getPlaceListTypes, getPrimaryPlaceType, placeHasType } from '@/core/domain/models/PlaceRecommendation';
+import { getPlaceListTypes, getPrimaryPlaceType, placeHasType, type PlaceRecommendation } from '@/core/domain/models/PlaceRecommendation';
 import { useEnvironmentVisibleCount } from '@/web/hooks/useEnvironmentVisibleCount';
 import { AppText } from "../components/ui/AppText";
 
@@ -35,6 +35,185 @@ const ORDER_OPTIONS = [
     { value: "name-asc" },
     { value: "neighborhood-asc" },
 ];
+
+interface EnvironmentOption {
+    label: string;
+    value: string;
+}
+
+const RESTAURANT_MAIN_CATEGORIES: EnvironmentOption[] = [
+    { label: '24 Horas', value: 'OPEN_24_HOURS' },
+    { label: 'Brasileiro', value: 'BRAZILIAN' },
+    { label: 'Doceria', value: 'DOCERIA' },
+    { label: 'Estrangeira', value: 'FOREIGN' },
+    { label: 'Fast Food', value: 'FASTFOOD' },
+    { label: 'Frutos do Mar', value: 'SEAFOOD' },
+    { label: 'Gastronomia Molecular', value: 'MOLECULAR_GASTRONOMY' },
+    { label: 'Hamburgueria', value: 'HAMBURGUER' },
+    { label: 'Histórico', value: 'HISTORIC_PLACE' },
+    { label: 'Rodízio', value: 'ALLYOUCAN_EAT' },
+    { label: 'Sorveteria', value: 'SORVETERIA' },
+    { label: 'Temático', value: 'THEMED' },
+    { label: 'Vegano', value: 'VEGAN' },
+];
+
+const RESTAURANT_BRAZILIAN_SUBCATEGORIES: EnvironmentOption[] = [
+    { label: 'Norte', value: 'BRAZILIAN_REGION_NORTH' },
+    { label: 'Nordeste', value: 'BRAZILIAN_REGION_NORTHEAST' },
+    { label: 'Centro-Oeste', value: 'BRAZILIAN_REGION_CENTER_WEST' },
+    { label: 'Sul', value: 'BRAZILIAN_REGION_SOUTH' },
+    { label: 'Sudeste', value: 'BRAZILIAN_REGION_SOUTHEAST' },
+];
+
+const RESTAURANT_FOREIGN_SUBCATEGORIES: EnvironmentOption[] = [
+    { label: 'Árabe', value: 'FOREIGN_ARABIC' },
+    { label: 'Africano', value: 'FOREIGN_AFRICAN' },
+    { label: 'Americano', value: 'FOREIGN_AMERICAN' },
+    { label: 'Argentino', value: 'FOREIGN_ARGENTINE' },
+    { label: 'Armênio', value: 'FOREIGN_ARMENIAN' },
+    { label: 'Asiático', value: 'FOREIGN_ASIAN' },
+    { label: 'Boliviano', value: 'FOREIGN_BOLIVIAN' },
+    { label: 'Chinês', value: 'FOREIGN_CHINESE' },
+    { label: 'Colombiano', value: 'FOREIGN_COLOMBIAN' },
+    { label: 'Coreano', value: 'FOREIGN_KOREAN' },
+    { label: 'Espanhol', value: 'FOREIGN_SPANISH' },
+    { label: 'Filipino', value: 'FOREIGN_FILIPINO' },
+    { label: 'Grego', value: 'FOREIGN_GREEK' },
+    { label: 'Indiano', value: 'FOREIGN_INDIAN' },
+    { label: 'Iraniano', value: 'FOREIGN_IRANIAN' },
+    { label: 'Italiano', value: 'FOREIGN_ITALIAN' },
+    { label: 'Izakaya', value: 'FOREIGN_IZAKAYA' },
+    { label: 'Japonês', value: 'FOREIGN_JAPANESE' },
+    { label: 'Libanês', value: 'FOREIGN_LEBANESE' },
+    { label: 'Malaio', value: 'FOREIGN_MALAYSIAN' },
+    { label: 'Nórdico', value: 'FOREIGN_NORDIC' },
+    { label: 'Peruano', value: 'FOREIGN_PERUVIAN' },
+    { label: 'Russo', value: 'FOREIGN_RUSSIAN' },
+    { label: 'Tailandês', value: 'FOREIGN_THAI' },
+    { label: 'Taiwanês', value: 'FOREIGN_TAIWANESE' },
+    { label: 'Turco', value: 'FOREIGN_TURKISH' },
+    { label: 'Uruguaio', value: 'FOREIGN_URUGUAYAN' },
+    { label: 'Vietnamita', value: 'FOREIGN_VIETNAMESE' },
+];
+
+const RESTAURANT_FOREIGN_TAGS_BY_CATEGORY: Record<string, string[]> = {
+    FOREIGN_ARABIC: ['LEBANESE', 'TURKISH', 'IRANIAN'],
+    FOREIGN_AFRICAN: ['AFRICAN'],
+    FOREIGN_AMERICAN: ['AMERICAN'],
+    FOREIGN_ARGENTINE: ['ARGENTINE', 'ARGENTINIAN'],
+    FOREIGN_ARMENIAN: ['ARMENIAN'],
+    FOREIGN_ASIAN: ['ASIAN'],
+    FOREIGN_BOLIVIAN: ['BOLIVIAN'],
+    FOREIGN_CHINESE: ['CHINESE'],
+    FOREIGN_COLOMBIAN: ['COLOMBIAN'],
+    FOREIGN_KOREAN: ['KOREAN'],
+    FOREIGN_SPANISH: ['SPANISH'],
+    FOREIGN_FILIPINO: ['FILIPINO'],
+    FOREIGN_GREEK: ['GREEK'],
+    FOREIGN_INDIAN: ['INDIAN'],
+    FOREIGN_IRANIAN: ['IRANIAN'],
+    FOREIGN_ITALIAN: ['ITALIAN'],
+    FOREIGN_IZAKAYA: ['IZAKAYA'],
+    FOREIGN_JAPANESE: ['JAPANESE'],
+    FOREIGN_LEBANESE: ['LEBANESE'],
+    FOREIGN_MALAYSIAN: ['MALAYSIAN'],
+    FOREIGN_NORDIC: ['NORDIC'],
+    FOREIGN_PERUVIAN: ['PERUVIAN'],
+    FOREIGN_RUSSIAN: ['RUSSIAN', 'RUSSO'],
+    FOREIGN_THAI: ['THAI'],
+    FOREIGN_TAIWANESE: ['TAIWANESE'],
+    FOREIGN_TURKISH: ['TURKISH'],
+    FOREIGN_URUGUAYAN: ['URUGUAYAN'],
+    FOREIGN_VIETNAMESE: ['VIETNAMESE'],
+};
+
+const RESTAURANT_FOREIGN_TAGS_ALL = Array.from(
+    new Set(Object.values(RESTAURANT_FOREIGN_TAGS_BY_CATEGORY).flat()),
+);
+
+const RESTAURANT_BRAZILIAN_REGION_KEYWORDS: Record<string, string[]> = {
+    BRAZILIAN_REGION_NORTH: ['norte', 'para', 'paraense', 'amazonia', 'amazonia', 'acre', 'rondonia', 'roraima', 'amapa', 'tocantins', 'tucupi'],
+    BRAZILIAN_REGION_NORTHEAST: ['nordeste', 'bahia', 'baiano', 'pernambuco', 'ceara', 'maranhao', 'sergipe', 'alagoas', 'paraiba', 'piaui', 'rio grande do norte'],
+    BRAZILIAN_REGION_CENTER_WEST: ['centro-oeste', 'centro oeste', 'goias', 'goiano', 'mato grosso', 'mato grosso do sul', 'distrito federal', 'brasilia', 'pantanal'],
+    BRAZILIAN_REGION_SOUTH: ['sul', 'gaucho', 'gaucha', 'rio grande do sul', 'santa catarina', 'parana', 'curitibano', 'curitibana'],
+    BRAZILIAN_REGION_SOUTHEAST: ['sudeste', 'sao paulo', 'paulista', 'minas gerais', 'mineiro', 'mineira', 'rio de janeiro', 'carioca', 'espirito santo', 'capixaba'],
+};
+
+function normalizeSearchText(value: string): string {
+    return String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+}
+
+function placeHasTag(place: PlaceRecommendation, tag: string): boolean {
+    const normalizedTag = String(tag || '').trim().toUpperCase();
+    if (!normalizedTag) return false;
+    return Array.isArray(place.tags)
+        ? place.tags.some((item) => String(item || '').trim().toUpperCase() === normalizedTag)
+        : false;
+}
+
+function getRestaurantSearchText(place: PlaceRecommendation): string {
+    const notes = Array.isArray(place.notes) ? place.notes.join(' ') : '';
+    return normalizeSearchText(`${place.name || ''} ${notes}`);
+}
+
+function matchesRestaurantCategory(place: PlaceRecommendation, category: string): boolean {
+    const normalizedCategory = String(category || '').trim().toUpperCase();
+    if (!normalizedCategory) return true;
+
+    if (normalizedCategory === 'BRAZILIAN') {
+        return placeHasTag(place, 'BRAZILIAN');
+    }
+
+    if (normalizedCategory.startsWith('BRAZILIAN_REGION_')) {
+        if (!placeHasTag(place, 'BRAZILIAN')) return false;
+        const searchText = getRestaurantSearchText(place);
+        const keywords = RESTAURANT_BRAZILIAN_REGION_KEYWORDS[normalizedCategory] || [];
+        return keywords.some((keyword) => searchText.includes(normalizeSearchText(keyword)));
+    }
+
+    if (normalizedCategory === 'FOREIGN') {
+        return RESTAURANT_FOREIGN_TAGS_ALL.some((tag) => placeHasTag(place, tag));
+    }
+
+    if (normalizedCategory.startsWith('FOREIGN_')) {
+        const tags = RESTAURANT_FOREIGN_TAGS_BY_CATEGORY[normalizedCategory] || [];
+        return tags.some((tag) => placeHasTag(place, tag));
+    }
+
+    if (normalizedCategory === 'DOCERIA') {
+        const searchText = getRestaurantSearchText(place);
+        return ['doceria', 'confeitaria', 'sobremesa', 'doce', 'brigadeiro', 'bolo'].some((keyword) =>
+            searchText.includes(keyword),
+        );
+    }
+
+    if (normalizedCategory === 'SORVETERIA') {
+        const searchText = getRestaurantSearchText(place);
+        return ['sorveteria', 'sorvete', 'gelato', 'ice cream'].some((keyword) =>
+            searchText.includes(keyword),
+        );
+    }
+
+    if (normalizedCategory === 'VEGAN') {
+        if (placeHasTag(place, 'VEGAN')) return true;
+        const searchText = getRestaurantSearchText(place);
+        return ['vegano', 'vegana', 'vegan', 'plant-based'].some((keyword) =>
+            searchText.includes(keyword),
+        );
+    }
+
+    return placeHasTag(place, normalizedCategory);
+}
+
+function getRestaurantGridSelectedCategory(selectedEnv: string | null): string | null {
+    if (!selectedEnv) return null;
+    if (selectedEnv.startsWith('BRAZILIAN_REGION_')) return 'BRAZILIAN';
+    if (selectedEnv.startsWith('FOREIGN_')) return 'FOREIGN';
+    return selectedEnv;
+}
 
 export const PlaceListPage: React.FC = () => {
     const { t } = useTranslation();
@@ -123,6 +302,10 @@ export const PlaceListPage: React.FC = () => {
         lojas: "STORES",
     };
     const mappedType = typeMap[routeTypeLower] || routeTypeLower.toUpperCase() || "RESTAURANT";
+    const isRestaurantRoute =
+        routeTypeLower === 'restaurants' ||
+        routeTypeLower === 'restaurantes' ||
+        mappedType === 'RESTAURANTS';
 
     // If someone navigates directly to /pleasure (via URL), force them to /nightlife.
     // Only allow /pleasure when location.state.fromLongPress === true.
@@ -239,7 +422,16 @@ export const PlaceListPage: React.FC = () => {
         typeArr.sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
         return typeArr;
     }, [baseList, mappedType, routeTypeLower]);
-    const visibleEnvironmentCount = useEnvironmentVisibleCount(environments.length);
+    const displayedEnvironments = useMemo(
+        () => (isRestaurantRoute ? RESTAURANT_MAIN_CATEGORIES : environments),
+        [isRestaurantRoute, environments],
+    );
+    const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
+    const selectedEnvForGrid = useMemo(
+        () => (isRestaurantRoute ? getRestaurantGridSelectedCategory(selectedEnv) : selectedEnv),
+        [isRestaurantRoute, selectedEnv],
+    );
+    const visibleEnvironmentCount = useEnvironmentVisibleCount(displayedEnvironments.length);
 
 
 
@@ -309,7 +501,6 @@ export const PlaceListPage: React.FC = () => {
         }
     }
 
-    const [selectedEnv, setSelectedEnv] = useState<string | null>(null);
     const [order, setOrder] = useState(ORDER_OPTIONS[0].value);
     const [orderVersion, setOrderVersion] = useState(0);
 
@@ -323,6 +514,8 @@ export const PlaceListPage: React.FC = () => {
     const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [priceFilter, setPriceFilter] = useState<string | null>(null);
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
+    const [showRestaurantSubcategoryModal, setShowRestaurantSubcategoryModal] = useState(false);
+    const [restaurantSubcategoryTarget, setRestaurantSubcategoryTarget] = useState<'BRAZILIAN' | 'FOREIGN' | null>(null);
 
     // Cities available for current base list
     const cities = useMemo(() => {
@@ -359,7 +552,9 @@ export const PlaceListPage: React.FC = () => {
         return baseList.filter(p => {
             // environment/type filter
             if (sel) {
-                if (placeHasType(p, sel)) {
+                if (isRestaurantRoute) {
+                    if (!matchesRestaurantCategory(p, sel)) return false;
+                } else if (placeHasType(p, sel)) {
                     // ok
                 } else if (Array.isArray(p.tags) && p.tags.some((tg: any) => normalize(tg) === sel)) {
                     // ok
@@ -381,7 +576,7 @@ export const PlaceListPage: React.FC = () => {
 
             return true;
         });
-    }, [baseList, selectedEnv, scheduleFilter, cityFilter, priceFilter]);
+    }, [baseList, selectedEnv, scheduleFilter, cityFilter, priceFilter, isRestaurantRoute]);
 
     // Apply 'open now' filter if requested
     const filteredPlacesWithOpenNow = useMemo(() => {
@@ -657,11 +852,27 @@ export const PlaceListPage: React.FC = () => {
                     {/* Grid de tipos de ambiente */}
                     {environments.length > 0 && (
                         <EnvironmentGrid
-                            environments={environments}
-                            selectedEnv={selectedEnv}
-                            onSelect={(value) => setSelectedEnv(value)}
+                            environments={displayedEnvironments}
+                            selectedEnv={selectedEnvForGrid}
+                            onSelect={(value) => {
+                                if (!isRestaurantRoute) {
+                                    setSelectedEnv(value);
+                                    return;
+                                }
+                                if (value === 'BRAZILIAN' || value === 'FOREIGN') {
+                                    setRestaurantSubcategoryTarget(value);
+                                    setShowRestaurantSubcategoryModal(true);
+                                    return;
+                                }
+                                setSelectedEnv(value);
+                            }}
                             onViewMore={() => setShowEnvironmentModal(true)}
-                            title={((routeType || '').toLowerCase() === 'abrem-hoje' || mappedType === 'FREE') ? t('placeList.environmentTitlePlace', { defaultValue: 'Tipo de lugar:' }) : undefined}
+                            title={isRestaurantRoute
+                                ? 'Categoria:'
+                                : ((routeType || '').toLowerCase() === 'abrem-hoje' || mappedType === 'FREE')
+                                    ? t('placeList.environmentTitlePlace', { defaultValue: 'Tipo de lugar:' })
+                                    : undefined}
+                            toggleSelection={!isRestaurantRoute}
                         />
                     )}
                 </div>
@@ -760,12 +971,38 @@ export const PlaceListPage: React.FC = () => {
             {/* Modal de tipos de ambiente */}
             {showEnvironmentModal && (
                 <EnvironmentSelectModal
-                    environments={environments}
-                    excludedValues={environments.slice(0, visibleEnvironmentCount).map((e) => e.value)}
+                    title={isRestaurantRoute ? 'Categoria' : undefined}
+                    environments={displayedEnvironments}
+                    excludedValues={displayedEnvironments.slice(0, visibleEnvironmentCount).map((e) => e.value)}
                     onClose={() => setShowEnvironmentModal(false)}
                     onSelect={(env) => {
                         const next = env?.value || null;
+                        if (isRestaurantRoute && (next === 'BRAZILIAN' || next === 'FOREIGN')) {
+                            setRestaurantSubcategoryTarget(next);
+                            setShowRestaurantSubcategoryModal(true);
+                            return;
+                        }
                         setSelectedEnv(next);
+                    }}
+                />
+            )}
+
+            {showRestaurantSubcategoryModal && restaurantSubcategoryTarget && (
+                <EnvironmentSelectModal
+                    title={restaurantSubcategoryTarget === 'BRAZILIAN' ? 'Brasileiro' : 'Estrangeira'}
+                    allOptionLabel="Tudo"
+                    allOptionValue={restaurantSubcategoryTarget}
+                    environments={restaurantSubcategoryTarget === 'BRAZILIAN'
+                        ? RESTAURANT_BRAZILIAN_SUBCATEGORIES
+                        : RESTAURANT_FOREIGN_SUBCATEGORIES}
+                    onClose={() => {
+                        setShowRestaurantSubcategoryModal(false);
+                        setRestaurantSubcategoryTarget(null);
+                    }}
+                    onSelect={(env) => {
+                        const next = env?.value || null;
+                        setSelectedEnv(next);
+                        setRestaurantSubcategoryTarget(null);
                     }}
                 />
             )}

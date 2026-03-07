@@ -13,6 +13,9 @@ interface Props {
     onClose: () => void;
     onSelect: (environment: EnvironmentOption | null) => void;
     excludedValues?: string[];
+    title?: string;
+    allOptionLabel?: string;
+    allOptionValue?: string | null;
 }
 
 export function EnvironmentSelectModal({
@@ -20,9 +23,16 @@ export function EnvironmentSelectModal({
     onClose,
     onSelect,
     excludedValues,
+    title,
+    allOptionLabel,
+    allOptionValue,
 }: Props) {
     const { t } = useTranslation();
-    const heading = t('placeList.environmentTitle', { defaultValue: 'Tipos de ambiente' });
+    const heading = title || t('placeList.environmentTitle', { defaultValue: 'Tipos de ambiente' });
+    const allLabel = allOptionLabel || t('common.all');
+    const allSelection = allOptionValue !== undefined && allOptionValue !== null
+        ? { label: allLabel, value: allOptionValue }
+        : null;
     function handleSelect(env: EnvironmentOption | null) {
         onSelect(env);
         onClose();
@@ -63,10 +73,10 @@ export function EnvironmentSelectModal({
                     <li>
                         <AppButton
                             variant="square"
-                            onClick={() => handleSelect(null)}
+                            onClick={() => handleSelect(allSelection)}
                             className={`flex w-full items-center justify-between px-4 py-2`}
                         >
-                            <AppText variant="subtitle-light">{t('common.all')}</AppText>
+                            <AppText variant="subtitle-light">{allLabel}</AppText>
                             <AppText variant="subtitle-light" className="opacity-70">{">"}</AppText>
                         </AppButton>
                     </li>

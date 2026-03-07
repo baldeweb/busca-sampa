@@ -10,12 +10,13 @@ interface EnvironmentGridProps {
   onViewMore: () => void;
   title?: string;
   showViewMore?: boolean;
+  toggleSelection?: boolean;
   containerClassName?: string;
   contentPaddingClassName?: string;
   gridClassName?: string;
 }
 
-const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selectedEnv, onSelect, onViewMore, title, showViewMore = true, containerClassName, contentPaddingClassName, gridClassName }) => {
+const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selectedEnv, onSelect, onViewMore, title, showViewMore = true, toggleSelection = true, containerClassName, contentPaddingClassName, gridClassName }) => {
   const { t } = useTranslation();
   const heading = title || t('placeList.environmentTitle') || 'Tipo de ambiente:';
   const paddingClassName = contentPaddingClassName || "px-4 sm:px-0";
@@ -45,7 +46,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
           <AppButton
             key={env.value}
             variant="square"
-            onClick={() => onSelect(selectedEnv === env.value ? null : env.value)}
+            onClick={() => onSelect(toggleSelection && selectedEnv === env.value ? null : env.value)}
             className={`inline-flex items-center justify-center align-top font-semibold uppercase rounded-md px-4 py-4 leading-tight border shadow-sm transition-all duration-500 hover:bg-[#D6D6D6] hover:text-[#212121] hover:border-[#212121] hover:shadow-[0_3px_8px_rgba(0,0,0,0.15)] ${
               selectedEnv === env.value
                 ? 'bg-bs-red text-white border-bs-red'
