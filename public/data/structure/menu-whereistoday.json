@@ -57,7 +57,7 @@
     },
     {
         "id": 10,
-        "isEnabled": false,
+        "isEnabled": true,
         "title": "Lojas",
         "tags": [ "STORES" ]
     }
