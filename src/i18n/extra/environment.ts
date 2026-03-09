@@ -72,6 +72,7 @@ export const environmentLabels = {
         GROUP_ACTIVITY: 'Grupos',
         COWORKING: 'Coworking',
         SNOOKER: 'Sinuca',
+        PASTRY_SHOP: 'Doceria',
         OTHERS: 'Outros'
       }
     }

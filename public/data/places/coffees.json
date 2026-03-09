@@ -542,7 +542,9 @@
         ],
         "openingHours": {
             "patternId": "1908COFFEESTATION_DAYTIME",
-            "customOverrides": []
+            "customOverrides": [
+                { "days": ["MONDAY"], "open": "07:00", "close": "21:30" }
+            ]
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
@@ -556,31 +558,38 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Coronel Oscar Porto",
+                "number": "840",
                 "city": "São Paulo",
                 "neighborhood": "Paraíso",
-                "postalCode": "",
+                "postalCode": "04003-004",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.576978,
+                "longitude": -46.645339
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/1908coffee.station?igsh=MXh4Nno3cTdrMmx5eQ==",
-        "tags": [],
+        "tags": [
+            "PET_FRIENDLY"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 12,
         "name": "Padaria Santa Tereza",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1131111030",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PADARIASANTATEREZA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -589,37 +598,44 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Mais antiga de SP, existe de 1872"
+            "Padaria mais antiga de SP, existe desde 1872"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça Dr. João Mendes",
+                "number": "150",
                 "city": "São Paulo",
-                "neighborhood": "Sé",
-                "postalCode": "",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01501-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.552132,
+                "longitude": -46.634814
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/padariasantatereza?igsh=MWJudnUxNWprNHAwMQ==",
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 13,
         "name": "Bake Sale",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11937578431",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BAKESALE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -634,70 +650,82 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Alameda Jaú",
+                "number": "1581",
                 "city": "São Paulo",
                 "neighborhood": "Jardins",
-                "postalCode": "",
+                "postalCode": "01420-007",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.559700,
+                "longitude": -46.662276
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "linkMenu": "https://ugc.production.linktr.ee/68a8d2a1-5018-4ed0-9890-1036b6e7ede6_Cardapio-2026.pdf",
+        "linkWebsite": "https://linktr.ee/Bakesale_store",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "PASTRY_SHOP"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 14,
         "name": "Fresh Cake Factory",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1133116362",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "FRESHCAKEFACTORY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Cafeteria Coreana"
+            "Mistura de cafeteria sul-coreana e panificadora brasileira, com atmosfera aconchegante e diversas comidinhas."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Prates",
+                "number": "599",
                 "city": "São Paulo",
                 "neighborhood": "Bom Retiro",
-                "postalCode": "",
+                "postalCode": "01121-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.528835,
+                "longitude": -46.635720
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/freshcake_factory?igsh=djUwYmtjY20xZnNl",
         "tags": [],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 15,
         "name": "London Coffee Station",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "LONDONCAFESTATION_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -706,40 +734,48 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "priceRange": "ECONOMIC",
+        "notes": [
+            "Café inspirado em restaurantes dos EUA com um grande menu de café da manhã, torre de panquecas, suco e torta."
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Jardim Ivone",
+                "number": "21",
                 "city": "São Paulo",
                 "neighborhood": "Vila Mariana",
-                "postalCode": "",
+                "postalCode": "04105-020",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.578264,
+                "longitude": -46.638765
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkMenu": "https://ctvilamariana.app/",
+        "linkWebsite": "http://www.londoncoffeestation.com.br/",
+        "linkInstagram": "https://www.instagram.com/londoncoffeestation/",
         "tags": [],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 16,
         "name": "Santú Padaria Artesanal",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11966172326",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "SANTUPADARIA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Fermentação natural"
@@ -748,29 +784,34 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Turiassu",
+                "number": "545",
                 "city": "São Paulo",
                 "neighborhood": "Perdizes",
-                "postalCode": "",
+                "postalCode": "05005-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.533157,
+                "longitude": -46.668430
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://santupadaria.menudino.com/",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/santu_padaria/",
         "tags": [],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 17,
         "name": "Caral Gastrobar & Coffee",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -809,7 +850,12 @@
     {
         "id": 18,
         "name": "Café Colombiano",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -848,7 +894,12 @@
     {
         "id": 19,
         "name": "Café Girondino",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []

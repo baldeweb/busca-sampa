@@ -1458,7 +1458,7 @@
     "periods": [
       { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
     ]
-  }
+  },
   {
     "id": "MARIPILI_DAYTIME",
     "description": "Horários do Maripili",
@@ -1485,6 +1485,47 @@
     "description": "Horários do 1908 Coffee Station",
     "periods": [
       { "days": ["EVERYDAY"], "open": "07:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "PADARIASANTATEREZA_DAYTIME",
+    "description": "Horários da Padaria Santa Tereza",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "06:00", "close": "20:00" },
+      { "days": ["SATURDAY"], "open": "06:00", "close": "19:00" }
+    ]
+  },
+  {
+    "id": "BAKESALE_DAYTIME",
+    "description": "Horários do Bakesale",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "09:30", "close": "18:30" },
+      { "days": ["SATURDAY"], "open": "09:00", "close": "19:00" },
+      { "days": ["SUNDAY"], "open": "10:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "FRESHCAKEFACTORY_DAYTIME",
+    "description": "Horários do Freshcake Factory",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "08:00", "close": "19:00" }
+    ]
+  },
+  {
+    "id": "LONDONCAFESTATION_DAYTIME",
+    "description": "Horários do London Cafe Station",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "07:00", "close": "20:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "08:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "SANTUPADARIA_DAYTIME",
+    "description": "Horários da Santu Padaria",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "08:00", "close": "19:00" },
+      { "days": ["SATURDAY"], "open": "08:00", "close": "16:00" },
+      { "days": ["SUNDAY"], "open": "08:00", "close": "13:00" }
     ]
   }
 ]
