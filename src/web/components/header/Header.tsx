@@ -16,7 +16,7 @@ export function Header() {
                             alt="Bandeira do estado de São Paulo"
                             decoding="async"
                             fetchPriority="high"
-                            className="h-[64px] w-[128px] sm:h-[72px] sm:w-[142px] me-4"
+                            className="h-[72px] w-[142px] me-4"
                         />
                     </div>
 

@@ -18,12 +18,12 @@ export function CategoryCard({ label, icon, selected, onClick, index }: Category
       onClick={onClick}
       aria-selected={selected}
       tabIndex={index === 0 ? 0 : -1}
-      className={"flex gap-2 w-full px-2 sm:px-4"}
+      className={"flex flex-col items-start justify-start gap-2 w-full px-2 sm:px-4"}
     >
-      <span className="w-6 h-6 flex items-center justify-center shrink-0" aria-hidden="true">
+      <span className="w-6 h-6 flex items-start justify-start shrink-0 self-start" aria-hidden="true">
         {icon}
       </span>
-      {label}
+      <span className="w-full text-left leading-tight">{label}</span>
     </AppButton>
   );
 }

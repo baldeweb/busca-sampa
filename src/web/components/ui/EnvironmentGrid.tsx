@@ -35,7 +35,7 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
       <div className={`${gridClassName} ${paddingClassName} flex flex-wrap items-start gap-2`}>
         {/* Botão "Todos" */}
         <AppButton
-          variant="all"
+          variant="actionborder"
           onClick={() => onSelect(null)}
           className={`inline-flex align-top px-4 py-4 leading-tight`}
         >

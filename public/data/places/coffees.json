@@ -790,8 +790,8 @@
                 "neighborhood": "Perdizes",
                 "postalCode": "05005-001",
                 "isMainUnity": true,
-                "latitude": -23.533157,
-                "longitude": -46.668430
+                "latitude": -23.533210,
+                "longitude": -46.668417
             }
         ],
         "linkMenu": "https://santupadaria.menudino.com/",
@@ -808,105 +808,109 @@
         "name": "Caral Gastrobar & Coffee",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": false
+                "number": "11911894986",
+                "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CARALGASTROBAR_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
-        "notes": [
-            "Cafeteria com influência peruana"
-        ],
         "priceRange": "ECONOMIC",
+        "notes": [
+            "Espaço com experiência única, trazendo gastronomia latina-oriental com influências peruanas"
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Rua Três Rios",
+                "number": "218-A",
                 "city": "São Paulo",
                 "neighborhood": "Bom Retiro",
-                "postalCode": "",
+                "postalCode": "01123-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.529407,
+                "longitude": -46.636245
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "biolink.website/caralgc",
+        "linkInstagram": "https://www.instagram.com/caral.gc?igsh=YnpreXVmbnR3aTRt&utm_source=qr",
+        "tags": [
+            "PERUVIAN"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 18,
         "name": "Café Colombiano",
         "phones": [
             {
-                "number": "",
+                "number": "1133315689",
                 "isWhatsApp": false
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CAFECOLOMBIANO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Cafeteria Colombiana"
+            "Espaço intimista com temas de arte contemporânea e ambientação literária, com cafés especiais e guloseimas."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Alameda Eduardo Prado ",
+                "number": "493",
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "postalCode": "01218-012",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.530946,
+                "longitude": -46.649794
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/cafecolombiano/",
+        "tags": [
+            "COLOMBIAN"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 19,
         "name": "Café Girondino",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": false
+                "number": "1150433822",
+                "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CAFEGIRONDINO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
@@ -916,23 +920,25 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Boa Vista",
+                "number": "365",
                 "city": "São Paulo",
                 "neighborhood": "Centro Histórico",
-                "postalCode": "",
+                "postalCode": "01014-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.544449,
+                "longitude": -46.634074
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://drive.google.com/file/d/1EzcqPWb_gf39w5KDjPDRS6JqPifhkBtF/view?usp=sharing",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/cafegirondino/",
+        "tags": [
+            "HISTORIC_PLACE"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     }
 ]

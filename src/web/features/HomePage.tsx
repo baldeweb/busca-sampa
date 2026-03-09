@@ -515,12 +515,12 @@ export function HomePage() {
               </AppButton>
             ))}
             <AppButton
-              variant="action"
+              variant="actionborder"
               onClick={() => setIsNeighborhoodModalOpen(true)}
               size="md"
-              className="w-full py-4 rounded-[8px]"
+              className="w-full py-4"
             >
-              {t('home.viewMoreNeighborhoods')}
+              {t('home.viewMore')}
             </AppButton>
           </div>
         </div>{/* /wrapper Por bairro */}

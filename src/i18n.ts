@@ -84,7 +84,7 @@ const resources = {
         neighborhoodsTitle: 'Por bairro',
         neighborhoodsTagline: 'Tá em algum desses bairros? Tem coisa boa por perto!',
         viewMoreNeighborhoods: 'ver mais bairros',
-        viewMore: 'Mais opções',
+        viewMore: 'Ver mais',
         noNearbyResultsRadius: 'Não há nada próximo a você...\n\nQue tal alterarmos a distância para\nlistarmos os lugares próximos?',
         locationNotSupported: 'Geolocalização não suportada neste navegador.',
         locationDeniedInstructions: '',

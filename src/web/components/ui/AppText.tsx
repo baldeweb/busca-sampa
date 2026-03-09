@@ -24,8 +24,8 @@ const VARIANT_CLASSES: Record<AppTextVariant, string> = {
   'subtitle-light': 'font-montserrat font-regular leading-snug text-[0.9rem] sm:text-[1rem] text-[#212121]',
   'subtitle-dark': 'font-montserrat font-regular leading-snug text-[0.9rem] sm:text-[1rem] text-[#F5F5F5]',
 
-  'body-light': 'font-montserrat font-regular leading-relaxed text-[0.9rem] text-[#212121]',
-  'body-dark': 'font-montserrat font-regular leading-relaxed text-[0.9rem] text-[#F5F5F5]',
+  'body-light': 'font-montserrat font-regular leading-relaxed text-[0.75rem] sm:text-[0.9rem] text-[#212121]',
+  'body-dark': 'font-montserrat font-regular leading-relaxed text-[0.75rem] sm:text-[0.9rem] text-[#F5F5F5]',
 
   'selected-light': 'font-montserrat font-bold leading-relaxed text-[0.9rem] text-[#212121]',
   'selected-dark': 'font-montserrat font-bold leading-relaxed text-[0.9rem] text-[#F5F5F5]',
