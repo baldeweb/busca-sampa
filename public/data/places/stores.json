@@ -232,5 +232,49 @@
             "STORES"
         ],
         "isEnabled": false
+    },    
+    {
+        "id": 7,
+        "name": "Padaria Basilicata",
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Padaria centenária"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "",
+                "number": "",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "",
+                "isMainUnity": true,
+                "latitude": null,
+                "longitude": null
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "STORES", "COFFEES"
+        ],
+        "isEnabled": false
     }
 ]

@@ -762,84 +762,6 @@
     },
     {
         "id": 19,
-        "name": "Bogota.sp",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Evento latino, sem local fixo"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "A verificar",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "NIGHTLIFE"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 20,
-        "name": "Súbete",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": true,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Evento latino, sem local fixo"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "A verificar",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "NIGHTLIFE"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 21,
         "name": "Mambo Pink",
         "phones": [],
         "openingHours": {
@@ -878,7 +800,7 @@
         "isEnabled": false
     },
     {
-        "id": 22,
+        "id": 20,
         "name": "Ephigenia",
         "phones": [],
         "openingHours": {
@@ -914,7 +836,7 @@
         "isEnabled": false
     },
     {
-        "id": 23,
+        "id": 21,
         "name": "Ô de Casa Hostel e Bar",
         "phones": [],
         "openingHours": {
@@ -953,7 +875,7 @@
         "isEnabled": false
     },
     {
-        "id": 24,
+        "id": 22,
         "name": "Morrison Rock Bar",
         "phones": [
             {
@@ -995,6 +917,83 @@
         "listTypes": [
             "NIGHTLIFE",
             "BARS"
+        ],
+        "isEnabled": true
+    },    
+    {
+        "id": 23,
+        "name": "Dois-Dois",
+        "phones": [],
+        "openingHours": {
+            "patternId": "DOISDOIS_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Samba e música ao vivo"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Alameda Dino Bueno",
+                "number": "711",
+                "city": "São Paulo",
+                "neighborhood": "Bom Retiro",
+                "postalCode": "01217-000",
+                "isMainUnity": true,
+                "latitude": -23.528911,
+                "longitude": -46.645504
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/doisdois.sp/",
+        "tags": [
+            "LIVE_MUSIC", "SAMBA"
+        ],
+        "listTypes": [
+            "NIGHTLIFE", "BARS"
+        ],
+        "isEnabled": true
+    },
+    {
+        "id": 24,
+        "name": "Crema Club",
+        "phones": [],
+        "openingHours": {
+            "patternId": "CREMACLUB_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cristóvão Gonçalves",
+                "number": "84",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05426-050",
+                "isMainUnity": true,
+                "latitude": -23.564363, 
+                "longitude": -46.694201
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://beacons.ai/cremaclub?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn7r0yqdd_2DeDNR3TNlwvRcduRslFoWRz5FIcUYvOM9jvxiPKLMIH5raQMhI_aem_XM89ytjDoxtaj-2hcL40BQ",
+        "linkInstagram": "https://www.instagram.com/cremaclub_/",
+        "tags": [],
+        "listTypes": [
+            "NIGHTLIFE"
         ],
         "isEnabled": true
     }

@@ -449,41 +449,5 @@
             "NATURE"
         ],
         "isEnabled": true
-    },
-    {
-        "id": 11,
-        "name": "Mirante da Lapa",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": false,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Lapa",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "NATURE"
-        ],
-        "isEnabled": false
     }
 ]

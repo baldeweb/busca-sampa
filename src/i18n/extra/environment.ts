@@ -73,6 +73,8 @@ export const environmentLabels = {
         COWORKING: 'Coworking',
         SNOOKER: 'Sinuca',
         PASTRY_SHOP: 'Doceria',
+        CHILEAN: "Chileno",
+        BOWLING: "Boliche",
         OTHERS: 'Outros'
       }
     }

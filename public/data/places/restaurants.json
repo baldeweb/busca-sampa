@@ -6007,5 +6007,98 @@
             "RESTAURANTS"
         ],
         "isEnabled": true
+    },
+    {
+        "id": 142,
+        "name": "El Guatón",
+        "phones": [
+            {
+                "number": "1138079647",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "ELGUATON_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "MODERATE",
+        "notes":[
+            "Restaurante com cardápio variado de pratos chilenos, como empanada, pastel de choclo e cerveja artesanal.",
+            "Funciona desde 1997"
+        ],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Artur de Azevedo",
+                "number": "906",
+                "city": "São Paulo",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05404-002",
+                "isMainUnity": true,
+                "latitude": -23.606231,
+                "longitude": -46.668634
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/elguatonrestaurante/?hl=en",
+        "tags": [
+            "CHILEAN"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ],
+        "isEnabled": true
+    },    
+    {
+        "id": 143,
+        "name": "Casa de Francisca",
+        "phones": [
+            {
+                "number": "1130520547",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "CASADEFRANCISCA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Teatro de cabaré confortável com petiscos, pratos em estilo italiano e musica popular brasileira ao vivo."
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Quintino Bocaiúva",
+                "number": "22",
+                "city": "São Paulo",
+                "neighborhood": "Centro Histórico",
+                "postalCode": "01004-010",
+                "isMainUnity": true,
+                "latitude": -23.548862,
+                "longitude": -46.634749
+            }
+        ],
+        "linkMenu": "http://casadefrancisca.art.br/novo/menu",
+        "linkWebsite": "http://www.casadefrancisca.art.br/",
+        "linkInstagram": "https://www.instagram.com/casadefrancisca/",
+        "tags": [
+            "LIVE_MUSIC", "SAMBA", "PAGODE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ],
+        "isEnabled": true
     }
 ]

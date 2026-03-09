@@ -8,7 +8,7 @@
   },
   {
     "id": "CHECK_AVAILABILITY_DAYTIME",
-    "description": "Horários do Samba da Rosa, Sala São Paulo, Cineclube Cortina.",
+    "description": "Horários do Samba da Rosa, Sala São Paulo, Cineclube Cortina, Kartodromo Interlagos",
     "periods": [
       { "days": ["CHECK_AVAILABILITY_DAYTIME"] }
     ]
@@ -1554,4 +1554,85 @@
       { "days": ["SUNDAY"], "open": "08:00", "close": "16:00" }
     ]
   },
+  {
+    "id": "FANHOURGAMES_DAYTIME",
+    "description": "Horários do Fan Hour Games and Burguers",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:30", "close": "22:30" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "22:00" },
+      { "days": ["SUNDAY"], "open": "13:00", "close": "21:30" }
+    ]
+  },
+  {
+    "id": "ELGUATON_DAYTIME",
+    "description": "Horários do El Guatón",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:30", "close": "23:30" },
+      { "days": ["SATURDAY"], "open": "11:30", "close": "23:30" }
+    ]
+  },
+  {
+    "id": "GALPAODAZN_DAYTIME",
+    "description": "Horários do Galpão da ZN",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:30", "close": "23:30" },
+      { "days": ["SATURDAY"], "open": "11:30", "close": "23:30" }
+    ]
+  },
+  {
+    "id": "CASADEFRANCISCA_DAYTIME",
+    "description": "Horários do Casa de Francisca",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:30", "close": "00:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "DOISDOIS_DAYTIME",
+    "description": "Horários do Dois-Dois",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "19:30", "close": "01:30" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "20:00", "close": "02:00" },
+      { "days": ["SUNDAY"], "open": "18:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "ARCADEHAUS_DAYTIME",
+    "description": "Horários do Arcade Haus",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "SUNDAY"], "open": "10:00", "close": "20:00" },
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "10:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "EDIFICIOROLIM_DAYTIME",
+    "description": "Horários do Arcade Haus",
+    "periods": [
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "18:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "MINASAN_DAYTIME",
+    "description": "Horários do Minasan",
+    "periods": [
+      { "days": [ "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "14:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "CREMACLUB_DAYTIME",
+    "description": "Horários do Crema Club",
+    "periods": [
+      { "days": ["FRIDAY"], "open": "21:00", "close": "05:00" },
+      { "days": ["SATURDAY"], "open": "22:00", "close": "05:00" }
+    ]
+  },
+  {
+    "id": "DUTCHFOODBEER_DAYTIME",
+    "description": "Horários do Dutch Food & Beer",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "SUNDAY"], "open": "12:00", "close": "23:30" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "00:00" }
+    ]
+  }
 ]

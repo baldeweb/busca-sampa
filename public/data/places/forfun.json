@@ -321,87 +321,105 @@
     {
         "id": 7,
         "name": "Kartódromo de Interlagos (Ayrton Senna)",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11976063363",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
             "Kartódromo"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Jacinto Júlio",
+                "number": "1",
                 "city": "São Paulo",
                 "neighborhood": "Interlagos",
-                "postalCode": "",
+                "postalCode": "04815-160",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.706900,
+                "longitude": -46.694928
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://www.kartodromodeinterlagos.com/",
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 8,
-        "name": "Roller Dance",
-        "phones": [],
+        "name": "Fan Hour Games and Burguers",
+        "phones": [
+            {
+                "number": "1130632070",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "FANHOURGAMES_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
         "notes": [
-            "Pista de patinação"
+            "Hamburgueria casual com decoração temática de videogames, jogos de tabuleiro e karaokê.",
+            "Não é obrigatório reservar para ir, mas recomenda-se reservar para garantir mesa, especialmente nos horários de pico."
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Artur de Azevedo",
+                "number": "898",
                 "city": "São Paulo",
-                "neighborhood": "Liberdade",
-                "postalCode": "",
+                "neighborhood": "Pinheiros",
+                "postalCode": "05404-002",
                 "isMainUnity": true,
                 "latitude": null,
                 "longitude": null
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "linkMenu": "https://qrco.de/bdUhFc",
+        "linkWebsite": "http://www.fanhour.com.br/",
         "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
+        "tags": [
+            "KARAOKE", "HAMBURGUER"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "FORFUN", "RESTAURANTS"
+        ],
+        "isEnabled": true
     },
     {
         "id": 9,
-        "name": "Atlanta Snooker Bar",
-        "phones": [],
+        "name": "Galpão da ZN",
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "GALPAODAZN_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -410,268 +428,95 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "bar de sinuca"
+            "Samba"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Severa",
+                "number": "212",
                 "city": "São Paulo",
-                "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "neighborhood": "Vila Guilherme",
+                "postalCode": "02111-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.517802,
+                "longitude": -46.593552
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
+        "linkWebsite": "https://linktr.ee/Asmarck?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGna6e0Uh0AG8Ouy_wZUGtUDPj3sM_EeYlMzPYzctomQbKaLggJGRNxxmjetKY_aem_zhMA-k_TlDVp1CT8mttWzg",
+        "linkInstagram": "https://instagram.com/galpao_zn_oficial?igshid=NDk5N2NlZjQ=",
+        "tags": [
+            "LIVE_MUSIC", "SAMBA"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "FORFUN", "BARS", "NIGHTLIFE"
+        ],
+        "isEnabled": true
     },
     {
         "id": 10,
-        "name": "Papaya Role",
-        "phones": [],
+        "name": "Arcade Haus",
+        "phones": [
+            {
+                "number": "1156411720",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ARCADEHAUS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Baile latino sem local fixo"
-        ],
+        "shouldSchedule": true,
         "priceRange": "ECONOMIC",
+        "notes":[
+            "Fliperama", 
+            "Necessário reservar a sala pelo site"
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Dr. Rubens Gomes Bueno",
+                "number": "288",
                 "city": "São Paulo",
-                "neighborhood": "A verificar",
-                "postalCode": "",
+                "neighborhood": "Santo Amaro",
+                "postalCode": "04730-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.642349,
+                "longitude": -46.719752
+            },
+            {
+                "id": 1,
+                "street": "Euclides Pacheco",
+                "number": "483",
+                "city": "São Paulo",
+                "neighborhood": "Tatuapé",
+                "postalCode": "03321-000",
+                "isMainUnity": false,
+                "latitude": -23.548548,
+                "longitude": -46.570177
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://www.arcadehaus.com.br/",
+        "linkInstagram": "https://www.instagram.com/arcade_haus/",
         "tags": [],
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 11,
-        "name": "Fan Hour Games and Burguers",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Hamburgueria com games e karaoke"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Pinheiros",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 12,
-        "name": "Galpão da ZN",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Samba"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Vila Maria",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 13,
-        "name": "Dois-Dois",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Samba"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Bom Retiro",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 14,
-        "name": "Casa de Francisca",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Samba"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Sé",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 15,
-        "name": "Arcade Haus",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Tatuapé",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 16,
         "name": "Edificio Rolim",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "EDIFICIOROLIM_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -680,258 +525,204 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Escape Room"
+            "Escape Room",
+            "Teatro Imersivo"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Praça da Sé",
+                "number": "87",
                 "city": "São Paulo",
                 "neighborhood": "Centro Histórico",
-                "postalCode": "",
+                "postalCode": "01016-050",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.549028,
+                "longitude": -46.633060
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "https://edificiorolim.com.br/",
+        "linkInstagram": "https://www.instagram.com/edificio.rolim/",
+        "tags": [
+            "EXPERIENCE"
+        ],
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
-        "id": 17,
+        "id": 12,
         "name": "Minasan Gaming Cafe",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1135400721",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MINASAN_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "shouldSchedule": true,
         "notes": [
-            "Cafeteria/Gaming Café/Lan House"
+            "Fica dentro do Hotel Nikkey",
+            "Cafeteria/Gaming Café/Lan House",
+            "Necessário reservar pelo site"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Galvão Bueno",
+                "number": "425",
                 "city": "São Paulo",
                 "neighborhood": "Liberdade",
-                "postalCode": "",
+                "postalCode": "01506-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.559475,
+                "longitude": -46.634950
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://linktr.ee/minasan.oficial?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnaMrjCTWcIe3osgjDoUKLBHcnO_upYYwpnwhZeKy3nJjjZVN8yuoScYFGgF4_aem_rsvpb3xbdLnJCNQ64fGTZQ",
+        "linkInstagram": "https://www.instagram.com/minasan_gaming/",
         "tags": [],
         "listTypes": [
-            "FORFUN",
-            "COFFEES"
+            "FORFUN", "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
-        "id": 18,
-        "name": "Crema Club",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Pinheiros",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
-    },
-    {
-        "id": 19,
+        "id": 13,
         "name": "Dutch Food & Beer",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1125073819",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "DUTCHFOODBEER_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Boliche, Fliperama e comida"
+            "Local animado com fliperamas, boliche, pizzas, hambúrgueres e drinks."
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Vereador Abel Ferreira",
+                "number": "1080",
                 "city": "São Paulo",
                 "neighborhood": "Vila Formosa",
-                "postalCode": "",
+                "postalCode": "03340-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.565002,
+                "longitude": -46.559329
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
+        "linkMenu": "https://dutchfoodbeer.com.br/wp-content/uploads/2020/08/PDF-_-MENU-DIGITAL-DUTCH.pdf",
+        "linkWebsite": "http://dutchfoodbeer.com.br/",
+        "linkInstagram": "https://www.instagram.com/dutchfoodbeer/",
+        "tags": [
+            "BOWLING"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "FORFUN", "RESTAURANTS"
+        ],
+        "isEnabled": true
     },
     {
-        "id": 20,
+        "id": 14,
         "name": "Central 1926",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11984807638",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pça. da Bandeira",
+                "number": "137",
                 "city": "São Paulo",
                 "neighborhood": "Bela Vista",
-                "postalCode": "",
+                "postalCode": "01007-020",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.549833,
+                "longitude": -46.638911
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://www.embaixadacultural.com.br/",
+        "linkInstagram": "https://www.instagram.com/central_1926/",
         "tags": [],
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 21,
         "name": "City Lights Music Hall",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
         "notes": [
-            "Eventos diversos"
+            "Eventos diversos, checar disponibilidade dos eventos no site"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Padre Garcia Velho",
+                "number": "61",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05421-030",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.562088,
+                "longitude": -46.693216
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "http://www.citylights.com.br/",
+        "linkInstagram": "https://www.instagram.com/citylights_sp/",
         "tags": [],
         "listTypes": [
             "FORFUN"
         ],
-        "isEnabled": false
-    },
-    {
-        "id": 22,
-        "name": "Padaria Basilicata",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Padaria centenária"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Bela Vista",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "FORFUN"
-        ],
-        "isEnabled": false
+        "isEnabled": true
     }
 ]
