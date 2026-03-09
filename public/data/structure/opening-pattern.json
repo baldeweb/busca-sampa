@@ -1459,4 +1459,32 @@
       { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
     ]
   }
+  {
+    "id": "MARIPILI_DAYTIME",
+    "description": "Horários do Maripili",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "BOTANIKAFE_DAYTIME",
+    "description": "Horários do Botanikafé",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "08:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "MIEMO_DAYTIME",
+    "description": "Horários do Mi&Mo Gato Café",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "10:30", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "1908COFFEESTATION_DAYTIME",
+    "description": "Horários do 1908 Coffee Station",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "07:00", "close": "22:00" }
+    ]
+  }
 ]

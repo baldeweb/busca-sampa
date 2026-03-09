@@ -388,126 +388,166 @@
     {
         "id": 8,
         "name": "Botanikafé",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1130646570",
+                "isWhatsApp": false
+            },
+            {
+                "number": "11941806853",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BOTANIKAFE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
+        "notes": [
+            "Cafeteria com brunches e ambiente que mistura natureza e arte"
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Alameda Lorena",
+                "number": "1765",
+                "city": "São Paulo",
+                "neighborhood": "Jardins",
+                "postalCode": "01424-007",
+                "isMainUnity": true,
+                "latitude": -23.562389,
+                "longitude": -46.667617
+            },
+            {
+                "id": 2,
+                "street": "Padre Garcia Velho",
+                "number": "56",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05421-030",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.562087,
+                "longitude": -46.693277
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://go.tagme.com.br/qrocodebotanikafejardins",
+        "linkWebsite": "https://botanikafe.com/",
+        "linkInstagram": "https://www.instagram.com/botanikafe/",
+        "tags": [
+            "BISTRO"
+        ],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 9,
         "name": "Mi&Mo Gato Café",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MIEMO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Cafeteria que te deixa interagir com gatos"
+            "Cafeteria onde você pode interagir com gatos disponíveis para adoção",
+            "Último horário para entrar no pátio dos gatos: 17h30"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Coronel Oscar Porto",
+                "number": "400",
                 "city": "São Paulo",
-                "neighborhood": "Paraiso",
-                "postalCode": "",
+                "neighborhood": "Paraíso",
+                "postalCode": "04003-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.572770,
+                "longitude": -46.647385
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://linktr.ee/miemo_gatocafe",
+        "linkInstagram": "https://www.instagram.com/miemo_gatocafe/",
         "tags": [],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 10,
         "name": "Padaria Bella Paulista",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1132143347",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ALWAYS_OPEN",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "priceRange": "ECONOMIC",
+        "notes": [
+            "Padaria tradicional localizada próximo a Av. Paulista",
+            "Aberto 24h"
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Haddock Lobo",
+                "number": "354",
                 "city": "São Paulo",
-                "neighborhood": "Jardim Paulista",
-                "postalCode": "",
+                "neighborhood": "Consolação",
+                "postalCode": "01414-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.556322,
+                "longitude": -46.659986
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://padariabellapaulista.com.br/",
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
             "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 11,
         "name": "1908 Coffee Station",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1138871066",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "1908COFFEESTATION_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Cafeteria Japonesa"
@@ -528,7 +568,7 @@
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://www.instagram.com/1908coffee.station?igsh=MXh4Nno3cTdrMmx5eQ==",
         "tags": [],
         "listTypes": [
             "COFFEES"

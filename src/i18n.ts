@@ -2,11 +2,13 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { placeTypeLabels } from '@/i18n/extra/placeType';
 import { environmentLabels } from '@/i18n/extra/environment';
+import { environmentMoreLabels } from '@/i18n/extra/environmentMore';
 import { routeOptionLabels } from '@/i18n/extra/routeOptions';
 import { reportProblemLabels } from '@/i18n/extra/reportProblem';
 import { homeNearMeLabels } from '@/i18n/extra/homeNearMe';
 import { priceRangeLabels } from '@/i18n/extra/priceRange';
 import { footerLabels } from '@/i18n/extra/footer';
+import { restaurantFiltersLabels } from '@/i18n/extra/restaurantFilters';
 
 // Load persisted language or detect from device/browser (no geolocation)
 const SUPPORTED_LANGS = ['pt', 'es', 'fr', 'ru', 'zh', 'en', 'de', 'ja', 'ar', 'it', 'nl', 'tr', 'pl'];
@@ -2706,7 +2708,7 @@ const resources = {
   }
 };
 
-const mergedResources = mergeResourceSets(resources, [placeTypeLabels, environmentLabels, routeOptionLabels, reportProblemLabels, homeNearMeLabels, priceRangeLabels, footerLabels]);
+const mergedResources = mergeResourceSets(resources, [placeTypeLabels, environmentLabels, environmentMoreLabels, routeOptionLabels, reportProblemLabels, homeNearMeLabels, priceRangeLabels, footerLabels, restaurantFiltersLabels]);
 
 i18n
   .use(initReactI18next)

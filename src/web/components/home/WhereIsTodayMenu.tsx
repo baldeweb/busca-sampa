@@ -80,7 +80,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                     <div
                         className="grid grid-cols-2 gap-2 py-3 pr-4 sm:pr-12 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]"
                         role="listbox"
-                        aria-label="Categorias"
+                        aria-label={t('whereIsToday.categoriesAriaLabel', { defaultValue: 'Categorias' })}
                     >
                         {/* Static option: 'Abrem hoje' (opens today) */}
                         {(() => {
