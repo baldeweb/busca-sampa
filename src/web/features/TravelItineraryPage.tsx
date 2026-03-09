@@ -584,7 +584,7 @@ export function TravelItineraryPage() {
                                 </AppText>
                             </div>
                             <AppButton
-                                variant='closedark'
+                                variant='closeDark'
                                 onClick={closeRouteDetails}
                                 aria-label={t('common.close')}
                             >

@@ -1,5 +1,4 @@
 import React from "react";
-import { AppText } from "./AppText";
 
 export type AppButtonVariant =
   | "primary"
@@ -11,6 +10,7 @@ export type AppButtonVariant =
   | "whatsapp"
   | "uber"
   | "close"
+  | "closeDark"
   | "seemore";
 
 export type AppButtonSize = "xxs" | "xs" | "sm" | "md";
@@ -58,6 +58,7 @@ export function AppButton({
     square: `rounded-[8px] bg-[#F5F5F5] text-[#212121] border border-[#212121] items-center ${shadow} hover:bg-[#D6D6D6]`,
     uber: `rounded-full bg-[#000000] text-[#F5F5F5] border border-[#F5F5F5] ${shadow}`,
     close: "w-8 h-8 p-0 rounded-full inline-flex items-center justify-center bg-transparent border border-[#F5F5F5] text-[#F5F5F5] shadow-none normal-case hover:bg-[#D6D6D6] hover:text-[#212121]",
+    closeDark: "w-8 h-8 p-0 rounded-full inline-flex items-center justify-center bg-transparent border border-[#212121] text-[#212121] shadow-none normal-case hover:bg-[#D6D6D6] hover:text-[#F5F5F5]",
   };
 
   const sizeClass = variant === "close" ? "" : sizeMap[size];
