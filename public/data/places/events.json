@@ -5,7 +5,7 @@
         "name": "Bogota.sp",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -35,7 +35,7 @@
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
-            "NIGHTLIFE"
+            "EVENTS"
         ],
         "isEnabled": false
     },
@@ -44,7 +44,7 @@
         "name": "Súbete",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -74,7 +74,7 @@
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
-            "NIGHTLIFE"
+            "EVENTS"
         ],
         "isEnabled": false
     },
@@ -83,7 +83,7 @@
         "name": "Papaya Role",
         "phones": [
             {
-                "number": "",
+                "number": "CHECK_AVAILABILITY_DAYTIME",
                 "isWhatsApp": true
             }
         ],
@@ -118,8 +118,43 @@
         "linkInstagram": "",
         "tags": [],
         "listTypes": [
-            "FORFUN"
+            "EVENTS"
         ],
         "isEnabled": false
+    },    
+    {
+        "id": 4,
+        "name": "Mambo Pink",
+        "phones": [
+            {
+                "number": "11949829875",
+                "isWhatsApp": true
+            }
+        ],
+        "openingHours": {
+            "patternId": "CHECK_AVAILABILITY_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Danceteria latina, sem local fixo",
+            "A verificar a página no Instagram, para datas de eventos"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/mambo.pink/",
+        "tags": [
+            "DANCE_CLUB"
+        ],
+        "listTypes": [
+            "EVENTS"
+        ],
+        "isEnabled": true
     }
 ]

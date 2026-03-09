@@ -2,14 +2,19 @@
     {
         "id": 1,
         "name": "Casa Godinho",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1131041520",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CASAGODINHO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
@@ -19,107 +24,128 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Líbero Badaró",
+                "number": "340",
                 "city": "São Paulo",
                 "neighborhood": "Centro Histórico",
-                "postalCode": "",
+                "postalCode": "01008-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.546640,
+                "longitude": -46.636331
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "STORES"
+        "linkWebsite": "http://www.casagodinho.com.br/",
+        "linkInstagram": "https://www.instagram.com/casagodinho/",
+        "tags": [
+            "PASTRY_SHOP"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "STORES", "COFFEES"
+        ],
+        "isEnabled": true
     },
     {
         "id": 2,
         "name": "Combu Produtos da Amazonia",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1123077100",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "COMBUAMAZONIA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "loja de produtos amazonicos"
+            "Loja de produtos amazônicos"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Martiniano de Carvalho",
+                "number": "97",
                 "city": "São Paulo",
-                "neighborhood": "",
-                "postalCode": "",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01321-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.559690,
+                "longitude": -46.641088
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "http://www.combu.com.br/",
+        "linkInstagram": "https://www.instagram.com/combu_da_amazonia/",
+        "tags": [
+            "BRAZILIAN"
+        ],
         "listTypes": [
             "STORES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 3,
         "name": "Rafih Empório e Doceria",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11954065889",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "RAFIHEMPORIO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Doceria Árabe"
+            "Doceria e venda de produtos de origem Árabe"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Alameda Iraé",
+                "number": "405",
                 "city": "São Paulo",
                 "neighborhood": "Moema",
-                "postalCode": "",
+                "postalCode": "04075-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.602840,
+                "longitude": -46.659920
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/rafih.moema/",
+        "tags": [
+            "PASTRY_SHOP"
+        ],
         "listTypes": [
             "STORES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 4,
         "name": "Empório Belmiro",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -158,7 +184,12 @@
     {
         "id": 5,
         "name": "Empório Pata Negra",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -197,7 +228,12 @@
     {
         "id": 6,
         "name": "Empório Sant Ângela",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
