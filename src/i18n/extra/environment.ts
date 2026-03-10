@@ -41,7 +41,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanês',
         HAMBURGUER: 'Hamburgueria',
         MOLECULAR_GASTRONOMY: 'Gastronomia molecular',
-        EXPERIENCE: 'Jantar com experiência',
+        EXPERIENCE: 'Experiência',
         NORDIC: 'Nórdico',
         IRANIAN: 'Iraniano',
         ARGENTINE: 'Argentino',
@@ -122,7 +122,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanes',
         HAMBURGUER: 'Hamburgueseria',
         MOLECULAR_GASTRONOMY: 'Gastronomia molecular',
-        EXPERIENCE: 'Cena con experiencia',
+        EXPERIENCE: 'Experiencia',
         NORDIC: 'Nordico',
         IRANIAN: 'Irani',
         ARGENTINE: 'Argentino',
@@ -152,6 +152,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Familia',
         GROUP_ACTIVITY: 'Grupos',
         COWORKING: 'Coworking',
+        SNOOKER: 'Billar',
+        PASTRY_SHOP: 'Pasteleria',
+        CHILEAN: 'Chileno',
+        BOWLING: 'Bolos',
+        DANCE_CLUB: 'Club de baile',
         OTHERS: 'Otros'
       }
     }
@@ -198,7 +203,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanais',
         HAMBURGUER: 'Burger',
         MOLECULAR_GASTRONOMY: 'Gastronomie moleculaire',
-        EXPERIENCE: 'Diner avec experience',
+        EXPERIENCE: 'Experience',
         NORDIC: 'Nordique',
         IRANIAN: 'Iranien',
         ARGENTINE: 'Argentin',
@@ -228,6 +233,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Famille',
         GROUP_ACTIVITY: 'Groupes',
         COWORKING: 'Coworking',
+        SNOOKER: 'Billard',
+        PASTRY_SHOP: 'Patisserie',
+        CHILEAN: 'Chilien',
+        BOWLING: 'Bowling',
+        DANCE_CLUB: 'Club de danse',
         OTHERS: 'Autres'
       }
     }
@@ -274,7 +284,7 @@ export const environmentLabels = {
         TAIWANESE: 'Тайваньский',
         HAMBURGUER: 'Бургерная',
         MOLECULAR_GASTRONOMY: 'Молекулярная гастрономия',
-        EXPERIENCE: 'Ужин с впечатлением',
+        EXPERIENCE: 'Опыт',
         NORDIC: 'Скандинавский',
         IRANIAN: 'Иранский',
         ARGENTINE: 'Аргентинский',
@@ -304,6 +314,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Семья',
         GROUP_ACTIVITY: 'Группы',
         COWORKING: 'Коворкинг',
+        SNOOKER: 'Бильярд',
+        PASTRY_SHOP: 'Кондитерская',
+        CHILEAN: 'Чилийский',
+        BOWLING: 'Боулинг',
+        DANCE_CLUB: 'Танцевальный клуб',
         OTHERS: 'Другое'
       }
     }
@@ -350,7 +365,7 @@ export const environmentLabels = {
         TAIWANESE: '台湾',
         HAMBURGUER: '汉堡店',
         MOLECULAR_GASTRONOMY: '分子料理',
-        EXPERIENCE: '体验式晚餐',
+        EXPERIENCE: '体验',
         NORDIC: '北欧',
         IRANIAN: '伊朗',
         ARGENTINE: '阿根廷',
@@ -380,6 +395,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: '家庭',
         GROUP_ACTIVITY: '团体',
         COWORKING: '共享办公',
+        SNOOKER: '台球',
+        PASTRY_SHOP: '糕点店',
+        CHILEAN: '智利',
+        BOWLING: '保龄球',
+        DANCE_CLUB: '舞蹈俱乐部',
         OTHERS: '其他'
       }
     }
@@ -426,7 +446,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanese',
         HAMBURGUER: 'Burger place',
         MOLECULAR_GASTRONOMY: 'Molecular gastronomy',
-        EXPERIENCE: 'Dinner with experience',
+        EXPERIENCE: 'Experience',
         NORDIC: 'Nordic',
         IRANIAN: 'Iranian',
         ARGENTINE: 'Argentine',
@@ -456,6 +476,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Family',
         GROUP_ACTIVITY: 'Groups',
         COWORKING: 'Coworking',
+        SNOOKER: 'Snooker',
+        PASTRY_SHOP: 'Pastry shop',
+        CHILEAN: 'Chilean',
+        BOWLING: 'Bowling',
+        DANCE_CLUB: 'Dance club',
         OTHERS: 'Others'
       }
     }
@@ -502,7 +527,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanesisch',
         HAMBURGUER: 'Burgerladen',
         MOLECULAR_GASTRONOMY: 'Molekulare Gastronomie',
-        EXPERIENCE: 'Erlebnisdinner',
+        EXPERIENCE: 'Erlebnis',
         NORDIC: 'Nordisch',
         IRANIAN: 'Iranisch',
         ARGENTINE: 'Argentinisch',
@@ -532,6 +557,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Familie',
         GROUP_ACTIVITY: 'Gruppen',
         COWORKING: 'Coworking',
+        SNOOKER: 'Snooker',
+        PASTRY_SHOP: 'Konditorei',
+        CHILEAN: 'Chilenisch',
+        BOWLING: 'Bowling',
+        DANCE_CLUB: 'Tanzclub',
         OTHERS: 'Andere'
       }
     }
@@ -578,7 +608,7 @@ export const environmentLabels = {
         TAIWANESE: '台湾料理',
         HAMBURGUER: 'ハンバーガー',
         MOLECULAR_GASTRONOMY: '分子ガストロノミー',
-        EXPERIENCE: '体験ディナー',
+        EXPERIENCE: '体験',
         NORDIC: '北欧料理',
         IRANIAN: 'イラン料理',
         ARGENTINE: 'アルゼンチン料理',
@@ -608,6 +638,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: '家族',
         GROUP_ACTIVITY: 'グループ',
         COWORKING: 'コワーキング',
+        SNOOKER: 'スヌーカー',
+        PASTRY_SHOP: '洋菓子店',
+        CHILEAN: 'チリ料理',
+        BOWLING: 'ボウリング',
+        DANCE_CLUB: 'ダンスクラブ',
         OTHERS: 'その他'
       }
     }
@@ -654,7 +689,7 @@ export const environmentLabels = {
         TAIWANESE: 'تايواني',
         HAMBURGUER: 'برغر',
         MOLECULAR_GASTRONOMY: 'فن الطهو الجزيئي',
-        EXPERIENCE: 'عشاء بتجربة',
+        EXPERIENCE: 'تجربة',
         NORDIC: 'نوردي',
         IRANIAN: 'ايراني',
         ARGENTINE: 'ارجنتيني',
@@ -684,6 +719,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'عائلي',
         GROUP_ACTIVITY: 'مجموعات',
         COWORKING: 'عمل مشترك',
+        SNOOKER: 'سنوكر',
+        PASTRY_SHOP: 'متجر حلويات',
+        CHILEAN: 'تشيلي',
+        BOWLING: 'بولينج',
+        DANCE_CLUB: 'نادي رقص',
         OTHERS: 'اخرى'
       }
     }
@@ -730,7 +770,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanese',
         HAMBURGUER: 'Hamburger',
         MOLECULAR_GASTRONOMY: 'Gastronomia molecolare',
-        EXPERIENCE: 'Cena con esperienza',
+        EXPERIENCE: 'Esperienza',
         NORDIC: 'Nordico',
         IRANIAN: 'Iraniano',
         ARGENTINE: 'Argentino',
@@ -760,6 +800,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Famiglia',
         GROUP_ACTIVITY: 'Gruppi',
         COWORKING: 'Coworking',
+        SNOOKER: 'Biliardo',
+        PASTRY_SHOP: 'Pasticceria',
+        CHILEAN: 'Cileno',
+        BOWLING: 'Bowling',
+        DANCE_CLUB: 'Club di danza',
         OTHERS: 'Altro'
       }
     }
@@ -806,7 +851,7 @@ export const environmentLabels = {
         TAIWANESE: 'Taiwanees',
         HAMBURGUER: 'Hamburgerzaak',
         MOLECULAR_GASTRONOMY: 'Moleculaire gastronomie',
-        EXPERIENCE: 'Diner met ervaring',
+        EXPERIENCE: 'Ervaring',
         NORDIC: 'Noordisch',
         IRANIAN: 'Iraans',
         ARGENTINE: 'Argentijns',
@@ -836,6 +881,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Familie',
         GROUP_ACTIVITY: 'Groepen',
         COWORKING: 'Coworking',
+        SNOOKER: 'Snooker',
+        PASTRY_SHOP: 'Banketbakkerij',
+        CHILEAN: 'Chileens',
+        BOWLING: 'Bowling',
+        DANCE_CLUB: 'Dansclub',
         OTHERS: 'Overig'
       }
     }
@@ -882,7 +932,7 @@ export const environmentLabels = {
         TAIWANESE: 'Tayvan',
         HAMBURGUER: 'Hamburgerci',
         MOLECULAR_GASTRONOMY: 'Molekuler gastronomi',
-        EXPERIENCE: 'Deneyimli aksam yemegi',
+        EXPERIENCE: 'Deneyim',
         NORDIC: 'Nordik',
         IRANIAN: 'Iran',
         ARGENTINE: 'Arjantin',
@@ -912,6 +962,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Aile',
         GROUP_ACTIVITY: 'Gruplar',
         COWORKING: 'Coworking',
+        SNOOKER: 'Snooker',
+        PASTRY_SHOP: 'Pastane',
+        CHILEAN: 'Sili',
+        BOWLING: 'Bovling',
+        DANCE_CLUB: 'Dans kulubu',
         OTHERS: 'Diger'
       }
     }
@@ -958,7 +1013,7 @@ export const environmentLabels = {
         TAIWANESE: 'Tajwanski',
         HAMBURGUER: 'Hamburgery',
         MOLECULAR_GASTRONOMY: 'Gastronomia molekularna',
-        EXPERIENCE: 'Kolacja z doswiadczeniem',
+        EXPERIENCE: 'Doswiadczenie',
         NORDIC: 'Nordycki',
         IRANIAN: 'Iranski',
         ARGENTINE: 'Argentynski',
@@ -988,6 +1043,11 @@ export const environmentLabels = {
         FAMILY_ACTIVITY: 'Rodzina',
         GROUP_ACTIVITY: 'Grupy',
         COWORKING: 'Coworking',
+        SNOOKER: 'Snooker',
+        PASTRY_SHOP: 'Cukiernia',
+        CHILEAN: 'Chilijskie',
+        BOWLING: 'Kregle',
+        DANCE_CLUB: 'Klub taneczny',
         OTHERS: 'Inne'
       }
     }

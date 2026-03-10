@@ -115,7 +115,7 @@ const resources = {
         typeHeader: 'Tipo',
         orderNameAsc: 'NOME em ordem crescente A-Z',
         orderNeighborhoodAsc: 'BAIRRO em ordem crescente A-Z',
-        variablePlace: 'lugar variável',
+        variablePlace: 'Sem local fixo',
         seeDetails: 'ver detalhes'
       },
       filters: {
@@ -414,7 +414,8 @@ const resources = {
         seeDetails: 'ver detalles',
         typeHeader: 'Tipo',
         orderNameAsc: 'NOMBRE en orden ascendente A-Z',
-        orderNeighborhoodAsc: 'BARRIO en orden ascendente A-Z'
+        orderNeighborhoodAsc: 'BARRIO en orden ascendente A-Z',
+        variablePlace: 'Sin lugar fijo'
       },
       filters: {
         title: 'Filtros',
@@ -655,7 +656,7 @@ const resources = {
       },
       whereIsToday: { title: 'Alors, c’est où aujourd’hui ?', subtitle: 'Liste des lieux où je suis allé, par catégorie. Jette un œil ;)', opensToday: 'Ouvrent aujourd\'hui' },
       list: {
-        nameHeader: 'Nom', neighborhoodHeader: 'Quartier', variablePlace: 'lieu variable', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z'
+        nameHeader: 'Nom', neighborhoodHeader: 'Quartier', variablePlace: 'Sans lieu fixe', typeHeader: 'Type', orderNameAsc: 'NOM par ordre croissant A-Z', orderNeighborhoodAsc: 'QUARTIER par ordre croissant A-Z'
       },
       filters: {
         title: 'Filtres',
@@ -870,6 +871,7 @@ const resources = {
       home: { nearMeTitle: 'Рядом со мной', nearMeSubtitle: '（показаны места в радиусе {{km}} км рядом с вами)', allowLocation: 'Упс, мы не нашли ваше местоположение...\n\nЧтобы найти места рядом с вами, нажмите кнопку ниже:', allowLocationButton: 'Разрешить геолокацию', loadingCategories: 'Загрузка категорий...', increaseRadius: 'Увеличить радиус', neighborhoodsTitle: 'По район', neighborhoodsTagline: 'Вы в одном из этих районов? Рядом есть интересное!', viewMoreNeighborhoods: 'ещё районы', viewMore: 'Больше вариантов', noNearbyResultsRadius: 'Рядом с вами ничего нет...\n\nКак насчёт изменить расстояние, чтобы\nпоказать ближайшие места?', locationNotSupported: 'Геолокация не поддерживается в этом браузере.', locationDeniedInstructions: '', outsideGreaterSP: 'Вы находитесь вне региона Большого Сан-Паулу. Как насчёт посетить город в ближайшее время? :)', viewPlace: 'посмотреть место', viewPlaces: 'посмотреть места' },
       header: { title: 'Role Paulista', tagline: 'Лучшие рекомендации, в нескольких кликах' },
       common: { back: 'Назад', details: 'Узнать больше', selectLanguage: 'Выберите язык', changeDistance: 'Увеличить расстояние', all: 'Все', filter: 'Фильтр:', close: 'Закрыть', loading: 'Загрузка…', loadError: 'Ошибка загрузки данных.', noPlaces: 'Ничего не найдено.', version: 'Версия' },
+      list: { variablePlace: 'Без фиксированного места' },
       filters: { title: 'Фильтры', subtitle: 'Настройте фильтры ниже, чтобы уточнить результаты', sortingTitle: 'Сортировка', hoursTitle: 'Часы', openNowLabel: 'Открыто сейчас', openNow: 'Открыто сейчас', anyHourLabel: 'Любое время', anyHour: 'Любое время', scheduleTitle: 'Бронирование', scheduleRequired: 'Требуется бронирование', scheduleNotRequired: 'Бронирование не требуется', anySchedule: 'Любой', cityTitle: 'Город', anyCity: 'Любой город', priceTitle: 'Цена', anyPrice: 'Любая цена', button: 'Фильтры' },
       placeDetail: { loading: 'Загрузка деталей...', notFound: 'Место не найдено.', opensMonday: 'открыто по понедельникам', opensSunday: 'открыто по воскресеньям', opensHoliday: 'открыто в праздники', alreadyVisited: '✓ Был и рекомендую', notVisited: '⚠️ Еще не был', viewHours: 'смотреть часы',
         visitModalTitle: 'О посещенных местах',
@@ -1025,6 +1027,7 @@ const resources = {
       home: { nearMeTitle: '附近', nearMeSubtitle: '（显示你附近 {{km}}km 半径内的地点）', allowLocation: '哎呀，我们未能找到您的位置...\n\n要查找您附近的地点，请点击下方按钮：', allowLocationButton: '允许定位', loadingCategories: '正在加载分类...', increaseRadius: '增加半径', neighborhoodsTitle: '按街区', neighborhoodsTagline: '你在这些街区之一吗？附近有好地方！', viewMoreNeighborhoods: '更多街区', viewMore: '更多选项', noNearbyResultsRadius: '你附近没有找到任何地点...\n\n要不要调整距离，\n以便列出附近的地点？', locationNotSupported: '此浏览器不支持地理定位。', locationDeniedInstructions: '', outsideGreaterSP: '您位于大圣保罗地区之外。要不要考虑近期来这座城市游玩？ :)', viewPlace: '查看地点', viewPlaces: '查看地点列表' },
       header: { title: 'Role Paulista', tagline: '最好的推荐，几次点击即可到达' },
       common: { back: '返回', details: '了解更多', selectLanguage: '选择语言', changeDistance: '增加距离', all: '全部', filter: '筛选:', close: '关闭', loading: '加载中…', loadError: '加载数据出错。', noPlaces: '未找到地点。', version: '版本' },
+      list: { variablePlace: '无固定地点' },
       filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', cityTitle: '城市', anyCity: '任意城市', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过并推荐', notVisited: '⚠️ 还没去过', viewHours: '查看营业时间',
         visitModalTitle: '关于该地点',
@@ -1210,7 +1213,7 @@ const resources = {
         placeholder: 'E.g.: Pao Legal Bakery'
       },
       whereIsToday: { title: 'So, where are we going today?', subtitle: 'List of places I’ve been, by category. Take a look ;)', opensToday: 'Open today' },
-      list: { nameHeader: 'NAME', neighborhoodHeader: 'QUARTIER', typeHeader: 'Type', orderNameAsc: 'NAME in ascending order A-Z', orderNeighborhoodAsc: 'QUARTIER in ascending order A-Z' },
+      list: { nameHeader: 'NAME', neighborhoodHeader: 'QUARTIER', variablePlace: 'No fixed location', typeHeader: 'Type', orderNameAsc: 'NAME in ascending order A-Z', orderNeighborhoodAsc: 'QUARTIER in ascending order A-Z' },
       filters: {
         title: 'Filters',
         subtitle: 'Adjust the filters below to refine results',
@@ -1433,7 +1436,7 @@ const resources = {
         anyPrice: 'Beliebiger Preis',
         button: 'Filter'
       },
-      list: { nameHeader: 'NAAM', neighborhoodHeader: 'STADTTEIL', typeHeader: 'Typ', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'STADTTEIL artan sırada A-Z' },
+      list: { nameHeader: 'NAAM', neighborhoodHeader: 'STADTTEIL', variablePlace: 'Kein fester Standort', typeHeader: 'Typ', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'STADTTEIL artan sırada A-Z' },
       footer: { home: 'Start', search: 'Chercher', about: 'Über' },
       searchPage: {
         title: 'Cherchez un lieu',
@@ -1642,7 +1645,7 @@ const resources = {
         anyPrice: '任意の値下げ',
         button: 'フィルター'
       },
-      list: { nameHeader: '名前', neighborhoodHeader: '地区', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNeighborhoodAsc: '地区 昇順 A-Z' },
+      list: { nameHeader: '名前', neighborhoodHeader: '地区', variablePlace: '固定の場所なし', typeHeader: '種類', orderNameAsc: '名前 昇順 A-Z', orderNeighborhoodAsc: '地区 昇順 A-Z' },
       footer: { home: 'ホーム', search: '検索', about: '概要' },
       searchPage: {
         title: '場所を探す',
@@ -1819,6 +1822,7 @@ const resources = {
         cityTitle: 'المدينة',
         priceTitle: 'السعر'
       },
+      list: { variablePlace: 'بدون موقع ثابت' },
       whereIsToday: {
         title: 'طيب، فين هنروح النهاردة؟',
         subtitle: 'قائمة الأماكن اللي زرتها حسب الفئة، بص عليها ;)',
@@ -1925,7 +1929,7 @@ const resources = {
         anyPrice: 'Qualsiasi prezzo',
         button: 'Filtri'
       },
-      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'QUARTIERE', typeHeader: 'Tipo', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'QUARTIERE rosnąco A-Z' },
+      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'QUARTIERE', variablePlace: 'Senza sede fissa', typeHeader: 'Tipo', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'QUARTIERE rosnąco A-Z' },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       searchPage: {
         title: 'Cerca un luogo',
@@ -2140,7 +2144,7 @@ const resources = {
         anyPrice: 'Elke prijs',
         button: 'Filters'
       },
-      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', typeHeader: 'Type', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'BUURT artan sırada A-Z' },
+      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', variablePlace: 'Zonder vaste locatie', typeHeader: 'Type', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'BUURT artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Zoeken', about: 'Hakkında' },
       searchPage: {
         title: 'Zoek een plek',
@@ -2347,7 +2351,7 @@ const resources = {
         anyPrice: 'Herhangi bir fiyat',
         button: 'Filtreler'
       },
-      list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z' },
+      list: { nameHeader: 'İSİM', neighborhoodHeader: 'MAHALLE', variablePlace: 'Sabit konum yok', typeHeader: 'Tür', orderNameAsc: 'İSİM artan sırada A-Z', orderNeighborhoodAsc: 'MAHALLE artan sırada A-Z' },
       footer: { home: 'Anasayfa', search: 'Ara', about: 'Hakkında' },
       searchPage: {
         title: 'Bir yer ara',
@@ -2548,7 +2552,7 @@ const resources = {
         anyPrice: 'Dowolna cena',
         button: 'Filtry'
       },
-      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z' },
+      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'DZIELNICA', variablePlace: 'Bez stalej lokalizacji', typeHeader: 'Typ', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'DZIELNICA rosnąco A-Z' },
       footer: { home: 'Strona główna', search: 'Szukaj', about: 'O nas' },
       searchPage: {
         title: 'Wyszukaj miejsce',
