@@ -90,5 +90,29 @@
             }
         ],
         "isEnabled": true
+    },
+    {
+        "id": 5,
+        "name": "Natureza na Selva de Pedras",
+        "tourType": "NATURE",
+        "description": "Se você está procurando diversão e entretenimento, este tour é para você! Aqui incluí um bar temático, uma casa de jogos e um espaço de patinação.",
+        "places": [
+            {
+                "id": 9,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 12,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 6,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 7,
+                "placeType": "NATURE"
+            }
+        ]
     }
 ]

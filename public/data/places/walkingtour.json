@@ -263,5 +263,29 @@
             }
         ],
         "isEnabled": true
+    },
+    {
+        "id": 9,
+        "name": "Tarde no Ibira",
+        "tourType": "ALL",
+        "description": "Pensado para você tirar a tarde conhecendo o Parque do Ibirapuera e o que ele tem a oferecer dentro dele.",
+        "places": [
+            {
+                "id": 42,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 43,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 44,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 78,
+                "placeType": "TOURIST_SPOT"
+            }
+        ]
     }
 ]

@@ -1686,8 +1686,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": -23.581859,
-                "longitude": -46.657964
+                "latitude": -23.584446,
+                "longitude": -46.660122
             }
         ],
         "linkMenu": "",
@@ -1728,8 +1728,8 @@
                 "neighborhood": "Vila Mariana",
                 "postalCode": "04094-050",
                 "isMainUnity": true,
-                "latitude": -23.581859,
-                "longitude": -46.657964
+                "latitude": -23.584945,
+                "longitude": -46.655044
             }
         ],
         "linkMenu": "",
@@ -2908,5 +2908,49 @@
             "TOURIST_SPOT"
         ],
         "isEnabled": false
+    },
+    {
+        "id": 78,
+        "name": "Planetário do Ibirapuera",
+        "phones": [
+            {
+                "number": "1138896100",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "PLANETARIOIBIRAPUERA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": false,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "ECONOMIC",
+        "notes": [
+            "Astros e estrelas são reproduzidos em cores intensas por projetores modernos para até 300 pessoas."
+        ],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Pedro Álvares Cabral,",
+                "number": "s/n",
+                "city": "São Paulo",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04094-050",
+                "isMainUnity": true,
+                "latitude": -23.583966,
+                "longitude": -46.660900
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://planetario.urbiapass.com.br/",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ],
+        "isEnabled": true
     }
 ]

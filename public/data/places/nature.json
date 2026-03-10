@@ -491,5 +491,49 @@
             "NATURE"
         ],
         "isEnabled": true
+    },
+    {
+        "id": 12,
+        "name": "Aquário de São Paulo",
+        "phones": [
+            {
+                "number": "1122735500",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "AQUARIOSP_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": true,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "O Aquário de São Paulo é um dos maiores aquários da América Latina, com diversas espécies de peixes, répteis e mamíferos aquáticos"
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Huet Bacelar",
+                "number": "407",
+                "city": "São Paulo",
+                "neighborhood": "Ipiranga",
+                "postalCode": "04275-000",
+                "isMainUnity": true,
+                "latitude": -23.593511,
+                "longitude": -46.613961
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "https://aquariodesaopaulo.com.br/",
+        "linkInstagram": "https://www.instagram.com/aquariosp/",
+        "tags": [],
+        "listTypes": [
+            "NATURE"
+        ],
+        "isEnabled": true
     }
 ]

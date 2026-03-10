@@ -48,12 +48,15 @@ type TourItem = {
     places: TourPlaceRef[];
 };
 
-function buildGoogleMapsDirectionsUrl(points: Array<{ lat: number; lng: number }>) {
+function buildGoogleMapsDirectionsUrl(
+    points: Array<{ lat: number; lng: number }>,
+    travelMode: 'walking' | 'driving' = 'walking'
+) {
     if (!points || points.length < 2) return null;
     const origin = `${points[0].lat},${points[0].lng}`;
     const destination = `${points[points.length - 1].lat},${points[points.length - 1].lng}`;
     const waypoints = points.length > 2 ? points.slice(1, -1).map(p => `${p.lat},${p.lng}`).join('|') : '';
-    let url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=walking`;
+    let url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=${travelMode}`;
     if (waypoints) url += `&waypoints=${encodeURIComponent(waypoints)}`;
     return url;
 }
@@ -228,6 +231,9 @@ export function TravelItineraryPage() {
             if (place?.openingHours?.patternId === 'ALWAYS_OPEN') {
                 return t('openingHours.alwaysOpenLabel', { defaultValue: 'Sempre aberto' });
             }
+            if (place?.openingHours?.patternId === 'CHECK_AVAILABILITY_DAYTIME') {
+                return t('openingHours.checkAvailabilityLabel', { defaultValue: 'Verificar disponibilidade' });
+            }
             // If there is no patternId and no custom overrides, show unavailable
             if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
                 return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
@@ -393,7 +399,8 @@ export function TravelItineraryPage() {
             try {
                 if (orderedPoints.length < 2) return;
                 const coords = orderedPoints.map(p => `${p.lng},${p.lat}`).join(';');
-                const url = `https://router.project-osrm.org/route/v1/foot/${coords}?overview=full&geometries=geojson`;
+                const osrmProfile = tourMode === 'city' ? 'driving' : 'foot';
+                const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${coords}?overview=full&geometries=geojson`;
                 const res = await fetch(url);
                 if (!res.ok) throw new Error(`OSRM error ${res.status}`);
                 const json: OsrmRouteResponse = await res.json();
@@ -423,7 +430,7 @@ export function TravelItineraryPage() {
                 tileLayerRef.current = null;
             }
         };
-    }, [orderedPoints, showRouteDetails]);
+    }, [orderedPoints, showRouteDetails, tourMode]);
 
     useEffect(() => {
         return () => {
@@ -457,7 +464,8 @@ export function TravelItineraryPage() {
 
     const onVerRota = () => {
         const pts = orderedPoints.map(p => ({ lat: p.lat, lng: p.lng }));
-        const url = buildGoogleMapsDirectionsUrl(pts);
+        const googleTravelMode: 'walking' | 'driving' = tourMode === 'city' ? 'driving' : 'walking';
+        const url = buildGoogleMapsDirectionsUrl(pts, googleTravelMode);
         if (url) window.open(url);
     };
 
