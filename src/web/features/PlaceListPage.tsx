@@ -597,6 +597,27 @@ export const PlaceListPage: React.FC = () => {
     const [showEnvironmentModal, setShowEnvironmentModal] = useState(false);
     const [showRestaurantSubcategoryModal, setShowRestaurantSubcategoryModal] = useState(false);
     const [restaurantSubcategoryTarget, setRestaurantSubcategoryTarget] = useState<'BRAZILIAN' | 'FOREIGN' | null>(null);
+    const resultsSectionRef = useRef<HTMLElement | null>(null);
+
+    const focusResultsSection = (delayMs = 0) => {
+        const focusAction = () => {
+            const section = resultsSectionRef.current;
+            if (!section) return;
+            const absoluteTop = window.scrollY + section.getBoundingClientRect().top;
+            window.scrollTo({
+                top: Math.max(absoluteTop, 0),
+                behavior: 'smooth',
+            });
+            section.focus({ preventScroll: true });
+        };
+
+        if (delayMs > 0) {
+            window.setTimeout(focusAction, delayMs);
+            return;
+        }
+
+        focusAction();
+    };
 
     // Cities available for current base list
     const cities = useMemo(() => {
@@ -938,6 +959,7 @@ export const PlaceListPage: React.FC = () => {
                             onSelect={(value) => {
                                 if (!isRestaurantRoute) {
                                     setSelectedEnv(value);
+                                    focusResultsSection();
                                     return;
                                 }
                                 if (value === 'BRAZILIAN' || value === 'FOREIGN') {
@@ -946,6 +968,7 @@ export const PlaceListPage: React.FC = () => {
                                     return;
                                 }
                                 setSelectedEnv(value);
+                                focusResultsSection();
                             }}
                             onViewMore={() => setShowEnvironmentModal(true)}
                             title={isRestaurantRoute
@@ -965,25 +988,37 @@ export const PlaceListPage: React.FC = () => {
                     setOrder(value);
                     setOrderVersion((x) => x + 1);
                     setFilterOpenNow(false);
+                    focusResultsSection();
                 }}
                 filterOpenNow={filterOpenNow}
                 onSelectOpenNow={() => {
                     setFilterOpenNow(true);
                     setOrder('');
                     setOrderVersion((x) => x + 1);
+                    focusResultsSection();
                 }}
                 onSelectAnyHour={() => {
                     setFilterOpenNow(false);
                     setOrderVersion((x) => x + 1);
+                    focusResultsSection();
                 }}
                 scheduleFilter={scheduleFilter}
-                onSelectSchedule={(value) => setScheduleFilter(value)}
+                onSelectSchedule={(value) => {
+                    setScheduleFilter(value);
+                    focusResultsSection();
+                }}
                 cities={cities}
                 selectedCity={cityFilter}
-                onSelectCity={(value) => setCityFilter(value)}
+                onSelectCity={(value) => {
+                    setCityFilter(value);
+                    focusResultsSection();
+                }}
                 priceOptions={priceOptions}
                 priceFilter={priceFilter}
-                onSelectPrice={(value) => setPriceFilter(value)}
+                onSelectPrice={(value) => {
+                    setPriceFilter(value);
+                    focusResultsSection();
+                }}
                 showSortingMenu={showSortingMenu}
                 setShowSortingMenu={setShowSortingMenu}
                 showHoursMenu={showHoursMenu}
@@ -1001,7 +1036,7 @@ export const PlaceListPage: React.FC = () => {
                 showPriceFilter={priceOptions.length > 1}
             />
             {/* Lista de lugares */}
-            <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg pb-24`}>
+            <section ref={resultsSectionRef} tabIndex={-1} className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] shadow-lg pb-24`}>
                 <div className="mx-auto max-w-5xl px-4 sm:px-12">
                     <AppText variant="subtitle-dark" className="pt-6">
                         {t('searchPage.resultsTitle')}: {sortedPlaces.length}
@@ -1065,6 +1100,7 @@ export const PlaceListPage: React.FC = () => {
                             return;
                         }
                         setSelectedEnv(next);
+                        focusResultsSection();
                     }}
                 />
             )}
@@ -1087,6 +1123,7 @@ export const PlaceListPage: React.FC = () => {
                         const next = env?.value || null;
                         setSelectedEnv(next);
                         setRestaurantSubcategoryTarget(null);
+                        focusResultsSection();
                     }}
                 />
             )}

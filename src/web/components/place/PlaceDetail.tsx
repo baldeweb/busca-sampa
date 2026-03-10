@@ -432,30 +432,32 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                         const waHref = `https://wa.me/${clean.replace(/^\+/, '')}`;
                                         const phoneDisplay = formatPhoneForDisplay(raw);
                                         return (
-                                            <div key={idx} className="flex items-center gap-2">
-                                                {p.isWhatsApp && (
-                                                    <AppButton
-                                                        variant="whatsapp"
-                                                        size="md"
-                                                        onClick={() => window.open(waHref, '_blank', 'noopener noreferrer')}
-                                                        className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3n"
-                                                    >
-                                                        <FaWhatsapp className="mr-2" /> {t('placeDetail.whatsappButton')}
-                                                    </AppButton>
-                                                )}
-                                                <AppButton
-                                                    variant="action"
-                                                    size="md"
-                                                    onClick={() => window.open(telHref, '_blank', 'noopener noreferrer')}
-                                                    className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3"
-                                                >
-                                                    <FaPhone className="mr-2" /> {t('placeDetail.onCall')}
-                                                </AppButton>
+                                            <div key={idx} className="space-y-2">
                                                 {phoneDisplay && (
                                                     <AppText variant="selected-dark">
                                                         {phoneDisplay}
                                                     </AppText>
                                                 )}
+                                                <div className="flex items-center gap-2">
+                                                    {p.isWhatsApp && (
+                                                        <AppButton
+                                                            variant="whatsapp"
+                                                            size="md"
+                                                            onClick={() => window.open(waHref, '_blank', 'noopener noreferrer')}
+                                                            className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3"
+                                                        >
+                                                            <FaWhatsapp className="mr-2" /> {t('placeDetail.whatsappButton')}
+                                                        </AppButton>
+                                                    )}
+                                                    <AppButton
+                                                        variant="action"
+                                                        size="md"
+                                                        onClick={() => window.open(telHref, '_blank', 'noopener noreferrer')}
+                                                        className="inline-flex items-center px-4 py-3 sm:px-4 sm:py-3"
+                                                    >
+                                                        <FaPhone className="mr-2" /> {t('placeDetail.onCall')}
+                                                    </AppButton>
+                                                </div>
                                             </div>
                                         );
                                     })}

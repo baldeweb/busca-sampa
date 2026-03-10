@@ -99,6 +99,27 @@ export function TravelItineraryPage() {
     const [showRouteDetails, setShowRouteDetails] = useState(false);
     const [isClosingRouteDetails, setIsClosingRouteDetails] = useState(false);
     const closeRouteDetailsTimeoutRef = useRef<number | null>(null);
+    const resultsSectionRef = useRef<HTMLDivElement | null>(null);
+
+    const focusResultsSection = (delayMs = 0) => {
+        const focusAction = () => {
+            const section = resultsSectionRef.current;
+            if (!section) return;
+            const absoluteTop = window.scrollY + section.getBoundingClientRect().top;
+            window.scrollTo({
+                top: Math.max(absoluteTop, 0),
+                behavior: 'smooth',
+            });
+            section.focus({ preventScroll: true });
+        };
+
+        if (delayMs > 0) {
+            window.setTimeout(focusAction, delayMs);
+            return;
+        }
+
+        focusAction();
+    };
 
     const routeOptions = React.useMemo(
         () => [
@@ -508,13 +529,17 @@ export function TravelItineraryPage() {
                                         title={t('travelItinerary.routeOptionsTitle')}
                                         environments={visibleRouteOptions}
                                         selectedEnv={selectedRouteOption}
-                                        onSelect={setSelectedRouteOption}
+                                        onSelect={(value) => {
+                                            setSelectedRouteOption(value);
+                                            focusResultsSection();
+                                        }}
                                         onViewMore={() => null}
                                         showViewMore={false}
                                         containerClassName="pb-4"
                                         contentPaddingClassName="px-0"
                                     />
 
+                                    <div ref={resultsSectionRef} tabIndex={-1}>
                                     <SectionHeading
                                         title={t('travelItinerary.createdForYouTitle', { defaultValue: 'Roteiros criados pra você :)' })}
                                         className='mb-3 pt-8'
@@ -553,6 +578,7 @@ export function TravelItineraryPage() {
                                     {!loading && orderedPoints.length === 0 && (
                                         <AppText variant="body-light" className="mt-8">{t('travelItinerary.tourPointsLoadError')}</AppText>
                                     )}
+                                    </div>
 
                                 </div>
                             </div>

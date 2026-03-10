@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { useDocumentTitle } from '@/web/hooks/useDocumentTitle';
 import { Toolbar } from '@/web/components/layout/Toolbar';
 import { useParams, useNavigate } from "react-router-dom";
@@ -135,6 +135,27 @@ export const NeighborhoodListPage: React.FC = () => {
   const [showScheduleMenu, setShowScheduleMenu] = useState(false);
   const [showCityMenu, setShowCityMenu] = useState(false);
   const [showPriceMenu, setShowPriceMenu] = useState(false);
+  const resultsSectionRef = useRef<HTMLElement | null>(null);
+
+  const focusResultsSection = (delayMs = 0) => {
+    const focusAction = () => {
+      const section = resultsSectionRef.current;
+      if (!section) return;
+      const absoluteTop = window.scrollY + section.getBoundingClientRect().top;
+      window.scrollTo({
+        top: Math.max(absoluteTop, 0),
+        behavior: 'smooth',
+      });
+      section.focus({ preventScroll: true });
+    };
+
+    if (delayMs > 0) {
+      window.setTimeout(focusAction, delayMs);
+      return;
+    }
+
+    focusAction();
+  };
 
   const cities = useMemo(() => {
     const s = new Set<string>();
@@ -385,6 +406,7 @@ export const NeighborhoodListPage: React.FC = () => {
                   setSelectedType(value);
                   setIsListFading(false);
                 }, 220);
+                focusResultsSection(220);
               }}
               onViewMore={() => setShowEnvironmentModal(true)}
             />
@@ -395,18 +417,36 @@ export const NeighborhoodListPage: React.FC = () => {
       <FilterBar
         orderOptions={ORDER_OPTIONS}
         order={order}
-        onOrderSelect={(value) => setOrder(value)}
+        onOrderSelect={(value) => {
+          setOrder(value);
+          focusResultsSection();
+        }}
         filterOpenNow={filterOpenNow}
-        onSelectOpenNow={() => setFilterOpenNow(true)}
-        onSelectAnyHour={() => setFilterOpenNow(false)}
+        onSelectOpenNow={() => {
+          setFilterOpenNow(true);
+          focusResultsSection();
+        }}
+        onSelectAnyHour={() => {
+          setFilterOpenNow(false);
+          focusResultsSection();
+        }}
         scheduleFilter={scheduleFilter}
-        onSelectSchedule={(value) => setScheduleFilter(value)}
+        onSelectSchedule={(value) => {
+          setScheduleFilter(value);
+          focusResultsSection();
+        }}
         cities={cities}
         selectedCity={selectedCity}
-        onSelectCity={(value) => setSelectedCity(value)}
+        onSelectCity={(value) => {
+          setSelectedCity(value);
+          focusResultsSection();
+        }}
         priceOptions={priceOptions}
         priceFilter={priceFilter}
-        onSelectPrice={(value) => setPriceFilter(value)}
+        onSelectPrice={(value) => {
+          setPriceFilter(value);
+          focusResultsSection();
+        }}
         showSortingMenu={showSortingMenu}
         setShowSortingMenu={setShowSortingMenu}
         showHoursMenu={showHoursMenu}
@@ -426,7 +466,7 @@ export const NeighborhoodListPage: React.FC = () => {
       />
 
       {/* Lista de lugares (estilo igual ao de categorias) */}
-      <section className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'} pb-24`}>
+      <section ref={resultsSectionRef} tabIndex={-1} className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#212121] flex-1 shadow-lg transition-opacity duration-50 ${isListFading ? 'opacity-0' : 'opacity-100'} pb-24`}>
         <div className="mx-auto max-w-5xl px-4 sm:px-12">
           <AppText variant="subtitle-dark" className="pt-6">
               {t('searchPage.resultsTitle')}: {sortedPlaces.length}
@@ -489,6 +529,7 @@ export const NeighborhoodListPage: React.FC = () => {
               setSelectedType(next);
               setIsListFading(false);
             }, 220);
+            focusResultsSection(220);
           }}
         />
       )}

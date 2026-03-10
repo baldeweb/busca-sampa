@@ -53,7 +53,7 @@ export function AppButton({
     ghost: "bg-transparent text-[#F5F5F5] hover:text-white",
     action: `rounded-full bg-[#B3261E] text-[#F5F5F5] border border-[#F5F5F5] items-center justify-center ${shadow} hover:bg-[#B3261E]`,
     actionborder: `rounded-[8px] bg-[#FFFFFF] text-[#212121] border border-[#B3261E] items-center justify-center uppercase ${shadow} hover:bg-[#B3261E] hover:text-[#F5F5F5]`,
-    whatsapp: `rounded-full bg-[#13AC57] text-[#F5F5F5] border border-[#F5F5F5] items-center justify-center ${shadow}`,
+    whatsapp: `rounded-full bg-[#25D366] text-[#212121] border border-[#F5F5F5] items-center justify-center ${shadow}`,
     seemore: `rounded-[8px] bg-[#212121] text-[#F5F5F5] border border-[#F5F5F5] items-center justify-center uppercase ${shadow} hover:bg-[#000000]`,
     square: `rounded-[8px] bg-[#F5F5F5] text-[#212121] border border-[#212121] items-center ${shadow} hover:bg-[#D6D6D6]`,
     uber: `rounded-full bg-[#000000] text-[#F5F5F5] border border-[#F5F5F5] ${shadow}`,
