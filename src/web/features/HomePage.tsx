@@ -518,8 +518,6 @@ export function HomePage() {
             <AppButton
               variant="actionborder"
               onClick={() => setIsNeighborhoodModalOpen(true)}
-              size="md"
-              className="w-full py-4"
             >
               {t('home.viewMore')}
             </AppButton>

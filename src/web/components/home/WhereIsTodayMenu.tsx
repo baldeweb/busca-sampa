@@ -3,7 +3,6 @@ import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
 import { CategoryCard } from "@/web/components/ui/CategoryCard";
-// icons replaced by project image assets
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
 import icFree from '@/assets/imgs/icons/ic_free.png';
@@ -133,7 +132,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
             {!loading && !error && (
                 <div className="relative mt-4">
                     <div
-                        className="grid grid-cols-2 gap-2 py-3 pr-4 sm:pr-12 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]"
+                        className="grid grid-cols-2 gap-2 py-3 pr-4 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]"
                         role="listbox"
                         aria-label={t('whereIsToday.categoriesAriaLabel', { defaultValue: 'Categorias' })}
                     >
@@ -175,11 +174,10 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                             );
                         })}
                         <AppButton
-                            variant="seemore"
-                            className="w-full px-4 py-4"
+                            variant="actionborder"
                             onClick={() => setIsMoreModalOpen(true)}
                         >
-                            VER MAIS
+                            {t('home.viewMore')}
                         </AppButton>
                     </div>
                 </div>

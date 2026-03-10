@@ -30,14 +30,14 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
   const visibleEnvironmentsDesktop = baseSlotsDesktop - (showViewMoreOnDesktop ? 1 : 0);
   const showViewMoreButton = showViewMoreOnMobile || showViewMoreOnDesktop;
   return (
-    <div className={containerClassName || "bg-[#FFFFFF] text-black pb-4"}>
+    <div className={containerClassName || "bg-[#FFFFFF] pb-4"}>
       <SectionHeading title={heading} className={`mb-3 pt-8 mt-3 ${paddingClassName}`} underline={false} card={false} tone='light' />
       <div className={`${gridClassName} ${paddingClassName} flex flex-wrap items-start gap-2`}>
         {/* Botão "Todos" */}
         <AppButton
           variant="actionborder"
           onClick={() => onSelect(null)}
-          className={`inline-flex align-top px-4 py-4 leading-tight`}
+          className={`inline-flex align-top pt-4 pb-3 leading-tight`}
         >
           {t('common.all')}
         </AppButton>
@@ -74,9 +74,9 @@ const EnvironmentGrid: React.FC<EnvironmentGridProps> = ({ environments, selecte
         {/* Botão "Ver mais" quando houver itens além do limite */}
         {showViewMoreButton && (
           <AppButton
-            variant="seemore"
+            variant="actionborder"
             onClick={onViewMore}
-            className={`inline-flex items-center justify-center align-top py-4 px-4 ${showViewMoreOnDesktop ? 'sm:inline-flex' : 'sm:hidden'}`}
+            className={`inline-flex items-center justify-center align-top pt-4 pb-3 px-4 ${showViewMoreOnDesktop ? 'sm:inline-flex' : 'sm:hidden'}`}
           >
             {t('home.viewMore')}
           </AppButton>
