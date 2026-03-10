@@ -7,4 +7,5 @@ export type RecommendationType =
     | "TOURIST_SPOT"
     | "FORFUN"
     | "STORES"
+    | "EVENTS"
     | "PLEASURE";

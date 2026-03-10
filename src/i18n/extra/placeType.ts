@@ -11,6 +11,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Turísticos',
         FORFUN: 'Diversão',
         STORES: 'Lojas',
+        EVENTS: 'Eventos',
         FREE: 'Gratuitos',
         PLEASURE: 'Casa de Prazeres'
       }
@@ -28,6 +29,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Turísticos',
         FORFUN: 'Diversión',
         STORES: 'Tiendas',
+        EVENTS: 'Eventos',
         FREE: 'Gratis',
         PLEASURE: 'Casa de placeres'
       }
@@ -45,6 +47,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Touristiques',
         FORFUN: 'Divertissement',
         STORES: 'Boutiques',
+        EVENTS: 'Evenements',
         FREE: 'Gratuits',
         PLEASURE: 'Maison de plaisirs'
       }
@@ -62,6 +65,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Туристические',
         FORFUN: 'Развлечения',
         STORES: 'Магазины',
+        EVENTS: 'События',
         FREE: 'Бесплатно',
         PLEASURE: 'Дом удовольствий'
       }
@@ -79,6 +83,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: '旅游',
         FORFUN: '娱乐',
         STORES: '商店',
+        EVENTS: '活动',
         FREE: '免费',
         PLEASURE: '成人娱乐场所'
       }
@@ -96,6 +101,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Tourist',
         FORFUN: 'For fun',
         STORES: 'Stores',
+        EVENTS: 'Events',
         FREE: 'Free',
         PLEASURE: 'Pleasure house'
       }
@@ -113,6 +119,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Touristisch',
         FORFUN: 'Spaß',
         STORES: 'Laden',
+        EVENTS: 'Events',
         FREE: 'Kostenlos',
         PLEASURE: 'Lusthaus'
       }
@@ -130,6 +137,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: '観光',
         FORFUN: '遊び',
         STORES: '店舗',
+        EVENTS: 'イベント',
         FREE: '無料',
         PLEASURE: '歓楽施設'
       }
@@ -147,6 +155,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'سياحي',
         FORFUN: 'ترفيه',
         STORES: 'متاجر',
+        EVENTS: 'فعاليات',
         FREE: 'مجاني',
         PLEASURE: 'اماكن المتعة'
       }
@@ -164,6 +173,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Turistici',
         FORFUN: 'Divertimento',
         STORES: 'Negozi',
+        EVENTS: 'Eventi',
         FREE: 'Gratuito',
         PLEASURE: 'Casa di piacere'
       }
@@ -181,6 +191,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Toeristisch',
         FORFUN: 'Plezier',
         STORES: 'Winkels',
+        EVENTS: 'Evenementen',
         FREE: 'Vrij',
         PLEASURE: 'Plezierhuis'
       }
@@ -198,6 +209,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Turistik',
         FORFUN: 'Eğlence',
         STORES: 'Mağazalar',
+        EVENTS: 'Etkinlikler',
         FREE: 'Ücretsiz',
         PLEASURE: 'Eğlence evi'
       }
@@ -215,6 +227,7 @@ export const placeTypeLabels = {
         TOURIST_SPOT: 'Turystyczne',
         FORFUN: 'Zabawa',
         STORES: 'Sklepy',
+        EVENTS: 'Wydarzenia',
         FREE: 'Darmowe',
         PLEASURE: 'Dom rozkoszy'
       }

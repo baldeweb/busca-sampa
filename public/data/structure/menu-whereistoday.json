@@ -60,5 +60,11 @@
         "isEnabled": true,
         "title": "Lojas",
         "tags": [ "STORES" ]
+    },
+    {
+        "id": 11,
+        "isEnabled": true,
+        "title": "Eventos",
+        "tags": [ "EVENTS" ]
     }
 ]

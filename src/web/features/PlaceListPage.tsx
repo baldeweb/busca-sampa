@@ -21,6 +21,7 @@ import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
+import icEvents from '@/assets/imgs/icons/ic_events.png';
 import icMouth from '@/assets/imgs/icons/ic_mouth.png';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { PlaceListItem } from "@/web/components/place/PlaceListItem";
@@ -315,6 +316,8 @@ export const PlaceListPage: React.FC = () => {
         diversao: "forfun",
         stores: "stores",
         lojas: "stores",
+        events: "events",
+        eventos: "events",
     };
     const dataCategory = dataCategoryMap[routeTypeLower];
 
@@ -329,6 +332,7 @@ export const PlaceListPage: React.FC = () => {
     const { data: touristSpots } = useRecommendationList(needsAllPlaces || dataCategory === "tourist-spot" ? "tourist-spot" : "");
     const { data: forfun } = useRecommendationList(needsAllPlaces || dataCategory === "forfun" ? "forfun" : "");
     const { data: stores } = useRecommendationList(needsAllPlaces || dataCategory === "stores" ? "stores" : "");
+    const { data: events } = useRecommendationList(needsAllPlaces || dataCategory === "events" ? "events" : "");
     const { data: openingPatternsData } = useOpeningPatterns();
     const openingPatterns = openingPatternsData || [];
 
@@ -345,8 +349,9 @@ export const PlaceListPage: React.FC = () => {
             ...touristSpots,
             ...forfun,
             ...stores,
+            ...events,
         ];
-    }, [needsAllPlaces, restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]);
+    }, [needsAllPlaces, restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores, events]);
 
     // Mapeia slug para tipo utilizado nos dados
     const typeMap: Record<string, string> = {
@@ -370,6 +375,8 @@ export const PlaceListPage: React.FC = () => {
         diversao: "FORFUN",
         stores: "STORES",
         lojas: "STORES",
+        events: "EVENTS",
+        eventos: "EVENTS",
     };
     const mappedType = typeMap[routeTypeLower] || routeTypeLower.toUpperCase() || "RESTAURANT";
     const isRestaurantRoute =
@@ -398,6 +405,7 @@ export const PlaceListPage: React.FC = () => {
         if (routeTypeLower === "tourist-spot" || routeTypeLower === "pontos-turisticos") return touristSpots;
         if (routeTypeLower === "forfun" || routeTypeLower === "diversao") return forfun;
         if (routeTypeLower === "stores" || routeTypeLower === "lojas") return stores;
+        if (routeTypeLower === "events" || routeTypeLower === "eventos") return events;
         if (routeTypeLower === "pleasure" || routeTypeLower === "prazer") return pleasures;
 
         if (routeTypeLower === "gratuito" || mappedType === "FREE") {
@@ -449,7 +457,7 @@ export const PlaceListPage: React.FC = () => {
             });
         }
         return restaurants;
-    }, [routeTypeLower, mappedType, allPlaces, restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores, openingPatterns]);
+    }, [routeTypeLower, mappedType, allPlaces, restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores, events, openingPatterns]);
 
     // Intersect with IDs passed via navigation state, if any
     const baseList = useMemo(() => {
@@ -470,6 +478,7 @@ export const PlaceListPage: React.FC = () => {
                 'TOURIST_SPOT',
                 'FORFUN',
                 'STORES',
+                'EVENTS',
             ];
             return fixedTypes.map((value) => ({ label: getPlaceTypeLabel(value), value }));
         }
@@ -517,6 +526,7 @@ export const PlaceListPage: React.FC = () => {
             case 'TOURIST_SPOT': return icTouristSpot;
             case 'FORFUN': return icForfun;
             case 'STORES': return icStores;
+            case 'EVENTS': return icEvents;
             case 'PLEASURE': return icMouth;
             case 'ABREM-HOJE':
             case 'ABREM_HOJE':
@@ -537,6 +547,7 @@ export const PlaceListPage: React.FC = () => {
             case 'TOURIST_SPOT': return icTouristSpot;
             case 'FORFUN': return icForfun;
             case 'STORES': return icStores;
+            case 'EVENTS': return icEvents;
             case 'PLEASURE': return icMouth;
             default: return flagSp;
         }
@@ -1022,6 +1033,7 @@ export const PlaceListPage: React.FC = () => {
                                                     TOURIST_SPOT: "pontos-turisticos",
                                                     FORFUN: "diversao",
                                                     STORES: "lojas",
+                                                    EVENTS: "eventos",
                                                     PLEASURE: "prazer",
                                                     FREE: "gratuito",
                                                 };

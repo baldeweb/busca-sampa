@@ -98,6 +98,7 @@ export function HomePage() {
         TOURIST_SPOT: 'pontos-turisticos',
         FORFUN: 'diversao',
         STORES: 'lojas',
+        EVENTS: 'eventos',
         PLEASURE: 'prazer',
         FREE: 'gratuito'
       };

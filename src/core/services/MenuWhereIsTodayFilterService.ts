@@ -61,6 +61,9 @@ export class MenuWhereIsTodayFilterService {
             case "STORES":
                 return list.filter((item) => placeHasType(item, "STORES"));
 
+            case "EVENTS":
+                return list.filter((item) => placeHasType(item, "EVENTS"));
+
             case "FREE":
                 return list.filter((item) => item.priceRange === "FREE");
 

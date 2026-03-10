@@ -16,6 +16,7 @@ import icNeighborhood from '@/assets/imgs/icons/ic_neighborhood.png';
 import icBars from '@/assets/imgs/icons/ic_bars.png';
 import icCoffee from '@/assets/imgs/icons/ic_coffee.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
+import icEvents from '@/assets/imgs/icons/ic_events.png';
 import icNature from '@/assets/imgs/icons/ic_nature.png';
 import icNightlife from '@/assets/imgs/icons/ic_nightlife.png';
 import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
@@ -43,6 +44,7 @@ export const NeighborhoodListPage: React.FC = () => {
   const { data: touristSpots } = useRecommendationList("tourist-spot");
   const { data: forfun } = useRecommendationList("forfun");
   const { data: stores } = useRecommendationList("stores");
+  const { data: events } = useRecommendationList("events");
   const { data: pleasures } = useRecommendationList("pleasure");
   const { data: openingPatternsData } = useOpeningPatterns();
   const openingPatterns = openingPatternsData || [];
@@ -58,8 +60,9 @@ export const NeighborhoodListPage: React.FC = () => {
       ...touristSpots,
       ...forfun,
       ...stores,
+      ...events,
     ],
-    [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores]
+    [restaurants, bars, coffees, nightlife, nature, pleasures, touristSpots, forfun, stores, events]
   );
 
   // Aliases para slugs especiais (acentuação ou variações)
@@ -216,6 +219,7 @@ export const NeighborhoodListPage: React.FC = () => {
       case 'TOURIST_SPOT': return icTouristSpot;
       case 'FORFUN': return icForfun;
       case 'STORES': return icStores;
+      case 'EVENTS': return icEvents;
       default: return icNeighborhood;
     }
   };
@@ -457,6 +461,7 @@ export const NeighborhoodListPage: React.FC = () => {
                           TOURIST_SPOT: "pontos-turisticos",
                           FORFUN: "diversao",
                           STORES: "lojas",
+                          EVENTS: "eventos",
                           PLEASURE: "prazer",
                           FREE: "gratuito",
                         };

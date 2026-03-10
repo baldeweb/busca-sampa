@@ -1,4 +1,4 @@
-import { useState, type ReactElement } from "react";
+import { useState, type DragEvent, type ReactElement } from "react";
 import { useMenuWhereIsToday } from "@/web/hooks/useMenuWhereIsToday";
 import type { MenuWhereIsTodayOption } from "@/core/domain/models/MenuWhereIsTodayOption";
 import { SectionHeading } from "@/web/components/ui/SectionHeading";
@@ -13,6 +13,7 @@ import icRestaurants from '@/assets/imgs/icons/ic_restaurants.png';
 import icTouristSpot from '@/assets/imgs/icons/ic_tourist_spot.png';
 import icForfun from '@/assets/imgs/icons/ic_forfun.png';
 import icStores from '@/assets/imgs/icons/ic_stores.png';
+import icEvents from '@/assets/imgs/icons/ic_events.png';
 import icFlagSP from '@/assets/imgs/etc/logo-role-paulista.png';
 import imgTheatro640 from '@/assets/imgs/background/img_theatro_640.webp';
 import imgTheatro1280 from '@/assets/imgs/background/img_theatro_1280.webp';
@@ -20,6 +21,8 @@ import { useTranslation } from 'react-i18next';
 import icOpenToday from '@/assets/imgs/icons/ic_open_today.png';
 import { getPlaceTypeLabel } from '@/core/domain/enums/placeTypeLabel';
 import { AppText } from "../ui/AppText";
+import { AppButton } from "../ui/AppButton";
+import { WhereIsTodayMoreModal } from "./WhereIsTodayMoreModal";
 
 interface Props {
     onOptionSelect?: (option: MenuWhereIsTodayOption) => void;
@@ -28,6 +31,7 @@ interface Props {
 export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     const { data: options, loading, error } = useMenuWhereIsToday();
     const [selectedId, setSelectedId] = useState<number | null>(null);
+    const [isMoreModalOpen, setIsMoreModalOpen] = useState(false);
 
     function handleClick(option: MenuWhereIsTodayOption) {
         setSelectedId(option.id);
@@ -35,15 +39,19 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     }
 
     // Map tag/title to project icons in `src/assets/imgs/icons`
+    function normalizeTags(tags: string[]): string[] {
+        return (tags || [])
+            .map((t) => String(t || '').trim())
+            .filter(Boolean)
+            .map((t) => t.replace(/-/g, '_').toUpperCase());
+    }
+
     function resolveIcon(tags: string[]): ReactElement {
         const cls = "w-5 h-5 sm:w-7 sm:h-7 object-contain";
         const size = 28;
         // Todas as imagens do carrossel não podem ser arrastadas!
-        const imgProps = { draggable: false, onDragStart: (e: React.DragEvent) => e.preventDefault(), width: size, height: size, decoding: 'async' as const };
-        const normalized = (tags || [])
-            .map((t) => String(t || '').trim())
-            .filter(Boolean)
-            .map((t) => t.replace(/-/g, '_').toUpperCase());
+        const imgProps = { draggable: false, onDragStart: (e: DragEvent) => e.preventDefault(), width: size, height: size, decoding: 'async' as const };
+        const normalized = normalizeTags(tags);
         if (normalized.includes('OPEN_TODAY')) return <img src={icOpenToday} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('FREE')) return <img src={icFree} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('RESTAURANTS') || normalized.includes('RESTAURANT')) return <img src={icRestaurants} className={cls} alt="" {...imgProps} />;
@@ -54,9 +62,56 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
         if (normalized.includes('TOURIST_SPOT')) return <img src={icTouristSpot} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('FORFUN')) return <img src={icForfun} className={cls} alt="" {...imgProps} />;
         if (normalized.includes('STORES')) return <img src={icStores} className={cls} alt="" {...imgProps} />;
+        if (normalized.includes('EVENTS')) return <img src={icEvents} className={cls} alt="" {...imgProps} />;
         return <img src={icFlagSP} className={cls} alt="" {...imgProps} />;
     }
+
+    function getTranslatedLabel(option: MenuWhereIsTodayOption): string {
+        const raw = (option.title || '').replace(/\u200B/g, '').trim();
+        const known = ['RESTAURANTS', 'RESTAURANT', 'BARS', 'COFFEES', 'NIGHTLIFE', 'NATURE', 'TOURIST_SPOT', 'FORFUN', 'STORES', 'EVENTS'];
+        const normalized = normalizeTags(option.tags || []);
+
+        if (normalized.includes('FREE')) return t('placeType.FREE');
+
+        const found = normalized.find((tag) => known.includes(tag));
+        return found ? getPlaceTypeLabel(found) : raw;
+    }
+
     const { t } = useTranslation();
+
+    const opensTodayRaw = t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' });
+    const opensTodayKey = opensTodayRaw.toString().replace(/\u200B/g, '').trim().toLowerCase();
+
+    const filteredOptions = options.filter((option) => {
+        const raw = (option.title || '').replace(/\u200B/g, '').trim().toLowerCase();
+        const normalized = normalizeTags(option.tags || []);
+        if (raw === opensTodayKey) return false;
+        if (normalized.includes('OPEN_TODAY')) return false;
+        return true;
+    });
+
+    const findOptionByTag = (wantedTag: string): MenuWhereIsTodayOption | null => {
+        const normalizedWanted = wantedTag.toUpperCase();
+        return filteredOptions.find((option) => normalizeTags(option.tags || []).includes(normalizedWanted)) || null;
+    };
+
+    const fallbackOptionByTag = (tag: string, id: number): MenuWhereIsTodayOption => ({
+        id,
+        isEnabled: true,
+        title: getPlaceTypeLabel(tag),
+        tags: [tag],
+    });
+
+    const primaryTags = ['FREE', 'RESTAURANTS', 'BARS', 'NIGHTLIFE', 'COFFEES', 'NATURE', 'TOURIST_SPOT', 'FORFUN'];
+    const primaryOptions = primaryTags
+        .map((tag) => findOptionByTag(tag))
+        .filter((item): item is MenuWhereIsTodayOption => Boolean(item));
+
+    const moreOptions = [
+        findOptionByTag('STORES') || fallbackOptionByTag('STORES', -1001),
+        findOptionByTag('EVENTS') || fallbackOptionByTag('EVENTS', -1002),
+    ];
+
     return (
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
             <img
@@ -82,63 +137,32 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                         role="listbox"
                         aria-label={t('whereIsToday.categoriesAriaLabel', { defaultValue: 'Categorias' })}
                     >
-                        {/* Static option: 'Abrem hoje' (opens today) */}
-                        {(() => {
-                            const raw = t('whereIsToday.opensToday', { defaultValue: 'Abrem hoje' });
-                            return (
-                                <CategoryCard
-                                    key="opens-today"
-                                    label={raw}
-                                    icon={<img src={icOpenToday} className="w-5 h-5 sm:w-7 sm:h-7 object-contain" alt="" width={28} height={28} decoding="async" />}
-                                    selected={selectedId === -999}
-                                    onClick={() => {
-                                        setSelectedId(-999);
-                                        onOptionSelect?.({ id: -999, title: raw, tags: ['OPEN_TODAY'] } as any);
-                                    }}
-                                    index={0}
-                                />
-                            );
-                        })()}
-                        {(() => {
-                            const opensTodayKey = (t('whereIsToday.opensToday') || 'Abrem hoje').toString().replace(/\u200B/g, '').trim().toLowerCase();
-                            const filtered = options.filter(opt => {
-                                const raw = (opt.title || '').replace(/\u200B/g, '').trim().toLowerCase();
-                                // skip menu item that represents the 'Abrem hoje' synthetic option
-                                if (raw === opensTodayKey) return false;
-                                // also skip explicit OPEN_TODAY tag if present
-                                if (opt.tags && opt.tags.includes('OPEN_TODAY')) return false;
-                                return true;
-                            });
-                            return filtered.map((option, idx) => {
-                            // normalize title (remove zero-width spaces)
-                            const raw = (option.title || '').replace(/\u200B/g, '');
-
-                            // translated label: prefer i18n keys (open now / placeType) when available
-                            let translatedRaw: string;
-                            if (option.tags && option.tags.includes('FREE')) {
-                                translatedRaw = t('placeType.FREE');
-                            } else {
-                                // find first known tag and translate via getPlaceTypeLabel
-                                const known = ['RESTAURANTS', 'RESTAURANT', 'BARS', 'COFFEES', 'NIGHTLIFE', 'NATURE', 'TOURIST_SPOT', 'FORFUN', 'STORES'];
-                                const found = option.tags?.find((tg) => known.includes(tg));
-                                translatedRaw = found ? getPlaceTypeLabel(found) : raw;
-                            }
-
-                            let label: React.ReactNode;
-                            // Build label using the translated string but maintain forced breaks for known phrases
-                            const translatedLabel = (translatedRaw || '').trim();
+                        <CategoryCard
+                            key="opens-today"
+                            label={opensTodayRaw}
+                            icon={<img src={icOpenToday} className="w-5 h-5 sm:w-7 sm:h-7 object-contain" alt="" width={28} height={28} decoding="async" />}
+                            selected={selectedId === -999}
+                            onClick={() => {
+                                setSelectedId(-999);
+                                onOptionSelect?.({ id: -999, title: opensTodayRaw, tags: ['OPEN_TODAY'], isEnabled: true });
+                            }}
+                            index={0}
+                        />
+                        {primaryOptions.map((option, idx) => {
+                            const translatedLabel = getTranslatedLabel(option);
                             const parts = translatedLabel.split(/\s+/).filter(Boolean);
-                            label = (
+                            const label = (
                                 <>
-                                    {parts.map((p, i) => (
-                                        <span key={i} className="whitespace-normal">
-                                            {p}
-                                            {i < parts.length - 1 && <wbr />}
-                                            {i < parts.length - 1 ? ' ' : ''}
+                                    {parts.map((part, partIndex) => (
+                                        <span key={partIndex} className="whitespace-normal">
+                                            {part}
+                                            {partIndex < parts.length - 1 && <wbr />}
+                                            {partIndex < parts.length - 1 ? ' ' : ''}
                                         </span>
                                     ))}
                                 </>
                             );
+
                             return (
                                 <CategoryCard
                                     key={option.id}
@@ -149,12 +173,27 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
                                     index={idx + 1}
                                 />
                             );
-                        });
-                    })()}
+                        })}
+                        <AppButton
+                            variant="seemore"
+                            className="w-full px-4 py-4"
+                            onClick={() => setIsMoreModalOpen(true)}
+                        >
+                            VER MAIS
+                        </AppButton>
                     </div>
                 </div>
             )}
             </div>
+            {isMoreModalOpen && (
+                <WhereIsTodayMoreModal
+                    options={moreOptions}
+                    onClose={() => setIsMoreModalOpen(false)}
+                    onSelect={(option) => handleClick(option)}
+                    resolveIcon={resolveIcon}
+                    getLabel={getTranslatedLabel}
+                />
+            )}
         </section>
     );
 }

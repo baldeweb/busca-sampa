@@ -46,6 +46,8 @@ export function resolveBaseUrl(): URL {
     "forfun",
     "lojas",
     "stores",
+    "eventos",
+    "events",
     "prazer",
     "pleasure",
     "free",
