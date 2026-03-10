@@ -31,7 +31,7 @@ export const PlaceListItem: React.FC<PlaceListItemProps> = ({
       </div>
       <AppText
         variant="selected-light"
-        className="col-start-2 col col-end-4 mr-24 overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]"
+        className="col-start-2 col col-end-4 overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]"
       >
         {name}
       </AppText>
