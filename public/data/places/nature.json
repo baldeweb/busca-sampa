@@ -449,5 +449,47 @@
             "NATURE"
         ],
         "isEnabled": true
-    }
+    },    
+    {
+        "id": 11,
+        "name": "Praça do Relógio da USP",
+        "phones": [],
+        "openingHours": {
+            "patternId": "ALWAYS_OPEN",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Localizado dentro da Universidade de São Paulo (USP), o relógio é um ponto de encontro popular entre estudantes e visitantes"
+        ],
+        "priceRange": "FREE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "do Anfiteatro",
+                "number": "s/n",
+                "city": "São Paulo",
+                "neighborhood": "Butantã",
+                "postalCode": "05508-060",
+                "isMainUnity": true,
+                "latitude": -23.561606,
+                "longitude": -46.724706
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [
+            "PARK",
+            "OPEN_24_HOURS"
+        ],
+        "listTypes": [
+            "NATURE"
+        ],
+        "isEnabled": true
+    },
 ]

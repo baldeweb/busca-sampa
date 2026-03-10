@@ -76,20 +76,20 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
                   const aberto = isOpenNow(periods);
                   return (
                     <li key={day} className="mb-2">
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between py-2">
                         <span className={`font-bold uppercase w-24 ${isToday ? "text-green-500" : "text-white"}`}>{dayLabels[day][i18n.language as 'pt'|'en']}</span>
                         <div className="flex flex-col items-end min-w-[120px]">
                           {periods.length === 0 ? (
-                            <AppText variant="body-dark" className="text-red-400">{t('openingHours.closed')}</AppText>
+                            <AppText variant="selected-dark" className="text-red-400">{t('openingHours.closed')}</AppText>
                           ) : (
                             <>
                               {periods.map((p, pidx) => (
                                 p.open && p.close ? (
-                                  <AppText variant="body-dark" key={pidx} className="block text-right">{t('openingHours.range', { open: p.open, close: p.close })}</AppText>
+                                  <AppText variant="selected-dark" key={pidx} className="block text-right">{t('openingHours.range', { open: p.open, close: p.close })}</AppText>
                                 ) : null
                               ))}
                               {isToday && (
-                                <AppText variant="body-dark" className={`mt-1 font-bold ${aberto ? "text-green-500" : "text-red-500"}`}>{aberto ? t('placeDetail.openNow') : t('placeDetail.closedNow')}</AppText>
+                                <AppText variant="selected-dark" className={`mt-1 font-bold ${aberto ? "text-green-500" : "text-red-500"}`}>{aberto ? t('placeDetail.openNow') : t('placeDetail.closedNow')}</AppText>
                               )}
                             </>
                           )}

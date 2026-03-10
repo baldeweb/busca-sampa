@@ -1035,8 +1035,7 @@
         "linkInstagram": "https://www.instagram.com/oburguer/",
         "tags": [
             "HAMBURGUER",
-            "THEMED",
-            "MOLECULAR_GASTRONOMY"
+            "THEMED"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -2618,8 +2617,7 @@
         "tags": [
             "IZAKAYA",
             "ASIAN",
-            "JAPANESE",
-            "DOCERIA"
+            "JAPANESE"
         ],
         "listTypes": [
             "RESTAURANTS",
@@ -4092,7 +4090,7 @@
         "linkWebsite": "",
         "linkInstagram": "",
         "tags": [
-            "DOCERIA"
+            "PASTRY_SHOP"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -6095,6 +6093,52 @@
         "linkInstagram": "https://www.instagram.com/casadefrancisca/",
         "tags": [
             "LIVE_MUSIC", "SAMBA", "PAGODE"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ],
+        "isEnabled": true
+    },
+    {
+        "id": 144,
+        "name": "I Love Burguer",
+        "phones": [
+            {
+                "number": "1126798677",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "ILOVEBURGUER_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Hamburgueria artesanal com opções tradicionais e criações da casa, bebidas, ambiente despojado e delivery."
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Cap. Otávio Machado",
+                "number": "1252",
+                "city": "São Paulo",
+                "neighborhood": "Granja Julieta",
+                "postalCode": "04721-060",
+                "isMainUnity": true,
+                "latitude": -23.631630,
+                "longitude": -46.706678
+            }
+        ],
+        "linkMenu": "https://www.ifood.com.br/delivery/sao-paulo-sp/i-love-burger---granja-julieta-chacara-santo-antonio-zona-sul/779fa08f-1d40-48f3-bf11-7184fe0e3f35",
+        "linkWebsite": "http://www.iloveburger.com.br/",
+        "linkInstagram": "https://www.instagram.com/iloveburgerbr/",
+        "tags": [
+            "HAMBURGUER"
         ],
         "listTypes": [
             "RESTAURANTS"

@@ -45,11 +45,10 @@ interface EnvironmentOption {
 const RESTAURANT_MAIN_CATEGORY_VALUES = [
     'OPEN_24_HOURS',
     'BRAZILIAN',
-    'DOCERIA',
+    'PASTRY_SHOP',
     'FOREIGN',
     'FASTFOOD',
     'SEAFOOD',
-    'MOLECULAR_GASTRONOMY',
     'HAMBURGUER',
     'HISTORIC_PLACE',
     'ALLYOUCAN_EAT',
@@ -230,8 +229,8 @@ function matchesRestaurantCategory(place: PlaceRecommendation, category: string)
         return tags.some((tag) => placeHasTag(place, tag));
     }
 
-    if (normalizedCategory === 'DOCERIA') {
-        if (placeHasTag(place, 'DOCERIA')) return true;
+    if (normalizedCategory === 'PASTRY_SHOP') {
+        if (placeHasTag(place, 'PASTRY_SHOP')) return true;
         const searchText = getRestaurantSearchText(place);
         return ['doceria', 'confeitaria', 'sobremesa', 'doce', 'brigadeiro', 'bolo'].some((keyword) =>
             searchText.includes(keyword),

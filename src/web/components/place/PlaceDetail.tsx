@@ -189,7 +189,7 @@ export const PlaceDetail: React.FC<PlaceDetailProps> = ({
                                 {isOpenNow ? (
                                     <AppText variant="selected-dark" className="bg-green-600 px-4 py-1 rounded">{t('placeDetail.openNow')}</AppText>
                                 ) : (
-                                    <AppText variant="body-dark" className="bg-red-600 px-4 py-1 rounded">{t('placeDetail.closedNow')}</AppText>
+                                    <AppText variant="selected-dark" className="bg-red-600 px-4 py-1 rounded">{t('placeDetail.closedNow')}</AppText>
                                 )}
                                 <AppText variant="body-dark" className="bg-[#212121] px-2 py-1 rounded">{type}</AppText>
                             </div>

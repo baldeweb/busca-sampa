@@ -113,7 +113,7 @@ export function WhereIsTodayMenu({ onOptionSelect }: Props) {
     ];
 
     return (
-        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12 overflow-hidden">
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen pt-6 pb-12 sm:pt-10 sm:pb-14 overflow-hidden">
             <img
                 src={imgTheatro1280}
                 srcSet={`${imgTheatro640} 640w, ${imgTheatro1280} 1280w`}

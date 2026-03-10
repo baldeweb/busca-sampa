@@ -2,7 +2,6 @@ export const environmentMoreLabels = {
   pt: {
     translation: {
       environment: {
-        DOCERIA: 'Doceria',
         SORVETERIA: 'Sorveteria',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Norte',
@@ -16,7 +15,6 @@ export const environmentMoreLabels = {
   es: {
     translation: {
       environment: {
-        DOCERIA: 'Pastelería',
         SORVETERIA: 'Heladería',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Norte',
@@ -30,7 +28,6 @@ export const environmentMoreLabels = {
   fr: {
     translation: {
       environment: {
-        DOCERIA: 'Pâtisserie',
         SORVETERIA: 'Glacier',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Nord',
@@ -44,7 +41,6 @@ export const environmentMoreLabels = {
   ru: {
     translation: {
       environment: {
-        DOCERIA: 'Кондитерская',
         SORVETERIA: 'Мороженое',
         IZAKAYA: 'Изакая',
         BRAZILIAN_REGION_NORTH: 'Север',
@@ -58,7 +54,6 @@ export const environmentMoreLabels = {
   zh: {
     translation: {
       environment: {
-        DOCERIA: '甜品店',
         SORVETERIA: '冰淇淋店',
         IZAKAYA: '居酒屋',
         BRAZILIAN_REGION_NORTH: '北部',
@@ -72,7 +67,6 @@ export const environmentMoreLabels = {
   en: {
     translation: {
       environment: {
-        DOCERIA: 'Dessert shop',
         SORVETERIA: 'Ice cream shop',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'North',
@@ -86,7 +80,6 @@ export const environmentMoreLabels = {
   de: {
     translation: {
       environment: {
-        DOCERIA: 'Konditorei',
         SORVETERIA: 'Eisdiele',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Norden',
@@ -100,7 +93,6 @@ export const environmentMoreLabels = {
   ja: {
     translation: {
       environment: {
-        DOCERIA: 'スイーツ店',
         SORVETERIA: 'アイスクリーム店',
         IZAKAYA: '居酒屋',
         BRAZILIAN_REGION_NORTH: '北部',
@@ -114,7 +106,6 @@ export const environmentMoreLabels = {
   ar: {
     translation: {
       environment: {
-        DOCERIA: 'محل حلويات',
         SORVETERIA: 'محل آيس كريم',
         IZAKAYA: 'إيزاكايا',
         BRAZILIAN_REGION_NORTH: 'الشمال',
@@ -128,7 +119,6 @@ export const environmentMoreLabels = {
   it: {
     translation: {
       environment: {
-        DOCERIA: 'Pasticceria',
         SORVETERIA: 'Gelateria',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Nord',
@@ -142,7 +132,6 @@ export const environmentMoreLabels = {
   nl: {
     translation: {
       environment: {
-        DOCERIA: 'Patisserie',
         SORVETERIA: 'IJssalon',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Noord',
@@ -156,7 +145,6 @@ export const environmentMoreLabels = {
   tr: {
     translation: {
       environment: {
-        DOCERIA: 'Pastane',
         SORVETERIA: 'Dondurmacı',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Kuzey',
@@ -170,7 +158,6 @@ export const environmentMoreLabels = {
   pl: {
     translation: {
       environment: {
-        DOCERIA: 'Cukiernia',
         SORVETERIA: 'Lodziarnia',
         IZAKAYA: 'Izakaya',
         BRAZILIAN_REGION_NORTH: 'Północ',

@@ -44,7 +44,6 @@ const FALLBACK_MAP: Record<string, string> = {
     AFRICAN: "Africano",
     TAIWANESE: "Taiwanês",
     HAMBURGUER: "Hamburgueria",
-    MOLECULAR_GASTRONOMY: "Gastronomia Molecular",
     EXPERIENCE: "Jantar com Experiência",
     NORDIC: "Nórdico",
     IRANIAN: "Iraniano",

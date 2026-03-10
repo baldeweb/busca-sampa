@@ -1657,5 +1657,14 @@
       { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "09:00", "close": "17:00" },
       { "days": ["SATURDAY"], "open": "10:00", "close": "14:00" }
     ]
+  },
+  {
+    "id": "ILOVEBURGUER_DAYTIME",
+    "description": "Horários do I Love Burguer",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:30", "close": "15:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "17:30", "close": "22:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "17:00", "close": "22:00" }
+    ]
   }
 ]

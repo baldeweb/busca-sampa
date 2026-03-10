@@ -47,7 +47,7 @@ async function main() {
   }
 
   const counters = {
-    DOCERIA: 0,
+    PASTRY_SHOP: 0,
     SORVETERIA: 0,
     VEGAN: 0,
     BRAZILIAN_REGION_NORTH: 0,
@@ -68,7 +68,7 @@ async function main() {
     const originalTagSet = new Set(tags.map((item) => String(item || "").trim().toUpperCase()));
 
     if (includesAnyKeyword(searchText, DOCERIA_KEYWORDS)) {
-      tags = ensureTag(tags, "DOCERIA");
+      tags = ensureTag(tags, "PASTRY_SHOP");
     }
 
     if (includesAnyKeyword(searchText, SORVETERIA_KEYWORDS)) {
