@@ -2952,5 +2952,44 @@
             "TOURIST_SPOT"
         ],
         "isEnabled": true
+    },
+    {
+        "id": 79,
+        "name": "Mirante 9 de Julho",
+        "phones": [],
+        "openingHours": {
+            "patternId": "ALWAYS_OPEN",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "priceRange": "FREE",
+        "notes": [
+            "Mirante para a Avenida 9 de Julho"
+        ],
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Paulista",
+                "number": "1520",
+                "city": "São Paulo",
+                "neighborhood": "Bela Vista",
+                "postalCode": "01310-200",
+                "isMainUnity": true,
+                "latitude": -23.561162,
+                "longitude": -46.655729
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "",
+        "tags": [],
+        "listTypes": [
+            "TOURIST_SPOT"
+        ],
+        "isEnabled": true
     }
 ]

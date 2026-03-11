@@ -301,8 +301,6 @@ const resources = {
         tipDescription: 'Ao caminhar na rua, fique esperto com o celular: evite mexer muito e não peça ajuda pra desconhecidos. Reparou algo estranho? Entra em um lugar movimentado e ligue 190. Em SP, o básico é: atenção total ao redor e nada de dar bobeira',
         loadingPoints: 'Carregando pontos...',
         tourPointsLoadError: 'Ainda não foi possível carregar os pontos do tour.',
-        routeDetailsTitle: 'Detalhes do Roteiro',
-        routeDetailsSubtitle: 'Aqui estão as informações necessárias para aproveitar o máximo e se preparar para este roteiro.',
         placesYouWillPass: 'Lugares por onde você vai passar',
         routePlacesLoadError: 'Ainda não foi possível carregar os lugares do roteiro.',
         openInGoogleMaps: 'Abrir no Google Maps'
@@ -563,8 +561,6 @@ const resources = {
         tipDescription: 'Al caminar por la calle, mantente atento con el celular: evita usarlo demasiado y no pidas ayuda a desconocidos. ¿Notaste algo extraño? Entra en un lugar concurrido y llama al 190. En SP, lo básico es: atención total a tu alrededor y nada de bajar la guardia',
         loadingPoints: 'Cargando puntos...',
         tourPointsLoadError: 'Todavía no fue posible cargar los puntos del tour.',
-        routeDetailsTitle: 'Detalles del recorrido',
-        routeDetailsSubtitle: 'Aquí tienes la información necesaria para aprovechar al máximo y prepararte para este recorrido.',
         placesYouWillPass: 'Lugares por los que vas a pasar',
         routePlacesLoadError: 'Todavía no fue posible cargar los lugares del recorrido.',
         openInGoogleMaps: 'Abrir en Google Maps'
@@ -799,8 +795,6 @@ const resources = {
         tipDescription: 'En marchant dans la rue, reste attentif avec ton téléphone: évite de l\'utiliser trop et ne demande pas d\'aide à des inconnus. Tu as remarqué quelque chose d\'étrange? Entre dans un endroit fréquenté et appelle le 190. À SP, la base est: attention totale autour de soi et ne jamais se relâcher',
         loadingPoints: 'Chargement des points...',
         tourPointsLoadError: 'Il n\'a pas encore été possible de charger les points du tour.',
-        routeDetailsTitle: 'Détails de l\'itinéraire',
-        routeDetailsSubtitle: 'Voici les informations nécessaires pour profiter au maximum et te préparer pour cet itinéraire.',
         placesYouWillPass: 'Lieux par lesquels tu vas passer',
         routePlacesLoadError: 'Il n\'a pas encore été possible de charger les lieux de l\'itinéraire.',
         openInGoogleMaps: 'Ouvrir dans Google Maps'
@@ -1001,8 +995,6 @@ const resources = {
         tipDescription: 'Выйдя на улицу, будь внимателен с телефоном: старайся меньше им пользоваться и не проси помощи у незнакомцев. Заметил что-то странное? Зайди в людное место и позвони 190. В СП базовое правило: полная внимательность вокруг и никакой беспечности',
         loadingPoints: 'Загрузка точек...',
         tourPointsLoadError: 'Пока не удалось загрузить точки тура.',
-        routeDetailsTitle: 'Детали маршрута',
-        routeDetailsSubtitle: 'Вот информация, которая поможет лучше подготовиться и получить максимум от этого маршрута.',
         placesYouWillPass: 'Места, через которые вы пройдёте',
         routePlacesLoadError: 'Пока не удалось загрузить места маршрута.',
         openInGoogleMaps: 'Открыть в Google Maps'
@@ -1146,8 +1138,6 @@ const resources = {
         tipDescription: '在街上行走时，请留意你的手机：尽量少用，不要向陌生人求助。发现可疑情况？进入人多的地方并拨打 190。在圣保罗（SP），基本原则是：时刻注意周围环境，绝不掉以轻心。',
         loadingPoints: '正在加载点位...',
         tourPointsLoadError: '暂时无法加载行程点位。',
-        routeDetailsTitle: '行程详情',
-        routeDetailsSubtitle: '这里是你需要的信息，帮助你充分体验并为本次行程做好准备。',
         placesYouWillPass: '你将经过的地点',
         routePlacesLoadError: '暂时无法加载行程地点。',
         openInGoogleMaps: '在 Google 地图中打开'
@@ -1357,8 +1347,6 @@ const resources = {
         tipDescription: 'When walking on the street, stay alert with your phone: avoid using it too much and don\'t ask strangers for help. Notice something strange? Go into a busy place and call 190. In SP, the base is: full attention to your surroundings and no letting your guard down',
         loadingPoints: 'Loading points...',
         tourPointsLoadError: 'It was not possible to load the tour points yet.',
-        routeDetailsTitle: 'Route Details',
-        routeDetailsSubtitle: 'Here is the information you need to enjoy the most and prepare for this itinerary.',
         placesYouWillPass: 'Places you\'ll pass by',
         routePlacesLoadError: 'It was not possible to load the itinerary places yet.',
         openInGoogleMaps: 'Open in Google Maps'
@@ -1567,8 +1555,6 @@ const resources = {
         tipDescription: 'Wenn du auf der Straße unterwegs bist, pass mit deinem Handy auf: benutze es möglichst wenig und bitte keine Fremden um Hilfe. Kommt dir etwas seltsam vor? Geh in einen belebten Ort und ruf 190 an. In SP gilt als Grundregel: volle Aufmerksamkeit für deine Umgebung und bloß nicht unachtsam werden',
         loadingPoints: 'Punkte werden geladen...',
         tourPointsLoadError: 'Die Punkte der Tour konnten noch nicht geladen werden.',
-        routeDetailsTitle: 'Routendetails',
-        routeDetailsSubtitle: 'Hier sind die Informationen, die du brauchst, um das Beste daraus zu machen und dich auf diese Route vorzubereiten.',
         placesYouWillPass: 'Orte, an denen du vorbeikommst',
         routePlacesLoadError: 'Die Orte der Route konnten noch nicht geladen werden.',
         openInGoogleMaps: 'In Google Maps öffnen'
@@ -1778,8 +1764,6 @@ const resources = {
         tipDescription: '街を歩くときはスマホに注意：使いすぎず、知らない人に助けを求めないでください。何かおかしいと感じたら、人が多い場所に入り、190に電話しましょう。SPでは基本は、周囲に常に注意を払い、油断しないことです',
         loadingPoints: 'ポイントを読み込み中...',
         tourPointsLoadError: 'ツアーのポイントをまだ読み込めませんでした。',
-        routeDetailsTitle: 'ルートの詳細',
-        routeDetailsSubtitle: 'このルートを最大限楽しみ、準備するために必要な情報です。',
         placesYouWillPass: '通る場所',
         routePlacesLoadError: 'ルート上の場所をまだ読み込めませんでした。',
         openInGoogleMaps: 'Google マップで開く'
@@ -1843,8 +1827,6 @@ const resources = {
         tipDescription: 'وأنت تمشي في الشارع، انتبه لهاتفك: تجنّب استخدامه كثيرًا ولا تطلب المساعدة من الغرباء. لاحظت شيئًا مريبًا؟ ادخل إلى مكان مزدحم واتصل بـ 190. في SP القاعدة الأساسية هي: انتباه كامل لما حولك ولا مجال للتهاون',
         loadingPoints: 'جارٍ تحميل النقاط...',
         tourPointsLoadError: 'لم نتمكن بعد من تحميل نقاط الجولة.',
-        routeDetailsTitle: 'تفاصيل المسار',
-        routeDetailsSubtitle: 'إليك المعلومات اللازمة للاستمتاع بأقصى قدر والاستعداد لهذا المسار.',
         placesYouWillPass: 'الأماكن التي ستمر بها',
         routePlacesLoadError: 'لم نتمكن بعد من تحميل أماكن المسار.',
         openInGoogleMaps: 'فتح في خرائط Google'
@@ -2069,8 +2051,6 @@ const resources = {
         tipDescription: 'Quando cammini per strada, stai attento con il telefono: evita di usarlo troppo e non chiedere aiuto agli sconosciuti. Hai notato qualcosa di strano? Entra in un luogo affollato e chiama il 190. A SP, la regola base è: massima attenzione a ciò che ti circonda e niente distrazioni',
         loadingPoints: 'Caricamento dei punti...',
         tourPointsLoadError: 'Non è stato ancora possibile caricare i punti del tour.',
-        routeDetailsTitle: 'Dettagli del percorso',
-        routeDetailsSubtitle: 'Ecco le informazioni necessarie per goderti al massimo e prepararti per questo percorso.',
         placesYouWillPass: 'Luoghi che attraverserai',
         routePlacesLoadError: 'Non è stato ancora possibile caricare i luoghi del percorso.',
         openInGoogleMaps: 'Apri in Google Maps'
@@ -2285,8 +2265,6 @@ const resources = {
         tipDescription: 'Als je op straat loopt, wees alert met je telefoon: gebruik hem zo min mogelijk en vraag geen hulp aan vreemden. Zie je iets verdachts? Ga een drukke plek binnen en bel 190. In SP is de basis: volledige aandacht voor je omgeving en niet verslappen',
         loadingPoints: 'Punten worden geladen...',
         tourPointsLoadError: 'Het was nog niet mogelijk om de tourpunten te laden.',
-        routeDetailsTitle: 'Routedetails',
-        routeDetailsSubtitle: 'Hier is de informatie die je nodig hebt om er het meeste uit te halen en je voor te bereiden op deze route.',
         placesYouWillPass: 'Plekken waar je langs komt',
         routePlacesLoadError: 'Het was nog niet mogelijk om de plekken van de route te laden.',
         openInGoogleMaps: 'Openen in Google Maps'
@@ -2487,8 +2465,6 @@ const resources = {
         tipDescription: 'Sokakta yürürken telefonuna karşı dikkatli ol: mümkün olduğunca az kullan ve yabancılardan yardım isteme. Garip bir şey fark ettin mi? Kalabalık bir yere gir ve 190’u ara. SP’de temel kural: çevrene tamamen dikkat et ve asla gevşeme',
         loadingPoints: 'Noktalar yükleniyor...',
         tourPointsLoadError: 'Tur noktaları henüz yüklenemedi.',
-        routeDetailsTitle: 'Rota Detayları',
-        routeDetailsSubtitle: 'Bu rotadan en iyi şekilde yararlanmak ve hazırlanmak için gerekli bilgiler burada.',
         placesYouWillPass: 'Geçeceğin yerler',
         routePlacesLoadError: 'Rota yerleri henüz yüklenemedi.',
         openInGoogleMaps: 'Google Haritalar’da aç'
@@ -2688,8 +2664,6 @@ const resources = {
         tipDescription: 'Spacerując po ulicy, uważaj na telefon: używaj go jak najmniej i nie proś o pomoc nieznajomych. Zauważyłeś coś dziwnego? Wejdź do zatłoczonego miejsca i zadzwoń pod 190. W SP podstawowa zasada to: pełna uwaga na otoczenie i żadnego rozkojarzenia',
         loadingPoints: 'Ładowanie punktów...',
         tourPointsLoadError: 'Nie udało się jeszcze załadować punktów wycieczki.',
-        routeDetailsTitle: 'Szczegóły trasy',
-        routeDetailsSubtitle: 'Oto informacje potrzebne, aby w pełni skorzystać i przygotować się do tej trasy.',
         placesYouWillPass: 'Miejsca, przez które przejdziesz',
         routePlacesLoadError: 'Nie udało się jeszcze załadować miejsc na trasie.',
         openInGoogleMaps: 'Otwórz w Google Maps'

@@ -325,6 +325,11 @@ export function TravelItineraryPage() {
         return (tourItems || []).filter((item) => normalizeTourType(item.tourType) === normalizeTourType(targetKey));
     }, [tourItems, selectedRouteOption]);
 
+    const selectedTourItem = React.useMemo(() => {
+        if (!selectedTourItemId) return null;
+        return tourItems.find((item) => item.id === selectedTourItemId) || null;
+    }, [tourItems, selectedTourItemId]);
+
     // Build ordered points from selected tour item places (include opening text)
     const orderedPoints = React.useMemo(() => {
         if (!selectedTourItemId) return [] as Array<{ name: string; lat: number; lng: number; openingText?: string }>;
@@ -399,8 +404,11 @@ export function TravelItineraryPage() {
             try {
                 if (orderedPoints.length < 2) return;
                 const coords = orderedPoints.map(p => `${p.lng},${p.lat}`).join(';');
-                const osrmProfile = tourMode === 'city' ? 'driving' : 'foot';
-                const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${coords}?overview=full&geometries=geojson`;
+                const isCityMode = tourMode === 'city';
+                // Use dedicated backends so walking routes are truly pedestrian.
+                const url = isCityMode
+                    ? `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`
+                    : `https://routing.openstreetmap.de/routed-foot/route/v1/driving/${coords}?overview=full&geometries=geojson`;
                 const res = await fetch(url);
                 if (!res.ok) throw new Error(`OSRM error ${res.status}`);
                 const json: OsrmRouteResponse = await res.json();
@@ -413,8 +421,7 @@ export function TravelItineraryPage() {
                     routeLayerRef.current = layer;
                 }
             } catch (e) {
-                // OSRM may not support foot profile on public server; fail silently but log for debugging
-                console.warn('Could not fetch walking route from OSRM:', e);
+                console.warn('Could not fetch route from OSRM backend:', e);
             }
         })();
 
@@ -611,10 +618,10 @@ export function TravelItineraryPage() {
                         <div className="flex items-start justify-between gap-4">
                             <div>
                                 <AppText id="route-details-title" variant="title-light">
-                                    {t('travelItinerary.routeDetailsTitle')}
+                                    {selectedTourItem?.name || ''}
                                 </AppText>
                                 <AppText variant="subtitle-light">
-                                    {t('travelItinerary.routeDetailsSubtitle')}
+                                    {selectedTourItem?.description || ''}
                                 </AppText>
                             </div>
                             <AppButton

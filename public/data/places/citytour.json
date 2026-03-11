@@ -95,7 +95,7 @@
         "id": 5,
         "name": "Natureza na Selva de Pedras",
         "tourType": "NATURE",
-        "description": "Se você está procurando diversão e entretenimento, este tour é para você! Aqui incluí um bar temático, uma casa de jogos e um espaço de patinação.",
+        "description": "Neste tour você vai passar por parque, zoológico, aquário e um jardim botânico, para aproveitar a natureza mesmo dentro da cidade.",
         "places": [
             {
                 "id": 9,
@@ -112,6 +112,54 @@
             {
                 "id": 7,
                 "placeType": "NATURE"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Mirantes",
+        "tourType": "ALL",
+        "description": "Neste tour você vai visitar os melhores mirantes da cidade, oferecendo vistas panorâmicas incríveis e oportunidades para fotos memoráveis.",
+        "places": [
+            {
+                "id": 2,
+                "placeType": "NATURE"
+            },
+            {
+                "id": 64,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 55,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 79,
+                "placeType": "TOURIST_SPOT"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Igrejas e Catedrais",
+        "tourType": "ALL",
+        "description": "Neste tour você vai visitar as principais construções religiosas da cidade, conhecendo sua história e arquitetura.",
+        "places": [
+            {
+                "id": 21,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 26,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 16,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 37,
+                "placeType": "TOURIST_SPOT"
             }
         ]
     }

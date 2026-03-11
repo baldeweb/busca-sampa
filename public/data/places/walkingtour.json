@@ -287,5 +287,25 @@
                 "placeType": "TOURIST_SPOT"
             }
         ]
+    },
+    {
+        "id": 10,
+        "name": "Igrejas e Catedrais",
+        "tourType": "ALL",
+        "description": "Você vai visitar as principais construções religiosas do centro da cidade, conhecendo sua história e arquitetura.",
+        "places": [
+            {
+                "id": 21,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 26,
+                "placeType": "TOURIST_SPOT"
+            },
+            {
+                "id": 16,
+                "placeType": "TOURIST_SPOT"
+            }
+        ]
     }
 ]
