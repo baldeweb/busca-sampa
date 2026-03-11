@@ -26,7 +26,11 @@ export const TravelItineraryListItem: React.FC<TravelItineraryListItemProps> = (
       <div className="w-14 h-14 rounded-full bg-[#CFCFCF] flex items-center justify-center flex-shrink-0 row-span-2 self-center">
         <img src={iconSrc} alt="" className="w-7 h-7 object-contain" />
       </div>
-      <AppText variant="subtitle-light" className="min-w-0 col-start-2 col-end-4 row-start-1 truncate">{name}</AppText>
+      <AppText 
+        variant="selected-light" 
+        className="min-w-0 col-start-2 col-end-4 row-start-1 truncate [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
+          {name}
+        </AppText>
       <div className="flex flex-col gap-1 min-w-0 col-start-2 row-start-2">
         <AppText variant="body-light" className="flex items-center min-w-0 truncate">{placesCountText}</AppText>
         {typeLabel && (
