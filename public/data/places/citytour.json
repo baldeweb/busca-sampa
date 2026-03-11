@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Noite Latina",
-        "tourType": "ALL",
+        "tourType": "VARIED",
         "description": "Aqui você vai começar por um restaurante peruano, seguido de um bar peruano, e finalizar em um clube latino.",
         "places": [
             {
@@ -23,7 +23,7 @@
     {
         "id": 2,
         "name": "Rolê Noturno na República",
-        "tourType": "ALL",
+        "tourType": "VARIED",
         "description": "Na região da República, você pode encontrar uma variedade de bares e casas noturnas. Este tour inclui um restaurante, seguido de uma balada e encerrar no Cineclube Cortina para algum evento que estiver ocorrendo no dia (verificar disponibilidade no site ou no Instagram)",
         "places": [
             {
@@ -118,7 +118,7 @@
     {
         "id": 6,
         "name": "Mirantes",
-        "tourType": "ALL",
+        "tourType": "URBAN_LANDSCAPE",
         "description": "Neste tour você vai visitar os melhores mirantes da cidade, oferecendo vistas panorâmicas incríveis e oportunidades para fotos memoráveis.",
         "places": [
             {
@@ -142,7 +142,7 @@
     {
         "id": 7,
         "name": "Igrejas e Catedrais",
-        "tourType": "ALL",
+        "tourType": "URBAN_LANDSCAPE",
         "description": "Neste tour você vai visitar as principais construções religiosas da cidade, conhecendo sua história e arquitetura.",
         "places": [
             {

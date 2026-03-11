@@ -63,6 +63,8 @@ function buildGoogleMapsDirectionsUrl(
 
 const ROUTE_TO_TOUR_KEY: Record<string, string> = {
     free: 'FREE',
+    varied: 'VARIED',
+    urbanLandscape: 'ARTISTIC',
     nightlife: 'NIGHTLIFE',
     bars: 'BARS',
     food: 'GASTRONOMIC',
@@ -127,6 +129,8 @@ export function TravelItineraryPage() {
     const routeOptions = React.useMemo(
         () => [
             { value: 'free', label: t('travelItinerary.routeOptions.free') },
+            { value: 'varied', label: t('travelItinerary.routeOptions.varied') },
+            { value: 'urbanLandscape', label: t('travelItinerary.routeOptions.urbanLandscape') },
             { value: 'nightlife', label: t('travelItinerary.routeOptions.nightlife') },
             { value: 'bars', label: t('travelItinerary.routeOptions.bars') },
             { value: 'food', label: t('travelItinerary.routeOptions.food') },

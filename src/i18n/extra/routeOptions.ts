@@ -7,6 +7,8 @@ export const routeOptionLabels = {
           nightlife: 'Vida noturna',
           bars: 'Bares',
           food: 'Gastronômico',
+          varied: 'Variados',
+          urbanLandscape: 'Paisagem Urbana',
           history: 'História',
           museums: 'Museus',
           more: 'Mais opções'
@@ -22,6 +24,8 @@ export const routeOptionLabels = {
           nightlife: 'Vida nocturna',
           bars: 'Bares',
           food: 'Gastronomía',
+          varied: 'Variados',
+          urbanLandscape: 'Paisaje urbano',
           history: 'Historia',
           museums: 'Museos',
           more: 'Más opciones'
@@ -37,6 +41,8 @@ export const routeOptionLabels = {
           nightlife: 'Vie nocturne',
           bars: 'Bars',
           food: 'Gastronomique',
+          varied: 'Variés',
+          urbanLandscape: 'Paysage urbain',
           history: 'Histoire',
           museums: 'Musées',
           more: 'Plus d\'options'
@@ -52,6 +58,8 @@ export const routeOptionLabels = {
           nightlife: 'Ночная жизнь',
           bars: 'Бары',
           food: 'Гастрономия',
+          varied: 'Разное',
+          urbanLandscape: 'Городской пейзаж',
           history: 'История',
           museums: 'Музеи',
           more: 'Больше опций'
@@ -67,6 +75,8 @@ export const routeOptionLabels = {
           nightlife: '夜生活',
           bars: '酒吧',
           food: '美食',
+          varied: '多样',
+          urbanLandscape: '城市景观',
           history: '历史',
           museums: '博物馆',
           more: '更多选项'
@@ -82,6 +92,8 @@ export const routeOptionLabels = {
           nightlife: 'Nightlife',
           bars: 'Bars',
           food: 'Food',
+          varied: 'Varied',
+          urbanLandscape: 'Urban landscape',
           history: 'History',
           museums: 'Museums',
           more: 'More options'
@@ -97,6 +109,8 @@ export const routeOptionLabels = {
           nightlife: 'Nachtleben',
           bars: 'Bars',
           food: 'Essen',
+          varied: 'Vielfältig',
+          urbanLandscape: 'Stadtlandschaft',
           history: 'Geschichte',
           museums: 'Museen',
           more: 'Mehr Optionen'
@@ -112,6 +126,8 @@ export const routeOptionLabels = {
           nightlife: 'ナイトライフ',
           bars: 'バー',
           food: 'グルメ',
+          varied: '多彩',
+          urbanLandscape: '都市景観',
           history: '歴史',
           museums: '博物館',
           more: 'もっと見る'
@@ -127,6 +143,8 @@ export const routeOptionLabels = {
           nightlife: 'الحياة الليلية',
           bars: 'حانات',
           food: 'طعام',
+          varied: 'متنوع',
+          urbanLandscape: 'مشهد حضري',
           history: 'تاريخ',
           museums: 'متاحف',
           more: 'المزيد من الخيارات'
@@ -142,6 +160,8 @@ export const routeOptionLabels = {
           nightlife: 'Vita notturna',
           bars: 'Bar',
           food: 'Gastronomia',
+          varied: 'Variati',
+          urbanLandscape: 'Paesaggio urbano',
           history: 'Storia',
           museums: 'Musei',
           more: 'Altre opzioni'
@@ -157,6 +177,8 @@ export const routeOptionLabels = {
           nightlife: 'Nachtleven',
           bars: 'Bars',
           food: 'Eten',
+          varied: 'Gevarieerd',
+          urbanLandscape: 'Stedelijk landschap',
           history: 'Geschiedenis',
           museums: 'Musea',
           more: 'Meer opties'
@@ -172,6 +194,8 @@ export const routeOptionLabels = {
           nightlife: 'Gece hayatı',
           bars: 'Barlar',
           food: 'Yemek',
+          varied: 'Cesitli',
+          urbanLandscape: 'Kentsel manzara',
           history: 'Tarih',
           museums: 'Müzeler',
           more: 'Daha fazla seçenek'
@@ -187,6 +211,8 @@ export const routeOptionLabels = {
           nightlife: 'Życie nocne',
           bars: 'Bary',
           food: 'Jedzenie',
+          varied: 'Różnorodne',
+          urbanLandscape: 'Krajobraz miejski',
           history: 'Historia',
           museums: 'Muzea',
           more: 'Więcej opcji'

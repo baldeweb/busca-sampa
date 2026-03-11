@@ -22,6 +22,8 @@ const TOUR_MAP: Record<string, string> = {
   MUSEUMS: 'Museus',
   NATURE: 'Natureza',
   FORFUN: 'Diversão',
+  VARIED: `Variados`,
+  URBAN_LANDSCAPE: 'Paisagem Urbana',
   OTHERS: 'Outros',
 };
 
