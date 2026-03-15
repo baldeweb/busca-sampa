@@ -72,6 +72,21 @@ function mergeResourceSets(base: ResourceMap, extras: ResourceMap[]) {
   return merged;
 }
 
+function applyPtReferenceFallback(allResources: ResourceMap): ResourceMap {
+  const ptBase = allResources?.pt?.translation || {};
+  const output: ResourceMap = mergeDeep({}, allResources) as ResourceMap;
+
+  Object.keys(output).forEach((lang) => {
+    if (lang === 'pt') return;
+    const current = output[lang]?.translation || {};
+    output[lang] = {
+      translation: mergeDeep(ptBase, current),
+    };
+  });
+
+  return output;
+}
+
 const resources = {
   pt: {
     translation: {
@@ -374,7 +389,7 @@ const resources = {
       home: {
         nearMeTitle: 'Cerca de mí',
         nearMeSubtitle: '(mostrando lugares en un radio de {{km}}km cerca de ti)',
-        allowLocation: 'Ops, no encontramos tu ubicación...\n\nPara encontrar lugares cerca de ti, haz clic en el botón ci-dessous:',
+        allowLocation: 'Ups, no encontramos tu ubicacion...\n\nPara encontrar lugares cerca de ti, haz clic en el boton de abajo:',
         allowLocationButton: 'Permitir ubicación',
         loadingCategories: 'Cargando categorías...',
         increaseRadius: 'Aumentar radio',
@@ -426,14 +441,14 @@ const resources = {
         anyHourLabel: 'Cualquier horario',
         anyHour: 'Cualquier horario',
         scheduleTitle: 'Reservar',
-        scheduleRequired: 'Réservation requise',
-        scheduleNotRequired: 'Réservation non requise',
-        anySchedule: 'Peu importe',
+        scheduleRequired: 'Necesita reserva',
+        scheduleNotRequired: 'No necesita reserva',
+        anySchedule: 'Cualquiera',
         cityTitle: 'Ciudad',
-        anyCity: 'N’importe quelle ville',
-        priceTitle: 'Prix',
-        anyPrice: 'N’importe quel prix',
-        button: 'Filtres'
+        anyCity: 'Cualquier ciudad',
+        priceTitle: 'Precio',
+        anyPrice: 'Cualquier precio',
+        button: 'Filtros'
       },
       placeDetail: {
         loading: 'Cargando detalles...',
@@ -443,89 +458,89 @@ const resources = {
         opensHoliday: 'abre en feriados',
         alreadyVisited: '✓ Ya fui',
         notVisited: '⚠️ Aún no fui',
-        viewHours: 'voir horaires',
+        viewHours: 'ver horarios',
         visitModalTitle: 'Sobre los lugares que visité',
-        visitModalParagraph: 'Lugar pendiente de visita. La información en esta página proviene de suggestions d\'autres personnes qui s\'y sont rendues et me l\'ont recommandé.',
-        visitedModalParagraph: 'Lugar visité. La información en esta página proviene de ce que j\'ai recueilli lors de ma visite, des éléments que j\'ai commandés ou testés, et des informations fournies par les responsables du lieu',
+        visitModalParagraph: 'Lugar pendiente de visita. La información en esta página proviene de sugerencias de otras personas que ya fueron y me lo recomendaron.',
+        visitedModalParagraph: 'Lugar visitado. La información en esta página proviene de lo que recopilé durante mi visita, de lo que pedí o probé, y de datos proporcionados por los responsables del lugar.',
         neverEmphasis: '',
         openNow: 'Abierto\u200B ahora',
         closedNow: 'Cerrado ahora',
         locationDescription: 'Aquí están las unidades de este establecimiento y todas las direcciones. También puedes trazar la ruta como prefieras: con Google Maps o pidiendo un Uber :)',
         websiteTitle: 'Sitio del local',
         websiteSubtitle: 'Visita el sitio de este lugar y consulta la información detallada',
-        websiteButton: 'Accéder au site',
+        websiteButton: 'Abrir sitio',
         openUber: 'Abrir en Uber',
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Sigue el perfil oficial:',
         follow: 'Seguir',
         phoneTitle: 'Teléfono',
-        phonesSubtitle: 'Voici les contacts officiels de cet endroit',
+        phonesSubtitle: 'Estos son los contactos oficiales de este lugar',
         menuTitle: 'Menu',
-        menuSubtitle: 'Voir le menu',
-        menuButton: 'Ouvrir menu',
+        menuSubtitle: 'Ver el menu del local',
+        menuButton: 'Abrir menu',
         notesTitle: 'Notas',
-        reportProblem: 'Signaler un problème',
+        reportProblem: 'Reportar un problema',
         visitModalEnding: ''
       },
       openingHours: { checkAvailabilityMessage: 'Los horarios varían según la disponibilidad. Consulte el sitio web y la página de Instagram del lugar para entender cómo funciona', alwaysOpenMessage: 'Este lugar está abierto las 24 horas', alwaysOpenLabel: 'Siempre abierto', checkAvailabilityLabel: 'Verificar disponibilidad' },
-      footer: { home: 'Inicio', search: 'Chercher', about: 'Sobre' },
+      footer: { home: 'Inicio', search: 'Buscar', about: 'Sobre' },
       searchPage: {
         title: 'Busca un lugar',
-        subtitle: '¿Recuerdas el nombre del lugar de memoria? Saisissez son nom ci-dessous, c\'est plus rapide',
-        fieldLabel: 'Nom du lieu:',
-        resultsTitle: 'Résultats trouvés',
-        placeholder: 'Ex. : Boulangerie Pain Legal'
+        subtitle: '¿Recuerdas el nombre del lugar? Escribelo abajo, es mas rapido',
+        fieldLabel: 'Nombre del lugar:',
+        resultsTitle: 'Resultados encontrados',
+        placeholder: 'Ej.: Panaderia Pao Legal'
       },
-      distanceSelect: { title: 'Seleccione la distancia', searchButton: 'Chercher' },
+      distanceSelect: { title: 'Seleccione la distancia', searchButton: 'Buscar' },
       nearbyMap: {
         title: 'Mapa cercano',
-        noneInRadius: 'Aucun point dans le rayon.',
-        pointsDisplayed: '{{count}} point(s) affiché(s).',
-        you: 'Vous'
+        noneInRadius: 'No hay puntos dentro del radio.',
+        pointsDisplayed: 'Se muestran {{count}} punto(s).',
+        you: 'Tu'
       },
       neighborhoodList: {
-        intro: 'Descubre lugares incríveis neste bairro,\nselecione uma das opções ci-dessous :)'
+        intro: 'Descubre lugares increibles en este barrio,\nselecciona una de las opciones de abajo :)'
       },
       recommendationsOrigin: { title: '¿De dónde vienen estas recomendaciones?' },
       support: { title: 'Apoya el sitio' },
       about: { title: '¿Quién soy?', paragraph: 'Página sobre ti. Diseño vendrá después.' },
       aboutMe: {
-        authorTag: 'Creador de Role Paulista',
-        photoAlt: 'Foto de Wallace Baldenebre',
+        authorTag: 'Créateur de Role Paulista',
+        photoAlt: 'Photo de Wallace Baldenebre',
         name: 'Wallace Baldenebre',
-        aboutHeading: 'Sobre mí',
-        motto: 'Dale un pez a un hombre y lo alimentarás por un día. Enséñale a pescar y lo alimentarás toda la vida',
+        aboutHeading: 'À propos de moi',
+        motto: 'Donnez un poisson à un homme et vous le nourrissez un jour. Apprenez-lui à pêcher et vous le nourrissez toute sa vie',
         accordion: {
-          aboutLabel: 'Sobre mí',
-          whatIsLabel: '¿Qué es Rolê Paulista?',
-          earnLabel: '¿Cuánto gano con esto?',
-          howToHelpLabel: '¿Puedo contribuir de alguna manera?'
+          aboutLabel: 'À propos de moi',
+          whatIsLabel: 'Qu\'est-ce que Rolê Paulista ?',
+          earnLabel: 'Combien est-ce que je gagne avec ça ?',
+          howToHelpLabel: 'Puis-je contribuer d\'une quelconque manière ?'
         },
         aboutList: [
-          'Ingenieur Mobile depuis 10 ans (si ma mémoire est encore bonne)',
-          'Batterie, guitare et chant, en faisant tout parfaitement mal et déconnecté de la réalité',
-          'Cuisiner au point de savoir faire un excellent panettone salé',
-          'Voyageur solo et routard quand il y a un peu d’argent pour découvrir le monde',
-          'Je parle portugais (BR), anglais, espagnol et russe (celui-ci je continue à l’étudier... Привет мой друг)',
-          'D’Osasco, j’aime São Paulo, et je râle aussi sur la ville à la première occasion, mais toujours prêt à recommander le meilleur :)'
+          'Ingeniero Mobile desde hace 10 anos (si mi memoria aun no me falla)',
+          'Bateria, guitarra y voz, haciendolo todo perfectamente mal y fuera de sincronía con la realidad',
+          'Cocino al punto de preparar un panettone salado increible',
+          'Viajero solo y mochilero siempre que hay un poco de dinero para explorar el mundo',
+          'Hablo portugues (BR), ingles, espanol y ruso (este ultimo sigo estudiandolo... Привет мой друг)',
+          'De Osasco, amo Sao Paulo y tambien me quejo de la ciudad en cada oportunidad, pero siempre listo para recomendar lo mejor :)'
         ],
         whatIs: [
-          'La idea nació de una hoja de cálculo donde registraba los mejores lugares de la ciudad.',
-          'Au début, je le remplissais juste pour moi, mais avec le temps, je l’ai partagé avec des amis et des connaissances, jusqu’à ce que cela devienne quelque chose de plus grand.',
-          'C’est ainsi qu’est né Rolê Paulista, un site avec une expérience d’application, pour faciliter l’accès aux meilleures expériences de la ville que je vais visiter.',
-          'Peu importe si vous êtes de São Paulo, d’un autre État ou d’un autre pays, l’expérience est pour tous.'
+          'L\'idée est née d\'une feuille de calcul où je notais les meilleurs endroits de la ville.',
+          'Al principio la completaba solo para mi, pero con el tiempo la comparti con amigos y conocidos hasta que se transformo en algo mayor.',
+          'Asi nacio Role Paulista: un sitio con experiencia de app para facilitar el acceso a las mejores experiencias de la ciudad que visito.',
+          'No importa si eres de Sao Paulo, de otro estado o de otro pais, la experiencia es para todos.'
         ],
         earn: [
-          'La réponse est simple : rien. Rolê Paulista est un projet personnel, fait par passion et amour pour la ville de São Paulo. Peut-être qu’à l’avenir je gagne avec des publications ou de l’adsense ? Peut-être, mais l’idée est que le site soit TOUJOURS gratuit, tant pour ceux qui y accèdent que pour les publications que je fais sur les lieux.',
-          'Je n’accepterai pas d’argent pour cela, surtout pour parler en bien d’un endroit ; je veux garder l’intégrité et l’authenticité du contenu, en allant sur place et en transmettant l’expérience réelle que j’ai eue.',
-          'Il se peut que je mette du temps à publier sur Instagram ou sur le site, car actuellement je suis l’équipe infrastructure, développement, marketing, design et contenu, tout en même temps haha, donc désolé si je tarde à mettre à jour quelque chose :)'
+          'La respuesta es simple: nada. Role Paulista es un proyecto personal hecho con pasion y amor por la ciudad de Sao Paulo. Tal vez en el futuro gane algo con publicaciones o AdSense, pero la idea es que el sitio SIEMPRE sea gratuito.',
+          'No aceptare dinero por esto, especialmente para hablar bien de un lugar; quiero mantener el contenido autentico y honesto visitando los lugares y compartiendo la experiencia real.',
+          'Puede que tarde en publicar en Instagram o en el sitio porque hoy soy todo el equipo: infraestructura, desarrollo, marketing, diseno y contenido al mismo tiempo. Perdona si algunas actualizaciones tardan :)'
         ],
         howToHelp: [
-          'Si quieres recomendar un lugar, envíame un mensaje por Instagram o por correo electrónico con la información del sitio; haré lo posible por visitarlo y así ayudar a otras personas que usan este sitio.',
-          'Si quieres ayudar a mantener este proyecto para que tus planes en SP sean cada vez más ligeros y prácticos, solo apunta la cámara al código QR de abajo :)'
+          'Si vous souhaitez recommander un lieu, envoyez-moi un message sur Instagram ou par e-mail avec les informations du lieu ; je ferai de mon mieux pour le visiter et aider les autres utilisateurs du site.',
+          'Si vous souhaitez soutenir ce projet pour rendre vos sorties à SP plus légères et pratiques, pointez simplement la caméra vers le QR code ci-dessous :)'
         ],
-        socialHeading: 'Réseaux sociaux',
-        socialDescription: 'Retrouvez-moi sur les réseaux sociaux ci-dessous :)',
+        socialHeading: 'Redes sociales',
+        socialDescription: 'Encuentrame en las redes sociales de abajo :)',
         social: {
           wallace: 'Wallace Baldenebre',
           role: 'Role Paulista',
@@ -533,31 +548,31 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Développeur mobile depuis plus de 8 ans, passionné de technologie et d’exploration de São Paulo.'
+        bio: 'Desarrollador mobile desde hace mas de 8 anos, apasionado por tecnologia, viajes, comida y por explorar Sao Paulo.'
       },
       travelItinerary: {
-        title: 'Itinéraires',
-        placeholder: 'Itinéraires pédestres suggérés pour vous permettre de découvrir plusieurs lieux proches, sans dépenser en transport.',
-        routeOptionsTitle: 'Options d\'itinéraire:',
+        title: 'Itinerarios',
+        placeholder: 'Rutas a pie sugeridas para que puedas visitar varios lugares cercanos sin gastar en transporte.',
+        routeOptionsTitle: 'Opciones de ruta:',
         createdForYouTitle: 'Itinerarios creados para ti :)',
-        listTitle: 'Itinéraires',
-        viewRoute: 'Voir l’itinéraire',
+        listTitle: 'Itinerarios',
+        viewRoute: 'Ver itinerario',
         modes: {
-          walking: 'Tour à pied',
-          city: 'Tour en ville'
+          walking: 'Recorrido a pie',
+          city: 'Recorrido por la ciudad'
         },
         routeOptions: {
-          free: 'Gratuit',
-          nightlife: 'Vie nocturne',
-          bars: 'Bars',
-          food: 'Gastronomique',
-          history: 'Histoire',
-          museums: 'Musées',
+          free: 'Gratis',
+          nightlife: 'Vida nocturna',
+          bars: 'Bares',
+          food: 'Gastronomico',
+          history: 'Historia',
+          museums: 'Museos',
           nature: 'Naturaleza',
           forfun: 'Diversión',
-          more: 'Plus d\'options'
+          more: 'Mas opciones'
         },
-        placesCount: '{{count}} lieux',
+        placesCount: '{{count}} lugares',
         tipTitle: 'Consejo importante',
         tipDescription: 'Al caminar por la calle, mantente atento con el celular: evita usarlo demasiado y no pidas ayuda a desconocidos. ¿Notaste algo extraño? Entra en un lugar concurrido y llama al 190. En SP, lo básico es: atención total a tu alrededor y nada de bajar la guardia',
         loadingPoints: 'Cargando puntos...',
@@ -567,30 +582,30 @@ const resources = {
         openInGoogleMaps: 'Abrir en Google Maps'
       },
       tourType: {
-        ALL: 'Tout',
-        FREE: 'Gratuit',
-        NIGHTLIFE: 'Vie nocturne',
-        BARS: 'Bars',
-        GASTRONOMIC: 'Gastronomique',
-        HISTORY: 'Histoire',
-        MUSEUMS: 'Musées',
-        ARTISTIC: 'Artistique',
-        NATURE: 'Naturaleza',
-        FORFUN: 'Diversión',
-        OTHERS: 'Autres'
+        ALL: 'Todo',
+        FREE: 'Gratis',
+        NIGHTLIFE: 'Vida nocturna',
+        BARS: 'Bares',
+        GASTRONOMIC: 'Gastronomico',
+        HISTORY: 'Historia',
+        MUSEUMS: 'Museos',
+        ARTISTIC: 'Artistico',
+        NATURE: 'Nature',
+        FORFUN: 'Divertissement',
+        OTHERS: 'Otros'
       },
-      howToRecommend: { title: 'Comment recommander un lieu ?' },
+      howToRecommend: { title: 'Como recomendar un lugar?' },
       placeType: {
-        RESTAURANT: 'Restaurants',
-        BARS: 'Bars',
-        COFFEES: 'Cafés',
-        NIGHTLIFE: 'Vie\u200B nocturne',
+        RESTAURANT: 'Restaurantes',
+        BARS: 'Bares',
+        COFFEES: 'Cafeterias',
+        NIGHTLIFE: 'Vida nocturna',
         NATURE: 'Naturaleza',
         TOURIST_SPOT: 'Turísticos',
         FORFUN: 'Diversión',
-        STORES: 'Magasins',
-        FREE: 'Gratuit',
-        PLEASURE: 'Maison de plaisirs'
+        STORES: 'Tiendas',
+        FREE: 'Gratis',
+        PLEASURE: 'Casa de placeres'
       }
       ,
       placeList: {
@@ -690,19 +705,19 @@ const resources = {
         openNow: 'Ouvert\u200B maintenant',
         closedNow: 'Fermé maintenant',
         locationDescription: 'Ici, vous trouverez les unités de cet établissement et toutes les adresses. Vous pouvez aussi tracer la route comme vous préférez : avec Google Maps ou en commandant un Uber :)',
-        websiteTitle: 'Sitio del local',
-        websiteSubtitle: 'Visita el sitio de este lugar y consulta la información detallada',
-        websiteButton: 'Acceder al sitio',
-        openUber: 'Abrir en Uber',
+        websiteTitle: 'Site du lieu',
+        websiteSubtitle: 'Visitez le site de ce lieu et consultez les informations détaillées',
+        websiteButton: 'Accéder au site',
+        openUber: 'Ouvrir dans Uber',
         instagramTitle: 'Instagram',
-        instagramSubtitle: 'Sigue el perfil oficial:',
-        follow: 'Seguir',
-        phoneTitle: 'Teléfono',
+        instagramSubtitle: 'Suivez le profil officiel :',
+        follow: 'Suivre',
+        phoneTitle: 'Téléphone',
         phonesSubtitle: 'Voici les contacts officiels de cet endroit',
         menuTitle: 'Menu',
         menuSubtitle: 'Voir le menu',
         menuButton: 'Ouvrir menu',
-        notesTitle: 'Notas',
+        notesTitle: 'Notes',
         reportProblem: 'Signaler un problème',
         visitModalEnding: ''
       },
@@ -721,8 +736,8 @@ const resources = {
         intro: 'Découvrez des lieux incroyables dans ce quartier,\nchoisissez l\'une des options ci‑dessous :)'
       },
       recommendationsOrigin: { title: 'De où viennent ces recommandations?' },
-      support: { title: 'Apoya el sitio' },
-      about: { title: '¿Quién soy?', paragraph: 'Página sobre ti. Diseño vendrá después.' },
+      support: { title: 'Soutenez le site' },
+      about: { title: 'Qui suis-je ?', paragraph: 'Page à propos. La version complète du design arrive bientôt.' },
       aboutMe: {
         authorTag: 'Creador de Role Paulista',
         photoAlt: 'Foto de Wallace Baldenebre',
@@ -921,7 +936,7 @@ const resources = {
       },
       recommendationsOrigin: { title: 'Откуда эти рекомендации?' },
       support: { title: 'Поддержите сайт' },
-      about: { title: 'Кто я?', paragraph: 'Пágina sobre ti. Diseño vendrá después.' },
+      about: { title: 'Кто я?', paragraph: 'Страница «Обо мне». Полная версия дизайна появится позже.' },
       aboutMe: {
         authorTag: 'Создатель Role Paulista',
         photoAlt: 'Фото Уоллеса Балденебре',
@@ -944,7 +959,7 @@ const resources = {
         ],
         whatIs: [
           'Идея родилась из таблицы, где я записывал лучшие места города.',
-          'На początku я заполнял её только для себя, но со временем я начал делиться с друзьями и знакомыми, и это выросло во что-то большее.',
+          'Сначала я заполнял её только для себя, но со временем начал делиться с друзьями и знакомыми, и это выросло во что-то большее.',
           'Так появился Rolê Paulista — сайт с опытом как у приложения, чтобы упростить доступ к лучшим городским впечатлениям, которые я посещаю.',
           'Неважно, вы из Сан-Паулу, из другого штата или из другого страны — этот опыт для всех.'
         ],
@@ -983,7 +998,7 @@ const resources = {
         routeOptions: {
           free: 'Бесплатно',
           nightlife: 'Ночная жизнь',
-          bars: 'Bars',
+          bars: 'Бары',
           food: 'Гастрономия',
           history: 'История',
           museums: 'Музеи',
@@ -1023,6 +1038,8 @@ const resources = {
       list: { variablePlace: '无固定地点' },
       filters: { title: '筛选', subtitle: '调整以下筛选以缩小结果范围', sortingTitle: '排序', hoursTitle: '营业时间', openNowLabel: '正在营业', openNow: '正在营业', anyHourLabel: '任意时间', anyHour: '任意时间', scheduleTitle: '预约', scheduleRequired: '需要预约', scheduleNotRequired: '无需预约', anySchedule: '不限', cityTitle: '城市', anyCity: '任意城市', priceTitle: '价格', anyPrice: '任意价格', button: '筛选' },
       placeDetail: { loading: '正在加载详情...', notFound: '未找到地点。', opensMonday: '周一营业', opensSunday: '周日营业', opensHoliday: '节假日营业', alreadyVisited: '✓ 我去过', notVisited: '⚠️ 还没去过', viewHours: '查看营业时间',
+        priceLabel: '价格:',
+        hoursTitle: '营业时间',
         visitModalTitle: '关于该地点',
         visitModalParagraph: '此地点尚未亲访。页面信息来自已去过并推荐给我的人提供的建议。',
         visitedModalParagraph: '此地点已亲访。页面信息来自我拜访时记录的内容（点过的菜、体验过的项目）以及店家提供的资料。',
@@ -1034,23 +1051,23 @@ const resources = {
         websiteSubtitle: '访问此地点的网站查看详细信息',
         websiteButton: '打开网站',
         openUber: '打开 Uber',
-        environmentTypeLabel: 'Umgebungstyp:',
-        locationTitle: 'Lokation',
-        streetPrefix: 'Adresse:',
+        environmentTypeLabel: '环境类型:',
+        locationTitle: '地点',
+        streetPrefix: '地址:',
         googleMapsButton: 'Google Maps',
         instagramTitle: 'Instagram',
         instagramSubtitle: '关注官方账号：',
         follow: '关注',
         phoneTitle: '电话',
-        phonesSubtitle: 'These are the official contacts for this place',
-        menuTitle: 'Menu',
-        menuSubtitle: 'View the venue menu',
-        menuButton: 'Open menu',
+        phonesSubtitle: '以下是该地点的官方联系方式',
+        menuTitle: '菜单',
+        menuSubtitle: '查看该地点菜单',
+        menuButton: '打开菜单',
         notesTitle: '备注',
         reportProblem: '报告问题',
-        visitModalEnding: 'I’ll also tell you which places not to visit :)'
+        visitModalEnding: '我也会告诉你哪些地方不值得去 :)'
       },
-      openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', alwaysOpenLabel: '全天开放', checkAvailabilityLabel: 'Check availability' },
+      openingHours: { checkAvailabilityMessage: '营业时间可能会变动。请查看该地点官网或 Instagram 获取详情。', alwaysOpenMessage: '该地点 24 小时营业', alwaysOpenLabel: '全天开放', checkAvailabilityLabel: '查看可用性' },
       whereIsToday: { title: '那么，今天去哪里？', subtitle: '按类别整理的我去过的地点列表。来看一看 ;)', opensToday: '今日营业' },
       placeList: {
         environmentTitle: '环境类型:',
@@ -1079,23 +1096,23 @@ const resources = {
           howToHelpLabel: '我可以用某种方式帮忙吗？'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          '做移动工程师已经10年了（如果我的记忆还靠谱的话）',
+          '打鼓、弹吉他和唱歌，把一切都完美地搞错，还常常和现实不同步',
+          '我的厨艺已经到了能做出超棒咸味潘妮托内的水平',
+          '只要手头有点余钱，我就会独自旅行和背包探索世界',
+          '我会说葡萄牙语（巴西）、英语、西班牙语和俄语（这门还在学中... Привет мой друг）',
+          '我来自奥萨斯库，热爱圣保罗；我也会逮到机会就吐槽这座城市，但总是准备好推荐最棒的地方 :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          '这个想法最初来自一个电子表格，我会在里面记录城市里最值得去的地方。',
+          '一开始我只是给自己用，但随着时间推移，我开始分享给朋友和熟人，后来它逐渐变成了更大的项目。',
+          'Rolê Paulista 就这样诞生了：一个带有 App 体验的网站，让大家更方便地找到我去过的优质城市体验。',
+          '无论你来自圣保罗、巴西其他州，还是其他国家，这里的体验都面向每一个人。'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          '答案很简单：不赚钱。Rolê Paulista 是一个出于热爱圣保罗而做的个人项目。未来我会不会通过广告或发布内容赚点钱？也许会，但这个网站的理念是必须始终免费，不论是对访问者，还是对我发布的场所内容。',
+          '我不会为此收钱，尤其不会为了夸某个地方而收钱；我希望通过亲自到访并分享真实体验，保持内容的真实与诚实。',
+          '我在 Instagram 或网站上的更新有时会慢一些，因为目前我一个人包办了全部工作：基础设施、开发、营销、设计和内容，哈哈。所以如果更新慢一点，还请见谅 :)'
         ],
         howToHelp: [
           '如果你想推荐一个地方，请在 Instagram 或通过电子邮件把地点信息发给我；我会尽力去亲自体验，并把它分享给使用这个网站的其他人！',
@@ -1113,15 +1130,15 @@ const resources = {
         bio: 'Mobile developer for 8+ years, Android & iOS specialist. Passionate about tech, travel, food, and exploring every corner of São Paulo.'
       },
       travelItinerary: {
-        title: 'Routen',
-        placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
-        routeOptionsTitle: 'Route options:',
+        title: '路线',
+        placeholder: '为你推荐步行路线，可在附近一次打卡多个地点，无需交通花费。',
+        routeOptionsTitle: '路线选项:',
         createdForYouTitle: '为你创建的路线 :)',
-        listTitle: 'Routes',
-        viewRoute: 'Voir l’itinéraire',
+        listTitle: '路线',
+        viewRoute: '查看路线',
         modes: {
-          walking: 'Walking Tour',
-          city: 'City Tour'
+          walking: '步行路线',
+          city: '城市路线'
         },
         routeOptions: {
           free: 'Gratuit',
@@ -1204,7 +1221,7 @@ const resources = {
         placeholder: 'E.g.: Pao Legal Bakery'
       },
       whereIsToday: { title: 'So, where are we going today?', subtitle: 'List of places I’ve been, by category. Take a look ;)', opensToday: 'Open today' },
-      list: { nameHeader: 'NAME', neighborhoodHeader: 'QUARTIER', variablePlace: 'No fixed location', typeHeader: 'Type', orderNameAsc: 'NAME in ascending order A-Z', orderNeighborhoodAsc: 'QUARTIER in ascending order A-Z' },
+      list: { nameHeader: 'NAME', neighborhoodHeader: 'NEIGHBORHOOD', seeDetails: 'see details', variablePlace: 'No fixed location', typeHeader: 'Type', orderNameAsc: 'NAME in ascending order A-Z', orderNeighborhoodAsc: 'NEIGHBORHOOD in ascending order A-Z' },
       filters: {
         title: 'Filters',
         subtitle: 'Adjust the filters below to refine results',
@@ -1237,6 +1254,8 @@ const resources = {
         visitModalParagraph: 'Place pending a visit. The info here comes from suggestions by people who have been there and told me to check it out.',
         visitedModalParagraph: 'Visited place. The info here comes from what I noted during my visit — things I ordered or tried — plus details shared by the venue.',
         neverEmphasis: '',
+        priceLabel: 'Price:',
+        hoursTitle: 'Opening hours',
         openNow: 'Open now',
         closedNow: 'Closed',
         locationDescription: 'Here are the branches for this venue and their addresses. You can map the route however you like: with Google Maps or by calling an Uber :)',
@@ -1244,9 +1263,9 @@ const resources = {
         websiteSubtitle: 'Visit the venue website for detailed information',
         websiteButton: 'Open website',
         openUber: 'Open in Uber',
-        environmentTypeLabel: 'Umgebungstyp:',
-        locationTitle: 'Lokation',
-        streetPrefix: 'Adresse:',
+        environmentTypeLabel: 'Environment type:',
+        locationTitle: 'Location',
+        streetPrefix: 'Address:',
         googleMapsButton: 'Google Maps',
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Follow the official profile:',
@@ -1256,7 +1275,11 @@ const resources = {
         menuTitle: 'Menu',
         menuSubtitle: 'View the venue menu',
         menuButton: 'Open menu',
-        notesTitle: 'Notes'
+        notesTitle: 'Notes',
+        reportProblem: 'Report a problem',
+        visitModalEnding: '',
+        whatsappButton: 'WhatsApp',
+        onCall: 'Call'
       },
       openingHours: { checkAvailabilityMessage: 'The hours may vary. Check the venue website or Instagram page for details.', alwaysOpenMessage: 'This place is open 24/7', alwaysOpenLabel: 'Always open', checkAvailabilityLabel: 'Check availability' },
       placeList: {
@@ -1280,7 +1303,7 @@ const resources = {
         photoAlt: 'Photo of Wallace Baldenebre',
         name: 'Wallace Baldenebre',
         aboutHeading: 'About me',
-        motto: 'Dajem jednomu człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        motto: 'Give a man a fish and you feed him for a day. Teach him to fish and you feed him for a lifetime',
         accordion: {
           aboutLabel: 'About me',
           whatIsLabel: 'What is Rolê Paulista?',
@@ -1288,23 +1311,23 @@ const resources = {
           howToHelpLabel: 'Can I contribute in any way?'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          'モバイルエンジニア歴10年（記憶が正しければ）',
+          'ドラム、ギター、ボーカルをやります。現実とズレながら、全部を完璧に間違えるタイプです',
+          '料理は「最高の塩味パネトーネ」を作れるくらいにはやります',
+          'お金に少し余裕ができたら、ひとり旅やバックパッカーで世界を巡ります',
+          'ポルトガル語（BR）、英語、スペイン語、ロシア語を話します（ロシア語はまだ勉強中... Привет мой друг）',
+          'オザスコ出身で、サンパウロが大好きです。文句もよく言いますが、最高の場所をおすすめする準備はいつでもできています :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'このアイデアは、街でおすすめのスポットを記録していたスプレッドシートから始まりました。',
+          '最初は自分用だけでしたが、時間とともに友人や知人に共有するようになり、だんだん大きなものになっていきました。',
+          'こうして Rolê Paulista が生まれました。私が実際に訪れた最高の都市体験に、アプリのような感覚でアクセスしやすくするためのサイトです。',
+          'サンパウロ在住の人でも、他州の人でも、海外から来る人でも、誰でも楽しめる体験です。'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          '答えはシンプルです。収益はゼロです。Rolê Paulista はサンパウロへの情熱と愛から生まれた個人プロジェクトです。将来的に広告や掲載で収益化する可能性はあるかもしれませんが、このサイトは訪問者にとっても掲載先にとっても、常に無料であるべきだと考えています。',
+          'この活動でお金は受け取りません。特に、場所を褒めるための報酬は受けません。実際に訪れて本当の体験を共有し、内容の誠実さと信頼性を保ちたいからです。',
+          'Instagram やこのサイトへの投稿に時間がかかることがあります。現在はインフラ、開発、マーケティング、デザイン、コンテンツ制作まで、全部ひとりで担当しているためです（笑）。更新が遅いときはごめんなさい :)'
         ],
         howToHelp: [
           'If you want to recommend a place, send me a message on Instagram or by email with the place details — I’ll do my best to visit it and help other people who use this site!',
@@ -1353,19 +1376,19 @@ const resources = {
         openInGoogleMaps: 'Open in Google Maps'
       },
       tourType: {
-        ALL: 'Tout',
-        FREE: 'Gratuit',
-        NIGHTLIFE: 'Vie nocturne',
+        ALL: 'All',
+        FREE: 'Free',
+        NIGHTLIFE: 'Nightlife',
         BARS: 'Bars',
-        GASTRONOMIC: 'Gastronomique',
-        HISTORY: 'Histoire',
-        MUSEUMS: 'Musées',
-        ARTISTIC: 'Artistique',
+        GASTRONOMIC: 'Gastronomic',
+        HISTORY: 'History',
+        MUSEUMS: 'Museums',
+        ARTISTIC: 'Artistic',
         NATURE: 'Nature',
         FORFUN: 'Fun',
-        OTHERS: 'Autres'
+        OTHERS: 'Others'
       },
-      nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
+      nearbyMap: { title: 'Nearby map', noneInRadius: 'No points in the current radius.', pointsDisplayed: '{{count}} point(s) shown.', you: 'You' }
     }
   }
   ,
@@ -1425,13 +1448,13 @@ const resources = {
         anyPrice: 'Beliebiger Preis',
         button: 'Filter'
       },
-      list: { nameHeader: 'NAAM', neighborhoodHeader: 'STADTTEIL', variablePlace: 'Kein fester Standort', typeHeader: 'Typ', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'STADTTEIL artan sırada A-Z' },
-      footer: { home: 'Start', search: 'Chercher', about: 'Über' },
+      list: { nameHeader: 'NAME', neighborhoodHeader: 'STADTTEIL', variablePlace: 'Kein fester Standort', typeHeader: 'Typ', orderNameAsc: 'NAME in aufsteigender Reihenfolge A-Z', orderNeighborhoodAsc: 'STADTTEIL in aufsteigender Reihenfolge A-Z' },
+      footer: { home: 'Start', search: 'Suchen', about: 'Über' },
       searchPage: {
-        title: 'Cherchez un lieu',
-        subtitle: 'Vous vous souvenez du nom du lieu ? Saisissez son nom ci-dessous, c\'est plus rapide',
-        fieldLabel: 'Nom du lieu:',
-        resultsTitle: 'Résultats trouvés',
+        title: 'Suche einen Ort',
+        subtitle: 'Erinnerst du dich an den Namen des Ortes? Gib ihn unten ein, das ist schneller',
+        fieldLabel: 'Name des Ortes:',
+        resultsTitle: 'Gefundene Ergebnisse',
         placeholder: 'z. B.: Bäckerei Pao Legal'
       },
       placeDetail: {
@@ -1454,17 +1477,17 @@ const resources = {
         websiteButton: 'Website öffnen',
         openUber: 'In Uber öffnen',
         environmentTypeLabel: 'Umgebungstyp:',
-        locationTitle: 'Lokation',
+        locationTitle: 'Standort',
         streetPrefix: 'Adresse:',
         googleMapsButton: 'Google Maps',
         instagramTitle: 'Instagram',
-        instagramSubtitle: 'Follow the official profile:',
-        follow: 'Follow',
+        instagramSubtitle: 'Offizielles Profil folgen:',
+        follow: 'Folgen',
         phoneTitle: 'Telefon',
-        phonesSubtitle: 'Diese sind die offiziellen Kontakte dieses Ortes',
-        menuTitle: 'Menu',
-        menuSubtitle: 'View the venue menu',
-        menuButton: 'Open menu',
+        phonesSubtitle: 'Dies sind die offiziellen Kontakte dieses Ortes',
+        menuTitle: 'Menü',
+        menuSubtitle: 'Menü des Ortes ansehen',
+        menuButton: 'Menü öffnen',
         notesTitle: 'Notizen'
       },
       openingHours: { checkAvailabilityMessage: 'Die Öffnungszeiten variieren je nach Verfügbarkeit. Prüfen Sie die Website und die Instagram-Seite des Ortes, um Details zu erfahren', alwaysOpenMessage: 'Dieser Ort ist 24 Stunden geöffnet', alwaysOpenLabel: 'Immer geöffnet', checkAvailabilityLabel: 'Verfügbarkeit prüfen' },
@@ -1488,7 +1511,7 @@ const resources = {
         photoAlt: 'Foto von Wallace Baldenebre',
         name: 'Wallace Baldenebre',
         aboutHeading: 'Über mich',
-        motto: 'Dajem jednomu człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        motto: 'Gib einem Menschen einen Fisch und du ernährst ihn einen Tag. Lehre ihn zu fischen und du ernährst ihn ein Leben lang',
         accordion: {
           aboutLabel: 'Über mich',
           whatIsLabel: 'Was ist Rolê Paulista?',
@@ -1496,30 +1519,30 @@ const resources = {
           howToHelpLabel: 'Kann ich irgendwie beitragen?'
         },
         aboutList: [
-          'Mobile Engineer al 10 jaar (als mijn geheugen me niet in de steek laat)',
-          'Drums, gitaar en zang, alles perfect verkeerd en volledig los van de realiteit',
-          'Ik kook op het niveau van een geweldige hartige panettone maken',
-          'Solo reiziger en backpacker wanneer er wat geld over is om de wereld te ontdekken',
-          'Ik spreek Portugees (BR), Engels, Spaans en Russisch (die laatste leer ik nog... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          'Mobile Engineer seit 10 Jahren (wenn mich mein Gedächtnis nicht täuscht)',
+          'Schlagzeug, Gitarre und Gesang, alles perfekt falsch und völlig aus dem Takt mit der Realität',
+          'Ich koche so gut, dass ich sogar ein großartiges herzhaftes Panettone machen kann',
+          'Alleinreisender und Backpacker, wann immer etwas Geld übrig ist, um die Welt zu entdecken',
+          'Ich spreche Portugiesisch (BR), Englisch, Spanisch und Russisch (dieses lerne ich noch... Привет мой друг)',
+          'Ich komme aus Osasco, liebe São Paulo und beschwere mich auch bei jeder Gelegenheit über die Stadt, bin aber immer bereit, das Beste zu empfehlen :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'Die Idee begann als Tabelle, in der ich die besten Orte der Stadt gesammelt habe.',
+          'Anfangs habe ich sie nur für mich gepflegt, aber mit der Zeit habe ich sie mit Freunden und Bekannten geteilt, bis etwas Größeres daraus wurde.',
+          'So entstand Rolê Paulista: eine Website mit App-ähnlicher Erfahrung, um den Zugang zu den besten Erlebnissen der Stadt zu erleichtern.',
+          'Egal ob du aus São Paulo, einem anderen Bundesstaat oder einem anderen Land kommst, die Erfahrung ist für alle.'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          'Die Antwort ist einfach: nichts. Rolê Paulista ist ein persönliches Projekt aus Leidenschaft und Liebe zu São Paulo. Vielleicht verdiene ich in Zukunft mit Veröffentlichungen oder AdSense, aber die Idee ist, dass die Seite IMMER kostenlos bleibt.',
+          'Ich werde dafür kein Geld annehmen, vor allem nicht, um gut über einen Ort zu sprechen. Ich möchte die Inhalte authentisch und ehrlich halten, indem ich Orte selbst besuche und meine echte Erfahrung teile.',
+          'Es kann sein, dass ich mit Updates auf Instagram oder hier auf der Seite etwas brauche, denn aktuell bin ich das ganze Team: Infrastruktur, Entwicklung, Marketing, Design und Inhalt zugleich.'
         ],
         howToHelp: [
           'Wenn du einen Ort empfehlen möchtest, schreib mir auf Instagram oder per E‑Mail mit den Infos zum Ort — ich werde mein Bestes tun, ihn zu besuchen und damit anderen zu helfen, die diese Seite nutzen!',
           'Wenn du helfen möchtest, dieses Projekt am Laufen zu halten, damit deine Unternehmungen in SP immer leichter und praktischer werden, halte einfach die Kamera auf den QR‑Code unten :)'
         ],
-        socialHeading: 'Sociale netwerken',
-        socialDescription: 'Vind me op de sociale netwerken hieronder :)',
+        socialHeading: 'Soziale Netzwerke',
+        socialDescription: 'Du findest mich auf den sozialen Netzwerken unten :)',
         social: {
           wallace: 'Wallace Baldenebre',
           role: 'Role Paulista',
@@ -1527,31 +1550,31 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+        bio: 'Mobiler Entwickler mit mehr als 8 Jahren Erfahrung, spezialisiert auf Android und iOS. Leidenschaftlich für Technologie, Reisen, Essen und das Entdecken jeder Ecke von São Paulo.'
       },
       travelItinerary: {
-        title: 'Routes',
-        placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
-        routeOptionsTitle: 'Route options:',
+        title: 'Routen',
+        placeholder: 'Vorgeschlagene Fußwege, damit du mehrere nahe Orte besuchen kannst, ohne für Transport auszugeben.',
+        routeOptionsTitle: 'Routenoptionen:',
         createdForYouTitle: 'Routen für dich :)',
-        listTitle: 'Routes',
-        viewRoute: 'View route',
+        listTitle: 'Routen',
+        viewRoute: 'Route ansehen',
         modes: {
-          walking: 'Walking Tour',
-          city: 'City Tour'
+          walking: 'Rundgang zu Fuß',
+          city: 'Stadttour'
         },
         routeOptions: {
-          free: 'Free',
-          nightlife: 'Nightlife',
+          free: 'Kostenlos',
+          nightlife: 'Nachtleben',
           bars: 'Bars',
-          food: 'Food',
-          history: 'History',
-          museums: 'Museums',
+          food: 'Essen',
+          history: 'Geschichte',
+          museums: 'Museen',
           nature: 'Natur',
           forfun: 'Spaß',
-          more: 'More Options'
+          more: 'Mehr Optionen'
         },
-        placesCount: '{{count}} places',
+        placesCount: '{{count}} Orte',
         tipTitle: 'Wichtiger Hinweis',
         tipDescription: 'Wenn du auf der Straße unterwegs bist, pass mit deinem Handy auf: benutze es möglichst wenig und bitte keine Fremden um Hilfe. Kommt dir etwas seltsam vor? Geh in einen belebten Ort und ruf 190 an. In SP gilt als Grundregel: volle Aufmerksamkeit für deine Umgebung und bloß nicht unachtsam werden',
         loadingPoints: 'Punkte werden geladen...',
@@ -1561,19 +1584,19 @@ const resources = {
         openInGoogleMaps: 'In Google Maps öffnen'
       },
       tourType: {
-        ALL: 'Tout',
-        FREE: 'Gratuit',
-        NIGHTLIFE: 'Vie nocturne',
+        ALL: 'Alles',
+        FREE: 'Kostenlos',
+        NIGHTLIFE: 'Nachtleben',
         BARS: 'Bars',
-        GASTRONOMIC: 'Gastronomique',
-        HISTORY: 'Histoire',
-        MUSEUMS: 'Musées',
-        ARTISTIC: 'Artistique',
+        GASTRONOMIC: 'Gastronomisch',
+        HISTORY: 'Geschichte',
+        MUSEUMS: 'Museen',
+        ARTISTIC: 'Künstlerisch',
         NATURE: 'Natur',
         FORFUN: 'Spaß',
-        OTHERS: 'Autres'
+        OTHERS: 'Andere'
       },
-      nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
+      nearbyMap: { title: 'Karte in der Nähe', noneInRadius: 'Keine Punkte im aktuellen Radius.', pointsDisplayed: '{{count}} Punkt(e) angezeigt.', you: 'Du' }
     }
   },
   ja: {
@@ -1697,31 +1720,31 @@ const resources = {
         photoAlt: 'Wallace Baldenebre の写真',
         name: 'Wallace Baldenebre',
         aboutHeading: '私について',
-        motto: 'Dajem jednomu człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        motto: '一人に魚を与えれば一日食べられる。釣り方を教えれば一生食べられる',
         accordion: {
           aboutLabel: '私について',
-          whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?',
+          whatIsLabel: 'Rolê Paulistaとは？',
+          earnLabel: 'これでどれくらい稼げるの？',
           howToHelpLabel: '何か協力できますか？'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          'モバイルエンジニア歴10年（記憶が正しければ）',
+          'ドラム、ギター、ボーカルをやります。現実とズレながら、全部を完璧に間違えるタイプです',
+          '料理は「最高の塩味パネトーネ」を作れるくらいにはやります',
+          'お金に少し余裕ができたら、ひとり旅やバックパッカーで世界を巡ります',
+          'ポルトガル語（BR）、英語、スペイン語、ロシア語を話します（ロシア語はまだ勉強中... Привет мой друг）',
+          'オザスコ出身で、サンパウロが大好きです。文句もよく言いますが、最高の場所をおすすめする準備はいつでもできています :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'このアイデアは、街でおすすめのスポットを記録していたスプレッドシートから始まりました。',
+          '最初は自分用だけでしたが、時間とともに友人や知人に共有するようになり、だんだん大きなものになっていきました。',
+          'こうして Rolê Paulista が生まれました。私が実際に訪れた最高の都市体験に、アプリのような感覚でアクセスしやすくするためのサイトです。',
+          'サンパウロ在住の人でも、他州の人でも、海外から来る人でも、誰でも楽しめる体験です。'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          '答えはシンプルです。収益はゼロです。Rolê Paulista はサンパウロへの情熱と愛から生まれた個人プロジェクトです。将来的に広告や掲載で収益化する可能性はあるかもしれませんが、このサイトは訪問者にとっても掲載先にとっても、常に無料であるべきだと考えています。',
+          'この活動でお金は受け取りません。特に、場所を褒めるための報酬は受けません。実際に訪れて本当の体験を共有し、内容の誠実さと信頼性を保ちたいからです。',
+          'Instagram やこのサイトへの投稿に時間がかかることがあります。現在はインフラ、開発、マーケティング、デザイン、コンテンツ制作まで、全部ひとりで担当しているためです（笑）。更新が遅いときはごめんなさい :)'
         ],
         howToHelp: [
           'おすすめの場所があれば、Instagram かメールでお店の情報を送ってください。できる限り実際に行ってみて、このサイトを使う他の人の役に立てるようにします！',
@@ -1736,11 +1759,11 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Mobile developer for 8+ years, Android & iOS specialist. Passionate about tech, travel, food, and exploring every corner of São Paulo.'
+        bio: 'モバイル開発歴8年以上。AndroidとiOSのスペシャリスト。テクノロジー、旅行、食、そしてサンパウロの隅々を探検することが大好きです。'
       },
       travelItinerary: {
         title: 'ルート',
-        placeholder: 'ペーストロート、複数の近くの場所を探索できる徒歩ルートの提案です。',
+        placeholder: '交通費をかけずに複数の近場スポットを巡れる徒歩ルートを提案します。',
         routeOptionsTitle: 'ルートオプション：',
         createdForYouTitle: 'あなたのために作成したルート :)',
         listTitle: 'ルート',
@@ -1770,7 +1793,7 @@ const resources = {
         openInGoogleMaps: 'Google マップで開く'
       },
       tourType: {
-        ALL: '全部',
+        ALL: 'すべて',
         FREE: '無料',
         NIGHTLIFE: 'ナイトライフ',
         BARS: 'バー',
@@ -1782,7 +1805,7 @@ const resources = {
         FORFUN: 'エンタメ',
         OTHERS: 'その他'
       },
-      nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
+      nearbyMap: { title: '近くの地図', noneInRadius: '現在の半径内にポイントがありません。', pointsDisplayed: '{{count}} 件を表示中。', you: 'あなた' }
     }
   }
   ,
@@ -1912,7 +1935,7 @@ const resources = {
         anyPrice: 'Qualsiasi prezzo',
         button: 'Filtri'
       },
-      list: { nameHeader: 'NAZWA', neighborhoodHeader: 'QUARTIERE', variablePlace: 'Senza sede fissa', typeHeader: 'Tipo', orderNameAsc: 'NAZWA rosnąco A-Z', orderNeighborhoodAsc: 'QUARTIERE rosnąco A-Z' },
+      list: { nameHeader: 'NOME', neighborhoodHeader: 'QUARTIERE', variablePlace: 'Senza sede fissa', typeHeader: 'Tipo', orderNameAsc: 'NOME in ordine crescente A-Z', orderNeighborhoodAsc: 'QUARTIERE in ordine crescente A-Z' },
       footer: { home: 'Home', search: 'Cerca', about: 'Info' },
       searchPage: {
         title: 'Cerca un luogo',
@@ -1933,35 +1956,35 @@ const resources = {
         visitModalParagraph: 'Luogo ancora da visitare. Le informazioni qui provengono dai suggerimenti di chi è già andato e me lo ha consigliato.',
         visitedModalParagraph: 'Luogo visitato. Le informazioni provengono da ciò che ho raccolto durante la visita — cose che ho ordinato o provato — e dai dettagli forniti dai responsabili.',
         neverEmphasis: '',
-        openNow: 'Nu open',
+        openNow: 'Aperto ora',
         closedNow: 'Chiuso',
         locationDescription: 'Qui trovi le sedi di questo luogo e tutti gli indirizzi. Puoi tracciare il percorso come preferisci: con Google Maps o chiamando un Uber :)',
         websiteTitle: 'Sito del luogo',
         websiteSubtitle: 'Visita il sito di questo luogo e consulta le informazioni dettagliate',
-        websiteButton: 'Otwórz stronę',
+        websiteButton: 'Apri sito',
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Segui il profilo ufficiale:',
         follow: 'Segui',
-        phoneTitle: 'Telefon',
-        phonesSubtitle: 'Dit sono i contatti ufficiali di questo luogo',
+        phoneTitle: 'Telefono',
+        phonesSubtitle: 'Questi sono i contatti ufficiali di questo luogo',
         menuTitle: 'Menu',
         menuSubtitle: 'Guarda il menu del locale',
-        menuButton: 'Menüyü aç',
-        notesTitle: 'Notlar'
+        menuButton: 'Apri menu',
+        notesTitle: 'Note'
       },
       openingHours: { checkAvailabilityMessage: 'Gli orari variano in base alla disponibilità. Controlla il sito e la pagina Instagram del luogo per maggiori dettagli', alwaysOpenMessage: 'Questo luogo è aperto 24 ore su 24', alwaysOpenLabel: 'Sempre aperto', checkAvailabilityLabel: 'Verifica disponibilità' },
       whereIsToday: { title: 'Allora, dove si va oggi?', subtitle: 'Lista dei luoghi dove sono stato, per categoria. Dai un’occhiata ;)', opensToday: 'Aperti oggi' },
       placeType: {
         RESTAURANT: 'Ristoranti',
         BARS: 'Bar',
-        COFFEES: 'Koffiebars',
+        COFFEES: 'Caffetterie',
         NIGHTLIFE: 'Vita notturna',
-        NATURE: 'Naturaleza',
+        NATURE: 'Natura',
         TOURIST_SPOT: 'Turistici',
-        FORFUN: 'Plezier',
-        STORES: 'Winkels',
+        FORFUN: 'Divertimento',
+        STORES: 'Negozi',
         FREE: 'Gratis',
-        PLEASURE: 'Plezierhuis'
+        PLEASURE: 'Casa del piacere'
       },
       placeList: {
         environmentTitle: 'Tipo di ambiente:',
@@ -1984,38 +2007,38 @@ const resources = {
         photoAlt: 'Foto di Wallace Baldenebre',
         name: 'Wallace Baldenebre',
         aboutHeading: 'Su di me',
-        motto: 'Dajem jednomu człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        motto: 'Dai un pesce a un uomo e lo nutrirai per un giorno. Insegnagli a pescare e lo nutrirai per tutta la vita',
         accordion: {
           aboutLabel: 'Su di me',
-          whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?',
+          whatIsLabel: 'Czym jest Rolê Paulista?',
+          earnLabel: 'Ile na tym zarabiam?',
           howToHelpLabel: 'Posso contribuire in qualche modo?'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          'Mobile Engineer da 10 anni (se la memoria non mi tradisce)',
+          'Batteria, chitarra e voce, facendo tutto perfettamente male e fuori sincronia con la realtà',
+          'Cucino al livello di preparare un panettone salato incredibile',
+          'Viaggiatore solitario e backpacker quando c’è un po’ di soldi per esplorare il mondo',
+          'Parlo portoghese (BR), inglese, spagnolo e russo (quest’ultimo lo sto ancora studiando... Привет мой друг)',
+          'Di Osasco, amo São Paulo e la critico a ogni occasione, ma sempre pronto a consigliare il meglio :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'L’idea è iniziata con un foglio di calcolo dove annotavo i migliori posti della città.',
+          'All’inizio lo compilavo solo per me, ma con il tempo ho iniziato a condividerlo con amici e conoscenti finché è diventato qualcosa di più grande.',
+          'Così è nato Rolê Paulista: un sito con esperienza simile a un’app per facilitare l’accesso alle migliori esperienze della città che visito.',
+          'Che tu sia di São Paulo, di un altro stato o di un altro paese, l’esperienza è per tutti.'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          'La risposta è semplice: nulla. Rolê Paulista è un progetto personale fatto per passione e amore per São Paulo. Forse in futuro guadagnerò con pubblicazioni o AdSense, ma l’idea è che il sito resti SEMPRE gratuito.',
+          'Non accetterò denaro per questo, soprattutto per parlare bene di un posto; voglio mantenere i contenuti autentici e onesti, visitando i luoghi e condividendo l’esperienza reale che ho avuto.',
+          'Potrei impiegare un po’ di tempo ad aggiornare Instagram o il sito, perché al momento sono tutto il team: infrastruttura, sviluppo, marketing, design e contenuti.'
         ],
         howToHelp: [
           'Se vuoi consigliare un posto, mandami un messaggio su Instagram o via e‑mail con le informazioni del luogo — farò del mio meglio per visitarlo e aiutare altre persone che usano questo sito!',
           'Se vuoi aiutare a mantenere vivo questo progetto, per rendere i tuoi giri a SP sempre più leggeri e pratici, basta puntare la fotocamera sul QR code qui sotto :)'
         ],
-        socialHeading: 'Sociale netwerken',
-        socialDescription: 'Vind me op de sociale netwerken hieronder :)',
+        socialHeading: 'Reti sociali',
+        socialDescription: 'Puoi trovarmi sui social qui sotto :)',
         social: {
           wallace: 'Wallace Baldenebre',
           role: 'Role Paulista',
@@ -2023,31 +2046,31 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android & iOS. Gepassioneerd over technologie, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+        bio: 'Sviluppatore mobile da oltre 8 anni, specialista Android e iOS. Appassionato di tecnologia, viaggi, cibo ed esplorazione di ogni angolo di São Paulo.'
       },
       travelItinerary: {
-        title: 'Routes',
-        placeholder: 'Suggested walking routes so you can visit several nearby places without spending on transport.',
-        routeOptionsTitle: 'Route options:',
+        title: 'Percorsi',
+        placeholder: 'Percorsi a piedi suggeriti per visitare più luoghi vicini senza spendere in trasporti.',
+        routeOptionsTitle: 'Opzioni di percorso:',
         createdForYouTitle: 'Itinerari creati per te :)',
-        listTitle: 'Routes',
-        viewRoute: 'View route',
+        listTitle: 'Percorsi',
+        viewRoute: 'Vedi percorso',
         modes: {
-          walking: 'Walking Tour',
-          city: 'City Tour'
+          walking: 'Tour a piedi',
+          city: 'Tour in città'
         },
         routeOptions: {
-          free: 'Free',
-          nightlife: 'Nightlife',
+          free: 'Gratis',
+          nightlife: 'Vita notturna',
           bars: 'Bars',
-          food: 'Food',
-          history: 'History',
-          museums: 'Museums',
+          food: 'Gastronomia',
+          history: 'Storia',
+          museums: 'Musei',
           nature: 'Natura',
           forfun: 'Divertimento',
-          more: 'More Options'
+          more: 'Più opzioni'
         },
-        placesCount: '{{count}} places',
+        placesCount: '{{count}} luoghi',
         tipTitle: 'Consiglio importante',
         tipDescription: 'Quando cammini per strada, stai attento con il telefono: evita di usarlo troppo e non chiedere aiuto agli sconosciuti. Hai notato qualcosa di strano? Entra in un luogo affollato e chiama il 190. A SP, la regola base è: massima attenzione a ciò che ti circonda e niente distrazioni',
         loadingPoints: 'Caricamento dei punti...',
@@ -2057,19 +2080,19 @@ const resources = {
         openInGoogleMaps: 'Apri in Google Maps'
       },
       tourType: {
-        ALL: 'Tout',
-        FREE: 'Gratuit',
-        NIGHTLIFE: 'Vie nocturne',
+        ALL: 'Tutto',
+        FREE: 'Gratis',
+        NIGHTLIFE: 'Vita notturna',
         BARS: 'Bars',
-        GASTRONOMIC: 'Gastronomique',
-        HISTORY: 'Histoire',
-        MUSEUMS: 'Musées',
-        ARTISTIC: 'Artistique',
+        GASTRONOMIC: 'Gastronomico',
+        HISTORY: 'Storia',
+        MUSEUMS: 'Musei',
+        ARTISTIC: 'Artistico',
         NATURE: 'Natura',
         FORFUN: 'Divertimento',
-        OTHERS: 'Autres'
+        OTHERS: 'Altri'
       },
-      nearbyMap: { title: 'Mapa vicino', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punti mostrati.', you: 'Tu' }
+      nearbyMap: { title: 'Mappa vicina', noneInRadius: 'Nessun punto nel raggio attuale.', pointsDisplayed: '{{count}} punto(i) mostrati.', you: 'Tu' }
     }
   },
   nl: {
@@ -2100,7 +2123,7 @@ const resources = {
         changeDistance: 'Afstand vergroten',
         all: 'Alles',
         filter: 'Filter:',
-        close: 'Kapat',
+        close: 'Sluiten',
         loading: 'Laden…',
         loadError: 'Fout bij het laden van gegevens.',
         noPlaces: 'Geen plaatsen gevonden.',
@@ -2116,7 +2139,7 @@ const resources = {
         anyHourLabel: 'Elke tijd',
         anyHour: 'Elke tijd',
         scheduleTitle: 'Reservatie',
-        scheduleRequired: 'Reservatie gerekte',
+        scheduleRequired: 'Reservatie vereist',
         scheduleNotRequired: 'Geen reservering nodig',
         anySchedule: 'Elke',
         cityTitle: 'Stad',
@@ -2125,13 +2148,13 @@ const resources = {
         anyPrice: 'Elke prijs',
         button: 'Filters'
       },
-      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', variablePlace: 'Zonder vaste locatie', typeHeader: 'Type', orderNameAsc: 'NAAM artan sırada A-Z', orderNeighborhoodAsc: 'BUURT artan sırada A-Z' },
-      footer: { home: 'Anasayfa', search: 'Zoeken', about: 'Hakkında' },
+      list: { nameHeader: 'NAAM', neighborhoodHeader: 'BUURT', variablePlace: 'Zonder vaste locatie', typeHeader: 'Type', orderNameAsc: 'NAAM in oplopende volgorde A-Z', orderNeighborhoodAsc: 'BUURT in oplopende volgorde A-Z' },
+      footer: { home: 'Thuis', search: 'Zoeken', about: 'Over' },
       searchPage: {
         title: 'Zoek een plek',
         subtitle: 'Herinner je de naam van de plek nog? Typ de naam hieronder, dat is sneller',
         fieldLabel: 'Naam van de plek:',
-        resultsTitle: 'Znalezen wyniki',
+        resultsTitle: 'Gevonden resultaten',
         placeholder: 'Bijv.: Bakkerij Pao Legal'
       },
       placeDetail: {
@@ -2143,7 +2166,7 @@ const resources = {
         notVisited: '⚠️ Ik ben er nog niet geweest',
         viewHours: 'bekijk tijden',
         visitModalTitle: 'Over deze locatie',
-        visitModalParagraph: 'Locatie wacht op bezoek. De informatie op deze pagina komt van suggestions d\'autres personnes qui s\'y sont rendues et me l\'ont recommandé.',
+        visitModalParagraph: 'Locatie wacht op bezoek. De informatie op deze pagina komt van suggesties van andere mensen die er al zijn geweest en het mij hebben aangeraden.',
         visitedModalParagraph: 'Bezocht plaats. De informatie op deze pagina komt uit wat ik verzamelde tijdens mijn bezoek — elementen die ik bestelde of meemaakte — en informatie verstrekt door de verantwoordelijken van de locatie.',
         neverEmphasis: '',
         openNow: 'Nu open',
@@ -2151,18 +2174,18 @@ const resources = {
         locationDescription: 'Hier vind je de vestigingen van deze plek en alle adressen. Je kunt de route nog steeds plannen zoals jij wilt: met Google Maps of door een Uber te bestellen :)',
         websiteTitle: 'Website',
         websiteSubtitle: 'Bezoek de website van deze plek en bekijk de gedetailleerde informatie',
-        websiteButton: 'Otwórz stronę',
+        websiteButton: 'Website openen',
         instagramTitle: 'Instagram',
-        instagramSubtitle: 'Mekanının resmi profilini takip edin:',
-        follow: 'Takip et',
-        phoneTitle: 'Telefon',
+        instagramSubtitle: 'Volg het officiele profiel:',
+        follow: 'Volgen',
+        phoneTitle: 'Telefoon',
         phonesSubtitle: 'Dit zijn de officiële contactgegevens van deze plek',
         menuTitle: 'Menu',
-        menuSubtitle: 'Mekan menüsünü görüntüle',
-        menuButton: 'Menüyü aç',
-        notesTitle: 'Notlar'
+        menuSubtitle: 'Bekijk het menu van de locatie',
+        menuButton: 'Menu openen',
+        notesTitle: 'Notities'
       },
-      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', alwaysOpenLabel: 'Altijd open', checkAvailabilityLabel: 'Uygunluğu kontrol et' },
+      openingHours: { checkAvailabilityMessage: 'Openingstijden variëren afhankelijk van beschikbaarheid. Controleer de website en de Instagram-pagina van de locatie voor meer informatie', alwaysOpenMessage: 'Deze locatie is 24 uur per dag open', alwaysOpenLabel: 'Altijd open', checkAvailabilityLabel: 'Controleer beschikbaarheid' },
       whereIsToday: { title: 'Dus, waar is het vandaag?', subtitle: 'Lijst met plekken waar ik ben geweest, per categorie. Kijk maar ;)', opensToday: 'Vandaag geopend' },
       placeType: {
         RESTAURANT: 'Restaurants',
@@ -2190,46 +2213,46 @@ const resources = {
         subtitleTemplate: 'Ontdek {{article}} {{noun}} van jouw type, dicht bij jou :)'
       },
       about: {
-        title: 'Ben kimim?',
-        paragraph: 'Hakkında sayfası yer tutucu. Tam düzen daha sonra eklenecek.'
+        title: 'Wie ben ik?',
+        paragraph: 'Tijdelijke tekst voor de Over-pagina. De volledige lay-out komt later.'
       },
       aboutMe: {
-        authorTag: 'Role Paulista Oluşturucusu',
-        photoAlt: 'Wallace Baldenebre fotoğrafı',
+        authorTag: 'Maker van Role Paulista',
+        photoAlt: 'Foto van Wallace Baldenebre',
         name: 'Wallace Baldenebre',
-        aboutHeading: 'Hakkımda',
-        motto: 'Dajem jednomu człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        aboutHeading: 'Over mij',
+        motto: 'Geef een man een vis en je voedt hem voor een dag. Leer hem vissen en je voedt hem voor het leven',
         accordion: {
-          aboutLabel: 'Hakkımda',
-          whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?',
-          howToHelpLabel: 'Bir şekilde katkıda bulunabilir miyim?'
+          aboutLabel: 'Over mij',
+          whatIsLabel: 'Wat is Rolê Paulista?',
+          earnLabel: 'Hoeveel verdien ik hiermee?',
+          howToHelpLabel: 'Kan ik op een of andere manier helpen?'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          'Mobile Engineer al 10 jaar (als mijn geheugen me niet in de steek laat)',
+          'Drums, gitaar en zang, alles perfect verkeerd en uit sync met de realiteit',
+          'Ik kook op het niveau van een geweldige hartige panettone',
+          'Solo reiziger en backpacker wanneer er wat extra geld is om de wereld te ontdekken',
+          'Ik spreek Portugees (BR), Engels, Spaans en Russisch (die laatste studeer ik nog... Привет мой друг)',
+          'Ik kom uit Osasco, hou van Sao Paulo, en klaag ook over de stad bij elke kans, maar altijd klaar om het beste aan te bevelen :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'Het idee begon als een spreadsheet waarin ik de beste plekken van de stad bijhield.',
+          'In het begin vulde ik het alleen voor mezelf in, maar na verloop van tijd begon ik het met vrienden en kennissen te delen tot het iets groters werd.',
+          'Zo is Rolê Paulista ontstaan: een website met app-achtige ervaring om toegang te geven tot de beste stadsbelevingen die ik bezoek.',
+          'Of je nu uit Sao Paulo komt, uit een andere staat of uit een ander land, de ervaring is voor iedereen.'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          'Het antwoord is simpel: niets. Rolê Paulista is een persoonlijk project uit passie en liefde voor Sao Paulo. Misschien verdien ik er in de toekomst iets aan met publicaties of AdSense, maar het idee is dat de site ALTIJD gratis blijft.',
+          'Ik accepteer hier geen geld voor, vooral niet om goed te praten over een plek. Ik wil de inhoud authentiek en eerlijk houden door zelf te bezoeken en de echte ervaring te delen.',
+          'Het kan even duren voordat ik updates plaats op Instagram of op de site, want op dit moment ben ik het hele team: infrastructuur, ontwikkeling, marketing, design en inhoud.'
         ],
         howToHelp: [
           'Bir yer önermek istersen, Instagram’dan ya da e‑posta ile bana mekanın bilgilerini gönder — mümkün olduğunca gidip deneyimleyerek bu siteyi kullanan diğer insanlara yardımcı olacağım!',
           'Bu projenin devamlılığına katkıda bulunup SP’deki gezilerini daha hafif ve pratik hale getirmek istersen, kameranı aşağıdaki QR koda tutman yeterli :)'
         ],
-        socialHeading: 'Sociale netwerki',
-        socialDescription: 'Znajdziesz mnie w sieciach społecznych poniżej :)',
+        socialHeading: 'Sociale netwerken',
+        socialDescription: 'Je vindt me op de sociale netwerken hieronder :)',
         social: {
           wallace: 'Wallace Baldenebre',
           role: 'Role Paulista',
@@ -2237,31 +2260,31 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Programista mobile z ponad 8-letnim doświadczeniem, specjalista Android i iOS. Pasjonat technologii, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+        bio: 'Mobiele ontwikkelaar met meer dan 8 jaar ervaring, specialist in Android en iOS. Gepassioneerd door technologie, reizen, eten en het verkennen van elke hoek van Sao Paulo.'
       },
       travelItinerary: {
-        title: 'Trasy',
-        placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
-        routeOptionsTitle: 'Opcje trasy:',
+        title: 'Routes',
+        placeholder: 'Voorgestelde wandelroutes zodat je meerdere plekken in de buurt kunt bezoeken zonder transportkosten.',
+        routeOptionsTitle: 'Route-opties:',
         createdForYouTitle: 'Routes speciaal voor jou :)',
-        listTitle: 'Trasy',
-        viewRoute: 'Zobacz trasę',
+        listTitle: 'Routes',
+        viewRoute: 'Bekijk route',
         modes: {
-          walking: 'Spacer',
-          city: 'Wycieczka po mieście'
+          walking: 'Wandeltour',
+          city: 'Stadstour'
         },
         routeOptions: {
-          free: 'Za darmo',
-          nightlife: 'Życie nocne',
-          bars: 'Bar',
-          food: 'Gastronomia',
-          history: 'Storia',
+          free: 'Gratis',
+          nightlife: 'Nachtleven',
+          bars: 'Bars',
+          food: 'Gastronomie',
+          history: 'Geschiedenis',
           museums: 'Musea',
           nature: 'Natuur',
           forfun: 'Plezier',
-          more: 'Więcej opcji'
+          more: 'Meer opties'
         },
-        placesCount: '{{count}} miejsc',
+        placesCount: '{{count}} plekken',
         tipTitle: 'Belangrijke tip',
         tipDescription: 'Als je op straat loopt, wees alert met je telefoon: gebruik hem zo min mogelijk en vraag geen hulp aan vreemden. Zie je iets verdachts? Ga een drukke plek binnen en bel 190. In SP is de basis: volledige aandacht voor je omgeving en niet verslappen',
         loadingPoints: 'Punten worden geladen...',
@@ -2271,19 +2294,19 @@ const resources = {
         openInGoogleMaps: 'Openen in Google Maps'
       },
       tourType: {
-        ALL: 'Wszystko',
-        FREE: 'Darmowe',
-        NIGHTLIFE: 'Życie nocne',
-        BARS: 'Bar',
-        GASTRONOMIC: 'Gastronomik',
-        HISTORY: 'Storia',
+        ALL: 'Alles',
+        FREE: 'Gratis',
+        NIGHTLIFE: 'Nachtleven',
+        BARS: 'Bars',
+        GASTRONOMIC: 'Gastronomisch',
+        HISTORY: 'Geschiedenis',
         MUSEUMS: 'Musea',
-        ARTISTIC: 'Artystyczne',
+        ARTISTIC: 'Artistiek',
         NATURE: 'Natuur',
         FORFUN: 'Plezier',
-        OTHERS: 'Inne'
+        OTHERS: 'Andere'
       },
-      nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
+      nearbyMap: { title: 'Kaart in de buurt', noneInRadius: 'Geen punten binnen de huidige straal.', pointsDisplayed: '{{count}} punt(en) getoond.', you: 'Jij' }
     }
   }
   ,
@@ -2300,10 +2323,10 @@ const resources = {
         neighborhoodsTagline: 'Bu mahallelerden birindeyseniz? Yakında güzel yerler var!',
         viewMoreNeighborhoods: 'daha fazla mahalle göster',
         viewMore: 'Daha fazla seçenek',
-        noNearbyResultsRadius: 'W pobliżu nie ma nic...\n\nMoże zmienimy odległość, aby\nwyświetlić pobliskie miejsca?',
+        noNearbyResultsRadius: 'Yakında hicbir yer yok...\n\nYakin yerleri listelemek icin mesafeyi degistirelim mi?',
         locationNotSupported: 'Tarayıcı bu konum belirleme özelliğini desteklemiyor.',
         locationDeniedInstructions: '',
-        outsideGreaterSP: 'Znajdujesz się poza regionem Wielkiego São Paulo. Może odwiedzisz miasto wkrótce? :)',
+        outsideGreaterSP: 'Buyuk Sao Paulo bolgesinin disindasin. Sehri yakinda ziyaret etmeye ne dersin? :)',
         viewPlace: 'mekanı gör',
         viewPlaces: 'mekanları gör'
       },
@@ -2322,7 +2345,7 @@ const resources = {
         anyHour: 'Herhangi bir saat',
         scheduleTitle: 'Rezervasyon',
         scheduleRequired: 'Rezervasyon gerekli',
-        scheduleNotRequired: 'Geen reservering nodig',
+        scheduleNotRequired: 'Rezervasyon gerekmez',
         anySchedule: 'Herhangi',
         cityTitle: 'Şehir',
         anyCity: 'Herhangi bir şehir',
@@ -2335,8 +2358,8 @@ const resources = {
       searchPage: {
         title: 'Bir yer ara',
         subtitle: 'Mekânın adını aklında tutuyor musun? Aşağıya adını yazmak daha hızlı',
-        fieldLabel: 'Nazım yer:',
-        resultsTitle: 'Znalezen wyniki',
+        fieldLabel: 'Mekan adi:',
+        resultsTitle: 'Bulunan sonuclar',
         placeholder: 'Örn.: Pao Legal Fırını'
       },
       placeDetail: {
@@ -2356,7 +2379,7 @@ const resources = {
         locationDescription: 'Burada bu mekânın tüm şubelerini ve adreslerini bulabilirsiniz. Ayrıca rotayı istediğiniz gibi çizebilirsiniz: Google Maps ile gidebilir ya da Uber çağırabilirsiniz :)',
         websiteTitle: 'Mekan web sitesi',
         websiteSubtitle: 'Bu mekânın web sitesini ziyaret edin ve detaylı bilgileri kontrol edin',
-        websiteButton: 'Otwórz stronę',
+        websiteButton: 'Siteyi ac',
         instagramTitle: 'Instagram',
         instagramSubtitle: 'Mekanının resmi profilini takip edin:',
         follow: 'Takip et',
@@ -2398,38 +2421,38 @@ const resources = {
         photoAlt: 'Wallace Baldenebre fotoğrafı',
         name: 'Wallace Baldenebre',
         aboutHeading: 'Hakkımda',
-        motto: 'Dajem jednomu człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
+        motto: 'Bir adama balik ver, onu bir gun doyurursun. Balik tutmayi ogret, onu bir omur doyurursun',
         accordion: {
           aboutLabel: 'Hakkımda',
-          whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?',
+          whatIsLabel: 'Role Paulista nedir?',
+          earnLabel: 'Bundan ne kadar kazaniyorum?',
           howToHelpLabel: 'Bir şekilde katkıda bulunabilir miyim?'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          '10 yildir Mobile Engineerim (hafizam beni yari yolda birakmazsa)',
+          'Davul, gitar ve vokal; her seyi gerceklige tamamen ters ve uyumsuz sekilde yapmakta ustayim',
+          'Harika bir tuzlu panettone yapabilecek seviyede yemek yaparim',
+          'Dunyayi kesfetmek icin biraz para oldugunda solo gezgin ve backpackerim',
+          'Portekizce (BR), Ingilizce, Ispanyolca ve Rusca konusuyorum (rusca hala ogreniyorum... Привет мой друг)',
+          'Osasco’luyum, Sao Paulo’yu seviyorum ve firsat buldukca sehirden sikayet de ediyorum; ama en iyileri onermeye her zaman hazirim :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'Fikir, sehirdeki en iyi mekanlari tuttugum bir tabloyla basladi.',
+          'Baslarda sadece kendim icin dolduruyordum; zamanla arkadaslarimla ve tanidiklarla paylasmaya basladim ve bu daha buyuk bir seye donustu.',
+          'Role Paulista boyle dogdu: ziyaret ettigim en iyi sehir deneyimlerine daha kolay ulasilmasi icin app benzeri deneyim sunan bir web sitesi.',
+          'Ister Sao Paulo’dan ol, ister baska bir eyalet ya da ulkeden; bu deneyim herkes icin.'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          'Cevap basit: hicbir sey. Role Paulista, Sao Paulo’ya olan tutku ve sevgiden dogmus kisisel bir proje. Belki gelecekte yayinlardan veya AdSense\'ten gelir olur; ama fikir, sitenin HER ZAMAN ucretsiz kalmasi.',
+          'Bunun icin para kabul etmeyecegim, ozellikle de bir mekanı iyi gostermek icin. Icerigin dogal ve durust kalmasini istiyorum.',
+          'Instagram\'da veya sitede paylasimlar bazen gecikebilir; cunku su an altyapi, gelistirme, pazarlama, tasarim ve icerik dahil her seyi tek basima yurutuyorum.'
         ],
         howToHelp: [
           'Bir yer önermek istersen, Instagram’dan ya da e‑posta ile bana mekanın bilgilerini gönder — mümkün olduğunca gidip deneyimleyerek bu siteyi kullanan diğer insanlara yardımcı olacağım!',
           'Bu projenin devamlılığına katkıda bulunup SP’deki gezilerini daha hafif ve pratik hale getirmek istersen, kameranı aşağıdaki QR koda tutman yeterli :)'
         ],
-        socialHeading: 'Sociale netwerki',
-        socialDescription: 'Znajdziesz mnie w sieciach społecznych poniżej :)',
+        socialHeading: 'Sosyal aglar',
+        socialDescription: 'Beni asagidaki sosyal aglarda bulabilirsin :)',
         social: {
           wallace: 'Wallace Baldenebre',
           role: 'Role Paulista',
@@ -2437,31 +2460,31 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Programista mobile z ponad 8-letnim doświadczeniem, specjalista Android i iOS. Pasjonat technologii, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+        bio: '8+ yil deneyimli mobile gelistirici, Android ve iOS uzmani. Teknoloji, seyahat, yemek ve Sao Paulo\'nun her kosesini kesfetmeye tutkun.'
       },
       travelItinerary: {
-        title: 'Trasy',
-        placeholder: 'Sugerowane trasy piesze, abyś mógł poznać kilka pobliskich miejsc bez wydawania na transport.',
-        routeOptionsTitle: 'Opcje trasy:',
+        title: 'Rotalar',
+        placeholder: 'Ulasima para harcamadan birden fazla yakin noktayi gezebilmen icin onerilen yuruyus rotalari.',
+        routeOptionsTitle: 'Rota secenekleri:',
         createdForYouTitle: 'Senin için oluşturulan rotalar :)',
-        listTitle: 'Trasy',
-        viewRoute: 'Zobacz trasę',
+        listTitle: 'Rotalar',
+        viewRoute: 'Rotayi gor',
         modes: {
-          walking: 'Spacer',
-          city: 'Wycieczka po mieście'
+          walking: 'Yuruyus turu',
+          city: 'Sehir turu'
         },
         routeOptions: {
-          free: 'Za darmo',
-          nightlife: 'Życie nocne',
-          bars: 'Bar',
-          food: 'Food',
-          history: 'History',
-          museums: 'Musea',
+          free: 'Ucretsiz',
+          nightlife: 'Gece hayati',
+          bars: 'Barlar',
+          food: 'Yemek',
+          history: 'Tarih',
+          museums: 'Muzeler',
           nature: 'Doğa',
           forfun: 'Eğlence',
-          more: 'Więcej opcji'
+          more: 'Daha fazla secenek'
         },
-        placesCount: '{{count}} miejsc',
+        placesCount: '{{count}} yer',
         tipTitle: 'Önemli ipucu',
         tipDescription: 'Sokakta yürürken telefonuna karşı dikkatli ol: mümkün olduğunca az kullan ve yabancılardan yardım isteme. Garip bir şey fark ettin mi? Kalabalık bir yere gir ve 190’u ara. SP’de temel kural: çevrene tamamen dikkat et ve asla gevşeme',
         loadingPoints: 'Noktalar yükleniyor...',
@@ -2471,19 +2494,19 @@ const resources = {
         openInGoogleMaps: 'Google Haritalar’da aç'
       },
       tourType: {
-        ALL: 'Wszystko',
-        FREE: 'Darmowe',
-        NIGHTLIFE: 'Życie nocne',
-        BARS: 'Bar',
+        ALL: 'Hepsi',
+        FREE: 'Ucretsiz',
+        NIGHTLIFE: 'Gece hayati',
+        BARS: 'Barlar',
         GASTRONOMIC: 'Gastronomik',
-        HISTORY: 'Storia',
-        MUSEUMS: 'Musea',
-        ARTISTIC: 'Artystyczne',
+        HISTORY: 'Tarih',
+        MUSEUMS: 'Muzeler',
+        ARTISTIC: 'Sanatsal',
         NATURE: 'Doğa',
         FORFUN: 'Eğlence',
-        OTHERS: 'Inne'
+        OTHERS: 'Diger'
       },
-      nearbyMap: { title: 'Mapa w pobliżu', noneInRadius: 'Brak punktów w obecnym promieniu.', pointsDisplayed: '{{count}} punkt(y) wyświetlono.', you: 'Ty' }
+      nearbyMap: { title: 'Yakin harita', noneInRadius: 'Mevcut yaricapta nokta yok.', pointsDisplayed: '{{count}} nokta gosterildi.', you: 'Sen' }
     }
   },
   pl: {
@@ -2600,34 +2623,34 @@ const resources = {
         motto: 'Daj człowiekowi rybę, a nakarmisz go na jeden dzień. Naucz go łowić, a nakarmisz go na całe życie',
         accordion: {
           aboutLabel: 'O mnie',
-          whatIsLabel: 'Cos’è Rolê Paulista?',
-          earnLabel: 'Quanto guadagno con questo?',
+          whatIsLabel: 'Czym jest Rolê Paulista?',
+          earnLabel: 'Ile na tym zarabiam?',
           howToHelpLabel: 'Czy mogę w jakiś sposób pomóc?'
         },
         aboutList: [
-          'Mobile Engineer for 10 years (if my memory still serves me right)',
-          'Drums, guitar and vocals, doing everything perfectly wrong and out of sync with reality',
-          'I cook to the level of making an amazing savory panettone',
-          'Solo traveler and backpacker whenever there is some extra money to explore the world',
-          'I speak Portuguese (BR), English, Spanish and Russian (still studying this one... Привет мой друг)',
-          'From Osasco, I love São Paulo, and I also complain about the city at every chance, but always ready to recommend the best :)'
+          'Mobile Engineer od 10 lat (o ile pamięć mnie nie zawodzi)',
+          'Perkusja, gitara i wokal - robię wszystko perfekcyjnie źle i totalnie poza rytmem rzeczywistości',
+          'Gotuję na poziomie, na którym potrafię zrobić genialny wytrawny panettone',
+          'Podróżuję solo i z plecakiem zawsze, gdy tylko pojawi się trochę dodatkowych pieniędzy na odkrywanie świata',
+          'Mówię po portugalsku (BR), angielsku, hiszpańsku i rosyjsku (ten ostatni nadal ćwiczę... Привет мой друг)',
+          'Pochodzę z Osasco, kocham São Paulo i jednocześnie narzekam na to miasto przy każdej okazji - ale zawsze jestem gotów polecić to, co najlepsze :)'
         ],
         whatIs: [
-          'The idea started as a spreadsheet where I kept track of the best hangouts in the city.',
-          'At first I filled it out only for myself, but over time I started sharing it with friends and acquaintances until it became something bigger.',
-          'That is how Rolê Paulista was born: a website with an app-like experience to make it easier to access the best city experiences I visit.',
-          'Whether you are from São Paulo, another state, or another country, the experience is for everyone.'
+          'Pomysł zaczął się od arkusza, w którym zapisywałem najlepsze miejscówki w mieście.',
+          'Na początku prowadziłem go tylko dla siebie, ale z czasem zacząłem udostępniać go znajomym i przyjaciołom, aż przerodził się w coś większego.',
+          'Tak powstał Rolê Paulista: strona z doświadczeniem podobnym do aplikacji, która ułatwia dostęp do najlepszych miejskich doświadczeń, jakie odwiedzam.',
+          'Nieważne, czy jesteś z São Paulo, z innego stanu czy z innego kraju - to doświadczenie jest dla wszystkich.'
         ],
         earn: [
-          'The answer is simple: nothing. Rolê Paulista is a personal project made out of passion and love for São Paulo. Maybe in the future I will earn from publishing or AdSense? Maybe, but the idea is that the site should ALWAYS remain free, both for visitors and for the place posts I publish.',
-          'I will not accept money for this, especially to speak well about a place; I want to keep the content authentic and honest by visiting places and sharing the real experience I had.',
-          'It may take me some time to post on Instagram or here on the site because I am currently the whole team: infrastructure, development, marketing, design, and content, all at once haha, so sorry if updates take a while :)'
+          'Odpowiedź jest prosta: nic. Rolê Paulista to projekt osobisty stworzony z pasji i miłości do São Paulo. Czy w przyszłości mogę zarabiać na publikacjach lub AdSense? Być może, ale idea jest taka, by strona ZAWSZE pozostała darmowa - zarówno dla odwiedzających, jak i dla publikowanych przeze mnie miejsc.',
+          'Nie będę przyjmować za to pieniędzy, zwłaszcza za mówienie dobrze o danym miejscu; chcę zachować autentyczność i uczciwość treści, odwiedzając miejsca i dzieląc się prawdziwym doświadczeniem.',
+          'Publikacje na Instagramie lub tutaj na stronie mogą czasem zająć trochę czasu, bo obecnie jestem całym zespołem naraz: infrastruktura, development, marketing, design i content, haha, więc wybacz, jeśli aktualizacje pojawiają się wolniej :)'
         ],
         howToHelp: [
           'Jeśli chcesz polecić jakieś miejsce, wyślij mi wiadomość na Instagramie lub e‑mail z informacjami o lokalu — postaram się je odwiedzić i w ten sposób pomóc innym, którzy korzystają z tej strony!',
           'Jeśli chcesz wesprzeć kontynuację tego projektu, aby Twoje wypady w SP były coraz łatwiejsze i wygodniejsze, wystarczy skierować aparat na kod QR poniżej :)'
         ],
-        socialHeading: 'Sociale netwerki',
+        socialHeading: 'Media społecznościowe',
         socialDescription: 'Znajdziesz mnie w sieciach społecznych poniżej :)',
         social: {
           wallace: 'Wallace Baldenebre',
@@ -2636,7 +2659,7 @@ const resources = {
           email: 'E-mail'
         },
         roleName: 'Role Paulista',
-        bio: 'Programista mobile z ponad 8-letnim doświadczeniem, specjalista Android i iOS. Pasjonat technologii, reizen, restaurants en het verkennen van elk hoekje van São Paulo.'
+        bio: 'Programista mobile z ponad 8-letnim doświadczeniem, specjalista Android i iOS. Pasjonat technologii, podróży, jedzenia i odkrywania każdego zakątka São Paulo.'
       },
       travelItinerary: {
         title: 'Trasy',
@@ -2653,9 +2676,9 @@ const resources = {
           free: 'Za darmo',
           nightlife: 'Życie nocne',
           bars: 'Bar',
-          food: 'Food',
-          history: 'History',
-          museums: 'Musea',
+          food: 'Gastronomia',
+          history: 'Historia',
+          museums: 'Muzea',
           nature: 'Natura',
           forfun: 'Rozrywka',
           more: 'Więcej opcji'
@@ -2675,8 +2698,8 @@ const resources = {
         NIGHTLIFE: 'Życie nocne',
         BARS: 'Bar',
         GASTRONOMIC: 'Gastronomik',
-        HISTORY: 'Storia',
-        MUSEUMS: 'Musea',
+        HISTORY: 'Historia',
+        MUSEUMS: 'Muzea',
         ARTISTIC: 'Artystyczne',
         NATURE: 'Natura',
         FORFUN: 'Rozrywka',
@@ -2687,7 +2710,9 @@ const resources = {
   }
 };
 
-const mergedResources = mergeResourceSets(resources, [placeTypeLabels, environmentLabels, environmentMoreLabels, routeOptionLabels, reportProblemLabels, homeNearMeLabels, priceRangeLabels, footerLabels, restaurantFiltersLabels, aboutMeDonationLabels]);
+const mergedResources = applyPtReferenceFallback(
+  mergeResourceSets(resources, [placeTypeLabels, environmentLabels, environmentMoreLabels, routeOptionLabels, reportProblemLabels, homeNearMeLabels, priceRangeLabels, footerLabels, restaurantFiltersLabels, aboutMeDonationLabels])
+);
 
 i18n
   .use(initReactI18next)
