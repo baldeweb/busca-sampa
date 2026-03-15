@@ -745,11 +745,12 @@
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/letzloungeclub/",
         "tags": [
-            "KARAOKE", "SNOOKER"
+            "KARAOKE", 
+            "SNOOKER",
+            "LIVE_MUSIC"
         ],
         "listTypes": [
             "BARS",
-            "LIVE_MUSIC",
             "NIGHTLIFE"
         ],
         "isEnabled": true
@@ -1820,9 +1821,11 @@
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "https://www.instagram.com/hocuspocussp/",
-        "tags": [],
+        "tags": [
+            "PET_FRIENDLY"
+        ],
         "listTypes": [
-            "BARS", "PET_FRIENDLY"
+            "BARS"
         ],
         "isEnabled": true
     },
