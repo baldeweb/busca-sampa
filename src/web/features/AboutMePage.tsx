@@ -1,6 +1,7 @@
 import imgMe from "@/assets/imgs/etc/img_me.webp";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import { SectionHeading } from '@/web/components/ui/SectionHeading';
 import { AppText } from '@/web/components/ui/AppText';
 import { useNavigate } from 'react-router-dom';
@@ -8,13 +9,26 @@ import Toolbar from "../components/layout/Toolbar";
 import { Accordion, AccordionItem } from '../components/ui/Accordion';
 import icQrCodeDonation from '../../assets/imgs/etc/img_qrcode_donation.jpeg';
 
+const PIX_COPY_AND_PASTE = '00020126330014BR.GOV.BCB.PIX0111473827368065204000053039865802BR5925Wallace Baldenebre da Sil6009SAO PAULO62140510PZJCaZ1oW2630450F4';
+
 export function AboutMePage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [pixCopied, setPixCopied] = useState(false);
   const aboutList = t('aboutMe.aboutList', { returnObjects: true }) as string[];
   const whatIsList = t('aboutMe.whatIs', { returnObjects: true }) as string[];
   const earnList = t('aboutMe.earn', { returnObjects: true }) as string[];
   const howToHelp = t('aboutMe.howToHelp', { returnObjects: true }) as string[];
+
+  const handleCopyPix = async () => {
+    try {
+      await navigator.clipboard.writeText(PIX_COPY_AND_PASTE);
+      setPixCopied(true);
+      window.setTimeout(() => setPixCopied(false), 3000);
+    } catch {
+      setPixCopied(false);
+    }
+  };
 
   return (
     <>
@@ -73,7 +87,20 @@ export function AboutMePage() {
             {howToHelp.map((item) => (
               <AppText variant="subtitle-light" key={item}>{item}</AppText>
             ))}
-            <img src={icQrCodeDonation} alt="QRCode para ajudar" width={160} height={160} decoding="async" className="w-40 h-40 mt-4 mx-auto" />
+            <img src={icQrCodeDonation} alt={t('aboutMe.donation.qrCodeAlt')} width={160} height={160} decoding="async" className="w-40 h-40 mt-4 mx-auto" />
+            <button
+              type="button"
+              onClick={handleCopyPix}
+              className="mt-3 mx-auto block rounded-md bg-bs-red px-4 py-2 text-white text-sm font-semibold hover:brightness-95 transition"
+              aria-label={t('aboutMe.donation.copyPixButton')}
+            >
+              {t('aboutMe.donation.copyPixButton')}
+            </button>
+            {pixCopied && (
+              <AppText variant="selected-light" className="mt-2 text-center">
+                {t('aboutMe.donation.pixCopied')}
+              </AppText>
+            )}
           </AccordionItem>
         </Accordion>
 
@@ -83,7 +110,7 @@ export function AboutMePage() {
             title={t('aboutMe.socialHeading')}
             subtitle={t('aboutMe.socialDescription')}
             underline={false}
-            className="mb-12"
+            className="mb-4"
             card={false}
             tone="dark"
           />
@@ -96,7 +123,7 @@ export function AboutMePage() {
                   href="https://www.instagram.com/balde_wb/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-2"
                 >
                   <FaInstagram aria-hidden="true" />
                   <AppText variant="subtitle-dark">{t('aboutMe.social.wallace')}</AppText>
@@ -105,7 +132,7 @@ export function AboutMePage() {
                   href="https://www.instagram.com/rolepaulistaoficial/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-2"
                 >
                   <FaInstagram aria-hidden="true" />
                   <AppText variant="subtitle-dark">{t('aboutMe.social.role')}</AppText>
@@ -117,14 +144,14 @@ export function AboutMePage() {
                   href="https://www.linkedin.com/in/wallace-baldenebre/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-2"
                 >
                   <FaLinkedin aria-hidden="true" />
                   <AppText variant="subtitle-dark">{t('aboutMe.social.linkedin')}</AppText>
                 </a>
                 <a
                   href="mailto:wallace.baldenebre@gmail.com?subject=Contato%20sobre%20o%20Rol%C3%AA%20Paulista"
-                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-4 pb-4"
+                  className="flex items-center gap-2 hover:text-[#D6D6D6] transition-colors pt-2"
                 >
                   <FaEnvelope aria-hidden="true" />
                   <AppText variant="subtitle-dark">{t('aboutMe.social.email')}</AppText>
