@@ -24,22 +24,41 @@ interface Props {
   customMessage?: string;
 }
 
-const dayLabels: Record<string, Record<string,string>> = {
-  MONDAY: { pt: "Segunda", en: "Monday" },
-  TUESDAY: { pt: "Terça", en: "Tuesday" },
-  WEDNESDAY: { pt: "Quarta", en: "Wednesday" },
-  THURSDAY: { pt: "Quinta", en: "Thursday" },
-  FRIDAY: { pt: "Sexta", en: "Friday" },
-  SATURDAY: { pt: "Sábado", en: "Saturday" },
-  SUNDAY: { pt: "Domingo", en: "Sunday" },
-  HOLIDAY: { pt: "Feriado", en: "Holiday" },
-  EVERYDAY: { pt: "Todos os dias", en: "Everyday" },
-  CHECK_AVAILABILITY_DAYTIME: { pt: "Consultar Instagram", en: "Check Instagram" }
+const fallbackDayLabels: Record<string, string> = {
+  MONDAY: "Monday",
+  TUESDAY: "Tuesday",
+  WEDNESDAY: "Wednesday",
+  THURSDAY: "Thursday",
+  FRIDAY: "Friday",
+  SATURDAY: "Saturday",
+  SUNDAY: "Sunday",
+};
+
+const dayToIsoDate: Record<string, string> = {
+  MONDAY: "2024-01-01",
+  TUESDAY: "2024-01-02",
+  WEDNESDAY: "2024-01-03",
+  THURSDAY: "2024-01-04",
+  FRIDAY: "2024-01-05",
+  SATURDAY: "2024-01-06",
+  SUNDAY: "2024-01-07",
 };
 
 export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, customMessage }) => {
   if (!isOpen) return null;
   const { t, i18n } = useTranslation();
+
+  const getDayLabel = (day: string) => {
+    const isoDate = dayToIsoDate[day];
+    if (!isoDate) return fallbackDayLabels[day] || day;
+    try {
+      const locale = i18n.resolvedLanguage || i18n.language || "en";
+      const formatter = new Intl.DateTimeFormat(locale, { weekday: "long" });
+      return formatter.format(new Date(`${isoDate}T12:00:00Z`));
+    } catch {
+      return fallbackDayLabels[day] || day;
+    }
+  };
 
   const now = new Date();
   const currentDay = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][now.getDay()];
@@ -77,7 +96,7 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
                   return (
                     <li key={day} className="mb-2">
                       <div className="flex items-center justify-between py-2">
-                        <span className={`font-bold uppercase w-24 ${isToday ? "text-green-500" : "text-white"}`}>{dayLabels[day][i18n.language as 'pt'|'en']}</span>
+                        <span className={`font-bold uppercase w-24 ${isToday ? "text-green-500" : "text-white"}`}>{getDayLabel(day)}</span>
                         <div className="flex flex-col items-end min-w-[120px]">
                           {periods.length === 0 ? (
                             <AppText variant="selected-dark" className="text-red-400">{t('openingHours.closed')}</AppText>

@@ -95,7 +95,7 @@ export const placeTypeLabels = {
         RESTAURANT: 'Restaurants',
         RESTAURANTS: 'Restaurants',
         BARS: 'Bars',
-        COFFEES: 'Cafés',
+        COFFEES: 'Coffees',
         NIGHTLIFE: 'Nightlife',
         NATURE: 'Nature',
         TOURIST_SPOT: 'Tourist',
