@@ -3,6 +3,7 @@ import type { PriceRange } from './PriceRange';
 
 const FALLBACK_MAP: Record<PriceRange, string> = {
   FREE: 'Gratuito',
+  AVAILABILITY: 'Varia conforme a compra',
   ECONOMIC: 'Economico (R$40 - R$60)',
   MODERATE: 'Moderado (R$60 - R$100)',
   ABOVEAVERAGE: 'Acima da Média (R$100 - R$150)',

@@ -20,7 +20,7 @@
         "notes": [
             "Local centenário"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "AVAILABILITY",
         "addresses": [
             {
                 "id": 1,
@@ -66,7 +66,7 @@
         "notes": [
             "Loja de produtos amazônicos"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "AVAILABILITY",
         "addresses": [
             {
                 "id": 1,
@@ -112,7 +112,7 @@
         "notes": [
             "Doceria e venda de produtos de origem Árabe"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "AVAILABILITY",
         "addresses": [
             {
                 "id": 1,
@@ -142,175 +142,178 @@
         "name": "Empório Belmiro",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": false
+                "number": "11944482151",
+                "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "EMPORIOBELMIRO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Cafeteria Mineira"
+            "Empório de produtos mineiros e também é uma cafeteria mineira"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "AVAILABILITY",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Girassol",
+                "number": "133",
                 "city": "São Paulo",
                 "neighborhood": "Vila Madalena",
-                "postalCode": "",
+                "postalCode": "05433-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.557396,
+                "longitude": -46.687820
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/emporiobelmiro/",
+        "tags": [
+            "PET_FRIENDLY", "BRAZILIAN"
+        ],
         "listTypes": [
             "STORES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 5,
         "name": "Empório Pata Negra",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": false
+                "number": "11989478212",
+                "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "EMPORIOPATANEGRA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
             "Empório Espanhol"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "AVAILABILITY",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Bom Pastor",
+                "number": "1644",
                 "city": "São Paulo",
                 "neighborhood": "Ipiranga",
-                "postalCode": "",
+                "postalCode": "04203-002",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.591056,
+                "longitude": -46.607021
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkWebsite": "https://www.emporiopatanegra.com.br/",
+        "linkInstagram": "https://www.instagram.com/epatanegra/",
         "tags": [],
         "listTypes": [
             "STORES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 6,
         "name": "Empório Sant Ângela",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": false
-            }
-        ],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Opções diversas de queijo"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Pompeia",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "STORES"
-        ],
-        "isEnabled": false
-    },    
-    {
-        "id": 7,
-        "name": "Padaria Basilicata",
-        "phones": [
-            {
-                "number": "",
+                "number": "11944477110",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "EMPORIOSANTANGELA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Localizado na Loja 12",
+            "Opções diversas de queijo"
+        ],
+        "priceRange": "AVAILABILITY",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Piracuama",
+                "number": "141",
+                "city": "São Paulo",
+                "neighborhood": "Pompeia",
+                "postalCode": "05017-040",
+                "isMainUnity": true,
+                "latitude": -23.539942,
+                "longitude": -46.680850
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.emporiosantangela.com/",
+        "linkInstagram": "https://www.instagram.com/emporiosanttangela/",
+        "tags": [],
+        "listTypes": [
+            "STORES"
+        ],
+        "isEnabled": true
+    },    
+    {
+        "id": 7,
+        "name": "Basilicata - Pão, Empório e Restaurante",
+        "phones": [
+            {
+                "number": "1132893111",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "PADARIABASILICATA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
             "Padaria centenária"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "AVAILABILITY",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Treze de Maio",
+                "number": "596",
                 "city": "São Paulo",
                 "neighborhood": "Bela Vista",
-                "postalCode": "",
+                "postalCode": "01327-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.558448,
+                "longitude": -46.646439
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
+        "linkMenu": "https://qrco.de/bbbUxp",
+        "linkWebsite": "http://www.basilicata.com.br/",
+        "linkInstagram": "https://www.instagram.com/basilicata_oficial/",
         "tags": [],
         "listTypes": [
             "STORES", "COFFEES"
         ],
-        "isEnabled": false
+        "isEnabled": true
     }
 ]

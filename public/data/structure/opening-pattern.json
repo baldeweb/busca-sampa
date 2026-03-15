@@ -1681,5 +1681,40 @@
     "periods": [
       { "days": ["EVERYDAY"], "open": "09:00", "close": "17:00" }
     ]
+  },
+  {
+    "id": "PADARIABASILICATA_DAYTIME",
+    "description": "Horários da Padaria Basilicata",
+    "periods": [
+      { "days": ["MONDAY"], "open": "08:00", "close": "20:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "08:00", "close": "22:30" },
+      { "days": ["SUNDAY"], "open": "08:00", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "EMPORIOSANTANGELA_DAYTIME",
+    "description": "Horários do Empório Sant Ângela",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "10:00", "close": "20:00" },
+      { "days": ["FRIDAY"], "open": "09:00", "close": "17:00" },
+      { "days": ["SATURDAY"], "open": "10:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "EMPORIOPATANEGRA_DAYTIME",
+    "description": "Horários do Empório Pata Negra",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["MONDAY", "TUESDAY"], "open": "17:00", "close": "22:00" },
+      { "days": ["WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "EMPORIOBELMIRO_DAYTIME",
+    "description": "Horários do Empório Belmiro",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "09:00", "close": "19:00" }
+    ]
   }
 ]
