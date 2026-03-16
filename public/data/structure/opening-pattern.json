@@ -1910,10 +1910,52 @@
     ]
   },
   {
+    "id": "MASTERCURRY_DAYTIME",
+    "description": "Horários do Master Curry",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "11:00", "close": "15:00" },
+      { "days": ["FRIDAY", "SATURDAY", "SUNDAY"], "open": "11:00", "close": "15:00" },
+      { "days": ["FRIDAY", "SATURDAY", "SUNDAY"], "open": "18:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "PARRILINHA_DAYTIME",
+    "description": "Horários do Parrilinha",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "18:00", "close": "22:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "19:00", "close": "22:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "16:00" }
+    ]
+  },
+  {
     "id": "ONBOARDBUS_DAYTIME",
     "description": "Horários do Onboard Bus",
     "periods": [
       { "days": ["MONDAY", "TUESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "22:00" }
     ]
   },
+  {
+    "id": "CARLINO_DAYTIME",
+    "description": "Horários do Carlino Ristorante",
+    "periods": [
+      { "days": ["TUESDAY", "THURSDAY", "FRIDAY"], "open": "11:30", "close": "15:30" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "11:30", "close": "16:00" }
+    ]
+  },
+  {
+    "id": "LIBERDADESIDESTREET_DAYTIME",
+    "description": "Horários do Liberdade Side Street",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "11:00", "close": "20:00" }
+    ]
+  },
+  {
+    "id": "OGAME_DAYTIME",
+    "description": "Horários do Ogamé",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "17:30", "close": "23:00" }
+    ]
+  }
 ]
