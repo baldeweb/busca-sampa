@@ -1322,7 +1322,7 @@
         "linkWebsite": "https://taplink.cc/grindhouse_braserito?fbclid=PAZXh0bgNhZW0CMTEAAac-0uTD8H5jJSoAu-uk2LimVYm454g5drKIOvNzuJJKb_Kqq8PVDJ0JB7LJ_Q_aem_z20kLUd9naK46yw159V3Lg",
         "linkInstagram": "https://www.instagram.com/grindhouse_braserito/",
         "tags": [
-            "ARGENTINE"
+            "ARGENTINE", "BARBECUE"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -3135,190 +3135,189 @@
     {
         "id": 66,
         "name": "Parrilinha Ipiranga",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PARRILINHA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Restaurante Argentino"
+            "Restaurante Argentino parrilha"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Costa Aguiar",
+                "number": "1734",
                 "city": "São Paulo",
                 "neighborhood": "Ipiranga",
-                "postalCode": "",
+                "postalCode": "04204-002",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.589329,
+                "longitude": -46.606159
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "RESTAURANTS"
+        "linkInstagram": "https://www.instagram.com/parrilinha/",
+        "tags": [
+            "ARGENTINE"
         ],
-        "isEnabled": false
+        "listTypes": [
+            "RESTAURANTS", "BARBECUE"
+        ],
+        "isEnabled": true
     },
     {
         "id": 67,
         "name": "Master Curry Japanese Kitchen",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1143054385",
+                "isWhatsApp": false
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MASTERCURRY_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Japones"
+            "Restaurante tradicional Japonês",
+            "Fechado às Segundas e também no último Domingo do mês"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Miguel Estefno",
+                "number": "279",
                 "city": "São Paulo",
                 "neighborhood": "Vila da Saúde",
-                "postalCode": "",
+                "postalCode": "04301-010",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.620462,
+                "longitude": -46.636887
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/mastercurryjk/",
+        "tags": [
+            "JAPANESE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 68,
         "name": "Ogamé Sao Paulo",
         "phones": [
             {
-                "number": "",
+                "number": "11976212230",
                 "isWhatsApp": true
             }
 ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "OGAME_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Churrasco Coreano"
+            "Churrasco Coreano autêntico e barato"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Lopes Trovão",
+                "number": "50",
                 "city": "São Paulo",
                 "neighborhood": "Bom Retiro",
-                "postalCode": "",
+                "postalCode": "01127-030",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.527271,
+                "longitude": -46.645098
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://www.instagram.com/ogamekoreanbarbecue/",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/ogamekoreanbarbecue/",
+        "tags": [
+            "KOREAN", "BARBECUE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 69,
         "name": "Liberdade Side Street",
-        "phones": [
-            {
-                "number": "",
-                "isWhatsApp": true
-            }
-],
+        "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "LIBERDADESIDESTREET_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Galeria de restaurantes"
+            "Galeria de restaurantes asiáticos na Liberdade, com opções de comida japonesa, chinesa, coreana, tailandesa e outras culinárias asiáticas."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Barão de Iguape",
+                "number": "158",
                 "city": "São Paulo",
                 "neighborhood": "Liberdade",
-                "postalCode": "",
+                "postalCode": "01506-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.558379,
+                "longitude": -46.635414
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "ASIAN", "THAI", "JAPANESE", "CHINESE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 70,
         "name": "Carlino Ristorante",
         "phones": [
             {
-                "number": "",
-                "isWhatsApp": true
+                "number": "1132585055",
+                "isWhatsApp": false
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CARLINO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3329,117 +3328,123 @@
         "notes": [
             "Mais antigo de SP, existe desde 1881"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Epitácio Pessoa",
+                "number": "85",
                 "city": "São Paulo",
                 "neighborhood": "República",
-                "postalCode": "",
+                "postalCode": "01220-030",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.546036,
+                "longitude": -46.645795
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "http://www.ristorantecarlino.com.br/",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "ITALIAN", "HISTORIC_PLACE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 71,
         "name": "The Oriental Sushiya",
         "phones": [
             {
-                "number": "",
+                "number": "11971121022",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "THEORIENTALSUSHIYA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
+        "isOpenOnSundays": false,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
         "notes": [
-            "Omakase barato"
+            "Omakase"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Luís Góis",
+                "number": "1499",
                 "city": "São Paulo",
                 "neighborhood": "Mirandopolis",
-                "postalCode": "",
+                "postalCode": "04043-350",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.603998,
+                "longitude": -46.642283
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://instagram.com/theoriental.sushiya",
+        "tags": [
+            "JAPANESE", "EXPERIENCE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 72,
-        "name": "Izakabar Aoyama",
+        "name": "Izakabar Aoyama Karaokê",
         "phones": [
             {
-                "number": "",
+                "number": "1142400242",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "IZAKABARAOYAMA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "shouldSchedule": true,
         "notes": [
             "Izakaya Bar com Karaoke"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Alameda dos Arapanés",
+                "number": "532",
                 "city": "São Paulo",
                 "neighborhood": "Moema",
-                "postalCode": "",
+                "postalCode": "04524-001",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.602822,
+                "longitude": -46.663445
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://menu.getinapp.com.br/pt-br/jkv2Avk2/menus/VknMbK6O",
+        "linkWebsite": "http://www.izakabar.com.br/",
+        "linkInstagram": "https://www.instagram.com/izakabar_aoyama",
+        "tags": [
+            "IZAKAYA", "ASIAN", "KARAOKE"
+        ],
         "listTypes": [
             "RESTAURANTS",
             "BARS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 73,
@@ -3449,141 +3454,147 @@
                 "number": "",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ONBOARDBUS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Onibus restaurante, 2h de trajeto"
+            "Ônibus restaurante, com duração de 2h de trajeto"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "FULLEXPERIENCE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Domingos de Morais",
+                "number": "439",
                 "city": "São Paulo",
-                "neighborhood": "A verificar",
-                "postalCode": "",
+                "neighborhood": "Vila Mariana",
+                "postalCode": "04009-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.580705,
+                "longitude": -46.639500
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "https://l.instagram.com/?u=https%3A%2F%2Fcheckout.onboardbus.com.br%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnGWr7Xn1ip_0xehe5WjjtxQtcChFBn7LpBrqFnx4-IsDjB71aQXcLySIe8oc_aem_pSictsUtt2TlXktWZumqcA&e=AT7VeqNwFjNllUrXla34D6zgDCSP6kbUQ8Jt7nb6xYRj4eRZ-NOSk4adQ2y0Ffevra2YbO3q9NGUyGP3oWDgImdlaA2SwiEw-gPKUn5PjkhxQMTJdLVOeTD2_w",
+        "linkInstagram": "https://www.instagram.com/onboard.bus/",
+        "tags": [
+            "BRAZILIAN", "EXPERIENCE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 74,
-        "name": "Doca Steak",
+        "name": "Doca Steak Wine",
         "phones": [
             {
-                "number": "",
+                "number": "1123661464",
                 "isWhatsApp": true
             }
 ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "DOCASTEAKWINE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Steak House"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Pedroso",
+                "number": "295",
                 "city": "São Paulo",
                 "neighborhood": "Bela Vista",
-                "postalCode": "",
+                "postalCode": "01322-010",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.562382,
+                "longitude": -46.641739
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://www.instagram.com/stories/highlights/18516457624032417/",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/docasteakwine?igsh=eTlrN3MxaGw0Njgx",
+        "tags": [
+            "BARBECUE", "HAMBURGUER", "BRAZILIAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 75,
         "name": "Travessa do Bruxo",
         "phones": [
             {
-                "number": "",
+                "number": "11978930798",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "TRAVESSADOBRUXO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": true,
         "notes": [
             "Hamburgueria temática de bruxo"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Coelho Lisboa",
+                "number": "881",
                 "city": "São Paulo",
                 "neighborhood": "Tatuapé",
-                "postalCode": "",
+                "postalCode": "03323-040",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.552055,
+                "longitude": -46.571231
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
+        "linkWebsite": "https://travessadobruxo.com.br/",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "HAMBURGUER", "THEMED"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 76,
         "name": "Mazbut Culinária Árabe",
         "phones": [
             {
-                "number": "",
+                "number": "1126762088",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MAZBUTCULINARIAARABE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3595,36 +3606,38 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Azevedo Soares",
+                "number": "169",
                 "city": "São Paulo",
                 "neighborhood": "Tatuapé",
-                "postalCode": "",
+                "postalCode": "03322-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.550574,
+                "longitude": -46.575021
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
+        "linkMenu": "https://mazbutculinariaarabe.com.br/mazbut_culinaria_arabe",
+        "linkWebsite": "https://www.mazbutculinariaarabe.com.br/",
         "linkInstagram": "",
-        "tags": [],
+        "tags": [
+            "ARABIAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 77,
         "name": "DCK Burguer",
         "phones": [
             {
-                "number": "",
+                "number": "1124788948",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "DCKBURGUER_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3633,42 +3646,44 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Ja foi eleita uma das melhores hamburguerias"
+            "Ja foi eleita uma das melhores hamburguerias de SP pela: Veja Comer & Beber"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Demétrio Ribeiro",
+                "number": "605",
                 "city": "São Paulo",
                 "neighborhood": "Tatuapé",
-                "postalCode": "",
+                "postalCode": "03332-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.552547,
+                "longitude": -46.573232
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://deliverydireto.com.br/dockburger-central/dockburger-central",
+        "linkWebsite": "https://dckburger.com.br/",
+        "linkInstagram": "https://www.instagram.com/dckburger/",
+        "tags": [
+            "HAMBURGUER"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 78,
         "name": "Costela e Cia",
         "phones": [
             {
-                "number": "",
+                "number": "1143684738",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "COSTELAECIA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3677,86 +3692,90 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Cortes diferentes da costela"
+            "Especializado em costela assada, o restaurante oferece uma variedade de cortes e acompanhamentos"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "SBC",
-                "postalCode": "",
+                "street": "Winston Churchill",
+                "number": "480",
+                "city": "São Bernardo do Campo",
+                "neighborhood": "Vila Caminho do Mar",
+                "postalCode": "09613-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.670802,
+                "longitude": -46.563841
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/costelaeciasbc/",
+        "tags": [
+            "BARBECUE", "BRAZILIAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 79,
         "name": "Hot Dog do seu Angelo",
         "phones": [
             {
-                "number": "",
+                "number": "11988411107",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "HOTDOGSEUANGELO_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnSundays": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "famoso HotDog do Seu Angelo"
+            "Famoso Hot-Dog do Seu Angelo"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Viela Ema Angelo Murari",
+                "number": "s/n",
                 "city": "São Paulo",
                 "neighborhood": "Lapa",
-                "postalCode": "",
+                "postalCode": "05050-110",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.521489,
+                "longitude": -46.701295
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "https://linktr.ee/hotdogdoseuangelo",
+        "linkInstagram": "https://www.instagram.com/hotdogdoseuangelo/",
+        "tags": [
+            "BRAZILIAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 80,
         "name": "Atithi - Restaurante Indiano",
         "phones": [
             {
-                "number": "",
+                "number": "1132879031",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ATITHI_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3767,28 +3786,30 @@
         "notes": [
             "Restaurante Indiano"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Brigadeiro Luís Antônio",
+                "number": "2471",
                 "city": "São Paulo",
                 "neighborhood": "Jardim Paulista",
-                "postalCode": "",
+                "postalCode": "01401-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.569022,
+                "longitude": -46.650273
             }
         ],
-        "linkMenu": "",
+        "linkMenu": "https://atithi.com.br/menu/",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/restauranteatithiindiano",
+        "tags": [
+            "INDIAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 81,
@@ -6596,6 +6617,52 @@
         "linkInstagram": "https://www.instagram.com/iloveburgerbr/",
         "tags": [
             "HAMBURGUER"
+        ],
+        "listTypes": [
+            "RESTAURANTS"
+        ],
+        "isEnabled": true
+    },
+    {
+        "id": 145,
+        "name": "É do Pará",
+        "phones": [
+            {
+                "number": "1123861670",
+                "isWhatsApp": false
+            }
+        ],
+        "openingHours": {
+            "patternId": "EDOPARA_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
+        "shouldSchedule": false,
+        "notes": [
+            "Restaurante especializado em culinária paraense, oferecendo pratos típicos da região Norte do Brasil."
+        ],
+        "priceRange": "MODERATE",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "Miguel Estefno",
+                "number": "271",
+                "city": "São Paulo",
+                "neighborhood": "Vila da Saúde",
+                "postalCode": "04301-010",
+                "isMainUnity": true,
+                "latitude": -23.620462,
+                "longitude": -46.636887
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "http://www.edoparasp.com/",
+        "linkInstagram": "https://www.instagram.com/edoparasp/",
+        "tags": [
+            "BRAZILIAN", "BRAZILIAN_REGION_NORTH"
         ],
         "listTypes": [
             "RESTAURANTS"

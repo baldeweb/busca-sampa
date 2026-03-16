@@ -1818,5 +1818,102 @@
       { "days": ["SATURDAY"], "open": "09:00", "close": "23:00" },
       { "days": ["SUNDAY"], "open": "09:00", "close": "18:00" }
     ]
-  }
+  },
+  {
+    "id": "PARRILINHA_DAYTIME",
+    "description": "Horários do Parrilinha",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "19:00", "close": "22:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "19:00", "close": "22:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "16:00" }
+    ]
+  },
+  {
+    "id": "ATITHI_DAYTIME",
+    "description": "Horários do Atithi",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "19:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "17:00" },
+      { "days": ["SUNDAY"], "open": "19:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "HOTDOGSEUANGELO_DAYTIME",
+    "description": "Horários do Hot Dog seu Ângelo",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "11:00", "close": "17:30" }
+    ]
+  },
+  {
+    "id": "COSTELAECIA_DAYTIME",
+    "description": "Horários do Costela e Cia",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "11:00", "close": "15:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "11:00", "close": "15:30" }
+    ]
+  },
+  {
+    "id": "DCKBURGUER_DAYTIME",
+    "description": "Horários do DCK Burguer",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SATURDAY", "SUNDAY"], "open": "09:00", "close": "23:30" }
+    ]
+  },
+  {
+    "id": "TRAVESSADOBRUXO_DAYTIME",
+    "description": "Horários do Travessa do Bruxo",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "18:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "13:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "MAZBUTCULINARIAARABE_DAYTIME",
+    "description": "Horários do Mazbut Culinária Árabe",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "16:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "THEORIENTALSUSHIYA_DAYTIME",
+    "description": "Horários do The Oriental Sushiya",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "23:00" },
+      { "days": ["SATURDAY"], "open": "13:00", "close": "17:00" },
+      { "days": ["SATURDAY"], "open": "19:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "DOCASTEAKWINE_DAYTIME",
+    "description": "Horários do Doce Steak Wine",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "11:30", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "11:30", "close": "17:00" }
+    ]
+  },
+  {
+    "id": "IZAKABARAOYAMA_DAYTIME",
+    "description": "Horários do Izakabar Aoyama",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY"], "open": "18:00", "close": "02:00" },
+      { "days": ["THURSDAY"], "open": "18:00", "close": "03:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "18:00", "close": "04:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "18:00", "close": "04:00" },
+      { "days": ["SUNDAY"], "open": "15:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "ONBOARDBUS_DAYTIME",
+    "description": "Horários do Onboard Bus",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "THURSDAY", "FRIDAY"], "open": "19:00", "close": "22:00" }
+    ]
+  },
 ]
