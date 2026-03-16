@@ -77,7 +77,7 @@ export const environmentLabels = {
         DANCE_CLUB: "Casa de Dança",
         ICECREAM_SHOP: "Sorveteria",
         BARBECUE: "Churrasco",
-        ARABIAN: "Árabe",
+        ARABIC: "Árabe",
         OTHERS: 'Outros'
       }
     }
@@ -158,6 +158,9 @@ export const environmentLabels = {
         CHILEAN: 'Chileno',
         BOWLING: 'Bolos',
         DANCE_CLUB: 'Club de baile',
+        ICECREAM_SHOP: 'Heladería',
+        BARBECUE: 'Barbacoa',
+        ARABIC: 'Árabe',
         OTHERS: 'Otros'
       }
     }
@@ -238,6 +241,9 @@ export const environmentLabels = {
         CHILEAN: 'Chilien',
         BOWLING: 'Bowling',
         DANCE_CLUB: 'Club de danse',
+        ICECREAM_SHOP: 'Glacier',
+        BARBECUE: 'Barbecue',
+        ARABIC: 'Arabe',
         OTHERS: 'Autres'
       }
     }
@@ -318,6 +324,9 @@ export const environmentLabels = {
         CHILEAN: 'Чилийский',
         BOWLING: 'Боулинг',
         DANCE_CLUB: 'Танцевальный клуб',
+        ICECREAM_SHOP: 'Кафе-мороженое',
+        BARBECUE: 'Барбекю',
+        ARABIC: 'Арабский',
         OTHERS: 'Другое'
       }
     }
@@ -398,6 +407,9 @@ export const environmentLabels = {
         CHILEAN: '智利',
         BOWLING: '保龄球',
         DANCE_CLUB: '舞蹈俱乐部',
+        ICECREAM_SHOP: '冰淇淋店',
+        BARBECUE: '烧烤',
+        ARABIC: '阿拉伯',
         OTHERS: '其他'
       }
     }
@@ -478,6 +490,9 @@ export const environmentLabels = {
         CHILEAN: 'Chilean',
         BOWLING: 'Bowling',
         DANCE_CLUB: 'Dance club',
+        ICECREAM_SHOP: 'Ice cream shop',
+        BARBECUE: 'Barbecue',
+        ARABIC: 'Arabic',
         OTHERS: 'Others'
       }
     }
@@ -558,6 +573,9 @@ export const environmentLabels = {
         CHILEAN: 'Chilenisch',
         BOWLING: 'Bowling',
         DANCE_CLUB: 'Tanzclub',
+        ICECREAM_SHOP: 'Eisdiele',
+        BARBECUE: 'Grill',
+        ARABIC: 'Arabisch',
         OTHERS: 'Andere'
       }
     }
@@ -638,6 +656,9 @@ export const environmentLabels = {
         CHILEAN: 'チリ料理',
         BOWLING: 'ボウリング',
         DANCE_CLUB: 'ダンスクラブ',
+        ICECREAM_SHOP: 'アイスクリーム店',
+        BARBECUE: 'バーベキュー',
+        ARABIC: 'アラブ',
         OTHERS: 'その他'
       }
     }
@@ -718,6 +739,9 @@ export const environmentLabels = {
         CHILEAN: 'تشيلي',
         BOWLING: 'بولينج',
         DANCE_CLUB: 'نادي رقص',
+        ICECREAM_SHOP: 'محل آيس كريم',
+        BARBECUE: 'شواء',
+        ARABIC: 'عربي',
         OTHERS: 'اخرى'
       }
     }
@@ -798,6 +822,9 @@ export const environmentLabels = {
         CHILEAN: 'Cileno',
         BOWLING: 'Bowling',
         DANCE_CLUB: 'Club di danza',
+        ICECREAM_SHOP: 'Gelateria',
+        BARBECUE: 'Barbecue',
+        ARABIC: 'Araba',
         OTHERS: 'Altro'
       }
     }
@@ -878,6 +905,9 @@ export const environmentLabels = {
         CHILEAN: 'Chileens',
         BOWLING: 'Bowling',
         DANCE_CLUB: 'Dansclub',
+        ICECREAM_SHOP: 'IJssalon',
+        BARBECUE: 'Barbecue',
+        ARABIC: 'Arabisch',
         OTHERS: 'Overig'
       }
     }
@@ -958,6 +988,9 @@ export const environmentLabels = {
         CHILEAN: 'Sili',
         BOWLING: 'Bovling',
         DANCE_CLUB: 'Dans kulubu',
+        ICECREAM_SHOP: 'Dondurmaci',
+        BARBECUE: 'Mangal',
+        ARABIC: 'Arap',
         OTHERS: 'Diger'
       }
     }
@@ -1038,6 +1071,9 @@ export const environmentLabels = {
         CHILEAN: 'Chilijskie',
         BOWLING: 'Kregle',
         DANCE_CLUB: 'Klub taneczny',
+        ICECREAM_SHOP: 'Lodziarnia',
+        BARBECUE: 'Grill',
+        ARABIC: 'Arabska',
         OTHERS: 'Inne'
       }
     }
