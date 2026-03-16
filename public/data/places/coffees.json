@@ -940,5 +940,47 @@
             "COFFEES"
         ],
         "isEnabled": true
+    },
+    {
+        "id": 20,
+        "name": "Poop Coffee",
+        "phones": [],
+        "openingHours": {
+            "patternId": "POOPCOFFEE_DAYTIME",
+            "customOverrides": []
+        },
+        "isAlreadyVisited": false,
+        "isOpenOnSundays": true,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": false,
+        "shouldSchedule": false,
+        "notes": [
+            "Dentro da Galeria Legal",
+            "Tema de cocô, com decoração e menu relacionados ao tema"
+        ],
+        "priceRange": "ECONOMIC",
+        "addresses": [
+            {
+                "id": 1,
+                "street": "dos Estudantes",
+                "number": "86",
+                "city": "São Paulo",
+                "neighborhood": "Liberdade",
+                "postalCode": "01510-001",
+                "isMainUnity": true,
+                "latitude": -23.555549,
+                "longitude": -46.634360
+            }
+        ],
+        "linkMenu": "",
+        "linkWebsite": "",
+        "linkInstagram": "https://www.instagram.com/poop.coffee?igsh=MWo1c3AzcTFuZGc2MA==",
+        "tags": [
+            "THEMED", "EXPERIENCE"
+        ],
+        "listTypes": [
+            "COFFEES"
+        ],
+        "isEnabled": true
     }
 ]

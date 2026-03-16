@@ -1716,5 +1716,107 @@
     "periods": [
       { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"], "open": "09:00", "close": "19:00" }
     ]
+  },
+  {
+    "id": "TERRACOITALIA_DAYTIME",
+    "description": "Horários do Terraço Itália",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "BOBESPONJA_DAYTIME",
+    "description": "Horários do Bob Esponja",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "ZDELISANDWICH_DAYTIME",
+    "description": "Horários do Z-Deli Sandwich",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["FRIDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SATURDAY"], "open": "09:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "09:00", "close": "00:00" }
+    ]
+  },
+  {
+    "id": "PATTIES_DAYTIME",
+    "description": "Horários do Patties",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "22:00" },
+      { "days": ["FRIDAY", "SATURDAY", "SUNDAY"], "open": "12:00", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "PETROS_DAYTIME",
+    "description": "Horários do Petros",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "12:00", "close": "15:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "19:00", "close": "23:00" },
+      { "days": ["THURSDAY", "FRIDAY", "SATURDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "MYK_DAYTIME",
+    "description": "Horários do Myk",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["THURSDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "00:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "18:00" }
+    ]
+  },
+  {
+    "id": "NINOCUCINA_DAYTIME",
+    "description": "Horários do Nino Cucina",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "12:00", "close": "16:00" },
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY"], "open": "19:00", "close": "00:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "01:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "22:00" }
+    ]
+  },
+  {
+    "id": "POOPCOFFEE_DAYTIME",
+    "description": "Horários do Poop Coffee",
+    "periods": [
+      { "days": ["EVERYDAY"], "open": "11:00", "close": "17:30" }
+    ]
+  },
+  {
+    "id": "CHEVERE_DAYTIME",
+    "description": "Horários do Chevere",
+    "periods": [
+      { "days": ["WEDNESDAY", "THURSDAY"], "open": "17:00", "close": "23:00" },
+      { "days": ["FRIDAY", "SATURDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "12:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "FRIDAEMINA_DAYTIME",
+    "description": "Horários do Frida e Mina",
+    "periods": [
+      { "days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "22:00" },
+      { "days": ["SATURDAY"], "open": "11:00", "close": "22:00" },
+      { "days": ["SUNDAY"], "open": "11:00", "close": "21:00" }
+    ]
+  },
+  {
+    "id": "RENDEZVOUS_DAYTIME",
+    "description": "Horários do Rendez-Vous",
+    "periods": [
+      { "days": ["MONDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"], "open": "12:00", "close": "23:00" },
+      { "days": ["TUESDAY"], "open": "12:00", "close": "18:00" },
+      { "days": ["SATURDAY"], "open": "09:00", "close": "23:00" },
+      { "days": ["SUNDAY"], "open": "09:00", "close": "18:00" }
+    ]
   }
 ]

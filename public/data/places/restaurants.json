@@ -143,7 +143,12 @@
     {
         "id": 4,
         "name": "McDonald's - Méqui 1000",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "ALWAYS_OPEN",
             "customOverrides": []
@@ -739,7 +744,12 @@
     {
         "id": 16,
         "name": "Hello Kitty and Friends 2D",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "EAT_ASIA_2D_DAYTIME",
             "customOverrides": [
@@ -790,7 +800,12 @@
     {
         "id": 17,
         "name": "Filipinas Restaurante Oriental",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "FILIPINAS_ORIENTAL_DAYTIME",
             "customOverrides": [
@@ -2628,172 +2643,244 @@
     {
         "id": 55,
         "name": "Myk",
-        "phones": [],
+        "phones": [
+            {
+                "number": "11948011111",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "MYK_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Restaurante Grego"
+            "Restaurante grego charmoso com decoração leve e cardápio variado."
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "FULLEXPERIENCE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Peixoto Gomide",
+                "number": "1972",
                 "city": "São Paulo",
                 "neighborhood": "Jardins",
-                "postalCode": "",
+                "postalCode": "01409-002",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.568340,
+                "longitude": -46.664767
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/mykrestaurante/",
+        "tags": [
+            "GREEK", "EXPERIENCE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 56,
         "name": "Petros",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1138985890",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PETROS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Restaurante Grego"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Dr. Virgílio de Carvalho Pinto",
+                "number": "137",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05415-030",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.564354,
+                "longitude": -46.682954
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://drive.google.com/file/d/1a-hpRHTS38xRu3medlRgWQi2ss9xN-hk/view",
+        "linkWebsite": "https://www.petrostaverna.com/",
+        "linkInstagram": "https://www.instagram.com/petrosgreektaverna/",
+        "tags": [
+            "GREEK"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 57,
         "name": "Patties",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "PATTIES_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Hamburgueria Take Away"
+            "Rede simples de fast food para viagem que serve hambúrgueres, batatas fritas, milkshakes e sorvetes."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Flórida",
+                "number": "1420",
+                "city": "São Paulo",
+                "neighborhood": "Brooklin",
+                "postalCode": "04565-001",
+                "isMainUnity": true,
+                "latitude": -23.608666,
+                "longitude": -46.692005
+            },
+            {
+                "id": 2,
+                "street": "dos Pinheiros",
+                "number": "476",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "postalCode": "05422-001",
+                "isMainUnity": false,
+                "latitude": -23.565528,
+                "longitude": -46.682686
             }
         ],
         "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkWebsite": "https://pattiesburger.com/unidades/",
+        "linkInstagram": "https://www.instagram.com/pattiesburger/",
+        "tags": [
+            "HAMBURGUER"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 58,
         "name": "Z Deli Sandwich Shop",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "ZDELISANDWICH_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
             "Hamburgueria/Sanduicheria"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Francisco Leitão",
+                "number": "16",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05414-020",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.564100,
+                "longitude": -46.679226
+            },
+            {
+                "id": 2,
+                "street": "Oscar Freire",
+                "number": "164",
+                "city": "São Paulo",
+                "neighborhood": "Jardim Paulista",
+                "postalCode": "01426-000",
+                "isMainUnity": false,
+                "latitude": -23.567650,
+                "longitude": -46.663818
+            },
+            {
+                "id": 3,
+                "street": "Bento Freitas",
+                "number": "314",
+                "city": "São Paulo",
+                "neighborhood": "República",
+                "postalCode": "01220-000",
+                "isMainUnity": false,
+                "latitude": -23.544538,
+                "longitude": -46.645553
+            },
+            {
+                "id": 4,
+                "street": "Leopoldo Couto Magalhães Júnior",
+                "number": "785",
+                "city": "São Paulo",
+                "neighborhood": "Itaim Bibi",
+                "postalCode": "04542-011",
+                "isMainUnity": false,
+                "latitude": -23.588193,
+                "longitude": -46.680344
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://www.zdeli.com.br/cardapios/itaim/CARDAPIO%20DIGITAL%20Z%20DELI%20COMIDA.pdf",
+        "linkWebsite": "http://www.zdeli.com.br/",
+        "linkInstagram": "https://www.instagram.com/zdelisandwiches/",
+        "tags": [
+            "HAMBURGUER"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 59,
         "name": "Bob Esponja Burguer & Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BOBESPONJA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
+        "shouldSchedule": true,
         "notes": [
             "Temático Bob Esponja"
         ],
@@ -2801,67 +2888,84 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Prof. Atílio Innocenti",
+                "number": "53",
                 "city": "São Paulo",
                 "neighborhood": "Itaim Bibi",
-                "postalCode": "",
+                "postalCode": "04538-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.587725,
+                "longitude": -46.681253
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/bobesponjabyfanfood/",
+        "tags": [
+            "HAMBURGUER", "THEMED"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 60,
         "name": "Terraço Itália",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1121892929",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "TERRACOITALIA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": true,
-        "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
+        "shouldSchedule": true,
+        "priceRange": "FULLEXPERIENCE",
+        "notes": [
+            "Restaurante italiano localizado no topo do Edifício Itália, um dos prédios mais altos de São Paulo, oferecendo uma vista panorâmica da cidade."
+        ],
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Ipiranga",
+                "number": "344",
                 "city": "São Paulo",
                 "neighborhood": "República",
-                "postalCode": "",
+                "postalCode": "01046-010",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.545353,
+                "longitude": -46.643819
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://beta.livemenu.app/pt/menu/56f1565294d577da04ac45a3?cross_session=done&v=019b14d8-d9db-7121-bcff-32e3569c7536",
+        "linkWebsite": "http://www.terracoitalia.com.br/",
+        "linkInstagram": "https://www.instagram.com/terracoitalia/",
+        "tags": [
+            "ITALIAN", "EXPERIENCE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 61,
         "name": "Nino Cucina",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1133686863",
+                "isWhatsApp": true
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "NINOCUCINA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -2869,154 +2973,130 @@
         "isOpenOnMonday": false,
         "isOpenOnHolidays": true,
         "shouldSchedule": false,
-        "priceRange": "ECONOMIC",
+        "priceRange": "ABOVEAVERAGE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Jerônimo da Veiga",
+                "number": "30",
                 "city": "São Paulo",
                 "neighborhood": "Itaim Bibi",
-                "postalCode": "",
+                "postalCode": "04536-000",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.580945,
+                "longitude": -46.679272
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://menu.getinapp.com.br/pt-br/D6W3qg6Q/menus/3P42dX6n",
+        "linkWebsite": "https://www.alifenino.com.br/restaurante-nino/",
+        "linkInstagram": "https://www.instagram.com/ninocucina/",
+        "tags": [
+            "ITALIAN", "EXPERIENCE"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
-    },
-    {
-        "id": 62,
-        "name": "Poop Coffee",
-        "phones": [],
-        "openingHours": {
-            "patternId": "",
-            "customOverrides": []
-        },
-        "isAlreadyVisited": false,
-        "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
-        "shouldSchedule": false,
-        "notes": [
-            "Dentro da Galeria Legal"
-        ],
-        "priceRange": "ECONOMIC",
-        "addresses": [
-            {
-                "id": 1,
-                "street": "",
-                "number": "",
-                "city": "São Paulo",
-                "neighborhood": "Liberdade",
-                "postalCode": "",
-                "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
-            }
-        ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
-        "listTypes": [
-            "RESTAURANTS"
-        ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 63,
         "name": "Rendez-Vous",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1125398497",
+                "isWhatsApp": false
+            }
+        ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "RENDEZVOUS_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
+        "isOpenOnMonday": true,
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Restaurantes Francês; tem beef wellington"
+            "Restaurantes Francês",
+            "Beef Wellington da casa é um dos pratos mais famosos do cardápio, preparado com filé mignon envolto em massa folhada e servido com molho especial."
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Fradique Coutinho",
+                "number": "179",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05416-010",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.564966,
+                "longitude": -46.685248
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://usetag.me/reservarendezvous",
+        "linkWebsite": "http://www.restauranterendezvous.com.br/",
+        "linkInstagram": "https://www.instagram.com/rendezvous.bistro/",
+        "tags": [
+            "FRENCH", "BISTRO"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 64,
         "name": "Frida & Mina Sorveteria",
-        "phones": [],
+        "phones": [
+            {
+                "number": "1125791444",
+                "isWhatsApp": false
+            }
+],
         "openingHours": {
-            "patternId": "",
+            "patternId": "FRIDAEMINA_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
         "isOpenOnSundays": true,
-        "isOpenOnMonday": false,
-        "isOpenOnHolidays": false,
+        "isOpenOnMonday": true,
+        "isOpenOnHolidays": true,
         "shouldSchedule": false,
         "notes": [
-            "Sorveteria"
+            "Os sorvetes são feitos com produtos naturais e servidos em um ambiente charmoso e aconchegante."
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Artur de Azevedo",
+                "number": "1147",
                 "city": "São Paulo",
                 "neighborhood": "Pinheiros",
-                "postalCode": "",
+                "postalCode": "05404-013",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.563148,
+                "longitude":-46.682607
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
+        "linkInstagram": "https://instagram.com/fridaemina",
         "tags": [
-            "SORVETERIA"
+            "ICECREAM_SHOP"
         ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 65,
         "name": "Chévere Cozinha e Bar",
         "phones": [],
         "openingHours": {
-            "patternId": "",
+            "patternId": "CHEVERE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3031,29 +3111,36 @@
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Sousa Lima",
+                "number": "321",
                 "city": "São Paulo",
                 "neighborhood": "Barra Funda",
-                "postalCode": "",
+                "postalCode": "01153-020",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.530010,
+                "longitude": -46.655421
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://instagram.com/cheverecozinhaebar",
+        "tags": [
+            "ARGENTINE", "PERUVIAN", "COLOMBIAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 66,
         "name": "Parrilinha Ipiranga",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3092,7 +3179,12 @@
     {
         "id": 67,
         "name": "Master Curry Japanese Kitchen",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3131,7 +3223,12 @@
     {
         "id": 68,
         "name": "Ogamé Sao Paulo",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3170,7 +3267,12 @@
     {
         "id": 69,
         "name": "Liberdade Side Street",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3209,7 +3311,12 @@
     {
         "id": 70,
         "name": "Carlino Ristorante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3248,7 +3355,12 @@
     {
         "id": 71,
         "name": "The Oriental Sushiya",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3287,7 +3399,12 @@
     {
         "id": 72,
         "name": "Izakabar Aoyama",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3327,7 +3444,12 @@
     {
         "id": 73,
         "name": "On Board Bus",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3366,7 +3488,12 @@
     {
         "id": 74,
         "name": "Doca Steak",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3405,7 +3532,12 @@
     {
         "id": 75,
         "name": "Travessa do Bruxo",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3444,7 +3576,12 @@
     {
         "id": 76,
         "name": "Mazbut Culinária Árabe",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3480,7 +3617,12 @@
     {
         "id": 77,
         "name": "DCK Burguer",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3519,7 +3661,12 @@
     {
         "id": 78,
         "name": "Costela e Cia",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3558,7 +3705,12 @@
     {
         "id": 79,
         "name": "Hot Dog do seu Angelo",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3597,7 +3749,12 @@
     {
         "id": 80,
         "name": "Atithi - Restaurante Indiano",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3636,7 +3793,12 @@
     {
         "id": 81,
         "name": "Beit Jede - Restaurante Libanês",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3675,7 +3837,12 @@
     {
         "id": 82,
         "name": "Rac-Coon Smoke House",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3714,7 +3881,12 @@
     {
         "id": 83,
         "name": "Lellis Tratoria",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3753,7 +3925,12 @@
     {
         "id": 84,
         "name": "Cozinha dos Ferrari",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3792,7 +3969,12 @@
     {
         "id": 85,
         "name": "Rei do Filet",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3828,7 +4010,12 @@
     {
         "id": 86,
         "name": "Mata Città",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3867,7 +4054,12 @@
     {
         "id": 87,
         "name": "Jardim Dourado",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3906,7 +4098,12 @@
     {
         "id": 88,
         "name": "Reet Namastê",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3945,7 +4142,12 @@
     {
         "id": 89,
         "name": "Barakah Cozinha Árabe",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -3984,7 +4186,12 @@
     {
         "id": 90,
         "name": "Churrasqueto",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4020,7 +4227,12 @@
     {
         "id": 91,
         "name": "Yume Mart",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4059,7 +4271,12 @@
     {
         "id": 92,
         "name": "Joya Boulangerie",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4100,7 +4317,12 @@
     {
         "id": 93,
         "name": "Restaurante Sushi Isao",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4139,7 +4361,12 @@
     {
         "id": 94,
         "name": "Vicino - Cucina & Vino",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4178,7 +4405,12 @@
     {
         "id": 95,
         "name": "Suzuki Ie",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4217,7 +4449,12 @@
     {
         "id": 96,
         "name": "Gioconda Helenika",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4256,7 +4493,12 @@
     {
         "id": 97,
         "name": "Windhuk",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4295,7 +4537,12 @@
     {
         "id": 98,
         "name": "Mercado Kinjo Yamato",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4334,7 +4581,12 @@
     {
         "id": 99,
         "name": "Fuego Celeste",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4373,7 +4625,12 @@
     {
         "id": 100,
         "name": "Cusco Cozinha Peruana",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4409,7 +4666,12 @@
     {
         "id": 101,
         "name": "Três Pescadores",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4448,7 +4710,12 @@
     {
         "id": 102,
         "name": "Malakut Árabe",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4487,7 +4754,12 @@
     {
         "id": 103,
         "name": "Restaurante Manden Baoba",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4526,7 +4798,12 @@
     {
         "id": 104,
         "name": "13 da Yakuza",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4562,7 +4839,12 @@
     {
         "id": 105,
         "name": "La Perla",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4601,7 +4883,12 @@
     {
         "id": 106,
         "name": "Chalezinho Morumbi",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4640,7 +4927,12 @@
     {
         "id": 107,
         "name": "ARZ do Libano",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4679,7 +4971,12 @@
     {
         "id": 108,
         "name": "KuroMoon 黒문",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4718,7 +5015,12 @@
     {
         "id": 109,
         "name": "Beyti Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4757,7 +5059,12 @@
     {
         "id": 110,
         "name": "Machado Mooca Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4796,7 +5103,12 @@
     {
         "id": 111,
         "name": "Restaurante Tordesilhas",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4835,7 +5147,12 @@
     {
         "id": 112,
         "name": "Aboud Siria",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4874,7 +5191,12 @@
     {
         "id": 113,
         "name": "Boteco Nancy",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4913,7 +5235,12 @@
     {
         "id": 114,
         "name": "Ian Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4952,7 +5279,12 @@
     {
         "id": 115,
         "name": "Tucupi do Centro",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -4991,7 +5323,12 @@
     {
         "id": 116,
         "name": "Kebab Point",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5030,7 +5367,12 @@
     {
         "id": 117,
         "name": "Barcha Food",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5069,7 +5411,12 @@
     {
         "id": 118,
         "name": "Magia & Bruxaria",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5108,7 +5455,12 @@
     {
         "id": 119,
         "name": "Xêro de Cuscuz",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5147,7 +5499,12 @@
     {
         "id": 120,
         "name": "Casa 1001 Noites",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5186,7 +5543,12 @@
     {
         "id": 121,
         "name": "Merenda da Cidade",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5225,7 +5587,12 @@
     {
         "id": 122,
         "name": "Pizzaria Castelões",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5264,7 +5631,12 @@
     {
         "id": 123,
         "name": "Kidoairaku Japanese Cuisine",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5303,7 +5675,12 @@
     {
         "id": 124,
         "name": "Prego Unico",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5342,7 +5719,12 @@
     {
         "id": 125,
         "name": "Restaurante Iramar Peixes",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5381,7 +5763,12 @@
     {
         "id": 126,
         "name": "O Gato que Ri",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5420,7 +5807,12 @@
     {
         "id": 127,
         "name": "Ristorante Carlino",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5459,7 +5851,12 @@
     {
         "id": 128,
         "name": "Mugui",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5498,7 +5895,12 @@
     {
         "id": 129,
         "name": "Chico Grill",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5537,7 +5939,12 @@
     {
         "id": 130,
         "name": "O Bacalhau do Porto",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5576,7 +5983,12 @@
     {
         "id": 131,
         "name": "Niigata Sushi",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5615,7 +6027,12 @@
     {
         "id": 132,
         "name": "Sukiyaki House",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5654,7 +6071,12 @@
     {
         "id": 133,
         "name": "Cantina Piolin",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5693,7 +6115,12 @@
     {
         "id": 134,
         "name": "Lobozó Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5732,7 +6159,12 @@
     {
         "id": 135,
         "name": "Restaurante Gui Gui",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5771,7 +6203,12 @@
     {
         "id": 136,
         "name": "Dabok Korean Food",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5810,7 +6247,12 @@
     {
         "id": 137,
         "name": "Nikkey Restaurante",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5849,7 +6291,12 @@
     {
         "id": 138,
         "name": "Kobe Burguer",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5888,7 +6335,12 @@
     {
         "id": 139,
         "name": "S.A. Yakiniku Jardim Analia",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []
@@ -5927,7 +6379,12 @@
     {
         "id": 140,
         "name": "Sujinho",
-        "phones": [],
+        "phones": [
+            {
+                "number": "",
+                "isWhatsApp": true
+            }
+],
         "openingHours": {
             "patternId": "",
             "customOverrides": []

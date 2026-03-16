@@ -75,6 +75,7 @@ export const environmentLabels = {
         CHILEAN: "Chileno",
         BOWLING: "Boliche",
         DANCE_CLUB: "Casa de Dança",
+        ICECREAM_SHOP: "Sorveteria",
         OTHERS: 'Outros'
       }
     }
