@@ -25,6 +25,46 @@ import { AppButton } from "../components/ui/AppButton";
 
 const NearbyMapModal = lazy(() => import("@/web/components/home/NearbyMapModal").then((m) => ({ default: m.NearbyMapModal })));
 
+const USER_LOCATION_STORAGE_KEY = 'home.user-location';
+
+type StoredUserLocation = {
+  latitude: number;
+  longitude: number;
+  updatedAt: number;
+};
+
+function loadStoredUserLocation(): StoredUserLocation | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = window.localStorage.getItem(USER_LOCATION_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<StoredUserLocation>;
+    if (typeof parsed.latitude !== 'number' || typeof parsed.longitude !== 'number') {
+      return null;
+    }
+    return {
+      latitude: parsed.latitude,
+      longitude: parsed.longitude,
+      updatedAt: typeof parsed.updatedAt === 'number' ? parsed.updatedAt : Date.now(),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function persistUserLocation(location: { latitude: number; longitude: number }) {
+  if (typeof window === 'undefined') return;
+  window.localStorage.setItem(
+    USER_LOCATION_STORAGE_KEY,
+    JSON.stringify({ ...location, updatedAt: Date.now() }),
+  );
+}
+
+function clearStoredUserLocation() {
+  if (typeof window === 'undefined') return;
+  window.localStorage.removeItem(USER_LOCATION_STORAGE_KEY);
+}
+
 export function HomePage() {
   // 🔹 Carrega todas as categorias
   const DEFAULT_RADIUS_DISTANCE = 8
@@ -62,7 +102,6 @@ export function HomePage() {
     }[]
   >([]);
   const [mapCategory, setMapCategory] = useState<string | null>(null);
-  // Não usar cache de localização — sempre solicitar posição atual
 
   // Estado de opção 'onde é hoje?' não usado nesta versão
 
@@ -239,47 +278,83 @@ export function HomePage() {
   // Indica que não há resultados próximos a partir dos dados carregados
   const noNearbyResults = !loadingNearby && nearbyStats.filter((s) => s.count > 0).length === 0;
 
-  // Inicializa tentando restaurar cache
-  useEffect(() => {
-    requestUserLocation();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   const { t } = useTranslation();
   useDocumentTitle(t('header.title'));
 
-  async function requestUserLocation() {
-    if (!navigator.geolocation) {
-      setGeoError(t('home.locationNotSupported') || "Geolocalização não suportada");
-      return;
-    }
-    // sempre pedir localização atual (não restauramos de cache)
-
-    setIsRequestingLocation(true);
-    setGeoError(null);
-
-    // If Permissions API is available, check for denied state to avoid silent failure
+  async function getGeolocationPermissionState(): Promise<'granted' | 'denied' | 'prompt' | null> {
     try {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore - PermissionName typing in some envs
       if (navigator.permissions && (navigator.permissions as any).query) {
-        try {
-          const status = await (navigator.permissions as any).query({ name: 'geolocation' });
-          if (status && status.state === 'denied') {
-            setGeoError(t('home.locationDeniedInstructions'));
-            setIsRequestingLocation(false);
-            return;
-          }
-        } catch (_) {
-          // ignore permission query errors and fallback to getCurrentPosition call
-        }
+        const status = await (navigator.permissions as any).query({ name: 'geolocation' });
+        return status?.state ?? null;
       }
-    } catch (_) {
-      // ignore
+    } catch {
+      return null;
+    }
+    return null;
+  }
+
+  useEffect(() => {
+    const storedLocation = loadStoredUserLocation();
+    if (storedLocation) {
+      setUserLocation({ latitude: storedLocation.latitude, longitude: storedLocation.longitude });
+    }
+
+    let isMounted = true;
+    const initializeLocation = async () => {
+      if (!navigator.geolocation) return;
+
+      const permissionState = await getGeolocationPermissionState();
+      if (!isMounted) return;
+
+      if (permissionState === 'granted') {
+        requestUserLocation({ silent: true });
+        return;
+      }
+
+      if (permissionState === 'denied') {
+        setGeoError(t('home.locationDeniedInstructions'));
+      }
+    };
+
+    initializeLocation();
+
+    return () => {
+      isMounted = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t]);
+
+  async function requestUserLocation(options?: { silent?: boolean }) {
+    if (!navigator.geolocation) {
+      setGeoError(t('home.locationNotSupported') || "Geolocalização não suportada");
+      return;
+    }
+
+    setIsRequestingLocation(true);
+    setGeoError(null);
+
+    const permissionState = await getGeolocationPermissionState();
+    if (permissionState === 'denied') {
+      setGeoError(t('home.locationDeniedInstructions'));
+      setUserLocation(null);
+      clearStoredUserLocation();
+      setIsRequestingLocation(false);
+      return;
+    }
+
+    // In browsers without Permissions API support, avoid auto-triggering the native prompt on page load.
+    if (options?.silent && permissionState !== 'granted') {
+      setIsRequestingLocation(false);
+      return;
     }
 
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        setUserLocation({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
+        const nextLocation = { latitude: pos.coords.latitude, longitude: pos.coords.longitude };
+        setUserLocation(nextLocation);
+        persistUserLocation(nextLocation);
         setIsRequestingLocation(false);
       },
       (err) => {
@@ -287,6 +362,8 @@ export function HomePage() {
         // err.code === 1 is PERMISSION_DENIED
         if ((err as any)?.code === 1) {
           setGeoError(t('home.locationDeniedInstructions') || err.message);
+          setUserLocation(null);
+          clearStoredUserLocation();
         } else {
           setGeoError(err.message);
         }

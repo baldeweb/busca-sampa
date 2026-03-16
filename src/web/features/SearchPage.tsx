@@ -109,7 +109,7 @@ export function SearchPage() {
               title={t('searchPage.title')}
               subtitle={t('searchPage.subtitle')}
               underline={false}
-              leadingIcon={<img src={icSearch} alt="Buscar" className="w-9 h-9 object-contain mt-2" />}
+              leadingIcon={<img src={icSearch} alt={t('footer.search')} className="w-9 h-9 object-contain mt-2" />}
             >
             </SectionHeading>
             <div className={`w-full px-4 sm:px-0 transition-all duration-500 ease-out ${hasResults ? 'mt-6 min-h-[120px] flex items-start' : 'mt-6 min-h-[46vh] flex items-center'}`}>
@@ -173,7 +173,7 @@ export function SearchPage() {
         )}
       </div>
 
-      <ReportProblemFooter subject="Reportar um problema da página de busca" />
+      <ReportProblemFooter subject={`${t('placeDetail.reportProblem')} - ${t('searchPage.title')}`} />
     </div>
   );
 }
