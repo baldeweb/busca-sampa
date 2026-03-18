@@ -436,11 +436,11 @@
                 "longitude": -46.701443
             }
         ],
-        "linkMenu": "https://www.casaturca.com.br/menus",
+        "linkMenu": "https://gd.takeat.app/menu/103132",
         "linkWebsite": "https://www.casaturca.com.br/",
         "linkInstagram": "https://www.instagram.com/casaturcasp/",
         "tags": [
-            "TURKISH"
+            "TURKISH", "ARABIC"
         ],
         "listTypes": [
             "RESTAURANTS"
@@ -3817,12 +3817,12 @@
         "name": "Beit Jede - Restaurante Libanês",
         "phones": [
             {
-                "number": "",
+                "number": "11955555503",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "BEITJEDE_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3831,42 +3831,44 @@
         "isOpenOnHolidays": false,
         "shouldSchedule": false,
         "notes": [
-            "Restaurante Libanes"
+            "Restaurante Libanês"
         ],
         "priceRange": "ECONOMIC",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Diogo de Lara",
+                "number": "91",
                 "city": "São Paulo",
                 "neighborhood": "Canindé",
-                "postalCode": "",
+                "postalCode": "03034-090",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.522604,
+                "longitude": -46.614936
             }
         ],
         "linkMenu": "",
         "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkInstagram": "https://www.instagram.com/beit_jede/",
+        "tags": [
+            "LEBANESE", "ARABIC"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 82,
         "name": "Rac-Coon Smoke House",
         "phones": [
             {
-                "number": "",
+                "number": "11911638585",
                 "isWhatsApp": true
             }
         ],
         "openingHours": {
-            "patternId": "",
+            "patternId": "RACCOON_DAYTIME",
             "customOverrides": []
         },
         "isAlreadyVisited": false,
@@ -3877,28 +3879,30 @@
         "notes": [
             "Restaurante Americano"
         ],
-        "priceRange": "ECONOMIC",
+        "priceRange": "MODERATE",
         "addresses": [
             {
                 "id": 1,
-                "street": "",
-                "number": "",
+                "street": "Cavazzola",
+                "number": "85",
                 "city": "São Paulo",
                 "neighborhood": "Vila Olimpia",
-                "postalCode": "",
+                "postalCode": "04546-060",
                 "isMainUnity": true,
-                "latitude": null,
-                "longitude": null
+                "latitude": -23.597588,
+                "longitude": -46.676466
             }
         ],
-        "linkMenu": "",
-        "linkWebsite": "",
-        "linkInstagram": "",
-        "tags": [],
+        "linkMenu": "https://www.instagram.com/stories/highlights/18054785665605640/",
+        "linkWebsite": "https://www.raccoon85.com.br/",
+        "linkInstagram": "https://www.instagram.com/stories/highlights/18054785665605640/",
+        "tags": [
+            "BARBECUE", "AMERICAN"
+        ],
         "listTypes": [
             "RESTAURANTS"
         ],
-        "isEnabled": false
+        "isEnabled": true
     },
     {
         "id": 83,
@@ -3908,7 +3912,7 @@
                 "number": "",
                 "isWhatsApp": true
             }
-],
+        ],
         "openingHours": {
             "patternId": "",
             "customOverrides": []

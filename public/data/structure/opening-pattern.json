@@ -1453,20 +1453,6 @@
     ]
   },
   {
-    "id": "MARIPILI_DAYTIME",
-    "description": "Horários do Maripili",
-    "periods": [
-      { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
-    ]
-  },
-  {
-    "id": "MARIPILI_DAYTIME",
-    "description": "Horários do Maripili",
-    "periods": [
-      { "days": ["EVERYDAY"], "open": "12:00", "close": "23:00" }
-    ]
-  },
-  {
     "id": "BOTANIKAFE_DAYTIME",
     "description": "Horários do Botanikafé",
     "periods": [
@@ -1956,6 +1942,13 @@
     "description": "Horários do Ogamé",
     "periods": [
       { "days": ["EVERYDAY"], "open": "17:30", "close": "23:00" }
+    ]
+  },
+  {
+    "id": "BEITJEDE_DAYTIME",
+    "description": "Horários do Beit Jede",
+    "periods": [
+      { "days": ["TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"], "open": "12:30", "close": "00:00" }
     ]
   }
 ]
