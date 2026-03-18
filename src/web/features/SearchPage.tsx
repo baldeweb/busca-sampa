@@ -24,6 +24,10 @@ import icSearch from '@/assets/imgs/icons/ic_search.png';
 import { ReportProblemFooter } from '@/web/components/layout/ReportProblemFooter';
 import { getPrimaryPlaceType } from '@/core/domain/models/PlaceRecommendation';
 import { AppText } from "@/web/components/ui/AppText";
+import { isOpenNow } from '@/core/domain/enums/openingHoursUtils';
+import type { PlaceRecommendation } from '@/core/domain/models/PlaceRecommendation';
+import type { OpeningPattern, OpeningPeriod } from '@/core/domain/models/OpeningPattern';
+import type { Period } from '@/web/components/place/OpeningHoursModal';
 
 export function SearchPage() {
   const { t } = useTranslation();
@@ -59,6 +63,8 @@ export function SearchPage() {
   const results = useMemo(() => {
     if (!normalizedQueryKey) return [];
     return allPlaces.filter((place) => {
+      const primaryType = getPrimaryPlaceType(place);
+      if (primaryType === 'PLEASURE') return false;
       const nameKey = place.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       return nameKey.includes(normalizedQueryKey);
     });
@@ -81,17 +87,135 @@ export function SearchPage() {
     }
   };
 
-  const getOpeningText = (patternId?: string) => {
-    if (!patternId) return t('openingHours.notProvided');
-    if (patternId === 'CHECK_AVAILABILITY_DAYTIME') {
-      return t('openingHours.checkAvailabilityLabel');
+  function getPeriodsForDay(
+    place: PlaceRecommendation,
+    patterns: OpeningPattern[],
+    dayOffset = 0,
+  ): OpeningPeriod[] {
+    const periods: OpeningPeriod[] = [];
+    const patternId = place.openingHours?.patternId;
+    if (patternId) {
+      const pat = (patterns || []).find((p) => p.id === patternId);
+      if (pat?.periods) periods.push(...pat.periods);
     }
-    if (patternId === 'ALWAYS_OPEN') {
+    const custom = place.openingHours?.customOverrides;
+    if (Array.isArray(custom)) {
+      periods.push(...(custom as OpeningPeriod[]));
+    }
+
+    const now = new Date();
+    const dayNames = [
+      'SUNDAY',
+      'MONDAY',
+      'TUESDAY',
+      'WEDNESDAY',
+      'THURSDAY',
+      'FRIDAY',
+      'SATURDAY',
+    ] as const;
+    const targetDay = dayNames[(now.getDay() + dayOffset) % 7];
+    return periods.filter((p) => Boolean(p.open) && (p.days?.includes(targetDay) || p.days?.includes('EVERYDAY')));
+  }
+
+  function getOpeningDisplayForToday(place: PlaceRecommendation, patterns: OpeningPattern[]): string {
+    if (place?.openingHours?.patternId === 'ALWAYS_OPEN') {
       return t('openingHours.alwaysOpenLabel', { defaultValue: 'Sempre aberto' });
     }
-    const pattern = openingPatterns.find((item) => item.id === patternId);
-    return pattern?.description || t('openingHours.notProvided');
-  };
+
+    // If there is no patternId and no custom overrides, explicitly show 'hours unavailable'
+    if (!place.openingHours?.patternId && (!place.openingHours?.customOverrides || place.openingHours.customOverrides.length === 0)) {
+      return t('placeList.hoursUnavailable', { defaultValue: 'Horário indisponível' });
+    }
+
+    const periods = getPeriodsForDay(place, patterns, 0);
+    if (!periods || periods.length === 0) {
+      // No periods today — scan next 7 days for next opening
+      try {
+        const now = new Date();
+        for (let offset = 1; offset <= 7; offset++) {
+          const futurePeriods = getPeriodsForDay(place, patterns, offset);
+          if (!futurePeriods || futurePeriods.length === 0) continue;
+
+          let earliest: string | null = null;
+          const parseTime = (str: string) => {
+            const [h, m] = (str || '0:0').split(':').map(Number);
+            return h * 60 + (m || 0);
+          };
+          for (const p of futurePeriods) {
+            if (!p.open) continue;
+            if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
+          }
+          if (earliest) {
+            if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+            const weekdaysPt = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+            const weekday = weekdaysPt[(now.getDay() + offset) % 7];
+            return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
+          }
+        }
+      } catch (e) {
+        console.warn('[getOpeningDisplayForToday] future scan failed for place id=', place?.id, e);
+      }
+      return '-';
+    }
+
+    // if currently open
+    try {
+      if (isOpenNow(periods as unknown as Period[])) {
+        return t('placeList.openNow', { defaultValue: 'Aberto agora' });
+      }
+    } catch {
+      // ignore
+    }
+
+    // compute next opening time today
+    const now = new Date();
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+    const parseTime = (str: string) => {
+      const [h, m] = (str || '0:0').split(':').map(Number);
+      return h * 60 + (m || 0);
+    };
+
+    let nextOpenMinutes: number | null = null;
+    let nextOpenStr: string | null = null;
+    for (const p of periods) {
+      if (!p.open) continue;
+      const om = parseTime(p.open);
+      if (om > currentMinutes && (nextOpenMinutes === null || om < nextOpenMinutes)) {
+        nextOpenMinutes = om;
+        nextOpenStr = p.open;
+      }
+    }
+
+    if (nextOpenMinutes !== null && nextOpenStr) {
+      const diff = nextOpenMinutes - currentMinutes;
+      if (diff <= 60) return t('placeList.opensSoon', { defaultValue: 'Abre em instantes' });
+      return t('placeList.opensAt', { time: nextOpenStr, defaultValue: `Abre às ${nextOpenStr}` });
+    }
+
+    // No more openings today — search next 7 days
+    try {
+      for (let offset = 1; offset <= 7; offset++) {
+        const futurePeriods = getPeriodsForDay(place, patterns, offset);
+        if (!futurePeriods || futurePeriods.length === 0) continue;
+
+        let earliest: string | null = null;
+        for (const p of futurePeriods) {
+          if (!p.open) continue;
+          if (earliest === null || parseTime(p.open) < parseTime(earliest)) earliest = p.open;
+        }
+        if (earliest) {
+          if (offset === 1) return t('placeList.opensTomorrowAt', { time: earliest, defaultValue: `Abre amanhã às ${earliest}` });
+          const weekdaysPt = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+          const weekday = weekdaysPt[(now.getDay() + offset) % 7];
+          return t('placeList.opensOnAt', { day: weekday, time: earliest, defaultValue: `Abre ${weekday} às ${earliest}` });
+        }
+      }
+    } catch (e) {
+      console.warn('[getOpeningDisplayForToday] next-opening search failed for place id=', place?.id, e);
+    }
+
+    return '-';
+  }
 
   useDocumentTitle(t('footer.search'));
 
@@ -138,7 +262,9 @@ export function SearchPage() {
                   {results.map((place) => {
                     const primaryType = getPrimaryPlaceType(place);
                     const neighborhood = place.addresses?.[0]?.neighborhood || t('list.variablePlace');
-                    const openingText = getOpeningText(place.openingHours?.patternId);
+                    const openingText = (place.openingHours?.patternId === 'CHECK_AVAILABILITY_DAYTIME')
+                      ? t('openingHours.checkAvailabilityLabel')
+                      : getOpeningDisplayForToday(place, openingPatterns);
                     return (
                       <PlaceListItem
                         key={`${String(primaryType || 'UNSET')}:${String(place.id)}`}

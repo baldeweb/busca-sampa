@@ -94,7 +94,7 @@ export const OpeningHoursModal: React.FC<Props> = ({ pattern, isOpen, onClose, c
                   const isToday = currentDay === day;
                   const aberto = isOpenNow(periods);
                   return (
-                    <li key={day} className="mb-2">
+                    <li key={day} className="mb-1">
                       <div className="flex items-center justify-between py-2">
                         <span className={`font-bold uppercase w-24 ${isToday ? "text-green-500" : "text-white"}`}>{getDayLabel(day)}</span>
                         <div className="flex flex-col items-end min-w-[120px]">
