@@ -179,24 +179,12 @@ const RESTAURANT_FOREIGN_TAGS_ALL = Array.from(
     new Set(Object.values(RESTAURANT_FOREIGN_TAGS_BY_CATEGORY).flat()),
 );
 
-function normalizeSearchText(value: string): string {
-    return String(value || '')
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase();
-}
-
 function placeHasTag(place: PlaceRecommendation, tag: string): boolean {
     const normalizedTag = String(tag || '').trim().toUpperCase();
     if (!normalizedTag) return false;
     return Array.isArray(place.tags)
         ? place.tags.some((item) => String(item || '').trim().toUpperCase() === normalizedTag)
         : false;
-}
-
-function getRestaurantSearchText(place: PlaceRecommendation): string {
-    const notes = Array.isArray(place.notes) ? place.notes.join(' ') : '';
-    return normalizeSearchText(`${place.name || ''} ${notes}`);
 }
 
 function matchesRestaurantCategory(place: PlaceRecommendation, category: string): boolean {

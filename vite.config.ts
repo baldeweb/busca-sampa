@@ -2,9 +2,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
+const appBase = process.env.VITE_APP_BASE || "/";
+
 export default defineConfig({
-  // Use relative base so the app and data assets load correctly when served from a subpath
-  base: './',
+  // Default to root-domain deployment; override with VITE_APP_BASE when using a subpath.
+  base: appBase,
   plugins: [react()],
   resolve: {
     alias: {
