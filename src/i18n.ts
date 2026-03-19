@@ -1873,6 +1873,7 @@ const resources = {
       common: {
         back: 'رجوع',
         details: 'اعرف المزيد',
+        changeDistance: 'زيادة المسافة',
         all: 'الكل',
         filter: 'فلتر:'
       },
@@ -2001,6 +2002,7 @@ const resources = {
       },
       aboutMe: {
         aboutHeading: 'نبذة عني',
+        motto: 'أعطِ رجلًا سمكة فتطعمه يومًا، وعلّمه الصيد فتطعمه مدى الحياة',
         accordion: {
           aboutLabel: 'نبذة عني',
           whatIsLabel: 'ما هو Role Paulista؟',
