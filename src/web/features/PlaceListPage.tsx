@@ -52,7 +52,7 @@ const RESTAURANT_MAIN_CATEGORY_VALUES = [
     'HAMBURGUER',
     'HISTORIC_PLACE',
     'ALLYOUCAN_EAT',
-    'SORVETERIA',
+    'ICECREAM_SHOP',
     'THEMED',
     'VEGAN',
 ] as const;
@@ -179,14 +179,6 @@ const RESTAURANT_FOREIGN_TAGS_ALL = Array.from(
     new Set(Object.values(RESTAURANT_FOREIGN_TAGS_BY_CATEGORY).flat()),
 );
 
-const RESTAURANT_BRAZILIAN_REGION_KEYWORDS: Record<string, string[]> = {
-    BRAZILIAN_REGION_NORTH: ['norte', 'para', 'paraense', 'amazonia', 'amazonia', 'acre', 'rondonia', 'roraima', 'amapa', 'tocantins', 'tucupi'],
-    BRAZILIAN_REGION_NORTHEAST: ['nordeste', 'bahia', 'baiano', 'pernambuco', 'ceara', 'maranhao', 'sergipe', 'alagoas', 'paraiba', 'piaui', 'rio grande do norte'],
-    BRAZILIAN_REGION_CENTER_WEST: ['centro-oeste', 'centro oeste', 'goias', 'goiano', 'mato grosso', 'mato grosso do sul', 'distrito federal', 'brasilia', 'pantanal'],
-    BRAZILIAN_REGION_SOUTH: ['sul', 'gaucho', 'gaucha', 'rio grande do sul', 'santa catarina', 'parana', 'curitibano', 'curitibana'],
-    BRAZILIAN_REGION_SOUTHEAST: ['sudeste', 'sao paulo', 'paulista', 'minas gerais', 'mineiro', 'mineira', 'rio de janeiro', 'carioca', 'espirito santo', 'capixaba'],
-};
-
 function normalizeSearchText(value: string): string {
     return String(value || '')
         .normalize('NFD')
@@ -216,11 +208,7 @@ function matchesRestaurantCategory(place: PlaceRecommendation, category: string)
     }
 
     if (normalizedCategory.startsWith('BRAZILIAN_REGION_')) {
-        if (placeHasTag(place, normalizedCategory)) return true;
-        if (!placeHasTag(place, 'BRAZILIAN')) return false;
-        const searchText = getRestaurantSearchText(place);
-        const keywords = RESTAURANT_BRAZILIAN_REGION_KEYWORDS[normalizedCategory] || [];
-        return keywords.some((keyword) => searchText.includes(normalizeSearchText(keyword)));
+        return placeHasTag(place, normalizedCategory);
     }
 
     if (normalizedCategory === 'FOREIGN') {
@@ -233,27 +221,15 @@ function matchesRestaurantCategory(place: PlaceRecommendation, category: string)
     }
 
     if (normalizedCategory === 'PASTRY_SHOP') {
-        if (placeHasTag(place, 'PASTRY_SHOP')) return true;
-        const searchText = getRestaurantSearchText(place);
-        return ['doceria', 'confeitaria', 'sobremesa', 'doce', 'brigadeiro', 'bolo'].some((keyword) =>
-            searchText.includes(keyword),
-        );
+        return placeHasTag(place, 'PASTRY_SHOP');
     }
 
-    if (normalizedCategory === 'SORVETERIA') {
-        if (placeHasTag(place, 'SORVETERIA')) return true;
-        const searchText = getRestaurantSearchText(place);
-        return ['sorveteria', 'sorvete', 'gelato', 'ice cream'].some((keyword) =>
-            searchText.includes(keyword),
-        );
+    if (normalizedCategory === 'SORVETERIA' || normalizedCategory === 'ICECREAM_SHOP') {
+        return placeHasTag(place, 'ICECREAM_SHOP') || placeHasTag(place, 'SORVETERIA');
     }
 
     if (normalizedCategory === 'VEGAN') {
-        if (placeHasTag(place, 'VEGAN')) return true;
-        const searchText = getRestaurantSearchText(place);
-        return ['vegano', 'vegana', 'vegan', 'plant-based'].some((keyword) =>
-            searchText.includes(keyword),
-        );
+        return placeHasTag(place, 'VEGAN');
     }
 
     return placeHasTag(place, normalizedCategory);
